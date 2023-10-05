@@ -7,7 +7,7 @@ import time
 import os
 
 # custom functions
-from get_examples import get_prompt
+from prompts.get_examples import get_prompt
 from get_lhs_vars import get_lhs_vars
 from compare_ast import Compare
 
@@ -15,7 +15,6 @@ from helpers import get_completion, decode_response, \
     double_list, extract_code_imports, test_variations, \
     multiply_list, dedup_variations
 from find_testcases import find_tests, filter_tests
-import data_flow_prompt
 from helpers_variations import process_variants
 
 # from openai.api_requestor.error import RateLimitError, APIError
@@ -95,7 +94,8 @@ def get_all_variations(starting_vars,
                        temperature, variable_types=None,
                        input_and_assertions=None,
                        repeat_factor=3, max_depth=2,
-                       labelled_variants = None, model='gpt-3.5-turbo'):
+                       labelled_variants = None, model='gpt-3.5-turbo', key=None):
+    assert key is not None
     start_time = time.time()
 
     iterations = 0
@@ -139,7 +139,7 @@ def get_all_variations(starting_vars,
         api_error = False
         api_error_str = ''
         try:
-            response = get_completion(prompt, temperature, model=model)
+            response = get_completion(prompt, temperature, model=model, key=key)
         except (openai.api_requestor.error.APIError, \
                 openai.api_requestor.error.ServiceUnavailableError, \
                 openai.error.APIConnectionError) as e:
@@ -246,12 +246,12 @@ def get_all_variations(starting_vars,
 #     return variations
 
 
-def get_lhs_rhs_tests(lhs, rhs):
+def get_lhs_rhs_tests(lhs, rhs, rf=2, temp=0.5):
     tests = []
-    RF = 2
-    TEMP = 0.5
-    for _ in range(RF):  # repeat 5 times
-        t, _ = find_tests(lhs, repeat_factor=1, temperature=TEMP)
+    # RF = 2
+    # TEMP = 0.5
+    for _ in range(rf):  # repeat 5 times
+        t, _ = find_tests(lhs, repeat_factor=1, temperature=temp, key='123')
         tests += t
         # tests = filter_tests(rhs, tests)
         #
@@ -260,81 +260,81 @@ def get_lhs_rhs_tests(lhs, rhs):
 
     return tests
 
+def run_best_practices():
+    with open("data/best_practices10.json") as f:
+        best_practices = json.load(f)
 
-with open("data/best_practices10.json") as f:
-    best_practices = json.load(f)
+    model = 'gpt-4'
+    repeat_factor = 2
+    max_depth = 100
+    use_tests = False # use tests to guide the fix-point iteration.
+    variants_directory = "data/paper/RQ1/data"
+    labels_directory = "data/RQ2/labelled"
+    # variants_directory = "data/RQ2" #old directory
+    tests_dir = "data/RQ2/tests"
+    for bp in best_practices:
+        # count+=1
+        starting_vars = [bp['example before'], bp['example after']]
+        print("code:")
+        print(starting_vars[0])
+        variable_types = bp.get('variable-types')
+        print("variable_types---", variable_types)
+        idiom = bp['idiom'].lower().replace(' ', '-')
+        print(idiom)
 
-model = 'gpt-4'
-repeat_factor = 2
-max_depth = 100
-use_tests = False # use tests to guide the fix-point iteration.
-variants_directory = "data/paper/RQ1/data"
-labels_directory = "data/RQ2/labelled"
-# variants_directory = "data/RQ2" #old directory
-tests_dir = "data/RQ2/tests"
-for bp in best_practices[6:]:
-    # count+=1
-    starting_vars = [bp['example before'], bp['example after']]
-    print("code:")
-    print(starting_vars[0])
-    variable_types = bp.get('variable-types')
-    print("variable_types---", variable_types)
-    idiom = bp['idiom'].lower().replace(' ', '-')
-    print(idiom)
+        tests_path = f"{tests_dir}/{idiom}-test.json"
+        labels_path = f"{labels_directory}/{idiom}.json"
 
-    tests_path = f"{tests_dir}/{idiom}-test.json"
-    labels_path = f"{labels_directory}/{idiom}.json"
+        tests = []
+        if use_tests:
+            try:
+                with open(tests_path) as f:
+                    tests = json.load(f)
+                print("loaded tests from file!")
+            except FileNotFoundError:
+                print("Asking chatgpt for tests.")
+                # tests = find_tests(starting_vars[0])
+                tests = get_lhs_rhs_tests(starting_vars[0], starting_vars[1])
+                with open(tests_path, "w") as f:
+                    json.dump(tests, f, indent=1)
 
-    tests = []
-    if use_tests:
-        try:
-            with open(tests_path) as f:
-                tests = json.load(f)
-            print("loaded tests from file!")
-        except FileNotFoundError:
-            print("Asking chatgpt for tests.")
-            # tests = find_tests(starting_vars[0])
-            tests = get_lhs_rhs_tests(starting_vars[0], starting_vars[1])
-            with open(tests_path, "w") as f:
-                json.dump(tests, f, indent=1)
-
-        if (len(tests) == 0):
-            print("Skipping. No tests.")
-            continue
-
-    try:
-        with open(labels_path) as f:
-            labelled_variants = json.load(f)
-    except FileNotFoundError:
-        labelled_variants = None
-
-    # for t in [0, 0.3, 0.5, 0.7, 0.9, 1.2]:
-    for t in [0, 0.3]:
-
-        # variations_file = f"data/RQ2/data/{idiom}-temp-{t}.json"
-        variations_file = f"{variants_directory}/{model}/{idiom}-temp-{t}-rf-{repeat_factor}.json"
-        incorrect_file = f"{variants_directory}/{model}/{idiom}-incorrect-temp-{t}-rf-{repeat_factor}.json"
-        metadata_file = f"{variants_directory}/{model}/{idiom}-metadata-temp-{t}-rf-{repeat_factor}.json"
+            if (len(tests) == 0):
+                print("Skipping. No tests.")
+                continue
 
         try:
-            with open(metadata_file) as f:
-                print("variants for this temp exists.")
-            continue
+            with open(labels_path) as f:
+                labelled_variants = json.load(f)
         except FileNotFoundError:
-            print("searching for variants!")
+            labelled_variants = None
 
-        variations, incorrect, metadata = get_all_variations(starting_vars,
-                                                             variable_types=variable_types, temperature=t,
-                                                             input_and_assertions=tests, repeat_factor=repeat_factor,
-                                                             max_depth=max_depth,
-                                                             labelled_variants=labelled_variants,
-                                                             model=model)
-        with open(variations_file, "w") as f:
-            json.dump(variations, f, indent=1)
-        with open(incorrect_file, "w") as f:
-            json.dump(incorrect, f, indent=1)
-        with open(metadata_file, "w") as f:
-            json.dump(metadata, f, indent=1)
+        # for t in [0, 0.3, 0.5, 0.7, 0.9, 1.2]:
+        for t in [0, 0.3]:
+
+            # variations_file = f"data/RQ2/data/{idiom}-temp-{t}.json"
+            variations_file = f"{variants_directory}/{model}/{idiom}-temp-{t}-rf-{repeat_factor}.json"
+            incorrect_file = f"{variants_directory}/{model}/{idiom}-incorrect-temp-{t}-rf-{repeat_factor}.json"
+            metadata_file = f"{variants_directory}/{model}/{idiom}-metadata-temp-{t}-rf-{repeat_factor}.json"
+
+            try:
+                with open(metadata_file) as f:
+                    print("variants for this temp exists.")
+                continue
+            except FileNotFoundError:
+                print("searching for variants!")
+
+            variations, incorrect, metadata = get_all_variations(starting_vars,
+                                                                 variable_types=variable_types, temperature=t,
+                                                                 input_and_assertions=tests, repeat_factor=repeat_factor,
+                                                                 max_depth=max_depth,
+                                                                 labelled_variants=labelled_variants,
+                                                                 model=model)
+            with open(variations_file, "w") as f:
+                json.dump(variations, f, indent=1)
+            with open(incorrect_file, "w") as f:
+                json.dump(incorrect, f, indent=1)
+            with open(metadata_file, "w") as f:
+                json.dump(metadata, f, indent=1)
+            # break
+        # if(count >1):
         # break
-    # if(count >1):
-    # break

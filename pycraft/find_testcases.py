@@ -200,7 +200,7 @@ def check_testcases(code_str, input_and_assertions, rhs_vars=[]):
     return final_tests, metadata
 
 
-def find_tests(code_str, repeat_factor=2, temperature=0.5, model='gpt-3.5-turbo'):
+def find_tests(code_str, repeat_factor=2, temperature=0.5, model='gpt-3.5-turbo', key='123'):
     rhs_vars = get_undef_vars(code_str)
 
     tests = []
@@ -208,7 +208,8 @@ def find_tests(code_str, repeat_factor=2, temperature=0.5, model='gpt-3.5-turbo'
     for i in range(repeat_factor):
         response = None
         try:
-            response = helpers.get_completion(get_prompt(code_str, rhs_vars=rhs_vars), temperature, model=model)
+            response = helpers.get_completion(get_prompt(code_str, rhs_vars=rhs_vars),
+                                              temperature, model=model, key=key)
             tests += eval(response)
         except Exception as e:
             print(f"Failed to find tests({i}th time). ")

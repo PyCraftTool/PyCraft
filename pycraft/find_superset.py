@@ -73,7 +73,7 @@ def get_superset(code_str, temperature, variable_types = None, input_and_asserti
         print("----end of code------")
         
         prompt = get_prompt(code_str, lhs_vars, variable_types)
-        response = get_completion(prompt, temperature)
+        response = get_completion(prompt, temperature, key='1234')
         
         variations = []
         try:

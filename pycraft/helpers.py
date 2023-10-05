@@ -16,14 +16,14 @@ from sanitise_code import SanitiseCode
 from compare_ast import Compare
 compare_ast_fn = Compare().do
 
-with open('chatgpt-key') as f:
-    openai.api_key = f.read()
+# with open('chatgpt-key') as f:
+#     openai.api_key = f.read()
 
-with open('palm-key') as f:
-    palm.configure(api_key=f.read())
+# with open('palm-key') as f:
+#     palm.configure(api_key=f.read())
 
-with open('huggingface-token') as f:
-    huggingface_token = f.read()
+# with open('huggingface-token') as f:
+#     huggingface_token = f.read()
 
 # class TimeoutError(Exception):
 #     pass
@@ -48,8 +48,10 @@ def timeout(seconds=10, error_message=os.strerror(errno.ETIME)):
     return decorator
 
 
-def get_completion_gpt(prompt, temperature, model):
+def get_completion_gpt(prompt, temperature, model, key):
     assert model.startswith('gpt')
+    openai.api_key = key
+
     messages = [{"role": "user", "content": prompt}]
 
     enc = tiktoken.encoding_for_model("gpt-3.5-turbo")
@@ -75,8 +77,10 @@ def get_completion_gpt(prompt, temperature, model):
 
     return response.choices[0].message["content"]
 
-def get_completion_palm(prompt, temperature, model):
+def get_completion_palm(prompt, temperature, model, key):
     assert model == 'palm'
+    palm.configure(api_key=key)
+
     palm_defaults = {
         'model': 'models/text-bison-001',
         'temperature': temperature,
@@ -111,7 +115,7 @@ def get_completion_bloom(prompt, temperature, model):
     return response.json()
 
 @timeout(5 * 60)  # 5min timeout.
-def get_completion(prompt, temperature, model="gpt-3.5-turbo"):
+def get_completion(prompt, temperature, key, model="gpt-3.5-turbo"):
 
     fn_mapping = {
         'gpt-3.5-turbo': get_completion_gpt,
@@ -119,7 +123,7 @@ def get_completion(prompt, temperature, model="gpt-3.5-turbo"):
         'palm': get_completion_palm
     }
 
-    return fn_mapping[model](prompt, temperature, model)
+    return fn_mapping[model](prompt, temperature, model, key)
 
 
 def decode_response(response):

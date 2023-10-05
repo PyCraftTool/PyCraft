@@ -1,0 +1,14 @@
+model:
+  key: '124'
+  name: gpt-4
+output:
+  destination: data/tool/output
+testcases:
+  directory: data/tool/tests
+  iterations: 5
+  temperature: 1.2
+variants:
+  max_depth: 4
+  max_variants: 100
+  temperature: 0.7
+  prompt_iterations: 3

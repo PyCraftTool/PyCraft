@@ -1,0 +1,3 @@
+name: numpy-sum
+LHS: "count = 0\nfor i in int_list:\n   count +=i"
+RHS:  "import numpy as np\ncount = np.sum(int_list)"
