@@ -23,10 +23,10 @@ PyCraft is a tool that refactors python code
    python pycraft configure cpat \
          --name numpy-sum \
          --lhs "count = 0
-         for i in int_list:
-             count +=i" \
+   for i in int_list:
+       count +=i" \
          --rhs "import numpy as np
-         count = np.sum(int_list)"
+   count = np.sum(int_list)"
    ```
 
 ### Generating Variants
