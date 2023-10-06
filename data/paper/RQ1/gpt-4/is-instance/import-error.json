@@ -1,0 +1,11 @@
+[
+ "\ntemp = {True: val2, False: val1}\nval = temp[isinstance(int_instance, numbers.Integral)]",
+ "\nval = val2 if np.issubdtype(type(int_instance), np.integer) else val1",
+ "\nif np.issubdtype(type(int_instance), np.integer):\n    val = val2\nelse:\n    val = val1",
+ "\nis_integer = np.issubdtype(type(int_instance), np.integer)\nval = val2 if is_integer else val1",
+ "\nval = np.issubdtype(type(int_instance), np.integer) and val2 or val1",
+ "\nval = val1 if not isinstance(int_instance, abc.Integral) else val2",
+ "\nif isinstance(int_instance, abc.Integral):\n    val = val2\nelse:\n    val = val1",
+ "\nconditions = [isinstance(int_instance, int)]\nchoices = [val2, val1]\nval = np.select(conditions, choices)",
+ "from types import IntType\ndef switch_val(instance):\n    global val\n    if isinstance(instance, IntType):\n        val = val2\nswitch_val(int_instance)"
+]

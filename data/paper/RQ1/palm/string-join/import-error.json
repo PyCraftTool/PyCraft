@@ -1,0 +1,12 @@
+[
+ "\nstring = '[]'\nidx = 1\nfor item in values:\n    string += my_func(item, idx)\nassert string == '[]'",
+ "\nstring = make_list(values)",
+ "\nstring = list2str(values)",
+ "\nstring = '[' + str(item) + ', ' * (len(values) - 1) + str(values[-1]) + ']'",
+ "\nfor item in values:\n    string.append(item)",
+ "from string import join\nstring = join(',', values)",
+ "\nstring = np.array2string(values)[1:-1]",
+ "\nstr = np.array2string(values)\nstring = str[2:-2]",
+ "\ndef join_lists(list_of_lists):\n    return ''.join(itertools.chain.from_iterable(list_of_lists))\nstring = join_lists(values)",
+ "\nfor i in range(len(values)):\n    string.append(values[i])"
+]

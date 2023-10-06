@@ -1,0 +1,23 @@
+[
+ "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]",
+ "dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+ "dot_prod = 0\ni = 0\nwhile i < len(arr1):\n    dot_prod += arr1[i] * arr2[i]\n    i += 1",
+ "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+ "dot_prod = 0\nfor (index, value) in enumerate(arr1):\n    dot_prod += arr1[index] * arr2[index]",
+ "dot_prod = 0\nfor (i, j) in enumerate(arr1):\n    dot_prod += j * arr2[i]",
+ "dot_prod = 0\nfor i in range(len(arr1)):\n    temp = arr1[i] * arr2[i]\n    dot_prod += temp",
+ "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod = dot_prod + arr1[i] * arr2[i]",
+ "dot_prod = sum((x * arr2[i] for (i, x) in enumerate(arr1)))",
+ "import functools\nimport operator\ndot_prod = functools.reduce(operator.add, [arr1[i] * arr2[i] for i in range(len(arr1))], 0)",
+ "dot_prod = 0\ni = 0\nwhile i < len(arr1):\n    tmp = arr1[i] * arr2[i]\n    dot_prod += tmp\n    i += 1",
+ "import numpy as np\ndot_prod = np.sum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+ "dot_prod = 0\narr2_iter = iter(arr2)\nfor value in arr1:\n    dot_prod += value * next(arr2_iter)",
+ "import numpy as np\nfrom math import fsum\ndot_prod = fsum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+ "dot_prod = 0\nfor i in range(0, len(arr1)):\n    dot_prod = dot_prod + arr1[i] * arr2[i]",
+ "single_elements = [arr1[i] * arr2[i] for i in range(len(arr1))]\ndot_prod = sum(single_elements)",
+ "def dot_product(arr1, arr2):\n    dot_prod = 0\n    for i in range(len(arr1)):\n        dot_prod += arr1[i] * arr2[i]\n    return dot_prod\ndot_prod = dot_product(arr1, arr2)",
+ "def dot_product(arr1, arr2):\n    dot_prod = 0\n    for (i, val) in enumerate(arr1):\n        dot_prod += val * arr2[i]\n    return dot_prod\ndot_prod = dot_product(arr1, arr2)",
+ "dot_prod = 0\nit_arr1 = iter(arr1)\nit_arr2 = iter(arr2)\nfor i in it_arr1:\n    dot_prod += i * next(it_arr2)",
+ "(dot_prod, i) = (0, 0)\nwhile i < len(arr1):\n    dot_prod += arr1[i] * arr2[i]\n    i += 1",
+ "dot_prod = 0\nidx = range(len(arr1))\nfor i in idx:\n    dot_prod = dot_prod + arr1[i] * arr2[i]"
+]

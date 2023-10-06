@@ -1,0 +1,22 @@
+[
+ "from functools import partial\nswap = partial(operator.itemgetter, {0: a, 1: b})\n(a, b) = swap(1, 0)",
+ "\ntemp = a\na = b if not operator.__eq__(a, b) else a\nb = temp if not operator.__eq__(a, b) else b",
+ "import copy\n(a, b, temp) = (copy.deepcopy(b), copy.deepcopy(temp), copy.deepcopy(a))",
+ "from copy import deepcopy\na = deepcopy(b)\nb = deepcopy(temp)\ntemp = deepcopy(a)",
+ "import copy\na = copy.deepcopy(b)\nb = temp.copy()\ntemp = a.copy()",
+ "import copy\na = copy.deepcopy(b)\nb = list(temp)\ntemp = list(a)",
+ "\ntemp = a\na = b\nb = np.array(temp)",
+ "\ntemp = np.array(a)\na = np.array(b)\nb = np.array(temp)",
+ "\nb = swap_list.pop()\na = swap_list.pop()",
+ "\nswap_list.reverse()\n(b, a) = (swap_list[0], swap_list[1])",
+ "\ntemp = a\na = b\nb = temp\n(a, b) = np.array([b, a])",
+ "\ntemp = a\na = b\nb = temp\n(a, b) = (b, a)\n(a, b) = np.array([b, a])",
+ "import math\na = math.fmod(a + b, sys.maxsize)\nb = math.fmod(a - b, sys.maxsize)\na = math.fmod(a - b, sys.maxsize)",
+ "\ntemp = a\na = b\nb = temp\n(a, b) = np.array([b, a])\ntemp = a",
+ "\ntemp = a\n(a, b) = (b, a)\n(a, b) = np.array([b, a])",
+ "\ntemp = a\na = b\nb = temp\n(a, b) = (b, a)\n(a, b) = np.array([b, a])\ntemp = a",
+ "\ntemp = a\na = b\nb = temp\n(a, b) = (b, a)\n(a, b) = np.array([b, a])\ntemp = a\n(a, b) = (b, a)",
+ "import math\na = (a + b) % sys.maxsize\nb = (a - b) % sys.maxsize\na = (a - b) % sys.maxsize",
+ "import math\na = math.fmod(a + b, sys.maxsize)\n(b, a) = (math.fmod(a - b, sys.maxsize), math.fmod(a - b, sys.maxsize))",
+ "import functools\na = functools.reduce(xor, [a, b])\nb = functools.reduce(xor, [a, b])\na = functools.reduce(xor, [a, b])"
+]

@@ -1,0 +1,4 @@
+[
+ "\nvalue = val1 if reduce(lambda x, y: x or y, [c1, c2, c3, c4]) else val2",
+ "\nvalue = val1 if any(conditions) else val2"
+]

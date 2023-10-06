@@ -1,0 +1,18 @@
+[
+ "\n(a, b, c) = (locals_value.get('x'), locals_value.get('y'), locals_value.get('z'))",
+ "\nlocals_valuedict(x=x, y=y, z=z)\nvals = ['x', 'y', 'z']\n(a, b, c) = map(locals_value.get, vals)",
+ "\na = b = c = None\nfor (i, elem) in enumerate(testing_tuple):\n    if i == 0:\n        a = elem\n    elif i == 1:\n        b = elem\n    else:\n        c = elem",
+ "\nunpack_from_tuple = lambda tp, index: tp[index]\na = unpack_from_tuple(testing_tuple, 0)\nb = unpack_from_tuple(testing_tuple, 1)\nc = unpack_from_tuple(testing_tuple, 2)",
+ "\ntemp = list(testing_tuple)\na = temp[0]\nb = temp[1]\nc = temp[2]",
+ "\nmapping = {0: 'a', 1: 'b', 2: 'c'}\nfor (index, value) in enumerate(testing_tuple):\n    mapping[index] = value\na = mapping[0]\nb = mapping[1]\nc = mapping[2]",
+ "\nuisng_unpack = lambda my_dict: tuple((my_dict[e] for e in my_dict))\n(a, b, c) = uisng_unpack(dict_test)",
+ "\n(a, b, c) = map(lambda x: dict_test.get(x), ('a', 'b', 'c'))",
+ "\ntemp_dict = dict_test.copy()\na = temp_dict.pop('a')\nb = temp_dict.pop('b')\nc = temp_dict.pop('c')",
+ "\nswap = lambda n1, n2, n3: (n1, n2, n3)\n(x, y, z) = swap(a, b, c)",
+ "\nassigning_funct = lambda xy, z: (xy[0], xy[1], z)\n(a, b, c) = t_core((x, y), z)",
+ "\na = x if operator.ne(x, None) is False else None\nb = y if operator.ne(y, None) is False else None\nc = z if operator.ne(z, None) is False else None",
+ "\ndef check_operator(val):\n    return val if operator.ne(val, None) else None\na = check_operator(x)\nb = check_operator(y)\nc = check_operator(z)",
+ "from operator import eq\n(a, b, c) = (x, y, z if eq(x, a) and eq(y, b) and eq(z, c) else (None, None, None))",
+ "\n[a, b, c] = np.array([x, y, z])",
+ "from operator import add\n(a, b, c) = reduce(add, [x, y, z])"
+]

@@ -1,0 +1,17 @@
+[
+ "\nadditional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = so1.send_digest_with_additional(additional_dict)",
+ "from sortedcontainers import SortedDict\nd = SortedDict(additional_dict)",
+ "import functools\nreduce(lambda d1, d2: {**d1, **d2}, [d, additional_dict])",
+ "import operator\noperator.setitem(d, k, additional_dict[k] if k in additional_dict else None)",
+ "import operator\noperator.setitem(d, i, additional_dict[i])",
+ "import socket\nimport json\ndef socket_sendian(additional_dict):\n    so1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    convo = bytes(json.dumps(additional_dict), 'utf-8')\n    d = so1.send(convo)\n    return d\nd = socket_send(additional_dict)",
+ "from collections import deepcopy\nfor k in additional_dict:\n    d[k] = deepcopy(additional_dict[k])",
+ "import operator\nfunctools.reduce(operator.setitem, additional_dict.items(), d)",
+ "import operator\nmerged = dict(functools.reduce(operator.add, map(dict.items, [d, additional_dict])))\nd = dict(merged)",
+ "\n{k: v for (k, v) in itertools.chain(d.items(), additional_dict.items())}",
+ "\nfor k in itertools.chain(d, additional_dict):\n    d[k] = additional_dict.get(k, d.get(k))",
+ "\nfor k in set(itertools.chain(d.keys(), additional_dict.keys())):\n    d[k] = additional_dict.get(k, d.get(k))",
+ "\nfor (k, v) in itertools.chain(d.items(), additional_dict.items()):\n    if k in d:\n        d[k] = v\n    else:\n        d[k] = v",
+ "\nd = {k: additional_dict.get(k, d.get(k)) for k in itertools.chain(d, additional_dict)}",
+ "\nd = {k: additional_dict.get(k, v) for (k, v) in itertools.chain(d.items(), additional_dict.items())}"
+]

@@ -1,0 +1,20 @@
+[
+ "a = x\nb = y\nc = z",
+ "(a, b, c) = (x, y, z)",
+ "(a, b, c) = _ = (x, y, z)",
+ "(a, b, c) = [x, y, z]",
+ "tmp = [x, y, z]\n(a, b, c) = tmp",
+ "tmp = [x, y, z]\na = tmp[0]\nb = tmp[1]\nc = tmp[2]",
+ "(a, b, c) = tuple([x, y, z])",
+ "(x, y, z) = (x, y, z)\n[a, b, c] = (x, y, z)\na = x\nb = y\nc = z\nfor i in range(3):\n    (x, y, z) = (y, z, x)\n    (a, b, c) = (a, b, c)\n    (x, y, z) = (y, z, x)",
+ "(a, b, c) = tuple((x, y, z))",
+ "zipped = [x, y, z]\n(a, b, c) = (zipped[0], zipped[1], zipped[2])",
+ "(a, b, c) = ([x, y, z][0], [x, y, z][1], [x, y, z][2])",
+ "def get_rows(arr):\n    return arr\n(a, b, c) = (get_rows(x), get_rows(y), get_rows(z))\n(a, b, c) = (a, b, c)",
+ "(a, b, c) = (x, y, z)\n(a, b, c) = (a, b, c)",
+ "(a, b, c) = dict(zip(['x', 'y', 'z'], [x, y, z])).values()",
+ "(a, b, c) = list([x, y, z])",
+ "(a, b, c) = _ = dict(zip(['x', 'y', 'z'], [x, y, z])).values()",
+ "(a, b, c) = {'x': x, 'y': y, 'z': z}.values()",
+ "import collections\ndef get_xyz(x, y, z):\n    return collections.namedtuple('XYZ', ['x', 'y', 'z'])(x, y, z)\n(a, b, c) = get_xyz(x, y, z)"
+]

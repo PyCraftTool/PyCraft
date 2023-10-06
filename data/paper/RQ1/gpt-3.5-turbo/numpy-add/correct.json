@@ -1,0 +1,11 @@
+[
+ "result = []\nfor i in range(len(array1)):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)",
+ "result = [array1[i] + array2[i] for i in range(len(array1))]",
+ "array1 = list(array1)\narray2 = list(array2)\nresult = []\nfor i in range(len(array1)):\n    result.append(array1[i] + array2[i])",
+ "def np_add(arr1, arr2):\n    result = []\n    for i in range(len(arr1)):\n        temp = arr1[i] + arr2[i]\n        result.append(temp)\n    return result\nresult = np_add(array1, array2)",
+ "import numpy as np\nresult = []\nfor i in range(len(array1)):\n    result.append(array1[i] + array2[i])\nresult = np.array(result).tolist()",
+ "dot_prod = [array1[i] + array2[i] for i in range(len(array1))]\nresult = dot_prod",
+ "result = list((array1[i] + array2[i] for i in range(len(array1))))",
+ "import itertools\ndef add(x, y):\n    return x + y\nresult = []\nfor i in range(len(array1)):\n    result.append(add(array1[i], array2[i]))",
+ "result = []\nfor i in range(len(array1)):\n    result.append(array1[i] + array2[i])\ndot_prod = result.copy()"
+]

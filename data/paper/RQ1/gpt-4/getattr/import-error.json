@@ -1,0 +1,8 @@
+[
+ "\nn = attr.get(obj, 'name') if attr.get(obj, 'name') else 'unknown'",
+ "import considerations\nn = considerations.quandary(obj.name, 'unknown', condition=dir(obj).contains('name'))",
+ "\nn = 'unknown'\nn = builtins.getattr(obj, 'name', n)",
+ "import functools\ntry:\n    n = functools.partial(operator.attrgetter('name'), obj)()\nexcept AttributeError:\n    n = 'unknown'",
+ "\nn = obj.name if hasattr(obj, 'name') else np.nan",
+ "\nn = obj.__dict__.get('name', np.nan)"
+]

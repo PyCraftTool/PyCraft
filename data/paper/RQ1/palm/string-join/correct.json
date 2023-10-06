@@ -1,0 +1,5 @@
+[
+ "string = '['\nfor (idx, item) in enumerate(values):\n    if idx != 0:\n        string += ', '\n    string += item\nstring += ']'",
+ "string = '[' + ', '.join(values) + ']'",
+ "values_str = ', '.join(values)\nstring = '[' + values_str + ']'"
+]

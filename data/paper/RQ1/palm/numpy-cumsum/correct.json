@@ -1,0 +1,23 @@
+[
+ "cum_arr = []\nfor i in range(len(array)):\n    cum_arr.append(sum(array[:i + 1]))",
+ "cum_arr = [sum(array[:i + 1]) for i in range(len(array))]",
+ "cum_arr = []\ncum_arr.extend([sum(array[:i + 1]) for i in range(len(array))])",
+ "cum_arr = [sum(array[0:i + 1]) for i in range(len(array))]",
+ "cum_arr = []\nfor i in range(len(array)):\n    cum_arr.append(sum(array[0:i + 1]))",
+ "cum_arr = list(map(lambda i: sum(array[:i + 1]), range(len(array))))",
+ "cum_arr = []\nfor i in range(1, len(array) + 1):\n    cum_arr.append(sum(array[:i]))",
+ "cum_arr = []\ns = 0\nfor i in range(len(array)):\n    s += array[i]\n    cum_arr.append(s)",
+ "cum_arr = [sum(array[:i]) for i in range(1, len(array) + 1)]",
+ "cum_arr = [0] * len(array)\nfor i in range(len(array)):\n    cum_arr[i] = cum_arr[i - 1] + array[i]",
+ "cum_arr = list(map(lambda x: sum(array[:x + 1]), range(len(array))))",
+ "cum_arr = list(map(lambda x: sum(array[:x]), range(1, len(array) + 1)))",
+ "cum_arr = []\nfor i in range(len(array)):\n    cum_arr.append(array[i] + (cum_arr[i - 1] if i > 0 else 0))",
+ "cum_arr = []\ncum_sum = 0\nfor i in range(len(array)):\n    cum_sum = cum_sum + array[i]\n    cum_arr.append(cum_sum)",
+ "cum_arr = [sum(array[0:i + 1]) for i in range(0, len(array))]",
+ "def cumulative_sum(array):\n    cum_arr = []\n    for i in range(len(array)):\n        cum_arr.append(sum(array[:i + 1]))\n    return cum_arr\ncum_arr = cumulative_sum(array)",
+ "sum = 0\ncum_arr = []\nfor (index, value) in enumerate(array):\n    sum += value\n    cum_arr.append(sum)",
+ "cum_arr = []\nfor value in array:\n    cum_arr.append(value + (cum_arr[-1] if cum_arr else 0))",
+ "cum_arr = [0 for _ in array]\nfor (index, value) in enumerate(array):\n    cum_arr[index] += value + (cum_arr[index - 1] if index else 0)",
+ "cum_arr = []\nfor (i, value) in enumerate(array):\n    cum_arr.append(sum(array[:i + 1]))",
+ "def accumulate_arr(array):\n    return [sum(array[:i + 1]) for i in range(len(array))]\ncum_arr = accumulate_arr(array)"
+]

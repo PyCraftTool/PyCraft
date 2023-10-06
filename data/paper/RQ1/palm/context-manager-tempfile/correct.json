@@ -1,0 +1,9 @@
+[
+ "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + '/features.json'\nf = open(file, 'w')\nf.write(content)\ntemp_dir.cleanup()",
+ "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + '/features.json'\nf = tempfile.NamedTemporaryFile(mode='w', dir=temp_dir.name)\nf.write(content)\nf.close()\ntemp_dir.cleanup()",
+ "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + '/features.json'\nf = open(file, 'w')\nf.write(content)\nf.close()\ntemp_dir.cleanup()",
+ "import tempfile\nwith tempfile.TemporaryDirectory() as temp_dir:\n    file = temp_dir + '/features.json'\n    f = open(file, 'w')\n    f.write(content)\n    f.close()",
+ "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + '/features.json'\nwith open(file, 'w') as f:\n    f.write(content)\ntemp_dir.cleanup()",
+ "import tempfile, os\nwith tempfile.TemporaryDirectory() as temp_dir:\n    file = os.path.join(temp_dir, 'features.json')\n    f = open(file, 'w')\n    f.write(content)\n    f.close()",
+ "import tempfile, shutil\nwith tempfile.TemporaryDirectory() as temp_dir:\n    f = tempfile.NamedTemporaryFile(suffix='.txt', dir=temp_dir)\n    f.write(content.encode('utf-8'))\n    f.flush()\n    file = f.name"
+]

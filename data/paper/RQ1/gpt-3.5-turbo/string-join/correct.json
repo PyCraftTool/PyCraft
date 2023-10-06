@@ -1,0 +1,13 @@
+[
+ "string = '['\nfor (idx, item) in enumerate(values):\n    if idx != 0:\n        string += ', '\n    string += item\nstring += ']'",
+ "string = '[' + ', '.join(values) + ']'",
+ "string = '[' + ', '.join((values[i] for i in range(len(values)))) + ']'",
+ "string = ', '.join(values)\nstring = '[' + string + ']'",
+ "count = ''\nfor value in values:\n    count += value + ', '\nstring = '[' + count[:-2] + ']'",
+ "count = ''\nfor i in range(len(values)):\n    count += values[i]\n    count += ', '\nstring = '[' + count[:-2] + ']'",
+ "string = '['\nfor idx in range(len(values)):\n    if idx != 0:\n        string += ', '\n    string += values[idx]\nstring += ']'",
+ "string = '['\nfor (idx, item) in enumerate(values):\n    string += item\n    if idx != len(values) - 1:\n        string += ', '\nstring += ']'",
+ "string = '['\nfor (idx, item) in enumerate(values):\n    if idx == len(values) - 1:\n        string += item\n    else:\n        string += item + ', '\nstring += ']'",
+ "import itertools\nstring = '[' + ', '.join(itertools.islice(values, None)) + ']'",
+ "string = '['\nfor (index, value) in enumerate(values):\n    if index != 0:\n        string += ', '\n    string += values[index]\nstring += ']'"
+]

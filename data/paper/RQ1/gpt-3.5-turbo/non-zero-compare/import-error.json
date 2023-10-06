@@ -1,0 +1,12 @@
+[
+ "from statistics import statistics\nif number_value:\n    val = statistics.median([val1, val2])\nelse:\n    val = max(val1, val2)",
+ "\nval = val1\nif np.any(number_value):\n    val = val2",
+ "\nif bool(number_value):\n    val = val1\nelif bool(number_value2):\n    val = val2\nelse:\n    val = val3",
+ "import itertools\nval = sum((val2 * number_value + val1 * (1 - number_value) for (val2, val1) in itertools.zip_longest(val2_list, val1_list, fillvalue=0)))",
+ "\nval = sum([val2 * number_value + val1 * (1 - number_value) for (val2, val1) in zip(val2_list, val1_list)])",
+ "\nval = sum([val2 * number_value + val1 * (1 - number_value) for (val2, val1) in zip(val2_list, val1_list)]) if len(val2_list) == len(val1_list) else 0",
+ "import statistics\nval = statistics.mean([val2 * number_value + val1 * (1 - number_value) for (val2, val1) in zip(val2_list, val1_list)])",
+ "import functools\nval = functools.reduce(lambda x, y: x + y, [val2 * number_value + val1 * (1 - number_value) for (val2, val1) in zip(val2_list, val1_list)])",
+ "\nval = functools.reduce(lambda x, y: x + y, [val2 * number_value + val1 * (1 - number_value) for (val2, val1) in zip(val2_list, val1_list)], 0)",
+ "import numpy as np\nval = np.dot(val2_list, number_value) + np.dot(val1_list, 1 - number_value)"
+]

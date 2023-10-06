@@ -1,0 +1,12 @@
+[
+ "temp = a\na = b\nb = temp",
+ "(a, b) = (b, a)",
+ "(b, a) = (b, a)[::-1]",
+ "(b, a) = reversed((b, a))",
+ "(a, b) = (b, a)\ntemp = a",
+ "(a, b) = [b, a]",
+ "(a, b) = tuple([b, a])",
+ "(a, b) = (b, a)\n(a, b) = (a, b)",
+ "temp = (a, b)\ntemp = (b, a)\n(a, b) = temp",
+ "(a, b) = (b, a)\ntemp = a\n(a, b) = (b, a)\n(a, b) = (b, a)"
+]

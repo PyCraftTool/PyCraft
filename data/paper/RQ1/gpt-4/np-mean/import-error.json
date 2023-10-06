@@ -1,0 +1,22 @@
+[
+ "\nmean = reduce(lambda x, y: x + y, arr1) / len(arr1)",
+ "\nmean = np.sum(arr1) / np.size(arr1)",
+ "\ntotal = reduce(lambda x, y: x + y, arr1)\nmean = total / len(arr1)",
+ "\nmean = reduce(lambda a, b: a + b, arr1) / len(arr1)",
+ "\nmean = np.divide(np.sum(arr1), np.size(arr1))",
+ "\nmean = reduce(lambda a, b: a + b, arr1) / float(len(arr1))",
+ "from operator import add\nmean = reduce(add, arr1) / len(arr1)",
+ "\nmean = gz1 = reduce(lambda x, y: x + y, arr1) / len(arr1)",
+ "\nmean = sum([numpy.double(i) for i in arr1]) / len(arr1)",
+ "\nmean = reduce(operator.add, arr1) / len(arr1)",
+ "from scipy import stats\nmean = stats.tmean(arr1)",
+ "\nmean = reduce(lambda total, value: total + value, arr1) / float(len(arr1))",
+ "\nmean = arr1[0]\nfor i in rangye(1, len(arr1)):\n    mean += value\nmean /= len(arr1)",
+ "\nmean = functools.reduce(lambda a, b: a + b, arr1) / float(len(arr1))",
+ "\nmean = 0\nmean = reduce(lambda x, y: x + y, arr1) / len(arr1)",
+ "\nmean = np.average(arr1) if arr1 else np.nan",
+ "\nmean = np.nan\nif arr1:\n    total = 0\n    for num in arr1:\n        total += num\n    mean = total / len(arr1)",
+ "\nmean = np.nan\nif arr1:\n    mean = reduce(lambda x, y: x + y, arr1) / len(arr1)",
+ "import scipy.stats\nmean = scipy.stats.tmean(arr1)",
+ "\narr1_np = np.array(arr1)\nmean = arr1_np.sum() / arr1_np.size"
+]

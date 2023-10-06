@@ -1,0 +1,15 @@
+[
+ "result = []\nfor i in range(len(array1)):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)",
+ "result = [array1[i] + array2[i] for i in range(len(array1))]",
+ "result = []\nfor i in range(len(array1)):\n    result.append(array1[i] + array2[i])",
+ "def add_two_arrays(arr1, arr2):\n    result = []\n    for i in range(len(arr1)):\n        result.append(arr1[i] + arr2[i])\n    return result\nresult = add_two_arrays(array1, array2)",
+ "from functools import reduce\nresult = [reduce(lambda x, y: x + y, (array1[i], array2[i])) for i in range(len(array1))]",
+ "result = []\nfor (index, value) in enumerate(array1):\n    result.append(array1[index] + array2[index])",
+ "result = [array1[i] + array2[i] for i in range(len(array1)) if i < 5]",
+ "result = list(map(lambda i: array1[i] + array2[i], range(len(array1))))",
+ "result = []\nfor i in range(len(array1)):\n    if i < 5:\n        result.append(array1[i] + array2[i])",
+ "sum_of_elements = []\nfor i in range(len(array1)):\n    sum_of_elements.append(array1[i] + array2[i])\nresult = sum_of_elements",
+ "result = [0 for i in range(len(array1))]\nfor i in range(len(array1)):\n    result[i] = array1[i] + array2[i]",
+ "result = list(zip(array1, array2))\nfor i in range(len(array1)):\n    result[i] = result[i][0] + result[i][1]",
+ "result = [0] * len(array1)\nfor i in range(len(array1)):\n    result[i] = array1[i] + array2[i]"
+]

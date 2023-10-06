@@ -1,0 +1,14 @@
+[
+ "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]",
+ "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+ "dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+ "dot_prod = 0\nfor (index, value) in enumerate(arr1):\n    dot_prod += value * arr2[index]",
+ "import numpy as np\nresult = 0.0\nfor (i, x) in enumerate(arr1):\n    result += x * arr2[i]\ndot_prod = result",
+ "dot_prod = 0\nfor (index, value) in enumerate(arr1):\n    dot_prod += arr1[index] * arr2[index]",
+ "dot_prod = sum(list(map(lambda i: arr1[i] * arr2[i], range(len(arr1)))))",
+ "def dot_product(arr1, arr2):\n    return sum((arr1[i] * arr2[i] for i in range(len(arr1))))\ndot_prod = dot_product(arr1, arr2)",
+ "def dot_product(a, b):\n    return sum((a[i] * b[i] for i in range(len(a))))\ndot_prod = dot_product(arr1, arr2)",
+ "import numpy as np\nsum_value = 0\nfor i in range(len(arr1)):\n    sum_value += arr1[i] * arr2[i]\ndot_prod = sum_value",
+ "dot_prod = sum([value * arr2[index] for (index, value) in enumerate(arr1)])",
+ "import numpy as np\nsum = 0.0\nfor i in range(len(arr1)):\n    sum += arr1[i] * arr2[i]\ndot_prod = sum"
+]

@@ -1,0 +1,18 @@
+[
+ "\nos_con = os.system('cat ' + file_path)\ncontents = str(os_con)",
+ "\nfile = io.open(file_path, 'r').read()\ncontents = str(file)",
+ "\nf = codecs.open(file_path, 'r')\ncontents = f.read()",
+ "\nwith codecs.open(file_path, 'r', encoding='utf-8') as f:\n    contents = f.read()",
+ "\nfile = operator.methodcaller('read')(open(file_path, 'r'))\ncontents = ''",
+ "\nwith open(os.path.expanduser(file_path), 'r') as file:\n    contents = file.read()",
+ "\nfile_path = os.path.expanduser(file_path)\nfile = open(file_path, 'r')\ncontents = file.read()\nfile.close()",
+ "from pathlib import Path\nfile_path = Path(os.path.expanduser(file_path))\nfile = open(file_path, 'r')\ncontents = file.read()\nfile.close()",
+ "import codecs\nfile = codecs.open(os.path.expanduser(file_path), 'r', encoding='utf-8')\ncontents = file.read()\nfile.close()",
+ "import mmap\nwith open(file_path, 'r') as file:\n    cont_blob = mmap.mmap(file.fileno(), 0, access=mmap.ACCESS_READ)\n    cont_blob.seek(0)\n    contents = cont_blob.read()\n    os.close(file.fileno())",
+ "from pathlib import Path\nfile = Path(file_path).open()\ncontents = ''\ntry:\n    contents = file.read()\nfinally:\n    os.close(file.fileno())",
+ "\nwith codecs.open(file_path, 'r', 'utf-8') as file:\n    contents = file.read()",
+ "\nfile = codecs.open(file_path, mode='r', encoding='utf-8')\ncontents = file.read()\nfile.close()",
+ "import os\nfile = codecs.open(os.path.expanduser(file_path), 'r', 'utf-8')\ncontents = file.read()\nfile.close()",
+ "from pathlib import Path\nfile_path = Path(file_path)\nfile = codecs.open(file_path, 'r', 'utf-8')\ncontents = file.read()\nfile.close()",
+ "import sh\ncontents = sh.cat(file_path)"
+]

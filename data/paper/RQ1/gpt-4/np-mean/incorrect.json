@@ -1,0 +1,13 @@
+[
+ "from functools import reduce\nmean = reduce(lambda x, y: x + y / len(arr1), arr1)",
+ "import operator\nmean = operator.add(*arr1) / len(arr1)",
+ "mean = 0\nmean = (mean + value for value in arr1)\nmean = mean / len(arr1)",
+ "total = 0\nlength = 0\n[(i := (i + x)) for x in arr1]\n[(length := (length + 1)) for _ in arr1]\nmean = i / length",
+ "mean = arr1[0]\nfor i in range(1, len(arr1)):\n    mean = (mean + arr1[i]) / 2",
+ "from functools import reduce\nmean = reduce(lambda x, y: (x + y) / 2, arr1)",
+ "mean = arr1[0]\ni = 1\nwhile i < len(arr1):\n    mean = (mean + arr1[i]) / 2\n    i += 1",
+ "import torch\nmean = arr1.mean()",
+ "mean = (sum(arr1)[i] for i in range(len(arr1))) / len(arr1)",
+ "import sympy as sp\nmean = sp.Sum(sp.Matrix(arr1) / len(arr1)).evalf()",
+ "arr1.sort()\nmean = (arr1[(len(arr1) - 1) // 2] + arr1[len(arr1) // 2]) / 2"
+]

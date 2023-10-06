@@ -1,0 +1,20 @@
+[
+ "common = []\nfor i in l1:\n    if i in l2:\n        common.append(i)",
+ "common = [i for i in l1 if i in l2]",
+ "common = list(filter(lambda x: x in l2, l1))",
+ "common = list(filter(lambda x: x in l1 and x in l2, l1))",
+ "common = [item for item in l1 if item in l2] if l1 and l2 else []",
+ "common = [l1[i] for i in range(len(l1)) if l1[i] in l2]",
+ "import copy\nl2_copy = copy.deepcopy(l2)\ncommon = [i for i in l1 if i in l2_copy]",
+ "def intersection(l1, l2):\n    common = []\n    for item in l1:\n        if item in l2:\n            common.append(item)\n    return common\ncommon = intersection(l1, l2)",
+ "common = [x for x in l1 if x in l2].copy()",
+ "import itertools\ncommon = list(itertools.chain(*[[i for i in l1 if i in l2]]))",
+ "intersection = [item for item in l1 if item in l2]\ncommon = list(intersection)",
+ "common = [x for x in l1 if x in l2] if l1 else []",
+ "import itertools\ncommon = list(itertools.filterfalse(lambda x: x not in l2, l1))",
+ "common = [x for x in l1 if x in l2]\nlen(common)",
+ "import collections\nresult = []\nfor x in l1:\n    if x in l2:\n        result.append(x)\ncommon = result",
+ "def intersection(a, b):\n    res = []\n    for item in a:\n        if item in b:\n            res.append(item)\n    return res\ncommon = intersection(l1, l2)",
+ "def intersection(a, b):\n    return [x for x in a if x in b]\ncommon = intersection(l1, l2)",
+ "common = list([j for j in l1 if j in l2])"
+]

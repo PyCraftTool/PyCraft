@@ -1,0 +1,13 @@
+[
+ "\n{'source': 'common = sorted(list(set(l1).intersection(set(l2))))', 'type': 'beginner'}",
+ "\n{'source': '\\ncommon = [i for i in l1 if i in l2]\\ncommon = sorted(common)\\n', 'type': 'intermediate'}",
+ "\n{'source': '\\ndef common(l1, l2):\\n  common = []\\n  for i in l1:\\n    if i in l2:\\n      common.append(i)\\n  return sorted(common)\\n\\ncommon = common(l1, l2)\\n', 'type': 'expert'}",
+ "\n{'code': 'from functools import reduce\\ncommon = reduce(lambda x, y: x & y, [l1, l2])', 'type': 'expert', 'imports': ['functools']}",
+ "\n{'code': 'def intersection(l1, l2):\\n    return list(set(l1) & set(l2))\\ncommon = intersection(l1, l2)'}",
+ "\n{'code': 'common = [x for x in l1 if x in l2]', 'type': 'intermediate'}",
+ "\n{'code': 'common = []\\nfor x in l1:\\n    if x in l2:\\n        common.append(x)'}",
+ "\n{'code': 'common = set(l1) & set(l2)', 'type': 'beginner'}",
+ "\n{'code': '\\ndef intersection(list1, list2):\\n  return list(set(list1) & set(list2))\\n\\ncommon = intersection(l1, l2)\\n', 'type': 'beginner'}",
+ "\n{'code': '\\ncommon = list(set(l1) & set(l2))\\n', 'type': 'intermediate'}",
+ "\n{'code': '\\ncommon = set(l1).intersection(set(l2))\\n', 'type': 'expert'}"
+]

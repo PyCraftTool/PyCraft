@@ -1,0 +1,5 @@
+[
+ "\n{'code': 'import functools\\ntmp = list(iterable)\\nt = [x for x in tmp if cond(x)]\\nfunctools.reduce(lambda a,b: a+b, tmp)', 'type': 'expert', 'comments': 'Using functools.reduce to implement the union of two lists'}",
+ "\n{'code': 'for i in iterable:\\n    if cond(i):\\n        t.append(i)', 'type': 'intermediate', 'comments': 'Basic for-loop with append'}",
+ "\n{'code': 't = []\\nfor i in iterable:\\n    if cond(i):\\n        t.append(i)\\nreturn t', 'type': 'beginner', 'comments': 'Basic list comprehension with if statement'}"
+]

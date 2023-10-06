@@ -1,0 +1,12 @@
+[
+ "import math\nfrom operator import add\ncum_arr = [reduce(add, array[:i + 1]) for i in range(len(array))]",
+ "import operator\ncum_arr = [functools.reduce(operator.add, array)]",
+ "\ncum_arr = []\nsum = 0\nfor i in array:\n    sum += i\n    cum_arr.append(sum)\ncum_arr = np.array(cum_arr)",
+ "\ncum_arr = []\ncumulative_sum = reduce(lambda x, y: x + y, array)\ncum_arr.append(cumulative_sum)",
+ "\ninit = 0\nfor i in array:\n    init += i\n    cum_arr.append(init)",
+ "import pandas as pd\nimport operator\ncum_arr = []\nfor i in range(len(array)):\n    cum_arr.append(functools.reduce(operator.add, array[:i + 1]))",
+ "\ncum_arr = np.array([])\nfor i in range(len(array)):\n    cum_arr = np.append(cum_arr, sum(array[:i + 1]))",
+ "from operator import add\ncum_arr = [functools.reduce(add, array[:i + 1]) for i in range(len(array))]",
+ "from operator import add\ncum_arr = [functools.reduce(add, array)]",
+ "\ncum_arr = []\nfor i in range(len(array)):\n    cum_arr.append(sum(array[:i + 1]))\ncum_arr = np.array(cum_arr)"
+]

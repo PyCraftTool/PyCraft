@@ -1,0 +1,13 @@
+[
+ "\ncontents = json.load(file)",
+ "import shutil\nshutil.copy(file_path, 'temp_file.txt')\nfile = open('temp_file.txt', 'r')\ncontents = file.read()\nfile.close()\nos.remove('temp_file.txt')",
+ "import wget\nfile_path = 'https://example.com/file.txt'\nwget.download(file_path, 'temp_file.txt')\nfile = open('temp_file.txt', 'r')\ncontents = file.read()\nfile.close()\nos.remove('temp_file.txt')",
+ "from urllib import request\nfile_path = 'path/to/file.txt'\nresponse = requests.get(file_path)\ncontents = response.content.decode('utf-8')",
+ "import urllib2\nresponse = urllib2.urlopen(file_path)\ncontents = response.read().decode('utf-8')",
+ "import urllib2\nresponse = urllib2.urlopen(file_path)\ncontents = response.read().decode('utf-8')\nfile = None",
+ "import urllib2\nresponse = urllib2.urlopen(file_path)\ncontents = response.read().decode('utf-8')\nfile = response",
+ "import urllib2\nresponse = urllib2.urlopen(file_path)\ncontents = response.read().decode('utf-8')\nfile = response\nfile.close()",
+ "import pandas as pd\nfile = open(file_path, 'r')\ncontents = pd.read_html(file)\nfile.close()",
+ "import numpy as np\nimport os\ncontents = np.fromfile(file_path, dtype=np.uint8)\nif os.path.exists(file_path):\n    os.rename(file_path, new_file_path)",
+ "import numpy as np\nimport os\ncontents = np.fromfile(file_path, dtype=np.uint8)\nif os.path.exists(file_path):\n    os.replace(file_path, new_file_path)"
+]

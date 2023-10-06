@@ -1,0 +1,20 @@
+[
+ "\ncommon = [i for i in l1 if l2.count(i) > 0 and common.count(i) == 0]",
+ "from functools import reduce\ncommon = list(reduce(lambda x, y: x & y, (Counter(l1), Counter(l2))))",
+ "from functools import reduce\ncommon = list(reduce(lambda x, y: x & y, (Counter(l1), Counter(l2))).elements())",
+ "from operator import add\nfrom itertools import compress\ncommon = reduce(add, compress(l1, (i in l2 for i in l1)))",
+ "\ncommon = reduce(lambda x, y: x + y, (i for i in l1 if i in l2))",
+ "import functools\ncommon = list(filter(functools.partial(contains, l2), l1))",
+ "from functools import reduce\ncommon = list(reduce(np.intersect1d, (l1, l2)))",
+ "\ncommon = filter(lambda i: i in l1 and i in l2, itertools.chain(l1, l2))\ncommon = list(common)",
+ "from operator import and_\ncommon = list(reduce(and_, map(set, (l1, l2))))",
+ "import functools\ncommon = list(filter(functools.partial(is_in, l2), l1))\n\ndef is_in(col, item):\n    return item in col",
+ "import numpy as np\ncommon1 = np.intersect1d(li1, li2)\ncommon = common.astype(list)",
+ "\ncommon = direct_intersect(l1, l1)\n\ndef direct_intersect(a_list, b_list):\n    return list(set(a_list) & set(b_list))",
+ "import set\ncommon = list(set.Set(l1) & set.Set(l2))",
+ "\ncommon = np.array(list(filter(lambda x: x in l2, l1)))",
+ "import builtins\ncommon = builtins.list(builtins.set(l1) & builtins.set(l2))\ncommon = np.array(common)",
+ "from operator import eq\ncommon = list(filter(eq(*np.unique(l1, return_index=True)), np.unique(l2, return_index=True)))",
+ "from functools import reduce\ncommon = reduce(np.intersect1d, (l1, l2))",
+ "\ncommon = [i for i in itertools.ifilter(lambda x: x in l2, l1)]"
+]

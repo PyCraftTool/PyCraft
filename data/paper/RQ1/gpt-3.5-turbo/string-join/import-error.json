@@ -1,0 +1,22 @@
+[
+ "\nstring = '[' + ', '.join((str(math.floor(float(x))) for x in values)) + ']'",
+ "\nstring = '[' + ', '.join([math.floor(x).__str__() for x in values]) + ']'",
+ "\nstring = '[' + ', '.join(itertools.chain(*values)) + ']'",
+ "import functools\nstring = '[' + functools.reduce(lambda a, b: a + ', ' + b, list(itertools.chain.from_iterable(values))) + ']'",
+ "import numpy as np\nstring = '[' + np.array2string(np.array(list(filter(None.__ne__, ['['] + list(itertools.chain.from_iterable(values)) + [']']))), separator=', ')[1:-1] + ']'",
+ "\ndef into_list(values):\n    array = np.array(values)\n    string = array.tolist()\n    return string\nstring = into_list(values)",
+ "import numpy as np\nfrom functools import reduce\nstring = '[' + reduce(numpy.add, [1, 2, 3]) + ']'",
+ "import numpy as np\nstring = np.array(values).tolist()\nstring = reduce(lambda x, y: x + ', ' + y if x != '[' else '[' + y, string, '[')",
+ "import numpy as np\nstring = np.array(values).tolist()\nstring = reduce(lambda x, y: x + ', ' + y if x != '[' else '[' + y, string, '')",
+ "from itertools import chain\nflatten_values = list(chain.from_iterable(values))\ncount = np.array(flatten_values)",
+ "\ncount = functools.reduce(lambda x, y: str(x) + ', ' + str(y), values)\nstring = '[' + count + ']'",
+ "\ncount = reduce(lambda x, y: x + ', ' + y, map(str, values))\nstring = '[' + count + ']'",
+ "\nstring = functools.reduce(lambda x, y: str(x) + ', ' + str(y), values)",
+ "import numpy as np\nstring = np.array(list(itertools.chain.from_iterable(values)))",
+ "\nstring = '[' + ', '.join(map(str, [math.floor(x) for x in values])) + ']'",
+ "import itertools\nstring = '[' + ', '.join([str(statistics.median(list(itertools.chain.from_iterable([[int(x)] for x in values]))))]) + ']'",
+ "import functools\nstring = functools.reduce(operator.add, values)",
+ "\nstring = '[' + ', '.join(chain(*values)) + ']'",
+ "\nstring = '[' + ', '.join(list(chain(*values))) + ']'",
+ "\nstring = '[' + ', '.join(map(str, list(itertools.chain.from_iterable(values)))) + ']'"
+]

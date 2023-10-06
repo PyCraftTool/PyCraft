@@ -1,0 +1,17 @@
+[
+ "result = []\nfor i in range(len(array1)):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)",
+ "sum_of_elements = 0\nresult = [0] * len(array1)\nfor i in range(len(result)):\n    sum_of_elements = array1[i] + array2[i]\n    result[i] = sum_of_elements",
+ "result = []\nsum_of_elements = []\nfor i in range(len(array1)):\n    result.append(array1[i] + array2[i])\n    sum_of_elements.append(array1[i] + array2[i])",
+ "result = [array1[i] + array2[i] for i in range(len(array1))]\nsum_of_elements = [array1[i] + array2[i] for i in range(len(array1))]",
+ "i = 0\n(result, sum_of_elements) = ([], [])\nwhile i < len(array1):\n    result.append(array1[i] + array2[i])\n    sum_of_elements.append(array1[i] + array2[i])\n    i += 1",
+ "sum_of_elements = 0\nresult = []\nfor i in range(len(array1)):\n    result.append(array1[i] + array2[i])\n    sum_of_elements = result[-1]",
+ "result = []\nfor (i, _) in enumerate(array1):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)",
+ "result = []\nsum_of_elements = 0\nfor i in range(len(array1)):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)",
+ "result = []\nsum_of_elements = 0\nfor (i, _) in enumerate(array1):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)",
+ "result = []\ni = 0\nwhile i < len(array1):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)\n    i += 1",
+ "i = 0\nresult = []\nwhile i < len(array1):\n    result.append(array1[i] + array2[i])\n    i += 1",
+ "sum_of_elements = 0\nresult = []\nfor i in range(len(array1)):\n    result.append(array1[i] + array2[i])\n    sum_of_elements = result[i]",
+ "result = []\nsum_of_elements = 0\ni = 0\nwhile i < len(array1):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)\n    i += 1",
+ "result = []\niterator = iter(array2)\nfor a in array1:\n    sum_of_elements = a + next(iterator)\n    result.append(sum_of_elements)",
+ "sum_of_elements = 0\nresult = []\nfor i in range(len(array1)):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)"
+]

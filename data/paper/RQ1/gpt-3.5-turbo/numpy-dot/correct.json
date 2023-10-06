@@ -1,0 +1,20 @@
+[
+ "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]",
+ "dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+ "dot_prod = 0\nfor (index, value) in enumerate(arr1):\n    dot_prod += arr1[index] * arr2[index]",
+ "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+ "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod = dot_prod + arr1[i] * arr2[i]",
+ "dot_prod = sum((arr1[i] * arr2[i] for (i, value) in enumerate(arr1)))",
+ "import statistics\ndot_prod = statistics.fsum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+ "dot_prod = sum(map(lambda i: arr1[i] * arr2[i], range(len(arr1))))",
+ "dot_prod = 0\nfor i in range(len(arr1)):\n    if arr1[i] is not None and arr2[i] is not None:\n        dot_prod += arr1[i] * arr2[i]\n    else:\n        dot_prod += 0",
+ "import math\ndot_prod = math.fsum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+ "import numpy as np\narr3 = np.array([arr1[i] * arr2[i] for i in range(len(arr1))])\ndot_prod = np.sum(arr3)",
+ "import math\ndot_prod = sum([math.prod((arr1[i], arr2[i])) for i in range(len(arr1))])",
+ "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]\n    i += 1",
+ "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1)))) if len(arr1) == len(arr2) else sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+ "dot_prod = 0\nfor (i, val) in enumerate(arr1):\n    dot_prod += val * arr2[i]",
+ "dot_prod = sum([val * arr2[i] for (i, val) in enumerate(arr1)])",
+ "dot_prod = sum([arr1[index] * arr2[index] for (index, value) in enumerate(arr1)])",
+ "prod_arr = [arr1[i] * arr2[i] for i in range(len(arr1))]\ndot_prod = sum(prod_arr)"
+]

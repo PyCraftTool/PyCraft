@@ -1,0 +1,14 @@
+[
+ "\ncounts = defaultdict(int)\nfor i in iterable:\n    counts[i] += 1",
+ "from functools import reduce\nimport operator\ncounts = dict(reduce(operator.add, map(collections.Counter, iterable)))",
+ "\ncount_dict = {}\nfor i in iterable:\n    if i in count_dict:\n        count_dict[i] += 1\n    else:\n        count_dict[i] = 1\ncounts = defaultdict(int, count_dict)",
+ "\nitem_list = list(iterable)\nitem_counts = {}\nfor item in item_list:\n    item_counts[item] = item_counts.get(item, 0) + 1\ncounts = Counter(item_counts)",
+ "import functools\nimport operator\ncounts = functools.reduce(operator.add, iterable, Counter())",
+ "from functools import reduce\nfrom operator import add\ncounts = reduce(add, [Counter([value]) for value in iterable])",
+ "from functools import reduce\nfrom operator import add\ncounts = reduce(add, [Counter({value: 1}) for value in iterable])",
+ "from functools import reduce\nfrom operator import add\ncounts = reduce(add, [Counter({value: 1}) for value in iterable], Counter())",
+ "from functools import reduce\nfrom operator import add\ncounts = reduce(add, [defaultdict(int, {value: 1}) for value in iterable], defaultdict(int))",
+ "\ncounts = []\nfor i in iterable:\n    counts.append(i)\ncounts = np.bincount(counts)",
+ "import numpy as np\ncounts = np.array([len(list(group)) for (key, group) in groupby(iterable)])",
+ "import numpy as np\ncounts = dict(zip(unique, np.bincount(iterable)))"
+]

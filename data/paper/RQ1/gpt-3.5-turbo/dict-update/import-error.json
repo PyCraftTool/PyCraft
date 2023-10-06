@@ -1,0 +1,16 @@
+[
+ "\nd = {key: value for (key, value) in chain(d.items(), additional_dict.items())}",
+ "\nd = {keys[i]: values[i] for i in range(len(keys))}",
+ "\nd = dict(zip(keys, values))",
+ "\nfor key in additional_dict.keys():\n    d[key] = additional_dict.get(key, d.get(key, value))",
+ "\nfor key in additional_dict:\n    d[key] = additional_dict.get(key, value)",
+ "\nnew_dict = defaultdict(dict, additional_dict)",
+ "\nadditional_dict.__setitem__(k, v)",
+ "\nsetattr(additional_dict, k, v)",
+ "\nexec(f'additional_dict[{repr(k)}] = {repr(v)}')",
+ "\neval('additional_dict[' + repr(k) + '] = ' + repr(v))",
+ "\nd = {k: additional_dict.get(k, default_value) for k in additional_dict}",
+ "\nd = {k: additional_dict.get(k, default_value) for k in additional_dict.keys()}",
+ "\nfor (i, (key, value)) in enumerate(additional_dict.items()):\n    d[key] = additional_dict.get(key, default_value) if key in additional_dict else value",
+ "\nfor (i, key) in enumerate(additional_dict):\n    d[key] = additional_dict.get(key, default_value)"
+]

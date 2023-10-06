@@ -1,0 +1,6 @@
+[
+ "\nc1 = bool(val1)\nc2 = bool(val2)\nc3 = bool(val3)\nc4 = bool(val4)\nvalue = val1",
+ "\ndef choose_value(c1, c2, c3, c4, val1, val2, val3, val4, val5):\n    if c1:\n        return val2\n    elif c2:\n        return val3\n    elif c3:\n        return val4\n    elif c4:\n        return val5\n    return val1\nvalue = choose_value(c1, c2, c3, c4, val1, val2, val3, val4, val5)",
+ "\nf = lambda x: x if x else val2\nvalue = reduce(f, (c1, c2, c3, c4))",
+ "\nvalue = val1 if functools.reduce(lambda x, y: x & y, [c1, c2, c3, c4]) else val2"
+]

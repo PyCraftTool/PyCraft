@@ -1,0 +1,20 @@
+[
+ "import operator\nstring = '[' + functools.reduce(operator.add, [value + ', ' for value in values]).rstrip(', ') + ']'",
+ "import operator\nstring = '[' + functools.reduce(operator.add, map(lambda x: x + ', ', values))[:-2] + ']'",
+ "import operator\nstring = '[' + functools.reduce(operator.add, [value + ', ' for value in values])[:-2] + ']'",
+ "from operator import add\nstring = '[' + functools.reduce(add, [val + ', ' for val in values])[:-2] + ']'",
+ "from operator import add\nstring = '[' + reduce(add, map(lambda x: x + ', ', values))[:-2] + ']'",
+ "\ndef add_elements(previous, current):\n    return previous + ', ' + str(current) if isinstance(current, str) else previous\nstring = functools.reduce(add_elements, '[' + values[0] if isinstance(values[0], str) else '', values[1:]) + ']'",
+ "import operator\nimport functools\nstring = '[' + funct.reduce(operator.add, list(map(lambda x: x + ', ', values)))[:-2] + ']'",
+ "\ntemp = ['[']\nfor value in values:\n    temp.append(value + ', ')\nstring = functools.reduce(operator.add, temp[:-1]) + values[-1] + ']'",
+ "from operator import add\nstring = '[' + reduce(add, [x + ', ' for x in values])[:-2] + ']'",
+ "from operator import add\ndef concat_fn(x):\n    return x + ', '\nstring = '[' + reduce(add, map(concat_fn, values))[:-2] + ']'",
+ "import operator\nstring = '[' + reduce(operator.add, [val + ', ' for val in values])[:-2] + ']'",
+ "import operator\nstring = '[' + functools.reduce(operator.add, map(lambda s: ', ' + s if values.index(s) != 0 else s, values)) + ']'",
+ "from operator import add\nstring = '[' + reduce(add, [str(value) + ', ' for value in values])[:-2] + ']'",
+ "import operator\nstring = '[' + functools.reduce(operator.add, map(lambda x: x + ', ', values), '')[:-2] + ']'",
+ "from operator import add\nstring = str(reduce(add, map(str, values)))",
+ "from operator import add\nstring = '[' + reduce(add, [', ' + i if index != 0 else i for (index, i) in enumerate(values)]) + ']'",
+ "from operator import add\nstring = '[' + reduce(add, values) + ']'",
+ "\nstring = '[' + functools.reduce(lambda a, b: a + ', ' + b, values[1:], values[0] if values else '') + ']'"
+]

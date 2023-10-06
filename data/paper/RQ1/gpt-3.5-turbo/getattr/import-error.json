@@ -1,0 +1,11 @@
+[
+ "\nn = getattr(obj, 'name', n)",
+ "\nn = getattr(obj, 'name', n) if hasattr(obj, 'name') else n",
+ "\nn = obj.name if hasattr(obj, 'name') else getattr(obj, 'name', n)",
+ "\nn = getattr(obj, 'name', n) if hasattr(obj, 'name') else 'unknown'",
+ "\nn = getattr(obj, 'name', n) if hasattr(obj, 'name') else obj.name",
+ "\nif isinstance(obj, NameClass):\n    n = obj.name\nelse:\n    n = 'unknown'",
+ "from typing import Union\nobj = SomeClass()\nn = obj.name if hasattr(obj, 'name') else Union[str, int](0)",
+ "from typing import Union\nobj = SomeClass()\nif hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = Union[str, int](0)",
+ "from typing import Union\nobj = SomeClass()\ntry:\n    n = obj.name\nexcept AttributeError:\n    n = Union[str, int](0)"
+]

@@ -1,0 +1,9 @@
+[
+ "\nval = None\nif bool(number_val):\n    val = val2\nelse:\n    val = val1",
+ "\nval = int(number_value) == number_value and [val2][0] or (int(number_value) != number_value and [val1][0])\ntry:\n    builtins.val = [val1, val2][int(bool(number_value))]\nexcept:\n    builtins.val = val1",
+ "\nfilter_value = np.ones_like(val)\nfilter_value[number_value] = 0\nval = val * filter_value + val2 * (1 - filter_value)",
+ "\nval = val1 * (1 - np.array(number_value)) + val2 * np.array(number_value)",
+ "\nval = val1\ntry:\n    if not math.isclose(number_value, 0, rel_tol=1e-09):\n        val = val2\nexcept ZeroDivisionError:\n    pass",
+ "\nval = reduce(lambda a, b: a if number_value != 0 else b, [val2, val1])",
+ "\nval = np.where(np.array(number_value) != 0, val2, val1)"
+]
