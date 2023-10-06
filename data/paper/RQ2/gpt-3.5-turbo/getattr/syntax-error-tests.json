@@ -1,0 +1,26 @@
+[
+ {
+  "init": "class person:\n  def __init__(self):\n    self.lastname = 'Doe' |\nclass employee(person):\n  def __init__(self):\n    super().__init__()\n    self.position = 'Engineer'\nobj = employee()",
+  "assertions": [
+   "assert n == 'unknown'"
+  ]
+ },
+ {
+  "init": "class person:\n  def __init__(self):\n    self.lastname = None |\nclass employee(person):\n  def __init__(self):\n    super().__init__()\n    self.position = 'Engineer'\nobj = employee()",
+  "assertions": [
+   "assert n == 'unknown'"
+  ]
+ },
+ {
+  "init": "obj = ",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test(Test('John'))",
+  "assertions": [
+   "assert n == <__main__.Test object at 0x000001>"
+  ]
+ }
+]

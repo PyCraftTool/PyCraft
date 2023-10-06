@@ -1,0 +1,362 @@
+[
+ {
+  "init": "val1 = 1\nval2 = 2\nint_instance = 2",
+  "assertion": "assert val == 2"
+ },
+ {
+  "init": "val1=20\nval2=10\nint_instance='10'",
+  "assertion": "assert val == 20"
+ },
+ {
+  "init": "val1=20\nval2=10\nint_instance=10",
+  "assertion": "assert val == 10"
+ },
+ {
+  "init": "val1=20\nval2=10\nint_instance=None",
+  "assertion": "assert val == 20"
+ },
+ {
+  "init": "val1=20\nval2=10\nint_instance=''",
+  "assertion": "assert val == 20"
+ },
+ {
+  "init": "val1 = 5\nval2 = 6\nint_instance = 5",
+  "assertion": "assert val == 6"
+ },
+ {
+  "init": "val1 = 5\nval2 = 6\nint_instance = '5'",
+  "assertion": "assert val == val1"
+ },
+ {
+  "init": "val1 = 'five'\nval2 = 6\nint_instance = int('5')",
+  "assertion": "assert val == val2"
+ },
+ {
+  "init": "val1 = 100\nval2 = 200\nint_instance = 100",
+  "assertion": "assert val == 200"
+ },
+ {
+  "init": "val1 = 100\nval2 = 200\nint_instance = \"100\"",
+  "assertion": "assert val == 100"
+ },
+ {
+  "init": "val1 = 100\nval2 = 200\nint_instance = None",
+  "assertion": "assert val == 100"
+ },
+ {
+  "init": "val1 = 100\nval2 = 200\nint_instance = 100.0",
+  "assertion": "assert val == 100.0"
+ },
+ {
+  "init": "val1 = 1\nval2 = 2\nint_instance = None",
+  "assertion": "assert val == 1"
+ },
+ {
+  "init": "int_instance=None\nval1=1\nval2=2",
+  "assertion": "assert val == 1"
+ },
+ {
+  "init": "int_instance=1\nval1=1\nval2=2",
+  "assertion": "assert val == 2"
+ },
+ {
+  "init": "int_instance=2.0\nval1=1\nval2=2",
+  "assertion": "assert val == 1"
+ },
+ {
+  "init": "int_instance=3\nval1='a'\nval2=2",
+  "assertion": "assert val == 2"
+ },
+ {
+  "init": "int_instance=7\nval1=None\nval2=None",
+  "assertion": "assert val == None"
+ },
+ {
+  "init": "int_instance=8\nval1=0\nval2=0",
+  "assertion": "assert val == 0"
+ },
+ {
+  "init": "int_instance=9\nval1=9999\nval2=9999",
+  "assertion": "assert val == 9999"
+ },
+ {
+  "init": "val2=1\nval1='str'\nint_instance=1",
+  "assertion": "assert val==1"
+ },
+ {
+  "init": "val2=None\nval1=None\nint_instance=None",
+  "assertion": "assert val==None"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = 2",
+  "assertion": "assert val == 'b'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = '2'",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = None",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = '2.3'",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = ' '",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = 1",
+  "assertion": "assert val == 'b'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = '1'",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = '1.1'",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = ['1', '2']",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = {}",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '2'\nint_instance = 1",
+  "assertion": "assert val == '2'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '2'\nint_instance = '1'",
+  "assertion": "assert val == '1'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '2'\nint_instance = None",
+  "assertion": "assert val == '1'"
+ },
+ {
+  "init": "val1 = 1\nval2 = 2\nint_instance = 1",
+  "assertion": "assert val == 2"
+ },
+ {
+  "init": "val1 = 1\nval2 = 2\nint_instance = 'a'",
+  "assertion": "assert val == 1"
+ },
+ {
+  "init": "val1=10;val2=20;int_instance=None",
+  "assertion": "assert val == val1"
+ },
+ {
+  "init": "val2 = 'a'\nval1 = 'b'\nint_instance = None",
+  "assertion": "assert val == 'b'"
+ },
+ {
+  "init": "val2 = 'a'\nval1 = 'b'\nint_instance = 0",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1=10\nval2=20\nint_instance=None",
+  "assertion": "assert val == 10"
+ },
+ {
+  "init": "val1=10\nval2=20\nint_instance=False",
+  "assertion": "assert val == 10"
+ },
+ {
+  "init": "val1=10\nval2=20\nint_instance=10",
+  "assertion": "assert val == 20"
+ },
+ {
+  "init": "val1=10\nval2=20\nint_instance='10'",
+  "assertion": "assert val == 10"
+ },
+ {
+  "init": "val1=10\nval2=20\nint_instance=1.125",
+  "assertion": "assert val == 10"
+ },
+ {
+  "init": "val1=10\nval2=20\nint_instance=['10', '20']",
+  "assertion": "assert val == 10"
+ },
+ {
+  "init": "val1=10\nval2=20\nint_instance=True",
+  "assertion": "assert val == 10"
+ },
+ {
+  "init": "val1=1\nval2=2\nint_instance=1",
+  "assertion": "assert val == 2"
+ },
+ {
+  "init": "val1=1\nval2=2\nint_instance=None",
+  "assertion": "assert val == 1"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nint_instance = 10",
+  "assertion": "assert val == 20"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nint_instance = '10'",
+  "assertion": "assert val == 10"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nint_instance = None",
+  "assertion": "assert val == 10"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = '1.125'",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = []",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = ['1.125', '3.5', '6.75', '5.9']",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val2=2\nval1=1\nint_instance=1",
+  "assertion": "assert val == 2"
+ },
+ {
+  "init": "val2=2\nval1=1\nint_instance=None",
+  "assertion": "assert val == 1"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = 3",
+  "assertion": "assert val == 'b'"
+ },
+ {
+  "init": "val1 = '11'\nval2 = 22\nint_instance = 22",
+  "assertion": "assert val == 22"
+ },
+ {
+  "init": "val1 = 5\nval2 = 7\nint_instance = 5",
+  "assertion": "assert val == 7"
+ },
+ {
+  "init": "val1 = 5\nval2 = 7\nint_instance = None",
+  "assertion": "assert val == 5"
+ },
+ {
+  "init": "val1 = 5\nval2 = 7\nint_instance = '5'",
+  "assertion": "assert val == 5"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = '5'",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 5\nval2 = 7\nint_instance = '5.1'",
+  "assertion": "assert val == 5"
+ },
+ {
+  "init": "val1 = 5\nval2 = 7\nint_instance = ['5', '7']",
+  "assertion": "assert val == 5"
+ },
+ {
+  "init": "val1 = 5\nval2 = 7\nint_instance = {'a': 5, 'b': 7}",
+  "assertion": "assert val == 5"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'def'\nint_instance = 10",
+  "assertion": "assert val == 'def'"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'def'\nint_instance = '10'",
+  "assertion": "assert val == 'abc'"
+ },
+ {
+  "init": "val1 = 'a';val2 = 'b';int_instance = 'c'",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a';val2 = 'b';int_instance = 2",
+  "assertion": "assert val == 'b'"
+ },
+ {
+  "init": "val1 = 'a';val2 = 'b';int_instance = 0.0",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a';val2 = 'b';int_instance = '0'",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1=1\nval2=2\nint_instance=1",
+  "assertion": "assert val == val2"
+ },
+ {
+  "init": "val1=1\nval2=2\nint_instance=None",
+  "assertion": "assert val == val1"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = 'c'",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nint_instance = float('NaN')",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = 'b'\nval2 = 'c'\nint_instance = 2",
+  "assertion": "assert val == 'c'"
+ },
+ {
+  "init": "val1 = 10\nval2 = 10\nint_instance = '0'",
+  "assertion": "assert val == 10"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 1\nint_instance = None",
+  "assertion": "assert val == 'a'"
+ },
+ {
+  "init": "val1 = None\nval2 = None\nint_instance = 1",
+  "assertion": "assert val == None"
+ },
+ {
+  "init": "val1 = 1\nval2 = 2\nint_instance=1",
+  "assertion": "assert val==2"
+ },
+ {
+  "init": "val1 = None\nval2 = '1'\nint_instance=None",
+  "assertion": "assert val==None"
+ },
+ {
+  "init": "val1 = None\nval2 = None\nint_instance=None",
+  "assertion": "assert val==None"
+ },
+ {
+  "init": "val1 = 1\nval2 = 2\nint_instance=None",
+  "assertion": "assert val==val1"
+ },
+ {
+  "init": "val1=1;val2=2;int_instance='1'",
+  "assertion": "assert val == 1"
+ },
+ {
+  "init": "val1=1;val2=2;int_instance=str(1)",
+  "assertion": "assert val == 1"
+ },
+ {
+  "init": "val1=1;val2=2;int_instance=int(1.25)",
+  "assertion": "assert val == 2"
+ },
+ {
+  "init": "int_instance = int(42)\nval1 = 'test'\nval2 = 10",
+  "assertion": "assert val == val2"
+ },
+ {
+  "init": "int_instance = 42\nval1 = 'test'\nval2 = 10",
+  "assertion": "assert val == val2"
+ }
+]

@@ -1,0 +1,1122 @@
+[
+ {
+  "init": "file_path = 'test.txt'\ncontents = ''",
+  "assertions": "error"
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = None",
+  "assertions": "error"
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello\tworld'",
+  "assertions": [
+   "assert contents == 'hello\tworld'"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'\nfile.close()",
+  "assertions": "error"
+ },
+ {
+  "init": "file_path = '/home/user/text.txt'",
+  "assertions": [
+   "assert contents == 'hello world!'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/text.txt'",
+  "assertions": [
+   "assert contents == 'hello world!'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/text.txt'",
+  "assertions": [
+   "assert contents == 'hello world!'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/text.txt'",
+  "assertions": [
+   "assert contents == 'hello world!'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/text.txt'",
+  "assertions": [
+   "assert contents == 'hello world!'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/text.txt'",
+  "assertions": [
+   "assert contents == 'hello world!'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/text.txt'",
+  "assertions": [
+   "assert contents == 'hello world!'"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = 'This is a file'",
+  "assertions": [
+   "assert contents == 'This is a file'"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = ''",
+  "assertions": [
+   "assert contents == ''"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = None",
+  "assertions": [
+   "assert contents == None"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = '1234'",
+  "assertions": [
+   "assert float(contents) == 1234.0"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = '1234.5'",
+  "assertions": [
+   "assert float(contents) == 1234.5"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = 'This is a file'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = 'Test Content'",
+  "assertions": [
+   "assert len(contents) == 14"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = 'Test Content'\ncontents = contents[::-1]",
+  "assertions": [
+   "assert contents == 'gnitset tset'"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'",
+  "assertions": "error"
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = 'Test Content'\nfile.close()",
+  "assertions": "error"
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertions": [
+   "assert contents == ''"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/textfile.txt'",
+  "assertions": [
+   "assert contents == 'This is a text file.\n'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/textfile.txt'",
+  "assertions": [
+   "assert contents == 'This is a text file.\n'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/textfile.txt'",
+  "assertions": [
+   "assert contents == 'This is a text file.\n'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/textfile.txt'",
+  "assertions": [
+   "assert contents == 'This is a text file.\n'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/textfile.txt'",
+  "assertions": [
+   "assert contents == 'This is a text file.\n'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/textfile.txt'",
+  "assertions": [
+   "assert contents == 'This is a text file.\n'"
+  ]
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'",
+  "assertions": [
+   "assert contents == 'Hello World!'"
+  ]
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'",
+  "assertions": [
+   "assert contents == 'Hello World'"
+  ]
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'",
+  "assertions": [
+   "assert contents == 'Hello World !'"
+  ]
+ },
+ {
+  "init": "file_path = '/path/to/file.txt'",
+  "assertions": [
+   "assert contents == 'Hello World'"
+  ]
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'file contents'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file'\ncontents = ''",
+  "assertions": "assert contents == ''"
+ },
+ {
+  "init": "file_path = '/home/user/file'\ncontents = ''",
+  "assertions": [
+   "assert len(contents) == 0"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'\ncontents = 'hello'",
+  "assertions": [
+   "assert contents[-1] == 't'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'\ncontents = 'hello'",
+  "assertions": [
+   "assert contents[0] == 'h'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents.count('l') == 2"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents.startswith('hello')"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents.endswith('world')"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'This is a test file.'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents != 'This is a new file.'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert type(contents) == str"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert len(contents) > 0"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert len(contents) == 18"
+  ]
+ },
+ {
+  "init": "file_path = './test_data/valid_content_file.txt'",
+  "assertions": [
+   "assert contents == 'this is a sample test file.'"
+  ]
+ },
+ {
+  "init": "file_path = './test_data/empty_file.txt'",
+  "assertions": [
+   "assert contents == ''"
+  ]
+ },
+ {
+  "init": "file_path = './test_data/nonexistent_file.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'test_data/valid_content_file.txt'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a file.'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a file.' and file.closed"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a file.' and file.closed"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a file.' and file.closed"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a file.' and file.closed"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a file.' and file.closed"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a file.' and file.closed"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a file.' and file.closed"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a file.' and file.closed"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a file.' and file.closed"
+  ]
+ },
+ {
+  "init": "file_path = 'test2.txt'\ncontents = file.read()",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = None\ncontents = file.read()",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = \"\"\ncontents = file.read()",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'test3.txt'\ncontents = file.read()",
+  "assertions": [
+   "assert contents == 'test3'"
+  ]
+ },
+ {
+  "init": "file_path = 'test4.txt'\ncontents = file.read()",
+  "assertions": [
+   "assert contents == 'test4'"
+  ]
+ },
+ {
+  "init": "file_path = 'test5.txt'\ncontents = file.read()",
+  "assertions": [
+   "assert contents == 'test5'"
+  ]
+ },
+ {
+  "init": "file_path = 'test6.txt'\ncontents = file.read()",
+  "assertions": [
+   "assert contents == 'test6'"
+  ]
+ },
+ {
+  "init": "file_path = '/tmp/test.txt'",
+  "assertions": "error"
+ },
+ {
+  "init": "file_path = '/home/user/Desktop/file.txt'",
+  "assertions": [
+   "assert contents == open(file_path, 'r').read()"
+  ]
+ },
+ {
+  "init": "file_path = '/Users/user1/Downloads/test.txt'",
+  "assertions": [
+   "assert contents == 'Hello World!'"
+  ]
+ },
+ {
+  "init": "file_path = '/Users/user1/Downloads/'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = None",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = ''",
+  "assertions": [
+   "assert contents == ''"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents.count('l') == 2"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents.find('world') == 6"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents.split()[-1] == 'world'"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert repr(contents) == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents.upper() == 'HELLO WORLD'"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents.lower() == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents.replace('world', 'universe') == 'hello universe'"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'",
+  "assertions": [
+   "assert contents.strip() == 'hello world'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertions": [
+   "assert contents == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "file_path = '/path/to/file'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/path/to/file'",
+  "assertions": [
+   "assert contents == ''"
+  ]
+ },
+ {
+  "init": "file_path = '/path/to/file'",
+  "assertions": [
+   "assert contents == 'error'"
+  ]
+ },
+ {
+  "init": "file_path = '/path/to/file'",
+  "assertions": [
+   "assert contents == '   test   '"
+  ]
+ },
+ {
+  "init": "file_path = '/path/to/file'",
+  "assertions": [
+   "assert contents == 'test.txt'"
+  ]
+ },
+ {
+  "init": "file_path = '/path/to/file'",
+  "assertions": [
+   "assert contents == 'test 123'"
+  ]
+ },
+ {
+  "init": "file_path = '/path/to/file'",
+  "assertions": [
+   "assert contents == 'test 1.23'"
+  ]
+ },
+ {
+  "init": "file_path = '/path/to/file'",
+  "assertions": [
+   "assert contents == 'test 1.23e+3'"
+  ]
+ },
+ {
+  "init": "file_path = '/path/to/file'",
+  "assertions": [
+   "assert contents == 'test 1.23e-3'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertions": [
+   "assert contents == 'test'"
+  ]
+ }
+]

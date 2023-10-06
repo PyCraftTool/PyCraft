@@ -1,0 +1,6 @@
+[
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory(suffix='.my_suffix', prefix ='my_prefix', ",
+  "assertions": []
+ }
+]

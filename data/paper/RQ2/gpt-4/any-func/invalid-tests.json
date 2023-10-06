@@ -1,0 +1,46 @@
+[
+ {
+  "init": "c1, c2, c3, c4 = 0, '0', False, None \nval1, val2 = 0, 'python'",
+  "assertions": [
+   "assert value == 'python'"
+  ]
+ },
+ {
+  "init": "val1 = [1,2,4];val2 = 'foo';c1= false;c2 = 20;c3= 'string';c4 =True ",
+  "assertions": [
+   "assert value == [1,2,4]"
+  ]
+ },
+ {
+  "init": "c1 = float('nan'); c2 = float('inf'); c3 = float('-inf'); c4 = 0.0; val1 = float('nan'); val2 = float('inf')",
+  "assertions": [
+   "assert value == float('nan')"
+  ]
+ },
+ {
+  "init": "val1 = 'string'\nval2 = 'another string'\nc1 = False\nc2 = False\nc3 = False\nc4 = None",
+  "assertions": "error"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ' '\nval1 = float('nan')\nval2 = float('inf')",
+  "assertions": [
+   "assert value == float('nan')"
+  ]
+ },
+ {
+  "init": "val1 = {'key': 'value'}\nc2 = {} \nc4 = None\nc1 = False\nc3 = 0 \nval2 = {'key': 'another_value'}",
+  "assertions": [
+   "assert value == {'key': 'value'}"
+  ]
+ },
+ {
+  "init": "val1 = 'No'\nc2 = False\nc4 = 0\nc1 = []\nc3 = '0' \nval2 = 'Yes'",
+  "assertions": [
+   "assert value == 'Yes'"
+  ]
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = 1.23\nc1 = None\nc2 = False\nc3 = False\nc4 = False",
+  "assertions": "error"
+ }
+]

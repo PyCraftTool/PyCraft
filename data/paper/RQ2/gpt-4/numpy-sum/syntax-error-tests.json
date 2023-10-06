@@ -1,0 +1,8 @@
+[
+ {
+  "init": "int_list = [0.001, -0.00005, 10]",
+  "assertions": [
+   "assert round(count,5) == quid round(9.99995,5)"
+  ]
+ }
+]

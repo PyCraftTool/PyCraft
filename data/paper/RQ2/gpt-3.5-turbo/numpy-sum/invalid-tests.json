@@ -1,0 +1,246 @@
+[
+ {
+  "init": "int_list = ['1', '2', '3', '4', '5']",
+  "assertions": [
+   "assert count == 12345"
+  ]
+ },
+ {
+  "init": "int_list = [1.5, 2.5, 3.5, 4.5, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = ['1', '2', '3', '4', '5']",
+  "assertions": [
+   "assert count == '12345'"
+  ]
+ },
+ {
+  "init": "int_list = ['1.5', '2.4', '3.9', '4.1', '5.6']",
+  "assertions": [
+   "assert count == '1.52.43.94.15.6'"
+  ]
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3.5, 4, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [None, None, None, None]",
+  "assertions": [
+   "assert count == 0"
+  ]
+ },
+ {
+  "init": "int_list = [1.5, -0.5, 2.25, 3.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [-1.25, -1.5, -1.75, -2]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = ['', '', 0, 0, 1]",
+  "assertions": [
+   "assert count == 1"
+  ]
+ },
+ {
+  "init": "int_list = [1.5, float('nan')]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = ''",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = ['-1', '2', 3, '-4', '5.5']",
+  "assertions": [
+   "assert count == 4.5"
+  ]
+ },
+ {
+  "init": "int_list = [None, None, None]",
+  "assertions": [
+   "assert count == None"
+  ]
+ },
+ {
+  "init": "int_list = [True, False]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = ['7', '8', '9']",
+  "assertions": [
+   "assert count == '789'"
+  ]
+ },
+ {
+  "init": "int_list = ['1', '2' , '3', '4', '5']",
+  "assertions": [
+   "assert count == '12345'"
+  ]
+ },
+ {
+  "init": "int_list = [1, 2.5, 3, 4, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.0]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = ['1', '2', '3', '4', '5']",
+  "assertions": [
+   "assert count == 15"
+  ]
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, float('nan')]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5]\ncount = None",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5]\ncount = '10'",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4.5, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5]\ncount = 10",
+  "assertions": [
+   "assert count == 10"
+  ]
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4.5, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = ['1', '2', '3', '4', '5']",
+  "assertions": [
+   "assert count == 15"
+  ]
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4.5, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1.5, 2.5, 3.5, 4.5, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = ['1', '2', '3']",
+  "assertions": [
+   "assert count == '0123'"
+  ]
+ },
+ {
+  "init": "int_list = [1, 2.5, 3, 4.75, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [4.7, 2.3, 3.1, 1.9, 5.6]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [10000000000000000000000000, -5000000000000000000000000, 2500000000000000000000000, -1200000000000000000000000, 60000000000000000000000, -20000000000000000000000]",
+  "assertions": [
+   "assert count == 8000000000000000000000000"
+  ]
+ },
+ {
+  "init": "int_list = [1, 2, 3.5, 4, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1.5, 2.5, 3.5, 4.5, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3.5, 4, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4.5, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = [1, 2, 3, 4, 5.5]",
+  "assertions": "error"
+ }
+]

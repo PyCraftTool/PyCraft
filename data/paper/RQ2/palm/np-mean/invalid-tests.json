@@ -1,0 +1,630 @@
+[
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) + 1",
+  "assertions": [
+   "assert mean == 4.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) - 1",
+  "assertions": [
+   "assert mean == 2.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) * 2",
+  "assertions": [
+   "assert mean == 6.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) / 2",
+  "assertions": [
+   "assert mean == 1.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) + 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) - 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) * 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) / 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = []\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) + 1",
+  "assertions": [
+   "assert mean == 4.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) - 1",
+  "assertions": [
+   "assert mean == 2.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) * 2",
+  "assertions": [
+   "assert mean == 6.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) / 2",
+  "assertions": [
+   "assert mean == 1.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) + 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) - 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) * 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) / 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = []\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) + 1",
+  "assertions": [
+   "assert mean == 4.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) - 1",
+  "assertions": [
+   "assert mean == 2.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) * 2",
+  "assertions": [
+   "assert mean == 6.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) / 2",
+  "assertions": [
+   "assert mean == 1.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) + 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) - 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) * 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) / 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = []\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) + 1",
+  "assertions": [
+   "assert mean == 4.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) - 1",
+  "assertions": [
+   "assert mean == 2.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) * 2",
+  "assertions": [
+   "assert mean == 6.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) / 2",
+  "assertions": [
+   "assert mean == 1.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) + 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) - 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) * 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1) / 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = []\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [None, None]\n",
+  "assertions": [
+   "assert mean == None"
+  ]
+ },
+ {
+  "init": "arr1 = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert mean == 4.25"
+  ]
+ },
+ {
+  "init": "arr1 = []\n",
+  "assertions": [
+   "assert mean == 0.0"
+  ]
+ },
+ {
+  "init": "arr1 = ['1.125', '3.5', '6.75', '5.9']",
+  "assertions": [
+   "assert mean == 4.44"
+  ]
+ },
+ {
+  "init": "arr1 = []",
+  "assertions": [
+   "assert mean == 0.0"
+  ]
+ },
+ {
+  "init": "arr1 = ['1.125', '3.5', '6.75', '5.9', '9.125', '10.5']",
+  "assertions": [
+   "assert mean == 7.125"
+  ]
+ },
+ {
+  "init": "arr1 = ['1.125', '3.5', '6.75', '5.9', None]",
+  "assertions": [
+   "assert mean == 5.241666666666666"
+  ]
+ },
+ {
+  "init": "arr1 = ['1', '2', '3', '4']",
+  "assertions": [
+   "assert mean == 2.5"
+  ]
+ },
+ {
+  "init": "arr1 = ['1', '2', '3']",
+  "assertions": [
+   "assert mean == 2.0"
+  ]
+ },
+ {
+  "init": "arr1 = ['1', '2', '3', '4', '5']",
+  "assertions": [
+   "assert mean == 3.0"
+  ]
+ },
+ {
+  "init": "arr1 = ['1', '2', '3', '4', '5', '6']",
+  "assertions": [
+   "assert mean == 3.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1,2,3,4,5]\nmean = sum(arr1)/-len(arr1)",
+  "assertions": [
+   "assert mean == -3.0"
+  ]
+ },
+ {
+  "init": "arr1 = []\nmean = sum(arr1)/len(arr1)",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = [1,2,3,4,5]\nmean = sum(arr1)/-1",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = ['a','b','c']\nmean = sum(arr1)/len(arr1)",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = [1,2,3,4,5]\nmean = sum(arr1)/None",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = ['1.125', '3.5', '6.75', '5.9']\nmean = sum(arr1)/len(arr1)",
+  "assertions": [
+   "assert mean == 4.4625"
+  ]
+ },
+ {
+  "init": "arr1 = [0, 3, 5, 7, 9]\nmean = sum(arr1)/len(arr1)",
+  "assertions": [
+   "assert mean == 5.0"
+  ]
+ },
+ {
+  "init": "arr1 = [0, 3, 5, 7, 9, 'a']\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [0, 3, 5, 7, 9]\nmean = sum(arr1)/3.0",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = []\nmean = sum(arr1)/len(arr1)",
+  "assertions": [
+   "assert mean == 0.0"
+  ]
+ },
+ {
+  "init": "arr1 = 'arr'\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [None, None]\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [0, 3, 5, 7, 9]\nmean = sum(arr1)/-1",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [0, 3, 5, 7, 9]\nmean = sum(arr1)/1.1",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [0, 3, 5, 7, 9]\nmean = sum(arr1)/9999999999999999",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, None]\n",
+  "assertions": [
+   "assert mean == 2"
+  ]
+ },
+ {
+  "init": "arr1 = []\n",
+  "assertions": [
+   "assert mean == 0"
+  ]
+ },
+ {
+  "init": "arr1 = []\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = ['a',1]\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1,'a',2,3,4,5]\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = []",
+  "assertions": [
+   "assert mean == 0"
+  ]
+ },
+ {
+  "init": "arr1 = ['1', '2', '3', '4', '5']",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = [1,2,3,4,5,'6']",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = ['4.6', '6.7', '8.8', '10.9', '12.10', '15.20']",
+  "assertions": [
+   "assert mean == 9.22"
+  ]
+ },
+ {
+  "init": "arr1 = ['A', '2', '3', '4', '5', '6']",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = None",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = ['a', 'b', 'c']",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = []",
+  "assertions": [
+   "assert mean == 0.0"
+  ]
+ },
+ {
+  "init": "arr1 = [None]",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = ['1.125', '3.5', '6.75', '5.9', '7.961', '6.517', '4.382', '4.806', '5.681', '3.347', '4.598', '8.001', '6.602', '5.591', '7.332', '7.767', '5.058', '4.198', '5.241', '3.322', '5.993', '2.645', '4.963', '5.159', '4.327']",
+  "assertions": [
+   "assert mean == 5.185"
+  ]
+ },
+ {
+  "init": "arr1 = []\nmean = sum(arr1)/len(arr1)",
+  "assertions": [
+   "assert mean == 0"
+  ]
+ },
+ {
+  "init": "arr1 = [5, '1', '3', '4', '5']\nmean = sum(arr1)/len(arr1)",
+  "assertions": [
+   "assert mean == 3.666"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1)\nprint(mean)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = {1:'a', 2:'b', 3:'c', 4:'d', 5:'e'}\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, None]",
+  "assertions": [
+   "assert mean == 2.0"
+  ]
+ },
+ {
+  "init": "arr1 = []",
+  "assertions": [
+   "assert mean == 0.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = ['1.0', '2.0', '3.0', '4.0', '5.0']",
+  "assertions": [
+   "assert mean == 3.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, None]",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = []\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [None, None]\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = ['a', 'b', 'c']\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = []\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1-1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1+1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1+'1')",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1[0])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1[1])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1[2])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = []",
+  "assertions": [
+   "assert mean == 0.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5, None]",
+  "assertions": [
+   "assert mean == 3.2"
+  ]
+ },
+ {
+  "init": "arr1 = []",
+  "assertions": [
+   "assert mean == 0.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5, '1.125', '3.5', '6.75', '5.9']",
+  "assertions": [
+   "assert mean == 3.875"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5, '1.125', '3.5', '6.75', '5.9', 'None']",
+  "assertions": [
+   "assert mean == 4.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5, None]",
+  "assertions": [
+   "assert mean == 3.2"
+  ]
+ },
+ {
+  "init": "arr1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
+  "assertions": [
+   "assert mean == 5.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]",
+  "assertions": [
+   "assert mean == 7.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]",
+  "assertions": [
+   "assert mean == 8.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]",
+  "assertions": [
+   "assert mean == 9.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+  "assertions": [
+   "assert mean == 10.0"
+  ]
+ },
+ {
+  "init": "arr1 = ['a', 'b', 'c', 'd', 'e']\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = ['a', 'b', 'c', 'd', 'e']\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = ['a', 'b', 'c', 'd', 'e']\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = ['a', 'b', 'c', 'd', 'e']\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = ['a', 'b', 'c', 'd', 'e']\nmean = sum(arr1)/len(arr1)",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1)\nmean = mean - 1",
+  "assertions": [
+   "assert mean == 2.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1)\nmean = mean + 1",
+  "assertions": [
+   "assert mean == 4.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1)\nmean = mean * 2",
+  "assertions": [
+   "assert mean == 6.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1)\nmean = mean / 2",
+  "assertions": [
+   "assert mean == 1.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1)\nmean = mean + 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1)\nmean = mean * [1, 2, 3]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1)\nmean = mean * None",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\nmean = sum(arr1)/len(arr1)\nmean = mean * []",
+  "assertions": "error"
+ }
+]

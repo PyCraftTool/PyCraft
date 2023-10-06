@@ -1,0 +1,1811 @@
+[
+ {
+  "init": "content = 'This is a test content'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '12.34'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content with special characters !@#$%^&*()'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content with unicode characters \u00e9 \u00f1'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content with escape sequences \\n \\t'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '   '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '12.3'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1,2,3]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '12.3'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content with special characters !@#$%^&*()'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content with unicode characters \u00e9 \u00f1'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content with escape characters \\n \\t'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '12.34'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1,2,3,4,5]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": None, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '1234567890'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '1234567890'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '123.456'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '  string  '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ' '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '   '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '12.34'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1,2,3,4]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": None, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '   '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '12.34'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1,2,3,4]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": None, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\"}'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '    '",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '12345'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"a\": 1, \"b\": 2}'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"list\": [1,2,3,4,5]}'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'None'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '1.23'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '\"1.23\"'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'Hello World'",
+  "assertions": "error"
+ },
+ {
+  "init": "content = ''",
+  "assertions": "error"
+ },
+ {
+  "init": "content = '123.45'",
+  "assertions": "error"
+ },
+ {
+  "init": "content = '   '",
+  "assertions": "error"
+ },
+ {
+  "init": "content = '{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}'",
+  "assertions": "error"
+ },
+ {
+  "init": "content = ''",
+  "assertions": "error"
+ },
+ {
+  "init": "content = ' '",
+  "assertions": "error"
+ },
+ {
+  "init": "content = '{\"key\": \"value\"}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert open(file, 'r').read() == ''"
+  ]
+ },
+ {
+  "init": "content = '12345'",
+  "assertions": [
+   "assert open(file, 'r').read() == '12345'"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": 12345}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '  space  '",
+  "assertions": [
+   "assert open(file, 'r').read() == '  space  '"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": \"value with space\"}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\"}'",
+  "assertions": [
+   "assert (temp_dir.name+'/features.json') not in os.listdir(temp_dir.name)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert (temp_dir.name+'/features.json') not in os.listdir(temp_dir.name)"
+  ]
+ },
+ {
+  "init": "content = '    '",
+  "assertions": [
+   "assert (temp_dir.name+'/features.json') not in os.listdir(temp_dir.name)"
+  ]
+ },
+ {
+  "init": "content = '{\"price\": 12.45}'",
+  "assertions": [
+   "assert (temp_dir.name+'/features.json') not in os.listdir(temp_dir.name)"
+  ]
+ },
+ {
+  "init": "content = '{\"price\": \"12.45\"}'",
+  "assertions": [
+   "assert (temp_dir.name+'/features.json') not in os.listdir(temp_dir.name)"
+  ]
+ },
+ {
+  "init": "content = '{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}'",
+  "assertions": [
+   "assert open(file, 'r').read() == '', 'Temp Dir should be deleted.'"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert open(file, 'r').read() == '', 'Temp Dir should be deleted.'"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content'",
+  "assertions": [
+   "assert open(file, 'r').read() == '', 'Temp Dir should be deleted.'"
+  ]
+ },
+ {
+  "init": "content = '123456789'",
+  "assertions": [
+   "assert open(file, 'r').read() == '', 'Temp Dir should be deleted.'"
+  ]
+ },
+ {
+  "init": "content = '   '",
+  "assertions": [
+   "assert open(file, 'r').read() == '', 'Temp Dir should be deleted.'"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is a random string'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '1234567890'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '3.14159'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '    '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1, 2, 3, 4, 5]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"a\": 1, \"b\": 2, \"c\": [None, None]}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '3.14159 as a string'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is a test.'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '123'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '   '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '123'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '3.14'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1, 2, 3]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'Hello, World!'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '1.23'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'Some random string'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '    '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '12.34'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1,2,3,4]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{1,2,3,4}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '   '",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '12.345'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '12.345'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test file with special characters !@#$%^&*()'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test file with unicode characters \u0d05'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": \"value\"}'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ' '",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": 12345}'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '[1, 2, 3, 4, 5]'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '12345'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": \"value\", \"key2\": \"value2\"}'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": \"value\"}'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'Random String'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '1234'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '12.34'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content'",
+  "assertions": [
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '123.456'",
+  "assertions": [
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"key with space\": \"value with space\"}'",
+  "assertions": [
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": \"value with \\\"quotes\\\"\"}'",
+  "assertions": [
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '123.456'",
+  "assertions": [
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '    '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1, 2, 3, 4, 5]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": \"30\", \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": None, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '123.456'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '123'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '{\"float\": 1.234, \"float_as_string\": \"1.234\"}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '{\"list\": [1, 2, 3], \"empty_list\": []}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '{\"boolean\": true, \"null\": null}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '    '",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '123.456'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '[1, 2, 3, 4, 5]'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": None, \"city\": \"New York\"}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\", \"friends\": [\"Anna\", \"Elsa\"]}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = 'This is a test string'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '123.456'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '123'",
+  "assertions": [
+   "assert open(file, 'r').read() == content"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1,2,3,4,5]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": None, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30.5, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": \"30\", \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '123.45'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content with special characters !@#$%^&*()'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content with unicode characters \u4f60\u597d'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content with escape characters \\n \\t'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": \"value\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1, 2, 3]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": 123}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": 12.3}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": [1, 2, 3]}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "import tempfile\ncontent = '{\"key\": \"value\"}'",
+  "assertions": [
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "import tempfile\ncontent = ''",
+  "assertions": [
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "import tempfile\ncontent = '1.25'",
+  "assertions": [
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "import tempfile\ncontent = 'string with spaces'",
+  "assertions": [
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "import tempfile\ncontent = '1.25'",
+  "assertions": [
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "import tempfile\ncontent = 'null'",
+  "assertions": [
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "import tempfile\ncontent = '\"float as string\"'",
+  "assertions": [
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "import tempfile\ncontent = '123'",
+  "assertions": [
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": \"value\", \"key2\": \"value2\"}'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '[]'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '[1, 2, 3, 4, 5]'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '   '",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '3.14'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '3.14'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = 'Hello World'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '1.125'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = str(3.14)",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": \"value\"}'",
+  "assertions": [
+   "assert isinstance(f, type(open('test.txt', 'r')))",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert isinstance(f, type(open('test.txt', 'r')))",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = 'This is a test.'",
+  "assertions": [
+   "assert isinstance(f, type(open('test.txt', 'r')))",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = str(3.1415)",
+  "assertions": [
+   "assert isinstance(f, type(open('test.txt', 'r')))",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": 20}'",
+  "assertions": [
+   "assert isinstance(f, type(open('test.txt', 'r')))",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": None}'",
+  "assertions": [
+   "assert isinstance(f, type(open('test.txt', 'r')))",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": [\"value1\", \"value2\"]}'",
+  "assertions": [
+   "assert isinstance(f, type(open('test.txt', 'r')))",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = '{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '[1,2,3]'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{1:2, 3:4}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '12.34'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'None'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ' '",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '12.3'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '12.3'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is a test content'",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = '   '",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = '123.456'",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert f.closed == True"
+  ]
+ },
+ {
+  "init": "content = '{\"key\": \"value\"}'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '  '",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '0.123'",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "content = '{\"color\" : \"blue\"}'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'null'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = {\"t\":3.14}",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '3.14'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = ':[]=\u20ac/$\u00a3%%&())'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = \"\"",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '\u0394!$@$@ $@__]]\u2116*'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = '\"TRUE THREE HOUSE RED'",
+  "assertions": [
+   "import os",
+   "assert os.path.exists(file) == False"
+  ]
+ },
+ {
+  "init": "content = 'This is some content'",
+  "assertions": [
+   "assert open(file).read() == content"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert open(file).read() == ''"
+  ]
+ },
+ {
+  "init": "content = ' '",
+  "assertions": [
+   "assert open(file).read() == ' '"
+  ]
+ },
+ {
+  "init": "content = '1234567890'",
+  "assertions": [
+   "assert open(file).read() == '1234567890'"
+  ]
+ },
+ {
+  "init": "content = 'This is a string with spaces'",
+  "assertions": [
+   "assert open(file).read() == 'This is a string with spaces'"
+  ]
+ },
+ {
+  "init": "content = '5.5'",
+  "assertions": [
+   "assert open(file).read() == '5.5'"
+  ]
+ },
+ {
+  "init": "content = 'this\\na_list\\nentries\\nas\\nstrings'",
+  "assertions": [
+   "assert open(file).read() == 'this\\na_list\\nentries\\nas\\nstrings'"
+  ]
+ },
+ {
+  "init": "import os\nfile_name = '/features.json'\nroot_dir = '/temporary_dir'\nos.makedir(root_dir)\ncontent = '{\"key\":\"value\"}'\nos.chdir(root_dir)",
+  "assertions": [
+   "assert os.path.exists(file_name) == False"
+  ]
+ },
+ {
+  "init": "content='pythonisagreatlanguage'",
+  "assertions": "error"
+ },
+ {
+  "init": "import os\ndummy_path='/no_such_dir/exist'\nf=open(dummy_path, 'w')",
+  "assertions": "error"
+ },
+ {
+  "init": "content='     '",
+  "assertions": "error"
+ },
+ {
+  "init": "content=''",
+  "assertions": "error"
+ },
+ {
+  "init": "content = 'This is some random content.'",
+  "assertions": [
+   "assert f.closed, 'File is still open!'",
+   "import os\nassert os.path.exists(file) == False, 'File still exists!'"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "assert f.closed, 'File is still open!'",
+   "import os\nassert os.path.exists(file) == False, 'File still exists!'"
+  ]
+ },
+ {
+  "init": "content = '    '",
+  "assertions": [
+   "assert f.closed, 'File is still open!'",
+   "import os\nassert os.path.exists(file) == False, 'File still exists!'"
+  ]
+ },
+ {
+  "init": "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\ncontent = ''",
+  "assertions": "error"
+ },
+ {
+  "init": "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\ncontent = '{}'",
+  "assertions": [
+   "assert f.read() == ''"
+  ]
+ },
+ {
+  "init": "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\ncontent = '{\"a\": [1.125, null, \"5.9\"]}'",
+  "assertions": [
+   "assert f.read() == '{\"a\": [1.125, null, \"5.9\"]}'"
+  ]
+ },
+ {
+  "init": "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, '0')\ncontent = '{\"a\": 1, \"b\": 2, \"c\": 3.125, \"e\": [\"1.125\", \"3.5\", \"6.75\", \"5.9\"]}'",
+  "assertions": "error"
+ },
+ {
+  "init": "import tempfile\ntemp_dir = None\nfile=temp_dir.name+\"/features.json\"\ncontent = '{\"a\": 1, \"b\": 2, \"c\": 3.125, \"e\": [\"1.125\", \"3.5\", \"6.75\", \"5.9\"]}'",
+  "assertions": "error"
+ },
+ {
+  "init": "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile=none\ncontent = '{\"a\": 1, \"b\": 2, \"c\": 3.125, \"e\": [\"1.125\", \"3.5\", \"6.75\", \"5.9\"]}'",
+  "assertions": "error"
+ },
+ {
+  "init": "import tempfile\ncontent = '{\"num_features\": 5}'",
+  "assertions": [
+   "content not in open(temp_dir).read()"
+  ]
+ },
+ {
+  "init": "content = '{\"science\": \"STEM\", \"hack\": {\"code\": \"800F0\"}}'",
+  "assertions": [
+   "content not in open(temp_dir).read()"
+  ]
+ },
+ {
+  "init": "content = ''",
+  "assertions": [
+   "content not in open(temp_dir).read()"
+  ]
+ },
+ {
+  "init": "content = ' '",
+  "assertions": [
+   "content not in open(temp_dir).read()"
+  ]
+ },
+ {
+  "init": "content = str(None)",
+  "assertions": [
+   "content not in open(temp_dir).read()"
+  ]
+ },
+ {
+  "init": "content = str(10.0)",
+  "assertions": [
+   "content not in open(temp_dir).read()"
+  ]
+ },
+ {
+  "init": "content = str(10)",
+  "assertions": [
+   "content not in open(temp_dir).read()"
+  ]
+ }
+]

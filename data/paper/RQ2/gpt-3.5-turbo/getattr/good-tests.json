@@ -1,0 +1,890 @@
+[
+ {
+  "init": "obj = None",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'John'\n\nobj = MyClass()",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = ''\n\nobj = MyClass()",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Jane'\n\nobj = MyClass()\nobj.name = 'John'",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Jane'\n\nobj = MyClass()\ndel obj.name",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Jane'\n\nobj = MyClass()\nobj.name = None",
+  "assertion": "assert n == None"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Jane'\n\nobj = MyClass()\nobj.name = 3.14",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Jane'\n\nobj = MyClass()\nobj.name = '3.14'",
+  "assertion": "assert n == '3.14'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Jane'\n\nobj = MyClass()\nobj.name = []",
+  "assertion": "assert n == []"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\nobj = Object('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 123\n\nobj = MyClass()",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 3.14\n\nobj = MyClass()",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'John'\n\nobj = MyClass()\nobj.name = ''",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'John'\n\nobj = MyClass()\nobj.name = 123",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'John'\n\nobj = MyClass()\nobj.name = 3.14",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "obj = {}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'age': 25}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': None}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 25.5}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': '25'}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': '25.5'}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': []}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Object:\n  pass\n\nobj = Object()",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Object:\n  name = 'John'\n\nobj = Object()",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Object:\n  name = ''\n\nobj = Object()",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Object:\n  name = '  '\n\nobj = Object()",
+  "assertion": "assert n == '  '"
+ },
+ {
+  "init": "class Object:\n  name = 123\n\nobj = Object()",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Object:\n  name = 3.14\n\nobj = Object()",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class Object:\n  name = '3.14'\n\nobj = Object()",
+  "assertion": "assert n == '3.14'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\n\nobj = Obj('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = 'Steven'\n\nobj = Obj('John')",
+  "assertion": "assert n == 'Steven'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = 123\n\nobj = Obj('John')",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = 3.14\n\nobj = Obj('John')",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = '3.14'\n\nobj = Obj('John')",
+  "assertion": "assert n == '3.14'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = []\n\nobj = Obj('John')",
+  "assertion": "assert n == []"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = ''\n\nobj = Obj('John')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = ' '\n\nobj = Obj('John')",
+  "assertion": "assert n == ' '"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = ' ' * 10\n\nobj = MyClass()",
+  "assertion": "assert n == '          '"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = '3.14'\n\nobj = MyClass()",
+  "assertion": "assert n == '3.14'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = []\n\nobj = MyClass()",
+  "assertion": "assert n == []"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = {}\n\nobj = MyClass()",
+  "assertion": "assert n == {}"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = [1, 2, 3]\n\nobj = MyClass()",
+  "assertion": "assert n == [1, 2, 3]"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self._name = name\n\nobj = Obj('John')",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Obj:\n    name = 'John'\n\nobj = None",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name=None):\n        self.name = name\n\nobj = Obj('')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name=None):\n        self.name = name\n\nobj = Obj('   ')",
+  "assertion": "assert n == '   '"
+ },
+ {
+  "init": "class Obj:\n    name = None\n\nobj = Obj()",
+  "assertion": "assert n == None"
+ },
+ {
+  "init": "class Obj:\n    name = 10.5\n\nobj = Obj()",
+  "assertion": "assert n == 10.5"
+ },
+ {
+  "init": "class Object:\n    def __init__(self):\n        self.name = 'John'\nobj = Object()",
+  "assertion": "assert obj.name == 'John'\nassert n == 'John'"
+ },
+ {
+  "init": "class Object:\n    def __init__(self):\n        self.name = None\nobj = Object()",
+  "assertion": "assert obj.name is None"
+ },
+ {
+  "init": "class Object:\n    def __init__(self):\n        self.name = 12345\nobj = Object()",
+  "assertion": "assert obj.name == 12345\nassert n == 12345"
+ },
+ {
+  "init": "class Object:\n    def __init__(self):\n        self.name = ''\nobj = Object()",
+  "assertion": "assert obj.name == ''"
+ },
+ {
+  "init": "class Object:\n    def __init__(self):\n        self.name = 3.14\nobj = Object()",
+  "assertion": "assert obj.name == 3.14\nassert n == 3.14"
+ },
+ {
+  "init": "class Object:\n    def __init__(self):\n        self.name = True\nobj = Object()",
+  "assertion": "assert obj.name is True\nassert n == True"
+ },
+ {
+  "init": "class Object:\n    def __init__(self):\n        self.name = ' '\nobj = Object()",
+  "assertion": "assert obj.name == ' '\nassert n == ' '"
+ },
+ {
+  "init": "class person:\n  def __init__(self):\n    self.name = 'John'\nobj = person()",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class person:\n  def __init__(self):\n    self.name = ''\nobj = person()",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class person:\n  def __init__(self):\n    self.name = 'Alice'\nobj = person()\ndel obj.name",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class person:\n  def __init__(self):\n    self.name = 123\nobj = person()",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class person:\n  def __init__(self):\n    self.name = ' John ' \nobj = person()",
+  "assertion": "assert n == ' John '"
+ },
+ {
+  "init": "class person:\n  def __init__(self):\n    self.first_name = 'John'\nobj = person()",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class person:\n  def __init__(self):\n    self.lastname = 'Doe'\nobj = person()\nobj.name = 'Jane'",
+  "assertion": "assert n == 'Jane'"
+ },
+ {
+  "init": "class Obj:\n  def __init__(self):\n    self.name = 'Alice'\n\nobj = Obj()",
+  "assertion": "assert n == 'Alice'"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\n\nobj = Object('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        if name is None:\n            self.name = ''\n        else:\n            self.name = name\n\nobj = Object(None)",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        if type(name) == int:\n            self.name = str(name)\n        else:\n            self.name = name\n\nobj = Object(10)",
+  "assertion": "assert n == '10'"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self._name = name\n    @property\n    def name(self):\n        return self._name\n\nobj = Object('Sarah')",
+  "assertion": "assert n == 'Sarah'"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        if type(name) == int:\n            self.name = str(name)\n        elif name is None:\n            self.name = ''\n        else:\n            self.name = name\n\nobj = Object(None)",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        try:\n            self.name = name.upper()\n        except:\n            self.name = name\n\nobj = Object('alice02')",
+  "assertion": "assert n == 'ALICE02'"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self._name = name\n    @property\n    def name(self):\n        return self._name\n\nobj = Object(None)",
+  "assertion": "assert n == None"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name.lstrip()\n\nobj = Object('   sandy   ')",
+  "assertion": "assert n == 'sandy   '"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n        \nobj = Person('Bob')",
+  "assertion": "assert n == 'Bob'"
+ },
+ {
+  "init": "obj = {'name': 'Charlie'}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class MockObj:\n    name = 'John'\nobj = MockObj()",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class MockObj:\n    name = 10\nobj = MockObj()",
+  "assertion": "assert n == 10"
+ },
+ {
+  "init": "class MockObj:\n    name = ['John']\nobj = MockObj()",
+  "assertion": "assert n == ['John']"
+ },
+ {
+  "init": "class MockObj:\n    name = ''\nobj = MockObj()",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class MockObj:\n    name = ' '\nobj = MockObj()",
+  "assertion": "assert n == ' '"
+ },
+ {
+  "init": "class MockObj:\n    name = 3.14\nobj = MockObj()",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class MockObj:\n    name = 3.14\nobj = MockObj()\nobj.name = 'John'",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self):\n        self.name = 'Alice'\n\nobj = Obj()",
+  "assertion": "assert n == 'Alice'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self):\n        self.name = 123\n\nobj = Obj()",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self):\n        self.name = ''\n\nobj = Obj()",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self):\n        self.name = '    '  \n\nobj = Obj()",
+  "assertion": "assert n == '    '"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self):\n        self.name = 'Alice'\n\nobj = Obj()\ndel obj.name",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self):\n        self.name = 'Alice'\n\nobj = Obj()\nobj.name = 3.14",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self):\n        self.name = 'Alice'\n\nobj = Obj()\nobj.name = '3.14'",
+  "assertion": "assert n == '3.14'"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\nobj = Person('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n    def __str__(self):\n        return self.name\nobj = Person('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\nobj = Person('   ')",
+  "assertion": "assert n == '   '"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\nobj = Person('John Doe')",
+  "assertion": "assert n == 'John Doe'"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\nobj = Person('John' * 100)",
+  "assertion": "assert n == 'John' * 100"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\nobj = Person(3.14)",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\nobj = Person('3.14')",
+  "assertion": "assert n == '3.14'"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\nobj = Person([])",
+  "assertion": "assert n == []"
+ },
+ {
+  "init": "class Object:\n    def __init__(self):\n        self.name = ''\nobj = Object()",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\nobj = Object(123)",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\nobj = Object(None)",
+  "assertion": "assert n == None"
+ },
+ {
+  "init": "class Object:\n    def __init__(self):\n        self.n = 123\nobj = Object()",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\nobj = Object('')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\n    def __str__(self):\n        return self.name\nobj = Object(123)",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nclass SubObj(Obj):\n    pass\nobj = SubObj('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nobj = Obj('Alice')",
+  "assertion": "assert n == 'Alice'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nobj = Obj(123)",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nobj = Obj(True)",
+  "assertion": "assert n is True"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nobj = Obj(3.14)",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nobj = Obj('')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nobj = Obj('   ')",
+  "assertion": "assert n == '   '"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nobj = Obj('John Doe')",
+  "assertion": "assert n == 'John Doe'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nobj = Obj(';;;;')",
+  "assertion": "assert n == ';;;;'"
+ },
+ {
+  "init": "obj = 3.14",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = '3.14'",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Object:\n    pass\nobj = Object()",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Object:\n  def __init__(self, name):\n    self.name = name\nobj = Object('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Object:\n  def __init__(self, name):\n    self.name = name\nobj = Object('')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Object:\n  def __init__(self, name):\n    self.name = name\nobj = Object('John')\ndel obj.name",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Object:\n  def __init__(self, name):\n    self.__name = name\n  @property\n  def name(self):\n    return self.__name\nobj = Object('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Object:\n  def __init__(self, name):\n    self.__name = name\n  @property\n  def name(self):\n    return self.__name\nobj = Object('')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class MyClass:\n  def __init__(self, name):\n    self.name = name\nobj = MyClass('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class MyClass:\n  def __init__(self, name):\n    self.name = name\nobj = MyClass('')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class MyClass:\n  def __init__(self, name):\n    self.name = name\nobj = MyClass(10)",
+  "assertion": "assert n == 10"
+ },
+ {
+  "init": "class MyClass:\n  def __init__(self, name):\n    self.name = name\nobj = MyClass(3.14)",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class MyClass:\n  def __init__(self, name):\n    self.name = name\nobj = MyClass([1, 2, 3])",
+  "assertion": "assert n == [1, 2, 3]"
+ },
+ {
+  "init": "class EmptyObj:\n  def __init__(self):\n    pass\nobj = EmptyObj()",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Obj:\n  def __init__(self, name):\n    self.name = name\nobj = Obj('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Test:\n  def __init__(self):\n    self.name = 'John'\n\nobj = Test()",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Test:\n  def __init__(self):\n    self.name = 123\n\nobj = Test()",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Test:\n  def __init__(self):\n    self.name = ''\n\nobj = Test()",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Test:\n  def __init__(self):\n    self.name = '  '\n\nobj = Test()",
+  "assertion": "assert n == '  '"
+ },
+ {
+  "init": "class Test:\n  def __init__(self):\n    self.name = 3.14\n\nobj = Test()",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class Test:\n  def __init__(self):\n    self.name = '3.14'\n\nobj = Test()",
+  "assertion": "assert n == '3.14'"
+ },
+ {
+  "init": "class Test:\n  def __init__(self):\n    self.name = [1, 2, 3]\n\nobj = Test()",
+  "assertion": "assert n == [1, 2, 3]"
+ },
+ {
+  "init": "class Test:\n  def __init__(self):\n    self.name = []\n\nobj = Test()",
+  "assertion": "assert n == []"
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test('')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test(123)",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test(['a', 'b', 'c'])",
+  "assertion": "assert n == ['a', 'b', 'c']"
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test({'a': 1, 'b': 2, 'c': 3})",
+  "assertion": "assert n == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test(None)",
+  "assertion": "assert n == None"
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test('John')\ndel obj.name",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test('John')\nobj.name = None",
+  "assertion": "assert n == None"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Alice'\n\nobj = MyClass()",
+  "assertion": "assert n == 'Alice'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Bob'\n\nobj = MyClass()\ndel obj.name",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Dave'\n\nobj = MyClass()\nobj.name = ''",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Eve'\n\nobj = MyClass()\nobj.name = ' '",
+  "assertion": "assert n == ' '"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Frank'\n\nobj = MyClass()\nobj.name = 'Frank'",
+  "assertion": "assert n == 'Frank'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'Grace'\n\nobj = MyClass()\nobj.name = 'Grace '",
+  "assertion": "assert n == 'Grace '"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\n\nobj = Object('')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\n\nobj = Object('  ')",
+  "assertion": "assert n == '  '"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\n\nobj = Object(123)",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\n\nobj = Object(3.14)",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\n\nobj = Object('3.14')",
+  "assertion": "assert n == '3.14'"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\n\nobj = Object([])",
+  "assertion": "assert n == []"
+ },
+ {
+  "init": "class Object:\n    def __init__(self, name):\n        self.name = name\n\nobj = Object([1, 2, 3])",
+  "assertion": "assert n == [1, 2, 3]"
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertion": "assert obj['name'] == 'John'"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 25}",
+  "assertion": "assert obj['name'] == 'John'\nassert obj['age'] == 25"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 25, 'gender': 'Male'}",
+  "assertion": "assert obj['name'] == 'John'\nassert obj['age'] == 25\nassert obj['gender'] == 'Male'"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 25, 'gender': 'Male', 'address': {'street': '123 Main St', 'city': 'New York'}}",
+  "assertion": "assert obj['name'] == 'John'\nassert obj['age'] == 25\nassert obj['gender'] == 'Male'\nassert obj['address']['street'] == '123 Main St'\nassert obj['address']['city'] == 'New York'"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 25, 'gender': 'Male', 'address': {'street': '123 Main St', 'city': 'New York'}, 'phone_numbers': ['123-456-7890', '987-654-3210']}",
+  "assertion": "assert obj['name'] == 'John'\nassert obj['age'] == 25\nassert obj['gender'] == 'Male'\nassert obj['address']['street'] == '123 Main St'\nassert obj['address']['city'] == 'New York'\nassert obj['phone_numbers'][0] == '123-456-7890'\nassert obj['phone_numbers'][1] == '987-654-3210'"
+ },
+ {
+  "init": "obj = {}",
+  "assertion": "assert obj == {}"
+ },
+ {
+  "init": "obj = {'name': ''}",
+  "assertion": "assert obj['name'] == ''"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': None}",
+  "assertion": "assert obj['name'] == 'John'\nassert obj['age'] == None"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 25, 'gender': 'Male', 'address': None}",
+  "assertion": "assert obj['name'] == 'John'\nassert obj['age'] == 25\nassert obj['gender'] == 'Male'\nassert obj['address'] == None"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 25, 'gender': 'Male', 'address': {'street': '123 Main St', 'city': 'New York'}, 'phone_numbers': []}",
+  "assertion": "assert obj['name'] == 'John'\nassert obj['age'] == 25\nassert obj['gender'] == 'Male'\nassert obj['address']['street'] == '123 Main St'\nassert obj['address']['city'] == 'New York'\nassert obj['phone_numbers'] == []"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass('')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass(123)",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass([1, 2, 3])",
+  "assertion": "assert n == [1, 2, 3]"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass({'a': 1, 'b': 2})",
+  "assertion": "assert n == {'a': 1, 'b': 2}"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass(3.14)",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nobj = Person('John')",
+  "assertion": "assert obj.name == 'John'\nassert n == 'John'"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nobj = Person('')",
+  "assertion": "assert obj.name == ''\nassert n == ''"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nobj = Person(None)",
+  "assertion": "assert obj.name == None"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nobj = Person(123)",
+  "assertion": "assert obj.name == 123\nassert n == 123"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nobj = Person(['John', 'Doe'])",
+  "assertion": "assert obj.name == ['John', 'Doe']\nassert n == ['John', 'Doe']"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nobj = Person({'name': 'John', 'age': 25})",
+  "assertion": "assert obj.name == {'name': 'John', 'age': 25}\nassert n == {'name': 'John', 'age': 25}"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nobj = Person(3.14)",
+  "assertion": "assert obj.name == 3.14\nassert n == 3.14"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nobj = Person('John Doe')",
+  "assertion": "assert obj.name == 'John Doe'\nassert n == 'John Doe'"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nobj = Person('John Doe')\nobj.name = 'Jane Smith'",
+  "assertion": "assert obj.name == 'Jane Smith'\nassert n == 'Jane Smith'"
+ },
+ {
+  "init": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nobj = Person('John Doe')\ndel obj.name",
+  "assertion": "assert hasattr(obj, 'name') == False\nassert n == 'unknown'"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 'John'\n\nobj = Test()",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 123\n\nobj = Test()",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 'Mary'\n\nobj = Test()\nobj.name = 'Jane'",
+  "assertion": "assert n == 'Jane'"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 'Alice'\n\nobj = Test()\ndel obj.name",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = ''\n\nobj = Test()",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 'David'\n\nobj = Test()\nobj.name = ' '\n",
+  "assertion": "assert n == ' '"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 3.14\n\nobj = Test()",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 0\n\nobj = MyClass()",
+  "assertion": "assert n == 0"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'John Doe'\n\nobj = MyClass()\nobj.name = ''",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'John Doe'\n\nobj = MyClass()\nobj.name = 0",
+  "assertion": "assert n == 0"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'John Doe'\n\nobj = MyClass()\nobj.name = 3.14",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nobj = Obj('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self, name):\n        self.name = name\nobj = Obj('  ')",
+  "assertion": "assert n == '  '"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self):\n        self.name = 'John'\nobj = Obj()",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self):\n        self.name = ''\nobj = Obj()",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Obj:\n    def __init__(self):\n        self.name = '  '\nobj = Obj()",
+  "assertion": "assert n == '  '"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass(None)",
+  "assertion": "assert n == None"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass(['a', 'b', 'c'])",
+  "assertion": "assert n == ['a', 'b', 'c']"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass({'a': 1, 'b': 2, 'c': 3})",
+  "assertion": "assert n == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass('3.14')",
+  "assertion": "assert n == '3.14'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass('   ')",
+  "assertion": "assert n == '   '"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 0\n\nobj = Test()",
+  "assertion": "assert n == 0"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 'John'\n\nobj = Test()\ndel obj.name",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 'John'\n\nobj = Test()\nobj.name = ''",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 'John'\n\nobj = Test()\nobj.name = 0",
+  "assertion": "assert n == 0"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = ' '\n\nobj = Test()",
+  "assertion": "assert n == ' '"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 'John Doe'\n\nobj = Test()",
+  "assertion": "assert n == 'John Doe'"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = [1, 2, 3]\n\nobj = Test()",
+  "assertion": "assert n == [1, 2, 3]"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 'John'\n\nobj = Test()\nobj.name = 123",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class Test:\n    def __init__(self):\n        self.name = 'John'\n\nobj = Test()\nobj.name = 3.14",
+  "assertion": "assert n == 3.14"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass('John')\nobj.name = None",
+  "assertion": "assert n == None"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'John'\n\nobj = MyClass()\nobj.name = ' '",
+  "assertion": "assert n == ' '"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self):\n        self.name = 'John'\n\nobj = MyClass()\nobj.name = 'John'",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\nobj = MyClass('John')",
+  "assertion": "assert n == 'John'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\nobj = MyClass('')",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\nobj = MyClass(123)",
+  "assertion": "assert n == 123"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\nobj = MyClass(None)",
+  "assertion": "assert n == None"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\nobj = MyClass('John')\ndel obj.name",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\nobj = MyClass('John')\nobj.name = None",
+  "assertion": "assert n == None"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\nobj = MyClass('John')\nobj.name = ''",
+  "assertion": "assert n == ''"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass([])",
+  "assertion": "assert n == []"
+ },
+ {
+  "init": "class MyClass:\n    def __init__(self, name):\n        self.name = name\n\nobj = MyClass({})",
+  "assertion": "assert n == {}"
+ }
+]

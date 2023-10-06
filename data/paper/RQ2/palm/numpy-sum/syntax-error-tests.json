@@ -1,0 +1,9 @@
+[
+ {
+  "init": "int_list = [2,1,3]",
+  "assertions": [
+   "assert count == 6",
+   "assert count = count"
+  ]
+ }
+]

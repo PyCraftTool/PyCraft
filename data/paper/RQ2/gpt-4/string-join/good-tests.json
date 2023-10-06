@@ -1,0 +1,930 @@
+[
+ {
+  "init": "values = ['a', 'b', 'c', 'd']",
+  "assertion": "assert string == '[a, b, c, d]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', '4']",
+  "assertion": "assert string == '[1, 2, 3, 4]'"
+ },
+ {
+  "init": "values = ['  hello  ', 'world']",
+  "assertion": "assert string == '[  hello  , world]'"
+ },
+ {
+  "init": "values = ['1.23', '4.56']",
+  "assertion": "assert string == '[1.23, 4.56]'"
+ },
+ {
+  "init": "values = []",
+  "assertion": "assert string == '[]'"
+ },
+ {
+  "init": "values = ['None', 'None']",
+  "assertion": "assert string == '[None, None]'"
+ },
+ {
+  "init": "values = ['']",
+  "assertion": "assert string == '[]'"
+ },
+ {
+  "init": "values = [None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [' ', ' ']",
+  "assertion": "assert string == '[ ,  ]'"
+ },
+ {
+  "init": "values = ['1.23']",
+  "assertion": "assert string == '[1.23]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', '5']",
+  "assertion": "assert string == '[1, 2, 3, 4, 5]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c']",
+  "assertion": "assert string == '[a, b, c]'"
+ },
+ {
+  "init": "values = ['hello', 'world']",
+  "assertion": "assert string == '[hello, world]'"
+ },
+ {
+  "init": "values = ['1.1', '2.2', '3.3']",
+  "assertion": "assert string == '[1.1, 2.2, 3.3]'"
+ },
+ {
+  "init": "values = ['  hello  ', '  world  ']",
+  "assertion": "assert string == '[  hello  ,   world  ]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', None, '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', 3, '4', '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', 3.5, '4', '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', float('1.5'), '4', '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.0, 2.23, 3.45]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.0', '2.23', '3.45']",
+  "assertion": "assert string == '[1.0, 2.23, 3.45]'"
+ },
+ {
+  "init": "values = ['  ', ' ', '   ']",
+  "assertion": "assert string == '[  ,  ,    ]'"
+ },
+ {
+  "init": "values = [1, 'a', None, 2.34, '  ']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = 123",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.125', '3.5', 'hello', 'world']",
+  "assertion": "assert string == '[1.125, 3.5, hello, world]'"
+ },
+ {
+  "init": "values = ['1.125', '3.5', None, 'world']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 3, 4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['  string  ', 'a', 'b', 'c']",
+  "assertion": "assert string == '[  string  , a, b, c]'"
+ },
+ {
+  "init": "values = [None, None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.125', '3.5', '6.75', '5.9']",
+  "assertion": "assert string == '[1.125, 3.5, 6.75, 5.9]'"
+ },
+ {
+  "init": "values = [1, 2, 3.125, ['1.125', '3.5', '6.75', '5.9']]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 3.125, ['1.125', '3.5', '6.75', '5.9']]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry']",
+  "assertion": "assert string == '[apple, banana, cherry]'"
+ },
+ {
+  "init": "values = ['1.25', '2.5', '3.75']",
+  "assertion": "assert string == '[1.25, 2.5, 3.75]'"
+ },
+ {
+  "init": "values = ['  space  ', '  at  ', '  start  ', '  and  ', '  end  ']",
+  "assertion": "assert string == '[  space  ,   at  ,   start  ,   and  ,   end  ]'"
+ },
+ {
+  "init": "values = ['None', 'None', 'None']",
+  "assertion": "assert string == '[None, None, None]'"
+ },
+ {
+  "init": "values = ['1.25']",
+  "assertion": "assert string == '[1.25]'"
+ },
+ {
+  "init": "values = [1.25, 2.5, 3.75]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e']",
+  "assertion": "assert string == '[a, b, c, d, e]'"
+ },
+ {
+  "init": "values = [' ']",
+  "assertion": "assert string == '[ ]'"
+ },
+ {
+  "init": "values = [1.1, 2.2, 3.3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['  space  ', 'another   space']",
+  "assertion": "assert string == '[  space  , another   space]'"
+ },
+ {
+  "init": "values = ['None', None, 'null', '']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.23', '4.56', '7.89']",
+  "assertion": "assert string == '[1.23, 4.56, 7.89]'"
+ },
+ {
+  "init": "values = [1.23, 4.56, 7.89]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['True', 'False', 'true', 'false']",
+  "assertion": "assert string == '[True, False, true, false]'"
+ },
+ {
+  "init": "values = [True, False, True, False]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [' 1', ' 2', ' 3', ' 4', ' 5']",
+  "assertion": "assert string == '[ 1,  2,  3,  4,  5]'"
+ },
+ {
+  "init": "values = ['1.0', '2.0', '3.0', '4.0', '5.0']",
+  "assertion": "assert string == '[1.0, 2.0, 3.0, 4.0, 5.0]'"
+ },
+ {
+  "init": "values = ['a', 'b', None, 'd', 'e']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['float', '1.0']",
+  "assertion": "assert string == '[float, 1.0]'"
+ },
+ {
+  "init": "values = ['1', '2', '3']",
+  "assertion": "assert string == '[1, 2, 3]'"
+ },
+ {
+  "init": "values = ['  space  ', 'more   spaces']",
+  "assertion": "assert string == '[  space  , more   spaces]'"
+ },
+ {
+  "init": "values = ['1.01', '2.02', '3.03']",
+  "assertion": "assert string == '[1.01, 2.02, 3.03]'"
+ },
+ {
+  "init": "values = [1.01, 2.02, 3.03]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 1, 2]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', None, 'd']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['alpha', 'beta', 'gamma', 'delta']",
+  "assertion": "assert string == '[alpha, beta, gamma, delta]'"
+ },
+ {
+  "init": "values = [1,2,3,4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['  space  ', '  at  ', '  start and end  ']",
+  "assertion": "assert string == '[  space  ,   at  ,   start and end  ]'"
+ },
+ {
+  "init": "values = [None, 'b', 'c']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.25', '3.5', '64.9', '85.145', '94.7325']",
+  "assertion": "assert string == '[1.25, 3.5, 64.9, 85.145, 94.7325]'"
+ },
+ {
+  "init": "values = [1.2564, 3.5735, 6.49]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['Float as a str ', '1.25']",
+  "assertion": "assert string == '[Float as a str , 1.25]'"
+ },
+ {
+  "init": "values = ['', ' ']",
+  "assertion": "assert string == '[,  ]'"
+ },
+ {
+  "init": "values = ['1.23', ' ', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = 123456",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple']",
+  "assertion": "assert string == '[apple]'"
+ },
+ {
+  "init": "values = ['1.2 3', ' 4.5', '6.7 8']",
+  "assertion": "assert string == '[1.2 3,  4.5, 6.7 8]'"
+ },
+ {
+  "init": "values = ['abc']",
+  "assertion": "assert string == '[abc]'"
+ },
+ {
+  "init": "values = [str(123),'hey', str(3.14)]",
+  "assertion": "assert string == '[123, hey, 3.14]'"
+ },
+ {
+  "init": "values = [str(None)]",
+  "assertion": "assert string == '[None]'"
+ },
+ {
+  "init": "values = [str(None), 'abc']",
+  "assertion": "assert string == '[None, abc]'"
+ },
+ {
+  "init": "values = [123]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [3.14]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [False]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['hi', 'test', '', 'string']",
+  "assertion": "assert string == '[hi, test, , string]'"
+ },
+ {
+  "init": "values = ['a house', 'on the hill']",
+  "assertion": "assert string == '[a house, on the hill]'"
+ },
+ {
+  "init": "values = ['you say', ' I say', ' goodbye I say', ' hello']",
+  "assertion": "assert string == '[you say,  I say,  goodbye I say,  hello]'"
+ },
+ {
+  "init": "values = [1, 3.456, 'a string', [1, 3, 6]]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', '']",
+  "assertion": "assert string == '[apple, banana, ]'"
+ },
+ {
+  "init": "values = ['apple']*3",
+  "assertion": "assert string == '[apple, apple, apple]'"
+ },
+ {
+  "init": "values = ['apple  ', 'banana', 'cherry']",
+  "assertion": "assert string == '[apple  , banana, cherry]'"
+ },
+ {
+  "init": "values = ['apple', None, 'cherry']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple, banana, cherry'] ",
+  "assertion": "assert string == '[apple, banana, cherry]'"
+ },
+ {
+  "init": "values = ['pine', 'apple', 'mango']",
+  "assertion": "assert string == '[pine, apple, mango]'"
+ },
+ {
+  "init": "values = ['1.0', ' 1.5 ', '0.0']",
+  "assertion": "assert string == '[1.0,  1.5 , 0.0]'"
+ },
+ {
+  "init": "values = [1.0, 1.5, 0.5, -1.0, 'string']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', None, '4', '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 'two', 3.0]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', 'Sample', 'Text']",
+  "assertion": "assert string == '[1, Sample, Text]'"
+ },
+ {
+  "init": "values = ['None', None, '']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.2323', '4.55555', '6.6666']",
+  "assertion": "assert string == '[1.2323, 4.55555, 6.6666]'"
+ },
+ {
+  "init": "values = ['Python', '  ']",
+  "assertion": "assert string == '[Python,   ]'"
+ },
+ {
+  "init": "values = [1, 1, 0]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [0]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['Float String', '1.11']",
+  "assertion": "assert string == '[Float String, 1.11]'"
+ },
+ {
+  "init": "values = [' ', '.', '!']",
+  "assertion": "assert string == '[ , ., !]'"
+ },
+ {
+  "init": "values = [1, 'a', '2.3', '   ', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [None, 'None', ' ']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['  a  ', '  b  ', '  c  ', '  d  ', '  e  ']",
+  "assertion": "assert string == '[  a  ,   b  ,   c  ,   d  ,   e  ]'"
+ },
+ {
+  "init": "values = ['1.23', '4.56', None, '7.89']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [None, None, None, None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.23', '4.56', '', '7.89']",
+  "assertion": "assert string == '[1.23, 4.56, , 7.89]'"
+ },
+ {
+  "init": "values = ['', '', '', '', '']",
+  "assertion": "assert string == '[, , , , ]'"
+ },
+ {
+  "init": "values = ['1.23', '4.56', '7.89', '']",
+  "assertion": "assert string == '[1.23, 4.56, 7.89, ]'"
+ },
+ {
+  "init": "values = [' 1', '2 ', ' 3 ', ' 4', '5 ']",
+  "assertion": "assert string == '[ 1, 2 ,  3 ,  4, 5 ]'"
+ },
+ {
+  "init": "values = ['1.125', None, '6.75', '5.9']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.125, 3.5, 6.75, 5.9]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [' 1', ' 2 ', '3 ']",
+  "assertion": "assert string == '[ 1,  2 , 3 ]'"
+ },
+ {
+  "init": "values = ['a single element']",
+  "assertion": "assert string == '[a single element]'"
+ },
+ {
+  "init": "values = ['  string with spaces  ']",
+  "assertion": "assert string == '[  string with spaces  ]'"
+ },
+ {
+  "init": "values = ['1', 2, '3', 4.0, '5.0']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', '']",
+  "assertion": "assert string == '[1, 2, 3, 4, ]'"
+ },
+ {
+  "init": "values = ['  ']",
+  "assertion": "assert string == '[  ]'"
+ },
+ {
+  "init": "values = ['a', 'b', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', ' ', 'c', ' ', 'e']",
+  "assertion": "assert string == '[a,  , c,  , e]'"
+ },
+ {
+  "init": "values = ['1.1', '2.2', '3.3', '4.4', '5.5']",
+  "assertion": "assert string == '[1.1, 2.2, 3.3, 4.4, 5.5]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', '5.5']",
+  "assertion": "assert string == '[1, 2, 3, 4, 5.5]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', '5.5', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', ' ', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', ' ', '5.5']",
+  "assertion": "assert string == '[1, 2, 3, 4,  , 5.5]'"
+ },
+ {
+  "init": "values = ['  space  ', 'string  ', '  ']",
+  "assertion": "assert string == '[  space  , string  ,   ]'"
+ },
+ {
+  "init": "values = [None, 'a', 1, 1.1]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', 3, 4.4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a b', 'c d', 'e f']",
+  "assertion": "assert string == '[a b, c d, e f]'"
+ },
+ {
+  "init": "values = ['1.1', 2, '3.3']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [None, 'a', 'b']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', None, 'b']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['  a  ', '  b  ', '  c  ']",
+  "assertion": "assert string == '[  a  ,   b  ,   c  ]'"
+ },
+ {
+  "init": "values = [1.1, 2.2, 3.3, 4.4, 5.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['  string  ', '  another string  ', '  yet another string  ']",
+  "assertion": "assert string == '[  string  ,   another string  ,   yet another string  ]'"
+ },
+ {
+  "init": "values = ['1', '2', '3.5', '4', '5']",
+  "assertion": "assert string == '[1, 2, 3.5, 4, 5]'"
+ },
+ {
+  "init": "values = ['1', '2', '3.5', '4', '5.9']",
+  "assertion": "assert string == '[1, 2, 3.5, 4, 5.9]'"
+ },
+ {
+  "init": "values = [' ', ' ', ' ']",
+  "assertion": "assert string == '[ ,  ,  ]'"
+ },
+ {
+  "init": "values = ['abc', 'def', 'ghi']",
+  "assertion": "assert string == '[abc, def, ghi]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', 4.56]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', [1, 2, 3]]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', {'a': 1, 'b': 2}]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [' ', ' ', ' ', ' ', ' ']",
+  "assertion": "assert string == '[ ,  ,  ,  ,  ]'"
+ },
+ {
+  "init": "values = ['None', 'None', 'None', 'None', 'None']",
+  "assertion": "assert string == '[None, None, None, None, None]'"
+ },
+ {
+  "init": "values = ['1.1', '2', 'a', ' ', 'None']",
+  "assertion": "assert string == '[1.1, 2, a,  , None]'"
+ },
+ {
+  "init": "values = ['  space  ', '  another space  ']",
+  "assertion": "assert string == '[  space  ,   another space  ]'"
+ },
+ {
+  "init": "values = ['1', 2, 3.0, None, 'string', '  space  ']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', 2, 3.0, None, 'string', '  space  ', ['nested', 'list']]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', 2, 3.0, None, 'string', '  space  ', {'a': 1, 'b': 2}]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', 2, 3.0, None, 'string', '  space  ', {'a': 1, 'b': 2}, ['nested', 'list']]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', 4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', 4.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', '4.5']",
+  "assertion": "assert string == '[1, 2, 3, 4.5]'"
+ },
+ {
+  "init": "values = ['  string  ', '  another string  ']",
+  "assertion": "assert string == '[  string  ,   another string  ]'"
+ },
+ {
+  "init": "values = ['string with spaces', 'another string']",
+  "assertion": "assert string == '[string with spaces, another string]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', '4.5 as string']",
+  "assertion": "assert string == '[1, 2, 3, 4.5 as string]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', ' ']",
+  "assertion": "assert string == '[1, 2, 3,  ]'"
+ },
+ {
+  "init": "values = [1, 2.5, '3']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.25, 2.0, 3.75]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.25', '2.0', '3.75']",
+  "assertion": "assert string == '[1.25, 2.0, 3.75]'"
+ },
+ {
+  "init": "values = [False, True, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', ' 2 ', ' 3 ']",
+  "assertion": "assert string == '[1,  2 ,  3 ]'"
+ },
+ {
+  "init": "values = [1, '2', 3.0, '4.0', None, ' ']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.23, None, '4.56', '7.89']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', 2.34, ' ', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['  string  ', '  another string  ', '   ']",
+  "assertion": "assert string == '[  string  ,   another string  ,    ]'"
+ },
+ {
+  "init": "values = {1: 'a', 2: 'b'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', '', ' ', 'b']",
+  "assertion": "assert string == '[a, ,  , b]'"
+ },
+ {
+  "init": "values = [None, 'null', '', 'non-empty']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.25', '3.5', '6.75']",
+  "assertion": "assert string == '[1.25, 3.5, 6.75]'"
+ },
+ {
+  "init": "values = ['12e-1', '3.5e2', '6.75e-2']",
+  "assertion": "assert string == '[12e-1, 3.5e2, 6.75e-2]'"
+ },
+ {
+  "init": "values = ['1.25', ' ', None, 3.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', ' 2', '  3', '   4']",
+  "assertion": "assert string == '[1,  2,   3,    4]'"
+ },
+ {
+  "init": "values = ['one', 'two', 'three', 'four']",
+  "assertion": "assert string == '[one, two, three, four]'"
+ },
+ {
+  "init": "values = ['True', 'False', 'None', '1']",
+  "assertion": "assert string == '[True, False, None, 1]'"
+ },
+ {
+  "init": "values = ['  ', '  b  ', '  c  ']",
+  "assertion": "assert string == '[  ,   b  ,   c  ]'"
+ },
+ {
+  "init": "values = [1.234, 'b', 'c']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.234', 'b', 'c']",
+  "assertion": "assert string == '[1.234, b, c]'"
+ },
+ {
+  "init": "values = ['a', 'b', '1.234']",
+  "assertion": "assert string == '[a, b, 1.234]'"
+ },
+ {
+  "init": "values = ['a', 'b', 1.234]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['None', 'False', 'True']",
+  "assertion": "assert string == '[None, False, True]'"
+ },
+ {
+  "init": "values = ['1', '2', 3.0, '4', '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3.125', '1.125']",
+  "assertion": "assert string == '[1, 2, 3.125, 1.125]'"
+ },
+ {
+  "init": "values = ['  string  ', 'another string', 'yet another string']",
+  "assertion": "assert string == '[  string  , another string, yet another string]'"
+ },
+ {
+  "init": "values = ['1', '2', '3.125', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3.125', 1.2]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1']",
+  "assertion": "assert string == '[1]'"
+ },
+ {
+  "init": "values = ['1', ' 2 ', '  3 ']",
+  "assertion": "assert string == '[1,  2 ,   3 ]'"
+ },
+ {
+  "init": "values = ['1.23', '2.34', '3.45']",
+  "assertion": "assert string == '[1.23, 2.34, 3.45]'"
+ },
+ {
+  "init": "values = ['1', None, '3']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['   ', ' ', 'string']",
+  "assertion": "assert string == '[   ,  , string]'"
+ },
+ {
+  "init": "values = [' ', '  ', '   ']",
+  "assertion": "assert string == '[ ,   ,    ]'"
+ },
+ {
+  "init": "values = ['  space  ', '  space  ', '  space  ']",
+  "assertion": "assert string == '[  space  ,   space  ,   space  ]'"
+ },
+ {
+  "init": "values = ['1', 2, 3.0, None, 'string', ' ']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['  string  ', 'another string']",
+  "assertion": "assert string == '[  string  , another string]'"
+ },
+ {
+  "init": "values = ['1', 2, '3', 4.56, '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.1', '2', 'a', ' ', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, '2', 3.5, '4.5', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['  space  ', '  more space  ', '  even more space  ']",
+  "assertion": "assert string == '[  space  ,   more space  ,   even more space  ]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
+  "assertion": "assert string == '[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']",
+  "assertion": "assert string == '[a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']",
+  "assertion": "assert string == '[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10']",
+  "assertion": "assert string == '[a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']",
+  "assertion": "assert string == '[a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]'"
+ },
+ {
+  "init": "values = ['1.23', '4.56', '7.89', '12.34', '56.78', '90.12', '34.56', '78.90', '12.34', '56.78', '90.12', '34.56', '78.90']",
+  "assertion": "assert string == '[1.23, 4.56, 7.89, 12.34, 56.78, 90.12, 34.56, 78.90, 12.34, 56.78, 90.12, 34.56, 78.90]'"
+ },
+ {
+  "init": "values = ['1', '2', 3.14, '4', '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3.14', '4', '5']",
+  "assertion": "assert string == '[1, 2, 3.14, 4, 5]'"
+ },
+ {
+  "init": "values = ['1', '2', '', '4', '5']",
+  "assertion": "assert string == '[1, 2, , 4, 5]'"
+ }
+]

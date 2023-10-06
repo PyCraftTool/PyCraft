@@ -1,0 +1,8 @@
+[
+ {
+  "init": "val1 = 'initial'",
+  "assertions": [
+   "assert val == 'initial'"
+  ]
+ }
+]

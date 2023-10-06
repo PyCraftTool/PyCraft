@@ -1,0 +1,6 @@
+[
+ {
+  "init": "cond = lambda x : x % 2 == 0\n",
+  "assertions": "error"
+ }
+]

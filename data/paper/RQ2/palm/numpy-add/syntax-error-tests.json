@@ -1,0 +1,98 @@
+[
+ {
+  "init": "array2 = [400, 500, 600]\narray1 = [None]\n result = []",
+  "assertions": "error"
+ },
+ {
+  "init": "array2 = [400, 500, 600]\narray1 = [100, 200, 300]\n result = [100, 200, 300]",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [2, 1], array2 = [1, 2]",
+  "assertions": [
+   "assert len(result) == 2"
+  ]
+ },
+ {
+  "init": "array1 = [1], array2 = [1]",
+  "assertions": [
+   "assert result == [2]"
+  ]
+ },
+ {
+  "init": "array1 = [0, 1], array2 = [1, 2]",
+  "assertions": [
+   "assert result == [1, 3]"
+  ]
+ },
+ {
+  "init": "array1 = [-1, 1], array2 = [1, 2]",
+  "assertions": [
+   "assert result == [0, 3]"
+  ]
+ },
+ {
+  "init": "array1 = [None, None], array2 = [1, 2]",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [-5.55, 10.11], array2 = [-6.55, 12.11]",
+  "assertions": [
+   "assert result == [-12.1, 22.22]"
+  ]
+ },
+ {
+  "init": "array1 = [-5.55, '10.11'], array2 = [-6.55, '12.11', 100]",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['10.11', '10.11'], array2 = ['-6.55', '12.11', 100]",
+  "assertions": [
+   "assert result == ['3.56', '22.22', 100]"
+  ]
+ },
+ {
+  "init": "array1 = [100, 100], array2 = [100, 100]",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['a', 'b', 'c']\narray2 = ['d', 'e', 'f']\nresult = []",
+  "assertions": [
+   "assert result == ['ad', 'be', 'cf']]"
+  ]
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [5, 6, 7, 8]\nresult = []\nfor i in range(len(array1)):",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [5, 6, 7, 8]\nresult = []\nfor i in range(len(array1) + 1):",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [5, 6, 7, 8]\nresult = []\nfor i in range(len(array1)):",
+  "assertions": [
+   "assert result == [6, 8, 10, 12]"
+  ]
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [5, 6, 7, 8]\nresult = []\nfor i in range(len(array1)):",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [5, 6, 7, 8]\nresult = []\nfor i in range(len(array1)):",
+  "assertions": [
+   "assert result == [6, 8, 10, 12]"
+  ]
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [5, 6, 7, 8]\nresult = []\nfor i in range(len(array1)):",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [5, 6, 7, 8]\nresult = []\nfor i in range(len(array1)):",
+  "assertions": [
+   "assert result == [6, 8, 10, 12]"
+  ]
+ }
+]

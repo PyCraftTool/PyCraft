@@ -1,0 +1,56 @@
+[
+ {
+  "init": "val1 = '1', val2 = '2', int_instance = 10",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "val1 = '1', val2 = '2', int_instance = '10'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 10, val2 = 20, int_instance = '10'",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "val1 = 10, val2 = 20, int_instance = 10",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "val1 = '10', val2 = '20', int_instance = 10",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "val1 = 'a', val2 = 'b', int_instance = 10",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "val1 = 10, val2 = '20', int_instance = None",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "val1 = 'a', val2 = 10, int_instance = None",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "val1 = 'a', val2 = 10, int_instance = 10",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 10, val2 = None, int_instance = None",
+  "assertions": "error"
+ }
+]

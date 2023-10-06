@@ -1,0 +1,158 @@
+[
+ {
+  "init": "a = 1\nb = 2",
+  "assertion": "assert a == 2 and b == 1"
+ },
+ {
+  "init": "a = 1\nb = 2\ntemp = None",
+  "assertion": "assert a == 2 and b == 1"
+ },
+ {
+  "init": "a = 1\nb = 2\ntemp = 'string'",
+  "assertion": "assert a == 2 and b == 1"
+ },
+ {
+  "init": "a = 1\nb = 2\ntemp = ['1', '2', '3']",
+  "assertion": "assert a == 2 and b == 1"
+ },
+ {
+  "init": "a = '1'\nb = '2'",
+  "assertion": "assert a == '2' and b == '1'"
+ },
+ {
+  "init": "a = [1, 2, 3]\nb = [4, 5, 6]",
+  "assertion": "assert a == [4, 5, 6] and b == [1, 2, 3]"
+ },
+ {
+  "init": "a = None\nb = None",
+  "assertion": "assert a == None and b == None"
+ },
+ {
+  "init": "a = 'hello'\nb = 'world'",
+  "assertion": "assert a == 'world' and b == 'hello'"
+ },
+ {
+  "init": "a = 1.125\nb = 2.25",
+  "assertion": "assert a == 2.25 and b == 1.125"
+ },
+ {
+  "init": "a = 'a'\nb = 'b'",
+  "assertion": "assert a == 'b' and b == 'a'"
+ },
+ {
+  "init": "a = 'a string'\nb = 'another string'",
+  "assertion": "assert a == 'another string' and b == 'a string'"
+ },
+ {
+  "init": "a = [1, 2]\nb = [3, 4]",
+  "assertion": "assert a == [3, 4] and b == [1, 2]"
+ },
+ {
+  "init": "a = None\nb = 'b'",
+  "assertion": "assert a == 'b' and b == None"
+ },
+ {
+  "init": "a = {'a': 1, 'b': 2}\nb = {'c': 3, 'd': 4}",
+  "assertion": "assert a == {'c': 3, 'd': 4} and b == {'a': 1, 'b': 2}"
+ },
+ {
+  "init": "a = ['1', '2']\nb = ['2', '3']",
+  "assertion": "assert a == ['2', '3'] and b == ['1', '2']"
+ },
+ {
+  "init": "a = ['1', '2']\nb = ['2', '3']\na = b\nb = a",
+  "assertion": "assert a == ['2', '3'] and b == ['2', '3']"
+ },
+ {
+  "init": "a = 1\nb = 2",
+  "assertion": "assert a == 2\nassert b == 1"
+ },
+ {
+  "init": "a = 2\nb = 1",
+  "assertion": "assert a == 1\nassert b == 2"
+ },
+ {
+  "init": "a = 10\nb = 20",
+  "assertion": "assert a == 20 and b == 10"
+ },
+ {
+  "init": "a = [1,2]\nb = [3,4]",
+  "assertion": "assert a == [3,4] and b == [1,2]"
+ },
+ {
+  "init": "a = 1; b = 2",
+  "assertion": "assert a == 2\nassert b == 1"
+ },
+ {
+  "init": "a = 'a'; b = 'b'",
+  "assertion": "assert a == 'b'\nassert b == 'a'"
+ },
+ {
+  "init": "a = None\nb = None",
+  "assertion": "assert a is None and b is None"
+ },
+ {
+  "init": "a = []\nb = []",
+  "assertion": "assert a == [] and b == []"
+ },
+ {
+  "init": "a = [None,None]\nb = [None,None]",
+  "assertion": "assert a == [None,None] and b == [None,None]"
+ },
+ {
+  "init": "a = {'a':1,'b':2}\nb = {'a':3,'b':4}",
+  "assertion": "assert a == {'a':3,'b':4} and b == {'a':1,'b':2}"
+ },
+ {
+  "init": "a = 10\nb = 20",
+  "assertion": "assert a == 20\nassert b == 10"
+ },
+ {
+  "init": "a = 'hello'\nb = 'world'",
+  "assertion": "assert a == 'world'\nassert b == 'hello'"
+ },
+ {
+  "init": "a = None\nb = None",
+  "assertion": "assert a == None\nassert b == None"
+ },
+ {
+  "init": "a = 2\nb = 1",
+  "assertion": "assert a == 1 and b == 2"
+ },
+ {
+  "init": "a = [1, 2, 3]\nb = ['1', '2', '3']\ntemp = a",
+  "assertion": "assert a == ['1', '2', '3'] and b == [1, 2, 3]"
+ },
+ {
+  "init": "a = {}\nb = {}",
+  "assertion": "assert a == {} and b == {}"
+ },
+ {
+  "init": "a = [1]\nb = [2]\na = b",
+  "assertion": "assert a == [2] and b == [2]"
+ },
+ {
+  "init": "a = ['1']\nb = ['2']\na = b",
+  "assertion": "assert a == ['2'] and b == ['2']"
+ },
+ {
+  "init": "a = [1, 2, 3]\nb = ['a', 'b', 'c']",
+  "assertion": "assert a == ['a', 'b', 'c'] and b == [1, 2, 3]"
+ },
+ {
+  "init": "a=1\nb=2",
+  "assertion": "assert a == 2 and b == 1"
+ },
+ {
+  "init": "a = 5\nb = 7",
+  "assertion": "assert a == 7 and b == 5"
+ },
+ {
+  "init": "a = 1.23456789\nb = 2.34567890",
+  "assertion": "assert a == 2.34567890 and b == 1.23456789"
+ },
+ {
+  "init": "a = 1.23456789e-123\nb = 2.34567890e-123",
+  "assertion": "assert a == 2.34567890e-123 and b == 1.23456789e-123"
+ }
+]

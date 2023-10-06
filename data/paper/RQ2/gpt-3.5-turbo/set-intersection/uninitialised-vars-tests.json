@@ -1,0 +1,8 @@
+[
+ {
+  "init": "l2 = ['Format', 'your', 'codes']\nls1 = [' FORMAT  ', 'Your ', 'Supreeme succeed', 'CODES']",
+  "assertions": [
+   "assert common == [' FORMAT  ', 'Your ']"
+  ]
+ }
+]

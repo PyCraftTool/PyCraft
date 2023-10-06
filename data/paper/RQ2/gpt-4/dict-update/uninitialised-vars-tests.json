@@ -1,0 +1,12 @@
+[
+ {
+  "init": "additional_dict = {'a': None, 'b': '', 'c': '  ', 'e': [None, '', '  ']}",
+  "assertions": "error"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': '', 'c': '  ', 'e': [None, '', '  ']}",
+  "assertions": [
+   "assert d == {'a': None, 'b': '', 'c': '  ', 'e': [None, '', '  ']"
+  ]
+ }
+]

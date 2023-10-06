@@ -1,0 +1,128 @@
+[
+ {
+  "init": "l2 = [1, 2, 3, 4, 5]\nl1 = [1, 2, 3, 4, None]",
+  "assertions": "error"
+ },
+ {
+  "init": "l2 = [1, 2, 3, 4, 5]\nl1 = '1, 2, 3, 4, 5'",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [None, 'b', 'c', None, 'e']\nl2 = [None, 'd', 'f', None]",
+  "assertions": [
+   "assert common == [None]"
+  ]
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = [2, 4, 6, '8']",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1,2,3,4,5]\nl2 = [1.0,2.0,3.0,4.0,5.0]",
+  "assertions": [
+   "assert common == []"
+  ]
+ },
+ {
+  "init": "l1 = [' ', '  ', '   ']\nl2 = ['   ', '    ', '     ']",
+  "assertions": [
+   "assert common == []"
+  ]
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = [1.0, 2.0, 3.0]",
+  "assertions": [
+   "assert common == []"
+  ]
+ },
+ {
+  "init": "l1 = ['1.5', '2.5', '3.5']\nl2 = ['2.5', '3.5', '4.5']",
+  "assertions": [
+   "assert common == []"
+  ]
+ },
+ {
+  "init": "l1 = [1, 'two', 3.5, False, None]\nl2 = [True, 'two']\n",
+  "assertions": [
+   "assert common == ['two']"
+  ]
+ },
+ {
+  "init": "l1 = 'abcd'\nl2 = [1, 2, 3]\n",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [' ', '', 'hello']\nl2 = ''\n",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [4.2, 5.9, 6.1]\nl2 = [6.1, '5.9']\n",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1.0, 2.5]\nl2 = ['1', 2.5, '3', 4.2]",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = ''\nl2 = [1, 2, 3]",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = 'abc'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = [None, 2, 3]",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd', 'e']\nl2 = [1, 2, 3, 4, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1, 3, 5, 7, 9]\nl2 = [2, '3', 4, 6]",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 2, 1]\nl2 = [2, 2, 3, 4]",
+  "assertions": [
+   "assert common == [2, 2, 3]"
+  ]
+ },
+ {
+  "init": "l2 = [1.5, 2.4, 3.78, 4.32]\nl1 = [1.5, '2.4', '3.78', '4.32']",
+  "assertions": [
+   "assert common == [1.5, '2.4', '3.78', '4.32']"
+  ]
+ },
+ {
+  "init": "l2 = ['Python', 'test', 'programming', 'l1']\nl1 = [None, '', ' pRoGRAMMing', ' l1 ', 'Null']",
+  "assertions": [
+   "assert common == ['', ' pRoGRAMMing']"
+  ]
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = [1, '2', None]",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1, 2, 'three']\nl2 = [1, 'two', 'three']",
+  "assertions": [
+   "assert common == ['three']"
+  ]
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c']\nl2 = [1, 2, 3]",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = ['a', 1, 3.14, None]\nl2 = ['a', 1.0, '3.14', None]",
+  "assertions": [
+   "assert common == ['a', None]"
+  ]
+ }
+]

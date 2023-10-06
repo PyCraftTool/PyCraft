@@ -1,0 +1,26 @@
+[
+ {
+  "init": "x = float('inf')\ny = float('-inf')\nz = float('nan')",
+  "assertions": [
+   "assert a == float('inf')",
+   "assert b == float('-inf')",
+   "assert math.isnan(c)"
+  ]
+ },
+ {
+  "init": "x = float('inf')\ny = float('-inf')\nz = float('nan')",
+  "assertions": [
+   "assert a == float('inf')",
+   "assert b == float('-inf')",
+   "assert math.isnan(c)"
+  ]
+ },
+ {
+  "init": "x = float('inf')\ny = float('-inf')\nz = float('nan')",
+  "assertions": [
+   "assert a == float('inf')",
+   "assert b == float('-inf')",
+   "assert math.isnan(c)"
+  ]
+ }
+]

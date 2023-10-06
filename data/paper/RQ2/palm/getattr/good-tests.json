@@ -1,0 +1,90 @@
+[
+ {
+  "init": "obj = None",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = 'john'",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'name': None}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {}\n",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'name': 'a', 'age': 10}\n",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = None\n",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'a': 1, 'b': 2}\ntry:\n  n = obj['c']\nexcept:\n  n = 'unknown'",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'name': None}\n",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'name': '123'}\n",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = []",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'name': 'test', 'id': 123}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = []\n",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = '10'",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = ['10', 'abc', 'def', 'ghi']",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = object()",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = {'age': 12}",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "obj = 3",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "import os\nobj = os.name",
+  "assertion": "assert n == 'nt' if os.name == 'nt' else 'posix'"
+ },
+ {
+  "init": "import random\nobj = random.random()",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "import io\nobj = io.BytesIO()",
+  "assertion": "assert n == 'unknown'"
+ },
+ {
+  "init": "import timeit\nobj = timeit.default_timer()",
+  "assertion": "assert n == 'unknown'"
+ }
+]

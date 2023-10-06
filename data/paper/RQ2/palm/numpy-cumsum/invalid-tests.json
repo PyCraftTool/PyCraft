@@ -1,0 +1,708 @@
+[
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ncum_arr.append(sum(array[:i+1]))",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ni = 6",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ni = -1",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ni = 0",
+  "assertions": [
+   "assert cum_arr == [1]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ni = 1",
+  "assertions": [
+   "assert cum_arr == [1, 3]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\narray[2] = None",
+  "assertions": [
+   "assert cum_arr == [1, 3, 6, 10, 15]"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['1', '3', '6', '10', '15']"
+  ]
+ },
+ {
+  "init": "array = [None, None, None]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [None, None, None]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ncum_arr.append(sum(array[:i+1]))",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ncum_arr.append(sum(array[:i+2]))",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ncum_arr.append(sum(array[:i+3]))",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ncum_arr.append(sum(array[:i+4]))",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ncum_arr.append(sum(array[:i+5]))",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\ncum_arr.append(sum(array[:i+6]))",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [None, None, None]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [None, None, None]"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [1, 3, 6, 10, 15, 21, 28, 36, 45, 55]"
+  ]
+ },
+ {
+  "init": "array = ['1.1', '2.2', '3.3', '4.4', '5.5', '6.6', '7.7', '8.8', '9.9', '10.10']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 10.1, 15.6, 21.1, 28.6, 36.1, 45.6, 55.1]"
+  ]
+ },
+ {
+  "init": "array = ['1.1', '2.2', '3.3', '4.4', '5.5', '6.6', '7.7', '8.8', '9.9', '10.10']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 10.1, 15.6, 21.1, 28.6, 36.1, 45.6, 55.1]"
+  ]
+ },
+ {
+  "init": "array = []\ncum_arr = []",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\ncum_arr = []",
+  "assertions": "error"
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr[-2] == 12"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr[-3] == 9"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr[-4] == 6"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr[-5] == 3"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr[-6] == 1"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr[-7] == 0"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = [1, 2, 3, 4, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = [1, 3, 6, 10, 15]\ncum_arr[0] = 100",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [None, None]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [None, None]"
+  ]
+ },
+ {
+  "init": "array = [None, None, None]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [None, None, None]"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['1', '3', '6', '10', '15']"
+  ]
+ },
+ {
+  "init": "array = ['1.125', '3.5', '6.75', '5.9']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['1.125', '4.625', '11.375', '17.275']"
+  ]
+ },
+ {
+  "init": "array = [None, None]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [None, None]"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['1', '3', '6', '10', '15']"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['1', '3', '6', '10', '15']"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['1', '3', '6', '10', '15']"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['1', '3', '6', '10', '15']"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, None, 5]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [1, 3, 6, 5]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = [1, 1, 1, 1, 1]",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = [1, 2, 3, 4, 5]\narray.pop()",
+  "assertions": [
+   "assert cum_arr == [1, 2, 3, 4]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = [1, 2, 3, 4, 5]\narray = []",
+  "assertions": [
+   "assert cum_arr == [1, 2, 3, 4, 5]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = [1, 2, 3, 4, 5]\narray[0] = None",
+  "assertions": [
+   "assert cum_arr == [1, 1, 3, 4, 5]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = [1, 2, 3, 4, 5]\narray[1] = None",
+  "assertions": [
+   "assert cum_arr == [1, 1, 2, 4, 5]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = [1, 2, 3, 4, 5]\narray[2] = None",
+  "assertions": [
+   "assert cum_arr == [1, 1, 2, 3, 5]"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [None, None, None]\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3]\ncum_arr = []\narray[0] = None",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3]\ncum_arr = []\narray.pop()",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3]\ncum_arr = []\narray.append(4)",
+  "assertions": [
+   "assert cum_arr == [1, 3, 6, 9]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3]\ncum_arr = []\narray.remove(1)",
+  "assertions": [
+   "assert cum_arr == [1, 3]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3]\ncum_arr = []\narray.sort()",
+  "assertions": [
+   "assert cum_arr == [1, 2, 3]"
+  ]
+ },
+ {
+  "init": "array = [1,2,3,4,5]\ncum_arr = []",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [None]\ncum_arr = []",
+  "assertions": [
+   "assert len(cum_arr) == 0"
+  ]
+ },
+ {
+  "init": "array = ['b', 'a', 'z', '123', '789', 'hello', 'world', '3.14', '4.17']\ncum_arr = [None]*len(array)",
+  "assertions": [
+   "assert cum_arr == ['b', 'b,a', 'b,a,z', 'b,a,z,123', 'b,a,z,123,789', 'b,a,z,123,789,hello', 'b,a,z,123,789,hello,world', 'b,a,z,123,789,hello,world,3.14', 'b,a,z,123,789,hello,world,3.14,4.17']"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]",
+  "assertions": [
+   "assert cum_arr[2] == 9"
+  ]
+ },
+ {
+  "init": "array = [6, 4, 1, 0, 9]",
+  "assertions": [
+   "assert cum_arr[3] == 10"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']",
+  "assertions": [
+   "assert cum_arr[8] == 'a,b,c,d,e,f,g,h,i']"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']",
+  "assertions": [
+   "assert len(cum_arr) == len(array)"
+  ]
+ },
+ {
+  "init": "array = []\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [0]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [None, None, 5]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [None, None, 5]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, None, None, 5]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [1, 3, None, None, 5]"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\ncum_arr = ['a', 'a b', 'a b c']\narray = []",
+  "assertions": "error"
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\ncum_arr = ['a', 'a b', 'a b c']\narray.append(None)",
+  "assertions": [
+   "assert cum_arr == ['a', 'a b', 'a b c', None]"
+  ]
+ },
+ {
+  "init": "array = [1,2,3,4]\ncum_arr = [1,2,3,4]\ncum_arr.append(sum(array[:4]))",
+  "assertions": [
+   "assert cum_arr == [1, 2, 3, 4, 10]"
+  ]
+ },
+ {
+  "init": "array = [1,2,3,4]\ncum_arr = []",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1,2,3,4]\ncum_arr = ['b', None, 3, 4]",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1,2,3,4]\ncum_arr = {'b': 1, None: 2, 3: 3, 4: 4}",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1,2,3,4]\ncum_arr = 1,2,3,4",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1,2,3,4]\ncum_arr = cum_arr = {'b': 1, None: 2, 3: 3, 4: 4}",
+  "assertions": "error"
+ },
+ {
+  "init": "array = ['1', '2', '3', '4']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['1', '3', '6', '10']"
+  ]
+ },
+ {
+  "init": "array = [None, 'b']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['b']"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4]\ncum_arr = [None, None, None, None]",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = [None, None, None, None, None, None]",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1.2,2.5, 6.9]",
+  "assertions": [
+   "assert cum_arr == [1.2, 3.7, 10.6]"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e', 'f']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['a', 'a+b', 'a+b+c', 'a+b+c+d', 'a+b+c+d+e', 'a+b+c+d+e+f']"
+  ]
+ },
+ {
+  "init": "array = [1,2,3,4,5]\ncum_arr = []\ncum_arr[len(array)+1]",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [None, None]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [None]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3]\ncum_arr = []\ncum_arr[1.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3]\ncum_arr = []\ncum_arr[-1]",
+  "assertions": [
+   "assert cum_arr[-1] == 6"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []",
+  "assertions": [
+   "assert len(cum_arr) == len(array) + 1"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [None, None, None]\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = ['23', '12', '1000', '456', '221']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = None\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == []"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3]\ncum_arr = [None, None, None]",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = ['a','b','c']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = ['3.5', '5.75', '2.5', '6.8']\ncum_arr = []",
+  "assertions": [
+   "assert len(cum_arr) == 4"
+  ]
+ },
+ {
+  "init": "array = ['1.125', '2.5', None]\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [None]\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [1,2,3,4,None]\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = ['abc', 'xyz', 'hello']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = ['1', '1.1', '2.5', '4.5', '5.6']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [1, 3, 6, 10, 15]"
+  ]
+ },
+ {
+  "init": "array = [1, '3', 2, '4', 5]",
+  "assertions": [
+   "assert cum_arr == [1, 4, 6, 10, 15]"
+  ]
+ },
+ {
+  "init": "array = ['2', None, 2]",
+  "assertions": [
+   "assert cum_arr == [2, None, 2]"
+  ]
+ },
+ {
+  "init": "array = ['2', 'None', 2]",
+  "assertions": [
+   "assert cum_arr == [2, None, 2]"
+  ]
+ },
+ {
+  "init": "array = [1, '2', 3]\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = None\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = []\n",
+  "assertions": [
+   "assert cum_arr == [0]"
+  ]
+ },
+ {
+  "init": "array = [None]\n",
+  "assertions": [
+   "assert cum_arr == [None]"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = []\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [0]"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [None, None]\ncum_arr = []",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = [1, 2, 3, 4, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1,2,3]\ncum_arr = []",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [-5, 1, 0, 2]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [-5, -4, -4, 2]"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5', '6', '7']",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []",
+  "assertions": [
+   "assert len(cum_arr) == len(array) + 1"
+  ]
+ },
+ {
+  "init": "array = []\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [0]"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e']\ncum_arr = [1, 2, 3, 4, 5]\narray.append('f')\ncum_arr.append(6)",
+  "assertions": [
+   "assert cum_arr == [1, 2, 3, 4, 5, 6]"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e']\ncum_arr = [1, 2, 3, 4, 5]\narray.pop()\ncum_arr.pop()",
+  "assertions": [
+   "assert cum_arr == [1, 2, 3, 4]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5, 6]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr[4] == 21"
+  ]
+ },
+ {
+  "init": "array = [None, None, None, None, None, None]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [None, None, None, None, None, None]"
+  ]
+ },
+ {
+  "init": "array = [None, 1, 2, 3, 4, 5]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [1, 3, 6, 10, 15, 21]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5, 6]\ncum_arr = []",
+  "assertions": [
+   "assert sum(cum_arr) == 30"
+  ]
+ },
+ {
+  "init": "array = [None, None, None, None, None]\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == [None, None, None, None, None]"
+  ]
+ },
+ {
+  "init": "array = ['1', '2', '3', '4', '5']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['1', '3', '6', '10', '15']"
+  ]
+ },
+ {
+  "init": "array = ['1.125', '3.5', '6.75', '5.9']\ncum_arr = []",
+  "assertions": [
+   "assert cum_arr == ['1.125', '4.625', '11.375', '17.275']"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\narray[0] = None",
+  "assertions": [
+   "assert cum_arr == [1, 3, 6, 10, 15]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\narray[-1] = None",
+  "assertions": [
+   "assert cum_arr == [1, 3, 6, 10, 14]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ncum_arr = []\narray[3] = None",
+  "assertions": [
+   "assert cum_arr == [1, 3, 6, 10, 14]"
+  ]
+ }
+]

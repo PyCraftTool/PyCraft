@@ -1,0 +1,234 @@
+[
+ {
+  "init": "d = {'a': 1, 'b': 2, 'c': 3.125}\nadditional_dict = {'a': 5.25, 'b': 'c', 'c': 3.125}\n",
+  "assertions": [
+   "assert d == {'a': 5.25, 'b': 'c', 'c': 3.125, 'd': 2, 'e': 3.125}"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2, 'c': [3.125, 5.25, 'c']}\nadditional_dict = {'a': 123, 'b': 'c'}\n",
+  "assertions": [
+   "assert d == {'a': 123, 'b': 'c', 'c': [3.125, 5.25, 'c'], 'd': 2}"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2, 'c': 3.125}\nadditional_dict = {'c': 5.25}\n",
+  "assertions": [
+   "assert d == {'a': 1, 'b': 2, 'c': 5.25, 'd': 3.125}"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2, 'c': 3.125}\nadditional_dict = {'e': 'f'}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2, 'c': 3.125}\nadditional_dict = {'a': '123'}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1}\nadditional_dict = {None: 2}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1}\nadditional_dict = {'a': 2}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1}\nadditional_dict = {'b': None}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1}\nadditional_dict = {'a': None}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1}\nadditional_dict = {'b': 2}\nd.clear()\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1}\nadditional_dict = {'b': 2}\nadditional_dict.clear()\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1}\nadditional_dict = {'b': 2}\nd.update(additional_dict)\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1}\nadditional_dict = {'b': 2}\nadditional_dict.update(d)\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {}\nadditional_dict = {'a': 1, 'b': 2}\nvalue = 1",
+  "assertions": [
+   "assert value in d"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'c': 3}\nvalue = 2",
+  "assertions": [
+   "assert value in d"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'c': 3}\nvalue = 3",
+  "assertions": [
+   "assert value in d"
+  ]
+ },
+ {
+  "init": "d = {}\nadditional_dict = {'a': 1, 'b': 2}\nvalue = 1",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'c': 3}\nvalue = 4",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'a': 3}\nvalue = 3",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {}\nadditional_dict = {'a': 1, 'b': 2}\nvalue = 1",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'d': 3}\nvalue = 3",
+  "assertions": "error"
+ },
+ {
+  "init": "additional_dict = {'a': 1}\nd = {'a': 2}\n",
+  "assertions": [
+   "assert d == {'a': 2}"
+  ]
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = {'a': 2}\n",
+  "assertions": [
+   "assert d == {'a': 2, 'b': 2}"
+  ]
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': None}\nd = {'b': 2}\n",
+  "assertions": [
+   "assert d == {'a': 1, 'b': 2}"
+  ]
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = {'b': None}\n",
+  "assertions": [
+   "assert d == {'a': 1}"
+  ]
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = {'a': 2, 'b': None}\n",
+  "assertions": [
+   "assert d == {'a': 2}"
+  ]
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': None}\nd = {'b': None, 'c': None, 'a': None}\n",
+  "assertions": [
+   "assert d == {'b': None, 'c': None}"
+  ]
+ },
+ {
+  "init": "d = {}\nadditional_dict = {'a': ['a', 'b', 'c']}",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'a': [1, 2, 3]}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'a': '1', 'b': '2'}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'a': 1, 'b': 2}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'a': 1, 'c': 3, 'd': 4}\n",
+  "assertions": [
+   "assert d['e'] == None"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'a': 1, 'c': 3, 'd': 4}\n",
+  "assertions": [
+   "assert d[None] == None"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'a': 1, 'c': 3, 'd': 4}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'a': 1, 'c': 3, 'd': 4}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'a': 1, 'c': 3, 'd': 4}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'a': 1, 'c': 3, 'd': 4}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nadditional_dict = {'a': '5', 'b': '6'}",
+  "assertions": [
+   "assert d['a'] == 5"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nadditional_dict = {'f': '3', 'g': '4'}",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nadditional_dict = {'a': '5', 'b': None}",
+  "assertions": "error"
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nadditional_dict = {'a': '5', 'b': '6'}\nfor k, v in additional_dict.items():\n    if d[k] != v:\n        print('error')",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nadditional_dict = {'c': '3.125', 'f': '4'}\nfor k, v in additional_dict.items():\n    d[k] = v",
+  "assertions": [
+   "assert d['c'] == 3.125 and d['f'] == '4'"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'c': 3, 'd': 4}\nd['c'] = 5",
+  "assertions": [
+   "assert d == {'a': 1, 'b': 2, 'c': 5, 'd': 4}"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'c': 3, 'd': 4}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'c': 3, 'd': 4}\nadditional_dict['c'] = 5",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "d = {'a': 1, 'b': 2}\nadditional_dict = {'c': 3, 'd': 4}\nd['c'] = 5",
+  "assertions": [
+   "error"
+  ]
+ }
+]

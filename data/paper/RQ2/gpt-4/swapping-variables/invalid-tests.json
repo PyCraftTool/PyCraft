@@ -1,0 +1,25 @@
+[
+ {
+  "init": "a = '400'\nb = 200",
+  "assertions": "error"
+ },
+ {
+  "init": "a = a\nb = b",
+  "assertions": "error"
+ },
+ {
+  "init": "a = float('inf')\nb = b",
+  "assertions": [
+   "assert a==b",
+   "assert b==float('inf')"
+  ]
+ },
+ {
+  "init": "a = null",
+  "assertions": "error"
+ },
+ {
+  "init": "b = null",
+  "assertions": "error"
+ }
+]

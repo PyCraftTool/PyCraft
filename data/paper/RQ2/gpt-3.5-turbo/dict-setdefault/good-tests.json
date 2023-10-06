@@ -1,0 +1,699 @@
+[
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert d == {1: [1], 2: [4], 3: [9], 4: [16], 5: [25]}"
+ },
+ {
+  "init": "array = []\nfunction = lambda x: x**2",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = [1, 1, 1, 1]\nfunction = lambda x: x**2",
+  "assertion": "assert d == {1: [1, 1, 1, 1]}"
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd']\nfunction = lambda x: x.upper()",
+  "assertion": "assert d == {'a': ['A'], 'b': ['B'], 'c': ['C'], 'd': ['D']}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x/0",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e']\ndef function(x):\n    return float(x)",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ndef function(x):\n    return x + 'abc'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert d[1] == [1]\nassert d[2] == [4]\nassert d[3] == [9]\nassert d[4] == [16]\nassert d[5] == [25]"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert len(d) == 5"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert d.get(6) == None"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert d.get(1) == [1]"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert d.get(2) == [4]"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert d.get(3) == [9]"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert d.get(4) == [16]"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert d.get(5) == [25]"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x*2",
+  "assertion": "assert d == {1: [2], 2: [4], 3: [6], 4: [8], 5: [10]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x/2",
+  "assertion": "assert d == {1: [0.5], 2: [1.0], 3: [1.5], 4: [2.0], 5: [2.5]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: str(x)",
+  "assertion": "assert d == {1: ['1'], 2: ['2'], 3: ['3'], 4: ['4'], 5: ['5']}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: None",
+  "assertion": "assert d == {1: [None], 2: [None], 3: [None], 4: [None], 5: [None]}"
+ },
+ {
+  "init": "array = []\nfunction = lambda x: x*2",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e']\nfunction = lambda x: x.upper()",
+  "assertion": "assert d == {'a': ['A'], 'b': ['B'], 'c': ['C'], 'd': ['D'], 'e': ['E']}"
+ },
+ {
+  "init": "array = [1.5, 2.5, 3.5, 4.5, 5.5]\nfunction = lambda x: int(x)",
+  "assertion": "assert d == {1.5: [1], 2.5: [2], 3.5: [3], 4.5: [4], 5.5: [5]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ndef function(x):\n    return x / 0",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert d.get(0) == None"
+ },
+ {
+  "init": "array = [1, 1, 2, 2, 3, 3]\nfunction = lambda x: x*2",
+  "assertion": "assert d == {1: [2, 2], 2: [4, 4], 3: [6, 6]}"
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e']\nfunction = lambda x: x.lower()",
+  "assertion": "assert d == {'a': ['a'], 'b': ['b'], 'c': ['c'], 'd': ['d'], 'e': ['e']}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: str(x) + 'a'",
+  "assertion": "assert d == {1: ['1a'], 2: ['2a'], 3: ['3a'], 4: ['4a'], 5: ['5a']}"
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = lambda x: x+1",
+  "assertion": "assert d == {1: [2], 2: [3], 3: [4]}"
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = lambda x: x-1",
+  "assertion": "assert d == {1: [0], 2: [1], 3: [2]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 1, 2, 3]\nfunction = lambda x: x**2",
+  "assertion": "assert d == {1: [1, 1], 2: [4, 4], 3: [9, 9]}"
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\nfunction = lambda x: x.upper()",
+  "assertion": "assert d == {'a': ['A'], 'b': ['B'], 'c': ['C']}"
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\nfunction = lambda x: x.lower()",
+  "assertion": "assert d == {'a': ['a'], 'b': ['b'], 'c': ['c']}"
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = lambda x: x/2",
+  "assertion": "assert d == {1: [0.5], 2: [1.0], 3: [1.5]}"
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\nfunction = lambda x: 'x'",
+  "assertion": "assert d == {'a': ['x'], 'b': ['x'], 'c': ['x']}"
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = lambda x: str(x)",
+  "assertion": "assert d == {1: ['1'], 2: ['2'], 3: ['3']}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x * 2",
+  "assertion": "assert d == {1: [2], 2: [4], 3: [6], 4: [8], 5: [10]}"
+ },
+ {
+  "init": "array = []\nfunction = lambda x: x * 2",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = 'lambda x: x * 2'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 2, 1]\nfunction = lambda x: x * 2",
+  "assertion": "assert d == {1: [2, 2], 2: [4, 4], 3: [6]}"
+ },
+ {
+  "init": "array = [1, 1, 2, 2, 2, 3]\nfunction = lambda x: x**2",
+  "assertion": "assert d == {1: [1, 1], 2: [4, 4, 4], 3: [9]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x*x",
+  "assertion": "assert d == {1: [1], 2: [4], 3: [9], 4: [16], 5: [25]}"
+ },
+ {
+  "init": "array = ['a', 'b', 'a', 'c', 'c']\nfunction = lambda x: x.upper()",
+  "assertion": "assert d == {'a': ['A', 'A'], 'b': ['B'], 'c': ['C', 'C']}"
+ },
+ {
+  "init": "array = [1.5, 2.2, 3.7, 4.9]\nfunction = lambda x: str(x)",
+  "assertion": "assert d == {1.5: ['1.5'], 2.2: ['2.2'], 3.7: ['3.7'], 4.9: ['4.9']}"
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = lambda x: None",
+  "assertion": "assert d == {1: [None], 2: [None], 3: [None]}"
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = lambda x: x/0",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = 'lambda x: x*x'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = lambda x: x*x\n\narray = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 2.5, '3', '4', '', None]\n\n# Define the function for testing\ndef function(i):\n    return i * 2",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = []\n\n# Define the function for testing\n\n# Empty function as an edge case\n\ndef function(i):\n    pass",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = [1, 2, 2.5, '3', '4', '', None]\n\n# Test with a function that returns a float as a string\n\ndef function(i):\n    return str(float(i))",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 2.5, '3', '4', '', None]\n\n# Test with a function that returns None\n\ndef function(i):\n    return None",
+  "assertion": "assert d == {1: [None], 2: [None], 2.5: [None], '3': [None], '4': [None], '': [None], None: [None]}"
+ },
+ {
+  "init": "array = [-1, -2, -2.5, '-3', '-4', '', None]\n\n# Test with a function that returns a negative value\n\ndef function(i):\n    return -i",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 2.5, '3', '4', '', None]\n\n# Test with a function that raises an error\n\ndef function(i):\n    raise ValueError('Error')",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\n\n# Test with a function that returns a list\n\ndef function(i):\n    return [i]",
+  "assertion": "assert d == {1: [[1]], 2: [[2]], 3: [[3]], 4: [[4]], 5: [[5]]}"
+ },
+ {
+  "init": "array = []\nfunction = lambda x: x ** 2",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x / 0",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = []\ndef function(x):\n    return x",
+  "assertion": "for i in array:\n    if i in d:\n        d[i].append(function(i))\n    else:\n        d[i] = [function(i)]\n\nassert d == {}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4]\nfunction = str",
+  "assertion": "assert d == {1: ['1'], 2: ['2'], 3: ['3'], 4: ['4']}"
+ },
+ {
+  "init": "array = ['apple', 'banana', 'cherry', 'orange']\nfunction = lambda x: x.upper()",
+  "assertion": "assert d == {'apple': ['APPLE'], 'banana': ['BANANA'], 'cherry': ['CHERRY'], 'orange': ['ORANGE']}"
+ },
+ {
+  "init": "array = [1.5, 2.5, 3.5, 4.5]\nfunction = int",
+  "assertion": "assert d == {1.5: [1], 2.5: [2], 3.5: [3], 4.5: [4]}"
+ },
+ {
+  "init": "array = [1, 1, 2, 2, 3, 3]\nfunction = lambda x: x**2",
+  "assertion": "assert d == {1: [1, 1], 2: [4, 4], 3: [9, 9]}"
+ },
+ {
+  "init": "array = ['', '', '  ', '  ']\nfunction = str.strip",
+  "assertion": "assert d == {'': ['', ''], '  ': ['', '']}"
+ },
+ {
+  "init": "array = ['', 'apple', 'banana', '', 'cherry', 'orange']\nfunction = lambda x: x if x else 'empty'",
+  "assertion": "assert d == {'': ['empty', 'empty'], 'apple': ['apple'], 'banana': ['banana'], 'cherry': ['cherry'], 'orange': ['orange']}"
+ },
+ {
+  "init": "array = ['1.5', '2.5', '3.5', '4.5']\nfunction = float",
+  "assertion": "assert d == {'1.5': [1.5], '2.5': [2.5], '3.5': [3.5], '4.5': [4.5]}"
+ },
+ {
+  "init": "array = [1, 2, 1, 2, 1]\nfunction = lambda x: x**2",
+  "assertion": "assert d == {1: [1, 1, 1], 2: [4, 4]}"
+ },
+ {
+  "init": "array = [1.5, 2.5, 3.5]\nfunction = lambda x: x**2",
+  "assertion": "assert d == {1.5: [2.25], 2.5: [6.25], 3.5: [12.25]}"
+ },
+ {
+  "init": "array = ['a', 'b', 'a', 'b', 'a']\nfunction = lambda x: x.upper()",
+  "assertion": "assert d == {'a': ['A', 'A', 'A'], 'b': ['B', 'B']}"
+ },
+ {
+  "init": "array = [1, 2, None, 4, 5]\nfunction = lambda x: str(x)",
+  "assertion": "assert d == {1: ['1'], 2: ['2'], None: ['None'], 4: ['4'], 5: ['5']}"
+ },
+ {
+  "init": "array = [1, 2, '3', 4, 5]\nfunction = lambda x: str(x)",
+  "assertion": "assert d == {1: ['1'], 2: ['2'], '3': ['3'], 4: ['4'], 5: ['5']}"
+ },
+ {
+  "init": "array = []\ndef function(i):\n    return i\n\nd = {}",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\ndef function(i):\n    return i.upper()\n\nd = {'a': ['A'], 'b': ['B'], 'c': ['C']}",
+  "assertion": "for i in array:\n    if i in d:\n        d[i].append(function(i))\n    else:\n        d[i] = [function(i)]\n\nassert d == {'a': ['A', 'A'], 'b': ['B', 'B'], 'c': ['C', 'C']}"
+ },
+ {
+  "init": "array = [1, 2, 3, 1, 2, 3]\nfunction = lambda x: x + 1",
+  "assertion": "assert d == {1: [2, 2], 2: [3, 3], 3: [4, 4]}"
+ },
+ {
+  "init": "array = [1.5, 2.5, 3.5]\nfunction = lambda x: int(x)",
+  "assertion": "assert d == {1.5: [1], 2.5: [2], 3.5: [3]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x",
+  "assertion": "assert d == {1: [1], 2: [2], 3: [3], 4: [4], 5: [5]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**3",
+  "assertion": "assert d == {1: [1], 2: [8], 3: [27], 4: [64], 5: [125]}"
+ },
+ {
+  "init": "array = [1, 1, 1, 1, 1]\nfunction = lambda x: x**2",
+  "assertion": "assert d == {1: [1, 1, 1, 1, 1]}"
+ },
+ {
+  "init": "array = [1, None, 'string', 3.14]\nfunction = lambda x: str(x)",
+  "assertion": "assert d == {1: ['1'], None: ['None'], 'string': ['string'], 3.14: ['3.14']}"
+ },
+ {
+  "init": "array = None\nfunction = lambda x: x**2",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2\n\n# Test with repeated elements in array",
+  "assertion": "assert d == {1: [1], 2: [4], 3: [9], 4: [16], 5: [25]}"
+ },
+ {
+  "init": "array = []\nfunction = lambda x: x**2\n\n# Test with empty array",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = None\n\n# Test with None as function",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e']\nfunction = lambda x: x.upper()\n\n# Test with string elements in array",
+  "assertion": "assert d == {'a': ['A'], 'b': ['B'], 'c': ['C'], 'd': ['D'], 'e': ['E']}"
+ },
+ {
+  "init": "array = [1.5, 2.5, 3.5, 4.5, 5.5]\nfunction = lambda x: int(x)\n\n# Test with float elements in array",
+  "assertion": "assert d == {1.5: [1], 2.5: [2], 3.5: [3], 4.5: [4], 5.5: [5]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: str(x)\n\n# Test with string conversion function",
+  "assertion": "assert d == {1: ['1'], 2: ['2'], 3: ['3'], 4: ['4'], 5: ['5']}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x/0\n\n# Test with function that throws error",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e']\nfunction = lambda x: x**2\n\n# Test with non-numeric elements in array",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: 'string'\n\n# Test with string as function",
+  "assertion": "assert d == {1: ['string'], 2: ['string'], 3: ['string'], 4: ['string'], 5: ['string']}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert len(d) == 5\nassert all(isinstance(v, list) for v in d.values())"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert all(len(v) == 1 for v in d.values())"
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\nfunction = lambda x: x*2",
+  "assertion": "assert d == {'a': ['aa'], 'b': ['bb'], 'c': ['cc']}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x+1 if x%2==0 else x-1",
+  "assertion": "assert d == {1: [0], 2: [3], 3: [2], 4: [5], 5: [4]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\n\nfunction = lambda x: x[0]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ndef function(x):\n    return x * x\n\n",
+  "assertion": "assert d == {1: [1], 2: [4], 3: [9], 4: [16], 5: [25]}"
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'a', 'b']\ndef function(x):\n    return x.upper()\n\n",
+  "assertion": "assert d == {'a': ['A', 'A'], 'b': ['B', 'B'], 'c': ['C']}"
+ },
+ {
+  "init": "array = [1.5, 2.5, 3.5]\ndef function(x):\n    return int(x)\n\n",
+  "assertion": "assert d == {1.5: [1], 2.5: [2], 3.5: [3]}"
+ },
+ {
+  "init": "array = [1, 2, 3, None, 4, None]\ndef function(x):\n    return str(x)\n\n",
+  "assertion": "assert d == {1: ['1'], 2: ['2'], 3: ['3'], None: ['None', 'None'], 4: ['4']}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ndef function(x):\n    return x / 0\n\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ndef function(x):\n    return 'string' + x\n\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ndef function(x):\n    return [x]\n\n",
+  "assertion": "assert d == {1: [[1]], 2: [[2]], 3: [[3]], 4: [[4]], 5: [[5]]}"
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'a', 'b']\ndef function(x):\n    return None\n\n",
+  "assertion": "assert d == {'a': [None, None], 'b': [None, None], 'c': [None]}"
+ },
+ {
+  "init": "array = [1, 1, 1, 1, 1]\nfunction = lambda x: x + 1",
+  "assertion": "assert d == {1: [2, 2, 2, 2, 2]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = 'not a function'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: 'string' + x",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: [x]",
+  "assertion": "assert d == {1: [[1]], 2: [[2]], 3: [[3]], 4: [[4]], 5: [[5]]}"
+ },
+ {
+  "init": "array = []\ndef function(x):\n    return x**2",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4]\ndef function(x):\n    return x*2",
+  "assertion": "assert d == {1: [2], 2: [4], 3: [6], 4: [8]}"
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'a']\ndef function(x):\n    return x.upper()",
+  "assertion": "assert d == {'a': ['A', 'A'], 'b': ['B'], 'c': ['C']}"
+ },
+ {
+  "init": "array = [1.5, 2.25, 3.75]\ndef function(x):\n    return int(x)",
+  "assertion": "assert d == {1.5: [1], 2.25: [2], 3.75: [3]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4]\ndef function(x):\n    return x/0",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 4, 5]\nfunction = lambda x: x**2",
+  "assertion": "assert d == {1: [1], 2: [4], 3: [9], 4: [16, 16], 5: [25]}"
+ },
+ {
+  "init": "array = [1, 1, 1, 1, 1]\nfunction = lambda x: x+1",
+  "assertion": "assert d == {1: [2, 2, 2, 2, 2]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = 'function'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = []\ndef function(x):\n    return x*2",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = [1, 2, 3]\ndef function(x):\n    return x**2",
+  "assertion": "assert d == {1: [1], 2: [4], 3: [9]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 2, 1]\ndef function(x):\n    return x**2",
+  "assertion": "assert d == {1: [1, 1], 2: [4, 4], 3: [9]}"
+ },
+ {
+  "init": "array = [1, 2, 3]\ndef function(x):\n    return x/0",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 'a', 'b', 'c']\ndef function(x):\n    return str(x)",
+  "assertion": "assert d == {1: ['1'], 2: ['2'], 3: ['3'], 'a': ['a'], 'b': ['b'], 'c': ['c']}"
+ },
+ {
+  "init": "array = [1, 2, 3]\ndef function(x):\n    return str(x)",
+  "assertion": "assert d == {1: ['1'], 2: ['2'], 3: ['3']}"
+ },
+ {
+  "init": "array = [1, 2, 3]\ndef function(x):\n    return None",
+  "assertion": "assert d == {1: [None], 2: [None], 3: [None]}"
+ },
+ {
+  "init": "array = [1, 2, 3]\ndef function(x):\n    return str(x) + 'a'",
+  "assertion": "assert d == {1: ['1a'], 2: ['2a'], 3: ['3a']}"
+ },
+ {
+  "init": "array = [1, 2, 3]\ndef function(x):\n    return [x]",
+  "assertion": "assert d == {1: [[1]], 2: [[2]], 3: [[3]]}"
+ },
+ {
+  "init": "array = ['1.25', '2.5', '3.75']\ndef function(x):\n    return int(x)\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ndef function(x):\n    return x/0",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = lambda x: x*2",
+  "assertion": "assert d == {1: [2], 2: [4], 3: [6]}"
+ },
+ {
+  "init": "array = ['aa', 'ab', 'ac', 'ab']\nfunction = lambda x: len(x)",
+  "assertion": "assert d == {'aa': [2], 'ab': [2, 2], 'ac': [2]}"
+ },
+ {
+  "init": "array = ['apple', 'banana', 'coconut']\nfunction = lambda x: x.upper()",
+  "assertion": "assert d == {'apple': ['APPLE'], 'banana': ['BANANA'], 'coconut': ['COCONUT']}"
+ },
+ {
+  "init": "array = ['cat', 'bat', 'rat']\nfunction = lambda x: x.count('a')",
+  "assertion": "assert d == {'cat': [1], 'bat': [1], 'rat': [1]}"
+ },
+ {
+  "init": "array = ['car', 'boat', 'plane', 'car', 'car']\nfunction = lambda x: ord(x[0])",
+  "assertion": "assert d == {'car': [99, 99, 99], 'boat': [98], 'plane': [112]}"
+ },
+ {
+  "init": "array = ['1.5', '2.5', '3.5', '2.8']\nfunction = lambda x: int(float(x))",
+  "assertion": "assert d == {'1.5': [1], '2.5': [2], '3.5': [3], '2.8': [2]}"
+ },
+ {
+  "init": "array = [1, 2, 3]\ndef function(x):\n    return x + 1",
+  "assertion": "assert d == {1: [2], 2: [3], 3: [4]}\nassert array == [1, 2, 3]"
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\ndef function(x):\n    return x.upper()",
+  "assertion": "assert d == {'a': ['A'], 'b': ['B'], 'c': ['C']}\nassert array == ['a', 'b', 'c']"
+ },
+ {
+  "init": "array = [None, None, None]\ndef function(x):\n    return str(x)",
+  "assertion": "assert d == {None: ['None', 'None', 'None']}\nassert array == [None, None, None]"
+ },
+ {
+  "init": "array = [1.25, 2.5, 3.75]\ndef function(x):\n    return int(x)",
+  "assertion": "assert d == {1.25: [1], 2.5: [2], 3.75: [3]}\nassert array == [1.25, 2.5, 3.75]"
+ },
+ {
+  "init": "array = ['', ' ', ' \t']\ndef function(x):\n    return x.strip()",
+  "assertion": "assert array == ['', ' ', ' \t']"
+ },
+ {
+  "init": "array = ['1.1', '2.2', '3.3']\ndef function(x):\n    return float(x)",
+  "assertion": "assert d == {'1.1': [1.1], '2.2': [2.2], '3.3': [3.3]}\nassert array == ['1.1', '2.2', '3.3']"
+ },
+ {
+  "init": "array = []\ndef function(x):\n    return str(x)*2",
+  "assertion": "assert d == {}\nassert array == []"
+ },
+ {
+  "init": "array = [1]\ndef function(x):\n    return str(x)\n\n",
+  "assertion": "d = {}\nfor i in array:\n    if i in d:\n        d[i].append(function(i))\n    else:\n        d[i] = [function(i)]\nassert d == {1: ['1']}\n"
+ },
+ {
+  "init": "array = ['apple']\ndef function(x):\n    return x.upper()\n\n",
+  "assertion": "d = {}\nfor i in array:\n    if i in d:\n        d[i] = [function(i)]\n    else:\n        d[i] = [function(i)]\n        assert d == {'apple': ['APPLE']}\n"
+ },
+ {
+  "init": "array = ['a', 'bb', 'ccc']\ndef function(x):\n    return len(x)\n\n",
+  "assertion": "d = {}\nfor i in array:\n    if i in d:\n        d[i].append(function(i))\n    else:\n        d[i] = [function(i)]\nassert d == {'a': [1], 'bb': [2], 'ccc': [3]}\n"
+ },
+ {
+  "init": "array = [1.25, 2.50, 3.75]\ndef function(x):\n    return x + 10\n\n",
+  "assertion": "d = {}\nfor i in array:\n    if i in d:\n        d[i].append(function(i))\n    else:\n        d[i] = [function(i)]\nassert d == {1.25: [11.25], 2.5: [12.5], 3.75: [13.75]}\n"
+ },
+ {
+  "init": "array = ['a'] * 1000\ndef function(x):\n    return x\n\n",
+  "assertion": "d = {}\nfor i in array:\n    if i in d:\n        d[i].append(function(i))\n    else:\n        d[i] = [function(i)]\nassert d == {'a': ['a'] * 1000}\n"
+ },
+ {
+  "init": "array = [1, 2, 3]\ndef function(x):\n    return x / 0\n\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, None, 3]\ndef function(x):\n    return x or 2\n\n",
+  "assertion": "d = {}\nfor i in array:\n    if i in d:\n        d[i].append(function(i))\n    else:\n        d[i] = [function(i)]\nassert d == {1: [1], None: [2], 3: [3]}\n"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ndef function(x):\n    return x**2",
+  "assertion": "assert d == {1: [1], 2: [4], 3: [9], 4: [16], 5: [25]}"
+ },
+ {
+  "init": "array = [0, 0, 0, 0, 0, 0]\ndef function(x):\n    return x+1",
+  "assertion": "assert d == {0: [1, 1, 1, 1, 1, 1]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\ndef function(x):\n    return x\n\n# Test with sparse array",
+  "assertion": "assert d == {1: [1], 2: [2], 3: [3], 4: [4], 5: [5]}"
+ },
+ {
+  "init": "array = [-6.5, -3.1, 0.0, 2.2, 5.5]\ndef function(x):\n    return x**2",
+  "assertion": "assert d == {-6.5: [42.25], -3.1: [9.610000000000001], 0.0: [0.0], 2.2: [4.840000000000001], 5.5: [30.25]}"
+ },
+ {
+  "init": "array = ['apple', 'banana', 'cherry']\ndef function(x):\n    return len(x)",
+  "assertion": "assert d == {'apple': [5], 'banana': [6], 'cherry': [6]}"
+ },
+ {
+  "init": "array = [{1: 2}, {3: 4}, {5: 6}]\ndef function(x):\n    return len(x)",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = []\ndef function(x):\n    return x",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = ['apple', 'banana', 'cherry']\ndef function(x):\n    return 0/0",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = None\ndef function(x):\n    return x",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array = [1, 2, 2, 3]\ndef function(x):\n    return 1/x",
+  "assertion": "assert d == {1: [1.0], 2: [0.5, 0.5], 3: [0.3333333333333333]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x + 1",
+  "assertion": "assert d == {1: [2], 2: [3], 3: [4], 4: [5], 5: [6]}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x / 2",
+  "assertion": "assert d == {1: [0.5], 2: [1], 3: [1.5], 4: [2], 5: [2.5]}"
+ },
+ {
+  "init": "array = [3.5, 5.5, 7.5]\nfunction = lambda x: x + 0.5",
+  "assertion": "assert d == {3.5: [4.0], 5.5: [6.0], 7.5: [8.0]}"
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd']\nfunction = lambda x: x + 't'",
+  "assertion": "assert d == {'a': ['at'], 'b': ['bt'], 'c': ['ct'], 'd': ['dt']}"
+ },
+ {
+  "init": "array = ['Bob', 'Alice', 'Bob', 'Alice']\nfunction = lambda x: x.lower()",
+  "assertion": "assert d == {'Bob': ['bob', 'bob'], 'Alice': ['alice', 'alice']}"
+ },
+ {
+  "init": "array = []\nfunction = len",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "array = [1, 2, 3, 4]\nfunction = str",
+  "assertion": "assert d == {1: ['1'], 2: ['2'], 3: ['3'], 4: ['4']}\nassert d[1] == ['1']\nassert d[2] == ['2']\nassert d[3] == ['3']\nassert d[4] == ['4']"
+ },
+ {
+  "init": "array = ['apple', 'banana', 'cherry']\nfunction = lambda x: x.upper()",
+  "assertion": "assert d == {'apple': ['APPLE'], 'banana': ['BANANA'], 'cherry': ['CHERRY']}\nassert d['apple'] == ['APPLE']\nassert d['banana'] == ['BANANA']\nassert d['cherry'] == ['CHERRY']"
+ },
+ {
+  "init": "array = [2, 3, 4, 2, 3, 4]\nfunction = lambda x: x**2",
+  "assertion": "assert d == {2: [4, 4], 3: [9, 9], 4: [16, 16]}\nassert d[2] == [4, 4]\nassert d[3] == [9, 9]\nassert d[4] == [16, 16]"
+ },
+ {
+  "init": "array = ['apple', 'banana', 'apple', 'cherry', 'banana', 'apple']\nfunction = lambda x: x.replace('a', 'b')",
+  "assertion": "assert d == {'apple': ['bpple', 'bpple', 'bpple'], 'banana': ['bbnbnb', 'bbnbnb'], 'cherry': ['cherry']}\nassert d['apple'] == ['bpple', 'bpple', 'bpple']\nassert d['banana'] == ['bbnbnb', 'bbnbnb']\nassert d['cherry'] == ['cherry']"
+ },
+ {
+  "init": "array = [1, 2, 3, 1, 2, 3]\nfunction = lambda x: None",
+  "assertion": "assert d == {1: [None, None], 2: [None, None], 3: [None, None]}\nassert d[1] == [None, None]\nassert d[2] == [None, None]\nassert d[3] == [None, None]"
+ }
+]

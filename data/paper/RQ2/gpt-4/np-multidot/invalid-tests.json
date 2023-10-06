@@ -1,0 +1,816 @@
+[
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": [
+   "assert result == 270"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1.5, 2.5, 3.5])\narr2 = np.array([4.5, 5.5, 6.5])\narr3 = np.array([7.5, 8.5, 9.5])",
+  "assertions": [
+   "assert result == 382.5"
+  ]
+ },
+ {
+  "init": "arr1 = np.array(['1', '2', '3'])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array(['4', '5', '6'])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array(['7', '8', '9'])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, None])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, '9.5'])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": [
+   "assert result == 270"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1.5, 2.5, 3.5])\narr2 = np.array([4.5, 5.5, 6.5])\narr3 = np.array([7.5, 8.5, 9.5])",
+  "assertions": [
+   "assert result == 382.5"
+  ]
+ },
+ {
+  "init": "arr1 = np.array(['1', '2', '3'])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array(['4', '5', '6'])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array(['7', '8', '9'])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, None])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, ' '])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": [
+   "assert result == 270"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1.5, 2.5, 3.5])\narr2 = np.array([4.5, 5.5, 6.5])\narr3 = np.array([7.5, 8.5, 9.5])",
+  "assertions": [
+   "assert result == 382.5"
+  ]
+ },
+ {
+  "init": "arr1 = np.array(['1', '2', '3'])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array(['4', '5', '6'])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array(['7', '8', '9'])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, None])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, ' '])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[297, 330], [677, 754]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], ['11', 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9.5, 10.5], [11.5, 12.5]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[331.5, 367.5], [755.5, 837.5]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1.5, 2.5], [3.5, 4.5]])\narr2 = np.array([[5.5, 6.5], [7.5, 8.5]])\narr3 = np.array([[9.5, 10.5], [11.5, 12.5]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[491.75, 545.75], [1119.75, 1239.75]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([None, None])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array(['9', '10'])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([['1', '2'], ['3', '4']])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3]); arr2 = np.array([4, 5, 6]); arr3 = np.array([7, 8, 9])",
+  "assertions": [
+   "assert result == 270"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3]); arr2 = np.array([4, 5]); arr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([]); arr2 = np.array([4, 5, 6]); arr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1.5, 2.75]); arr2 = np.array([4.3, 5.6]); arr3 = np.array([7.8, 8.9])",
+  "assertions": [
+   "assert abs(result - 65.535) < 0.001"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3]); arr2 = np.array([4, 5, 6]); arr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3]); arr2 = None; arr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3]); arr2 = np.array([4, 5, 6]); arr3 = None",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([0, 0, 0]); arr2 = np.array([4, 5, 6]); arr3 = np.array([7, 8, 9])",
+  "assertions": [
+   "assert result == 0"
+  ]
+ },
+ {
+  "init": "arr1 = np.array(['1', '2', '3']); arr2 = np.array([4, 5, 6]); arr3 = np.array([7, 8, 9])",
+  "assertions": [
+   "assert result == 270"
+  ]
+ },
+ {
+  "init": "arr1 = np.array(['1', 'a', '3']); arr2 = np.array([4, 5, 6]); arr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[1059, 1140], [2433, 2628]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[]])\narr2 = np.array([[]])\narr3 = np.array([[]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6]])\narr3 = np.array([[7, 8], [9, 10]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1.5, 2.5], [3.5, 4.5]])\narr2 = np.array([[5.5, 6.5], [7.5, 8.5]])\narr3 = np.array([[9.5, 10.5], [11.5, 12.5]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[1381.75, 1493.5], [3174.75, 3423]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = None\narr3 = np.array([[5, 6], [7, 8]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = 'string'\narr3 = np.array([[5, 6], [7, 8]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9], [10]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[1059], [2433]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1.5, 2.5]])\narr2 = np.array([[5.5, 6.5]])\narr3 = np.array([[9.5, 10.5]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[1059, 1140], [2433, 2628]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([1203, 1330]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1.23, 2.45], [3.78, 4.12]])\narr2 = np.array([[5.6, 6.7], [7.8, 8.9]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert np.allclose(result, np.array([914.002734, 1013.476859]), rtol=1e-5, atol=0)"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = 'random string'\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = None\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1,1]\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert list(result) == [238]"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[3, 4], [2, 16]])\narr2 = np.array([1, 2])\narr3 = np.array([2, 3])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([70, 122]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[]])\narr2 = np.array([])\narr3 = np.array([])",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[None, 1]])\narr2 = np.array([2, None])\narr3 = np.array([1])",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[3, 4], [5, 6]])\narr2 = np.array([8, 9])\narr3 = np.array([10, 11, 12])",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[3, 4], [5, 6]])\narr2 = np.array([[7], [8]])\narr3 = np.array([[12]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[543], [738]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[2], [5]])\narr2 = np.array([[9]])\narr3 = np.array([[34]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[612], [1530]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[1, 2], [3, 4]])\narr3 = np.array([[1, 2], [3, 4]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([52, 76]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([[1, 2], [3, 4]])\narr3 = np.array([[1, 2], [3, 4]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[1, 2], [3, 4]])\narr3 = np.array([2, 3])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([38]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[1, 2], [3, 'a']])\narr3 = np.array([2, 3])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[1, 2], [3, 4]])\narr3 = np.array([[2, 3.5], [3.3, 4]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([58.2, 84.9]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[1, None], [3, 4]])\narr3 = np.array([[1, 2], [3, 4]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1.2, 3])\narr2 = np.array([[4, 5], ['6', 7]])\narr3 = np.array([[1.1, 2.2], [3.3, 4.4]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 5])\narr2 = np.array([[2, 3], [4, None]])\narr3 = np.array([[2, 3.5], [3.3, 4]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[None, 2], [3, None]])\narr3 = np.array([None, 3])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array(['1', '2'])\narr2 = np.array([['1', '2'], ['3', '4']])\narr3 = np.array(['2', '3'])",
+  "assertions": "assert result.astype(str)==np.array(['90'])"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": [
+   "assert result == 270"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1.5, 2.5, 3.5])\narr2 = np.array([4.5, 5.5, 6.5])\narr3 = np.array([7.5, 8.5, 9.5])",
+  "assertions": [
+   "assert result == 382.5"
+  ]
+ },
+ {
+  "init": "arr1 = np.array(['1', '2', '3'])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array(['4', '5', '6'])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array(['7', '8', '9'])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7.5, 8.5, 9.5])",
+  "assertions": [
+   "assert result == 292.5"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4.5, 5.5, 6.5])\narr3 = np.array([7, 8, 9])",
+  "assertions": [
+   "assert result == 315"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": [
+   "assert result == 270"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1.5, 2.5, 3.5])\narr2 = np.array([4.5, 5.5, 6.5])\narr3 = np.array([7.5, 8.5, 9.5])",
+  "assertions": [
+   "assert result == 382.5"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array(['1', '2', '3'])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array(['4', '5', '6'])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array(['7', '8', '9'])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([None, None, None])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([None, None, None])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7, 8, 9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[3, 4],[5, 6]])\narr3 = np.array([7, 8])",
+  "assertions": [
+   "assert result == 219"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([])\narr3 = np.array([])",
+  "assertions": [
+   "assert result.size == 0"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1.5, 2.5])\narr2 = np.array([[3.5, 4.5],[5.5, 6.5]])\narr3 = np.array([7.5, 8.5])",
+  "assertions": [
+   "assert result == 283.5"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[3, 4],[5, 6]])\narr3 = np.array([7])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[3, 4]])\narr3 = np.array([7, 8])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[3, 4],[5, 6]])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[3, 4],[5, 6]])\narr3 = np.array(['7', '8'])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[3, 4],[5, 6]])\narr3 = np.array([7.5, 8.5])",
+  "assertions": [
+   "assert result == 220.5"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[3, 4],[5, 6]])\narr3 = None",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = None\narr3 = np.array([7, 8])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([9, 10])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([219, 492]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[]])\narr2 = np.array([[]])\narr3 = np.array([])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1.5, 2.5], [3.5, 4.5]])\narr2 = np.array([[5.5, 6.5], [7.5, 8.5]])\narr3 = np.array([9.5, 10.5])",
+  "assertions": [
+   "assert np.allclose(result, np.array([281.75, 634.25]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6]])\narr3 = np.array([9, 10])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = None\narr3 = np.array([9, 10])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = '9, 10'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = '1, 2'\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([9, 10])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([9.5, 10.5])",
+  "assertions": [
+   "assert np.allclose(result, np.array([226.5, 508.5]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1.5, 2.5], [3.5, 4.5]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([9, 10])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([209, 470]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[249, 278], [573, 644]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1.5, 2.6], [3.7, 4.8]])\narr2 = np.array([[5.9, 6.1], [7.2, 8.3]])\narr3 = np.array([[9.4, 10.5], [11.6, 12.7]])",
+  "assertions": [
+   "assert np.allclose(result, np.array([[243.84, 273.62], [560.44, 630.86]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = 'string'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = 'string'\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = 'string'\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = None",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = None\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = None\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[1225, 1350], [2815, 3100]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[]])\narr2 = np.array([[]])\narr3 = np.array([[]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2, 3]])\narr2 = np.array([[4], [5], [6]])\narr3 = np.array([[7, 8, 9]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[126, 144, 162]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9], [10]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = None",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = 'string'\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1.5, 2.5], [3.5, 4.5]])\narr2 = np.array([[5.5, 6.5], [7.5, 8.5]])\narr3 = np.array([[9.5, 10.5], [11.5, 12.5]])",
+  "assertions": [
+   "assert np.allclose(result, np.array([[1862.5, 2047.5], [4272.5, 4707.5]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10, 11], [12, 13, 14]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], ['3', 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, '10'], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[0, 1], [1, 0]])\narr3 = np.array([1, 2])",
+  "assertions": [
+   "assert result == 5"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\narr3 = np.array([1, 2, 3])",
+  "assertions": [
+   "assert result == 150"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([[]])\narr3 = np.array([])",
+  "assertions": [
+   "assert result.size == 0"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([0.1, 0.2])\narr2 = np.array([[0.1, 0.2], [0.3, 0.4]])\narr3 = np.array([0.1, 0.2])",
+  "assertions": [
+   "assert abs(result-0.034) < 1e-9"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[1, 2, 3], [4, 5, 6]])\narr3 = np.array([1, 2, 3])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([None, None])\narr2 = np.array([[0, 1], [1, 0]])\narr3 = np.array([1, 2])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array(['a', 'b'])\narr2 = np.array([[0, 1], [1, 0]])\narr3 = np.array([1, 2])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = None\narr3 = np.array([1, 2])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[0, 1], [1, 0]])\narr3 = '2'",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[0, 1], [1, 0]])\narr3 = np.array([1, 2, 3])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[3, 4], [5, 6]])\narr3 = np.array([7, 8])",
+  "assertions": [
+   "assert result == 219"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([0, 0])\narr2 = np.array([[0, 0], [0, 0]])\narr3 = np.array([0, 0])",
+  "assertions": [
+   "assert result == 0"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[3, 4], [5, 6]])\narr3 = np.array([-7, -8])",
+  "assertions": [
+   "assert result == -219"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1])\narr2 = np.array([2])\narr3 = np.array([3])",
+  "assertions": [
+   "assert result == 6"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([[4, 5, 6], [7, 8, 9], [10, 11, 12]])\narr3 = np.array([13, 14, 15])",
+  "assertions": [
+   "assert result == 1572"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([1, 2])\narr2 = np.array([[3, 4], [5, 6]])\narr3 = np.array([7])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1.1, 2.2])\narr2 = np.array([[3.3, 4.4], [5.5, 6.6]])\narr3 = np.array([7.7, 8.8])",
+  "assertions": [
+   "assert result == 243.304"
+  ]
+ },
+ {
+  "init": "arr1 = np.array(['1', '2'])\narr2 = np.array([['3', '4'], ['5', '6']])\narr3 = np.array(['7', '8'])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, None])\narr2 = np.array([[3, 4, None], [5, 6, None], [None, None, None]])\narr3 = np.array([7, 8, None])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7,8,9])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([2140, 1938]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([2.5, 3.7])\narr2 = np.array([4.6, 5.8])\narr3 = np.array([7.9,8.0])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([191.61]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7,8,9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([])\narr3 = np.array([7,8,9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = None",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, '2', 3])\narr2 = np.array([4, '5', 6])\narr3 = np.array([7,'8',9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\narr3 = np.array(['string',8,9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, None])\narr2 = np.array([4, 5, 6])\narr3 = np.array([7,8,9])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, None, 6])\narr3 = np.array([7,8,9])",
+  "assertions": "error"
+ }
+]

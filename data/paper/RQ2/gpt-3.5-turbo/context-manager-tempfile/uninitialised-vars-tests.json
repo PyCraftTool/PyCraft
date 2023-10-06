@@ -1,0 +1,232 @@
+[
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": [
+   "assert temp_dir.name is not None"
+  ]
+ },
+ {
+  "init": "",
+  "assertions": [
+   "assert temp_dir.name == file[:-13]"
+  ]
+ },
+ {
+  "init": "import tempfile\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file inside the temporary directory\nfile = temp_dir.name + \"/features.json\"\n\n# Open the file in write mode\nf = open(file, 'w')",
+  "assertions": [
+   "assert f != None"
+  ]
+ },
+ {
+  "init": "",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'",
+  "assertions": [
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\ndir_path = temp_dir.name+'/subdir'\nos.makedirs(dir_path)",
+  "assertions": [
+   "assert os.path.exists(dir_path)",
+   "assert os.path.isdir(dir_path)"
+  ]
+ },
+ {
+  "init": "",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"",
+  "assertions": [
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\ndirectory = temp_dir.name",
+  "assertions": [
+   "assert os.path.isdir(directory)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"",
+  "assertions": [
+   "assert os.path.basename(file) == \"features.json\""
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"",
+  "assertions": [
+   "assert os.path.dirname(file) == temp_dir.name"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the file is empty\nassert os.stat(file_path).st_size == 0"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\ntemp_dir = tempfile.TemporaryDirectory()\nfile = os.path.join(temp_dir.name, 'test.txt')\nf = open(file, 'w')\nf.write('Hello, World!')\nf.close()",
+  "assertions": [
+   "assert os.path.exists(file)",
+   "assert os.path.isfile(file)",
+   "assert os.path.getsize(file) > 0",
+   "assert open(file).read() == 'Hello, World!'"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\ntemp_dir = tempfile.TemporaryDirectory(prefix='test_', suffix='_dir')",
+  "assertions": [
+   "assert os.path.exists(temp_dir.name)",
+   "assert os.path.isdir(temp_dir.name)",
+   "assert temp_dir.name.startswith('test_')",
+   "assert temp_dir.name.endswith('_dir')"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\ntemp_dir = tempfile.TemporaryDirectory()\nfile1 = os.path.join(temp_dir.name, 'file1.txt')\nfile2 = os.path.join(temp_dir.name, 'file2.txt')\nf1 = open(file1, 'w')\nf1.write('File 1')\nf1.close()\nf2 = open(file2, 'w')\nf2.write('File 2')\nf2.close()",
+  "assertions": [
+   "assert os.path.exists(file1)",
+   "assert os.path.isfile(file1)",
+   "assert os.path.getsize(file1) > 0",
+   "assert open(file1).read() == 'File 1'",
+   "assert os.path.exists(file2)",
+   "assert os.path.isfile(file2)",
+   "assert os.path.getsize(file2) > 0",
+   "assert open(file2).read() == 'File 2'"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\ntemp_dir = tempfile.TemporaryDirectory()\nfile = os.path.join(temp_dir.name, 'test.txt')",
+  "assertions": [
+   "assert not os.path.exists(file)",
+   "assert not os.path.isfile(file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\ntemp_dir = tempfile.TemporaryDirectory()\nfile = os.path.join(temp_dir.name, 'test.txt')\nf = open(file, 'w')\nf.write('')\nf.close()",
+  "assertions": [
+   "assert os.path.exists(file)",
+   "assert os.path.isfile(file)",
+   "assert os.path.getsize(file) == 0",
+   "assert open(file).read() == ''"
+  ]
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert isinstance(content, str)"
+  ]
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "import tempfile\n\n",
+  "assertions": "error"
+ },
+ {
+  "init": "import tempfile\n\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\n",
+  "assertions": "error"
+ },
+ {
+  "init": "import tempfile\n\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\nf.write('This is a test file')\n",
+  "assertions": []
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": []
+ },
+ {
+  "init": "",
+  "assertions": [
+   {
+    "invalid_call": "temp_dir.cleanup()"
+   }
+  ]
+ },
+ {
+  "init": "temp_dir = None\n",
+  "assertions": [
+   "assert temp_dir is None"
+  ]
+ },
+ {
+  "init": "",
+  "assertions": []
+ },
+ {
+  "init": "",
+  "assertions": []
+ },
+ {
+  "init": "",
+  "assertions": []
+ },
+ {
+  "init": "",
+  "assertions": []
+ }
+]

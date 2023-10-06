@@ -1,0 +1,26 @@
+[
+ {
+  "init": "class Test:\n    name = 'John'",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "class Test:\n    name = ''",
+  "assertions": [
+   "assert n == ''"
+  ]
+ },
+ {
+  "init": "class Test:\n    name = None",
+  "assertions": [
+   "assert n == 'unknown'"
+  ]
+ },
+ {
+  "init": "",
+  "assertions": [
+   "assert n == 'unknown'"
+  ]
+ }
+]

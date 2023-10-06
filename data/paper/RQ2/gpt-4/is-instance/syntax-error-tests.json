@@ -1,0 +1,74 @@
+[
+ {
+  "init": "val1 = [1, None, 3\\]nval2 = {'a': 1, 'b': 2}\nint_instance = 2",
+  "assertions": [
+   "assert val == {'a': 1, 'b': 2}"
+  ]
+ },
+ {
+  "init": "val1 = (1, 2, 3)\nval2 = (4, 5, 6)\nint_instance = 1",
+  "assertions": [
+   "assert val == (4, 5, 6]"
+  ]
+ },
+ {
+  "init": "val1 = 'foo' \n val2 = None \n int_instance = None",
+  "assertions": [
+   "assert val == 'foo'"
+  ]
+ },
+ {
+  "init": "val1 = None \n val2 = 'hello' \n int_instance = 'foo'",
+  "assertions": [
+   "assert val == None"
+  ]
+ },
+ {
+  "init": "val1 = 'string test' \n val2 = 'used' \n int_instance = 1",
+  "assertions": [
+   "assert val == 'used'"
+  ]
+ },
+ {
+  "init": "val1 = 123 \n val2 = 10.4 \n int_instance = 12",
+  "assertions": [
+   "assert val == 10.4"
+  ]
+ },
+ {
+  "init": "val1 = 8.5 \n val2 = 'test-string' \n int_instance = 100.01",
+  "assertions": [
+   "assert val == 8.5"
+  ]
+ },
+ {
+  "init": "val1 = 8.5 \n val2 = 'test-string' \n int_instance = '100.01'",
+  "assertions": [
+   "assert val == 8.5"
+  ]
+ },
+ {
+  "init": "val1 =  ['one']\n val2 = [1,2,3]\n int_instance = 0",
+  "assertions": [
+   "assert val == [1,2,3]"
+  ]
+ },
+ {
+  "init": "val1 =  'empty-string'\n val2 = ''\n int_instance = 0",
+  "assertions": [
+   "assert val == ''"
+  ]
+ },
+ {
+  "init": "val1 =  'None'\n val2 = None\n int_instance = 10",
+  "assertions": [
+   "assert val == None"
+  ]
+ },
+ {
+  "init": "val1 = 100.23\n val2 = 12.36\n int_instance = '3535'",
+  "assertions": [
+   "assert val == 100.23"
+  ]
+ }
+]

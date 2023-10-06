@@ -1,0 +1,118 @@
+[
+ {
+  "init": "values = ['1', '2', '3']\nstring = \"[\"",
+  "assertions": [
+   "assert string == '[\"1\", \"2\", \"3\"]"
+  ]
+ },
+ {
+  "init": "values = ['1', '2', '3.125', 'e': ['1.125', '3.5', '6.75', '5.9']]\nstring = \"[\"",
+  "assertions": "error"
+ },
+ {
+  "init": "values = ['1', '2', '3.125', 'e': ['1.125', '3.5', '6.75', '5.9']]\nstring = \"[123, 3.125, 1.125, 3.5, 6.75, 5.9]\"",
+  "assertions": "error"
+ },
+ {
+  "init": "values = ['1', '2']\nstring = \"[\"",
+  "assertions": [
+   "assert string == '[\"1\", \"2\"]"
+  ]
+ },
+ {
+  "init": "values = []\nstring = \"[\"",
+  "assertions": [
+   "assert string == '[\"\"]"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b']\nstring = ' '",
+  "assertions": [
+   "assert string == '[ ''a', 'b' ]'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = '  '",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = '  '",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = '  '",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ },
+ {
+  "init": "values = ['a', 'b', 'c']\nstring = ''",
+  "assertions": [
+   "assert string == '['', 'a', 'b', 'c']'"
+  ]
+ }
+]

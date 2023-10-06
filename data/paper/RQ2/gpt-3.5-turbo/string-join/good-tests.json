@@ -1,0 +1,789 @@
+[
+ {
+  "init": "values = ['a', 'b', 'c', 'd']",
+  "assertion": "assert string == '[a, b, c, d]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry']",
+  "assertion": "assert string == '[apple, banana, cherry]'"
+ },
+ {
+  "init": "values = []",
+  "assertion": "assert string == '[]'"
+ },
+ {
+  "init": "values = ['hello']",
+  "assertion": "assert string == '[hello]'"
+ },
+ {
+  "init": "values = ['1', '2', '3']",
+  "assertion": "assert string == '[1, 2, 3]'"
+ },
+ {
+  "init": "values = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [None, None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.5, 2.5, 3.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.5, '2.5', 3.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = 'a b c d'.split(' ')",
+  "assertion": "assert string == '[a, b, c, d]'"
+ },
+ {
+  "init": "values = ['a']",
+  "assertion": "assert string == '[a]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', ' ']",
+  "assertion": "assert string == '[a, b, c,  ]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', '   ']",
+  "assertion": "assert string == '[a, b, c,    ]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']",
+  "assertion": "assert string == '[a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]'"
+ },
+ {
+  "init": "values = [1.0, 2.5, 3.75]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 1.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e f']",
+  "assertion": "assert string == '[a, b, c, d, e f]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', '']",
+  "assertion": "assert string == '[a, b, c, d, ]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', '   ']",
+  "assertion": "assert string == '[a, b, c, d,    ]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', '1.5']",
+  "assertion": "assert string == '[a, b, c, d, 1.5]'"
+ },
+ {
+  "init": "values = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c']",
+  "assertion": "assert string == '[a, b, c]'"
+ },
+ {
+  "init": "values = ['1.5', '2.25', '3.75']",
+  "assertion": "assert string == '[1.5, 2.25, 3.75]'"
+ },
+ {
+  "init": "values = ['1', '2', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']",
+  "assertion": "assert string == '[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]'"
+ },
+ {
+  "init": "values = ['apple']",
+  "assertion": "assert string == '[apple]'"
+ },
+ {
+  "init": "values = ['apple ', ' banana', 'cherry ']",
+  "assertion": "assert string == '[apple ,  banana, cherry ]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', None, 'cherry']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 3.14, 'cherry']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', '3.14', 'cherry']",
+  "assertion": "assert string == '[apple, banana, 3.14, cherry]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', float('nan'), 'cherry']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', float('inf'), 'cherry']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 'mango', 'cherry']",
+  "assertion": "assert string == '[apple, banana, mango, cherry]'"
+ },
+ {
+  "init": "values = ['hello', 'world']",
+  "assertion": "assert string == '[hello, world]'"
+ },
+ {
+  "init": "values = ['']",
+  "assertion": "assert string == '[]'"
+ },
+ {
+  "init": "values = [None, 'test', '123']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 1.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', '1.5']",
+  "assertion": "assert string == '[a, b, c, 1.5]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'durian']",
+  "assertion": "assert string == '[apple, banana, cherry, durian]'"
+ },
+ {
+  "init": "values = ['apple', '', 'cherry']",
+  "assertion": "assert string == '[apple, , cherry]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', None, 'durian']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.5', '2.5', '3.5', '4.5']",
+  "assertion": "assert string == '[1.5, 2.5, 3.5, 4.5]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', '4']",
+  "assertion": "assert string == '[1, 2, 3, 4]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', None, '4']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '2.5', '3', '4']",
+  "assertion": "assert string == '[1, 2.5, 3, 4]'"
+ },
+ {
+  "init": "values = ['1', '2.5', '3', '4.5']",
+  "assertion": "assert string == '[1, 2.5, 3, 4.5]'"
+ },
+ {
+  "init": "values = [1, 2, 3, 4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 1, 'cherry']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', ' ', 'durian']",
+  "assertion": "assert string == '[apple, banana,  , durian]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', '']",
+  "assertion": "assert string == '[apple, banana, cherry, ]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', ' ', 'durian']",
+  "assertion": "assert string == '[apple, banana, cherry,  , durian]'"
+ },
+ {
+  "init": "values = [1, 2, 3, 4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.5', '2.5', '3.5']",
+  "assertion": "assert string == '[1.5, 2.5, 3.5]'"
+ },
+ {
+  "init": "values = ['a b', 'c d']",
+  "assertion": "assert string == '[a b, c d]'"
+ },
+ {
+  "init": "values = [1, None, 2, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [123456789.0987654321]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 'orange']",
+  "assertion": "assert string == '[apple, banana, orange]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', '']",
+  "assertion": "assert string == '[apple, banana, ]'"
+ },
+ {
+  "init": "values = ['elephant', ' ', 'lion']",
+  "assertion": "assert string == '[elephant,  , lion]'"
+ },
+ {
+  "init": "values = [1, 2, 3.5, 4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.23, 45.6, '78', '90']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, '', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['hello', 'world', 'how', 'are', 'you']",
+  "assertion": "assert string == '[hello, world, how, are, you]'"
+ },
+ {
+  "init": "values = ['123', '456', '789']",
+  "assertion": "assert string == '[123, 456, 789]'"
+ },
+ {
+  "init": "values = ['', '', '']",
+  "assertion": "assert string == '[, , ]'"
+ },
+ {
+  "init": "values = [1.5, 2.75, 3.25]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.5', '2.75', '3.25']",
+  "assertion": "assert string == '[1.5, 2.75, 3.25]'"
+ },
+ {
+  "init": "values = ['1', '2', '3', '4', '5']",
+  "assertion": "assert string == '[1, 2, 3, 4, 5]'"
+ },
+ {
+  "init": "values = ['1.5', '2.8', '3.25']",
+  "assertion": "assert string == '[1.5, 2.8, 3.25]'"
+ },
+ {
+  "init": "values = [None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 3.5, '4']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.5, 2.5, '3', '4']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, '2', None, 4.75, '']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 1, 2, 3.14]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['   ', '   ', ' ', '$', '# ']",
+  "assertion": "assert string == '[   ,    ,  , $, # ]'"
+ },
+ {
+  "init": "values = [' a ', ' b ', ' c ']",
+  "assertion": "assert string == '[ a ,  b ,  c ]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'date', 'elderberry', 'fig']",
+  "assertion": "assert string == '[apple, banana, cherry, date, elderberry, fig]'"
+ },
+ {
+  "init": "values = [' a ', ' b ', '']",
+  "assertion": "assert string == '[ a ,  b , ]'"
+ },
+ {
+  "init": "values = [1.5, 2.75, 3.9, 4.25]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.0, 2.0, '3.0', None, 4.25]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.5', 2.75, 3.9, float('nan'), 4.25]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 2, 'cherry', float('inf'), 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', '-2', '3.5', '4']",
+  "assertion": "assert string == '[1, -2, 3.5, 4]'"
+ },
+ {
+  "init": "values = ['']",
+  "assertion": "assert string == '['']'"
+ },
+ {
+  "init": "values = ['  one  ', 'two', 'three   ']",
+  "assertion": "assert string == '[  one  , two, three   ]'"
+ },
+ {
+  "init": "values = ['a', '  b', 'c   ', 'd', '   ']",
+  "assertion": "assert string == '[a,   b, c   , d,    ]'"
+ },
+ {
+  "init": "values = ['a']*100",
+  "assertion": "assert string == '[' + ', '.join(['a']*100) + ']'\nassert len(string) == 3 + 3*99"
+ },
+ {
+  "init": "values = [100, 200.0, None, '300', '', 0.05]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.25, '2.0', '4.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['', 'banana', 'cherry']",
+  "assertion": "assert string == '[, banana, cherry]'"
+ },
+ {
+  "init": "values = ['True', 'False', 'True', 'True']",
+  "assertion": "assert string == '[True, False, True, True]'"
+ },
+ {
+  "init": "values = ['1', ' 2', '3 ', ' 4 ']",
+  "assertion": "assert string == '[1,  2, 3 ,  4 ]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'orange', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 'orange', 3.14]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 'orange', '  ']",
+  "assertion": "assert string == '[apple, banana, orange,   ]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'orange', '', '  ']",
+  "assertion": "assert string == '[apple, banana, orange, ,   ]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 123]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 'This is a sentence.']",
+  "assertion": "assert string == '[apple, banana, This is a sentence.]'"
+ },
+ {
+  "init": "values = [None, 'banana', 'cherry']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 'banana', 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 'three', 4.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 3, 4, 5]\nstring = ''",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 3, 4, 5]\nstring = '['",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 3, 4, 5]\nstring = ']'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']",
+  "assertion": "assert string == '[a, b, c, d, e, f, g, h, i, j]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']",
+  "assertion": "assert string == '[a, b, c, d, e, f, g, h, i, j, k]'"
+ },
+ {
+  "init": "values = [1.5, 2.75, 3.25, 4.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.5', '2.75', '3.25', '4.5']",
+  "assertion": "assert string == '[1.5, 2.75, 3.25, 4.5]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', None, 'f', 'g', 'h', 'i', 'j']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']",
+  "assertion": "assert string == '[a, b, c, d, e, f, g, h, i, j, k, l]'"
+ },
+ {
+  "init": "values = ['a b', 'c d', 'e f']",
+  "assertion": "assert string == '[a b, c d, e f]'"
+ },
+ {
+  "init": "values = [1.5, '2.75', 3.25]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 3, 4, 5]\nstring = 'initial'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, '2', 3.5, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.5, '2.75', '3.25', 4.0]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, None, 3.5, '4']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, '2', 3.5, None, 4.0]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e']",
+  "assertion": "assert string == '[a, b, c, d, e]'"
+ },
+ {
+  "init": "values = ['1', '2', None, '4']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', ' ']",
+  "assertion": "assert string == '[a, b, c, d,  ]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'None']",
+  "assertion": "assert string == '[a, b, c, d, None]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm']",
+  "assertion": "assert string == '[a, b, c, d, e, f, g, h, i, j, k, l, m]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'durian', 'elderberry']",
+  "assertion": "assert string == '[apple, banana, cherry, durian, elderberry]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'durian', 'elderberry', 'fig']",
+  "assertion": "assert string == '[apple, banana, cherry, durian, elderberry, fig]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'durian', 'elderberry', 'fig', 'grape']",
+  "assertion": "assert string == '[apple, banana, cherry, durian, elderberry, fig, grape]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'durian', 'elderberry', 'fig', 'grape', 'honeydew']",
+  "assertion": "assert string == '[apple, banana, cherry, durian, elderberry, fig, grape, honeydew]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'durian', 'elderberry', 'fig', 'grape', 'honeydew', 'jackfruit']",
+  "assertion": "assert string == '[apple, banana, cherry, durian, elderberry, fig, grape, honeydew, jackfruit]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'durian', 'elderberry', 'fig', 'grape', 'honeydew', 'jackfruit', 'kiwi']",
+  "assertion": "assert string == '[apple, banana, cherry, durian, elderberry, fig, grape, honeydew, jackfruit, kiwi]'"
+ },
+ {
+  "init": "values = ['apple', None, 'cherry']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'durian', 'elderberry', 'fig', 'grape', 'honeydew', 'imbe', 'jackfruit']",
+  "assertion": "assert string == '[apple, banana, cherry, durian, elderberry, fig, grape, honeydew, imbe, jackfruit]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'durian', 'elderberry', 'fig', 'grape', 'honeydew', 'imbe', 'jackfruit', 'kiwi']",
+  "assertion": "assert string == '[apple, banana, cherry, durian, elderberry, fig, grape, honeydew, imbe, jackfruit, kiwi]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'durian', 'elderberry', 'fig', 'grape', 'honeydew', 'imbe', 'jackfruit', 'kiwi', 'lemon']",
+  "assertion": "assert string == '[apple, banana, cherry, durian, elderberry, fig, grape, honeydew, imbe, jackfruit, kiwi, lemon]'"
+ },
+ {
+  "init": "values = [1, 2, None, 3, 4, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, ' ', 3, 4, '  ']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1', 2, '3', 4, '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 3, 4, 5]\nstring = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a b', 'c']",
+  "assertion": "assert string == '[a b, c]'"
+ },
+ {
+  "init": "values = ['a', ' ', 'c']",
+  "assertion": "assert string == '[a,  , c]'"
+ },
+ {
+  "init": "values = 'abcdefg'",
+  "assertion": "assert string == '[a, b, c, d, e, f, g]'"
+ },
+ {
+  "init": "values = [1, 2, None, 4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 1, 2, 3, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['', '']",
+  "assertion": "assert string == '[, ]'"
+ },
+ {
+  "init": "values = [1, 2.5, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.5, 2.75]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1.5, '2.75']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.125', '3.5', '6.75', '5.9']",
+  "assertion": "assert string == '[1.125, 3.5, 6.75, 5.9]'"
+ },
+ {
+  "init": "values = ['car', 'bike', 'scooter', 'bus']",
+  "assertion": "assert string == '[car, bike, scooter, bus]'"
+ },
+ {
+  "init": "values = ['1.5', '2.75', '4.25', '3.5']",
+  "assertion": "assert string == '[1.5, 2.75, 4.25, 3.5]'"
+ },
+ {
+  "init": "values = [5, 10, 15, 20]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 'orange', '']",
+  "assertion": "assert string == '[apple, banana, orange, ]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'orange', ' ']",
+  "assertion": "assert string == '[apple, banana, orange,  ]'"
+ },
+ {
+  "init": "values = [1, 2, 3, None, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 'b', 'c', 'd', 'e', 'f']",
+  "assertion": "assert string == '[a, b, c, d, e, f]'"
+ },
+ {
+  "init": "values = ['1.25', '3.5', '6.75', '5.9']",
+  "assertion": "assert string == '[1.25, 3.5, 6.75, 5.9]'"
+ },
+ {
+  "init": "values = [' ', '  ', '   ']",
+  "assertion": "assert string == '[ ,   ,    ]'"
+ },
+ {
+  "init": "values = [None, None, None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', None, 'grape']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['    ', '  ', '']",
+  "assertion": "assert string == '[    ,   , ]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = 123",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.5', '2.3', '3.7']",
+  "assertion": "assert string == '[1.5, 2.3, 3.7]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 'grape']",
+  "assertion": "assert string == '[apple, banana, cherry, grape]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', ' cherry']",
+  "assertion": "assert string == '[apple, banana,  cherry]'"
+ },
+ {
+  "init": "values = ['a', 'b', 'c', None, 'e']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['a', 1, None, 2.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.1', '2.2', '3.3']",
+  "assertion": "assert string == '[1.1, 2.2, 3.3]'"
+ },
+ {
+  "init": "values = ['one', 'two', 'three', 'four']",
+  "assertion": "assert string == '[one, two, three, four]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', 3.14]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', '3.14']",
+  "assertion": "assert string == '[apple, banana, cherry, 3.14]'"
+ },
+ {
+  "init": "values = ['apple', 'banana', 'cherry', ' ']",
+  "assertion": "assert string == '[apple, banana, cherry,  ]'"
+ },
+ {
+  "init": "values = ['a', None, 'c', 'd']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = [1, 2, 3, 4.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "values = ['1.5', '2.75', '3.25', '4.125']",
+  "assertion": "assert string == '[1.5, 2.75, 3.25, 4.125]'"
+ }
+]

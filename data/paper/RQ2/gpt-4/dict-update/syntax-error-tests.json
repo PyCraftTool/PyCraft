@@ -1,0 +1,6 @@
+[
+ {
+  "init": "additional_dict = {'': (['100a', 200a],'end')}\nd = {None:'end', (('',2.34)): [565.124, '']}",
+  "assertions": "error"
+ }
+]

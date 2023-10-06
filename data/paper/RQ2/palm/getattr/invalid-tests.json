@@ -1,0 +1,900 @@
+[
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 123}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = {'name': ['test']}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = {'name': {'test': 123}}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'a'}\n",
+  "assertions": [
+   "assert n == 'a'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 25}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 25, 'address': 'london'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}\ntry:\n  n = obj.name\nexcept:\n  n = 'unknown'",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = [1,2,3]",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = 'test'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = {'a': 1, 'b': 2}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'a'}\n",
+  "assertions": [
+   "assert n == 'a'"
+  ]
+ },
+ {
+  "init": "obj = 123\n",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = 'abc'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'name': 'a', 'age': 12}\n",
+  "assertions": [
+   "assert n == 'a'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'dob': '1999-01-01'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = 'John'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = 1234",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John Doe'}\n",
+  "assertions": [
+   "assert n == 'John Doe'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John Doe', 'age': 30}\n",
+  "assertions": [
+   "assert n == 'John Doe'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = ['John', 'Jane', 'Joe']\nn = obj[0]",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = 'John Doe'\nn = obj.split()[0]",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = 10\nn = obj.name",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = object()\nn = obj.name",
+  "assertions": [
+   "assert n == 'unknown'"
+  ]
+ },
+ {
+  "init": "obj = [1, 2, 3]\nn = obj.name",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = ''\nn = obj.name",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {}\nn = obj.name",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = ['a', 'b', 'c', 'd']\n",
+  "assertions": [
+   "assert n == 'd'"
+  ]
+ },
+ {
+  "init": "obj = {'a': 1, 'b': 2, 'c': 3, 'd': 4}\n",
+  "assertions": [
+   "assert n == 'd'"
+  ]
+ },
+ {
+  "init": "obj = {'a': [1, 2, 3], 'b': [4, 5, 6]}\n",
+  "assertions": [
+   "assert n == '6'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'abc'}",
+  "assertions": [
+   "assert n == 'abc'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'abc', 'surname': 'xyz'}",
+  "assertions": [
+   "assert n == 'abc'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'n'}",
+  "assertions": [
+   "assert n == 'n'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'obj'}",
+  "assertions": [
+   "assert n == 'obj'"
+  ]
+ },
+ {
+  "init": "obj = [1, 2, 'str']",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'a':1, 'b': 2, 'c': 3}",
+  "assertions": [
+   "assert n == 'c'"
+  ]
+ },
+ {
+  "init": "obj = {'a': 1}",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = 'str'",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 24}\n",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 24}\n",
+  "assertions": [
+   "assert n != 'unknown'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n.name == 'test'"
+  ]
+ },
+ {
+  "init": "obj = None",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\n",
+  "assertions": [
+   "assert n == 'c'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}\n",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'age': 12}\n",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = {'name': None}\n",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'abc'}",
+  "assertions": [
+   "assert n == 'abc'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'abc'}",
+  "assertions": [
+   "assert n == 'abc'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John Doe'}",
+  "assertions": [
+   "assert n == 'John Doe'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 5}",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'name': 5.5}",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = 'John Doe'",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = 456",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = True",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = 'Hello World'",
+  "assertions": [
+   "assert n == 'Hello World'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'A'}",
+  "assertions": [
+   "assert n == 'A'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'B', 'age': 12}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "import sys\nobj = sys.stdout",
+  "assertions": [
+   "assert n == 'stdout'"
+  ]
+ },
+ {
+  "init": "import html\nobj = html.parser.HTMLParser()",
+  "assertions": [
+   "assert n == 'unknown'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'abc'}",
+  "assertions": [
+   "assert n == 'abc'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "assert n == 'test'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}\nobj.name = None",
+  "assertions": [
+   "assert n == 'unknown'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'test'}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}\ntry: n = obj.name\nexcept AttributeError as e: n = 'unknown'",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}\ntry: n = obj.name\nexcept Exception as e: n = 'unknown'",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}\ntry: n = obj.name\nexcept: n = 'unknown'",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20}",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'address': '123 Main St.'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'address': '123 Main St.', 'occupation': 'engineer'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'address': '123 Main St.', 'occupation': 'engineer', 'salary': 100000}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'address': '123 Main St.', 'occupation': 'engineer', 'salary': 100000, 'skills': ['python', 'java', 'c++']}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'address': '123 Main St.', 'occupation': 'engineer', 'salary': 100000, 'skills': ['python', 'java', 'c++'], 'hobbies': ['reading', 'swimming', 'dancing']}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'name'}",
+  "assertions": [
+   "assert n == 'name'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John Doe'}",
+  "assertions": [
+   "assert n == 'John Doe'"
+  ]
+ },
+ {
+  "init": "obj = ['John Doe', 'Jane Doe', 'Mary Doe']",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com', 'occupation': 'Software Engineer'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com', 'occupation': 'Software Engineer', 'salary': 100000}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com', 'occupation': 'Software Engineer'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com', 'occupation': 'Software Engineer', 'salary': 100000}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com', 'occupation': 'Software Engineer'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com', 'occupation': 'Software Engineer', 'salary': 100000}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com', 'occupation': 'Software Engineer'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com', 'occupation': 'Software Engineer', 'salary': 100000}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'address': 'London'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'address': 'London', 'salary': 10000}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'address': 'London', 'salary': 10000, 'skills': ['python', 'java']}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'address': 'London', 'salary': 10000, 'skills': ['python', 'java'], 'hobbies': ['reading', 'writing']}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'John', 'age': 20, 'address': 'London', 'salary': 10000, 'skills': ['python', 'java'], 'hobbies': ['reading', 'writing'], 'favourite_colour': 'blue'}",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male', 'address': '123 Main St'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com', 'image': 'https://example.com/image.jpg'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male', 'address': '123 Main St', 'phone': '123-456-7890', 'email': 'john@example.com', 'image': 'https://example.com/image.jpg', 'bio': 'This is a bio'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male', 'address': '123 Main Street'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male', 'address': '123 Main Street', 'phone': '123-456-7890'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male', 'address': '123 Main Street', 'phone': '123-456-7890', 'email': 'john@example.com'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male', 'address': '123 Main Street', 'phone': '123-456-7890', 'email': 'john@example.com', 'occupation': 'engineer'}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'john', 'age': 20, 'gender': 'male', 'address': '123 Main Street', 'phone': '123-456-7890', 'email': 'john@example.com', 'occupation': 'engineer', 'salary': 100000}",
+  "assertions": [
+   "assert n == 'john'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'abc'}",
+  "assertions": [
+   "assert n == 'abc'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'abc', 'age': 10}",
+  "assertions": [
+   "assert n == 'abc'"
+  ]
+ },
+ {
+  "init": "obj = 'abc'",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = 10",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = ['abc', 'def', 'ghi']",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'a': 1, 'b': 2}",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'a': 1, 'b': 2, 'c': {'d': 3}}",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'a': 1, 'b': 2, 'c': {'d': 3}, 'e': {'f': 4}}",
+  "assertions": [
+   "assert n == 'e'"
+  ]
+ }
+]

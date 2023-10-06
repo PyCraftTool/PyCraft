@@ -1,0 +1,158 @@
+[
+ {
+  "init": "x = 0.5\ny = 0.5\nz = float('nan')",
+  "assertions": [
+   "assert a == x",
+   "assert b == y",
+   "assert math.isnan(c)"
+  ]
+ },
+ {
+  "init": "x = [1.5, 2.5, 3.5]\ny = x\nz = 3.5",
+  "assertions": [
+   "assert a == x",
+   "assert b == y",
+   "assert c == z",
+   "assert len(c) == 1",
+   "assert isinstance(c, float)"
+  ]
+ },
+ {
+  "init": "x = 10.5\ny = -3.14\nz = divmod(x, y)",
+  "assertions": [
+   "assert x == 10.5",
+   "assert y == -3.14",
+   "assert z == (-4.0, 3.679999999999998)"
+  ]
+ },
+ {
+  "init": "x = 1\ny = '2'\nz = x + y",
+  "assertions": "error"
+ },
+ {
+  "init": "x = 9.7\nz = y // z",
+  "assertions": "error"
+ },
+ {
+  "init": "x = 'float_value'\ny = 0.0\nz ='error_message'",
+  "assertions": "error"
+ },
+ {
+  "init": "x = 10.5\ny = '    ' * 3\nz = ''",
+  "assertions": [
+   "assert x == 10.5",
+   "assert y == '        '",
+   "assert z == ''"
+  ]
+ },
+ {
+  "init": "x = float('nan')\ny = 10.75\nz = 0.999",
+  "assertions": [
+   "assert math.isnan(x)",
+   "assert y == 10.75",
+   "assert z == 0.999"
+  ]
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = [4, 5, 6]\nz = [7, 8, 9]",
+  "assertions": "error"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = [4, 5, 6]\nz = [7, 8, 9]",
+  "assertions": "error"
+ },
+ {
+  "init": "x = float('nan')\ny = float('inf')\nz = float('-inf')",
+  "assertions": [
+   "assert math.isnan(a)",
+   "assert math.isinf(b)",
+   "assert math.isinf(c)"
+  ]
+ },
+ {
+  "init": "x = float('3.14')\ny = '2.5'\nz = float('10.75')",
+  "assertions": "error"
+ },
+ {
+  "init": "x = 5\ny = 'hello'\nz = [1, 2, 3]",
+  "assertions": "error"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = 'hello'\nz = x + y",
+  "assertions": "error"
+ },
+ {
+  "init": "x = None\ny = 'value'\nz = x or y",
+  "assertions": [
+   "assert a == 'value'",
+   "assert b == 'value'",
+   "assert c == 'value'"
+  ]
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = 'string'\nz = x + y",
+  "assertions": "error"
+ },
+ {
+  "init": "x = '1.5'\ny = '2.5'\nz = float(x) + float(y)",
+  "assertions": [
+   "assert a == 1.5",
+   "assert b == 2.5",
+   "assert c == 4.0"
+  ]
+ },
+ {
+  "init": "x = []\ny = 0\nz = x[y]",
+  "assertions": "error"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = 10\nz = x[y]",
+  "assertions": "error"
+ },
+ {
+  "init": "x = float('inf')\ny = float('-inf')\nz = float('nan')",
+  "assertions": [
+   "assert math.isinf(a)",
+   "assert math.isinf(b)",
+   "assert math.isnan(c)"
+  ]
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = None\nz = [4, 5, 6]",
+  "assertions": "error"
+ },
+ {
+  "init": "x = None\ny = None\nz = None",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "x = float('inf')\ny = float('-inf')\nz = float('nan')",
+  "assertions": [
+   "assert math.isinf(a)",
+   "assert math.isinf(b)",
+   "assert math.isnan(c)"
+  ]
+ },
+ {
+  "init": "x = float('nan')\ny = float('inf')\nz = float('-inf')",
+  "assertions": [
+   "assert math.isnan(a)",
+   "assert math.isinf(b)",
+   "assert math.isinf(c)"
+  ]
+ },
+ {
+  "init": "x = float('nan')\ny = float('inf')\nz = float('-inf')",
+  "assertions": [
+   "assert math.isnan(a)",
+   "assert math.isinf(b)",
+   "assert math.isinf(c)"
+  ]
+ },
+ {
+  "init": "x = 5\ny = 'hello'\nz = None",
+  "assertions": "error"
+ }
+]

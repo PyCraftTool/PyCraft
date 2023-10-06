@@ -1,0 +1,24 @@
+[
+ {
+  "init": "val1 = '1.5'\nval2 = '2.5'\nint_instance = 1.5",
+  "assertions": [
+   "assert val == '2.5'"
+  ]
+ },
+ {
+  "init": "val1 = 'string'\nval2 = 'another string'\nint_instance = True",
+  "assertions": [
+   "assert val == 'another string'"
+  ]
+ },
+ {
+  "init": "val1 = 'Hello'\nval2 = 'World'\nint_instance = Float",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = String\nval2 = None\nint_instance = 'Intel i7'",
+  "assertions": [
+   "assert val is String"
+  ]
+ }
+]

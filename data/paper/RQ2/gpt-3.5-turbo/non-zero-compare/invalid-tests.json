@@ -1,0 +1,409 @@
+[
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 10",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 5\nnumber_value = 0\nval2 = 10",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 5\nnumber_value = 5\nval2 = 10",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 5.5\nnumber_value = 5\nval2 = 10",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 0\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = None\nnumber_value = 0\nval2 = 'hello'",
+  "assertions": [
+   "assert val == 'hello'"
+  ]
+ },
+ {
+  "init": "val1 = []\nnumber_value = 0\nval2 = [1, 2, 3]",
+  "assertions": [
+   "assert val == [1, 2, 3]"
+  ]
+ },
+ {
+  "init": "val1 = [None, None]\nnumber_value = 0\nval2 = []",
+  "assertions": [
+   "assert val == []"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = -1\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = -1\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 1.5\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 1.5\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 5\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 5",
+  "assertions": [
+   "assert val == 5"
+  ]
+ },
+ {
+  "init": "val1 = 5.5\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 0\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 1\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = '0'\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = '0'\nval2 = 0",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = '0'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = None",
+  "assertions": [
+   "assert val == None"
+  ]
+ },
+ {
+  "init": "val1 = ''\nnumber_value = 0\nval2='updated'",
+  "assertions": [
+   "assert val == 'initial'"
+  ]
+ },
+ {
+  "init": "val1 = None\nnumber_value = 1\nval2='updated'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 3.25\nnumber_value = 0\nval2 = 'updated'",
+  "assertions": [
+   "assert val == 'updated'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 0\nval2 = 'world'",
+  "assertions": "assert val == 'hello'"
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 5\nval2 = 'world'",
+  "assertions": "assert val == 'world'"
+ },
+ {
+  "init": "val1 = ''\nnumber_value = 0\nval2 = 'world'",
+  "assertions": "assert val == ''"
+ },
+ {
+  "init": "val1 = '   '\nnumber_value = 5\nval2 = 'world'",
+  "assertions": "assert val == 'world'"
+ },
+ {
+  "init": "val1 = '3.14'\nnumber_value = 9.8\nval2 = '23.56'",
+  "assertions": "assert val == '23.56'"
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 5\nval2 = 1",
+  "assertions": "assert val == 1"
+ },
+ {
+  "init": "val1 = float('nan')\nnumber_value = 1.5\nval2 = 10",
+  "assertions": "assert val == 10"
+ },
+ {
+  "init": "val1 = '5'\nnumber_value = float('inf')\nval2 = '6'",
+  "assertions": "assert val == '6'"
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = None\nval2 = 'world'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = None\nnumber_value = 3\nval2 = 'world'",
+  "assertions": "assert val == 'world'"
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 'hello'",
+  "assertions": [
+   "assert val == 'hello'"
+  ]
+ },
+ {
+  "init": "val1 = ' '\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 5.5\nnumber_value = 0\nval2 = 'hello'",
+  "assertions": [
+   "assert val1 == 5.5",
+   "assert number_value == 0",
+   "assert val2 == 'hello'",
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 1\nnumber_value = 1\nval2 = 0",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = ''\nnumber_value = 0\nval2 = 'test'",
+  "assertions": [
+   "assert val == 'test'"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 30",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = [None]\nnumber_value = 0\nval2 = []",
+  "assertions": [
+   "assert val == []"
+  ]
+ },
+ {
+  "init": "val1 = 1\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 1.5\nnumber_value = 0\nval2 = 2.5",
+  "assertions": [
+   "assert val == 2.5"
+  ]
+ },
+ {
+  "init": "val1 = 1.5\nnumber_value = 1\nval2 = 2.5",
+  "assertions": [
+   "assert val == 1.5"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 0\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 1.5\nnumber_value = 0\nval2 = 2.5",
+  "assertions": [
+   "assert val == 2.5"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 0\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 1\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 1.5\nnumber_value = 1\nval2 = 0",
+  "assertions": [
+   "assert val == 1.5"
+  ]
+ },
+ {
+  "init": "val1 = 1.5\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 1\nval2 = 0",
+  "assertions": [
+   "assert val == 'hello'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nnumber_value = 0\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 1\nnumber_value = 0\nval2 = 0",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 0\nnumber_value = 0\nval2 = 1",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 1\nnumber_value = 1\nval2 = 0",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "val1 = 1\nnumber_value = -1\nval2 = 0",
+  "assertions": [
+   "assert val == 1"
+  ]
+ }
+]

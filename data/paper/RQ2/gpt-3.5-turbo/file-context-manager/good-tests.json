@@ -1,0 +1,473 @@
+[
+ {
+  "init": "file_path = 'test_file.txt'",
+  "assertion": "assert isinstance(contents, str)"
+ },
+ {
+  "init": "file_path = 'empty_file.txt'",
+  "assertion": "assert isinstance(contents, str)\nassert contents == ''"
+ },
+ {
+  "init": "file_path = 'file_not_exist.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = ''",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_with_spaces.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_with_float.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_with_float_as_string.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_with_list.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertion": "assert isinstance(contents, str)"
+ },
+ {
+  "init": "file_path = 'non_existent_file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_with_empty_contents.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_with_numbers.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 3.14",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '3.14'",
+  "assertion": "assert isinstance(contents, str)"
+ },
+ {
+  "init": "file_path = 'nonexistentfile.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'empty.txt'",
+  "assertion": "assert contents == ''"
+ },
+ {
+  "init": "file_path = 'nonexistent.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'floating_point.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'floating_point_string.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'multiple_lines.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'nonexistent_directory/nonexistent_file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertion": "assert contents == 'Hello, World!'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('New content')\nfile.close()",
+  "assertion": "assert contents == 'New content'"
+ },
+ {
+  "init": "file_path = 'invalid.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_with_non_ascii.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'nonexistent_file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_file.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()\nfile = open(file_path, 'r')\ncontents = file.read()",
+  "assertion": "assert contents == 'Hello, World!'"
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertion": "assert contents == 'This is a test file.'"
+ },
+ {
+  "init": "file_path = 'test_with_empty_lines.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_with_whitespace.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_with_special_chars.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_with_numbers.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_with_float.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "assert contents == 'Hello, World!'"
+ },
+ {
+  "init": "file_path = 'empty.txt'\nfile = open(file_path, 'w')\nfile.close()",
+  "assertion": "assert contents == ''"
+ },
+ {
+  "init": "file_path = 'file with spaces.txt'\nfile = open(file_path, 'w')\nfile.write('Testing spaces')\nfile.close()",
+  "assertion": "assert contents == 'Testing spaces'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "file = open(file_path, 'r')\ncontents = file.read()\nfile.close()\nassert contents == 'Hello, World!'"
+ },
+ {
+  "init": "file_path = 'empty.txt'\nfile = open(file_path, 'w')\nfile.close()",
+  "assertion": "file = open(file_path, 'r')\ncontents = file.read()\nfile.close()\nassert contents == ''"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "file = open(file_path, 'r')\ncontents = file.read()\nfile.close()\nassert contents != 'Goodbye, World!'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "file = open(file_path, 'r')\ncontents = file.read()\nfile.close()\nassert len(contents) == 13"
+ },
+ {
+  "init": "file_path = '3.14'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.csv'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.json'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = ''\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'empty_file.txt'\n",
+  "assertion": "assert contents == ''"
+ },
+ {
+  "init": "file_path = 'space_file.txt'\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = None\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'nonexistent_file.txt'\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 3.14\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_with_errors.py'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '$%^&*'\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = \"testfile.txt\"\nfile = open(file_path, 'w')\nfile.write(\"Hello, World!\")\nfile.close()",
+  "assertion": "assert contents == \"Hello, World!\""
+ },
+ {
+  "init": "file_path = \"nonexistentfile.txt\"",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = \"testfile.txt\"\nfile = open(file_path, 'w')\nfile.write(\"Line 1\\nLine 2\\nLine 3\")\nfile.close()",
+  "assertion": "assert contents == \"Line 1\\nLine 2\\nLine 3\""
+ },
+ {
+  "init": "file_path = \"testfile.txt\"\nfile = open(file_path, 'w')\nfile.close()\nfile = open(file_path, 'r')",
+  "assertion": "assert contents == \"\""
+ },
+ {
+  "init": "file_path = \"nofile.txt\"\nfile = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = \"testfile.txt\"\nfile = open(file_path, 'w')\nfile.write(\"   \\n \")\nfile.close()",
+  "assertion": "assert contents == \"   \\n \""
+ },
+ {
+  "init": "file_path = \"testfile.txt\"\nfile = open(file_path, 'w')\nfile.write(\"one liner\")\nfile.close()",
+  "assertion": "assert contents == \"one liner\""
+ },
+ {
+  "init": "file_path = 'non_existent.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 1234",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 0.5",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'empty.txt'\nfile = open(file_path, 'w')\nfile.close()",
+  "assertion": "file = open(file_path, 'r')\ncontents = file.read()\nfile.close()\nassert contents.strip() == ''"
+ },
+ {
+  "init": "file_path = 'nonexistent.csv'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.xlsx'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertion": "assert file.mode == 'r'"
+ },
+ {
+  "init": "file_path = 'empty.txt'",
+  "assertion": "assert file.mode == 'r'\nassert contents == ''"
+ },
+ {
+  "init": "file_path = 1.5",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_does_not_exist.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_file.txt'\nfile = open(file_path, 'r')\ncontents = file.read()\nfile.close()\nfile_path = 'changed_file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'testfile.txt'\nfile = open(file_path, 'w')\nfile.write('This is a test file.')\nfile.close()",
+  "assertion": "assert contents == 'This is a test file.'"
+ },
+ {
+  "init": "file_path = 'testfile.txt'\nfile = open(file_path, 'w')\nfile.write('')\nfile.close()",
+  "assertion": "assert contents == ''"
+ },
+ {
+  "init": "file_path = 'file with spaces.txt'\nfile = open(file_path, 'w')\nfile.write('This is a file with spaces')\nfile.close()",
+  "assertion": "assert contents == 'This is a file with spaces'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'r')\ncontents = file.read()\nfile.close()\nfile = open(file_path, 'w')\nfile.write('New content')\nfile.close()",
+  "assertion": "assert contents == 'New content'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.close()",
+  "assertion": "assert contents == ''"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('')\nfile.close()",
+  "assertion": "assert contents == ''"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('   ')\nfile.close()",
+  "assertion": "assert contents == '   '"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('3.14')\nfile.close()",
+  "assertion": "assert contents == '3.14'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write(str(3.14))\nfile.close()",
+  "assertion": "assert contents == '3.14'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('This is a test file')\nfile.close()",
+  "assertion": "assert contents == 'This is a test file'"
+ },
+ {
+  "init": "file_path = 'empty_file.txt'",
+  "assertion": "assert contents == ''"
+ },
+ {
+  "init": "file_path = 'example.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "assert contents == 'Hello, World!'"
+ },
+ {
+  "init": "file_path = 'example.txt'\nfile = open(file_path, 'w')\nfile.write('')\nfile.close()",
+  "assertion": "assert contents == ''"
+ },
+ {
+  "init": "file_path = 'test_file.txt'",
+  "assertion": "assert type(contents) == str"
+ },
+ {
+  "init": "file_path = 'empty_file.txt'",
+  "assertion": "assert type(contents) == str\nassert contents == ''"
+ },
+ {
+  "init": "file_path = 'directory/file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_with_special_characters.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.csv'\nfile = open(file_path, 'w')\nfile.close()",
+  "assertion": "assert contents == ''"
+ },
+ {
+  "init": "file_path = []",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'nonexisting.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('Hello World!')\nfile.close()",
+  "assertion": "assert contents == 'Hello World!'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'a')\nfile.write('New Line')\nfile.close()",
+  "assertion": "assert contents == 'Hello World!New Line'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'r')\nfile.readline()\nfile.close()",
+  "assertion": "assert contents == 'Hello World!New Line'"
+ },
+ {
+  "init": "file_path = '3.14'\nfile = open(file_path, 'w')\nfile.write('This is a float as a string')\nfile.close()",
+  "assertion": "assert contents == 'This is a float as a string'"
+ },
+ {
+  "init": "file_path = 'test_file.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "assert contents == 'Hello, World!'"
+ },
+ {
+  "init": "file_path = 'empty_file.txt'\nfile = open(file_path, 'w')\nfile.close()",
+  "assertion": "assert contents == ''"
+ },
+ {
+  "init": "file_path = 'test_file.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "assert contents.strip() == 'Hello, World!'"
+ },
+ {
+  "init": "file_path = 'test_file.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "assert contents != 'Hello,World!'"
+ },
+ {
+  "init": "file_path = 'path/to/nonexistent/file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file with spaces.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, Spaces!')\nfile.close()",
+  "assertion": "assert contents == 'Hello, Spaces!'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'r')\ncontents = file.read()\nfile.close()",
+  "assertion": "assert contents == 'Hello, World!'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "assert contents != 'Goodbye, World!'"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "assert len(contents) == 13"
+ },
+ {
+  "init": "file_path = 'test.txt'\nfile = open(file_path, 'w')\nfile.write('Hello, World!')\nfile.close()",
+  "assertion": "assert contents.startswith('Hello')"
+ }
+]

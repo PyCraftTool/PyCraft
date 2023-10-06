@@ -1,0 +1,432 @@
+[
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[0, 0] == 150"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[1, 1] == 240"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[0, 1] == 102"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[1, 0] == 148"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.dtype == np.int64"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.ndim == 2"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.size == 4"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.itemsize == 8"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[0, 0] == 150"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[1, 1] == 240"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[0, 1] == 102"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[1, 0] == 148"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.dtype == np.int64"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.ndim == 2"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.size == 4"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.itemsize == 8"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[0, 0] == 150"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[1, 1] == 240"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[0, 1] == 102"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[1, 0] == 148"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.dtype == np.int64"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.ndim == 2"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.size == 4"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.itemsize == 8"
+  ]
+ },
+ {
+  "init": "arr1 = np.arange(10).reshape(5, 2)\narr2 = np.arange(10).reshape(5, 2)\narr3 = np.arange(10).reshape(2, 5)",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.zeros((5, 2))\narr2 = np.zeros((5, 2))\narr3 = np.zeros((2, 5))",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.arange(10).reshape(5, 2)\narr2 = np.arange(10).reshape(5, 2)\narr3 = np.arange(10).reshape(5, 2)",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = np.arange(10).reshape(5, 2)\narr2 = np.arange(10).reshape(5, 2)\narr3 = np.arange(10).reshape(3, 5)",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "arr1 = np.arange(10).reshape(5, 2)\narr2 = np.arange(10).reshape(5, 2)\narr3 = np.arange(10).reshape(2, 5)",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.arange(10).reshape(5, 2)\narr2 = np.arange(10).reshape(5, 2)\narr3 = np.arange(10).reshape(2, 5)",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.arange(10).reshape(5, 2)\narr2 = np.arange(10).reshape(5, 2)\narr3 = np.arange(10).reshape(2, 5)",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.arange(10).reshape(5, 2)\narr2 = np.arange(10).reshape(5, 2)\narr3 = np.arange(10).reshape(2, 5)",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.arange(10).reshape(5, 2)\narr2 = np.arange(10).reshape(5, 2)\narr3 = np.arange(10).reshape(2, 5)",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = [1,2,3]\narr2 = [4,5,6]\narr3 = [7,8,9]\n",
+  "assertions": [
+   "assert result == 243"
+  ]
+ },
+ {
+  "init": "arr1 = [[1,2,3],[4,5,6]]\narr2 = [[7,8,9],[10,11,12]]\narr3 = [[13,14,15],[16,17,18]]\n",
+  "assertions": [
+   "assert result == [[243,288,333],[576,672,768]]"
+  ]
+ },
+ {
+  "init": "arr1 = [1,2,3]\narr2 = [4,5,6]\narr3 = [7]\n",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1,2,3]\narr2 = [4,5,6]\narr3 = [[7,8,9]]\n",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert np.array_equal(result, np.array([[114, 140], [230, 272]]))"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6]])\narr3 = np.array([[9, 10]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2]])\narr2 = np.array([[5, 6]])\narr3 = np.array([[9, 10]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[0, 0] == 240"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[1, 1] == 372"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[0, 1] == 168"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result[1, 0] == 112"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.dtype == np.int64"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.ndim == 2"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.size == 4"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.itemsize == 8"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.tolist() == [[42, 44], [88, 92]]"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.tolist() == [[42, 44], [88, 92]]"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.tolist() == [[42, 44], [88, 92]]"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\narr3 = np.array([[9, 10], [11, 12]])",
+  "assertions": [
+   "assert result.tolist() == [[42, 44], [88, 92]]"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([4,2,6,8])\narr2 = np.array([5,6,7,8])\narr3 = np.array([4,9,1,5])",
+  "assertions": [
+   "assert result.shape == (4,1)"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([4,2,6,8])\narr2 = np.array([5,6,7,8])\narr3 = np.array([4,9,1,5])",
+  "assertions": [
+   "assert result == 1120"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([4,2,6,8])\narr2 = np.array([5,6,7,8])\narr3 = np.array([4,9,1,5])",
+  "assertions": [
+   "assert result.size == 4"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([4,2,6,8])\narr2 = np.array([5,6,7,8])\narr3 = np.array([4,9,1,5])",
+  "assertions": [
+   "assert result[1,0] == 376"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = None\narr2 = np.array([])\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = None\narr3 = np.array([])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([])\narr2 = np.array([])\narr3 = None",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1,2],[3,4]])\narr2 = np.array([[5,6],[7,8]])\narr3 = np.array([[9,10],[11,12]])",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1,2],[3,4]])\narr2 = np.array([[5,6],[7,8]])\narr3 = np.array([9,10])",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = np.array([[1,2],[3,4]])\narr2 = np.array([[5,6],[7,8]])\narr3 = None",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1,2],[3,4]])\narr2 = np.array([[5,6],[7,8]])\narr3 = np.zeros((2,2))",
+  "assertions": [
+   "assert np.allclose(result, [[23, 28], [47, 56]])"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1,2],[3,4]])\narr2 = np.array([[5,6],[7,8]])\narr3 = np.eye(2)",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = np.array([[1,2],[3,4]])\narr2 = np.array([[5,6],[7,8]])\narr3 = np.zeros((3,3))",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [[[0, 1], [0, 2], [0, 3]], [[1, 2], [3, 4], [5, 6]]]\narr2 = [[[0, 1], [0, 2], [0, 3]], [[1, 2], [3, 4], [5, 6]]]\narr3 = [[[0, 1], [0, 2], [0, 3]], [[1, 2], [3, 4], [5, 6]]]",
+  "assertions": [
+   "assert result.shape == (3, 3)"
+  ]
+ },
+ {
+  "init": "arr1 = [[[0, 1]], [[0, 2]]]\narr2 = [[[0, 1]], [[0, 2]]]\narr3 = [[[0, 1]], [[0, 2]]]",
+  "assertions": [
+   "assert result.shape == (2, 2)"
+  ]
+ },
+ {
+  "init": "arr1 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]\narr2 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]\narr3 = [[[0, 1], [0, 2]], [[1, 2], [3, 4]]]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [None, None, None]\narr2 = [None, None, None]\narr3 = [None, None, None]",
+  "assertions": [
+   "assert result.shape == (3, 3)"
+  ]
+ },
+ {
+  "init": "arr1 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]\narr2 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]\narr3 = 1",
+  "assertions": "error"
+ }
+]

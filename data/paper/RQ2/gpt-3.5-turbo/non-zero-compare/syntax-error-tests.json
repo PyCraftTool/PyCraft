@@ -1,0 +1,18 @@
+[
+ {
+  "init": "val1 = '()\nnumber_value = 1\nval2 = 'updated''",
+  "assertions": [
+   "assert val == 'updated'"
+  ]
+ },
+ {
+  "init": "val1 = '()\nnumber_value = 0\nval2 = []'",
+  "assertions": [
+   "assert val == []"
+  ]
+ },
+ {
+  "init": "val1 = 3.25\nnumber_value = 0\nval2 = int('25)'",
+  "assertions": "error"
+ }
+]

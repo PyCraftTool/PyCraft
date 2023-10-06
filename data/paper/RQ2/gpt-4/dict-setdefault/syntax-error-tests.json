@@ -1,0 +1,22 @@
+[
+ {
+  "init": "array = [=]\nfunction = lambda x: x ** 2",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [None, None, None] function = lambda x:x ",
+  "assertions": [
+   "assert d == {None: [None, None, None]}"
+  ]
+ },
+ {
+  "init": "array = [100, 10.7, ' 10.5 ', ' '] function = float",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [None]*5\nfunction = (lambda x : str(type(x)))",
+  "assertions": [
+   "assert d == {None: ['<class 'NoneType'>']*5}"
+  ]
+ }
+]

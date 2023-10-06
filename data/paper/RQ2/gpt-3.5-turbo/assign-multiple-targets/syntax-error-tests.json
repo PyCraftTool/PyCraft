@@ -1,0 +1,18 @@
+[
+ {
+  "init": "x = 0.0\ty = '5.0'\tz = float(y)",
+  "assertions": [
+   "assert isinstance(a, float)",
+   "assert isinstance(b, str)",
+   "assert isinstance(c, float)"
+  ]
+ },
+ {
+  "init": "x = ' '\ny = '\n'\nz = '\t'",
+  "assertions": [
+   "assert a == ' '",
+   "assert b == '\n'",
+   "assert c == '\t'"
+  ]
+ }
+]

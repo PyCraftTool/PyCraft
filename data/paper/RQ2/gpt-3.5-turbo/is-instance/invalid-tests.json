@@ -1,0 +1,1309 @@
+[
+ {
+  "init": "val1 = 10.5\nint_instance = 5\nval2 = 'float'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = []\nint_instance = 0\nval2 = 'list'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = 3.14\nint_instance = '3.14'\nval2 = 'float'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = None\nint_instance = '10'\nval2 = 'string'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = 100\nint_instance = None\nval2 = 'integer'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = '3.14'\nint_instance = 3.14\nval2 = 'float'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nint_instance = 'integer'\nval2 = 'list'",
+  "assertions": [
+   "assert val == 'list'"
+  ]
+ },
+ {
+  "init": "val1 = 'float'\nint_instance = 12.5\nval2 = 'valid'",
+  "assertions": [
+   "assert val == 'valid'"
+  ]
+ },
+ {
+  "init": "val1 = '1234'\nint_instance = 'string'\nval2 = 'valid'",
+  "assertions": [
+   "assert val == 'valid'"
+  ]
+ },
+ {
+  "init": "val1 = 'float'\nint_instance = '10.5'\nval2 = 'valid'",
+  "assertions": [
+   "assert val == 'valid'"
+  ]
+ },
+ {
+  "init": "val1 = 'abc'\nint_instance = None\nval2 = 'invalid'",
+  "assertions": [
+   "assert val == 'invalid'"
+  ]
+ },
+ {
+  "init": "val1 = None\nint_instance = None\nval2 = 'valid'",
+  "assertions": [
+   "assert val == 'valid'"
+  ]
+ },
+ {
+  "init": "val1 = 'None'\nint_instance = 'None'\nval2 = 'invalid'",
+  "assertions": [
+   "assert val == 'invalid'"
+  ]
+ },
+ {
+  "init": "val1 = 'Hello'\nint_instance = 'World'\nval2 = 'Python'",
+  "assertions": [
+   "assert type(val) is str",
+   "assert val == 'Python'"
+  ]
+ },
+ {
+  "init": "val1 = 1.5\nint_instance = 'Error'\nval2 = 3.14",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = None\nint_instance = None\nval2 = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 3.14\nint_instance = 3.14\nval2 = 2.71828",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 'hello'\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = ''\nint_instance = ''\nval2 = 'test'",
+  "assertions": [
+   "assert val == 'test'"
+  ]
+ },
+ {
+  "init": "val1 = '123'\nint_instance = '123'\nval2 = '456'",
+  "assertions": [
+   "assert val == '456'"
+  ]
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nint_instance = [1, 2, 3]\nval2 = [4, 5, 6]",
+  "assertions": [
+   "assert val == [4, 5, 6]"
+  ]
+ },
+ {
+  "init": "val1 = {}\nint_instance = {}\nval2 = {1: 'one', 2: 'two'}",
+  "assertions": [
+   "assert val == {1: 'one', 2: 'two'}"
+  ]
+ },
+ {
+  "init": "val1 = ['a', 'b', 'c']\nint_instance = ['a', 'b', 'c']\nval2 = ['x', 'y', 'z']",
+  "assertions": [
+   "assert val == ['x', 'y', 'z']"
+  ]
+ },
+ {
+  "init": "val1 = [1.23, 4.56, 7.89]\nint_instance = [1.23, 4.56, 7.89]\nval2 = [9.99, 8.88, 7.77]",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 8\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 2\nint_instance = 5\nval2 = None",
+  "assertions": [
+   "assert val == 2"
+  ]
+ },
+ {
+  "init": "val1 = 1.5\nint_instance = float('1.5')\nval2 = 2.5",
+  "assertions": [
+   "assert val == 2.5"
+  ]
+ },
+ {
+  "init": "val1 = None\nint_instance = None\nval2 = 'none'",
+  "assertions": [
+   "assert val == 'none'"
+  ]
+ },
+ {
+  "init": "val1 = '1.5'\nint_instance = float('1.5')\nval2 = 1.5",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 10\nint_instance = '10'\nval2 = 20",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5.5\nint_instance = 5\nval2 = 10",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'Hello'\nint_instance = 5\nval2 = None",
+  "assertions": [
+   "assert val == 'Hello'"
+  ]
+ },
+ {
+  "init": "val1 = 5\nint_instance = '10'\nval2 = 15",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nint_instance = 10\nval2 = 15",
+  "assertions": [
+   "assert val == 5"
+  ]
+ },
+ {
+  "init": "val1 = 5\nint_instance = '10'\nval2 = 15",
+  "assertions": [
+   "assert val == 15"
+  ]
+ },
+ {
+  "init": "val1 = 5.5\nint_instance = 10\nval2 = 15",
+  "assertions": [
+   "assert val == 5.5"
+  ]
+ },
+ {
+  "init": "val1 = False\nint_instance = 10\nval2 = 15",
+  "assertions": [
+   "assert val == False"
+  ]
+ },
+ {
+  "init": "val1 = None\nint_instance = 10\nval2 = 15",
+  "assertions": [
+   "assert val == None"
+  ]
+ },
+ {
+  "init": "val1 = 5\nint_instance = None\nval2 = 15",
+  "assertions": [
+   "assert val == 15"
+  ]
+ },
+ {
+  "init": "val1 = 5\nint_instance = 10.5\nval2 = 15",
+  "assertions": [
+   "assert val == 15"
+  ]
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nint_instance = 10\nval2 = [4, 5, 6]",
+  "assertions": [
+   "assert val == [1, 2, 3]"
+  ]
+ },
+ {
+  "init": "val1 = 0\nint_instance = 10\nval2 = 15",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = []\nint_instance = 10\nval2 = 15",
+  "assertions": [
+   "assert val == []"
+  ]
+ },
+ {
+  "init": "val1 = 100\nint_instance = None\nval2 = 50",
+  "assertions": [
+   "assert val == 50"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = '10'\nval2 = 'world'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 0.5\nint_instance = 1.5\nval2 = 2.5",
+  "assertions": [
+   "assert val == 2.5"
+  ]
+ },
+ {
+  "init": "val1 = 3\nint_instance = '5'\nval2 = 7",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'abc'\nint_instance = 'xyz'\nval2 = '123'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = '10.5'\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10.5"
+  ]
+ },
+ {
+  "init": "val1 = 'float'\nint_instance = 10.5\nval2 = 'integer'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = 'string'\nint_instance = '10'\nval2 = 'integer'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = 'string'\nint_instance = '10.5'\nval2 = 'integer'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = 'string'\nint_instance = None\nval2 = 'integer'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = 'string'\nint_instance = None\nval2 = None",
+  "assertions": [
+   "assert val == None"
+  ]
+ },
+ {
+  "init": "val1 = ''\nint_instance = '10'\nval2 = 'integer'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = ''\nint_instance = None\nval2 = 'integer'",
+  "assertions": [
+   "assert val == 'integer'"
+  ]
+ },
+ {
+  "init": "val1 = None\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10.5\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = '   '\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = None",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = '20'",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 10.5\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 'world'\nval2 = 'goodbye'",
+  "assertions": [
+   "assert val == 'goodbye'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = None",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = '20'",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5.5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ' '\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 'world'\nval2 = 'goodbye'",
+  "assertions": [
+   "assert val == 'goodbye'"
+  ]
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nint_instance = [4, 5, 6]\nval2 = [7, 8, 9]",
+  "assertions": [
+   "assert val == [7, 8, 9]"
+  ]
+ },
+ {
+  "init": "val1 = 3.14\nint_instance = 2.718\nval2 = 1.618",
+  "assertions": [
+   "assert val == 1.618"
+  ]
+ },
+ {
+  "init": "val1 = '5.5'\nint_instance = '3.3'\nval2 = '1.1'",
+  "assertions": [
+   "assert val == '1.1'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5.5\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5.5\nval2 = 20.5",
+  "assertions": [
+   "assert val == 20.5"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5.5'\nval2 = 20.5",
+  "assertions": [
+   "assert val == 20.5"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5.5'\nval2 = '20.5'",
+  "assertions": [
+   "assert val == '20.5'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ''\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ' '\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 'abc'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nint_instance = None\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10.5\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nint_instance = None\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 'world'\nval2 = 'goodbye'",
+  "assertions": [
+   "assert val == 'goodbye'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = None\nval2 = 'goodbye'",
+  "assertions": [
+   "assert val == 'goodbye'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 'abc'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5.5\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5.5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ' '\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ''\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = []\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = [1, 2, 3]\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = [None, None]\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = [1, 2, 3]\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ' '\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 20\nval2 = 30",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '20'\nval2 = 30",
+  "assertions": [
+   "assert val == 30"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = 30",
+  "assertions": [
+   "assert val == 30"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '20.5'\nval2 = 30",
+  "assertions": [
+   "assert val == 30"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = None",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = '20'",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20.5",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = '20.5'",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20\nval = None",
+  "assertions": [
+   "assert val == None"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20.5",
+  "assertions": [
+   "assert val == 20.5"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = '20.5'",
+  "assertions": [
+   "assert val == '20.5'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = '20.5'",
+  "assertions": [
+   "assert val == '20.5'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20.5",
+  "assertions": [
+   "assert val == 20.5"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = '20.5'",
+  "assertions": [
+   "assert val == '20.5'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = '20.5'",
+  "assertions": [
+   "assert val == '20.5'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ''\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ' '\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ''\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ' '\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ''\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = ' '\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = 20.5",
+  "assertions": [
+   "assert val == 20.5"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = '5'\nval2 = '20.5'",
+  "assertions": [
+   "assert val == '20.5'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = '20.5'",
+  "assertions": [
+   "assert val == '20.5'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = None",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = '20'",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20.5",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = '20.5'",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20\nval = None",
+  "assertions": [
+   "assert val == None"
+  ]
+ },
+ {
+  "init": "val1 = None\nint_instance = None\nval2 = 'not None'",
+  "assertions": [
+   "assert val == 'not None'"
+  ]
+ },
+ {
+  "init": "val1 = 3.14\nint_instance = '3.14'\nval2 = 2.718",
+  "assertions": [
+   "assert val == 2.718"
+  ]
+ },
+ {
+  "init": "val1 = []\nint_instance = []\nval2 = [1, 2, 3]",
+  "assertions": [
+   "assert val == [1, 2, 3]"
+  ]
+ },
+ {
+  "init": "val1 = '  '\nint_instance = '  '\nval2 = 'not empty'",
+  "assertions": [
+   "assert val == 'not empty'"
+  ]
+ },
+ {
+  "init": "val1 = 5.5\nint_instance = '5.5'\nval2 = 10.5",
+  "assertions": [
+   "assert val == 10.5"
+  ]
+ },
+ {
+  "init": "val1 = 100\nint_instance = None\nval2 = 200",
+  "assertions": [
+   "assert val == 200"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 10\nval2 = ''",
+  "assertions": [
+   "assert val == 'hello'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = '10'\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 10.5\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 10\nval2 = None",
+  "assertions": [
+   "assert val == 'hello'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 'string'\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = None\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 10.5\nint_instance = 5\nval2 = 20.5",
+  "assertions": [
+   "assert val == 10.5"
+  ]
+ },
+ {
+  "init": "val1 = 10.5\nint_instance = '5.5'\nval2 = 20.5",
+  "assertions": [
+   "assert val == 20.5"
+  ]
+ },
+ {
+  "init": "val1 = 10.5\nint_instance = None\nval2 = 20.5",
+  "assertions": [
+   "assert val == 20.5"
+  ]
+ },
+ {
+  "init": "val1 = '   '\nint_instance = 5\nval2 = 'test'",
+  "assertions": [
+   "assert val == '   '"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 10\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'hello'"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 5.5\nval2 = 20",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = None\nval2 = ''",
+  "assertions": [
+   "assert val == ''"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 5.5\nval2 = 'goodbye'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = '5.5'\nval2 = 'goodbye'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = '0'\nval2 = 'goodbye'",
+  "assertions": [
+   "assert val == 'goodbye'"
+  ]
+ },
+ {
+  "init": "val1 = 3.14\nint_instance = 20\nval2 = 30",
+  "assertions": [
+   "assert val == 5"
+  ]
+ },
+ {
+  "init": "val1 = '1.5'\nint_instance = '1.5'\nval2 = 'float as string'",
+  "assertions": [
+   "assert val == 'float as string'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 5.5\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = None\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 'abc'\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 5.0\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 0\nint_instance = 20.5\nval2 = 30",
+  "assertions": [
+   "assert val == 30"
+  ]
+ },
+ {
+  "init": "val1 = 5.5\nint_instance = float(5.5)\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = None\nint_instance = None\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'hello'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = None\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = ['   ']*5\nint_instance = 0\nval2 = 'world'",
+  "assertions": [
+   "assert val == ['   ']*5"
+  ]
+ },
+ {
+  "init": "val1 = 'hello world'\nint_instance = 1\nval2 = 'world'",
+  "assertions": [
+   "assert val == 2"
+  ]
+ },
+ {
+  "init": "val1 = None\nint_instance = None\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 'string'\nval2 = 'world'",
+  "assertions": [
+   "assert val == 'world'"
+  ]
+ },
+ {
+  "init": "val1 = 'hello'\nint_instance = 5.5\nval2 = 'world'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nint_instance = 10\nval2 = 8",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "val1 = 5\nint_instance = '10'\nval2 = 8",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "val1 = 5\nint_instance = 10\nval2 = None",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "val1 = '3.14'\nint_instance = ValueError\nval2 = 8",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'three'\nint_instance = 'string'\nval2 = 'string'",
+  "assertions": [
+   "assert val == 'string'"
+  ]
+ },
+ {
+  "init": "val1 = ' '\nint_instance = 100.5\nval2 = 'float'",
+  "assertions": [
+   "assert val == 'float'"
+  ]
+ },
+ {
+  "init": "val1 = 2.5\nint_instance = 2.5\nval2 = 2",
+  "assertions": [
+   "assert val == 2"
+  ]
+ },
+ {
+  "init": "val1 = None\nint_instance = None\nval2 = 10",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 'abc'\nint_instance = 'abc'\nval2 = 'xyz'",
+  "assertions": [
+   "assert val == 'xyz'"
+  ]
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nint_instance = True\nval2 = []",
+  "assertions": [
+   "assert val == []"
+  ]
+ },
+ {
+  "init": "val1 = []\nint_instance = []\nval2 = [1, 2, 3]",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "val1 = ' '\nint_instance = ' '\nval2 = '    '",
+  "assertions": [
+   "assert val == '    '"
+  ]
+ },
+ {
+  "init": "val1 = ''\nint_instance = True\nval2 = True",
+  "assertions": [
+   "assert val == True"
+  ]
+ },
+ {
+  "init": "val1 = 3.14\nint_instance = 'not int'\nval2 = 'not an int'",
+  "assertions": [
+   "assert val == 'not an int'"
+  ]
+ },
+ {
+  "init": "val1 = 'NO'\nint_instance = None\nval2 = 'Default'",
+  "assertions": [
+   "assert val == 'Default'"
+  ]
+ },
+ {
+  "init": "val1 = 0\nint_instance = 0\nval2 = 10",
+  "assertions": [
+   "assert val == 0"
+  ]
+ },
+ {
+  "init": "val1 = 10\nint_instance = 10.0\nval2 = 100",
+  "assertions": [
+   "assert val == 100"
+  ]
+ },
+ {
+  "init": "val1 = 10.5\nint_instance = None\nval2 = 20",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 3.14\nint_instance = '5.0'\nval2 = 10",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nint_instance = 5",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1 = 30.5\nval2 = 40.5\nint_instance = '10'",
+  "assertions": [
+   "assert val == 40.5"
+  ]
+ },
+ {
+  "init": "val1 = '70'\nval2 = '80'\nint_instance = None",
+  "assertions": [
+   "assert val == '80'"
+  ]
+ }
+]

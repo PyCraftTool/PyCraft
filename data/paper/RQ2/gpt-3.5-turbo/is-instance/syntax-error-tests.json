@@ -1,0 +1,51 @@
+[
+ {
+  "init": "val1 = 3\nint_instance = 15\u000bal2 = -5",
+  "assertions": [
+   "assert val == -5"
+  ]
+ },
+ {
+  "init": "val1 = 0\nint_instance = 10\u000bal2 = 5",
+  "assertions": [
+   "assert val == 5"
+  ]
+ },
+ {
+  "init": "val1 = 0\blah_instance = 'blah'\nval2 = 30",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "val1 = None\nint_instance = 15\u000bal2 = 5",
+  "assertions": [
+   "assert val == 5"
+  ]
+ },
+ {
+  "init": "val1 = 0\\int_instance = None\nval2 = -5",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "val1 = 0\nint_instance = 20\u000bal2 = None",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "val1 = 7\nint_instance = None\u000bal2 = 9",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "val1 = '\n'\nval2 = 'test'\nint_instance = 0",
+  "assertions": [
+   "assert val2 == 'test'",
+   "assert val == 'test'"
+  ]
+ }
+]

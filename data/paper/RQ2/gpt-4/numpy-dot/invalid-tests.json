@@ -1,0 +1,482 @@
+[
+ {
+  "init": "arr1 = [1.2, 2.5, 3.8, 4.1, 5.4]\narr2 = [6.7, 7.0, 8.3, 9.6, 10.9]",
+  "assertions": [
+   "assert abs(dot_prod - 161.72) < 0.0001"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 49.5"
+  ]
+ },
+ {
+  "init": "arr2 = [1.5, 2.5, 3.5]\narr1 = [2, 3, 4]",
+  "assertions": [
+   "assert dot_prod == 21.5"
+  ]
+ },
+ {
+  "init": "arr2 = [1, 2, 3]\narr1 = [1, 2]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 49.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 49.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6, 7]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]; arr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 44.75"
+  ]
+ },
+ {
+  "init": "arr1 = [-1.5, -2.5, -3.5]; arr2 = [-4.5, -5.5, -6.5]",
+  "assertions": [
+   "assert dot_prod == 44.75"
+  ]
+ },
+ {
+  "init": "arr1 = []; arr2 = [4, 5, 6]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2]; arr2 = [4, 5, 6]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 49.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 32.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, -2, 3]\narr2 = [-4, 5, -6]",
+  "assertions": [
+   "assert dot_prod == -4"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 49.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 49.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 32.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 44.75"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]; arr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 32.75"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 32.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.7, 3.6, 4.1, 5.3]\narr2 = [6.9, 7.8, 8.4, 9.6, 10.1]",
+  "assertions": [
+   "assert dot_prod == 220.99"
+  ]
+ },
+ {
+  "init": "arr1 = {}\narr2 = [1, 2, 3, 4]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4, 5, 6]",
+  "assertions": [
+   "assert dot_prod == 32.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]; arr2 = [4, 5, 6]",
+  "assertions": [
+   "assert dot_prod == 32.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 38.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [1.5, 2.5, 3.5]",
+  "assertions": [
+   "assert dot_prod == 16.875"
+  ]
+ },
+ {
+  "init": "arr1 = [1, -2, 3]\narr2 = [-1, 0, -3]",
+  "assertions": [
+   "assert dot_prod == -8"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.25, 3.75, 4.125, 5.625]; arr2 = [5.25, 4.5, 3.25, 2.75, 1.25]",
+  "assertions": [
+   "assert dot_prod == 38.09375"
+  ]
+ },
+ {
+  "init": "arr1 = []\narr2 = [1, 2, 3, 4, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [1, 2, 3]",
+  "assertions": [
+   "assert dot_prod == 14.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [1.5, 2.5, 3.5]",
+  "assertions": [
+   "assert dot_prod == 14.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5, 4.5, 5.5]\narr2 = [6.5, 7.5, 8.5, 9.5, 10.5]",
+  "assertions": [
+   "assert dot_prod == 192.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5, 4.5, 5.5]\narr2 = [1, 2, 3, 4, 5]",
+  "assertions": [
+   "assert dot_prod == 82.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 38.75"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 32.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5, 4.5, 5.5]\narr2 = [6.5, 7.5, 8.5, 9.5, 10.5]",
+  "assertions": [
+   "assert dot_prod == 192.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5, 4.5, 5.5]\narr2 = [1, 2, 3, 4, 5]",
+  "assertions": [
+   "assert dot_prod == 82.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5.5]\narr2 = [1, 2, 3, 4, 5.5]",
+  "assertions": [
+   "assert dot_prod == 86.25"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [1, 2, 3]",
+  "assertions": [
+   "assert dot_prod == 14.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [2, 3, 4]",
+  "assertions": [
+   "assert dot_prod == 23.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 38.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5, 4.5, 5.5]\narr2 = [1, 2, 3, 4, 5]",
+  "assertions": [
+   "assert dot_prod == 82.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [1, 2, 3]",
+  "assertions": [
+   "assert dot_prod == 14.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [1.5, 2.5, 3.5]",
+  "assertions": [
+   "assert dot_prod == 14.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 49.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 32.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.1, 2.2, 3.3, 4.4, 5.5]\narr2 = [6.6, 7.7, 8.8, 9.9, 10.1]",
+  "assertions": [
+   "assert round(dot_prod, 2) == 161.61"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5.5]\narr2 = [6, 7, 8, 9, 10.1]",
+  "assertions": [
+   "assert round(dot_prod, 2) == 141.05"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 49.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 49.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 32.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [2, 3, 4]",
+  "assertions": [
+   "assert dot_prod == 21.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 32.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 38.75"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 32.5"
+  ]
+ },
+ {
+  "init": "arr1 = [-1, -2, -3]\narr2 = [-4, -5, -6]",
+  "assertions": [
+   "assert dot_prod == -32"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5, 4.5, 5.5]\narr2 = [1.5, 2.5, 3.5, 4.5, 5.5]",
+  "assertions": [
+   "assert dot_prod == 82.5"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [1, 2, 3, 4, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr2 = [2,3,4,6]\narr1 = [1,2,3,4]",
+  "assertions": [
+   "assert dot_prod == 50"
+  ]
+ },
+ {
+  "init": "arr2 = [2,3,4,6]\narr1 = []",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [3, 4, 2.5, 6] ; arr2 = [2, 3.2, 2, 1]",
+  "assertions": [
+   "assert dot_prod == 24.8"
+  ]
+ },
+ {
+  "init": "arr1 = [5.5, 6.6, 7.7]; arr2 = [3.3, 2.2, 1.1] ",
+  "assertions": [
+   "assert dot_prod == 37.37"
+  ]
+ },
+ {
+  "init": "arr1 = [9.5, 4.33]\narr2 = [1.2, 5]",
+  "assertions": [
+   "assert abs(dot_prod - 33.86) < 1e-9"
+  ]
+ },
+ {
+  "init": "arr1 = [3.3,2.2, 1.1]\narr2 = [1, 2, 3]",
+  "assertions": [
+   "assert abs(dot_prod - 10.6) < 1e-9"
+  ]
+ },
+ {
+  "init": "arr1 = [1.2, 2.3, 3.5]; arr2 = [4.6, 5.7, 6.1]",
+  "assertions": [
+   "assert dot_prod == 36.62"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 37.75"
+  ]
+ },
+ {
+  "init": "arr1 = [-1, 2, -3]\narr2 = [-1, -2, 3]",
+  "assertions": [
+   "assert dot_prod == -4"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [2.5, 3.5, 4.5]",
+  "assertions": [
+   "assert dot_prod == 27.75"
+  ]
+ },
+ {
+  "init": "arr1 = [1,2,3,4.5,6.7]\narr2 = [2,3,4,5.6,7.8]",
+  "assertions": [
+   "assert dot_prod == 64.76"
+  ]
+ },
+ {
+  "init": "arr1 = [1,2,3,input1,input2,name,' ',None,56.78,23.4,str]\narr2 = [1,2,3,None,[23,2],'Hello','Hi','47864',(2,8)]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [0,0,0,0,name,0,w]\narr2 = [1,1,1,1,None,1,1]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1,2,3,4.5,6.7]\narr2 = []",
+  "assertions": [
+   "assert dot_prod == 0"
+  ]
+ },
+ {
+  "init": "arr1 = [0,0,0,None,0]\narr2 = [1,1,1,1,m,n,p,12.3,78,str]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [63.5,9.0,this,[2,8],567]\narr2 = [1,2,'Hello','World']",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [21,52,[39,12,400],42,'hello',None]\narr2 = [56,32,125,['1am',999,'2:56pm'],['No',None,this]]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2]\narr2 = [3, 4, 5]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1.57, 2.13]\narr2 = [3.78, 4.32]",
+  "assertions": [
+   "assert dot_prod == 13.3886"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 38.75"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 36.75"
+  ]
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 49.0"
+  ]
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6, 7]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [1, 2, 3]",
+  "assertions": [
+   "assert dot_prod == 14.5"
+  ]
+ },
+ {
+  "init": "arr1 = []; arr2 = [4, 5, 6]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2]; arr2 = [4, 5, 6]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1, 2]\narr2 = [4, 5, 6]",
+  "assertions": "error"
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertions": [
+   "assert dot_prod == 38.75"
+  ]
+ }
+]

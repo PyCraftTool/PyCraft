@@ -1,0 +1,537 @@
+[
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, 5, 6]",
+  "assertion": "assert result == [5, 7, 9]"
+ },
+ {
+  "init": "array1 = [1.5, 2.25, 3.75]\narray2 = [0.75, 1.75, 2.25]",
+  "assertion": "assert result == [2.25, 4.0, 6.0]"
+ },
+ {
+  "init": "array1 = [10, 20, 30, 40]\narray2 = [-10, -20, -30, -40]",
+  "assertion": "assert result == [0, 0, 0, 0]"
+ },
+ {
+  "init": "array1 = ['a', 'b', 'c']\narray2 = ['x', 'y', 'z']",
+  "assertion": "assert result == ['ax', 'by', 'cz']"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = []",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = None\narray2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['1', '2', '3']\narray2 = ['4', 5, '6']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1.5, '2.25', '3']\narray2 = [0.75, '1.75', 2.25]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4, 5]\narray2 = [5, 4, 3, 2, 1]",
+  "assertion": "assert result == [6, 6, 6, 6, 6]"
+ },
+ {
+  "init": "array1 = []\narray2 = []",
+  "assertion": "assert result == []"
+ },
+ {
+  "init": "array1 = [1.2, 2.4]\narray2 = ['2.7', '3.8']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['1', '2', '3', '4.5']\narray2 = [5, 4, 3, 2]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1.5, 2.5, 3.5]\narray2 = [4.5, 5.5, 6.5]",
+  "assertion": "assert result == [6.0, 8.0, 10.0]"
+ },
+ {
+  "init": "array1 = ['a', 'b', 'c']\narray2 = ['d', 'e', 'f']",
+  "assertion": "assert result == ['ad', 'be', 'cf']"
+ },
+ {
+  "init": "array1 = ['hello', None, 'world']\narray2 = ['python', None, 'code']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['1', '2', '3']\narray2 = [4.5, '5.5', '6.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['string1', 'string2', 'string3']\narray2 = ['   ', ' ', '   ']",
+  "assertion": "assert result == ['string1   ', 'string2 ', 'string3   ']"
+ },
+ {
+  "init": "array1 = [1.0, 2.0, 3.0]\narray2 = ['4.5', '5.5', '6.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['a']\narray2 = []",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['Hello', 'World']\narray2 = [' ', 'Python']",
+  "assertion": "assert result == ['Hello ', 'WorldPython']"
+ },
+ {
+  "init": "array1 = [1.5, 2.3, 3.7]\narray2 = [0.5, 1.2, 1.8]",
+  "assertion": "assert result == [2.0, 3.5, 5.5]"
+ },
+ {
+  "init": "array1 = ['4.5', '2.7', '6.9']\narray2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['1', '2', '3']\narray2 = ['4', '5', '6']",
+  "assertion": "assert result == ['14', '25', '36']"
+ },
+ {
+  "init": "array1 = None\narray2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1.5, 2.5, 3.5]\narray2 = [0.5, 0.5, 0.5]",
+  "assertion": "assert result == [2.0, 3.0, 4.0]"
+ },
+ {
+  "init": "array1 = [2, '3', 4]\narray2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [None, None, None]\narray2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [0.5, 1, 1.5]\narray2 = [1, 2, 3]",
+  "assertion": "assert result == [1.5, 3, 4.5]"
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [1, 2, 3, 4]",
+  "assertion": "assert result == [2, 4, 6, 8]"
+ },
+ {
+  "init": "array1 = [-1, -2, -3, -4]\narray2 = [-1, -2, -3, -4]",
+  "assertion": "assert result == [-2, -4, -6, -8]"
+ },
+ {
+  "init": "array1 = [0, 0, 0, 0]\narray2 = [0, 0, 0, 0]",
+  "assertion": "assert result == [0, 0, 0, 0]"
+ },
+ {
+  "init": "array1 = [1.5, 2.75, 3.25]\narray2 = [0.5, 1.25, 2.75]",
+  "assertion": "assert result == [2.0, 4.0, 6.0]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = ['4', '5', '6']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [1, 2]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = None\narray2 = [1, 2]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [2.5, 3.5, 4.5]\narray2 = ['1', '2', '3']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [4, 5, 6]\narray2 = ['7', '8', '9']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4, 5]\narray2 = [6, 7, 8, 9, 10]",
+  "assertion": "assert result == [7, 9, 11, 13, 15]"
+ },
+ {
+  "init": "array1 = [1.5, 2.5, 1.75]\narray2 = [0.5, 1, 0.25]",
+  "assertion": "assert result == [2.0, 3.5, 2.0]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [None, 'hello', 3.14]\narray2 = ['world', 2, 1.414]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [True, False, True]\narray2 = [False, True, False]",
+  "assertion": "assert result == [1, 1, 1]"
+ },
+ {
+  "init": "array1 = [1.5, '2.5', 1.75]\narray2 = [0.5, 1, '0.25']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['1.5', '2.5', '1.75']\narray2 = [0.5, 1, 0.25]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [5, 6, 7, 8]",
+  "assertion": "assert result == [6, 8, 10, 12]"
+ },
+ {
+  "init": "array1 = [0, 0.5, -2]\narray2 = [-0.5, 1, 3.5]",
+  "assertion": "assert result == [-0.5, 1.5, 1.5]"
+ },
+ {
+  "init": "array1 = [-3, 5, -1.5, 0]\narray2 = [10, -2.5, 1.5, -3.5]",
+  "assertion": "assert result == [7, 2.5, 0, -3.5]"
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = []",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = 'hello'\narray2 = [1, 2, 3, 4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [10, 20, 30, 40]",
+  "assertion": "assert result == [11, 22, 33, 44]"
+ },
+ {
+  "init": "array1 = [-5, 10, -15, 20]\narray2 = [5, -10, 15, -20]",
+  "assertion": "assert result == [0, 0, 0, 0]"
+ },
+ {
+  "init": "array1 = ['hello', 'world']\narray2 = ['python', 'programming']",
+  "assertion": "assert result == ['hellopython', 'worldprogramming']"
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [10, '20', 30, 40]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = 0.5",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [10, 20, 30]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [0.5, 1.5, 2.5]\narray2 = [1, 2, 3]",
+  "assertion": "assert result == [1.5, 3.5, 5.5]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [1, 2]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [None, None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1.5, 2.5, 3.5]\narray2 = ['1', '2', '3']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1.5, 2.5, 3.5]\narray2 = ['1.5', '2.5', '3.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, 5, '6']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, 5, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [0.5, 1.5, 2.5]\narray2 = [1.5, 2.5, 3.5]",
+  "assertion": "assert result == [2.0, 4.0, 6.0]"
+ },
+ {
+  "init": "array1 = [10, 20, 30]\narray2 = [0, 0, 0]",
+  "assertion": "assert result == [10, 20, 30]"
+ },
+ {
+  "init": "array1 = [1, 2, 3.5]\narray2 = [4, 5, 6.5]",
+  "assertion": "assert result == [5, 7, 10.0]"
+ },
+ {
+  "init": "array1 = [1.25, 2.5, 3.75]\narray2 = [1.25, 2.5, 3.75]",
+  "assertion": "assert result == [2.5, 5.0, 7.5]"
+ },
+ {
+  "init": "array1 = ['hello', 'world']\narray2 = ['!', '?']",
+  "assertion": "assert result == ['hello!', 'world?']"
+ },
+ {
+  "init": "array1 = [1.5, 2.5, 3.5]\narray2 = [2.5, 3.5, 4.5]",
+  "assertion": "assert result == [4.0, 6.0, 8.0]"
+ },
+ {
+  "init": "array1 = [0, 0, 0]\narray2 = [0, 0, 0]",
+  "assertion": "assert result == [0, 0, 0]"
+ },
+ {
+  "init": "array1 = [-1, -2, -3]\narray2 = [1, 2, 3]",
+  "assertion": "assert result == [0, 0, 0]"
+ },
+ {
+  "init": "array1 = [1.5, 2.5, 3.5]\narray2 = [0.5, 1.5, 2.5]",
+  "assertion": "assert result == [2.0, 4.0, 6.0]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4.5, 5.5, 6.5]",
+  "assertion": "assert result == [5.5, 7.5, 9.5]"
+ },
+ {
+  "init": "array1 = [0.5, 1.5, 2.5]\narray2 = [0.25, 0.75, 1.25]",
+  "assertion": "assert result == [0.75, 2.25, 3.75]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, '5', 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, [5], 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1.5]\narray2 = [2.5]",
+  "assertion": "assert result == [4.0]"
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['apple', 'banana', 'cherry']\narray2 = ['s', 's']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1.5, 2.5, 3.5]\narray2 = [1.25, 2.75, 3.125]",
+  "assertion": "assert result == [2.75, 5.25, 6.625]"
+ },
+ {
+  "init": "array1 = ['1', '2', '3']\narray2 = ['4', '5', 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['1', '2', '3']\narray2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = '4, 5, 6'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, 5, 6.5]",
+  "assertion": "assert result == [5, 7, 9.5]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [1.5, 2.5, 3.5]",
+  "assertion": "assert result == [2.5, 4.5, 6.5]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = ['a', 'b', 'c']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, 5, '6.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = ['4.5', '5.5', '6.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [-1, -2, -3]\narray2 = [4, 5, 6]",
+  "assertion": "assert result == [3, 3, 3]"
+ },
+ {
+  "init": "array1 = [1.5, 2.3, 3.7]\narray2 = [4.2, 5.5, 6.1]",
+  "assertion": "assert result == [5.7, 7.8, 9.8]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, None, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1, 2, 3.5]\narray2 = [4, 5, 6]",
+  "assertion": "assert result == [5, 7, 9.5]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [0, 0]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['hello', 'world']\narray2 = [' python', ' programming']",
+  "assertion": "assert result == ['hello python', 'world programming']"
+ },
+ {
+  "init": "array1 = [1.5, 2.3, 4.6]\narray2 = [2.5, 1.7, 3.4]",
+  "assertion": "assert result == [4.0, 4.0, 8.0]"
+ },
+ {
+  "init": "array1 = [1, 2, 3, 4]\narray2 = [5, 6, 7]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['1.5', '2.3', '4.6']\narray2 = [2.5, 1.7, 3.4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1.5, None, '3.6']\narray2 = [2.5, 1.7, 3.4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [0.5, 1.5, 2.5]\narray2 = [0.5, 0.5, 0.5]",
+  "assertion": "assert result == [1.0, 2.0, 3.0]"
+ },
+ {
+  "init": "array1 = ['abc', 'def', 'ghi']\narray2 = ['123', '456', '789']",
+  "assertion": "assert result == ['abc123', 'def456', 'ghi789']"
+ },
+ {
+  "init": "array1 = ['a', 'b', 'c']\narray2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [0, 0, 0]\narray2 = [1, 2, 3]",
+  "assertion": "assert result == [1, 2, 3]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [0, 0, 0]",
+  "assertion": "assert result == [1, 2, 3]"
+ },
+ {
+  "init": "array1 = ['1.5', '2.5', '3.5']\narray2 = [2.5, 3.5, 4.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['hello', 'world']\narray2 = ''",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [0.5, 1.5, 2.5, 3.5]\narray2 = [4.5, 5.5, 6.5, 7.5]",
+  "assertion": "assert result == [5.0, 7.0, 9.0, 11.0]"
+ },
+ {
+  "init": "array1 = [None, True, 2.5]\narray2 = ['hello', ['world'], 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = ['1.5', '2.75', '3.25']\narray2 = ['4.5', '5.75', '6.25']",
+  "assertion": "assert result == ['1.54.5', '2.755.75', '3.256.25']"
+ },
+ {
+  "init": "array1 = [[1, 2], [3, 4], [5, 6]]\narray2 = [[7, 8], [9, 10], [11, 12]]",
+  "assertion": "assert result == [[1, 2, 7, 8], [3, 4, 9, 10], [5, 6, 11, 12]]"
+ },
+ {
+  "init": "array1 = [0, 0, 0, 0, 0]\narray2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert result == [1, 2, 3, 4, 5]"
+ },
+ {
+  "init": "array1 = [1.5, 2.3, 3.7]\narray2 = [4.2, 5.8, 6.1]",
+  "assertion": "assert result == [5.7, 8.1, 9.8]"
+ },
+ {
+  "init": "array1 = [1.5, 2.5, 3.5]\narray2 = [1.5, 2.5, 3.5]",
+  "assertion": "assert result == [3.0, 5.0, 7.0]"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, 5, '6.0']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [1.5, 2.5, 3.5]\narray2 = ['4.5', '5.5', '6.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "array1 = [-1, -2, -3, -4]\narray2 = [1, 2, 3, 4]",
+  "assertion": "assert result == [0, 0, 0, 0]"
+ },
+ {
+  "init": "array1 = ['Hello', 'World']\narray2 = ['!', '?']",
+  "assertion": "assert result == ['Hello!', 'World?']"
+ },
+ {
+  "init": "array1 = [1.5, '2.5', 3.5]\narray2 = [0.5, 1.5, 2.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ }
+]

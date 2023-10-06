@@ -1,0 +1,194 @@
+[
+ {
+  "init": "x = '5'; y = '10'; z = '15'",
+  "assertions": [
+   "assert (a == 5 and b == 10 and c == 15)"
+  ]
+ },
+ {
+  "init": "x = '5.5'; y = '10.5'; z = '15.5'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "x = 5; y = 10; z = 15",
+  "assertions": [
+   "assert (a != y != z != 15)"
+  ]
+ },
+ {
+  "init": "x = 5; y = 10; z = 15",
+  "assertions": [
+   "assert (x == y != z)"
+  ]
+ },
+ {
+  "init": "x = 5; y = 10; z = 15",
+  "assertions": [
+   "assert (x != y == z)"
+  ]
+ },
+ {
+  "init": "x = 5; y = 10; z = 15",
+  "assertions": [
+   "assert (x == y == z)"
+  ]
+ },
+ {
+  "init": "x = '1.0'\ny = '2.0'\nz = '3.0'",
+  "assertions": [
+   "assert a == 1.0",
+   "assert b == 2.0",
+   "assert c == 3.0"
+  ]
+ },
+ {
+  "init": "x = '1.125'\ny = '3.5'\nz = '6.75'",
+  "assertions": [
+   "assert a == 1.125",
+   "assert b == 3.5",
+   "assert c == 6.75"
+  ]
+ },
+ {
+  "init": "x = ['1.125', '3.5', '6.75']\ny = ['1.125', '3.5', '6.75']\nz = ['1.125', '3.5', '6.75']\n",
+  "assertions": [
+   "assert a == '1.125'",
+   "assert b == '3.5'",
+   "assert c == '6.75'"
+  ]
+ },
+ {
+  "init": "x = 1\ny = 2\nz = 3",
+  "assertions": [
+   "assert a == b"
+  ]
+ },
+ {
+  "init": "x = 1\ny = 2\nz = 3",
+  "assertions": [
+   "assert b == c"
+  ]
+ },
+ {
+  "init": "x = 1\ny = 2\nz = 3",
+  "assertions": [
+   "assert a == c"
+  ]
+ },
+ {
+  "init": "x = 1\ny = 2\nz = 3",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "x = 1\ny = 2\nz = 3",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "x = 1\ny = 2\nz = 3",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "a = x; b = y; c = z",
+  "assertions": "error"
+ },
+ {
+  "init": "x=None;y=2;z=3",
+  "assertions": "error"
+ },
+ {
+  "init": "x=1;y=None;z=3",
+  "assertions": "error"
+ },
+ {
+  "init": "x=1;y=2;z=None",
+  "assertions": "error"
+ },
+ {
+  "init": "x='';y=2;z=3",
+  "assertions": "error"
+ },
+ {
+  "init": "x='A';y=2;z=3",
+  "assertions": "error"
+ },
+ {
+  "init": "x=1;y=2.5;z=''",
+  "assertions": "error"
+ },
+ {
+  "init": "x=1;y=2.5;z='A'",
+  "assertions": "error"
+ },
+ {
+  "init": "x='1'\ny='2'\nz='None'",
+  "assertions": [
+   "assert a == '1'",
+   "assert b == '2'",
+   "assert c == None"
+  ]
+ },
+ {
+  "init": "x = '1'; y = '2'; z = '3'",
+  "assertions": [
+   "assert a == 1",
+   "assert b == 2",
+   "assert c == 3"
+  ]
+ },
+ {
+  "init": "x = '1'; y = '2'; z = '3'",
+  "assertions": [
+   "assert a == 1.0",
+   "assert b == 2.0",
+   "assert c == 3.0"
+  ]
+ },
+ {
+  "init": "x = '1.125'; y = '3.5'; z = '6.75'",
+  "assertions": [
+   "assert a == 1.125",
+   "assert b == 3.5",
+   "assert c == 6.75"
+  ]
+ },
+ {
+  "init": "x = 'None'; y = 'None'; z = 'None'",
+  "assertions": [
+   "assert a == None",
+   "assert b == None",
+   "assert c == None"
+  ]
+ },
+ {
+  "init": "x = '1'; y = 'None'; z = 'None'",
+  "assertions": [
+   "assert a == 1",
+   "assert b == None",
+   "assert c == None"
+  ]
+ },
+ {
+  "init": "x = 'None'; y = '1'; z = 'None'",
+  "assertions": [
+   "assert a == None",
+   "assert b == 1",
+   "assert c == None"
+  ]
+ },
+ {
+  "init": "x = 'None'; y = 'None'; z = '1'",
+  "assertions": [
+   "assert a == None",
+   "assert b == None",
+   "assert c == 1"
+  ]
+ }
+]

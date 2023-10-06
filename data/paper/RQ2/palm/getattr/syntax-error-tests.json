@@ -1,0 +1,8 @@
+[
+ {
+  "init": "obj = {'name': 'John', 'age': 20}, n = obj.name",
+  "assertions": [
+   "assert n == 'John'"
+  ]
+ }
+]

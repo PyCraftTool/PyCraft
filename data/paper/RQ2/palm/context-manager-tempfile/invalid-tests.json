@@ -1,0 +1,54 @@
+[
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('{}')\ntemp_dir.cleanup()",
+  "assertions": [
+   "assert content == '{}'"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('{}')\ntemp_dir.cleanup()\ncontent = '{}'",
+  "assertions": "error"
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('{}')\ntemp_dir.cleanup()\ncontent = '1234'",
+  "assertions": [
+   "assert content == '1234'"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('{}')\ntemp_dir.cleanup()\ncontent = ''",
+  "assertions": [
+   "assert content == ''"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('{}')\ntemp_dir.cleanup()\ncontent = '  '",
+  "assertions": [
+   "assert content == '  '"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('{}')\ntemp_dir.cleanup()\ncontent = None",
+  "assertions": [
+   "assert content is None"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('{}')\ntemp_dir.cleanup()\ncontent = []",
+  "assertions": [
+   "assert content == []"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('{}')\ntemp_dir.cleanup()\ncontent = ['1', '2', '3']",
+  "assertions": [
+   "assert content == ['1', '2', '3']"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('{}')\ntemp_dir.cleanup()\ncontent = {'a':1, 'b':2}",
+  "assertions": [
+   "assert content == {'a':1, 'b':2}"
+  ]
+ }
+]

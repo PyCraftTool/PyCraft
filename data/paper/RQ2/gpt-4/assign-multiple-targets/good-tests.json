@@ -1,0 +1,890 @@
+[
+ {
+  "init": "x = 10\ny = 20\nz = 30",
+  "assertion": "assert a == 10\nassert b == 20\nassert c == 30"
+ },
+ {
+  "init": "x = 'a'\ny = 'b'\nz = 'c'",
+  "assertion": "assert a == 'a'\nassert b == 'b'\nassert c == 'c'"
+ },
+ {
+  "init": "x = ''\ny = '  string  '\nz = None",
+  "assertion": "assert a == ''\nassert b == '  string  '\nassert c == None"
+ },
+ {
+  "init": "x = 1.25\ny = '2.5'\nz = 3.75",
+  "assertion": "assert a == 1.25\nassert b == '2.5'\nassert c == 3.75"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = ['a', 'b', 'c']\nz = [1.25, 2.5, 3.75]",
+  "assertion": "assert a == [1, 2, 3]\nassert b == ['a', 'b', 'c']\nassert c == [1.25, 2.5, 3.75]"
+ },
+ {
+  "init": "x = {'a': 1, 'b': 2, 'c': 3}\ny = {'1': 'a', '2': 'b', '3': 'c'}\nz = {1: 'a', 2: 'b', 3: 'c'}",
+  "assertion": "assert a == {'a': 1, 'b': 2, 'c': 3}\nassert b == {'1': 'a', '2': 'b', '3': 'c'}\nassert c == {1: 'a', 2: 'b', 3: 'c'}"
+ },
+ {
+  "init": "x = True\ny = False\nz = None",
+  "assertion": "assert a == True\nassert b == False\nassert c == None"
+ },
+ {
+  "init": "x = float('inf')\ny = float('-inf')\nz = float('nan')",
+  "assertion": "assert a == float('inf')\nassert b == float('-inf')\nassert c != c"
+ },
+ {
+  "init": "x = None\ny = None\nz = None",
+  "assertion": "assert a == None\nassert b == None\nassert c == None"
+ },
+ {
+  "init": "x = ''\ny = ' '\nz = 'Hello'",
+  "assertion": "assert a == ''\nassert b == ' '\nassert c == 'Hello'"
+ },
+ {
+  "init": "x = 0\ny = float('inf')\nz = float('-inf')",
+  "assertion": "assert a == 0\nassert b == float('inf')\nassert c == float('-inf')"
+ },
+ {
+  "init": "x = [1,2,3]\ny = []\nz = [4,5,6]",
+  "assertion": "assert a == [1,2,3]\nassert b == []\nassert c == [4,5,6]"
+ },
+ {
+  "init": "x = {1,2,3}\ny = {2,3,4}\nz = None",
+  "assertion": "assert a == {1,2,3}\nassert b == {2,3,4}\nassert c == None"
+ },
+ {
+  "init": "x = 1.345\ny = '3.567'\nz = -4.567",
+  "assertion": "assert a == 1.345\nassert b == '3.567'\nassert c == -4.567"
+ },
+ {
+  "init": "x = {1: 'a', 2: 'b'}\ny = {3: 'c', 4: 'd'}\nz = [5, 6]",
+  "assertion": "assert a == {1: 'a', 2: 'b'}\nassert b == {3: 'c', 4: 'd'}\nassert c == [5, 6]"
+ },
+ {
+  "init": "x = 5\ny = 'hello'\nz = [1, 2, 3]",
+  "assertion": "assert a == 5\nassert b == 'hello'\nassert c == [1, 2, 3]"
+ },
+ {
+  "init": "x = 0\ny = ''\nz = None",
+  "assertion": "assert a == 0\nassert b == ''\nassert c is None"
+ },
+ {
+  "init": "x = 12.5\ny = 'white'\nz = [None, None]",
+  "assertion": "assert a == 12.5\nassert b == 'white'\nassert c == [None, None]"
+ },
+ {
+  "init": "x = '27.5'\ny = 'word'\nz = []",
+  "assertion": "assert a == '27.5'\nassert b == 'word'\nassert c == []"
+ },
+ {
+  "init": "x = None\ny = None\nz= 'String with spaces'",
+  "assertion": "assert a is None\nassert b is None\nassert c == 'String with spaces'"
+ },
+ {
+  "init": "x = 'None'\ny = '  '\nz = 122.4",
+  "assertion": "assert a == 'None'\nassert b == '  '\nassert c == 122.4"
+ },
+ {
+  "init": "x = 5\ny = 10\nz = 15",
+  "assertion": "assert a == 5\nassert b == 10\nassert c == 15"
+ },
+ {
+  "init": "x = ''\ny = 'b'\nz= 'c'",
+  "assertion": "assert a == ''\nassert b == 'b'\nassert c == 'c'"
+ },
+ {
+  "init": "x = float(1)\ny = float(2)\nz=float(3)",
+  "assertion": "assert a == float(1)\nassert b == float(2)\nassert c == float(3)"
+ },
+ {
+  "init": "x = [1,2,3]\ny = []\nz=[None, None, None]",
+  "assertion": "assert a == [1,2,3]\nassert b == []"
+ },
+ {
+  "init": "x = 'pp'\ny = 'pythoncode cream'\nz='doe'",
+  "assertion": "assert a == 'pp'\nassert b == 'pythoncode cream'\nassert c == 'doe'"
+ },
+ {
+  "init": "x = 'hello'\ny = 'world'\nz = '!'",
+  "assertion": "assert a=='hello'\nassert b=='world'\nassert c=='!'"
+ },
+ {
+  "init": "x = None\ny = None\nz = None",
+  "assertion": "assert a==None\nassert b==None\nassert c==None"
+ },
+ {
+  "init": "x = ''\ny = ' '\nz = 'test_case1'",
+  "assertion": "assert a==''\nassert b==' '\nassert c=='test_case1'"
+ },
+ {
+  "init": "x = 5.1\ny = 'string'\nz = 6.25",
+  "assertion": "assert a==5.1\nassert b=='string'\nassert c==6.25"
+ },
+ {
+  "init": "x = '4.1'\ny = 10\nz = 'a : 27'",
+  "assertion": "assert a =='4.1'\nassert b==10\nassert c=='a : 27'"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = set([4, 3, 5])\nz = 2.7",
+  "assertion": "assert a==[1,2,3]\nassert b==set([4,3,5])\nassert c == 2.7"
+ },
+ {
+  "init": "x = False\ny = 1.89\nz = [None, 'Nil']",
+  "assertion": "assert a==False\nassert b==1.89\nassert c==[None,'Nil']"
+ },
+ {
+  "init": "x,y,z = 1,2,3",
+  "assertion": "assert a == 1\nassert b == 2\nassert c == 3"
+ },
+ {
+  "init": "x,y,z = \"Hello\",\"\",\" 'Test' \"",
+  "assertion": "assert a == 'Hello'\nassert b == ''"
+ },
+ {
+  "init": "x,y,z = [1,2,3],[],['string 1',None,\" 'String 2' \"]",
+  "assertion": "assert a == [1,2,3]\nassert b == []\nassert c == ['string 1',None,\" 'String 2' \"]"
+ },
+ {
+  "init": "x,y,z = None, False, True ",
+  "assertion": "assert a == None\nassert b == False\nassert c == True"
+ },
+ {
+  "init": "x,y,z = float('inf'), 1.23,[1.23, float('inf')]",
+  "assertion": "assert a == float('inf')\nassert b == 1.23\nassert c == [1.23, float('inf')]"
+ },
+ {
+  "init": "x = ['apple', 'banana', 'cherry']\ny = ''\nz = None",
+  "assertion": "assert a == ['apple', 'banana', 'cherry']\nassert b == ''\nassert c == None"
+ },
+ {
+  "init": "x = ''\ny = 'Good day'\nz = 3.2 ",
+  "assertion": "assert a == ''\nassert b == 'Good day' \nassert c == 3.2"
+ },
+ {
+  "init": "x = {1: '', 2: 'b', None: '  string  '}\ny = None\nz = [1.2, 2.3, '3.4']",
+  "assertion": "assert a == {1: '', 2: 'b', None: '  string  '}\nassert b == None\nassert c == [1.2, 2.3, '3.4'] "
+ },
+ {
+  "init": "x = '3.2'\ny = 7.2\nz = 13",
+  "assertion": "assert a == '3.2'\nassert b == 7.2\nassert c == 13"
+ },
+ {
+  "init": "x = 3.2\ny = True\nz = [1,2,3]",
+  "assertion": "assert a == 3.2\nassert b == True\nassert c == [1,2,3]"
+ },
+ {
+  "init": "x = 'Hello World'\ny = 567.8\nz = {'name' : 'XYZ', 'age' : 20}",
+  "assertion": "assert a == 'Hello World' \nassert b == 567.8\nassert c == {'name' : 'XYZ', 'age' : 20}"
+ },
+ {
+  "init": "x = 'test'\ny = 'phrase'\nz = 'python'",
+  "assertion": "assert a == 'test'\nassert b == 'phrase'\nassert c == 'python'"
+ },
+ {
+  "init": "x = ''\ny = '  '\nz = None",
+  "assertion": "assert a == ''\nassert b == '  '\nassert c == None"
+ },
+ {
+  "init": "x = [1,2,3,4]\ny = ()\nz = {1:'a', 2:'b'}",
+  "assertion": "assert a == [1,2,3,4]\nassert b == ()\nassert c == {1:'a', 2:'b'}"
+ },
+ {
+  "init": "x = 0.0\ny =-5094.09\nz ='3.5'",
+  "assertion": "assert a == 0.0\nassert b == -5094.09\nassert c == '3.5'"
+ },
+ {
+  "init": "x = '0.0'\ny = 'string'\nz = None",
+  "assertion": "assert a == '0.0'\nassert b == 'string'\nassert c == None"
+ },
+ {
+  "init": "x = 'cat'\ny = 9\nz = None",
+  "assertion": "assert a == 'cat'\nassert b == 9\nassert c == None"
+ },
+ {
+  "init": "x = ''\ny = float(9)\nz = []",
+  "assertion": "assert a == ''\nassert b == 9.0\nassert c == []"
+ },
+ {
+  "init": "x = None\ny = []\nz = None",
+  "assertion": "assert a == None\nassert b == []\nassert c == None"
+ },
+ {
+  "init": "x = float('0.1')\ny = [{1: 32, '54':88,'null_value': None}]\nz = None",
+  "assertion": "assert a == 0.1\nassert b == [{1: 32, '54':88,'null_value': None}]\nassert c == None"
+ },
+ {
+  "init": "x = 'hello'\ny = 'world'\nz = '!'",
+  "assertion": "assert a == 'hello'\nassert b == 'world'\nassert c == '!'"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = [4, 5, 6]\nz = [7, 8, 9]",
+  "assertion": "assert a == [1, 2, 3]\nassert b == [4, 5, 6]\nassert c == [7, 8, 9]"
+ },
+ {
+  "init": "x = 1.23\ny = 4.56\nz = 7.89",
+  "assertion": "assert a == 1.23\nassert b == 4.56\nassert c == 7.89"
+ },
+ {
+  "init": "x = '1.23'\ny = '4.56'\nz = '7.89'",
+  "assertion": "assert a == '1.23'\nassert b == '4.56'\nassert c == '7.89'"
+ },
+ {
+  "init": "x = ''\ny = ' '\nz = '  '",
+  "assertion": "assert a == ''\nassert b == ' '\nassert c == '  '"
+ },
+ {
+  "init": "x = True\ny = False\nz = True",
+  "assertion": "assert a == True\nassert b == False\nassert c == True"
+ },
+ {
+  "init": "x = {'a': 1}\ny = {'b': 2}\nz = {'c': 3}",
+  "assertion": "assert a == {'a': 1}\nassert b == {'b': 2}\nassert c == {'c': 3}"
+ },
+ {
+  "init": "x = (1, 2)\ny = (3, 4)\nz = (5, 6)",
+  "assertion": "assert a == (1, 2)\nassert b == (3, 4)\nassert c == (5, 6)"
+ },
+ {
+  "init": "x = 1\ny = 2\nz = 3",
+  "assertion": "assert a == 1\nassert b == 2\nassert c == 3"
+ },
+ {
+  "init": "x = 'string'\ny = ''\nz = '  string  '",
+  "assertion": "assert a == 'string'\nassert b == ''\nassert c == '  string  '"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = []\nz = [None, None]",
+  "assertion": "assert a == [1, 2, 3]\nassert b == []\nassert c == [None, None]"
+ },
+ {
+  "init": "x = None\ny = 1.23\nz = '1.23'",
+  "assertion": "assert a == None\nassert b == 1.23\nassert c == '1.23'"
+ },
+ {
+  "init": "x = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\ny = {'a': 1, 'b': 2, 'c': [None, None]}\nz = {1: '', 2: 'b', None: '  string  '}",
+  "assertion": "assert a == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nassert b == {'a': 1, 'b': 2, 'c': [None, None]}\nassert c == {1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "x = 1.23\ny = '1.23'\nz = None",
+  "assertion": "assert a == 1.23\nassert b == '1.23'\nassert c == None"
+ },
+ {
+  "init": "x = ''\ny = '  string  '\nz = 'string'",
+  "assertion": "assert a == ''\nassert b == '  string  '\nassert c == 'string'"
+ },
+ {
+  "init": "x = [None, None]\ny = [1, 2, 3]\nz = []",
+  "assertion": "assert a == [None, None]\nassert b == [1, 2, 3]\nassert c == []"
+ },
+ {
+  "init": "x = '1.23'\ny = None\nz = 1.23",
+  "assertion": "assert a == '1.23'\nassert b == None\nassert c == 1.23"
+ },
+ {
+  "init": "x = {1: '', 2: 'b', None: '  string  '}\ny = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nz = {'a': 1, 'b': 2, 'c': [None, None]}",
+  "assertion": "assert a == {1: '', 2: 'b', None: '  string  '}\nassert b == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nassert c == {'a': 1, 'b': 2, 'c': [None, None]}"
+ },
+ {
+  "init": "x = 0\ny = 0.0\nz = '0'",
+  "assertion": "assert a == 0\nassert b == 0.0\nassert c == '0'"
+ },
+ {
+  "init": "x = [None, None]\ny = [None, None, None]\nz = [None, None, None, None]",
+  "assertion": "assert a == [None, None]\nassert b == [None, None, None]\nassert c == [None, None, None, None]"
+ },
+ {
+  "init": "x = 1.23\ny = '4.56'\nz = [7.89]",
+  "assertion": "assert a == 1.23\nassert b == '4.56'\nassert c == [7.89]"
+ },
+ {
+  "init": "x = []\ny = [None]\nz = [None, None]",
+  "assertion": "assert a == []\nassert b == [None]\nassert c == [None, None]"
+ },
+ {
+  "init": "x = {}\ny = {'key': 'value'}\nz = {'key1': 'value1', 'key2': 'value2'}",
+  "assertion": "assert a == {}\nassert b == {'key': 'value'}\nassert c == {'key1': 'value1', 'key2': 'value2'}"
+ },
+ {
+  "init": "x = 'string'\ny = ''\nz = ' '",
+  "assertion": "assert a == 'string'\nassert b == ''\nassert c == ' '"
+ },
+ {
+  "init": "x = None\ny = 1.125\nz = '3.5'",
+  "assertion": "assert a == None\nassert b == 1.125\nassert c == '3.5'"
+ },
+ {
+  "init": "x = {'a': 1, 'b': 2}\ny = {'c': 3.125, 'd': '4.5'}\nz = {'e': ['1.125', '3.5', '6.75', '5.9']}",
+  "assertion": "assert a == {'a': 1, 'b': 2}\nassert b == {'c': 3.125, 'd': '4.5'}\nassert c == {'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "x = 2.5\ny = 3.5\nz = 5.0",
+  "assertion": "assert a == 2.5\nassert b == 3.5\nassert c == 5.0"
+ },
+ {
+  "init": "x = 0\ny = -1\nz = 100000",
+  "assertion": "assert a == 0\nassert b == -1\nassert c == 100000"
+ },
+ {
+  "init": "x = -0.0\ny = 0.1\nz = -0.1",
+  "assertion": "assert a == -0.0\nassert b == 0.1\nassert c == -0.1"
+ },
+ {
+  "init": "x = float('inf')\ny = float('-inf')\nz = float('nan')",
+  "assertion": "assert a == float('inf')\nassert b == float('-inf')"
+ },
+ {
+  "init": "x = [1,2,3]\ny = []\nz = ['a', 'b', 'c']",
+  "assertion": "assert a == [1,2,3]\nassert b == []\nassert c == ['a', 'b', 'c']"
+ },
+ {
+  "init": "x = {1: 'a', 2: 'b'}\ny = {}\nz = {3: 'c', 4: 'd'}",
+  "assertion": "assert a == {1: 'a', 2: 'b'}\nassert b == {}\nassert c == {3: 'c', 4: 'd'}"
+ },
+ {
+  "init": "x = (1,2,3)\ny = ()\nz = ('a', 'b', 'c')",
+  "assertion": "assert a == (1,2,3)\nassert b == ()\nassert c == ('a', 'b', 'c')"
+ },
+ {
+  "init": "x = 'string'\ny = ''\nz = 'another string'",
+  "assertion": "assert a == 'string'\nassert b == ''\nassert c == 'another string'"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = []\nz = ['a', 'b', 'c']",
+  "assertion": "assert a == [1, 2, 3]\nassert b == []\nassert c == ['a', 'b', 'c']"
+ },
+ {
+  "init": "x = 1.2\ny = 2.3\nz = 3.4",
+  "assertion": "assert a == 1.2\nassert b == 2.3\nassert c == 3.4"
+ },
+ {
+  "init": "x = '1.2'\ny = '2.3'\nz = '3.4'",
+  "assertion": "assert a == '1.2'\nassert b == '2.3'\nassert c == '3.4'"
+ },
+ {
+  "init": "x = 5\ny = 6\nz = 7",
+  "assertion": "assert a == 5\nassert b == 6\nassert c == 7"
+ },
+ {
+  "init": "x = 'Hello'\ny = 'World'\nz = '!'",
+  "assertion": "assert a == 'Hello'\nassert b == 'World'\nassert c == '!'"
+ },
+ {
+  "init": "x = None\ny = 0\nz = 0.0",
+  "assertion": "assert a == None\nassert b == 0\nassert c == 0.0"
+ },
+ {
+  "init": "x = 5.1\ny = '5.1'\nz = [5.1]",
+  "assertion": "assert a == 5.1\nassert b == '5.1'\nassert c == [5.1]"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = (4, 5, 6)\nz = {'seven': 7, 'eight': 8, 'nine': 9}",
+  "assertion": "assert a == [1, 2, 3]\nassert b == (4, 5, 6)\nassert c == {'seven': 7, 'eight': 8, 'nine': 9}"
+ },
+ {
+  "init": "x = 0\ny = None\nz = False",
+  "assertion": "assert a == 0\nassert b == None\nassert c == False"
+ },
+ {
+  "init": "x = 1.0\ny = 1\nz = '1'",
+  "assertion": "assert a == 1.0\nassert b == 1\nassert c == '1'"
+ },
+ {
+  "init": "x = -1\ny = -2.0\nz = '-3'",
+  "assertion": "assert a == -1\nassert b == -2.0\nassert c == '-3'"
+ },
+ {
+  "init": "x = 1.5\ny = [1,2,3]\nz = {'a':10, 'b':20}",
+  "assertion": "assert a == 1.5\nassert b == [1,2,3]\nassert c == {'a':10, 'b':20}"
+ },
+ {
+  "init": "x = None\ny = ''\nz = ' '",
+  "assertion": "assert a == None\nassert b == ''\nassert c == ' '"
+ },
+ {
+  "init": "x = ''\ny = ' '\nz = None",
+  "assertion": "assert a == ''\nassert b == ' '\nassert c == None"
+ },
+ {
+  "init": "x = float('nan')\ny = float('nan')\nz = float('nan')",
+  "assertion": "assert a != a\nassert b != b\nassert c != c"
+ },
+ {
+  "init": "x = {'a': 1, 'b': 2, 'c': 3.125}\ny = {'e': ['1.125', '3.5', '6.75', '5.9']}\nz = {}",
+  "assertion": "assert a == {'a': 1, 'b': 2, 'c': 3.125}\nassert b == {'e': ['1.125', '3.5', '6.75', '5.9']}\nassert c == {}"
+ },
+ {
+  "init": "x = 'Test'\ny = ''\nz = 'String'",
+  "assertion": "assert a == 'Test'\nassert b == ''\nassert c == 'String'"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = []\nz = [4, 5, 6]",
+  "assertion": "assert a == [1, 2, 3]\nassert b == []\nassert c == [4, 5, 6]"
+ },
+ {
+  "init": "x = 1.23\ny = 0.0\nz = -1.23",
+  "assertion": "assert a == 1.23\nassert b == 0.0\nassert c == -1.23"
+ },
+ {
+  "init": "x = None\ny = True\nz = False",
+  "assertion": "assert a == None\nassert b == True\nassert c == False"
+ },
+ {
+  "init": "x = {'a': 1, 'b': 2}\ny = {3: 'c', 4: 'd'}\nz = {}",
+  "assertion": "assert a == {'a': 1, 'b': 2}\nassert b == {3: 'c', 4: 'd'}\nassert c == {}"
+ },
+ {
+  "init": "x = '1.23'\ny = '0.0'\nz = '-1.23'",
+  "assertion": "assert a == '1.23'\nassert b == '0.0'\nassert c == '-1.23'"
+ },
+ {
+  "init": "x = (1, 2, 3)\ny = ()\nz = (4, 5, 6)",
+  "assertion": "assert a == (1, 2, 3)\nassert b == ()\nassert c == (4, 5, 6)"
+ },
+ {
+  "init": "x = set([1, 2, 3])\ny = set()\nz = set([4, 5, 6])",
+  "assertion": "assert a == set([1, 2, 3])\nassert b == set()\nassert c == set([4, 5, 6])"
+ },
+ {
+  "init": "x = 'hello'\ny = 'world'\nz = 'python'",
+  "assertion": "assert a == 'hello'\nassert b == 'world'\nassert c == 'python'"
+ },
+ {
+  "init": "x = ''\ny = ''\nz = ''",
+  "assertion": "assert a == ''\nassert b == ''\nassert c == ''"
+ },
+ {
+  "init": "x = 0.5\ny = 1.5\nz = 2.5",
+  "assertion": "assert a == 0.5\nassert b == 1.5\nassert c == 2.5"
+ },
+ {
+  "init": "x = []\ny = []\nz = []",
+  "assertion": "assert a == []\nassert b == []\nassert c == []"
+ },
+ {
+  "init": "x = ['hello', 'world']\ny = [1,2,3,4,5]\nz = [None, None, None]",
+  "assertion": "assert a == ['hello', 'world']\nassert b == [1,2,3,4,5]\nassert c == [None, None, None]"
+ },
+ {
+  "init": "x = '3.14'\ny = '2.71'\nz = '1.41'",
+  "assertion": "assert a == '3.14'\nassert b == '2.71'\nassert c == '1.41'"
+ },
+ {
+  "init": "x = '  hello  '\ny = '  world  '\nz = '  python  '",
+  "assertion": "assert a == '  hello  '\nassert b == '  world  '\nassert c == '  python  '"
+ },
+ {
+  "init": "x = '123'\ny = '456'\nz = '789'",
+  "assertion": "assert a == '123'\nassert b == '456'\nassert c == '789'"
+ },
+ {
+  "init": "x = (1, 2, 3)\ny = (4, 5, 6)\nz = (7, 8, 9)",
+  "assertion": "assert a == (1, 2, 3)\nassert b == (4, 5, 6)\nassert c == (7, 8, 9)"
+ },
+ {
+  "init": "x = {1: 'a', 2: 'b', 3: 'c'}\ny = {4: 'd', 5: 'e', 6: 'f'}\nz = {7: 'g', 8: 'h', 9: 'i'}",
+  "assertion": "assert a == {1: 'a', 2: 'b', 3: 'c'}\nassert b == {4: 'd', 5: 'e', 6: 'f'}\nassert c == {7: 'g', 8: 'h', 9: 'i'}"
+ },
+ {
+  "init": "x = -1\ny = 0\nz = 1",
+  "assertion": "assert a == -1\nassert b == 0\nassert c == 1"
+ },
+ {
+  "init": "x = 1.23\ny = '1.23'\nz = [1.23]",
+  "assertion": "assert a == 1.23\nassert b == '1.23'\nassert c == [1.23]"
+ },
+ {
+  "init": "x = 1.23\ny = 1.23\nz = 1.23",
+  "assertion": "assert a == 1.23\nassert b == 1.23\nassert c == 1.23"
+ },
+ {
+  "init": "x = '1.23'\ny = '1.23'\nz = '1.23'",
+  "assertion": "assert a == '1.23'\nassert b == '1.23'\nassert c == '1.23'"
+ },
+ {
+  "init": "x = [1.23]\ny = [1.23]\nz = [1.23]",
+  "assertion": "assert a == [1.23]\nassert b == [1.23]\nassert c == [1.23]"
+ },
+ {
+  "init": "x = ['1.23']\ny = ['1.23']\nz = ['1.23']",
+  "assertion": "assert a == ['1.23']\nassert b == ['1.23']\nassert c == ['1.23']"
+ },
+ {
+  "init": "x = 'test'\ny = 'python'\nz = 'code'",
+  "assertion": "assert a == 'test'\nassert b == 'python'\nassert c == 'code'"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = []\nz = [None, None, None]",
+  "assertion": "assert a == [1, 2, 3]\nassert b == []\nassert c == [None, None, None]"
+ },
+ {
+  "init": "x = 3.14\ny = '3.14'\nz = float('3.14')",
+  "assertion": "assert a == 3.14\nassert b == '3.14'\nassert c == 3.14"
+ },
+ {
+  "init": "x = {'key': 'value'}\ny = {'key': None}\nz = {}",
+  "assertion": "assert a == {'key': 'value'}\nassert b == {'key': None}\nassert c == {}"
+ },
+ {
+  "init": "x = set([1, 2, 3])\ny = set()\nz = set([None])",
+  "assertion": "assert a == set([1, 2, 3])\nassert b == set()\nassert c == set([None])"
+ },
+ {
+  "init": "x = (1, 2, 3)\ny = ()\nz = (None,)",
+  "assertion": "assert a == (1, 2, 3)\nassert b == ()\nassert c == (None,)"
+ },
+ {
+  "init": "x = 1.25\ny = 2.75\nz = 3.5",
+  "assertion": "assert a == 1.25\nassert b == 2.75\nassert c == 3.5"
+ },
+ {
+  "init": "x = '1.25'\ny = '2.75'\nz = '3.5'",
+  "assertion": "assert a == '1.25'\nassert b == '2.75'\nassert c == '3.5'"
+ },
+ {
+  "init": "x = (1,2,3)\ny = ()\nz = (4,5,6)",
+  "assertion": "assert a == (1,2,3)\nassert b == ()\nassert c == (4,5,6)"
+ },
+ {
+  "init": "x = {'a': 1, 'b': 2}\ny = {}\nz = {'c': 3, 'd': 4}",
+  "assertion": "assert a == {'a': 1, 'b': 2}\nassert b == {}\nassert c == {'c': 3, 'd': 4}"
+ },
+ {
+  "init": "x = 1+2j\ny = 2+3j\nz = 3+4j",
+  "assertion": "assert a == 1+2j\nassert b == 2+3j\nassert c == 3+4j"
+ },
+ {
+  "init": "x = 1.125\ny = 3.5\nz = 6.75",
+  "assertion": "assert a == 1.125\nassert b == 3.5\nassert c == 6.75"
+ },
+ {
+  "init": "x = '1.125'\ny = '3.5'\nz = '6.75'",
+  "assertion": "assert a == '1.125'\nassert b == '3.5'\nassert c == '6.75'"
+ },
+ {
+  "init": "x = {'a': 1, 'b': 2, 'c': 3.125}\ny = {'d': ['1.125', '3.5', '6.75', '5.9']}\nz = {'e': [None, None]}",
+  "assertion": "assert a == {'a': 1, 'b': 2, 'c': 3.125}\nassert b == {'d': ['1.125', '3.5', '6.75', '5.9']}\nassert c == {'e': [None, None]}"
+ },
+ {
+  "init": "x = (1, 2, 3)\ny = ()\nz = (None, None)",
+  "assertion": "assert a == (1, 2, 3)\nassert b == ()\nassert c == (None, None)"
+ },
+ {
+  "init": "x = set([1, 2, 3])\ny = set()\nz = set([None, None])",
+  "assertion": "assert a == set([1, 2, 3])\nassert b == set()\nassert c == set([None])"
+ },
+ {
+  "init": "x = None\ny = [1, 2, 3]\nz = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert a == None\nassert b == [1, 2, 3]\nassert c == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "x = 1.23\ny = '1.23'\nz = [1.23, '1.23']",
+  "assertion": "assert a == 1.23\nassert b == '1.23'\nassert c == [1.23, '1.23']"
+ },
+ {
+  "init": "x = [None, None]\ny = {'a': None, 'b': None}\nz = (None, None)",
+  "assertion": "assert a == [None, None]\nassert b == {'a': None, 'b': None}\nassert c == (None, None)"
+ },
+ {
+  "init": "x = []\ny = ()\nz = {}",
+  "assertion": "assert a == []\nassert b == ()\nassert c == {}"
+ },
+ {
+  "init": "x = [1, 'a', None]\ny = (1, 'a', None)\nz = {'a': 1, 'b': 'a', 'c': None}",
+  "assertion": "assert a == [1, 'a', None]\nassert b == (1, 'a', None)\nassert c == {'a': 1, 'b': 'a', 'c': None}"
+ },
+ {
+  "init": "x = 'string'\ny = 'another string'\nz = 'yet another string'",
+  "assertion": "assert a == 'string'\nassert b == 'another string'\nassert c == 'yet another string'"
+ },
+ {
+  "init": "x = {'a': 1, 'b': 2, 'c': 3}\ny = {'d': 4, 'e': 5, 'f': 6}\nz = {'g': 7, 'h': 8, 'i': 9}",
+  "assertion": "assert a == {'a': 1, 'b': 2, 'c': 3}\nassert b == {'d': 4, 'e': 5, 'f': 6}\nassert c == {'g': 7, 'h': 8, 'i': 9}"
+ },
+ {
+  "init": "x = 5.5\ny = 10.10\nz = 15.15",
+  "assertion": "assert a == 5.5\nassert b == 10.10\nassert c == 15.15"
+ },
+ {
+  "init": "x = '5.5'\ny = '10.10'\nz = '15.15'",
+  "assertion": "assert a == '5.5'\nassert b == '10.10'\nassert c == '15.15'"
+ },
+ {
+  "init": "x = [None, None]\ny = [None, None]\nz = [None, None]",
+  "assertion": "assert a == [None, None]\nassert b == [None, None]\nassert c == [None, None]"
+ },
+ {
+  "init": "x = 'string'\ny = ''\nz = '  string with spaces  '",
+  "assertion": "assert a == 'string'\nassert b == ''\nassert c == '  string with spaces  '"
+ },
+ {
+  "init": "x = None\ny = [1, 2, 3, 0.1, 0.2, 0.3]\nz = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert a == None\nassert b == [1, 2, 3, 0.1, 0.2, 0.3]\nassert c == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "x = 1.125\ny = [None, None]\nz = {1: '', 2: 'b', None: '  string  '}",
+  "assertion": "assert a == 1.125\nassert b == [None, None]\nassert c == {1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "x = '1.125'\ny = [1, 2, 3.125]\nz = ['1.125', '3.5', '6.75', '5.9']",
+  "assertion": "assert a == '1.125'\nassert b == [1, 2, 3.125]\nassert c == ['1.125', '3.5', '6.75', '5.9']"
+ },
+ {
+  "init": "x = '1.23'\ny = '  4.56  '\nz = '78910'",
+  "assertion": "assert a == '1.23'\nassert b == '  4.56  '\nassert c == '78910'"
+ },
+ {
+  "init": "x = 0\ny = 0\nz = 0",
+  "assertion": "assert a == 0\nassert b == 0\nassert c == 0"
+ },
+ {
+  "init": "x = 1.23\ny = 4.56\nz = 789.10",
+  "assertion": "assert a == 1.23\nassert b == 4.56\nassert c == 789.10"
+ },
+ {
+  "init": "x = float('nan')\ny = float('inf')\nz = float('-inf')",
+  "assertion": "assert a != a\nassert b == float('inf')\nassert c == float('-inf')"
+ },
+ {
+  "init": "x = [1,2,3]\ny = (4,5,6)\nz = {'a':7, 'b':8, 'c':9}",
+  "assertion": "assert a == [1,2,3]\nassert b == (4,5,6)\nassert c == {'a':7, 'b':8, 'c':9}"
+ },
+ {
+  "init": "x = '1.2'\ny = '3.4'\nz = '5.6'",
+  "assertion": "assert a == '1.2'\nassert b == '3.4'\nassert c == '5.6'"
+ },
+ {
+  "init": "x = 'abc'\ny = 'def'\nz = 'ghi'",
+  "assertion": "assert a == 'abc'\nassert b == 'def'\nassert c == 'ghi'"
+ },
+ {
+  "init": "x = [1,2,3]\ny = [4,5,6]\nz = [7,8,9]",
+  "assertion": "assert a == [1,2,3]\nassert b == [4,5,6]\nassert c == [7,8,9]"
+ },
+ {
+  "init": "x = 1.5\ny = 2.5\nz = 3.5",
+  "assertion": "assert a == 1.5\nassert b == 2.5\nassert c == 3.5"
+ },
+ {
+  "init": "x = ''\ny = ' '\nz = 'test'",
+  "assertion": "assert a == ''\nassert b == ' '\nassert c == 'test'"
+ },
+ {
+  "init": "x = '1.5'\ny = '2.5'\nz = '3.5'",
+  "assertion": "assert a == '1.5'\nassert b == '2.5'\nassert c == '3.5'"
+ },
+ {
+  "init": "x = {'a':1}\ny = {'b':2}\nz = {'c':3}",
+  "assertion": "assert a == {'a':1}\nassert b == {'b':2}\nassert c == {'c':3}"
+ },
+ {
+  "init": "x = [1,2,3]\ny = []\nz = [None, None]",
+  "assertion": "assert a == [1,2,3]\nassert b == []\nassert c == [None, None]"
+ },
+ {
+  "init": "x = {1: 'a', 2: 'b'}\ny = {}\nz = {None: 'None'}",
+  "assertion": "assert a == {1: 'a', 2: 'b'}\nassert b == {}\nassert c == {None: 'None'}"
+ },
+ {
+  "init": "x = float('inf')\ny = float('-inf')\nz = float('nan')",
+  "assertion": "assert a == float('inf')\nassert b == float('-inf')\nassert (c != c) == True"
+ },
+ {
+  "init": "x = 'str'\ny = ''\nz = 'None'",
+  "assertion": "assert a == 'str'\nassert b == ''\nassert c == 'None'"
+ },
+ {
+  "init": "x = [1,2,3,4]\ny = []\nz = ['str', None, 5.5]",
+  "assertion": "assert a == [1,2,3,4]\nassert b == []\nassert c == ['str', None, 5.5]"
+ },
+ {
+  "init": "x = None\ny = False\nz = True",
+  "assertion": "assert a == None\nassert b == False\nassert c == True"
+ },
+ {
+  "init": "x = 123\ny = '123'\nz = 123.0",
+  "assertion": "assert a == 123\nassert b == '123'\nassert c == 123.0"
+ },
+ {
+  "init": "x = '1.23'\ny = 1.23\nz = '1.23'",
+  "assertion": "assert a == '1.23'\nassert b == 1.23\nassert c == '1.23'"
+ },
+ {
+  "init": "x = -123\ny = '-123'\nz = -123.0",
+  "assertion": "assert a == -123\nassert b == '-123'\nassert c == -123.0"
+ },
+ {
+  "init": "x = ' '\ny = 'str'\nz = ''",
+  "assertion": "assert a == ' '\nassert b == 'str'\nassert c == ''"
+ },
+ {
+  "init": "x = '-1.23' \ny = -1.23\nz = '-1.23'",
+  "assertion": "assert a == '-1.23'\nassert b == -1.23\nassert c == '-1.23'"
+ },
+ {
+  "init": "x = 0.0\ny = '0.0'\nz = 0",
+  "assertion": "assert a == 0.0\nassert b == '0.0'\nassert c == 0"
+ },
+ {
+  "init": "x = 1.23\ny = '1.23'\nz = float('1.23')",
+  "assertion": "assert a == 1.23\nassert b == '1.23'\nassert c == 1.23"
+ },
+ {
+  "init": "x = 'string1'\ny = 'string2'\nz = 'string3'",
+  "assertion": "assert a == 'string1'\nassert b == 'string2'\nassert c == 'string3'"
+ },
+ {
+  "init": "x = {1: '', 2: 'b', None: '  string  '}\ny = {1: '', 2: 'b', None: '  string  '}\nz = {1: '', 2: 'b', None: '  string  '}",
+  "assertion": "assert a == {1: '', 2: 'b', None: '  string  '}\nassert b == {1: '', 2: 'b', None: '  string  '}\nassert c == {1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "x = 1\ny = 2\nz = 'string'",
+  "assertion": "assert a == 1\nassert b == 2\nassert c == 'string'"
+ },
+ {
+  "init": "x = ''\ny = []\nz = None",
+  "assertion": "assert a == ''\nassert b == []\nassert c == None"
+ },
+ {
+  "init": "x = 1.25\ny = '1.5'\nz = [1, '2', 3.75]",
+  "assertion": "assert a == 1.25\nassert b == '1.5'\nassert c == [1, '2', 3.75]"
+ },
+ {
+  "init": "x = ' '\ny = '  string  '\nz = ''",
+  "assertion": "assert a == ' '\nassert b == '  string  '\nassert c == ''"
+ },
+ {
+  "init": "x = {'x': 1, 'y': 2, 'z': 3.125}\ny = {'1': 'one', '2': 'two', '3': 'three'}\nz = {None: 'null', 'null': None}",
+  "assertion": "assert a == {'x': 1, 'y': 2, 'z': 3.125}\nassert b == {'1': 'one', '2': 'two', '3': 'three'}\nassert c == {None: 'null', 'null': None}"
+ },
+ {
+  "init": "x = '1.25'\ny = 'null'\nz = '2'",
+  "assertion": "assert a == '1.25'\nassert b == 'null'\nassert c == '2'"
+ },
+ {
+  "init": "x = [None, None]\ny = [' ', '  string  ']\nz = [1, '2', 3.75]",
+  "assertion": "assert a == [None, None]\nassert b == [' ', '  string  ']\nassert c == [1, '2', 3.75]"
+ },
+ {
+  "init": "x = (1, 2, 3)\ny = (None, None)\nz = ('1', '2', '3')",
+  "assertion": "assert a == (1, 2, 3)\nassert b == (None, None)\nassert c == ('1', '2', '3')"
+ },
+ {
+  "init": "x = float('NaN')\ny = float('-inf')\nz = float('inf')",
+  "assertion": "assert a != a\nassert b == float('-inf')\nassert c == float('inf')"
+ },
+ {
+  "init": "x = 'text'\ny = ''\nz = ' '",
+  "assertion": "assert a == 'text'\nassert b == ''\nassert c == ' '"
+ },
+ {
+  "init": "x = None\ny = None\nz = None",
+  "assertion": "assert a is None\nassert b is None\nassert c is None"
+ },
+ {
+  "init": "x = True\ny = False\nz = True",
+  "assertion": "assert a is True\nassert b is False\nassert c is True"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = []\nz = ['text', 2, 3.0]",
+  "assertion": "assert a == [1, 2, 3]\nassert b == []\nassert c == ['text', 2, 3.0]"
+ },
+ {
+  "init": "x = 3.14159\ny = 0.0\nz = -6.28318",
+  "assertion": "assert a == 3.14159\nassert b == 0.0\nassert c == -6.28318"
+ },
+ {
+  "init": "x = ''\ny = 'test'\nz = 'string'",
+  "assertion": "assert a == ''\nassert b == 'test'\nassert c == 'string'"
+ },
+ {
+  "init": "x = '0'\ny = '0'\nz = '0'",
+  "assertion": "assert a == '0'\nassert b == '0'\nassert c == '0'"
+ },
+ {
+  "init": "x = 'test'\ny = 'case'\nz = 'example'",
+  "assertion": "assert a == 'test'\nassert b == 'case'\nassert c == 'example'"
+ },
+ {
+  "init": "x = {'key': 'value'}\ny = {'key1': 'value1', 'key2': 'value2'}\nz = {'key3': 'value3', 'key4': 'value4', 'key5': 'value5'}",
+  "assertion": "assert a == {'key': 'value'}\nassert b == {'key1': 'value1', 'key2': 'value2'}\nassert c == {'key3': 'value3', 'key4': 'value4', 'key5': 'value5'}"
+ },
+ {
+  "init": "x = 1.23\ny = '1.23'\nz = '  1.23  '",
+  "assertion": "assert a == 1.23\nassert b == '1.23'\nassert c == '  1.23  '"
+ },
+ {
+  "init": "x = ''\ny = ' '\nz = '   '",
+  "assertion": "assert a == ''\nassert b == ' '\nassert c == '   '"
+ },
+ {
+  "init": "x = -1\ny = -1.0\nz = '-1'",
+  "assertion": "assert a == -1\nassert b == -1.0\nassert c == '-1'"
+ },
+ {
+  "init": "x = (1,2,3)\ny = (4,5,6)\nz = (7,8,9)",
+  "assertion": "assert a == (1,2,3)\nassert b == (4,5,6)\nassert c == (7,8,9)"
+ },
+ {
+  "init": "x = set([1,2,3])\ny = set([])\nz = set([4,5,6])",
+  "assertion": "assert a == set([1,2,3])\nassert b == set([])\nassert c == set([4,5,6])"
+ },
+ {
+  "init": "x = 'test'\ny = 'example'\nz = 'string'",
+  "assertion": "assert a == 'test'\nassert b == 'example'\nassert c == 'string'"
+ },
+ {
+  "init": "x = []\ny = [None]\nz = [1, None, 'test']",
+  "assertion": "assert a == []\nassert b == [None]\nassert c == [1, None, 'test']"
+ },
+ {
+  "init": "x = '0.5'\ny = '1.5'\nz = '2.5'",
+  "assertion": "assert a == '0.5'\nassert b == '1.5'\nassert c == '2.5'"
+ },
+ {
+  "init": "x = {1: 'a', 2: 'b'}\ny = {3: 'c', 4: 'd'}\nz = {5: 'e', 6: 'f'}",
+  "assertion": "assert a == {1: 'a', 2: 'b'}\nassert b == {3: 'c', 4: 'd'}\nassert c == {5: 'e', 6: 'f'}"
+ },
+ {
+  "init": "x = ''\ny = ' '\nz = 'abc'",
+  "assertion": "assert a == ''\nassert b == ' '\nassert c == 'abc'"
+ },
+ {
+  "init": "x = [1,2,3]\ny = ['a','b','c']\nz = [None, None, None]",
+  "assertion": "assert a == [1,2,3]\nassert b == ['a','b','c']\nassert c == [None, None, None]"
+ },
+ {
+  "init": "x = (1,2,3)\ny = ('a','b','c')\nz = (None, None, None)",
+  "assertion": "assert a == (1,2,3)\nassert b == ('a','b','c')\nassert c == (None, None, None)"
+ },
+ {
+  "init": "x = {'a':1, 'b':2, 'c':3}\ny = {'name':'python', 'version':3.8}\nz = {}",
+  "assertion": "assert a == {'a':1, 'b':2, 'c':3}\nassert b == {'name':'python', 'version':3.8}\nassert c == {}"
+ },
+ {
+  "init": "x = 5\ny = 'hello'\nz = [1,2,3]",
+  "assertion": "assert a == 5\nassert b == 'hello'\nassert c == [1,2,3]"
+ },
+ {
+  "init": "x = 'string'\ny = ''\nz = ' another string '",
+  "assertion": "assert a == 'string'\nassert b == ''\nassert c == ' another string '"
+ },
+ {
+  "init": "x = []\ny = [1, 2, 3]\nz = ['a', 'b', 'c']",
+  "assertion": "assert a == []\nassert b == [1, 2, 3]\nassert c == ['a', 'b', 'c']"
+ },
+ {
+  "init": "x = 1.25\ny = '3.5'\nz = 6.75",
+  "assertion": "assert a == 1.25\nassert b == '3.5'\nassert c == 6.75"
+ },
+ {
+  "init": "x = {'a': 1, 'b': 2}\ny = {'c': 3, 'd': 4}\nz = {'e': 5, 'f': 6}",
+  "assertion": "assert a == {'a': 1, 'b': 2}\nassert b == {'c': 3, 'd': 4}\nassert c == {'e': 5, 'f': 6}"
+ },
+ {
+  "init": "x = 1+2j\ny = 2-3j\nz = 3+4j",
+  "assertion": "assert a == 1+2j\nassert b == 2-3j\nassert c == 3+4j"
+ },
+ {
+  "init": "x = '1'\ny = '2'\nz = 3",
+  "assertion": "assert a == '1'\nassert b == '2'\nassert c == 3"
+ }
+]

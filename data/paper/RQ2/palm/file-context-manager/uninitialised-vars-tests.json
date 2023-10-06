@@ -1,0 +1,10 @@
+[
+ {
+  "init": "file_contents = None",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ }
+]

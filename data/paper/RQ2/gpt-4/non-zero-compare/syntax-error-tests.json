@@ -1,0 +1,22 @@
+[
+ {
+  "init": "val1 = 0\nval2 = 3.33\nnumber_value = ' string that can not be identified as a number_list ' *",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = None\n val2 = ' '\n number_value = undefined_variable   ",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = None\n val2 = 6.345\n number_value = True",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "val1 = None\n val2 = -56.345\n number_value = False",
+  "assertions": [
+   "assert val == val1"
+  ]
+ }
+]

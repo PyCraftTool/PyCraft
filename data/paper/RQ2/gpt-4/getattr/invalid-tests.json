@@ -1,0 +1,40 @@
+[
+ {
+  "init": "obj = 'name'",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = ''",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = 112.56",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = {'name': 'dict'}",
+  "assertions": "error"
+ },
+ {
+  "init": "obj = 'John'",
+  "assertions": "error"
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test()",
+  "assertions": [
+   "assert n == 'unknown'"
+  ]
+ },
+ {
+  "init": "class Test:\n    def __init__(self, name):\n        self.name = name\n\nobj = Test()",
+  "assertions": [
+   "assert n == 'unknown'"
+  ]
+ },
+ {
+  "init": "obj = {'name': 'TestName'}",
+  "assertions": [
+   "assert n == 'TestName'"
+  ]
+ }
+]

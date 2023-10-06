@@ -1,0 +1,873 @@
+[
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [6, 7, 8, 9, 10]",
+  "assertion": "assert dot_prod == 130"
+ },
+ {
+  "init": "arr1 = []\narr2 = []",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [6, 7, 8]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, '5']\narr2 = [6, 7, 8, 9, 10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, None]\narr2 = [6, 7, 8, 9, 10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [6, 7, 8, 9, '10']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [6, 7, 8, 9, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = '12345'\narr2 = [6, 7, 8, 9, 10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = '678910'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]",
+  "assertion": "assert dot_prod == 32"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = None\narr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = 'string'\narr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = 'string'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 'string', 3]\narr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, 'string', 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = [1, 2, 3, 4, 5]\narr1 = [1, 2, 3, 4, 5]",
+  "assertion": "assert dot_prod == 55"
+ },
+ {
+  "init": "arr2 = []\narr1 = []",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr2 = [1, 2, 3]\narr1 = ['a', 'b', 'c']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = [1, 2, None]\narr1 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = [1, 2, 3]\narr1 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = None\narr1 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = [1, 2, '3']\narr1 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = [1, 2, 3.5]\narr1 = [1, 2, '3.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [-1, -2, -3]\narr2 = [-4, -5, -6]",
+  "assertion": "assert dot_prod == 32"
+ },
+ {
+  "init": "arr1 = [1, 2, '3']\narr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, '5', 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1.5, '2.5', 3.5]\narr2 = [4.5, 5.5, 6.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [0, 0, 0, 0, 0]\narr2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = ['4', '5', '6']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = None\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, '2', 3]\narr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = [4, 5, 6]",
+  "assertion": "assert dot_prod == 32"
+ },
+ {
+  "init": "arr1 = [-1, -2, -3]; arr2 = [-4, -5, -6]",
+  "assertion": "assert dot_prod == 32"
+ },
+ {
+  "init": "arr1 = []; arr2 = []",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = []",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = [4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, '3']; arr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, None, 3]\narr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', '2', '3']\narr2 = ['4', '5', '6']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [0, 0, 0]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert dot_prod == 55"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, None, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, '5.5', 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [0, 0, 0]\narr2 = [1, 2, 3]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [-1, -2, -3]",
+  "assertion": "assert dot_prod == -14"
+ },
+ {
+  "init": "arr1 = ['1', '2', '3']\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [1, 2]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', '2', '3']; arr2 = ['4', '5', '6']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = None; arr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1.5', '2.5', '3.5']; arr2 = ['4.5', '5.5', '6.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1.1, 2.2, 3.3]\narr2 = [4.4, 5.5, 6.6]",
+  "assertion": "assert abs(dot_prod - 38.72) < 0.0001"
+ },
+ {
+  "init": "arr1 = ['1.1', '2.2', '3.3']\narr2 = ['4.4', '5.5', '6.6']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [6, 7, 8, 9]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', '2', '3', '4', '5']\narr2 = ['6', '7', '8', '9', '10']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [None, 2, 3, 4, 5]\narr2 = [6, 7, 8, 9, 10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [6, None, 8, 9, 10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = ['6', 7, 8, 9, 10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', 2, 3, 4, 5]\narr2 = [6, 7, 8, 9, 10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1.5, 2.7, '3.6', 4.1, 5.3]\narr2 = [6.9, 7.8, 8.4, 9.6, 10.1]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1.5, 2.5]\narr2 = [2, 3]",
+  "assertion": "assert dot_prod == 10.5"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = ['1', '2', '3', '4', '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', '2', '3', '4', '5']\narr2 = ['1', '2', '3', '4', '5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, None]\narr2 = [1, 2, 3,4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [5, 4, 3, 2, 1]",
+  "assertion": "assert dot_prod == 35"
+ },
+ {
+  "init": "arr1 = [1, '2', 3]\narr2 = [4, '5', 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', '2', '3']\narr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, None]\narr2 = [4, 5, 6, 7]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, '2', 3]; arr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [0, 0, 0]; arr2 = [4, 5, 6]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = ['-1.5', '2.5', '3.5']; arr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = ['4.5', '5.5', '6.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [0, 0, None]\narr2 = [None, 0, 0]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', '2', '3']\narr2 = ['1', '2', '3']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', 2, 3]\narr2 = [1, '2', 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [1, '2', 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]; arr2 = [5, 4, 3, 2, 1]",
+  "assertion": "assert dot_prod == 35"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = [4, None, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = ['4', 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', '2', '3']; arr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = [4, '5', 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = []",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = ['1', '2', '3']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [None, None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [None, None, None]\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [6, 7, 8, 9, 10.5]",
+  "assertion": "assert dot_prod == 132.5"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [0, 0, 0, 0, 0]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = None\narr2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', '2', '3', '4', '5']\narr2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, None]\narr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3.5]\narr2 = [4, 5, '6.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, 5, '6']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = '6, 7, 8, 9, 10'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = '1, 2, 3, 4, 5'\narr2 = [6, 7, 8, 9, 10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, '5']\narr2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, None]\narr2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5.5]\narr2 = [1, 2, 3, 4, '5.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [1, 2, 3, 4, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = 'string'\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = '1, 2, 3'\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = '1, 2, 3'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [1.5, '2', 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, 5, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4, 5, 0]",
+  "assertion": "assert dot_prod == 14"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [-4, -5, -6]",
+  "assertion": "assert dot_prod == -32"
+ },
+ {
+  "init": "arr1 = [0, 0, 0]\narr2 = [4, 5, 6]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = []",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [None, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [None, 2, 3]\narr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1.1, 2.2, 3.3]\narr2 = [4.4, 5.5, 6.6]",
+  "assertion": "assert dot_prod == 38.72"
+ },
+ {
+  "init": "arr1 = []\narr2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]\narr2 = [None, None, None, None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = [2.2,3,4.5,6]\narr1 = ['1',2,3.769,'4.45.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = []\narr1 = [1,2,3,4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = [None, 3.5, '', 'string']\narr1 = ['1.34','3.45','None','string']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = ['2.083','4','3.569','1.23']\narr1 = [1.6905,2,None,4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = ['2.0',3.0,4.0,6.0]\narr1 = [1,2,3,4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = [[1,2],[3,4]]\narr1 = [[1,2],[3,4]]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr2 = 'string'\narr1 = 'string'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4]; arr2 = [1, 2, 3, 4]",
+  "assertion": "assert dot_prod == 30"
+ },
+ {
+  "init": "arr1 = [1, 2, None, 4]; arr2 = [1, 2, 3, 4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [] ; arr2 = []",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 1, 1, 1] ; arr2 = ['1', '2', '3', '4']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1.6, 3.7, 2.9] ; arr2 = ['1.6', '3.7', '2.9']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1,2,3,4] ; arr2 = [1, '1']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5, 6]\narr2 = [1, 2, 3, 4, 5, 6]",
+  "assertion": "assert dot_prod == 91"
+ },
+ {
+  "init": "arr1 = [9.5, '4.33']\narr2 = [1.2, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1]*1000000\narr2 = [2]*1000000",
+  "assertion": "assert dot_prod == 2000000"
+ },
+ {
+  "init": "arr1 = None\narr2 = [1, 2, 3, 4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['a', 'b', 'c']\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [0]*100000\narr2 = [1]*100000",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1]*100000\narr2 = [0]*100000",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4, 5]; arr2 = [6, 7, 8, 9, 10]",
+  "assertion": "assert dot_prod == 130"
+ },
+ {
+  "init": "arr1 = [0, 0, 0, 0]; arr2 = [1, 1, 1, 1]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = [-1, -2, -3]",
+  "assertion": "assert dot_prod == -14"
+ },
+ {
+  "init": "arr1 = [1, 2, 'a']; arr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4]; arr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]; arr2 = [None, 1, 2]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [None, None, None]; arr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', '2', '3']; arr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, '', 2]\narr2 = [' 1 ', '1', '2']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, None, 2]\narr2 = ['1', 2, '3']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2.5, '3']\narr2 = ['1', 2, 3.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [-1, -2, -3]\narr2 = [-1, -2, -3]",
+  "assertion": "assert dot_prod == 14"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4]\narr2 = [2, 3, 4, 5]",
+  "assertion": "assert dot_prod == 40"
+ },
+ {
+  "init": "arr1 = [0, 0, 0, 0]\narr2 = [1, 2, 3, 4]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4]\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1', '2', 3.5]\narr2 = ['2', '3', 4.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 'two', 3]\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = '1,2,3'\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1.125','3.5','6.75','5.9']\narr2 = [1,2,3,4]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1,2,3,4.5,6.7]\narr2 = []",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [450.50,24.00]\narr2 = ['25','952']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1,2,3]\narr2 = [4,5,6]",
+  "assertion": "assert dot_prod == 32"
+ },
+ {
+  "init": "arr1 = [9]\narr2 = [8]",
+  "assertion": "assert dot_prod == 72"
+ },
+ {
+  "init": "arr1 = [0.25, 0.5]\narr2 = [12.0, 0.6]",
+  "assertion": "assert dot_prod - 3.75 <= 0.0001"
+ },
+ {
+  "init": "arr1 = ['0.25']\narr2 = [12]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [None]\narr2 = [10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [' '] \narr2 = [10]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 5, 12]\narr2 = [10,None, 9]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [4] \narr2 = [ ]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1]\narr2 = [None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1.5', '2.5']\narr2 = ['3.5', '4.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [None, None]\narr2 = [4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4]\narr2 = [5, 6, 7]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1.1, 2.2, 3.3]\narr2 = [4.4, 5.5, 6.6]",
+  "assertion": "assert abs(dot_prod - 38.72) < 0.00001"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4.4, '5.5', 6.6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = ['4.4', '5.5', '6.6']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [0, 0, 0]\narr2 = [0, 0, 0]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1, 1, 1, 1]\narr2 = [1, 2, 3, 4]",
+  "assertion": "assert dot_prod == 10"
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = [4.0, 5.0, 6.0]",
+  "assertion": "assert dot_prod == 32.0"
+ },
+ {
+  "init": "arr1 = '123'\narr2 = [4, 5, 6]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3]\narr2 = '456'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = ['1.5', '2.5', '3.5']\narr2 = ['4.5', '5.5', '6.5']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [None, 2, 3]\narr2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [1, 2, 3, 4]\narr2 = [4, 3, 2, 1]",
+  "assertion": "assert dot_prod == 20"
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, 3.5]; arr2 = [4.5, 5.5, 6.5]",
+  "assertion": "assert dot_prod == 43.25"
+ },
+ {
+  "init": "arr1 = [1.1, 2.2, 3.3]\narr2 = [4.4, 5.5, 6.6]",
+  "assertion": "assert abs(dot_prod - 38.72) < 0.001"
+ },
+ {
+  "init": "arr1 = [0, 0, 0]\narr2 = [100, 200, 300]",
+  "assertion": "assert dot_prod == 0"
+ },
+ {
+  "init": "arr1 = [1.5, 2.5, '3.5']\narr2 = [4.5, 5.5, 6.5]",
+  "assertion": "assert 1==1",
+  "error": true
+ }
+]

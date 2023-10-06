@@ -1,0 +1,4 @@
+[
+ "[\n    {\n        \"init\": \"arr1 = []\",\n        \"assertions\": \"error\"\n    },\n    {\n        \"init\": \"arr1 = [1.5, 2.5, 3.5, 4.5]\",\n        \"assertions\": [\"assert mean == 2.875\"]\n    },\n    {\n        \"init\": \"arr1 = ['1', 2, 3, 4.5]\",\n        \"assertions\": \"error\"\n    },\n    {\n        \"init\": \"arr1 = None\",\n        \"assertions\": \"error\"\n    },\n    {\n        \"init\": \"arr1 = '',\n        \"assertions\": \"error\"\n    },\n    {\n        \"init\": \"arr1 = '    '\",\n        \"assertions\": [\"assert mean == 0\"]\n    },\n    {\n        \"init\": \"arr1 = 2.5\",\n        \"assertions\": \"error\"\n    }\n]",
+ "[{\"init\": \"arr1 = [1, 2, 3, 4, 5]\", \"assertions\": [\"assert mean == 3.0\"]}, {\"init\": \"arr1 = [0]\", \"assertions\": [\"assert mean == 0.0\"]}, {\"init\": \"arr1 = []\", \"assertions\": \"error\"}, {\"init\": \"arr1 = ['a', 'b', 'c']\", \"assertions\": \"error\"}, {\"init\": \"arr1..."
+]

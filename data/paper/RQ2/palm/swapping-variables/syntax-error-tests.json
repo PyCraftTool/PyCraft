@@ -1,0 +1,14 @@
+[
+ {
+  "init": "a = 'a'\nb = 'b'",
+  "assertions": [
+   "assert a == 'b' and b == 'a']"
+  ]
+ },
+ {
+  "init": "a = {'1': 1, '2': 2}\nb = {'a': 'A', 'b': 'B'}",
+  "assertions": [
+   "assert a == {'a': 'A', 'b': 'B'] and b == {'1': 1, '2': 2}"
+  ]
+ }
+]

@@ -1,0 +1,10 @@
+[
+ {
+  "init": "int_list = ['1', '2', '3', '4', '5\u2019]",
+  "assertions": "error"
+ },
+ {
+  "init": "int_list = ['1.2', '-2.4', '3.6', '-4.8', '5.0\u2019]",
+  "assertions": "error"
+ }
+]

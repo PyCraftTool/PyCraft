@@ -1,0 +1,446 @@
+[
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'c']\ncounts = {}",
+  "assertion": "assert counts['a'] == 2\nassert counts['b'] == 2\nassert counts['c'] == 2"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'c']\ncounts = {'a': 2, 'b': 2, 'c': 2}\ndel counts['a']",
+  "assertion": "assert counts['b'] == 2\nassert counts['c'] == 2"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {}",
+  "assertion": "assert counts['a'] == 1"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {'a': 0}",
+  "assertion": "assert counts['a'] == 1"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert counts['a'] == 1"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {'a': 1, 'b': 2, 'c': 3}\niterable = ['d', 'e', 'f']\ncounts['d'] = 1",
+  "assertion": "assert counts['d'] == 1"
+ },
+ {
+  "init": "iterable = ['1', '2', '3', '4', '5']\ncounts = {}",
+  "assertion": "assert counts == {'1': 1, '2': 1, '3': 1, '4': 1, '5': 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncounts = {'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1}",
+  "assertion": "assert counts == {'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1}"
+ },
+ {
+  "init": "iterable = [1, 1, 2, 3, 4, 4, 5, 5, 6]\ncounts = {}",
+  "assertion": "assert counts == {1: 2, 2: 1, 3: 1, 4: 2, 5: 2, 6: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncounts = {}",
+  "assertion": "assert counts == {'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1}"
+ },
+ {
+  "init": "iterable = [True, False, True]\ncounts = {}",
+  "assertion": "assert counts == {True: 2, False: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b']\ncounts = {}",
+  "assertion": "assert counts['a'] == 2"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b']\ncounts = {'a': 1, 'b': 1, 'c': 1}",
+  "assertion": "assert counts['a'] == 2"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b']\ncounts = {'a': 1, 'b': 2, 'c': 1}",
+  "assertion": "assert counts['c'] == 1"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 5]\ncounts = {}",
+  "assertion": "assert counts[1] == 1"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncounts = {}",
+  "assertion": "assert counts['b'] == 1"
+ },
+ {
+  "init": "iterable = [None, None, None]\ncounts = {}",
+  "assertion": "assert counts[None] == 3"
+ },
+ {
+  "init": "iterable = []\ncounts = {}",
+  "assertion": "assert counts == {}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 5]\ncounts = {}",
+  "assertion": "assert counts == {1: 1, 2: 1, 3: 1, 4: 1, 5: 1}"
+ },
+ {
+  "init": "iterable = ['1.125', '3.5', '6.75', '5.9']\ncounts = {}",
+  "assertion": "assert counts == {'1.125': 1, '3.5': 1, '6.75': 1, '5.9': 1}"
+ },
+ {
+  "init": "iterable = [None, None]\ncounts = {}",
+  "assertion": "assert counts == {None: 2}"
+ },
+ {
+  "init": "iterable = ['1', '2', '3', '1']\ncounts = {}",
+  "assertion": "assert counts['1'] == 2"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'c']\ncounts = {}\n",
+  "assertion": "assert counts == {'a': 2, 'b': 1, 'c': 2}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {}\n",
+  "assertion": "assert counts == {'a': 1, 'b': 1, 'c': 1}"
+ },
+ {
+  "init": "iterable = None\ncounts = {}\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "counts = {}\niterable = [1, 2, 3, 4, 1, 2]\n",
+  "assertion": "assert counts == {1: 2, 2: 2, 3: 1, 4: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b']",
+  "assertion": "assert counts['a'] == 2"
+ },
+ {
+  "init": "iterable = [1, 2, 1, 3, 4]",
+  "assertion": "assert counts == {1: 2, 2: 1, 3: 1, 4: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'a', 'c', 'd']",
+  "assertion": "assert counts == {'a': 2, 'b': 1, 'c': 1, 'd': 1}"
+ },
+ {
+  "init": "iterable = [None, None]",
+  "assertion": "assert counts == {None: 2}"
+ },
+ {
+  "init": "iterable = [1.0, 1.0, 2.0]",
+  "assertion": "assert counts == {1.0: 2, 2.0: 1}"
+ },
+ {
+  "init": "iterable = ['foo', 'bar', 'baz']",
+  "assertion": "assert counts == {'foo': 1, 'bar': 1, 'baz': 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'b', 'a']",
+  "assertion": "assert counts == {'a': 2, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', None, 'b', 'a']",
+  "assertion": "assert counts == {'a': 2, 'b': 2, None: 1}"
+ },
+ {
+  "init": "iterable = [1,2,3,2,4,2]\ncounts = {}",
+  "assertion": "assert counts[2] == 3"
+ },
+ {
+  "init": "iterable = [1,2,3,2,4,2]\ncounts = {}",
+  "assertion": "assert counts[1] == 1"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a']\ncounts = {}",
+  "assertion": "assert counts['a'] == 2"
+ },
+ {
+  "init": "iterable = [None, 'a', 'b', 'c']\ncounts = {}",
+  "assertion": "assert counts[None] == 1"
+ },
+ {
+  "init": "iterable = [None, 'a', 'b', 'c']\ncounts = {}",
+  "assertion": "assert counts['a'] == 1"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {'a': 0}\ncounts['a'] += 1",
+  "assertion": "assert counts['a'] == 1"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'b']",
+  "assertion": "assert counts == {'a': 1, 'b': 2}"
+ },
+ {
+  "init": "counts = {}\niterable = [1.125, 3.5, 6.75, 5.9]",
+  "assertion": "assert counts == {1.125: 1, 3.5: 1, 6.75: 1, 5.9: 1}"
+ },
+ {
+  "init": "counts = {}\niterable = [None, None]",
+  "assertion": "assert counts == {None: 2}"
+ },
+ {
+  "init": "counts = {}\niterable = ['29.4', '4.2', '8.1', '29.4', '8.1', '4.2', '4.2', '29.4']",
+  "assertion": "assert counts == {'29.4': 3, '4.2': 3, '8.1': 2}"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'c']",
+  "assertion": "assert counts == {'a': 1, 'b': 1, 'c': 1}"
+ },
+ {
+  "init": "counts = {}\niterable = [1, 1, 1]",
+  "assertion": "assert counts == {1: 3}"
+ },
+ {
+  "init": "counts = {}\niterable = ['b', 'c', 'b', 'a', 'a', 'c']",
+  "assertion": "assert counts == {'b': 2, 'c': 2, 'a': 2}"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b']",
+  "assertion": "assert counts == {'a': 1, 'b': 1}"
+ },
+ {
+  "init": "iterable = None\ncounts = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [None]\ncounts = {}",
+  "assertion": "assert counts == {None: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {'a': 0, 'b': 0, 'c': 0}",
+  "assertion": "assert counts['a'] == 1"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {'a': 0}",
+  "assertion": "assert counts['b'] == 1"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {'a': 0, 'b': 0}",
+  "assertion": "assert counts['c'] == 1"
+ },
+ {
+  "init": "counts = {}\niterable =  ['a', 'b', 'c', 'b']",
+  "assertion": "assert counts == {'a': 1, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "counts = {}\niterable =  ['a', 'b', 'c']",
+  "assertion": "assert counts == {'a': 1, 'b': 1, 'c': 1}"
+ },
+ {
+  "init": "counts = {}\niterable =  []",
+  "assertion": "assert counts == {}"
+ },
+ {
+  "init": "counts = {}\niterable =  [None, None]",
+  "assertion": "assert counts == {None: 2}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e', 'f']\ncounts = {}",
+  "assertion": "assert counts == {'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1, 'f': 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e', 'f']\ncounts = {}",
+  "assertion": "assert counts.get('z', 0) == 0"
+ },
+ {
+  "init": "iterable = None\ncounts = {'a': 5}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [['1', 'a'], ['2', 'b'], ['3', 'c']]\ncounts = {'a': 1, 'b': 1, 'c': 1}\ncount2 = {'1': 1, '2': 1, '3': 1}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [['1', 'a'], ['2', 'b'], ['3', 'c']]\ncounts = {'a': 1, 'b': 1, 'c': 1}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [['1', 'a'], ['2', 'b'], ['3', 'c']]\ncounts = {'a': 5}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'c']\ncounts = {}",
+  "assertion": "assert counts['a'] == 2\nassert counts['b'] == 1\nassert counts['c'] == 2"
+ },
+ {
+  "init": "iterable = ['a', 'a', 'b', 'b', 'c']\ncounts = {}",
+  "assertion": "assert counts['a'] == 2 and counts['b'] == 2 and counts['c'] == 1"
+ },
+ {
+  "init": "iterable = [None, None, None, None]\ncounts = {}",
+  "assertion": "assert counts == {None: 4}"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'a', 'c']\n",
+  "assertion": "assert counts['a'] == 2"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'a', 'c', ['d', 'e', 'f']]\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "counts = {}\niterable = []",
+  "assertion": "assert counts == {}"
+ },
+ {
+  "init": "counts = {}\niterable = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'a', 'c', ['d', 'e', 'f']]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4]",
+  "assertion": "assert counts == {1: 1, 2: 1, 3: 1, 4: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'a', 'c']",
+  "assertion": "assert counts == {'a': 2, 'b': 1, 'c': 1}"
+ },
+ {
+  "init": "iterable = [1.5, 'a', 3.5, 'b']",
+  "assertion": "assert counts == {1.5: 1, 'a': 1, 3.5: 1, 'b': 1}"
+ },
+ {
+  "init": "iterable = []",
+  "assertion": "assert counts == {}"
+ },
+ {
+  "init": "iterable = ['']",
+  "assertion": "assert counts == {'': 1}"
+ },
+ {
+  "init": "iterable = [['1.5', 'a', 3.5, 'b']]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = True",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "counts = {}\niterable = ['foo', 'bar', 'baz', 'baz']\n",
+  "assertion": "assert counts == {'foo': 1, 'bar': 1, 'baz': 2}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {'a': 0, 'b': 0, 'c': 0}",
+  "assertion": "assert counts == {'a': 1, 'b': 1, 'c': 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'b']\ncounts = {'a': 0, 'b': 0, 'c': 0}",
+  "assertion": "assert counts == {'a': 1, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "iterable = [1,2,3,4,5,6]\ncounts = {}",
+  "assertion": "assert counts[5] == 1"
+ },
+ {
+  "init": "iterable = [1.125, 3.5, 6.75, 5.9]\ncounts = {}",
+  "assertion": "assert counts[3.5] == 1"
+ },
+ {
+  "init": "iterable = [None, None]\ncounts = {}",
+  "assertion": "assert counts[None] == 2"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'c']\n",
+  "assertion": "assert counts['a'] == 1"
+ },
+ {
+  "init": "counts = {}\niterable = []\n",
+  "assertion": "assert counts == {}\n"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'c']\n",
+  "assertion": "assert counts == {'a': 1, 'b': 1, 'c': 1}"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'a', 'b', 'b', 'c']\n",
+  "assertion": "assert counts == {'a': 2, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 1, 3]\ncounts = {}",
+  "assertion": "assert counts[1] == 2"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncounts = {}",
+  "assertion": "assert counts['a'] == 1"
+ },
+ {
+  "init": "iterable = ['  a ', 'b', '  c ', '  d ', '  e ']\ncounts = {}",
+  "assertion": "assert counts['  a '] == 1"
+ },
+ {
+  "init": "iterable = [None, 1, 2, None, 3]\ncounts = {}",
+  "assertion": "assert counts[None] == 2"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'c', 'b']",
+  "assertion": "assert counts['a'] == 1\nassert counts['b'] == 2\nassert counts['c'] == 1"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', None, 'b']",
+  "assertion": "assert counts['a'] == 1\nassert counts['b'] == 2\nassert counts[None] == 1"
+ },
+ {
+  "init": "counts = {}\niterable = [1, 1, 1, 2]",
+  "assertion": "assert counts[1] == 3\nassert counts[2] == 1"
+ },
+ {
+  "init": "counts = {}\niterable = ['1.125', '3.5', '6.75', '5.9']",
+  "assertion": "assert counts['1.125'] == 1\nassert counts['3.5'] == 1\nassert counts['6.75'] == 1\nassert counts['5.9'] == 1"
+ },
+ {
+  "init": "counts = {}\niterable = ['1.125', '3.5', '6.75', '5.9', '7.125']",
+  "assertion": "assert counts['1.125'] == 1\nassert counts['3.5'] == 1\nassert counts['6.75'] == 1\nassert counts['5.9'] == 1\nassert counts['7.125'] == 1"
+ },
+ {
+  "init": "counts = {}\niterable = ['1.125', '3.5', '6.75', '5.9', '7.125', '7.125', '7.125']",
+  "assertion": "assert counts['1.125'] == 1\nassert counts['3.5'] == 1\nassert counts['6.75'] == 1\nassert counts['5.9'] == 1\nassert counts['7.125'] == 3"
+ },
+ {
+  "init": "counts = {}\niterable = ['1.125', '3.5', '6.75', '5.9', '7.125', '7.125', '7.125', '7.125', '7.125']",
+  "assertion": "assert counts['1.125'] == 1\nassert counts['3.5'] == 1\nassert counts['6.75'] == 1\nassert counts['5.9'] == 1\nassert counts['7.125'] == 5"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 5]\ncounts = {}",
+  "assertion": "assert counts[2] == 1"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {}",
+  "assertion": "assert counts['b'] == 1"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncounts = {}",
+  "assertion": "assert counts['c'] == 1"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 5]\ncounts = {}",
+  "assertion": "assert counts[5] == 1"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'a', 'b']",
+  "assertion": "assert counts['a'] == 2\nassert counts['b'] == 2"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'None', 'b']",
+  "assertion": "assert counts['None'] == 1\nassert counts['b'] == 2"
+ },
+ {
+  "init": "counts = {}\niterable = ['a', 'b', 'c', 'd', 'e']",
+  "assertion": "assert counts['a'] == 1\nassert counts['b'] == 1\nassert counts['c'] == 1\nassert counts['d'] == 1\nassert counts['e'] == 1"
+ },
+ {
+  "init": "counts = {'a': 0}\niterable = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "counts = {'a': 0}\niterable = ['a', 'b', None]",
+  "assertion": "assert counts['a'] == 1\nassert counts['b'] == 1"
+ }
+]

@@ -1,0 +1,1490 @@
+[
+ {
+  "init": "val1 = 'Hello'\nval2 = 'World'\nc1 = True\nc2 = False\nc3 = None\nc4 = 0",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "val1 = 'Hello'\nval2 = 'World'\nc1 = None\nc2 = None\nc3 = None\nc4 = None",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "val1 = None\nval2 = None\nc1 = ''\nc2 = ''\nc3 = ''\nc4 = ''",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = 'Empty'\nval2 = 'Full'\nc1 = 0\nc2 = []\nc3 = ''\nc4 = False",
+  "assertion": "assert value == 'Full'"
+ },
+ {
+  "init": "val1 = 10.5\nval2 ='Float'\nc1 = False\nc2 = False\nc3 = ''\nc4 = []",
+  "assertion": "assert value == 'Float'"
+ },
+ {
+  "init": "val1 = 'Non empty'\nval2 = ['array']\nc1 = 'Non empty'\nc2 = 1\nc3 = {} \nc4 = True",
+  "assertion": "assert value == 'Non empty'"
+ },
+ {
+  "init": "val1 = {} \nval2 = ()\nc1 = False\nc2 = ''\nc3 = 0\nc4 = None",
+  "assertion": "assert value == ()"
+ },
+ {
+  "init": "val1 = 'name'\nval2 = 'value'\nc1,c2,c3,c4 = 1,None,None,0",
+  "assertion": "assert value == 'name'"
+ },
+ {
+  "init": "val1 = '1.123'\nval2 = '11.23'\nc1 = True\nc2 = False\nc3 = []\nc4 = 0",
+  "assertion": "assert value == '1.123'"
+ },
+ {
+  "init": "val1 = 'Hello world'\nval2 = ''\nc1 = None\nc2 = False\nc3 = 0\nc4 = None",
+  "assertion": "assert value == ''"
+ },
+ {
+  "init": "c1, c2, c3, c4 = False, False, False, False\nval1, val2 = 'python', 'master'",
+  "assertion": "assert value == 'master'"
+ },
+ {
+  "init": "c1, c2, c3, c4 = False, True, False, False\nval1, val2 = 'python', 'master'",
+  "assertion": "assert value == 'python'"
+ },
+ {
+  "init": "c1, c2, c3, c4 = True, False, False, None \nval1, val2 = 'python', 0",
+  "assertion": "assert value == 'python'"
+ },
+ {
+  "init": "c1, c2, c3, c4 = 0, None, '', False \nval1, val2 = 0, 'python'",
+  "assertion": "assert value == 'python'"
+ },
+ {
+  "init": "c1, c2, c3, c4 = '', ' ', False, None \nval1, val2 = 'master', 'python'",
+  "assertion": "assert value == 'master'"
+ },
+ {
+  "init": "c1, c2, c3, c4 = None, ' ', False, 0 \nval1, val2 = 0, 'python'",
+  "assertion": "assert value == 0"
+ },
+ {
+  "init": "c1, c2, c3, c4 = None, '', None, ' ' \nval1, val2 = 'python', 'master'",
+  "assertion": "assert value == 'python'"
+ },
+ {
+  "init": "c1, c2, c3, c4 = '', '', '', '  a  ' \nval1, val2 = '', '  a  '",
+  "assertion": "assert value == ''"
+ },
+ {
+  "init": "c1, c2, c3, c4 = False, None, False, None \nval1, val2 = None, False",
+  "assertion": "assert value == False"
+ },
+ {
+  "init": "val1 = True;val2 = False;c1 = True;c2 = False;c3=True;c4=False",
+  "assertion": "assert value == True"
+ },
+ {
+  "init": "val1 = 'foo';val2 = 'baz';c1 =True ;c2 =False ;c3 =False ;c4 = False",
+  "assertion": "assert value == 'foo'"
+ },
+ {
+  "init": "val1 = 12.5;val2 = 15;c1 = False;c2 = False;c3 = False ;c4 = False",
+  "assertion": "assert value == 15"
+ },
+ {
+  "init": "val1 = None ;val2 = 12;c1='foo' ;c2 = False ;c3 = False; c4=20 ",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = [1,2,4] ;val2 = 'foo' ;c1= None;c2 = False;c3= False;c4 =None ",
+  "assertion": "assert value == 'foo'"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "val1 = 'Hello'\nval2 = 'World'\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "val1 = []\nval2 = ['apple', 'banana', 'cherry']\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == ['apple', 'banana', 'cherry']"
+ },
+ {
+  "init": "val1 = {'item1': 10, 'item2': 20}\nval2 = {'fruit1': 'apple', 'fruit2': 'banana'}\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == {'item1': 10, 'item2': 20}"
+ },
+ {
+  "init": "val1 = 1.33\nval2 = 3.67\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == 1.33"
+ },
+ {
+  "init": "val1 = None\nval2 = 'string'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'string'"
+ },
+ {
+  "init": "val1 = '3.5'\nval2 = 3.5\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '3.5'"
+ },
+ {
+  "init": "val1 = 'None'\nval2 = None\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == 'None'"
+ },
+ {
+  "init": "val1 = 'text with spaces'\nval2 = 'textwithoutspaces'\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == 'text with spaces'"
+ },
+ {
+  "init": "val1 = ''\nval2 = 'nonemptystring'\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == ''"
+ },
+ {
+  "init": "val1 = 'test_value'\nval2 = 'default_value'\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'test_value'"
+ },
+ {
+  "init": "val1 = 123\nval2 = 456\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 456"
+ },
+ {
+  "init": "val1 = 'test_value'\nval2 = 'default_value'\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'test_value'"
+ },
+ {
+  "init": "val1 = 123\nval2 = 456\nc1 = True\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "val1 = 123\nval2 = 456\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "val1 = 123\nval2 = None\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = None\nval2 = 123\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = 'test_value'\nval2 = 12343214\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == 'test_value'"
+ },
+ {
+  "init": "val1 = ['i', 'am' ,'a', 'list']\nval2 = '@@@@@'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '@@@@@'"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nc1 = True\nc2 = False\nc3 = None\nc4 = 1",
+  "assertion": "assert value == 5"
+ },
+ {
+  "init": "val1 = 'red'\nval2 = 'blue'\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'red'"
+ },
+ {
+  "init": "val1 = None\nval2 = []\nc1 = {}\nc2 = {}\nc3 = []\nc4 = ''",
+  "assertion": "assert value == []"
+ },
+ {
+  "init": "val1 = 0\nval2 = '0'\nc1 = 0\nc2 = 0\nc3 = 0\nc4 = 0",
+  "assertion": "assert value == '0'"
+ },
+ {
+  "init": "val1 = True\nval2 = False\nc1 = []\nc2 = False\nc3 = ''\nc4 = 0",
+  "assertion": "assert value == False"
+ },
+ {
+  "init": "val1 = 'Something'\nval2 = None\nc1 = ''\nc2 = ''\nc3 = {}\nc4 = {'value': 5}",
+  "assertion": "assert value == 'Something'"
+ },
+ {
+  "init": "val1 = '2'\nval2 = 2\nc1 = None\nc2 = True\nc3 = None\nc4 = None",
+  "assertion": "assert value == '2'"
+ },
+ {
+  "init": "val1 = None\nval2 = {'value': None}\nc1 = []\nc2 = {}\nc3 = []\nc4 = '0'",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = [1, 2]\nval2 = (1, 2)\nc1 = True\nc2 = []\nc3 = False\nc4 = None",
+  "assertion": "assert value == [1, 2]"
+ },
+ {
+  "init": "val1 = 1\nval2 = 2\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 1"
+ },
+ {
+  "init": "val1 = 1\nval2 = 2\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 2"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'def'\nc1 = False\nc2 = ''\nc3 = 0\nc4 = None",
+  "assertion": "assert value == 'def'"
+ },
+ {
+  "init": "val1 = [1,2,3]\nval2 = [4,5,6]\nc1 = []\nc2 = ()\nc3 = {}\nc4 = False",
+  "assertion": "assert value == [4,5,6]"
+ },
+ {
+  "init": "val1 = [1,2,3]\nval2 = [4,5,6]\nc1 = [7,8,9]\nc2 = ()\nc3 = {}\nc4 = False",
+  "assertion": "assert value == [1,2,3]"
+ },
+ {
+  "init": "val1 = 3.14\nval2 = 2.71\nc1 = 0.0\nc2 = 1.1\nc3 = False\nc4 = None",
+  "assertion": "assert value == 3.14"
+ },
+ {
+  "init": "val1 = 3.14\nval2 = 2.71\nc1 = 0.0\nc2 = 0.0\nc3 = 0.0\nc4 = 0.0",
+  "assertion": "assert value == 2.71"
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = '4.56'\nc1 = '0'\nc2 = ''\nc3 = False\nc4 = None",
+  "assertion": "assert value == '1.23'"
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = '4.56'\nc1 = ''\nc2 = ''\nc3 = ''\nc4 = ''",
+  "assertion": "assert value == '4.56'"
+ },
+ {
+  "init": "val1 = None\nval2 = 'None'\nc1 = 0\nc2 = ''\nc3 = False\nc4 = None",
+  "assertion": "assert value == 'None'"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 20"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nc1 = None\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 20"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nc1 = ''\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 20"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nc1 = ' '\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nc1 = 0\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 20"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nc1 = 1\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "c1 = True\nc2 = False\nc3 = False\nc4 = False\nval1 = 'abc'\nval2 = 'xyz'",
+  "assertion": "assert value == 'abc'"
+ },
+ {
+  "init": "c1 = False\nc2 = True\nc3 = False\nc4 = False\nval1 = 123\nval2 = 456",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = True\nc4 = False\nval1 = 1.23\nval2 = 4.56",
+  "assertion": "assert value == 1.23"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = True\nval1 = [1,2,3]\nval2 = [4,5,6]",
+  "assertion": "assert value == [1,2,3]"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = None\nval2 = 'None'",
+  "assertion": "assert value == 'None'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = '0'\nval2 = 0",
+  "assertion": "assert value == 0"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ''\nval1 = 'empty string'\nval2 = 'not empty string'",
+  "assertion": "assert value == 'not empty string'"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = 'None'\nval2 = None",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = []\nval1 = [1,2,3]\nval2 = []",
+  "assertion": "assert value == []"
+ },
+ {
+  "init": "c1 = {}\nc2 = {}\nc3 = {}\nc4 = {}\nval1 = {1: 'a', 2: 'b'}\nval2 = {}",
+  "assertion": "assert value == {}"
+ },
+ {
+  "init": "c1 = True; c2 = False; c3 = False; c4 = False; val1 = 10; val2 = 20",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "c1 = False; c2 = False; c3 = False; c4 = False; val1 = 'hello'; val2 = 'world'",
+  "assertion": "assert value == 'world'"
+ },
+ {
+  "init": "c1 = None; c2 = None; c3 = None; c4 = None; val1 = 3.14; val2 = 2.71",
+  "assertion": "assert value == 2.71"
+ },
+ {
+  "init": "c1 = 0; c2 = 0; c3 = 0; c4 = 1; val1 = [1,2,3]; val2 = [4,5,6]",
+  "assertion": "assert value == [1,2,3]"
+ },
+ {
+  "init": "c1 = ''; c2 = ''; c3 = ''; c4 = ''; val1 = {'key1': 'value1'}; val2 = {'key2': 'value2'}",
+  "assertion": "assert value == {'key2': 'value2'}"
+ },
+ {
+  "init": "c1 = ' '; c2 = ' '; c3 = ' '; c4 = ' '; val1 = 100; val2 = 200",
+  "assertion": "assert value == 100"
+ },
+ {
+  "init": "c1 = [0]; c2 = []; c3 = [None]; c4 = ['']; val1 = 'abc'; val2 = 'def'",
+  "assertion": "assert value == 'abc'"
+ },
+ {
+  "init": "c1 = (None,); c2 = (); c3 = (0,); c4 = ('',); val1 = None; val2 = 'None'",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "c1 = bool('False'); c2 = bool(0); c3 = bool(None); c4 = bool('True'); val1 = bool('False'); val2 = bool('True')",
+  "assertion": "assert value == bool('False')"
+ },
+ {
+  "init": "c1 = True\nc2 = False\nc3 = False\nc4 = False\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'True'"
+ },
+ {
+  "init": "c1 = False\nc2 = True\nc3 = False\nc4 = False\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'True'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = True\nc4 = False\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'True'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = True\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'True'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ''\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "c1 = '0'\nc2 = '0'\nc3 = '0'\nc4 = '0'\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'True'"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = []\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "c1 = True\nc2 = False\nc3 = True\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 1.23\nval2 = 4.56",
+  "assertion": "assert value == 4.56"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = '1.23'\nval2 = '4.56'",
+  "assertion": "assert value == '4.56'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = [1,2,3]\nval2 = [4,5,6]",
+  "assertion": "assert value == [4,5,6]"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ''\nval1 = 123\nval2 = 456",
+  "assertion": "assert value == 456"
+ },
+ {
+  "init": "c1 = ' '\nc2 = ' '\nc3 = ' '\nc4 = ' '\nval1 = 123\nval2 = 456",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "c1 = '0'\nc2 = '0'\nc3 = '0'\nc4 = '0'\nval1 = 123\nval2 = 456",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "c1 = 'False'\nc2 = 'False'\nc3 = 'False'\nc4 = 'False'\nval1 = 123\nval2 = 456",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "c1 = float('nan')\nc2 = float('nan')\nc3 = float('nan')\nc4 = float('nan')\nval1 = 123\nval2 = 456",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = 'val1'\nval2 = 'val2'",
+  "assertion": "assert value == 'val2'"
+ },
+ {
+  "init": "val1 = 'some string'\nval2 = 'another string'\nc1 = True\nc2 = False\nc3 = None\nc4 = 0",
+  "assertion": "assert value == 'some string'"
+ },
+ {
+  "init": "val1 = 100\nval2 = 200\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 200"
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nval2 = [4, 5, 6]\nc1 = 0\nc2 = ''\nc3 = None\nc4 = True",
+  "assertion": "assert value == [1, 2, 3]"
+ },
+ {
+  "init": "val1 = None\nval2 = 'not none'\nc1 = 0\nc2 = ''\nc3 = False\nc4 = 0",
+  "assertion": "assert value == 'not none'"
+ },
+ {
+  "init": "val1 = 'value 1'\nval2 = 'value 2'\nc1 = 'some string'\nc2 = 0\nc3 = ''\nc4 = False",
+  "assertion": "assert value == 'value 1'"
+ },
+ {
+  "init": "val1 = 'value 1'\nval2 = 'value 2'\nc1 = 0\nc2 = 0\nc3 = 0\nc4 = 0",
+  "assertion": "assert value == 'value 2'"
+ },
+ {
+  "init": "val1 = 'value 1'\nval2 = 'value 2'\nc1 = None\nc2 = None\nc3 = None\nc4 = None",
+  "assertion": "assert value == 'value 2'"
+ },
+ {
+  "init": "val1 = [None, None, None]\nval2 = [1, 1, 1]\nc1 = 0\nc2 = 0\nc3 = 0\nc4 = 0",
+  "assertion": "assert value == [1, 1, 1]"
+ },
+ {
+  "init": "val1 = 'value 1'\nval2 = 'value 2'\nc1 = ''\nc2 = 0\nc3 = False\nc4 = None",
+  "assertion": "assert value == 'value 2'"
+ },
+ {
+  "init": "val1 = 'value 1'\nval2 = 'value 2'\nc1 = False\nc2 = False\nc3 = False\nc4 = ''",
+  "assertion": "assert value == 'value 2'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 'true value'\nval2 = 'false value'",
+  "assertion": "assert value == 'false value'"
+ },
+ {
+  "init": "c1 = True\nc2 = False\nc3 = False\nc4 = False\nval1 = 'true value'\nval2 = 'false value'",
+  "assertion": "assert value == 'true value'"
+ },
+ {
+  "init": "c1 = False\nc2 = True\nc3 = False\nc4 = False\nval1 = 'true value'\nval2 = 'false value'",
+  "assertion": "assert value == 'true value'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = True\nc4 = False\nval1 = 'true value'\nval2 = 'false value'",
+  "assertion": "assert value == 'true value'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = True\nval1 = 'true value'\nval2 = 'false value'",
+  "assertion": "assert value == 'true value'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = 'true value'\nval2 = 'false value'",
+  "assertion": "assert value == 'false value'"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ''\nval1 = 'true value'\nval2 = 'false value'",
+  "assertion": "assert value == 'false value'"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = 'true value'\nval2 = 'false value'",
+  "assertion": "assert value == 'false value'"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = []\nval1 = 'true value'\nval2 = 'false value'",
+  "assertion": "assert value == 'false value'"
+ },
+ {
+  "init": "c1 = {}\nc2 = {}\nc3 = {}\nc4 = {}\nval1 = 'true value'\nval2 = 'false value'",
+  "assertion": "assert value == 'false value'"
+ },
+ {
+  "init": "c1 = True\nc2 = False\nc3 = False\nc4 = False\nval1 = 'Yes'\nval2 = 'No'",
+  "assertion": "assert value == 'Yes'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 'Yes'\nval2 = 'No'",
+  "assertion": "assert value == 'No'"
+ },
+ {
+  "init": "c1 = None\nc2 = False\nc3 = False\nc4 = False\nval1 = 'Yes'\nval2 = 'No'",
+  "assertion": "assert value == 'No'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0.0\nc3 = ''\nc4 = False\nval1 = 'Yes'\nval2 = 'No'",
+  "assertion": "assert value == 'No'"
+ },
+ {
+  "init": "c1 = []\nc2 = False\nc3 = None\nc4 = False\nval1 = 'Yes'\nval2 = 'No'",
+  "assertion": "assert value == 'No'"
+ },
+ {
+  "init": "c1 = False\nc2 = 'test'\nc3 = False\nc4 = False\nval1 = 1\nval2 = 2",
+  "assertion": "assert value == 1"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = {'example': 'test'}\nval1 = 1.25\nval2 = 2.75",
+  "assertion": "assert value == 1.25"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = 'Yes'\nval2 = 'No'",
+  "assertion": "assert value == 'No'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = None\nval1 = 'Yes'\nval2 = 'No'",
+  "assertion": "assert value == 'No'"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = 'Yes'\nval2 = 'No'",
+  "assertion": "assert value == 'No'"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'xyz'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'xyz'"
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nval2 = []\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == [1, 2, 3]"
+ },
+ {
+  "init": "val1 = None\nval2 = 'None'\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = 3.14\nval2 = '3.14'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '3.14'"
+ },
+ {
+  "init": "val1 = '3.14'\nval2 = 3.14\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '3.14'"
+ },
+ {
+  "init": "val1 = 'string with spaces'\nval2 = 'another string'\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == 'string with spaces'"
+ },
+ {
+  "init": "val1 = ''\nval2 = 'non-empty string'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'non-empty string'"
+ },
+ {
+  "init": "val1 = 'non-empty string'\nval2 = ''\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == 'non-empty string'"
+ },
+ {
+  "init": "val1 = 0\nval2 = 1\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 1"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'def'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'def'"
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nval2 = [4, 5, 6]\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == [1, 2, 3]"
+ },
+ {
+  "init": "val1 = 1.23\nval2 = '1.23'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '1.23'"
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = 1.23\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '1.23'"
+ },
+ {
+  "init": "val1 = ''\nval2 = ' '\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == ' '"
+ },
+ {
+  "init": "val1 = ' '\nval2 = ''\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == ' '"
+ },
+ {
+  "init": "val1 = []\nval2 = [1, 2, 3]\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == [1, 2, 3]"
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nval2 = []\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == [1, 2, 3]"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'def'\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == 'abc'"
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nval2 = [4, 5, 6]\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == [4, 5, 6]"
+ },
+ {
+  "init": "val1 = None\nval2 = 'None'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'None'"
+ },
+ {
+  "init": "val1 = 1.23\nval2 = '1.23'\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == 1.23"
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = 1.23\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 1.23"
+ },
+ {
+  "init": "val1 = 'string'\nval2 = '  string  '\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'string'"
+ },
+ {
+  "init": "val1 = ''\nval2 = 'empty'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'empty'"
+ },
+ {
+  "init": "val1 = 'None'\nval2 = None\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = [None, None]\nval2 = ['None', 'None']\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == [None, None]"
+ },
+ {
+  "init": "val1 = ''\nval2 = ' '\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == ''"
+ },
+ {
+  "init": "val1 = ' '\nval2 = ''\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == ''"
+ },
+ {
+  "init": "val1 = []\nval2 = [1, 2, 3]\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == []"
+ },
+ {
+  "init": "val1 = [1, 2, 3]\nval2 = []\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == []"
+ },
+ {
+  "init": "c1 = True\nc2 = False\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 1\nval1 = 123\nval2 = 456",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = 123\nval2 = 456",
+  "assertion": "assert value == 456"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = 'abc'\nval2 = 'def'",
+  "assertion": "assert value == 'def'"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ' '\nval1 = 'abc'\nval2 = 'def'",
+  "assertion": "assert value == 'abc'"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = [1]\nval1 = 'abc'\nval2 = 'def'",
+  "assertion": "assert value == 'abc'"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = []\nval1 = 'abc'\nval2 = 'def'",
+  "assertion": "assert value == 'def'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = None\nval2 = 'def'",
+  "assertion": "assert value == 'def'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = True\nval1 = None\nval2 = 'def'",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 5"
+ },
+ {
+  "init": "val1 = 'Hello'\nval2 = 'World'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "val1 = ''\nval2 = 'empty string'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'empty string'"
+ },
+ {
+  "init": "val1 = 0\nval2 = '0'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '0'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ''\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = ' '\nc2 = ' '\nc3 = ' '\nc4 = ' '\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = []\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = [1]\nc2 = []\nc3 = []\nc4 = []\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = 0.0\nc2 = 0.0\nc3 = 0.0\nc4 = 0.0\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = 0.1\nc2 = 0.0\nc3 = 0.0\nc4 = 0.0\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "val1 = 'string'\nval2 = 'another string'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'another string'"
+ },
+ {
+  "init": "c1 = True\nc2 = False\nc3 = False\nc4 = False\nval1 = 10\nval2 = 20",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 'hello'\nval2 = 'world'",
+  "assertion": "assert value == 'world'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 1\nval1 = [1,2,3]\nval2 = [4,5,6]",
+  "assertion": "assert value == [1,2,3]"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = 'float'\nval2 = 3.14",
+  "assertion": "assert value == 3.14"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ''\nval1 = 'string'\nval2 = 'empty'",
+  "assertion": "assert value == 'empty'"
+ },
+ {
+  "init": "c1 = ' '\nc2 = ' '\nc3 = ' '\nc4 = ' '\nval1 = 123\nval2 = '123'",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = []\nval1 = 'list'\nval2 = [1,2,3]",
+  "assertion": "assert value == [1,2,3]"
+ },
+ {
+  "init": "c1 = [1]\nc2 = [2]\nc3 = [3]\nc4 = [4]\nval1 = 'list'\nval2 = 'string'",
+  "assertion": "assert value == 'list'"
+ },
+ {
+  "init": "c1 = 0.0\nc2 = 0.0\nc3 = 0.0\nc4 = 0.0\nval1 = 'float'\nval2 = 'zero'",
+  "assertion": "assert value == 'zero'"
+ },
+ {
+  "init": "c1 = 0.1\nc2 = 0.1\nc3 = 0.1\nc4 = 0.1\nval1 = 'float'\nval2 = 'zero'",
+  "assertion": "assert value == 'float'"
+ },
+ {
+  "init": "val1 = 'string'\nval2 = 'another string'\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == 'string'"
+ },
+ {
+  "init": "val1 = 'string with spaces'\nval2 = 'another string with spaces'\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'string with spaces'"
+ },
+ {
+  "init": "val1 = [None, None]\nval2 = [None]\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == [None, None]"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 1\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "val1 = 'empty'\nval2 = ''\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'empty'"
+ },
+ {
+  "init": "val1 = [None, None]\nval2 = ['None', 'None']\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == [None, None]"
+ },
+ {
+  "init": "val1 = ['None', 'None']\nval2 = [None, None]\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == [None, None]"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 1\nval1 = 1.25\nval2 = 2.75",
+  "assertion": "assert value == 1.25"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = 1.25\nval2 = 2.75",
+  "assertion": "assert value == 2.75"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = 'None'\nval2 = 'Not None'",
+  "assertion": "assert value == 'Not None'"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ' '\nval1 = 'Empty'\nval2 = 'Not Empty'",
+  "assertion": "assert value == 'Empty'"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = []\nval1 = 'List'\nval2 = 'Not List'",
+  "assertion": "assert value == 'Not List'"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = [1]\nval1 = 'List'\nval2 = 'Not List'",
+  "assertion": "assert value == 'List'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 1.25\nval2 = '2.75'",
+  "assertion": "assert value == '2.75'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = True\nval1 = '1.25'\nval2 = 2.75",
+  "assertion": "assert value == '1.25'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = True\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = None\nc2 = False\nc3 = False\nc4 = False\nval1 = '1.23'\nval2 = '4.56'",
+  "assertion": "assert value == '4.56'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = [1, 2, 3]\nval2 = [4, 5, 6]",
+  "assertion": "assert value == [4, 5, 6]"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ''\nval1 = {'a': 1, 'b': 2}\nval2 = {'c': 3, 'd': 4}",
+  "assertion": "assert value == {'c': 3, 'd': 4}"
+ },
+ {
+  "init": "c1 = ' '\nc2 = ''\nc3 = ''\nc4 = ''\nval1 = 'val1'\nval2 = 'val2'",
+  "assertion": "assert value == 'val1'"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = []\nval1 = None\nval2 = 'None'",
+  "assertion": "assert value == 'None'"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ''\nval1 = float('nan')\nval2 = float('inf')",
+  "assertion": "assert value == float('inf')"
+ },
+ {
+  "init": "val1 = 'Hello'\nval2 = 'World'\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "val1 = 123\nval2 = 456\nc1 = 0\nc2 = ''\nc3 = []\nc4 = False",
+  "assertion": "assert value == 456"
+ },
+ {
+  "init": "val1 = 123\nval2 = 456\nc1 = 0\nc2 = ''\nc3 = [1,2,3]\nc4 = False",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "val1 = None\nval2 = 'Something'\nc1 = None\nc2 = None\nc3 = None\nc4 = None",
+  "assertion": "assert value == 'Something'"
+ },
+ {
+  "init": "val1 = 'Something'\nval2 = None\nc1 = ' '\nc2 = None\nc3 = None\nc4 = None",
+  "assertion": "assert value == 'Something'"
+ },
+ {
+  "init": "val1 = 1.23\nval2 = 4.56\nc1 = 0.0\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 4.56"
+ },
+ {
+  "init": "val1 = 1.23\nval2 = 4.56\nc1 = 0.1\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 1.23"
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = '4.56'\nc1 = '0.0'\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '1.23'"
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = '4.56'\nc1 = ''\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '4.56'"
+ },
+ {
+  "init": "val1 = 3.14\nval2 = 2.71\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == 3.14"
+ },
+ {
+  "init": "val1 = None\nval2 = 'Not None'\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = '3.14'\nval2 = '2.71'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '2.71'"
+ },
+ {
+  "init": "val1 = (1, 2, 3)\nval2 = (4, 5, 6)\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == (4, 5, 6)"
+ },
+ {
+  "init": "val1 = {'a': 1}\nval2 = {'b': 2}\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == {'a': 1}"
+ },
+ {
+  "init": "val1 = 'True'\nval2 = 'False'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "val1 = ''\nval2 = 'Not empty'\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == ''"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "val1 = 'hello'\nval2 = 'world'\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == 'hello'"
+ },
+ {
+  "init": "val1 = 'hello'\nval2 = 'world'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'world'"
+ },
+ {
+  "init": "val1 = None\nval2 = 'world'\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = 'hello'\nval2 = None\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = 5.5\nval2 = 10.5\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 5.5"
+ },
+ {
+  "init": "val1 = 5.5\nval2 = 10.5\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 10.5"
+ },
+ {
+  "init": "val1 = '5.5'\nval2 = '10.5'\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '5.5'"
+ },
+ {
+  "init": "val1 = '5.5'\nval2 = '10.5'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '10.5'"
+ },
+ {
+  "init": "val1 = 1.25\nval2 = 3.5\nc1 = False\nc2 = True\nc3 = None\nc4 = False",
+  "assertion": "assert value == 1.25"
+ },
+ {
+  "init": "val1 = None\nval2 = ''\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == ''"
+ },
+ {
+  "init": "val1 = [1,2,3]\nval2 = []\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == [1,2,3]"
+ },
+ {
+  "init": "val1 = '1.25'\nval2 = '3.5'\nc1 = False\nc2 = False\nc3 = False\nc4 = 0",
+  "assertion": "assert value == '3.5'"
+ },
+ {
+  "init": "val1 = 'True'\nval2 = 'False'\nc1 = 0\nc2 = ''\nc3 = []\nc4 = None",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "val1 = 100\nval2 = 200\nc1 = 1\nc2 = 0\nc3 = ''\nc4 = []",
+  "assertion": "assert value == 100"
+ },
+ {
+  "init": "val1 = [1.25, 2.5, 3.75]\nval2 = ['1.5', '2.5', '3.5']\nc1 = 0\nc2 = 0\nc3 = 0\nc4 = ''",
+  "assertion": "assert value == ['1.5', '2.5', '3.5']"
+ },
+ {
+  "init": "val1 = {'a': 1, 'b': 2}\nval2 = {'x': 10, 'y': 20}\nc1 = False\nc2 = False\nc3 = False\nc4 = None",
+  "assertion": "assert value == {'x': 10, 'y': 20}"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 'value1'\nval2 = 'value2'",
+  "assertion": "assert value == 'value2'"
+ },
+ {
+  "init": "c1 = True\nc2 = None\nc3 = None\nc4 = None\nval1 = 'value1'\nval2 = 'value2'",
+  "assertion": "assert value == 'value1'"
+ },
+ {
+  "init": "c1 = None\nc2 = 0\nc3 = ''\nc4 = False\nval1 = 'first'\nval2 = 'second'",
+  "assertion": "assert value == 'second'"
+ },
+ {
+  "init": "c1 = None\nc2 = 0\nc3 = 'some string'\nc4 = False\nval1 = 'first'\nval2 = 'second'",
+  "assertion": "assert value == 'first'"
+ },
+ {
+  "init": "c1 = ' '\nc2 = 0\nc3 = ''\nc4 = False\nval1 = 'first'\nval2 = 'second'",
+  "assertion": "assert value == 'first'"
+ },
+ {
+  "init": "c1 = 0.0\nc2 = 0\nc3 = ''\nc4 = False\nval1 = 'first'\nval2 = 'second'",
+  "assertion": "assert value == 'second'"
+ },
+ {
+  "init": "c1 = -0.1\nc2 = 0\nc3 = ''\nc4 = False\nval1 = 'first'\nval2 = 'second'",
+  "assertion": "assert value == 'first'"
+ },
+ {
+  "init": "c1 = '0.0'\nc2 = 0\nc3 = ''\nc4 = False\nval1 = 'first'\nval2 = 'second'",
+  "assertion": "assert value == 'first'"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = None\nval2 = 'value2'",
+  "assertion": "assert value == 'value2'"
+ },
+ {
+  "init": "c1 = [None]\nc2 = None\nc3 = None\nc4 = None\nval1 = 'value1'\nval2 = 'value2'",
+  "assertion": "assert value == 'value1'"
+ },
+ {
+  "init": "c1 = False\nc2 = 'test'\nc3 = False\nc4 = False\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'True'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = None\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = ''\nc4 = 0\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "c1 = None\nc2 = ''\nc3 = False\nc4 = 0\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "c1 = 0\nc2 = ''\nc3 = []\nc4 = None\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "c1 = 0\nc2 = False\nc3 = 0.0\nc4 = ''\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'False'"
+ },
+ {
+  "init": "c1 = 1\nc2 = 'test'\nc3 = [1, 2, 3]\nc4 = 0.1\nval1 = 'True'\nval2 = 'False'",
+  "assertion": "assert value == 'True'"
+ },
+ {
+  "init": "val1 = 'test'\nval2 = 'fallback'\nc1 = None\nc2 = False\nc3 = 0\nc4 = ''",
+  "assertion": "assert value == 'fallback'"
+ },
+ {
+  "init": "val1 = None\nval2 = 'fallback'\nc1 = None\nc2 = ''\nc3 = None\nc4 = None",
+  "assertion": "assert value == 'fallback'"
+ },
+ {
+  "init": "val1 = 'test'\nval2 = 'fallback'\nc1 = 1\nc2 = None\nc3 = None\nc4 = None",
+  "assertion": "assert value == 'test'"
+ },
+ {
+  "init": "val1 = 'test'\nval2 = 'fallback'\nc1 = None\nc2 = 'yes'\nc3 = None\nc4 = None",
+  "assertion": "assert value == 'test'"
+ },
+ {
+  "init": "val1 = 'test'\nval2 = 'fallback'\nc1 = None\nc2 = None\nc3 = []\nc4 = None",
+  "assertion": "assert value == 'fallback'"
+ },
+ {
+  "init": "val1 = 'test'\nval2 = 'fallback'\nc1 = None\nc2 = None\nc3 = None\nc4 = [1]",
+  "assertion": "assert value == 'test'"
+ },
+ {
+  "init": "val1 = 4.5\nval2 = 'fallback'\nc1 = None\nc2 = None\nc3 = 'yes'\nc4 = None",
+  "assertion": "assert value == 4.5"
+ },
+ {
+  "init": "val1 = '4.5'\nval2 = 'fallback'\nc1 = None\nc2 = ''\nc3 = None\nc4 = None",
+  "assertion": "assert value == 'fallback'"
+ },
+ {
+  "init": "val1 = 0\nval2 = 'fallback'\nc1 = None\nc2 = None\nc3 = None\nc4 = 0.1",
+  "assertion": "assert value == 0"
+ },
+ {
+  "init": "val1 = 'yes'\nval2 = 'no'\nc1 = None\nc2 = None\nc3 = None\nc4 = []",
+  "assertion": "assert value == 'no'"
+ },
+ {
+  "init": "val1 = 'Hello'\nc2 = 1\nc4 = 0\nc1 = False\nc3 = 1\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "val1 = 3.5\nc2 = 0\nc4 = False\nc1 = None\nc3 = 0\nval2 = 2",
+  "assertion": "assert value == 2"
+ },
+ {
+  "init": "val1 = 10\nc2 = ''\nc4 = '1'\nc1 = '0'\nc3 = 'False'\nval2 = 20",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "val1 = [1,2,3]\nc2 = [None, None]\nc4 = []\nc1 = [0]\nc3 = ['0']\nval2 = [4,5,6]",
+  "assertion": "assert value == [1,2,3]"
+ },
+ {
+  "init": "val1 = None\nc2 = [None, None]\nc4 = [0]\nc1 = '0'\nc3 = ['0']\nval2 = 'None'",
+  "assertion": "assert value == None"
+ },
+ {
+  "init": "val1 = 'No'\nc2 = 'Yes'\nc4 = 'Maybe'\nc1 = ''\nc3 = ' ' \nval2 = 'Yes'",
+  "assertion": "assert value == 'No'"
+ },
+ {
+  "init": "val1 = 'No'\nc2 = ' '\nc4 = '  '\nc1 = '   '\nc3 = '\t' \nval2 = 'Yes'",
+  "assertion": "assert value == 'No'"
+ },
+ {
+  "init": "val1 = 'False'\nc2 = 0\nc4 = []\nc1 = None\nc3 = False \nval2 = 'True'",
+  "assertion": "assert value == 'True'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '0'\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '1'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '0'\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == '1'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '0'\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == '1'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '0'\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == '1'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '0'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '0'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '0'\nc1 = None\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '0'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '0'\nc1 = 0\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '0'"
+ },
+ {
+  "init": "val1 = '1'\nval2 = '0'\nc1 = ''\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '0'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nc1 = ''\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'b'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nc1 = 'Non-empty string'\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'a'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nc1 = 0\nc2 = 0\nc3 = 0\nc4 = 0",
+  "assertion": "assert value == 'b'"
+ },
+ {
+  "init": "val1 = 'a'\nval2 = 'b'\nc1 = ' '\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'a'"
+ },
+ {
+  "init": "val1 = 123\nval2 = 456\nc1 = 0\nc2 = -1\nc3 = None\nc4 = False",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "val1 = 123\nval2 = 456\nc1 = 0\nc2 = 0\nc3 = float(0)\nc4 = False",
+  "assertion": "assert value == 456"
+ },
+ {
+  "init": "val1 = 123\nval2 = 456\nc1 = 0\nc2 = 0\nc3 = 0\nc4 = float('nan')",
+  "assertion": "assert value == 123"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 'a'\nval2 = 'b'",
+  "assertion": "assert value == 'b'"
+ },
+ {
+  "init": "c1 = True\nc2 = False\nc3 = False\nc4 = False\nval1 = 'a'\nval2 = 'b'",
+  "assertion": "assert value == 'a'"
+ },
+ {
+  "init": "c1 = ''\nc2 = 0\nc3 = False\nc4 = []\nval1 = 1\nval2 = 2",
+  "assertion": "assert value == 2"
+ },
+ {
+  "init": "c1 = ''\nc2 = 0\nc3 = []\nc4 = 'str'\nval1 = 1\nval2 = 2",
+  "assertion": "assert value == 1"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = 1\nval2 = 2",
+  "assertion": "assert value == 2"
+ },
+ {
+  "init": "c1 = 0.0\nc2 = ''\nc3 = []\nc4 = None\nval1 = 'test'\nval2 = 'nottest'",
+  "assertion": "assert value == 'nottest'"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = 'nonempty'\nval1 = 'test'\nval2 = 'nottest'",
+  "assertion": "assert value == 'test'"
+ },
+ {
+  "init": "c1 = '0'\nc2 = 0\nc3 = False\nc4 = ''\nval1 = 'a'\nval2 = 'b'",
+  "assertion": "assert value == 'a'"
+ },
+ {
+  "init": "c1 = float('nan')\nc2 = 0\nc3 = False\nc4 = ''\nval1 = 'a'\nval2 = 'b'",
+  "assertion": "assert value == 'a'"
+ },
+ {
+  "init": "c1 = 'false'\nc2 = []\nc3 = 0.0\nc4 = None\nval1 = 'test'\nval2 = 'nottest'",
+  "assertion": "assert value == 'test'"
+ },
+ {
+  "init": "c1 = True\nc2 = False\nc3 = False\nc4 = False\nval1 = 'test'\nval2 = 'demo'",
+  "assertion": "assert value == 'test'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 'test'\nval2 = 'demo'",
+  "assertion": "assert value == 'demo'"
+ },
+ {
+  "init": "c1 = 0\nc2 = 0\nc3 = 0\nc4 = 0\nval1 = 'test'\nval2 = 'demo'",
+  "assertion": "assert value == 'demo'"
+ },
+ {
+  "init": "c1 = None\nc2 = None\nc3 = None\nc4 = None\nval1 = 'test'\nval2 = 'demo'",
+  "assertion": "assert value == 'demo'"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = ''\nval1 = 'test'\nval2 = 'demo'",
+  "assertion": "assert value == 'demo'"
+ },
+ {
+  "init": "c1 = ' '\nc2 = ' '\nc3 = ' '\nc4 = ' '\nval1 = 'test'\nval2 = 'demo'",
+  "assertion": "assert value == 'test'"
+ },
+ {
+  "init": "c1 = []\nc2 = []\nc3 = []\nc4 = []\nval1 = 'test'\nval2 = 'demo'",
+  "assertion": "assert value == 'demo'"
+ },
+ {
+  "init": "c1 = [0]\nc2 = [0]\nc3 = [0]\nc4 = [0]\nval1 = 'test'\nval2 = 'demo'",
+  "assertion": "assert value == 'test'"
+ },
+ {
+  "init": "c1 = 0.0\nc2 = 0.0\nc3 = 0.0\nc4 = 0.0\nval1 = 'test'\nval2 = 'demo'",
+  "assertion": "assert value == 'demo'"
+ },
+ {
+  "init": "c1 = 0.1\nc2 = 0.1\nc3 = 0.1\nc4 = 0.1\nval1 = 'test'\nval2 = 'demo'",
+  "assertion": "assert value == 'test'"
+ },
+ {
+  "init": "val1 = 100\nval2 = 200\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 100"
+ },
+ {
+  "init": "val1 = 10.5\nval2 = '10.5'\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == 10.5"
+ },
+ {
+  "init": "val1 = '3.14'\nval2 = 3.14\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 3.14"
+ },
+ {
+  "init": "val1 = [1,2,3]\nval2 = '1,2,3'\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == [1,2,3]"
+ },
+ {
+  "init": "val1 = 'string'\nval2 = ' '\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == ' '"
+ },
+ {
+  "init": "val1 = ''\nval2 = 'empty'\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == ''"
+ },
+ {
+  "init": "val1 = 'True'\nval2 = 'False'\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == 'True'"
+ },
+ {
+  "init": "val1 = 'string'\nval2 = 'other string'\nc1 = False\nc2 = 'non-empty string'\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'string'"
+ },
+ {
+  "init": "val1 = None\nval2 = 'non-empty string'\nc1 = False\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'non-empty string'"
+ },
+ {
+  "init": "val1 = 5.5\nval2 = 10\nc1 = False\nc2 = False\nc3 = False\nc4 = 0",
+  "assertion": "assert value == 10"
+ },
+ {
+  "init": "val1 = 5.5\nval2 = 10\nc1 = False\nc2 = False\nc3 = False\nc4 = 1",
+  "assertion": "assert value == 5.5"
+ },
+ {
+  "init": "val1 = '5.5'\nval2 = '10'\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == '5.5'"
+ },
+ {
+  "init": "val1 = '5.5'\nval2 = '10'\nc1 = False\nc2 = False\nc3 = None\nc4 = False",
+  "assertion": "assert value == '10'"
+ },
+ {
+  "init": "val1 = '5.5'\nval2 = '10'\nc1 = False\nc2 = False\nc3 = ''\nc4 = False",
+  "assertion": "assert value == '10'"
+ },
+ {
+  "init": "val1 = '5.5'\nval2 = '10'\nc1 = False\nc2 = False\nc3 = ' '\nc4 = False",
+  "assertion": "assert value == '5.5'"
+ },
+ {
+  "init": "val1 = 5.5\nval2 = 10.5\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == 5.5"
+ },
+ {
+  "init": "val1 = '0'\nval2 = '1'\nc1 = False\nc2 = False\nc3 = False\nc4 = True",
+  "assertion": "assert value == '0'"
+ },
+ {
+  "init": "val1 = '0.0'\nval2 = '1.0'\nc1 = False\nc2 = False\nc3 = True\nc4 = False",
+  "assertion": "assert value == '0.0'"
+ },
+ {
+  "init": "val1 = 'None'\nval2 = None\nc1 = True\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 'None'"
+ },
+ {
+  "init": "c1 = None\nc2 = False\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = 0\nc2 = False\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = ''\nc2 = False\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = ''\nc2 = 1\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = ''\nc2 = 'hi'\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = ''\nc2 = []\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = ''\nc2 = [1,2,3]\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = ''\nc2 = ''\nc3 = ''\nc4 = 'hi'\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = False\nc2 = None\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = False\nc2 = 0\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = False\nc2 = ''\nc3 = False\nc4 = False\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = ' '\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = []\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = [1]\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 3.14\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = True\nval1 = 3.14\nval2 = 'World'",
+  "assertion": "assert value == 3.14"
+ },
+ {
+  "init": "val1 = [1,2,3]\nval2 = [4,5,6]\nc1 = False\nc2 = True\nc3 = False\nc4 = False",
+  "assertion": "assert value == [1,2,3]"
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = 1.23\nc1 = ''\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 1.23"
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = 1.23\nc1 = ' '\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == '1.23'"
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = 1.23\nc1 = 0\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 1.23"
+ },
+ {
+  "init": "val1 = '1.23'\nval2 = 1.23\nc1 = 0.0\nc2 = False\nc3 = False\nc4 = False",
+  "assertion": "assert value == 1.23"
+ },
+ {
+  "init": "c1 = True\nc2 = False\nc3 = False\nc4 = False\nval1 = 1\nval2 = 2",
+  "assertion": "assert value == 1"
+ },
+ {
+  "init": "c1 = False\nc2 = False\nc3 = False\nc4 = False\nval1 = 1\nval2 = 2",
+  "assertion": "assert value == 2"
+ },
+ {
+  "init": "c1 = [None]\nc2 = [None]\nc3 = [None]\nc4 = [None]\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'Hello'"
+ },
+ {
+  "init": "c1 = {}\nc2 = {}\nc3 = {}\nc4 = {}\nval1 = 'Hello'\nval2 = 'World'",
+  "assertion": "assert value == 'World'"
+ }
+]

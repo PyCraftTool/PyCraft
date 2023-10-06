@@ -1,0 +1,30 @@
+[
+ {
+  "init": "file_path = 'test_file.txt'\nwith open(file_path, 'w') as file:\n\tfile.write(None)",
+  "assertions": "error"
+ },
+ {
+  "init": "file_path = '/path/with/non/string/characters/\u2764\ufe0f'",
+  "assertions": [
+   "assert type(contents) == str"
+  ]
+ },
+ {
+  "init": "import os\ndummy_content = 'I am for testing'\nfile_path='dummy_file_test.txt'\nf = open('./'+file_path, 'w')\nf.write(dummy_content)\nf.close()",
+  "assertions": [
+   "f = open(file_path, 'r')",
+   "contents = f.read()",
+   "assert contents == dummy_content",
+   "f.close()"
+  ]
+ },
+ {
+  "init": "dummy_content =  'I  have whitespaces'\nfile_path='second_dummy_file.txt'\nfh=open('./'+file_path, 'w')\nfh.write(dummy_content)\nfh.close()",
+  "assertions": [
+   "fh = open(file_path, 'r')",
+   "contents = fh.read()",
+   "assert contents == dummy_content",
+   "fh.close()"
+  ]
+ }
+]

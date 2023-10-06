@@ -1,0 +1,366 @@
+[
+ {
+  "init": "number_value = 'asd'\nval1=10\nval2=20",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = 10.5\nval1=10\nval2=20",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = 10\nval1=None\nval2=20",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = 10\nval1=20\nval2=None",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = 10\nval1=None\nval2=None",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = None\nval1=20\nval2=None",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = None\nval1=None\nval2=None",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = None\nval1 = 'hello'\nval2 = 'world'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = '100'\nval1 = 'hello'\nval2 = 'world'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = '100.0'\nval1 = 'hello'\nval2 = 'world'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = -0.1\nval1 = 'hello'\nval2 = 'world'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = 1.5\nval1 = 'hello'\nval2 = 'world'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = 'hello'\nval1 = 'hello'\nval2 = 'world'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = 'world'\nval1 = 'hello'\nval2 = 'world'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value=None\nval1=2\nval2=4",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value='hello'\nval1=2\nval2=4",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value=['hello']\nval1=2\nval2=4",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value = 0\nval1 = 1\nval2 = 2",
+  "assertions": [
+   "assert val==val2"
+  ]
+ },
+ {
+  "init": "number_value = 1\nval1 = 1\nval2 = 2",
+  "assertions": [
+   "assert val==val1"
+  ]
+ },
+ {
+  "init": "number_value = 'a'\nval1 = 1\nval2 = 2",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = 0; val1 = '11'; val2 = '22'",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "number_value = 1; val1 = '11'; val2 = '22'",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value = -1; val1 = '11'; val2 = '22'",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value = None; val1 = '11'; val2 = '22'",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value = -3.6; val1 = '11'; val2 = '22'",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value = ['1','2','3']; val1 = '11'; val2 = '22'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value=-3\nval1=1\nval2=3",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value=3.0\nval1=1\nval2=3",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value=\"3\"\nval1=1\nval2=3",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = None\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = [1,2,3]\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = float('inf')\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = float('-inf')\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = 'string'\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = True\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value=1;val1='A';val2='B'",
+  "assertions": [
+   "assert val == 'A'"
+  ]
+ },
+ {
+  "init": "number_value=0;val1='A';val2='B'",
+  "assertions": [
+   "assert val == 'B'"
+  ]
+ },
+ {
+  "init": "number_value=None;val1='A';val2='B'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value=-10;val1='A';val2='B'",
+  "assertions": [
+   "assert val == 'A'"
+  ]
+ },
+ {
+  "init": "number_value='a';val1='A';val2='B'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value=-10\nval1='A'\nval2='B'",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value=10\nval1=''\nval2='B'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value=10\nval1='A'\nval2=''",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value=10\nval1=None\nval2='B'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value=10\nval1='A'\nval2=None",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value = '0'\nval1 = 1\nval2 = 3",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "number_value = None\nval1 = 1\nval2 = 3",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value = 'None'\nval1 = 1\nval2 = 3",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value = ' '\nval1 = 1\nval2 = 3",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value=2\nval1=1\nval2=2",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value=-2\nval1=1\nval2=2",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value=None\nval1=1\nval2=2",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value=float('inf')\nval1=1\nval2=2",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value=float('-inf')\nval1=1\nval2=2",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value='a'\nval1=1\nval2=2",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value='1'\nval1=1\nval2=2",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = 'a'\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = '5'\nval1 = 'a'\nval2 = 'b'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value = None\nval1 = 'a'\nval2 = 'b'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value = 'string'\nval1 = 'a'\nval2 = 'b'",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value = 'a'\nval1 = 1\nval2 = 2",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value = None\nval1 = 1\nval2 = 2",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value = []\nval1 = 1\nval2 = 2",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "number_value = 'a'\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = None\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = ['1.0']\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = ['a']\nval1 = 'a'\nval2 = 'b'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value=-10\nval1=10\nval2=20",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value=-10.5\nval1=10\nval2=20",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value=None\nval1=10\nval2=20",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value='-10'\nval1=10\nval2=20",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value='None'\nval1=10\nval2=20",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value='-10.5'\nval1=10\nval2=20",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value='None'\nval1=10\nval2=20",
+  "assertions": "error"
+ }
+]

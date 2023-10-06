@@ -1,0 +1,430 @@
+[
+ {
+  "init": "content = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 123",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 12.34",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 12.3",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 1234567890",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 123.456",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = [1, 2, 3, 4, 5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = {'name': 'John', 'age': 30, 'city': 'New York'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = True",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertion": "assert content == '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'"
+ },
+ {
+  "init": "content = ' '",
+  "assertion": "assert content == ' '"
+ },
+ {
+  "init": "content = ''",
+  "assertion": "assert content == ''"
+ },
+ {
+  "init": "content = '{}'",
+  "assertion": "assert content == '{}'"
+ },
+ {
+  "init": "content = 'None'",
+  "assertion": "assert content == 'None'"
+ },
+ {
+  "init": "content = '3.14'",
+  "assertion": "assert content == '3.14'"
+ },
+ {
+  "init": "content = '3.14 string'",
+  "assertion": "assert content == '3.14 string'"
+ },
+ {
+  "init": "content = 'null'",
+  "assertion": "assert content == 'null'"
+ },
+ {
+  "init": "content = 'undefined'",
+  "assertion": "assert content == 'undefined'"
+ },
+ {
+  "init": "content = 1234",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 123.45",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = []",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = [1,2,3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = {'name':'John', 'age':30, 'city':'New York'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'",
+  "assertion": "import os\nassert os.path.exists(file) == False"
+ },
+ {
+  "init": "content = '[1, 2, 3, 4]'",
+  "assertion": "import os\nassert os.path.exists(file) == False"
+ },
+ {
+  "init": "content = 'hello world'",
+  "assertion": "import os\nassert os.path.exists(file) == False"
+ },
+ {
+  "init": "content = ''",
+  "assertion": "import os\nassert os.path.exists(file) == False"
+ },
+ {
+  "init": "content = '      '",
+  "assertion": "import os\nassert os.path.exists(file) == False"
+ },
+ {
+  "init": "content = 'NaN'",
+  "assertion": "import os\nassert os.path.exists(file) == False"
+ },
+ {
+  "init": "content = '{\"float\": \"NaN\"}'",
+  "assertion": "import os\nassert os.path.exists(file) == False"
+ },
+ {
+  "init": "content = '{\"float\": 3.14}'",
+  "assertion": "import os\nassert os.path.exists(file) == False"
+ },
+ {
+  "init": "content = 'None'",
+  "assertion": "import os\nassert os.path.exists(file) == False"
+ },
+ {
+  "init": "content = 12345",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = ['a', 'b', 'c']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 12.45",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = ['This', 'is', 'an', 'array']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = {\"name\":\"John\", \"age\":30, \"city\":\"New York\"}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = ['1', '2', '3']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 12.345",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = ['1', '2', '3', '4']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = {'key': 'value'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import os\ncontent = '{\"key\": \"value\"}'",
+  "assertion": "assert os.path.exists(file) == False"
+ },
+ {
+  "init": "content = 1.2345",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = ['This', 'is', 'a', 'test']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = {'This': 'is', 'a': 'test'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 1.234",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 3.14159",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import tempfile\ncontent = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import tempfile\ncontent = 125.0",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 3.14",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = {'a': 1, 'b': 2}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = '{\"key\": \"value\"}'",
+  "assertion": "assert isinstance(f, type(open('test.txt', 'r')))"
+ },
+ {
+  "init": "content = ''",
+  "assertion": "assert isinstance(f, type(open('test.txt', 'r')))"
+ },
+ {
+  "init": "content = 'This is a test.'",
+  "assertion": "assert isinstance(f, type(open('test.txt', 'r')))"
+ },
+ {
+  "init": "content = 10",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 3.1415",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = str(3.1415)",
+  "assertion": "assert isinstance(f, type(open('test.txt', 'r')))"
+ },
+ {
+  "init": "content = '{\"key\": 20}'",
+  "assertion": "assert isinstance(f, type(open('test.txt', 'r')))"
+ },
+ {
+  "init": "content = '{\"key\": None}'",
+  "assertion": "assert isinstance(f, type(open('test.txt', 'r')))"
+ },
+ {
+  "init": "content = '{\"key\": [\"value1\", \"value2\"]}'",
+  "assertion": "assert isinstance(f, type(open('test.txt', 'r')))"
+ },
+ {
+  "init": "content = {\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 'This is a test content'",
+  "assertion": "assert isinstance(temp_dir, tempfile.TemporaryDirectory)"
+ },
+ {
+  "init": "content = ''",
+  "assertion": "assert isinstance(temp_dir, tempfile.TemporaryDirectory)"
+ },
+ {
+  "init": "content = '   '",
+  "assertion": "assert isinstance(temp_dir, tempfile.TemporaryDirectory)"
+ },
+ {
+  "init": "content = '123.456'",
+  "assertion": "assert isinstance(temp_dir, tempfile.TemporaryDirectory)"
+ },
+ {
+  "init": "content = [1,2,3,4,5]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = {'key':'value'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = (1,2,3,4,5)",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 0.123",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = {\"t\":3.14}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 124",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = '{\"key1\": \"value1\", \"key2\": \"value2\"}'",
+  "assertion": "assert isinstance(file,str)\nimport os\nassert os.path.isfile(file) == False"
+ },
+ {
+  "init": "content = '[]'",
+  "assertion": "assert isinstance(file,str)\nimport os\nassert os.path.isfile(file) == False"
+ },
+ {
+  "init": "content = ''",
+  "assertion": "assert isinstance(file,str)\nimport os\nassert os.path.isfile(file) == False"
+ },
+ {
+  "init": "content = 1.23",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 'Not a json string'",
+  "assertion": "assert isinstance(file,str)\nimport os\nassert os.path.isfile(file) == False"
+ },
+ {
+  "init": "content = 5.5",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = ['This', 'Is', 'A', 'List']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import os\ncontent={\"key\":float(\"1.12\")}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import os\ncontent=None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 'This is some random content.'",
+  "assertion": "import os\nassert os.path.exists(file) == False, 'File still exists!'"
+ },
+ {
+  "init": "content = ''",
+  "assertion": "import os\nassert os.path.exists(file) == False, 'File still exists!'"
+ },
+ {
+  "init": "content = '    '",
+  "assertion": "import os\nassert os.path.exists(file) == False, 'File still exists!'"
+ },
+ {
+  "init": "content = ['This is some random content.']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = ['',' ',' Some String ','Another']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\ncontent = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = '{\"key1\": [\"value1\", 1.2, 3, None]}','features.json'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 'a', 'a.json'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = '[\"a\", \"b\", \"c\", \"d\", \"e\"]', 'list.json'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = '[1.2, 2.4, 3.5]','floats.json'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = {\"key\": \"value\"},'dict.json'",
+  "assertion": "assert 1==1",
+  "error": true
+ }
+]

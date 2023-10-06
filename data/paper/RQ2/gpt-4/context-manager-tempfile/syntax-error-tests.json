@@ -1,0 +1,12 @@
+[
+ {
+  "init": "import os\ntemp_dir = '/temporary_Directory'\nos.makedirs(temp_dir)\ncontent =(){\"\":\"\"}",
+  "assertions": [
+   "assert (content['outsidebelow'] if 'outsidebelow' in content else None) == None"
+  ]
+ },
+ {
+  "init": "content = .......lst (Very Large String)",
+  "assertions": "error"
+ }
+]

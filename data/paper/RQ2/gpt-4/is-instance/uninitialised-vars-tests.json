@@ -1,0 +1,14 @@
+[
+ {
+  "init": "val1 = 'string'\nval2 = 'another string'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'string'",
+  "assertions": "error"
+ },
+ {
+  "init": "val2 = 'string'",
+  "assertions": "error"
+ }
+]

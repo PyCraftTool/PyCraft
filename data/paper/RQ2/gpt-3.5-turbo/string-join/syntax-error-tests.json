@@ -1,0 +1,14 @@
+[
+ {
+  "init": "values = ['abc', 'def', 'ghi']",
+  "assertions": [
+   "assert string == '['abc', 'def', 'ghi']'"
+  ]
+ },
+ {
+  "init": "values = ['1.23', '4.56', '7.89']",
+  "assertions": [
+   "assert string == '['1.23', '4.56', '7.89']'"
+  ]
+ }
+]

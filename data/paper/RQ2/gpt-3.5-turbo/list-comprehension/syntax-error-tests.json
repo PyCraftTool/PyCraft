@@ -1,0 +1,12 @@
+[
+ {
+  "init": "iterable = 10.0\\cond = lambda x: x % 3 == 0",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', '\n', ' ', 'd']\ncond = lambda x: x.isspace()",
+  "assertions": [
+   "assert t == ['\n', ' ']"
+  ]
+ }
+]

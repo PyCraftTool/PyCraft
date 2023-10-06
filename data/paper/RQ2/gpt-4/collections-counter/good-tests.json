@@ -1,0 +1,1078 @@
+[
+ {
+  "init": "iterable = [1, 2, 3, 4, 5, 1, 2, 3, 1, 2, 1]",
+  "assertion": "assert counts == {1: 4, 2: 3, 3: 2, 4: 1, 5: 1}"
+ },
+ {
+  "init": "iterable = []",
+  "assertion": "assert counts == {}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'a']",
+  "assertion": "assert counts == {'a': 3, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 3.3, 1.1, 2.2, 1.1]",
+  "assertion": "assert counts == {1.1: 3, 2.2: 2, 3.3: 1}"
+ },
+ {
+  "init": "iterable = ['1.1', '2.2', '3.3', '1.1', '2.2', '1.1']",
+  "assertion": "assert counts == {'1.1': 3, '2.2': 2, '3.3': 1}"
+ },
+ {
+  "init": "iterable = [None, None, 1, 1, 2, 2, None]",
+  "assertion": "assert counts == {None: 3, 1: 2, 2: 2}"
+ },
+ {
+  "init": "iterable = [' ', ' ', 'a', 'a', 'b', 'b', ' ']",
+  "assertion": "assert counts == {' ': 3, 'a': 2, 'b': 2}"
+ },
+ {
+  "init": "iterable = 'abcabcabc'",
+  "assertion": "assert counts == {'a': 3, 'b': 3, 'c': 3}"
+ },
+ {
+  "init": "iterable = 123",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [None, None, None]",
+  "assertion": "assert counts == {None: 3}"
+ },
+ {
+  "init": "iterable = [' ', ' ', ' ', 'a', 'a']",
+  "assertion": "assert counts == {' ': 3, 'a': 2}"
+ },
+ {
+  "init": "iterable = [True, False, True, False, True]",
+  "assertion": "assert counts == {True: 3, False: 2}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'b']",
+  "assertion": "assert counts == {'a': 2, 'b': 3, 'c': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 1, 2, 2]",
+  "assertion": "assert counts == {1: 2, 2: 3, 3: 1}"
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 3.3, 1.1, 2.2, 2.2]",
+  "assertion": "assert counts == {1.1: 2, 2.2: 3, 3.3: 1}"
+ },
+ {
+  "init": "iterable = ['1.1', '2.2', '3.3', '1.1', '2.2', '2.2']",
+  "assertion": "assert counts == {'1.1': 2, '2.2': 3, '3.3': 1}"
+ },
+ {
+  "init": "iterable = [' ', ' ', ' ', ' ', ' ', ' ']",
+  "assertion": "assert counts == {' ': 6}"
+ },
+ {
+  "init": "iterable = [None, None, None, None, None, None]",
+  "assertion": "assert counts == {None: 6}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'b', None, None, None]",
+  "assertion": "assert counts == {'a': 2, 'b': 3, 'c': 1, None: 3}"
+ },
+ {
+  "init": "iterable = 'abcabc'",
+  "assertion": "assert counts == {'a': 2, 'b': 2, 'c': 2}"
+ },
+ {
+  "init": "iterable = ['a', ' ', 'b', ' ', 'c', ' ', 'a', ' ', 'b', ' ', 'a', ' ']",
+  "assertion": "assert counts == {'a': 3, ' ': 6, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "iterable = [None, None, 1, 2, 3, None, 1, 2, 1]",
+  "assertion": "assert counts == {None: 3, 1: 3, 2: 2, 3: 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 2, 2, 3]",
+  "assertion": "assert counts == {1: 1, 2: 3, 3: 2}"
+ },
+ {
+  "init": "iterable = ['1.125', '3.5', '6.75', '5.9', '1.125']",
+  "assertion": "assert counts == {'1.125': 2, '3.5': 1, '6.75': 1, '5.9': 1}"
+ },
+ {
+  "init": "iterable = [None, None, 'None', 'None']",
+  "assertion": "assert counts == {None: 2, 'None': 2}"
+ },
+ {
+  "init": "iterable = [1.125, 3.5, 6.75, 5.9, 1.125]",
+  "assertion": "assert counts == {1.125: 2, 3.5: 1, 6.75: 1, 5.9: 1}"
+ },
+ {
+  "init": "iterable = ['1.125', 3.5, '6.75', 5.9, '1.125']",
+  "assertion": "assert counts == {'1.125': 2, 3.5: 1, '6.75': 1, 5.9: 1}"
+ },
+ {
+  "init": "iterable = 12345",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [' ', ' ', 'a', 'b', 'c', ' ', 'a', 'b', ' ']",
+  "assertion": "assert counts == {' ': 4, 'a': 2, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "iterable = ['a b', 'c d', 'a b', 'c d', 'a b']",
+  "assertion": "assert counts == {'a b': 3, 'c d': 2}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 1, 2, 1]",
+  "assertion": "assert counts == {1: 3, 2: 2, 3: 1}"
+ },
+ {
+  "init": "iterable = [' ', ' ', ' ']",
+  "assertion": "assert counts == {' ': 3}"
+ },
+ {
+  "init": "iterable = ['  ', '  ', '  ']",
+  "assertion": "assert counts == {'  ': 3}"
+ },
+ {
+  "init": "iterable = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]",
+  "assertion": "assert counts == {1: 1, 2: 2, 3: 3, 4: 4}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'b', 'c', 'c', 'c']",
+  "assertion": "assert counts == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 2.2, 3.3, 3.3, 3.3]",
+  "assertion": "assert counts == {1.1: 1, 2.2: 2, 3.3: 3}"
+ },
+ {
+  "init": "iterable = ['1.1', '2.2', '2.2', '3.3', '3.3', '3.3']",
+  "assertion": "assert counts == {'1.1': 1, '2.2': 2, '3.3': 3}"
+ },
+ {
+  "init": "iterable = [None, None, None, 2, 2, 3]",
+  "assertion": "assert counts == {None: 3, 2: 2, 3: 1}"
+ },
+ {
+  "init": "iterable = ' '",
+  "assertion": "assert counts == {' ': 1}"
+ },
+ {
+  "init": "iterable = '    '",
+  "assertion": "assert counts == {' ': 4}"
+ },
+ {
+  "init": "iterable = [' ', ' ', 'a', 'a', ' ', 'a']",
+  "assertion": "assert counts == {' ': 3, 'a': 3}"
+ },
+ {
+  "init": "iterable = [None, None, 'a', 'a', None, 'a']",
+  "assertion": "assert counts == {None: 3, 'a': 3}"
+ },
+ {
+  "init": "iterable = [1, '1', 1, '1', 1, '1']",
+  "assertion": "assert counts == {1: 3, '1': 3}"
+ },
+ {
+  "init": "iterable = ['a', ' ', 'b', ' ', 'c', ' ', 'a', ' ', 'b', ' ', 'a']",
+  "assertion": "assert counts == {'a': 3, ' ': 5, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 3.3, 4.4, 5.5, 1.1, 2.2, 3.3, 1.1, 2.2, 1.1]",
+  "assertion": "assert counts == {1.1: 4, 2.2: 3, 3.3: 2, 4.4: 1, 5.5: 1}"
+ },
+ {
+  "init": "iterable = [None, None, None, 'None', 'None', None]",
+  "assertion": "assert counts == {None: 4, 'None': 2}"
+ },
+ {
+  "init": "iterable = ['1.1', '2.2', '3.3', '4.4', '5.5', '1.1', '2.2', '3.3', '1.1', '2.2', '1.1']",
+  "assertion": "assert counts == {'1.1': 4, '2.2': 3, '3.3': 2, '4.4': 1, '5.5': 1}"
+ },
+ {
+  "init": "iterable = [' ', ' ', 'a', 'a']",
+  "assertion": "assert counts == {' ': 2, 'a': 2}"
+ },
+ {
+  "init": "iterable = [1.1, 1.1, '1.1', '1.1']",
+  "assertion": "assert counts == {1.1: 2, '1.1': 2}"
+ },
+ {
+  "init": "iterable = ['1.1', '1.1', 1.1, 1.1]",
+  "assertion": "assert counts == {'1.1': 2, 1.1: 2}"
+ },
+ {
+  "init": "iterable = ['a', 'a ', ' a', ' a ']",
+  "assertion": "assert counts == {'a': 1, 'a ': 1, ' a': 1, ' a ': 1}"
+ },
+ {
+  "init": "iterable = [True, True, False, False, None, None]",
+  "assertion": "assert counts == {True: 2, False: 2, None: 2}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'b', 'c', 'a', 'a']",
+  "assertion": "assert counts == {'a': 4, 'b': 3, 'c': 2}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 1, 2, 2, 3, 1, 1]",
+  "assertion": "assert counts == {1: 4, 2: 3, 3: 2}"
+ },
+ {
+  "init": "iterable = ['1.125', '3.5', '6.75', '5.9', '1.125', '3.5', '3.5', '1.125', '1.125']",
+  "assertion": "assert counts == {'1.125': 4, '3.5': 3, '6.75': 1, '5.9': 1}"
+ },
+ {
+  "init": "iterable = [None, None, None, None]",
+  "assertion": "assert counts == {None: 4}"
+ },
+ {
+  "init": "iterable = [1.125, 3.5, 6.75, 5.9, 1.125, 3.5, 3.5, 1.125, 1.125]",
+  "assertion": "assert counts == {1.125: 4, 3.5: 3, 6.75: 1, 5.9: 1}"
+ },
+ {
+  "init": "iterable = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']",
+  "assertion": "assert counts == {' ': 9}"
+ },
+ {
+  "init": "iterable = ['string', 'string', 'string', 'string', 'string', 'string', 'string', 'string', 'string']",
+  "assertion": "assert counts == {'string': 9}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]",
+  "assertion": "assert counts == {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 0: 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 2, 2, 3, 1, 1, 1]",
+  "assertion": "assert counts == {1: 4, 2: 3, 3: 2}"
+ },
+ {
+  "init": "iterable = ['a', ' ', ' ', 'b', ' ', 'c', ' ', 'd']",
+  "assertion": "assert counts == {'a': 1, ' ': 4, 'b': 1, 'c': 1, 'd': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, [1, 2], [1, 2], 1, 2, [1, 2]]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 1, 2, 3, 1, 2, 1]",
+  "assertion": "assert counts == {1: 4, 2: 3, 3: 2, 4: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'a', 'a', 'b', 'c']",
+  "assertion": "assert counts == {'a': 3, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "iterable = ['  a  ', '  b  ', '  a  ', '  a  ', '  b  ', '  c  ']",
+  "assertion": "assert counts == {'  a  ': 3, '  b  ': 2, '  c  ': 1}"
+ },
+ {
+  "init": "iterable = [1, '1', 1.0, '1.0']",
+  "assertion": "assert counts == {1: 2, '1': 1, '1.0': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 1, 2, 3, 1, 2, 1, '1']",
+  "assertion": "assert counts == {1: 4, 2: 3, 3: 2, 4: 1, '1': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 1, 2, 3, 1, 2, 1, None]",
+  "assertion": "assert counts == {1: 4, 2: 3, 3: 2, 4: 1, None: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'a', 'c', 'b', 'b', 'a']",
+  "assertion": "assert counts == {'a': 3, 'b': 3, 'c': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 1, 2, 3, 1, 2, 3]",
+  "assertion": "assert counts == {1: 3, 2: 3, 3: 3}"
+ },
+ {
+  "init": "iterable = ['a', ' ', 'a', ' ', ' ', 'a']",
+  "assertion": "assert counts == {'a': 3, ' ': 3}"
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 3.3, 1.1, 2.2, 3.3, 1.1, 2.2, 3.3]",
+  "assertion": "assert counts == {1.1: 3, 2.2: 3, 3.3: 3}"
+ },
+ {
+  "init": "iterable = ['1.1', '2.2', '3.3', '1.1', '2.2', '3.3', '1.1', '2.2', '3.3']",
+  "assertion": "assert counts == {'1.1': 3, '2.2': 3, '3.3': 3}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 1, 2, 1, 1, 4, 4, 4]",
+  "assertion": "assert counts == {1: 4, 2: 2, 3: 1, 4: 4}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'a', 'a', 'c', 'c', 'c']",
+  "assertion": "assert counts == {'a': 4, 'b': 2, 'c': 4}"
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 3.3, 1.1, 2.2, 1.1, 1.1, 3.3, 3.3, 3.3]",
+  "assertion": "assert counts == {1.1: 4, 2.2: 2, 3.3: 4}"
+ },
+ {
+  "init": "iterable = ['   ', '  ', ' ', '   ', '  ', '   ', '   ', ' ', ' ', ' ']",
+  "assertion": "assert counts == {'   ': 4, '  ': 2, ' ': 4}"
+ },
+ {
+  "init": "iterable = ['1.1', '2.2', '3.3', '1.1', '2.2', '1.1', '1.1', '3.3', '3.3', '3.3']",
+  "assertion": "assert counts == {'1.1': 4, '2.2': 2, '3.3': 4}"
+ },
+ {
+  "init": "iterable = ['1', '2', '3', '1', '2', '1', '1', '3', '3', '3']",
+  "assertion": "assert counts == {'1': 4, '2': 2, '3': 4}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 2, 1, 1]",
+  "assertion": "assert counts == {1: 3, 2: 2, 3: 1}"
+ },
+ {
+  "init": "iterable = ['  string  ', '  string  ', 'another string', 'another string', 'another string']",
+  "assertion": "assert counts == {'  string  ': 2, 'another string': 3}"
+ },
+ {
+  "init": "iterable = ['']",
+  "assertion": "assert counts == {'': 1}"
+ },
+ {
+  "init": "iterable = [1, '1']",
+  "assertion": "assert counts == {1: 1, '1': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 2, 1, 1, 1, 3, 2, 2]",
+  "assertion": "assert counts == {1: 4, 2: 4, 3: 2}"
+ },
+ {
+  "init": "iterable = ['1.125', '3.5', '6.75', '5.9', '1.125', '3.5']",
+  "assertion": "assert counts == {'1.125': 2, '3.5': 2, '6.75': 1, '5.9': 1}"
+ },
+ {
+  "init": "iterable = [' ', ' ', ' ', ' ', ' ']",
+  "assertion": "assert counts == {' ': 5}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'b', None, None, ' ', ' ', ' ', 1, 1, 1, 2, 2, '1.125', '1.125']",
+  "assertion": "assert counts == {'a': 2, 'b': 3, 'c': 1, None: 2, ' ': 3, 1: 3, 2: 2, '1.125': 2}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 2, 1, 1, 1, 3, 2, 2, '1', '2', '3', '2', '1', '1', '1', '3', '2', '2']",
+  "assertion": "assert counts == {1: 4, 2: 4, 3: 2, '1': 4, '2': 4, '3': 2}"
+ },
+ {
+  "init": "iterable = [1.5, 2.5, 3.5, 2.5, 1.5, 1.5, 1.5, 3.5, 2.5, 2.5, '1.5', '2.5', '3.5', '2.5', '1.5', '1.5', '1.5', '3.5', '2.5', '2.5']",
+  "assertion": "assert counts == {1.5: 4, 2.5: 4, 3.5: 2, '1.5': 4, '2.5': 4, '3.5': 2}"
+ },
+ {
+  "init": "iterable = 'aabbcc'",
+  "assertion": "assert counts == {'a': 2, 'b': 2, 'c': 2}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'a', 'b', 'c']",
+  "assertion": "assert counts == {'a': 2, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "iterable = ['1.23', '1.23', '3.45']",
+  "assertion": "assert counts == {'1.23': 2, '3.45': 1}"
+ },
+ {
+  "init": "iterable = [1.23, 1.23, 3.45]",
+  "assertion": "assert counts == {1.23: 2, 3.45: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'a', 'b', 'c', 'c', 'c']",
+  "assertion": "assert counts == {'a': 2, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "iterable = ['1.1', '1.1', '2.2', '3.3', '3.3']",
+  "assertion": "assert counts == {'1.1': 2, '2.2': 1, '3.3': 2}"
+ },
+ {
+  "init": "iterable = [1.1, 1.1, 2.2, 3.3, 3.3]",
+  "assertion": "assert counts == {1.1: 2, 2.2: 1, 3.3: 2}"
+ },
+ {
+  "init": "iterable = ['a b', 'a b', 'c d', 'c d', 'c d']",
+  "assertion": "assert counts == {'a b': 2, 'c d': 3}"
+ },
+ {
+  "init": "iterable = 'aabccc'",
+  "assertion": "assert counts == {'a': 2, 'b': 1, 'c': 3}"
+ },
+ {
+  "init": "iterable = [1, 1, 2, 2, 2, 3, 3, 3, 3]",
+  "assertion": "assert counts == {1: 2, 2: 3, 3: 4}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c', 'a']",
+  "assertion": "assert counts == {'a': 4, 'b': 3, 'c': 3}"
+ },
+ {
+  "init": "iterable = ['  ', ' ', '  ', ' ', '  ', ' ', '  ', ' ']",
+  "assertion": "assert counts == {'  ': 4, ' ': 4}"
+ },
+ {
+  "init": "iterable = [1.1, 1.1, 1.1, 1.1, 1.1]",
+  "assertion": "assert counts == {1.1: 5}"
+ },
+ {
+  "init": "iterable = [1.1, '1.1', 1.1, '1.1', 1.1]",
+  "assertion": "assert counts == {1.1: 3, '1.1': 2}"
+ },
+ {
+  "init": "iterable = 'abcabcabcabc'",
+  "assertion": "assert counts == {'a': 4, 'b': 4, 'c': 4}"
+ },
+ {
+  "init": "iterable = [1, 2, 1, 3, 2, 2, 1]",
+  "assertion": "assert counts == {1: 3, 2: 3, 3: 1}"
+ },
+ {
+  "init": "iterable = [1.5, 2.5, 1.5, 3.5, 2.5, 2.5, 1.5]",
+  "assertion": "assert counts == {1.5: 3, 2.5: 3, 3.5: 1}"
+ },
+ {
+  "init": "iterable = ['1.5', '2.5', '1.5', '3.5', '2.5', '2.5', '1.5']",
+  "assertion": "assert counts == {'1.5': 3, '2.5': 3, '3.5': 1}"
+ },
+ {
+  "init": "iterable = 'abacbbba'",
+  "assertion": "assert counts == {'a': 3, 'b': 4, 'c': 1}"
+ },
+ {
+  "init": "iterable = '   '",
+  "assertion": "assert counts == {' ': 3}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'b', 'c', 'a']",
+  "assertion": "assert counts == {'a': 3, 'b': 3, 'c': 2}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 2, 1, 3, 2, 1, 1]",
+  "assertion": "assert counts == {1: 4, 2: 3, 3: 2}"
+ },
+ {
+  "init": "iterable = [1.125, 3.5, 6.75, 5.9, 1.125, 3.5]",
+  "assertion": "assert counts == {1.125: 2, 3.5: 2, 6.75: 1, 5.9: 1}"
+ },
+ {
+  "init": "iterable = ['1.125', 3.5, '6.75', 5.9, '1.125', 3.5]",
+  "assertion": "assert counts == {'1.125': 2, 3.5: 2, '6.75': 1, 5.9: 1}"
+ },
+ {
+  "init": "iterable = [1.1, 1.1, 2.2, 2.2, 2.2, 3.3]",
+  "assertion": "assert counts == {1.1: 2, 2.2: 3, 3.3: 1}"
+ },
+ {
+  "init": "iterable = ['1.1', '1.1', '2.2', '2.2', '2.2', '3.3']",
+  "assertion": "assert counts == {'1.1': 2, '2.2': 3, '3.3': 1}"
+ },
+ {
+  "init": "iterable = [None, None, None, 1, 1]",
+  "assertion": "assert counts == {None: 3, 1: 2}"
+ },
+ {
+  "init": "iterable = 'this is a test string'.split()",
+  "assertion": "assert counts == {'this': 1, 'is': 1, 'a': 1, 'test': 1, 'string': 1}"
+ },
+ {
+  "init": "iterable = ['apple', 'banana', 'apple', 'banana', 'banana', 'cherry']",
+  "assertion": "assert counts == {'apple': 2, 'banana': 3, 'cherry': 1}"
+ },
+ {
+  "init": "iterable = [1.1, 1.1, 2.2, 2.2, 2.2]",
+  "assertion": "assert counts == {1.1: 2, 2.2: 3}"
+ },
+ {
+  "init": "iterable = [1.1, '1.1', 1.1, '1.1', '1.1']",
+  "assertion": "assert counts == {1.1: 2, '1.1': 3}"
+ },
+ {
+  "init": "iterable = 'Hello World'",
+  "assertion": "assert counts == {'H': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'W': 1, 'r': 1, 'd': 1}"
+ },
+ {
+  "init": "iterable = [1,2,3,4,1,2,1,1,4,4]",
+  "assertion": "assert counts == {1:4, 2:2, 3:1, 4:3}"
+ },
+ {
+  "init": "iterable = 'aabbbcccc'",
+  "assertion": "assert counts == {'a':2, 'b':3, 'c':4}"
+ },
+ {
+  "init": "iterable = [None, None, 1, 1, 1, 'string', 'string']",
+  "assertion": "assert counts == {None:2, 1:3, 'string':2}"
+ },
+ {
+  "init": "iterable = [1.125, 1.125, 3.5, 6.75, 5.9]",
+  "assertion": "assert counts == {1.125:2, 3.5:1, 6.75:1, 5.9:1}"
+ },
+ {
+  "init": "iterable = ['1.125', '1.125', '3.5', '6.75', '5.9']",
+  "assertion": "assert counts == {'1.125':2, '3.5':1, '6.75':1, '5.9':1}"
+ },
+ {
+  "init": "iterable = ''",
+  "assertion": "assert counts == {}"
+ },
+ {
+  "init": "iterable = [1, '1']",
+  "assertion": "assert counts == {1:1, '1':1}"
+ },
+ {
+  "init": "iterable = ['apple', 'banana', 'apple', 'apple', 'banana', 'cherry']",
+  "assertion": "assert counts == {'apple': 3, 'banana': 2, 'cherry': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 6, 1, 2, 1, 6, 9, '1', '2', '6']",
+  "assertion": "assert counts == {1: 3, 2: 2, 6: 2, 9: 1, '1': 1, '2': 1, '6': 1}"
+ },
+ {
+  "init": "iterable = ['   ', '   ', '   ', '   ']",
+  "assertion": "assert counts == {'   ': 4}"
+ },
+ {
+  "init": "iterable = ['1.2', '1.2', '4.5', '4.5', 1.2, 1.2, 4.5, 4.5]",
+  "assertion": "assert counts == {'1.2': 2, '4.5': 2, 1.2: 2, 4.5: 2}"
+ },
+ {
+  "init": "iterable = [1, 1, 2, 2, '1', '1', '2', '2']",
+  "assertion": "assert counts == {1: 2, 2: 2, '1': 2, '2': 2}"
+ },
+ {
+  "init": "iterable = ['a', ' ', 'b', ' ', 'c', ' ', 'd']",
+  "assertion": "assert counts == {'a': 1, ' ': 3, 'b': 1, 'c': 1, 'd': 1}"
+ },
+ {
+  "init": "iterable = ['a', '', 'b', '', 'c', '', 'd']",
+  "assertion": "assert counts == {'a': 1, '': 3, 'b': 1, 'c': 1, 'd': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, [1, 2], (1, 2), {1, 2}, {1:2}]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [1, 2, 2, 3, 3, 3]",
+  "assertion": "assert counts == {1: 1, 2: 2, 3: 3}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'b', None, None, None]",
+  "assertion": "assert counts == {'a': 1, 'b': 2, None: 3}"
+ },
+ {
+  "init": "iterable = [1, 2, 2, 2, 3, 4, 5, 5, 5, 5]",
+  "assertion": "assert counts == {1: 1, 2: 3, 3: 1, 4: 1, 5: 4}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'c', 'c', 'd']",
+  "assertion": "assert counts == {'a': 1, 'b': 1, 'c': 3, 'd': 1}"
+ },
+ {
+  "init": "iterable = ['1.125', '3.5', '6.75', '5.9', '1.125', '1.125']",
+  "assertion": "assert counts == {'1.125': 3, '3.5': 1, '6.75': 1, '5.9': 1}"
+ },
+ {
+  "init": "iterable = ['a', '  ', 'b', 'c', 'd', '  ', '  ']",
+  "assertion": "assert counts == {'a': 1, '  ': 3, 'b': 1, 'c': 1, 'd': 1}"
+ },
+ {
+  "init": "iterable = [1, 1, 2, 2, 3, 3, 3]",
+  "assertion": "assert counts == {1: 2, 2: 2, 3: 3}"
+ },
+ {
+  "init": "iterable = ['a', 'a', 'b', 'b', 'b', 'c', 'c', 'c', 'c']",
+  "assertion": "assert counts == {'a': 2, 'b': 3, 'c': 4}"
+ },
+ {
+  "init": "iterable = [None, None, None, 2, 2, 3, 3, 3]",
+  "assertion": "assert counts == {None: 3, 2: 2, 3: 3}"
+ },
+ {
+  "init": "iterable = ['1.23', '1.23', 1.23, 1.23, 'a', 'a']",
+  "assertion": "assert counts == {'1.23': 2, 1.23: 2, 'a': 2}"
+ },
+ {
+  "init": "iterable = ['  string  ', '  string  ', '  string  ', 2.26, 2.26]",
+  "assertion": "assert counts == {'  string  ': 3, 2.26: 2}"
+ },
+ {
+  "init": "iterable = [1, 1, '1', '1', None, None, None, 2.26, 2.26]",
+  "assertion": "assert counts == {1: 2, '1': 2, None: 3, 2.26: 2}"
+ },
+ {
+  "init": "iterable = 123456789",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 1, 1, 3, 2, 4, 2]",
+  "assertion": "assert counts == {1: 3, 2: 3, 3: 2, 4: 2}"
+ },
+ {
+  "init": "iterable = ['apple', 'orange', 'apple', 'banana', 'apple', 'banana', 'banana']",
+  "assertion": "assert counts == {'apple': 3, 'orange': 1, 'banana': 3}"
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 3.3, 4.4, 1.1, 1.1, 2.2, 3.3, 4.4]",
+  "assertion": "assert counts == {1.1: 3, 2.2: 2, 3.3: 2, 4.4: 2}"
+ },
+ {
+  "init": "iterable = ['1.1', '2.2', '3.3', '4.4', '1.1', '1.1']",
+  "assertion": "assert counts == {'1.1': 3, '2.2': 1, '3.3': 1, '4.4': 1}"
+ },
+ {
+  "init": "iterable = ['', '', '', '', '']",
+  "assertion": "assert counts == {'': 5}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, None, 'None']",
+  "assertion": "assert counts == {1: 1, 2: 1, 3: 1, None: 1, 'None': 1}"
+ },
+ {
+  "init": "iterable = [1, 1, 1, 2, 2, 3, 4, 5]",
+  "assertion": "assert counts == {1: 3, 2: 2, 3: 1, 4: 1, 5: 1}"
+ },
+ {
+  "init": "iterable = 'hello world'",
+  "assertion": "assert counts == {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}"
+ },
+ {
+  "init": "iterable = '1234567890'",
+  "assertion": "assert counts == {'1': 1, '2': 1, '3': 1, '4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1, '0': 1}"
+ },
+ {
+  "init": "iterable = [1.0, 1.0, 2.0, 2.0, 3.0]",
+  "assertion": "assert counts == {1.0: 2, 2.0: 2, 3.0: 1}"
+ },
+ {
+  "init": "iterable = {1: 'a', 2: 'b', 1: 'c'}",
+  "assertion": "assert counts == {1: 1, 2: 1}"
+ },
+ {
+  "init": "iterable = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert counts == {'a': 1, 'b': 1, 'c': 1}"
+ },
+ {
+  "init": "iterable = ('a', 'b', 'c', 'a')",
+  "assertion": "assert counts == {'a': 2, 'b': 1, 'c': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 2, 3, 3, 3, 4, 5, 6.15, 9.75, 6.15]",
+  "assertion": "assert counts == {1: 1, 2: 2, 3: 3, 4: 1, 5: 1, 6.15: 2, 9.75: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'a', 'b']",
+  "assertion": "assert counts == {'a': 3, 'b': 2, 'c': 1}"
+ },
+ {
+  "init": "iterable = [None, None, 1, 2, 'string', 'string', [1,2,3], [1,2,3]]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = 'string'",
+  "assertion": "assert counts == { 's': 1, 't': 1, 'r': 1, 'i': 1, 'n': 1, 'g': 1}"
+ },
+ {
+  "init": "iterable = '1234.5678'",
+  "assertion": "assert counts == {'1': 1, '2': 1, '3': 1, '4': 1, '.': 1, '5': 1, '6': 1, '7': 1, '8': 1}"
+ },
+ {
+  "init": "iterable = iterable = 1234.5678",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [1,2,2,3,3,3]",
+  "assertion": "assert counts == {1:1, 2:2, 3:3}"
+ },
+ {
+  "init": "iterable = ['a', 'a', 'b', 'b', 'b', None, None, None]",
+  "assertion": "assert counts == {'a':2, 'b':3, None:3}"
+ },
+ {
+  "init": "iterable = [None]",
+  "assertion": "assert counts == {None:1}"
+ },
+ {
+  "init": "iterable = ['  ']",
+  "assertion": "assert counts == {'  ':1}"
+ },
+ {
+  "init": "iterable = [5.15, 5.15, 7, '8']",
+  "assertion": "assert counts == {5.15:2, 7:1, '8':1}"
+ },
+ {
+  "init": "iterable = ['5.2', '5.2', 5.2]",
+  "assertion": "assert counts == {'5.2':2, 5.2:1}"
+ },
+ {
+  "init": "iterable = map(str, range(100))",
+  "assertion": "assert all(value == 1 for value in counts.values())"
+ },
+ {
+  "init": "iterable = [1, 2, 2, 3, 4, 3, 1, 5]",
+  "assertion": "assert counts == {1: 2, 2: 2, 3: 2, 4: 1, 5: 1}"
+ },
+ {
+  "init": "iterable = 'great'",
+  "assertion": "assert counts == {'g': 1, 'r': 1, 'e': 1, 'a': 1, 't': 1}"
+ },
+ {
+  "init": "iterable = '112358a112358A'",
+  "assertion": "assert counts == {'1': 4, '2': 2, '3': 2, '5': 2, '8': 2, 'a': 1, 'A': 1}"
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 2.2]",
+  "assertion": "assert counts == {1.1: 1, 2.2: 2}"
+ },
+ {
+  "init": "iterable = ['1.1', ' ', '2.2', '2.2']",
+  "assertion": "assert counts == {'1.1': 1, ' ': 1, '2.2': 2}"
+ },
+ {
+  "init": "iterable = [1, 2, 2, 3.5, 3.5, 3.5, '3.5', '3.5']",
+  "assertion": "assert counts == {1: 1, 2: 2, 3.5: 3, '3.5': 2}"
+ },
+ {
+  "init": "iterable = [12.3, 123/10, 12.30, 12.3]",
+  "assertion": "assert counts == {12.3: 4}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'a', 'c', 'b', 'a', 'd', 'c', 'b']",
+  "assertion": "assert counts == {'a': 3, 'b': 3, 'c': 2, 'd': 1}"
+ },
+ {
+  "init": "iterable = [0.1, '0.1', 0.10, 0.1, '0.1']",
+  "assertion": "assert counts == {0.1: 3, '0.1': 2}"
+ },
+ {
+  "init": "iterable = ['str', 'int', [None], (None), 1.12546, 1]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = ['apple', 'banana', 'apple', 'orange', 'banana']",
+  "assertion": "assert counts == {'apple': 2,'banana': 2,'orange': 1}"
+ },
+ {
+  "init": "iterable = [2, 2, 4, 5, 8, 8, 8, 1]",
+  "assertion": "assert counts == {2: 2, 4: 1, 5: 1, 8: 3, 1: 1}"
+ },
+ {
+  "init": "iterable = [1.125, 3.5, 1.125, 6.75, 5.9, 3.5, 3.5]",
+  "assertion": "assert counts == {1.125: 2, 3.5: 3, 6.75: 1, 5.9: 1}"
+ },
+ {
+  "init": "iterable = 'Hello, Hello, Hi '",
+  "assertion": "assert counts == {'H': 3, 'e': 2, 'l': 4, 'o': 2, ',': 2, ' ': 3, 'i': 1}"
+ },
+ {
+  "init": "iterable = [2, 2, 'repeat', 'repeat']",
+  "assertion": "assert counts == {2: 2, 'repeat': 2}"
+ },
+ {
+  "init": "iterable = [None, 'None', None]",
+  "assertion": "assert counts == {None: 2, 'None': 1}"
+ },
+ {
+  "init": "iterable = (10, 20, 20, 10, 30, 30, 10)",
+  "assertion": "assert counts == {10: 3, 20: 2, 30: 2}"
+ },
+ {
+  "init": "iterable = ['apple', 'banana', 'apple', 'orange', 'banana', 'banana']",
+  "assertion": "assert counts == {'apple': 2, 'banana': 3, 'orange': 1}"
+ },
+ {
+  "init": "iterable = [1, 1, 2, 3, 3, 3, 4, 4, 4, 4]",
+  "assertion": "assert counts == {1: 2, 2: 1, 3: 3, 4: 4}"
+ },
+ {
+  "init": "iterable = [' ', ' ', 'space']",
+  "assertion": "assert counts == {' ': 2, 'space': 1}"
+ },
+ {
+  "init": "iterable = [1.5, 1.5, '1.5']",
+  "assertion": "assert counts == {1.5: 2, '1.5': 1}"
+ },
+ {
+  "init": "iterable = ['True', True, 'false', False]",
+  "assertion": "assert counts == {'True': 1, True: 1, 'false': 1, False: 1}"
+ },
+ {
+  "init": "iterable = [[]]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = ['f', 'g', 'f', 'f', 'g', 'h', 'i', 'h']",
+  "assertion": "assert counts == {'f': 3, 'g': 2, 'h': 2, 'i': 1}"
+ },
+ {
+  "init": "iterable = ['abc', 'abc', '123', '123','123']",
+  "assertion": "assert counts == {'abc': 2, '123': 3}"
+ },
+ {
+  "init": "iterable = ['4', 4, 4.5, 4, '4', 4.5 ]",
+  "assertion": "assert counts == {'4': 2, 4: 2, 4.5: 2}"
+ },
+ {
+  "init": "iterable = [1, 1, None, None, ' ', ' ']",
+  "assertion": "assert counts == {1: 2, None: 2, ' ': 2}"
+ },
+ {
+  "init": "iterable = ['1.25', 1.25, 1.25, '1.25']",
+  "assertion": "assert counts == {'1.25': 2, 1.25: 2}"
+ },
+ {
+  "init": "iterable = ['a', 'c', 'a', False, True, 'bh', False]",
+  "assertion": "assert counts == {'a': 2, 'c': 1, 'bh': 1, False: 2, True: 1}"
+ },
+ {
+  "init": "iterable = ['3.14']",
+  "assertion": "assert counts == {'3.14': 1}"
+ },
+ {
+  "init": "iterable = ['  ']",
+  "assertion": "assert counts == {'  ': 1}"
+ },
+ {
+  "init": "iterable = ['', ' ']",
+  "assertion": "assert counts == {'': 1, ' ': 1}"
+ },
+ {
+  "init": "iterable = [1, '1st', 1]",
+  "assertion": "assert counts == {1: 2, '1st': 1}"
+ },
+ {
+  "init": "iterable = [' ', '']",
+  "assertion": "assert counts == {' ': 1, '': 1}"
+ },
+ {
+  "init": "iterable = 'astu'",
+  "assertion": "assert counts == {'a': 1, 's': 1, 't': 1, 'u': 1}"
+ },
+ {
+  "init": "iterable = [3.14, '3.14']",
+  "assertion": "assert counts == {3.14: 1, '3.14': 1}"
+ },
+ {
+  "init": "iterable = 'aabbccdd'",
+  "assertion": "assert counts == {'a': 2, 'b': 2, 'c': 2, 'd': 2}"
+ },
+ {
+  "init": "iterable = 'abcde' * 100",
+  "assertion": "assert counts == {'a': 100, 'b': 100, 'c': 100, 'd': 100, 'e': 100}"
+ },
+ {
+  "init": "iterable = [1.25, 2.5, 3.75, 2.5, 1.25, 1.25]",
+  "assertion": "assert counts == {1.25: 3, 2.5: 2, 3.75: 1}"
+ },
+ {
+  "init": "iterable = [1, 2, '1', '2']",
+  "assertion": "assert counts == {1: 1, 2: 1, '1': 1, '2': 1}"
+ },
+ {
+  "init": "iterable = ' ' * 5",
+  "assertion": "assert counts == {' ': 5}"
+ },
+ {
+  "init": "iterable = ['str1', 'str2', 'str2']",
+  "assertion": "assert counts == {'str1': 1, 'str2': 2}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 2, 2, 1]",
+  "assertion": "assert counts == {1: 2, 2: 3, 3: 1}"
+ },
+ {
+  "init": "iterable = [None, None, 1, 1, 'a', 'a']",
+  "assertion": "assert counts == {None: 2, 1: 2, 'a': 2}"
+ },
+ {
+  "init": "iterable = [1.1, 1.2, 1.1, 1.3, 1.2, 1.3]",
+  "assertion": "assert counts == {1.1: 2, 1.2: 2, 1.3: 2}"
+ },
+ {
+  "init": "iterable = ['1.1', '1.2', '1.1', '1.3', '1.2', '1.3']",
+  "assertion": "assert counts == {'1.1': 2, '1.2': 2, '1.3': 2}"
+ },
+ {
+  "init": "iterable = 'abcdefgabcdefg'",
+  "assertion": "assert counts == {'a': 2, 'b': 2, 'c': 2, 'd': 2, 'e': 2, 'f': 2, 'g': 2}"
+ },
+ {
+  "init": "iterable = '      '",
+  "assertion": "assert counts == {' ': 6}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'c', 'a']",
+  "assertion": "assert counts == {'a': 3, 'b': 2, 'c': 2}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 1, 2, 3, 1]",
+  "assertion": "assert counts == {1: 3, 2: 2, 3: 2}"
+ },
+ {
+  "init": "iterable = ['1.125', '3.5', '6.75', '5.9', '3.5', '1.125']",
+  "assertion": "assert counts == {'1.125': 2, '3.5': 2, '6.75': 1, '5.9': 1}"
+ },
+ {
+  "init": "iterable = [1.125, 3.5, 6.75, 5.9, 3.5, 1.125]",
+  "assertion": "assert counts == {1.125: 2, 3.5: 2, 6.75: 1, 5.9: 1}"
+ },
+ {
+  "init": "iterable = ['   ', 'a', 'b', 'a', ' ', '   ', 'a']",
+  "assertion": "assert counts == {'   ': 2, 'a': 3, 'b': 1, ' ': 1}"
+ },
+ {
+  "init": "iterable = [None, None, 'a', 'b', 'a']",
+  "assertion": "assert counts == {None: 2, 'a': 2, 'b': 1}"
+ },
+ {
+  "init": "iterable = ['1', 1, '1', 1, '1']",
+  "assertion": "assert counts == {'1': 3, 1: 2}"
+ },
+ {
+  "init": "iterable = [1, 2, [1, 2], [1, 2], 1]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = 'a'",
+  "assertion": "assert counts == {'a': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 2.5, 1.0, 2, '2', '2.0']",
+  "assertion": "assert counts == {1: 2, 2: 2, 2.5: 1, '2': 1, '2.0': 1}"
+ },
+ {
+  "init": "iterable = [' ', ' ', 'a', 'a ', ' a', ' a ']",
+  "assertion": "assert counts == {' ': 2, 'a': 1, 'a ': 1, ' a': 1, ' a ': 1}"
+ },
+ {
+  "init": "iterable = [None, None, 1, 1, '1', '1']",
+  "assertion": "assert counts == {None: 2, 1: 2, '1': 2}"
+ },
+ {
+  "init": "iterable = [1.0, 1.0, 1.0000, 1.000] ",
+  "assertion": "assert counts == {1.0: 4}"
+ },
+ {
+  "init": "iterable = 'aabbbccdd'",
+  "assertion": "assert counts == {'a': 2, 'b': 3, 'c': 2, 'd': 2}"
+ },
+ {
+  "init": "iterable = '  '",
+  "assertion": "assert counts == {' ': 2}"
+ },
+ {
+  "init": "iterable = [None, None, None, 1, 1, 2, 2, 2, 2]",
+  "assertion": "assert counts == {None: 3, 1: 2, 2: 4}"
+ },
+ {
+  "init": "iterable = '123451234112'",
+  "assertion": "assert counts == {'1': 4, '2': 3, '3': 2, '4': 2, '5': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 1, 2, 1, 3, 2, 2, 2]",
+  "assertion": "assert counts == {1: 3, 2: 5, 3: 2}"
+ },
+ {
+  "init": "iterable = 'abracadabra'",
+  "assertion": "assert counts == {'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1}"
+ },
+ {
+  "init": "iterable = [' ', ' ', ' ', '  ', '  ', '   ']",
+  "assertion": "assert counts == {' ': 3, '  ': 2, '   ': 1}"
+ },
+ {
+  "init": "iterable = ['a', 'a ', ' a', ' a ', 'A', ' A', 'A ', ' A ']",
+  "assertion": "assert counts == {'a': 1, 'a ': 1, ' a': 1, ' a ': 1, 'A': 1, ' A': 1, 'A ': 1, ' A ': 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'b', 'a']",
+  "assertion": "assert counts == {'a': 3, 'b': 3, 'c': 1}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 1, 2, 2, 1]",
+  "assertion": "assert counts == {1: 3, 2: 3, 3: 1}"
+ },
+ {
+  "init": "iterable = [1.2, 2.3, 3.4, 1.2, 2.3, 2.3, 1.2]",
+  "assertion": "assert counts == {1.2: 3, 2.3: 3, 3.4: 1}"
+ },
+ {
+  "init": "iterable = ['1.2', '2.3', '3.4', '1.2', '2.3', '2.3', '1.2']",
+  "assertion": "assert counts == {'1.2': 3, '2.3': 3, '3.4': 1}"
+ },
+ {
+  "init": "iterable = [None, None, 3, None, 2, 2, 1]",
+  "assertion": "assert counts == {None: 3, 1: 1, 2: 2, 3: 1}"
+ },
+ {
+  "init": "iterable = [1.2, 'a', 3, 'a', 2, 2, 1]",
+  "assertion": "assert counts == {1.2: 1, 'a': 2, 1: 1, 2: 2, 3: 1}"
+ },
+ {
+  "init": "iterable = [[1,2],[1,2],[3,4],[1,2],[3,4],[3,4]]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "iterable = [1, 2, 3, 1, 2, 2, 1, None]",
+  "assertion": "assert counts == {1: 3, 2: 3, 3: 1, None: 1}"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'a', 'b', 'b', 'c']",
+  "assertion": "assert counts == {'a': 2, 'b': 3, 'c': 2}"
+ },
+ {
+  "init": "iterable = [None, None, None, 'None', 'None']",
+  "assertion": "assert counts == {None: 3, 'None': 2}"
+ },
+ {
+  "init": "iterable = ['  string  ', '  string  ', 'string', 'string ']",
+  "assertion": "assert counts == {'  string  ': 2, 'string': 1, 'string ': 1}"
+ },
+ {
+  "init": "iterable = [1.1, 1.1, '1.1', '1.1', 1]",
+  "assertion": "assert counts == {1.1: 2, '1.1': 2, 1: 1}"
+ },
+ {
+  "init": "iterable = [1, 1, 2, 2, 3, 3, 4, 4]",
+  "assertion": "assert counts == {1: 2, 2: 2, 3: 2, 4: 2}"
+ },
+ {
+  "init": "iterable = 'string'",
+  "assertion": "assert counts == {'s': 1, 't': 1, 'r': 1, 'i': 1, 'n': 1, 'g': 1}"
+ },
+ {
+  "init": "iterable = [' ', ' ', ' ', '  ', '  ', '   ', '   ', '   ']",
+  "assertion": "assert counts == {' ': 3, '  ': 2, '   ': 3}"
+ },
+ {
+  "init": "iterable = [1, 1, 2, 2, 3, 3, None, None]",
+  "assertion": "assert counts == {1: 2, 2: 2, 3: 2, None: 2}"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 5, 1, 2, 3, 1, 1, 1]",
+  "assertion": "assert counts == {1: 5, 2: 2, 3: 2, 4: 1, 5: 1}"
+ },
+ {
+  "init": "iterable = ['1.1', '2.2', '3.3', '1.1', '2.2']",
+  "assertion": "assert counts == {'1.1': 2, '2.2': 2, '3.3': 1}"
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 3.3, 1.1, 2.2]",
+  "assertion": "assert counts == {1.1: 2, 2.2: 2, 3.3: 1}"
+ },
+ {
+  "init": "iterable = '       '",
+  "assertion": "assert counts == {' ': 7}"
+ }
+]

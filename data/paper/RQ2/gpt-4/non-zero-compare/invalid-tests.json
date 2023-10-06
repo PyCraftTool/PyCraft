@@ -1,0 +1,172 @@
+[
+ {
+  "init": "val1 = 10\nval2 = 20\nnumber_value = '0'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'def'\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'def'\nnumber_value = '1'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'def'\nnumber_value = '0.0'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nnumber_value = '0'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nnumber_value = [0]",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nnumber_value = float('nan')",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nnumber_value = '0'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nnumber_value = float('NaN')",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'string'\nval2 = 'another string'\nnumber_value = '1'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'string'\nval2 = 'another string'\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'test'\nval2 = 'test2'\nnumber_value = '1'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = [None, None]\nval2 = 'None'\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val2 = float('-inf'); val1 = float('inf')\nnumber_value = 'a string'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'True'\nval2 = False\nnumber_value = [wart, much, beast, out, live, remember]",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = [0,2,3,4,5]; val2 = None; number_value = '8.875';",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = '7' ; val2 = 18.5; number_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'Some String'\nval2 = 'unicode_string_can not be converted to integer_like_the_previos_case'\nnumber_value=\"literal_string_converted_to_float\"",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = True\nval2 = False\nnumber_value = Ture",
+  "assertions": [
+   "assert val==False"
+  ]
+ },
+ {
+  "init": "val1 = 145.676\nval2 = 867.90\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = {1:2,3:4}\nval2 = {'a':'b','c':'d'}\nnumber_value = '0'",
+  "assertions": [
+   "assert val=={1: 2, 3: 4}"
+  ]
+ },
+ {
+  "init": "val1 = []\nval2 = ['141', '']\nnumber_value = [0.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "val2 = [1,2,3]\nval1 = FailTest",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 1\nval2 = 2\nnumber_value = '0'",
+  "assertions": "error"
+ },
+ {
+  "init": "val2 = 'b'\nval1 = 'a'\nnumber_value = '0'",
+  "assertions": [
+   "assert val == 'a'"
+  ]
+ },
+ {
+  "init": "val2 = 'b'\nval1 = 'a'\nnumber_value = 'non-numeric'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'def'\nnumber_value = 'string'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 3.14\nval2 = 2.71\nnumber_value = '1'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 1\nval2 = 3.14\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nnumber_value = '0'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 5\nval2 = 10\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = '5.5'\nval2 = '10.5'\nnumber_value = 'string'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = '5.5'\nval2 = '6.6'\nnumber_value = '1'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nnumber_value = '0'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 10\nval2 = 20\nnumber_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 1.5\nval2 = 2.5\nnumber_value = '0'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 1.5\nval2 = 2.5\nnumber_value = None",
+  "assertions": "error"
+ }
+]

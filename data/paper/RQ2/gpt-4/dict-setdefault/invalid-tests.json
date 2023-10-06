@@ -1,0 +1,214 @@
+[
+ {
+  "init": "array = [1.5, 2.5, 3.5, '1.5']\nfunction = lambda x: x*2",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]\nfunction = lambda x: round(x)",
+  "assertions": [
+   "assert d == {1.1: [1], 2.2: [2], 3.3: [3], 4.4: [4], 5.5: [5]}"
+  ]
+ },
+ {
+  "init": "array = 'not a list'\nfunction = lambda x: x*2",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]\nfunction = lambda x: round(x)",
+  "assertions": [
+   "assert d == {1.1: [1], 2.2: [2], 3.3: [3], 4.4: [4], 5.5: [5]}"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]\nfunction = lambda x: round(x)",
+  "assertions": [
+   "assert d == {1.1: [1], 2.2: [2], 3.3: [3], 4.4: [4], 5.5: [5]}"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]\nfunction = lambda x: round(x)",
+  "assertions": [
+   "assert d == {1.1: [1], 2.2: [2], 3.3: [3], 4.4: [4], 5.5: [5]}"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]\nfunction = lambda x: round(x)",
+  "assertions": [
+   "assert d == {1.1: [1], 2.2: [2], 3.3: [3], 4.4: [4], 5.5: [5]}"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]\nfunction = lambda x: round(x)",
+  "assertions": [
+   "assert d == {1.1: [1], 2.2: [2], 3.3: [3], 4.4: [4], 5.5: [5]}"
+  ]
+ },
+ {
+  "init": "array = [[1, 2], [3, 4], [1, 2]]\nfunction = lambda x: sum(x)",
+  "assertions": [
+   "assert d == {[1, 2]: [3, 3], [3, 4]: [7]}"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 1, 2, 3]\nfunction = lambda x: x*2",
+  "assertions": "error"
+ },
+ {
+  "init": "function = lambda x: len(x)\narray = {'abc': 123, 'def': 456}",
+  "assertions": "error"
+ },
+ {
+  "init": "function = lambda x: x.lower()\narray = 'TEST'",
+  "assertions": [
+   "assert d == {'T': ['t'], 'E': ['e'], 'S': ['s'], 'T': ['t']}"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 1.1, 2.2, 3.3]\ndef function(x): return x ** 2",
+  "assertions": [
+   "assert d == {1.1: [1.21, 1.21], 2.2: [4.84, 4.84], 3.3: [10.89, 10.89]}"
+  ]
+ },
+ {
+  "init": "array = ['1.1', '2.2', '3.3', '1.1', '2.2', '3.3']\ndef function(x): return float(x) ** 2",
+  "assertions": [
+   "assert d == {'1.1': [1.21, 1.21], '2.2': [4.84, 4.84], '3.3': [10.89, 10.89]}"
+  ]
+ },
+ {
+  "init": "array = [None, None, None]\ndef function(x): return x",
+  "assertions": "error"
+ },
+ {
+  "init": "function = str\narray = [1, 2.0, True, None, 1, 2.0, True, None]",
+  "assertions": [
+   "assert len(d) == 4",
+   "assert d == {1: ['1', '1'], 2.0: ['2.0', '2.0'], True: ['True', 'True'], None: ['None', 'None']}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x.upper()\narray = ['a','b','A','B']",
+  "assertions": [
+   "assert d == {'a': ['A', 'A'], 'b': ['B', 'B']}"
+  ]
+ },
+ {
+  "init": "array = 'string'\nfunction = lambda x: x.upper()",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, '1', 1.0, '1.0']\nfunction = lambda x: str(x)",
+  "assertions": [
+   "assert d == {1: ['1', '1'], '1': ['1'], 1.0: ['1.0'], '1.0': ['1.0']}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x\narray = [1, '1', 1.0, '1.0', 1, '1']",
+  "assertions": [
+   "assert d == {1: [1, 1], '1': ['1', '1'], 1.0: [1.0], '1.0': ['1.0']}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x*2\narray = [1.5, '2.5', 3.5, '2.5', 1.5]",
+  "assertions": "error"
+ },
+ {
+  "init": "function = lambda x: x*2\narray = ['1.5', '2.5', '3.5', '2.5', '1.5']",
+  "assertions": "error"
+ },
+ {
+  "init": "def function(x): return x*2\narray = [None, None]",
+  "assertions": [
+   "assert d == {None: [None, None]}"
+  ]
+ },
+ {
+  "init": "def function(x): return x*2\narray = [1, 'a', None, 2.5, '3.5']",
+  "assertions": [
+   "assert d == {1: [2], 'a': ['aa'], None: [None], 2.5: [5.0], '3.5': ['3.53.5']}"
+  ]
+ },
+ {
+  "init": "def function(x):\n    return x*2\narray = [1, 'a', 1.1, '1.1', True, False]",
+  "assertions": [
+   "assert d == {1: [2], 'a': ['aa'], 1.1: [2.2], '1.1': ['1.11.1'], True: [2], False: [0]}"
+  ]
+ },
+ {
+  "init": "array = [1, '1', 1.0, '1.0']\nfunction = lambda x: str(x)",
+  "assertions": [
+   "assert d == {1: ['1', '1'], '1': ['1'], 1.0: ['1.0'], '1.0': ['1.0']}"
+  ]
+ },
+ {
+  "init": "function = lambda x: str(x)\narray = [1, '1', 1.0, '1.0']",
+  "assertions": [
+   "assert d == {1: ['1', '1'], '1': ['1'], 1.0: ['1.0'], '1.0': ['1.0']}"
+  ]
+ },
+ {
+  "init": "array = ['1.2', '2.3', '3.4', '4.5', '5.6']\nfunction = lambda x: float(x)**2",
+  "assertions": [
+   "assert d == {'1.2': [1.44], '2.3': [5.29], '3.4': [11.56], '4.5': [20.25], '5.6': [31.36]}",
+   "assert len(d) == 5"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1.1, 2.2, 1.1]",
+  "assertions": [
+   "assert d == {1.1: [1.21, 1.21], 2.2: [4.84]}"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = int",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 'a', 'b', 'c']\nfunction = str",
+  "assertions": "error"
+ },
+ {
+  "init": "array = ['', ' ', '  ', ' ']\nfunction = lambda x: x*2",
+  "assertions": [
+   "assert d == {'': ['',''], ' ': ['  ', '  ', '  '], '  ': ['    ']}"
+  ]
+ },
+ {
+  "init": "array = [1, None, 3.5, 'str', (1, 2), [3, 4], {'a': 1, 'b': 2}]\nfunction = lambda x: str(x)",
+  "assertions": [
+   "assert d == {1: ['1'], None: ['None'], 3.5: ['3.5'], 'str': ['str'], (1, 2): ['(1, 2)'], [3, 4]: [['3, 4']], {'a': 1, 'b': 2}: ['{\"a\": 1, \"b\": 2}']}"
+  ]
+ },
+ {
+  "init": "array = [1,1, 'string', 'key']; function = flip",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 2, None, 3, 4, 5] \nfunction = lambda x: x*2",
+  "assertions": [
+   "assert d == {1: [2], 2: [4,4], None: [None],3: [6], 4:[8], 5: [10]}"
+  ]
+ },
+ {
+  "init": "array = [10.5, 10.7, '10.5']\nfunction = round",
+  "assertions": [
+   "assert d == {10.5: [10, 10], 10.7: [11], '10.5': [10]}"
+  ]
+ },
+ {
+  "init": "array = np.random.randint(1,5,100).tolist()\nfunction = (lambda x : x%2)",
+  "assertions": [
+   "assert len(d) <= 4"
+  ]
+ },
+ {
+  "init": "array = 'This should throw a TypeError'\nfunction = len",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [(1,2,7),(6,)], [4]\nfunction = lambda x : len(x)",
+  "assertions": [
+   "assert d == {(1,2,7):[3], (6,):[1],[4]:[1]}"
+  ]
+ }
+]

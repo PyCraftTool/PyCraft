@@ -1,0 +1,212 @@
+[
+ {
+  "init": "array1 = []\narray2 = [3.5, '2']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = NuclearOptionTIINGsADLFiKemMRDUnUSSELLBloombergwbzw",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['1', '2', 'string']\narray2 = ['four', 'five', 'six']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['1', '2', '3']\narray2 = ['1', '2', '3']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['1.125', '2.875', '9.0']\narray2 = ['4.89', '2.5', '1']",
+  "assertions": [
+   "assert result == ['114.89', '25.875', '91.0']"
+  ]
+ },
+ {
+  "init": "array1 = 'string'\narray2 = 'another string'",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1, 55, -5.5, 200, 9909, 0.22]; array2 = [3, 77, -4.50, 510, 401.523, -0.22]",
+  "assertions": [
+   "assert result == [4, 132, -10, 710, 9310.523, 0]"
+  ]
+ },
+ {
+  "init": "array1 = [1.2, -3, 4.567] ; array2 = [0, 4, -5]",
+  "assertions": [
+   "assert result == [1.2, 1, -0.433]"
+  ]
+ },
+ {
+  "init": "array1 = ['1.5']\narray2 = ['2.5']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['1', '2', '3']\narray2 = ['1', '2', '3']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['aoeu', 'snth', 'qgJM']\narray2 = ['LSGC', '!vmcp2997', '=2']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1, 2, 4]\narray2 = [None, None, None]",
+  "assertions": [
+   "assert result == [1, 2, 4]"
+  ]
+ },
+ {
+  "init": "array1 = ['1.5', '2.5', '3.55']\narray2 = ['4.5', '5.5', '6.555']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['1.25', '2.75', '4']\narray2 = ['5', '6', '7.725']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, 5, 6, 'abc']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1.1, 2.2, 3.3]\narray2 = [4.4, 5.5, 6.6]",
+  "assertions": [
+   "assert result == [5.5, 7.7, 9.9]"
+  ]
+ },
+ {
+  "init": "array1 = ['abcde', 'fghij', 'klmno']\narray2 = ['pqrst', 'uvwxy', 'z']",
+  "assertions": [
+   "assert result == ['abcdefghijklmnopqrstuvwxyz']"
+  ]
+ },
+ {
+  "init": "array1 = ['1.1', '2.2', '3.3']\narray2 = [4, 5, 6]",
+  "assertions": [
+   "assert result == ['1.14', '2.25', '3.36']"
+  ]
+ },
+ {
+  "init": "array1 = ['1.1', '2.2', '3.3']\narray2 = ['4.1', '5 ' , '6']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1.1, 2.2, 3.3]\narray2 = [4.4, 5.5, 6.6]",
+  "assertions": [
+   "assert result == [5.5, 7.7, 9.9]"
+  ]
+ },
+ {
+  "init": "array1 = [1.2, 2.3, 3.4]\narray2 = [4.5, 5.6, 6.7]",
+  "assertions": [
+   "assert result == [5.7, 7.9, 10.1]"
+  ]
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, 5, 6, 7]",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['a', 'b', 'c']\narray2 = ['d', 'e', 'f']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1, 2, '3']\narray2 = [4, 5, '6']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1.1, 2.2, 3.3]\narray2 = [4.4, 5.5, 6.6]",
+  "assertions": [
+   "assert result == [5.5, 7.7, 9.9]"
+  ]
+ },
+ {
+  "init": "array1 = []\narray2 = [1, 2, 3]",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1.2, 2.3, 3.4, 4.5, 5.6]\narray2 = [6.7, 7.8, 8.9, 9.1, 10.2]",
+  "assertions": [
+   "assert result == [7.9, 10.1, 12.3, 13.6, 15.8]"
+  ]
+ },
+ {
+  "init": "array1 = ['1', '2', '3', '4', '5']\narray2 = ['6', '7', '8', '9', '10']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['1', '2', '3']\narray2 = ['4', '5', '6']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1, 2, 3]\narray2 = [4, 5, 6, 7]",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1.1, 2.2, 3.3]\narray2 = [4.4, 5.5, 6.6]",
+  "assertions": [
+   "assert result == [5.5, 7.7, 9.9]"
+  ]
+ },
+ {
+  "init": "array1 = [1.1, 2.2, 3.3]\narray2 = [4.4, 5.5, 6.6]",
+  "assertions": [
+   "assert result == [5.5, 7.7, 9.9]"
+  ]
+ },
+ {
+  "init": "array1 = [1.1, 2.2, 3.3, 4.4, 5.5]\narray2 = [6.6, 7.7, 8.8, 9.9, 10.10]",
+  "assertions": [
+   "assert result == [7.7, 9.9, 12.1, 14.3, 15.6]"
+  ]
+ },
+ {
+  "init": "array1 = 'string'\narray2 = '1, 2, 3, 4, 5'",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1.1, 2.2, 3.3, 4.4, 5.5]\narray2 = [6.6, 7.7, 8.8, 9.9, 10.10]",
+  "assertions": [
+   "assert result == [7.7, 9.9, 12.1, 14.3, 15.6]"
+  ]
+ },
+ {
+  "init": "array1 = ['1', '2', '3', '4', '5']\narray2 = ['6', '7', '8', '9', '10']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['1.1', '2.2', '3.3', '4.4', '5.5']\narray2 = ['6.6', '7.7', '8.8', '9.9', '10.10']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['1.5', '2.5', '3.5']\narray2 = ['4.5', '5.5', '6.5']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1.2, 2.3, 3.4, 4.5, 5.6]\narray2 = [6.1, 7.1, 8.1, 9.1, 10.1]",
+  "assertions": [
+   "assert result == [7.3, 9.4, 11.5, 13.6, 15.7]"
+  ]
+ },
+ {
+  "init": "array1 = [1.2, '2.3', 3.4, 4.5, '5.6']\narray2 = [6.1, '7.1', 8.1, 9.1, '10.1']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = [1.1, 2.2, 3.3]\narray2 = [4.4, 5.5, 6.6]",
+  "assertions": [
+   "assert result == [5.5, 7.7, 9.9]"
+  ]
+ },
+ {
+  "init": "array1 = ['1', '2', '3']\narray2 = ['4', '5', '6']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['1', '2', '3']\narray2 = ['4', '5', '6']",
+  "assertions": "error"
+ },
+ {
+  "init": "array1 = ['1.2', '2.5', '3.8']\narray2 = ['4.2', '5.5', '6.8']",
+  "assertions": "error"
+ }
+]

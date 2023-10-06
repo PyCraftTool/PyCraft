@@ -1,0 +1,10 @@
+[
+ {
+  "init": "val1 = '1'\nval2 = '0'",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ }
+]

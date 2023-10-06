@@ -1,0 +1,307 @@
+[
+ {
+  "init": "a = 5\nb = 10",
+  "assertion": "assert a == 10\nassert b == 5"
+ },
+ {
+  "init": "a = 2.5\nb = 7.8",
+  "assertion": "assert a == 7.8\nassert b == 2.5"
+ },
+ {
+  "init": "a = 'hello'\nb = 'world'",
+  "assertion": "assert a == 'world'\nassert b == 'hello'"
+ },
+ {
+  "init": "a = []\nb = [1, 2, 3]",
+  "assertion": "assert a == [1, 2, 3]\nassert b == []"
+ },
+ {
+  "init": "a = 0\nb = 3",
+  "assertion": "assert a == 3\nassert b == 0"
+ },
+ {
+  "init": "a = None\nb = 'value'",
+  "assertion": "assert a == 'value'\nassert b == None"
+ },
+ {
+  "init": "a = '  3.14  '\nb = 2",
+  "assertion": "assert a == 2\nassert b == '  3.14  '"
+ },
+ {
+  "init": "a = ''\nb = 5.5",
+  "assertion": "assert a == 5.5\nassert b == ''"
+ },
+ {
+  "init": "a = '  '\nb = '  '",
+  "assertion": "assert a == '  '\nassert b == '  '"
+ },
+ {
+  "init": "a = '5'\nb = '10'",
+  "assertion": "assert a == '10'\nassert b == '5'"
+ },
+ {
+  "init": "a = 10\nb = 20.5",
+  "assertion": "assert a == 20.5\nassert b == 10"
+ },
+ {
+  "init": "a = 'Hello'\nb = 'World'",
+  "assertion": "assert a == 'World'\nassert b == 'Hello'"
+ },
+ {
+  "init": "a = 'Hello'\nb = 3.14",
+  "assertion": "assert a == 3.14\nassert b == 'Hello'"
+ },
+ {
+  "init": "a = None\nb = [1, 2, 3]",
+  "assertion": "assert a == [1, 2, 3]\nassert b == None"
+ },
+ {
+  "init": "a = ''\nb = 'Python'",
+  "assertion": "assert a == 'Python'\nassert b == ''"
+ },
+ {
+  "init": "a = 5\nb = 5.0",
+  "assertion": "assert a == 5.0\nassert b == 5"
+ },
+ {
+  "init": "a = []\nb = ['a', 'b', 'c']",
+  "assertion": "assert a == ['a', 'b', 'c']\nassert b == []"
+ },
+ {
+  "init": "a = 'Hello'\nb = ''",
+  "assertion": "assert a == ''\nassert b == 'Hello'"
+ },
+ {
+  "init": "a = 'Hello'\nb = None",
+  "assertion": "assert a == None\nassert b == 'Hello'"
+ },
+ {
+  "init": "a = []\nb = []",
+  "assertion": "temp = a\na = b\nb = temp\nassert a == []\nassert b == []"
+ },
+ {
+  "init": "a = ''\nb = 'Hello'",
+  "assertion": "assert a == 'Hello'\nassert b == ''"
+ },
+ {
+  "init": "a = 'Python'\nb = 'Code'",
+  "assertion": "assert a == 'Code'\nassert b == 'Python'"
+ },
+ {
+  "init": "a = [1.2, 2.3, 3.4]\nb = [5, 6, 7]",
+  "assertion": "assert a == [5, 6, 7]\nassert b == [1.2, 2.3, 3.4]"
+ },
+ {
+  "init": "a = None\nb = 'Value'",
+  "assertion": "assert a == 'Value'\nassert b == None"
+ },
+ {
+  "init": "a = 3.14159\nb = '3.14159'",
+  "assertion": "assert a == '3.14159'\nassert b == 3.14159"
+ },
+ {
+  "init": "a = 'text'\nb = '   '",
+  "assertion": "assert a == '   '\nassert b == 'text'"
+ },
+ {
+  "init": "a = 123\nb = 456",
+  "assertion": "assert a == 456\nassert b == 123"
+ },
+ {
+  "init": "a = [1, 2, 3]\nb = [1, 2, 3]",
+  "assertion": "temp = a\na = b\nb = temp\nassert a == [1, 2, 3]\nassert b == [1, 2, 3]"
+ },
+ {
+  "init": "a = 3.14\nb = 2.71",
+  "assertion": "assert a == 2.71\nassert b == 3.14"
+ },
+ {
+  "init": "a = [1, 2, 3]\nb = [4, 5, 6]",
+  "assertion": "assert a == [4, 5, 6]\nassert b == [1, 2, 3]"
+ },
+ {
+  "init": "a = []\nb = []",
+  "assertion": "assert a == []\nassert b == []"
+ },
+ {
+  "init": "a = None\nb = None",
+  "assertion": "assert a == None\nassert b == None"
+ },
+ {
+  "init": "a = 10\nb = 10",
+  "assertion": "temp = a\na = b\nb = temp\nassert a == 10\nassert b == 10"
+ },
+ {
+  "init": "a = 3.14\nb = 2.718",
+  "assertion": "assert a == 2.718\nassert b == 3.14"
+ },
+ {
+  "init": "a = ''\nb = 'hello'",
+  "assertion": "assert a == 'hello'\nassert b == ''"
+ },
+ {
+  "init": "a = 10.5\nb = '5.5'",
+  "assertion": "assert a == '5.5'\nassert b == 10.5"
+ },
+ {
+  "init": "a = ['a', 'b', 'c']\nb = []",
+  "assertion": "assert a == []\nassert b == ['a', 'b', 'c']"
+ },
+ {
+  "init": "a = 'hello'\nb = 10",
+  "assertion": "assert a == 10\nassert b == 'hello'"
+ },
+ {
+  "init": "a = 0\nb = 0",
+  "assertion": "temp = a\na = b\nb = temp\nassert a == 0\nassert b == 0"
+ },
+ {
+  "init": "a = '  string  '\nb = None",
+  "assertion": "assert a == None\nassert b == '  string  '"
+ },
+ {
+  "init": "a = 3.14\nb = '2.71'",
+  "assertion": "assert a == '2.71'\nassert b == 3.14"
+ },
+ {
+  "init": "a = None\nb = 'Hello'",
+  "assertion": "assert a == 'Hello'\nassert b == None"
+ },
+ {
+  "init": "a = ''\nb = ''",
+  "assertion": "assert a == ''\nassert b == ''"
+ },
+ {
+  "init": "a = None\nb = 'test'",
+  "assertion": "assert a == 'test'\nassert b is None"
+ },
+ {
+  "init": "a = 1.23\nb = '4.56'",
+  "assertion": "assert a == '4.56'\nassert b == 1.23"
+ },
+ {
+  "init": "a = 'string'\nb = 123",
+  "assertion": "assert a == 123\nassert b == 'string'"
+ },
+ {
+  "init": "a = 5.55\nb = ''",
+  "assertion": "assert a == ''\nassert b == 5.55"
+ },
+ {
+  "init": "a = 3.14\nb = 'pi'",
+  "assertion": "assert a == 'pi'\nassert b == 3.14"
+ },
+ {
+  "init": "a = None\nb = 42",
+  "assertion": "assert a == 42\nassert b is None"
+ },
+ {
+  "init": "a = 'Python'\nb = 'language'",
+  "assertion": "assert a == 'language'\nassert b == 'Python'"
+ },
+ {
+  "init": "a = 2.718\nb = 'e'",
+  "assertion": "assert a == 'e'\nassert b == 2.718"
+ },
+ {
+  "init": "a = ''\nb = 'test'",
+  "assertion": "assert a == 'test'\nassert b == ''"
+ },
+ {
+  "init": "a = [1, 2, 3.14]\nb = ['a', 'b', 'c']",
+  "assertion": "assert a == ['a', 'b', 'c']\nassert b == [1, 2, 3.14]"
+ },
+ {
+  "init": "a = ['apple']\nb = []",
+  "assertion": "assert a == []\nassert b == ['apple']"
+ },
+ {
+  "init": "a = 'Hello'\nb = 'Hello, world!'",
+  "assertion": "assert a == 'Hello, world!'\nassert b == 'Hello'"
+ },
+ {
+  "init": "a = 3.14\nb = 'hello'",
+  "assertion": "assert a == 'hello'\nassert b == 3.14"
+ },
+ {
+  "init": "a = None\nb = False",
+  "assertion": "assert a == False\nassert b == None"
+ },
+ {
+  "init": "a = [1, 2, 3]\nb = []",
+  "assertion": "assert a == []\nassert b == [1, 2, 3]"
+ },
+ {
+  "init": "a = 'hello world'\nb = 'a'",
+  "assertion": "assert a == 'a'\nassert b == 'hello world'"
+ },
+ {
+  "init": "a = 2.5\nb = str(a)",
+  "assertion": "assert a == '2.5'\nassert b == 2.5"
+ },
+ {
+  "init": "a = ''\nb = True",
+  "assertion": "assert a == True\nassert b == ''"
+ },
+ {
+  "init": "a = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "a = ''\nb = 'hello'\ntemp = ''",
+  "assertion": "assert temp == ''"
+ },
+ {
+  "init": "a = -1\nb = 3\ntemp = -1",
+  "assertion": "assert temp == -1"
+ },
+ {
+  "init": "a = 2\nb = 3",
+  "assertion": "assert a == 3\nassert b == 2"
+ },
+ {
+  "init": "a = 200.5\nb = 95.25",
+  "assertion": "assert a == 95.25\nassert b == 200.5"
+ },
+ {
+  "init": "a = [1, 2, 3, 4]\nb = [5, 6, 7, 8]",
+  "assertion": "assert a == [5, 6, 7, 8]\nassert b == [1, 2, 3, 4]"
+ },
+ {
+  "init": "a = float('1.25')\nb = float('-5.75')",
+  "assertion": "assert a == -5.75\nassert b == 1.25"
+ },
+ {
+  "init": "a = '   '\nb = 'text'",
+  "assertion": "assert a == 'text'\nassert b == '   '"
+ },
+ {
+  "init": "a = 10\nb = 5",
+  "assertion": "assert a == 5\nassert b == 10"
+ },
+ {
+  "init": "a = True\nb = False",
+  "assertion": "assert a == False\nassert b == True"
+ },
+ {
+  "init": "a = 'abc'\nb = 'def'",
+  "assertion": "assert a == 'def'\nassert b == 'abc'"
+ },
+ {
+  "init": "a = -3.5\nb = 2.25",
+  "assertion": "assert a == 2.25\nassert b == -3.5"
+ },
+ {
+  "init": "a = 0\nc = 42\ntemp = a\na = c\nc = temp\nb = a",
+  "assertion": "assert a == 42"
+ },
+ {
+  "init": "a = 3.14\nb = '3.14'",
+  "assertion": "assert a == '3.14'\nassert b == 3.14"
+ },
+ {
+  "init": "a = False\nb = True",
+  "assertion": "assert a == True\nassert b == False"
+ }
+]

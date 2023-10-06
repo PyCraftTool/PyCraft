@@ -1,0 +1,54 @@
+[
+ {
+  "init": "l1 = ['1.125', '3.5', '6.75', '5.9']\nl2 = [None, None]",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = '1.125'\nl2 = [1,2,3]",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = ['a', 'b', 'c']\n",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = []\n",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c']\nl2 = ['d', 'e', 'f']\n",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = ['1', '2', '3']\n",
+  "assertions": [
+   "assert common == l1"
+  ]
+ },
+ {
+  "init": "l1 = [1, '2', 3]\nl2 = ['1', '2', '3']\n",
+  "assertions": [
+   "assert common == l1"
+  ]
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4]\nl2 = [3, 4, 5]\ncommon = []\nl1.remove(3)\nl2.remove(4)",
+  "assertions": [
+   "assert common == [3]"
+  ]
+ },
+ {
+  "init": "l1 = ['1', '2', '3', '4']\nl2 = ['5', '6', '7', '8']\ncommon = []\nl1.append('5')\nl2.append('3')",
+  "assertions": [
+   "assert common == [3, 5]"
+  ]
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = ['a', 'b', 'c', 'd', 'e']\n",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = ['a', 'b', 'c', 'd', 'e']\n",
+  "assertions": "error"
+ }
+]

@@ -1,0 +1,70 @@
+[
+ {
+  "init": "iterable = [1, 2, 3]",
+  "cond": "lambda x: x > 1",
+  "assertions": [
+   "assert t == [2, 3]"
+  ]
+ },
+ {
+  "init": "iterable = [-5, -2, 0, 3, 4]",
+  "cond": "lambda x: x % 2 == 0",
+  "assertions": [
+   "assert t == [-2, 0, 4]"
+  ]
+ },
+ {
+  "init": "iterable = ['apple', 'banana', 'cherry']",
+  "cond": "lambda x: len(x) < 6",
+  "assertions": [
+   "assert t == ['apple']"
+  ]
+ },
+ {
+  "init": "iterable = ['red', 'orange', 'yellow', 'green']",
+  "cond": "lambda x: x[0] in ['r', 'y']",
+  "assertions": [
+   "assert t == ['red', 'yellow']"
+  ]
+ },
+ {
+  "init": "iterable = []",
+  "cond": "lambda x: len(x) == 4",
+  "assertions": [
+   "assert t == []"
+  ]
+ },
+ {
+  "init": "iterable = [True, False, True, True, False]",
+  "cond": "lambda x: x == True",
+  "assertions": [
+   "assert t == [True, True, True]"
+  ]
+ },
+ {
+  "init": "iterable = [10, 20, 30, 40, 50]",
+  "cond": "lambda x: x % 7 == 0",
+  "assertions": [
+   "assert t == [70]"
+  ]
+ },
+ {
+  "init": "iterable = [1.5, 2.2, 3.7, 4.4, 5.1]",
+  "cond": "lambda x: x > 3",
+  "assertions": [
+   "assert t == [3.7, 4.4, 5.1]"
+  ]
+ },
+ {
+  "init": "iterable = ['apple', 'banana', 'cherry']",
+  "cond": "None",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, 5]",
+  "cond": "lambda x: x < 0",
+  "assertions": [
+   "assert t == []"
+  ]
+ }
+]

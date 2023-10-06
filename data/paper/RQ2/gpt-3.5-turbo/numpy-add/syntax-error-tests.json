@@ -1,0 +1,8 @@
+[
+ {
+  "init": "array1 = [0, 0, 0]\narray2 = [0, 0, 0]",
+  "assertions": [
+   "asse    array2`rt result == [0, 0, 0]"
+  ]
+ }
+]

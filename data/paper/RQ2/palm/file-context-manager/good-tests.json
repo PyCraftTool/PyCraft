@@ -1,0 +1,305 @@
+[
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world'\nfile_path = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = ''\ncontents = 'hello world'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/home/user/text.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = '12345'",
+  "assertion": "assert isinstance(contents, str)"
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = '1234.5'",
+  "assertion": "assert isinstance(contents, str)"
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = 'Test Content'\nfile_path = 'file2.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertion": "assert contents == 'test'"
+ },
+ {
+  "init": "file_path = '/home/user/textfile.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/home/user/textfile2.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/path/to/file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/home/user/file'\ncontents = ''",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = ''\ncontents = 'hello'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'\ncontents = 'hello'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'\ncontents = 'hello world'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/home/user/test.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = ''",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = ' '",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'This is a test file'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = './test_data/valid_content_file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = './test_data/empty_file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = './test_data/nonexistent_file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_data/valid_content_file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = './test_files/test1.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_files/test2.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = './test_files/test4.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/var/log/messages'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_files/test6.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_files/test3.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_files/test5.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_files/test_files'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test_files/test'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'my_file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'this_file_does_not_exist.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/tmp/test.txt'\nfile_contents = \"test\"\nwith open(file_path, 'w') as f:\n    f.write(file_contents)",
+  "assertion": "assert contents == file_contents"
+ },
+ {
+  "init": "file_path = '/tmp/test.txt'\nfile_contents = \"test\"\nwith open(file_path, 'w') as f:\n    f.write(file_contents)\nfile_path = '/tmp/test2.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/tmp/test.txt'\nfile_contents = \"test\"\nwith open(file_path, 'w') as f:\n    f.write(file_contents)\nfile_path = '/tmp/test'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/tmp/test.txt'\nfile_contents = \"test\"\nwith open(file_path, 'w') as f:\n    f.write(file_contents)\nfile_path = '/tmp/not_exist'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/home/user/Desktop/file.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/Users/user1/Downloads/test.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/Users/user1/Downloads/'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '   '",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '12345'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'Hello World!'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '1.25'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '1.25e10'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'file_that_doesnt_exist.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'C:\\path\\to\\file'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'C:\\some\\random\\file'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/home/user/file.txt'\ncontents = 'Hello World!'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = r'/path/to/file'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'path/to/file'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = r'/path/to/file'\ncontents = ''",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'\ncontents = '\\n'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'path/to/file.txt'\ncontents = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = '/path/to/file'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "file_path = 'test.txt'",
+  "assertion": "assert type(contents) == str"
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'test'\nfile = open(file_path, 'w')\nfile.write(contents)\nfile.close()",
+  "assertion": "assert contents == 'test'"
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'test'\nfile = open(file_path, 'w')\nfile.write(contents)\nfile.close()",
+  "assertion": "assert file.closed"
+ },
+ {
+  "init": "file_path = '/home/user/Desktop/test.txt'",
+  "assertion": "assert 1==1",
+  "error": true
+ }
+]

@@ -1,0 +1,116 @@
+[
+ {
+  "init": "iterable = 'string'\ncond = lambda x: x in ['s', 't']",
+  "assertions": [
+   "assert t == ['s', 't', 't']"
+  ]
+ },
+ {
+  "init": "iterable = [1.1, 2.2, '3.3', 4.4]\ncond = lambda x: float(x)>3",
+  "assertions": [
+   "assert t == [3.3, '3.3', 4.4]"
+  ]
+ },
+ {
+  "init": "iterable = ['apple', 'banana', 'cherry', 'date', 'elderberry']\ncond = lambda x: 'a' in x",
+  "assertions": [
+   "assert t == ['apple', 'banana', 'date', 'elderberry']"
+  ]
+ },
+ {
+  "init": "iterable = {1: 'a', 2: 'b', 3: 'c'}\ncond = lambda x: x in ['a', 'c']",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 3.3, 4.4, 5.5]\ncond = lambda x: x-int(x)>0.1",
+  "assertions": [
+   "assert t == [1.1, 2.2, 4.4, 5.5]"
+  ]
+ },
+ {
+  "init": "iterable = ['1.23', '4.56', '7.89']\ncond = lambda x: float(x) > 2",
+  "assertions": [
+   "assert t == ['1.23', '4.56', '7.89']"
+  ]
+ },
+ {
+  "init": "iterable = [1.23, 4.56, 7.89]\ncond = lambda x: x > 2",
+  "assertions": [
+   "assert t == [1.23, 4.56, 7.89]"
+  ]
+ },
+ {
+  "init": "iterable = ['1.23', '4.56', '7.89']\ncond = lambda x: float(x) > 5",
+  "assertions": [
+   "assert t == ['4.56', '7.89']"
+  ]
+ },
+ {
+  "init": "iterable = [1.1, 2.2, 3.3, 4.4, 5.5]\ncond = lambda x: int(x) == x",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ''\ncond = (lambda x: x.isalpha())",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = 'one,two,three,four'\ncond = (lambda x: x == 'two')",
+  "assertions": [
+   "assert t == ['two']"
+  ]
+ },
+ {
+  "init": "iterable = [1, 2.0, 3.5, '4', '5.0']\ncond = lambda x: isinstance(x, float)",
+  "assertions": "assert t == [2.0, 3.5]"
+ },
+ {
+  "init": "iterable = [1, 2.0, None, str, list,5.6, 'test', [1,2,3]]\ncond = lambda x: instanceof(x, int)",
+  "assertions": [
+   "assert t == [1]"
+  ]
+ },
+ {
+  "init": "iterable = [1, 'abc', [1,2,3], AuthError]\ncond = lambda x : isinstance(x, Exception)",
+  "assertions": [
+   "assert t == [AuthError]"
+  ]
+ },
+ {
+  "init": "iterable = [1, 'abc', [1,2,3], AuthError]\ncond = lambda x : callable(x)",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = [None, '', '   ', 'some string', 42, 2.58, []]\ncond = lambda x: isinstance(x, str)",
+  "assertions": [
+   "assert t == [None, '', '   ', 'some string']"
+  ]
+ },
+ {
+  "init": "iterable = 'This is a test string'\ncond = lambda x: x.islower()",
+  "assertions": [
+   "assert t == ['h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 't', 'e', 's', 't', ' ', 's', 't', 'r', 'i', 'n', 'g']"
+  ]
+ },
+ {
+  "init": "iterable = ['1.125', '3.5', '6.75', '5.9']\ncond = lambda x: float(x) <= 5",
+  "assertions": [
+   "assert t == ['1.125', '3.5', '5.9']"
+  ]
+ },
+ {
+  "init": "iterable = {}\ncond = float",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = 'Hello, World!'\ncond = lambda x: x in ['a', 'e', 'i', 'o', 'u']",
+  "assertions": [
+   "assert t == []"
+  ]
+ },
+ {
+  "init": "iterable = [ ['Hello', 'World'], ['Nice', 'Day'],['Banana'], ['Kiwi']]; cond = lambda x: len(x) == 2;",
+  "assertions": [
+   "assert t == [['Hello', 'World'], ['Nice', 'Day'], ['Banana']]"
+  ]
+ }
+]

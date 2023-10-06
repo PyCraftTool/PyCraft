@@ -1,0 +1,12 @@
+[
+ {
+  "init": "l1 = [None, 'a', 'b'],''*\n ; l2 = ['c', 'd', 'e']",
+  "assertions": [
+   "assert common == []"
+  ]
+ },
+ {
+  "init": "l1 = '\n'\nl2 = [1, 2, 3]",
+  "assertions": "error"
+ }
+]

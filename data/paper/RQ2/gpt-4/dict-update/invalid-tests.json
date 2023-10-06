@@ -1,0 +1,20 @@
+[
+ {
+  "init": "additional_dict = {'a': None, 'b': float('inf'), 'c': -float('inf'), 'd': float('nan')}\nd = {}",
+  "assertions": [
+   "assert d == {'a': None, 'b': float('inf'), 'c': -float('inf'), 'd': float('nan')}"
+  ]
+ },
+ {
+  "init": "additional_dict = {1: 1.0, 2: '2.0', '3': 3.0}\nd = {'1': 1, '2': 2, '3': 3}",
+  "assertions": [
+   "assert d == {'1': 1, '2': '2.0', '3': 3.0, 1: 1.0, 2: '2.0'}"
+  ]
+ },
+ {
+  "init": "additional_dict = {float('nan'): 'value'}\nd = {'a': 'value', 'b': 'value'}",
+  "assertions": [
+   "assert float('nan') in d"
+  ]
+ }
+]

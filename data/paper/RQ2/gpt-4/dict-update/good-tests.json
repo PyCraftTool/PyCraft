@@ -1,0 +1,1381 @@
+[
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {}",
+  "assertion": "assert len(d) == 4\nassert d['a'] == 1"
+ },
+ {
+  "init": "additional_dict = {'a': 'abc', 'b': None, 'c': '', 'e': '0.0'}\nd = {'a': 1}",
+  "assertion": "assert d['a'] == 'abc'\nassert d['b'] == None\nassert d['c'] == ''"
+ },
+ {
+  "init": "additional_dict = {}\nd = {}",
+  "assertion": "assert len(d) == 0"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: 'string', ' ': None}\nd = {}",
+  "assertion": "assert len(d) == 4\nassert d[None] == 'string'\nassert d[' '] == None"
+ },
+ {
+  "init": "additional_dict = {'float': 3.142, 'str': '3.142'}\nd = {}",
+  "assertion": "assert d['float'] == 3.142\nassert d['str'] == '3.142'"
+ },
+ {
+  "init": "additional_dict = {False: 'bool', True: 1, 0: False }\nd = {}",
+  "assertion": "assert len(d) == 2\nassert d[False] == False\nassert d[True] == 1"
+ },
+ {
+  "init": "additional_dict = {'nested': {'inner': 'value' }}\nd = {}",
+  "assertion": "assert d['nested'] ==  {'inner': 'value'}"
+ },
+ {
+  "init": "additional_dict = ['should error']\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'x': 50, 'y': 60}",
+  "assertion": "assert d == {'x': 50, 'y': 60, 'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {'myKey': 'myValue', '2': 2}\nd = {}",
+  "assertion": "assert d == {'myKey': 'myValue', '2': 2}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'x': 1, 'y': 2}",
+  "assertion": "assert d == {'x': 1, 'y': 2}"
+ },
+ {
+  "init": "additional_dict = {'x': 10, 'y': 20}\nd = {'x': 1, 'y': 2}",
+  "assertion": "assert d == {'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {'float': 1.125, 'none': None}\nd = {}",
+  "assertion": "assert d == {'float': 1.125, 'none': None}"
+ },
+ {
+  "init": "additional_dict = {'emptyStr': ''}\nd = {}",
+  "assertion": "assert d == {'emptyStr': ''}"
+ },
+ {
+  "init": "additional_dict = {'x': 10, 'y': 20}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {'x': 1, 'y': 2}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 100, 'b': 200, 'c': 600}\nd = {'b': 202, 'c': 4005, 'd': 301}",
+  "assertion": "assert d == {'b': 200, 'c': 600, 'd': 301, 'a': 100}"
+ },
+ {
+  "init": "additional_dict = {1: 'abc', 'two':('',[1.25, '3.145'])}\nd = {'two':('two thousand', None), 1: 'str_1'}",
+  "assertion": "assert d == {1: 'abc', 'two': ('', [1.25, '3.145'])}"
+ },
+ {
+  "init": "additional_dict = {'Extras':[None]}\nd = {'Extras': ('2 extra data', 3.33)}",
+  "assertion": "assert d == {'Extras': [None]}"
+ },
+ {
+  "init": "additional_dict = {3.125: '3/8'}\nd = {'A': [([],)], '_123': 70}",
+  "assertion": "assert d == {'A': [([],)], '_123': 70, 3.125: '3/8'}"
+ },
+ {
+  "init": "additional_dict = {'': ''}\nd = {}",
+  "assertion": "assert d == {'': ''}"
+ },
+ {
+  "init": "additional_dict = {4:'', 3: 'odd', 'atom_string':'string'}\nd = {'' : ([264,'three', '', ' '],)}",
+  "assertion": "assert d == {'' : ([264,'three', '', ' '],), 4: '', 3: 'odd', 'atom_string': 'string'}"
+ },
+ {
+  "init": "additional_dict = {13: ''}\nd = {998232323474:8930014446}",
+  "assertion": "assert d == {998232323474:8930014446, 13: ''}"
+ },
+ {
+  "init": "additional_dict = {'a': 100, 'b': 200, 'c': {1:2, 3:4}}\nd = {}",
+  "assertion": "assert d == {'a': 100, 'b': 200, 'c': {1:2, 3:4}}"
+ },
+ {
+  "init": "additional_dict = {} \nd = {'Key': 1}",
+  "assertion": "assert d == {'Key': 1}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}; \nd = {}",
+  "assertion": "assert d == additional_dict"
+ },
+ {
+  "init": "additional_dict = {'a': None}; \nd = {'b': 2}",
+  "assertion": "assert d == {'b': 2, 'a': None}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', 0: '  string  '}; \nd = {'zero': 0}",
+  "assertion": "assert d == {'zero' : 0, 1: '', 2: 'b', 0: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {}; \nd = {}",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "additional_dict = {'b': 2}; \nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None; \nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'k': 2.99988, 'v': 'some words'}; \nd = {'a': 1}",
+  "assertion": "assert d == {'a' : 1, 'k': 2.99988, 'v': 'some words'}"
+ },
+ {
+  "init": "additional_dict = {'b': 2}; \nd = ['one']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'string as a key': 1, 3.5768 : 2, 678: 'integer as value'}; \nd = {}",
+  "assertion": "assert d == additional_dict"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = {'x': 5, 'y': 6}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 'x': 5, 'y': 6}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'x': 5}",
+  "assertion": "assert d == {'x': 5}"
+ },
+ {
+  "init": "additional_dict = {'float': 1.25, 'strAsFloat': '1.27'}\nd = {'x':5, 'strAsFloat':5.5}",
+  "assertion": "assert d == {'x': 5, 'float': 1.25, 'strAsFloat': '1.27'}"
+ },
+ {
+  "init": "additional_dict = {1: '', None: 'string0182'}\nd = {'x': 5}",
+  "assertion": "assert d == {'x':5, 1:'', None:'string0182'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {}",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 'some string', 'c': None, 'd': 12.4}\nd = {}",
+  "assertion": "assert d == {'a': 1, 'b': 'some string', 'c': None, 'd': 12.4}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: ['string1', 'string2'], 'e': 1.4578}\nd = {'f': 22, 'g': None, 3: 'already existing string'}",
+  "assertion": "assert d == {'f': 22, 'g': None, 3: 'already existing string', 1: '', 2: 'b', None: ['string1', 'string2'], 'e': 1.4578}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.00', '3.5', '6.75', '5.9']}\nd = {}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.00', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {1: 'a', 2: 'b', 3: 'c'}\nd = {}",
+  "assertion": "assert d == {1: 'a', 2: 'b', 3: 'c'}"
+ },
+ {
+  "init": "additional_dict = {'': 'empty', ' ': 'space'}\nd = {}",
+  "assertion": "assert d == {'': 'empty', ' ': 'space'}"
+ },
+ {
+  "init": "additional_dict = {None: None}\nd = {}",
+  "assertion": "assert d == {None: None}"
+ },
+ {
+  "init": "additional_dict = {} \nd = {}",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "additional_dict = {'str': '3.6'}\nd = {}",
+  "assertion": "assert d == {'str': '3.6'}"
+ },
+ {
+  "init": "additional_dict = [{'list': 'not dictionary'}]\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 34\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {1.2: 'floaT'}\nd = {}",
+  "assertion": "assert d == {1.2: 'floaT'}"
+ },
+ {
+  "init": "additional_dict = {'string': 1234}\nd = {}",
+  "assertion": "assert d == {'string': 1234}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125}\nd = {}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125}"
+ },
+ {
+  "init": "additional_dict = {'e': 'Texts'}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'e': 'Texts'}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 1, 'b': 2}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 1.9, 'c': [1,2,3]}\nd = {'d': 3, 'b': 2}",
+  "assertion": "assert d == {'d': 3, 'b': 1.9, 'a': 1, 'c': [1,2,3]}"
+ },
+ {
+  "init": "additional_dict = {None: 'None', '': 'Empty'}\nd = {1: 'Sample', 2: None}",
+  "assertion": "assert d == {1: 'Sample', 2: None, None: 'None', '': 'Empty'}"
+ },
+ {
+  "init": "additional_dict = {1: 0.5}\nd = 'Not a Dict'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 'Not a Dict'\nd = {1, 2, 3}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {1.85: '1.85'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {1:0.75}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}; d = {'x': 5, 'y': 6, 'z': 7}",
+  "assertion": "assert d == {'x': 5, 'y': 6, 'z': 7, 'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = {}; d = {'x': 5, 'y': 6, 'z': 7}",
+  "assertion": "assert d == {'x': 5, 'y': 6, 'z': 7}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}; d = {}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = None; d = {'x': 5, 'y': 6, 'z': 7}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}; d = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': '1', 'b': ' ', 'c': None}; d = {'x': 5, 'y': 6, 'z': 7}",
+  "assertion": "assert d == {'x': 5, 'y': 6, 'z': 7, 'a': '1', 'b': ' ', 'c': None}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.1, 'b': '2.2', 'c': [1, 2, 3]}; d = {'x': '5', 'y': '6.6', 'z': [4, 5, 6]}",
+  "assertion": "assert d == {'x': '5', 'y': '6.6', 'z': [4, 5, 6], 'a': 1.1, 'b': '2.2', 'c': [1, 2, 3]}"
+ },
+ {
+  "init": "additional_dict = {1: 'a', 2: 'b', 3: 'c'}; d = {4: 'x', 5: 'y', 6: 'z'}",
+  "assertion": "assert d == {4: 'x', 5: 'y', 6: 'z', 1: 'a', 2: 'b', 3: 'c'}"
+ },
+ {
+  "init": "additional_dict = {'k1': {'k2': 'v2'}}; d = {'k1': {'k3': 'v3'}}",
+  "assertion": "assert d == {'k1': {'k2': 'v2'}}"
+ },
+ {
+  "init": "additional_dict = {'k1': {'k2': 'v2'}}; d = {'k3': {'k4': 'v4'}}",
+  "assertion": "assert d == {'k3': {'k4': 'v4'}, 'k1': {'k2': 'v2'}}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9'], 1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'a': 10, 'b': 20, 'z': 30}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'z': 30, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'a': 10, 'b': 20, 'z': 30}",
+  "assertion": "assert d == {'a': 10, 'b': 20, 'z': 30}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {'a': 10, 'b': 20, 'z': 30}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 'a'\nd = {'a': 10, 'b': 20, 'z': 30}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = 'b'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'x': 5, 'y': 10, 'z': 15}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 'x': 5, 'y': 10, 'z': 15}"
+ },
+ {
+  "init": "additional_dict = {'a': 10, 'b': 20}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': 10, 'b': 20, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = {'x': 5, 'y': 10, 'z': 15}\nd = {}",
+  "assertion": "assert d == {'x': 5, 'y': 10, 'z': 15}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': '  '}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': None, 'b': '  ', 'c': 3}"
+ },
+ {
+  "init": "additional_dict = {1: 'one', 2: 'two'}\nd = {1: 'uno', 2: 'dos', 3: 'tres'}",
+  "assertion": "assert d == {1: 'one', 2: 'two', 3: 'tres'}"
+ },
+ {
+  "init": "additional_dict = {None: 'null', '': 'empty'}\nd = {1: 'uno', 2: 'dos', 3: 'tres'}",
+  "assertion": "assert d == {1: 'uno', 2: 'dos', 3: 'tres', None: 'null', '': 'empty'}"
+ },
+ {
+  "init": "additional_dict = {'a': 3.14, 'b': '3.14'}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': 3.14, 'b': '3.14', 'c': 3}"
+ },
+ {
+  "init": "additional_dict = 'string'\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 12345\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {}\nd = {'a': 1, 'b': 2, 'c': [None, None]}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': [None, None]}\nd = {'d': 4, 'e': 5, 'f': [6, 7]}",
+  "assertion": "assert d == {'d': 4, 'e': 5, 'f': [6, 7], 'a': 1, 'b': 2, 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {}",
+  "assertion": "assert d == {1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {1: 'a', 2: 'b', 3.33: 'c'}\nd = {'d': 4, 'e': 5, 'f': [6, 7]}",
+  "assertion": "assert d == {'d': 4, 'e': 5, 'f': [6, 7], 1: 'a', 2: 'b', 3.33: 'c'}"
+ },
+ {
+  "init": "additional_dict = {1: 'a', 2: 'b', '3.33': 'c'}\nd = {'d': 4, 'e': 5, 'f': [6, 7]}",
+  "assertion": "assert d == {'d': 4, 'e': 5, 'f': [6, 7], 1: 'a', 2: 'b', '3.33': 'c'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': [None, None]}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {'a': 1, 'b': 2, 'c': [None, None]}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}; d = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {'a': [1, 2, 3], 'b': {1: 'one', 2: 'two'}, 'c': None}; d = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'a': [1, 2, 3], 'b': {1: 'one', 2: 'two'}, 'c': None, 'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {}; d = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {'a': 'abc', 'b': 123, 'c': [1.1, 2.2, 3.3]}; d = {'x': None, 'y': ' '}",
+  "assertion": "assert d == {'a': 'abc', 'b': 123, 'c': [1.1, 2.2, 3.3], 'x': None, 'y': ' '}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}; d = {'a': 100, 'b': 200}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = None; d = {'x': 10, 'y': 20}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}; d = 'some string'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 'some string'; d = {'x': 10, 'y': 20}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'd': ['1.125', '3.5', '6.75', '5.9']}\nd = {}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'd': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': [None, None]}\nd = {'e': 'Existing value'}",
+  "assertion": "assert d == {'e': 'Existing value', 'a': 1, 'b': 2, 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {'Existing key': 'Existing value'}",
+  "assertion": "assert d == {'Existing key': 'Existing value', 1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {'a': '1', 'b': '2', 'c': '3'}\nd = {'a': 'Existing value', 'b': 'Existing value', 'c': 'Existing value'}",
+  "assertion": "assert d == {'a': '1', 'b': '2', 'c': '3'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.23, 'b': '1.23', 'c': [1.23, '1.23']}\nd = {}",
+  "assertion": "assert d == {'a': 1.23, 'b': '1.23', 'c': [1.23, '1.23']}"
+ },
+ {
+  "init": "additional_dict = {'a': True, 'b': False, 'c': None}\nd = {}",
+  "assertion": "assert d == {'a': True, 'b': False, 'c': None}"
+ },
+ {
+  "init": "additional_dict = {1: '1', True: 'True', False: 'False', None: 'None'}\nd = {}",
+  "assertion": "assert d == {1: 'True', False: 'False', None: 'None'}"
+ },
+ {
+  "init": "additional_dict = 'Not a Dictionary'\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {}",
+  "assertion": "assert d == additional_dict"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': [None, None]}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': [None, None], 'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {'y': 20, 'z': 30}",
+  "assertion": "assert d == {1: '', 2: 'b', None: '  string  ', 'y': 20, 'z': 30}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'y': 20, 'z': 30}",
+  "assertion": "assert d == {'y': 20, 'z': 30}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': [None, None]}\nd = {}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {'a': 'float as string', 'b': 2.56, 'c': '3.125', 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {}",
+  "assertion": "assert d == {'a': 'float as string', 'b': 2.56, 'c': '3.125', 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': None}\nd = {}",
+  "assertion": "assert d == {'a': None, 'b': None}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: None, None: '  string  '}\nd = {'y': 20, 'z': 30}",
+  "assertion": "assert d == {1: '', 2: None, None: '  string  ', 'y': 20, 'z': 30}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', ' ': '  string  '}\nd = {'y': 20, 'z': 30}",
+  "assertion": "assert d == {1: '', 2: 'b', ' ': '  string  ', 'y': 20, 'z': 30}"
+ },
+ {
+  "init": "additional_dict = {'a': '1', 'b': '2', 'c': '3', 'd': '4', 'e': '5'}\nd = {'f': '6', 'g': '7', 'h': '8', 'i': '9', 'j': '10'}",
+  "assertion": "assert d == {'a': '1', 'b': '2', 'c': '3', 'd': '4', 'e': '5', 'f': '6', 'g': '7', 'h': '8', 'i': '9', 'j': '10'}"
+ },
+ {
+  "init": "additional_dict = {'a':1, 'b':2, 'c':3}\nd = {}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'x':10, 'y':20}",
+  "assertion": "assert d == {'x':10, 'y':20}"
+ },
+ {
+  "init": "additional_dict = {'a':1, 'b':2, 'c':3}\nd = {'a':10, 'y':20}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': '', 'c': '  '}\nd = {}",
+  "assertion": "assert d == {'a': None, 'b': '', 'c': '  '}"
+ },
+ {
+  "init": "additional_dict = {1:1.1, '2':'2.2', None:None}\nd = {}",
+  "assertion": "assert d == {1:1.1, '2':'2.2', None:None}"
+ },
+ {
+  "init": "additional_dict = {'a': [1, 2, 3], 'b': (4, 5, 6)}\nd = {}",
+  "assertion": "assert d == {'a': [1, 2, 3], 'b': (4, 5, 6)}"
+ },
+ {
+  "init": "additional_dict = {'a': {'x':10, 'y':20}}\nd = {}",
+  "assertion": "assert d == {'a': {'x':10, 'y':20}}"
+ },
+ {
+  "init": "additional_dict = {'a':1, 'b':2, 'c':3}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'f': 10, 'g': None}",
+  "assertion": "assert d == {'f': 10, 'g': None, 'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.0, 'b': '2.0', 'c': [None, None]}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 1.0, 'b': '2.0', 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: None, None: '  string  '}\nd = {'a': 1, 'b': 2, 1: 'a', 2: 'b', None: 'c'}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 1: '', 2: None, None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = ''",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = 0",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = {'a': 3, 'c': 4}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 4}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': 'None', 'c': '  '}\nd = {}",
+  "assertion": "assert d == {'a': None, 'b': 'None', 'c': '  '}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.23, 'b': '1.23', 'c': 1.23}\nd = {}",
+  "assertion": "assert d == {'a': 1.23, 'b': '1.23', 'c': 1.23}"
+ },
+ {
+  "init": "additional_dict = {'a': [1, 2, 3], 'b': (4, 5, 6), 'c': {'d': 7, 'e': 8}}\nd = {}",
+  "assertion": "assert d == {'a': [1, 2, 3], 'b': (4, 5, 6), 'c': {'d': 7, 'e': 8}}"
+ },
+ {
+  "init": "additional_dict = {'a': [1, 2, 3], 'b': (4, 5, 6), 'c': {'d': 7, 'e': 8}}\nd = {'a': [4, 5, 6], 'b': (1, 2, 3), 'c': {'d': 8, 'e': 7}}",
+  "assertion": "assert d == {'a': [1, 2, 3], 'b': (4, 5, 6), 'c': {'d': 7, 'e': 8}}"
+ },
+ {
+  "init": "additional_dict = 'a'\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': [None, None]}\nd = {'d': 4, 'e': 5}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': [None, None], 'd': 4, 'e': 5}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {3: 'c', 4: 'd'}",
+  "assertion": "assert d == {1: '', 2: 'b', None: '  string  ', 3: 'c', 4: 'd'}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {3: 'c', 4: 'd'}",
+  "assertion": "assert d == {3: 'c', 4: 'd'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = {'a': 4, 'b': 5, 'c': 6}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.0, 'b': '2.0', 'c': 3.0}\nd = {'a': 4, 'b': 5, 'c': 6}",
+  "assertion": "assert d == {'a': 1.0, 'b': '2.0', 'c': 3.0}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': None, 'c': None}\nd = {'a': 4, 'b': 5, 'c': 6}",
+  "assertion": "assert d == {'a': None, 'b': None, 'c': None}"
+ },
+ {
+  "init": "additional_dict = {'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]}\nd = {'a': 4, 'b': 5, 'c': 6}",
+  "assertion": "assert d == {'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]}"
+ },
+ {
+  "init": "additional_dict = {'a': (1, 2, 3), 'b': (4, 5, 6), 'c': (7, 8, 9)}\nd = {'a': 4, 'b': 5, 'c': 6}",
+  "assertion": "assert d == {'a': (1, 2, 3), 'b': (4, 5, 6), 'c': (7, 8, 9)}"
+ },
+ {
+  "init": "additional_dict = 123\nd = {'a': 4, 'b': 5, 'c': 6}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {1: '', 2: 'b', None: '  string  ', 'a': 1, 'b': 2}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = {}",
+  "assertion": "assert d == {'a': 1, 'b': 2}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.0, 'b': '2.0'}\nd = {'c': 3, 'd': 4}",
+  "assertion": "assert d == {'a': 1.0, 'b': '2.0', 'c': 3, 'd': 4}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.0, 'b': '2.0'}\nd = {'a': 3, 'b': 4}",
+  "assertion": "assert d == {'a': 1.0, 'b': '2.0'}"
+ },
+ {
+  "init": "additional_dict = {'a': [1, 2, 3], 'b': (4, 5, 6)}\nd = {'c': 7, 'd': 8}",
+  "assertion": "assert d == {'a': [1, 2, 3], 'b': (4, 5, 6), 'c': 7, 'd': 8}"
+ },
+ {
+  "init": "additional_dict = {'a': {1, 2, 3}, 'b': {4, 5, 6}}\nd = {'c': 7, 'd': 8}",
+  "assertion": "assert d == {'a': {1, 2, 3}, 'b': {4, 5, 6}, 'c': 7, 'd': 8}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': 'None'}\nd = {'c': 'None', 'd': None}",
+  "assertion": "assert d == {'a': None, 'b': 'None', 'c': 'None', 'd': None}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.23, 'b': 'string', 'c': None}\nd = {}",
+  "assertion": "assert d == {'a': 1.23, 'b': 'string', 'c': None}"
+ },
+ {
+  "init": "additional_dict = {'a': [1, 2, 3], 'b': (4, 5, 6), 'c': {'nested': 'dict'}}\nd = {}",
+  "assertion": "assert d == {'a': [1, 2, 3], 'b': (4, 5, 6), 'c': {'nested': 'dict'}}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 'not a dict'\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = 'not a dict'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = {}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': '', 'c': '  '}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'a': None, 'b': '', 'c': '  ', 'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.23, 'b': '1.23', 'c': [1.23, '1.23']}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'a': 1.23, 'b': '1.23', 'c': [1.23, '1.23'], 'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = None\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 'a'\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 123\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = 'd'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {1: 'a', 2: 'b', 3: 'c'}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {1: 'a', 2: 'b', 3: 'c', 'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.5, 'b': '2.5', 'c': [3.5]}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'a': 1.5, 'b': '2.5', 'c': [3.5], 'x': 10, 'y': 20}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = 'string'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 'string'\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = {'d': 4, 'e': 5, 'f': 6}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'d': 4, 'e': 5, 'f': 6}",
+  "assertion": "assert d == {'d': 4, 'e': 5, 'f': 6}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': '', 'c': ' '}\nd = {'d': 4, 'e': 5, 'f': 6}",
+  "assertion": "assert d == {'a': None, 'b': '', 'c': ' ', 'd': 4, 'e': 5, 'f': 6}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.23, 'b': '1.23', 'c': [1, 2, 3]}\nd = {'d': 4, 'e': 5, 'f': 6}",
+  "assertion": "assert d == {'a': 1.23, 'b': '1.23', 'c': [1, 2, 3], 'd': 4, 'e': 5, 'f': 6}"
+ },
+ {
+  "init": "additional_dict = None\nd = {'d': 4, 'e': 5, 'f': 6}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 'string'\nd = {'d': 4, 'e': 5, 'f': 6}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = ['a', 'b', 'c']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {}\nd = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {1: 'a', 2: 'c', 3: 'e'}",
+  "assertion": "assert d == {1: '', 2: 'b', 3: 'e', None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.23, 'b': '2.34', 'c': [None, None]}\nd = {}",
+  "assertion": "assert d == {'a': 1.23, 'b': '2.34', 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.23, 'b': '2.34', 'c': [None, None]}\nd = {'a': 2, 'b': 3, 'c': 4}",
+  "assertion": "assert d == {'a': 1.23, 'b': '2.34', 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.23, 'b': '2.34', 'c': [None, None]}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {1: 'a', 2: 'b', 3: 'c'}",
+  "assertion": "assert d == {1: '', 2: 'b', 3: 'c', None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': '', 'c': ' '}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': None, 'b': '', 'c': ' '}"
+ },
+ {
+  "init": "additional_dict = {'a': [1, 2, 3], 'b': (4, 5, 6), 'c': {'d': 7, 'e': 8}}\nd = {'a': 'a', 'b': 'b', 'c': 'c'}",
+  "assertion": "assert d == {'a': [1, 2, 3], 'b': (4, 5, 6), 'c': {'d': 7, 'e': 8}}"
+ },
+ {
+  "init": "additional_dict = 'string'\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 12345\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 1.2345\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'f': 5, 'g': 6}",
+  "assertion": "assert d == {'f': 5, 'g': 6, 'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'a': 5, 'g': 6}",
+  "assertion": "assert d == {'a': 1, 'g': 6, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': '', 'c': '  ', 'e': []}\nd = {}",
+  "assertion": "assert d == {'a': None, 'b': '', 'c': '  ', 'e': []}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.0, 'b': '2.0', 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {}",
+  "assertion": "assert d == {'a': 1.0, 'b': '2.0', 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = 'string'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 'string'\nd = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1.0, 'b': '2.0', 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'a': 5, 'g': 6}",
+  "assertion": "assert d == {'a': 1.0, 'g': 6, 'b': '2.0', 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = None\nd = {'a': 4, 'b': 5, 'c': 6}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1.5, 'b': '2.5', 'c': '3.5'}\nd = {'a': 4, 'b': 5, 'c': 6}",
+  "assertion": "assert d == {'a': 1.5, 'b': '2.5', 'c': '3.5'}"
+ },
+ {
+  "init": "additional_dict = {'a': '1.5', 'b': '2.5', 'c': '3.5'}\nd = {'a': 4, 'b': 5, 'c': 6}",
+  "assertion": "assert d == {'a': '1.5', 'b': '2.5', 'c': '3.5'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.0, 'b': '2.0', 'c': 3.0}\nd = {}",
+  "assertion": "assert d == {'a': 1.0, 'b': '2.0', 'c': 3.0}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.0, 'b': '2.0', 'c': 3.0}\nd = {'d': 4, 'e': 5}",
+  "assertion": "assert d == {'a': 1.0, 'b': '2.0', 'c': 3.0, 'd': 4, 'e': 5}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20, 'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': '', 'c': '  '}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20, 'a': None, 'b': '', 'c': '  '}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.23, 'b': '1.23', 'c': [1.23, '1.23']}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20, 'a': 1.23, 'b': '1.23', 'c': [1.23, '1.23']}"
+ },
+ {
+  "init": "additional_dict = {1: 'a', 2: 'b', 3: 'c'}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20, 1: 'a', 2: 'b', 3: 'c'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = {'a': 10, 'b': 20}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {1: 'a', 2: 'c', None: '  string  '}",
+  "assertion": "assert d == {1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'f': 1.25, 'g': 2.5, 'h': 3.75, 'i': ['1.125', '3.5', '6.75', '5.9']}",
+  "assertion": "assert d == {'f': 1.25, 'g': 2.5, 'h': 3.75, 'i': ['1.125', '3.5', '6.75', '5.9'], 'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'a': 1.25, 'b': 2.5, 'c': 3.75, 'e': ['1.125', '3.5', '6.75', '5.9']}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = 123",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': '', 'c': '  ', 'e': [None, ' ', '']}\nd = {}",
+  "assertion": "assert d == {'a': None, 'b': '', 'c': '  ', 'e': [None, ' ', '']}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': [None, None]}\nd = {'a': 2, 'x': 'y'}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': [None, None], 'x': 'y'}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'a':1, 'b':2}",
+  "assertion": "assert d == {'a':1, 'b':2}"
+ },
+ {
+  "init": "additional_dict = {'a':3, 'b':4}\nd = {'a':1, 'b':2}",
+  "assertion": "assert d == {'a':3, 'b':4}"
+ },
+ {
+  "init": "additional_dict = {1: 1.0, 2: 2.0, 3: 3.0}\nd = {4: 4.0, 5: 5.0}",
+  "assertion": "assert d == {1:1.0, 2:2.0, 3:3.0, 4:4.0, 5:5.0}"
+ },
+ {
+  "init": "additional_dict = 'apple'\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 1234\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = { 'x': 10, 'y': 20 }",
+  "assertion": "assert d == { 'x': 10, 'y': 20, 1: '', 2: 'b', None: '  string  ' }"
+ },
+ {
+  "init": "additional_dict = {1.25: 'a', 'b': 2.35, 'c': [None, None]}\nd = {'d': 'test'}",
+  "assertion": "assert d == {'d': 'test', 1.25: 'a', 'b': 2.35, 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'d': 'test'}",
+  "assertion": "assert d == {'d': 'test'}"
+ },
+ {
+  "init": "additional_dict = 'a string'\nd = {'d': 'test'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {'d': 'test'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 12345\nd = {'d': 'test'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = 'a string'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = { 'x': 10, 'y': 20 }\nd = { 'y': 30, 'z': 40 }",
+  "assertion": "assert d == { 'x': 10, 'y': 20, 'z': 40 }"
+ },
+ {
+  "init": "additional_dict = {'c': 10, 'd': 15, 'e': 20}\nd = {'a': 5, 'b': 10}",
+  "assertion": "assert d == {'a': 5, 'b': 10, 'c': 10, 'd': 15, 'e': 20}"
+ },
+ {
+  "init": "additional_dict = {'e': None, 'f': 'test', 'g': 123.456}\nd = {'a': 1, 'b': 'xyz', 'c': None}",
+  "assertion": "assert d == {'a': 1, 'b': 'xyz', 'c': None, 'e': None, 'f': 'test', 'g': 123.456}"
+ },
+ {
+  "init": "additional_dict = {'e': 'value'}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = {'a': 3, 'b': 4, 'c': 5}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 5}"
+ },
+ {
+  "init": "additional_dict = {1: 'value'}\nd = {1: 'old_value', 'item': 'value'}",
+  "assertion": "assert d == {1: 'value', 'item': 'value'}"
+ },
+ {
+  "init": "additional_dict = {'a': [1, 2, 3]}\nd = {'a': 'value', 'b': 'value'}",
+  "assertion": "assert d == {'a': [1, 2, 3], 'b': 'value'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}; d = {}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 'd': 4}"
+ },
+ {
+  "init": "additional_dict = {None: 'value'}; d = {}",
+  "assertion": "assert d == {None: 'value'}"
+ },
+ {
+  "init": "additional_dict = {'key': None}; d = {}",
+  "assertion": "assert d == {'key': None}"
+ },
+ {
+  "init": "additional_dict = {' ': 'value'}; d = {}",
+  "assertion": "assert d == {' ': 'value'}"
+ },
+ {
+  "init": "additional_dict = {'key': ' '}; d = {}",
+  "assertion": "assert d == {'key': ' '}"
+ },
+ {
+  "init": "additional_dict = {1: 1}; d = {}",
+  "assertion": "assert d == {1: 1}"
+ },
+ {
+  "init": "additional_dict = {'1': 1}; d = {}",
+  "assertion": "assert d == {'1': 1}"
+ },
+ {
+  "init": "additional_dict = {'1.0': 1.0}; d = {}",
+  "assertion": "assert d == {'1.0': 1.0}"
+ },
+ {
+  "init": "additional_dict = {1.0: 1.0}; d = {}",
+  "assertion": "assert d == {1.0: 1.0}"
+ },
+ {
+  "init": "additional_dict = {}; d = {}",
+  "assertion": "assert d == {}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'x': 1, 'y': [None, None]}",
+  "assertion": "assert d == {'x': 1, 'y': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': [None, None]}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': None}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': None}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': 'string'}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': 'string'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': '3.5'}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': '3.5'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = 3",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {}",
+  "assertion": "assert d == additional_dict"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'a': 34, 'b': 27}",
+  "assertion": "assert d == {'a': 34, 'b': 27}"
+ },
+ {
+  "init": "additional_dict = {'a': 34, 'b': 27}\nd = {}",
+  "assertion": "assert d == {'a': 34, 'b': 27}"
+ },
+ {
+  "init": "additional_dict = {'c': 34, 'd': 27}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 34, 'd': 27}"
+ },
+ {
+  "init": "additional_dict = {'a': 34, 'b': 27}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 34, 'b': 27}"
+ },
+ {
+  "init": "additional_dict = {1: 34, 2: 27}\nd = {1: 'a', 2: 'b'}",
+  "assertion": "assert d == {1: 34, 2: 27}"
+ },
+ {
+  "init": "additional_dict = {1.0: 34, 2.0: 27}\nd = {1: 'a', 2: 'b'}",
+  "assertion": "assert d == {1.0: 34, 2.0: 27}"
+ },
+ {
+  "init": "additional_dict = {'1': 34, '2': 27}\nd = {1: 'a', 2: 'b'}",
+  "assertion": "assert d == {1: 'a', 2: 'b', '1': 34, '2': 27}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20, 'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {1: 'value', 2: 'value2', None: 'value3'}\nd = {'a': 'value_a', 'b': 'value_b'}",
+  "assertion": "assert d == {'a': 'value_a', 'b': 'value_b', 1: 'value', 2: 'value2', None: 'value3'}"
+ },
+ {
+  "init": "additional_dict = {'key': '  string  '}\nd = {}",
+  "assertion": "assert d == {'key': '  string  '}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'a': 5, 'b': 10}",
+  "assertion": "assert d == {'a': 5, 'b': 10}"
+ },
+ {
+  "init": "additional_dict = {'a': 10}\nd = {'a': 5, 'b': 10}",
+  "assertion": "assert d == {'a': 10, 'b': 10}"
+ },
+ {
+  "init": "additional_dict = {'a': None}\nd = {'a': 5, 'b': 10}",
+  "assertion": "assert d == {'a': None, 'b': 10}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {'1': 'a', '2': 'b', None: 'c'}",
+  "assertion": "assert d == {'1': 'a', '2': 'b', None: '  string  ', 1: '', 2: 'b'}"
+ },
+ {
+  "init": "additional_dict = 'Not a dictionary'\nd = {'a': 5, 'b': 10}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = 5.0\nd = {'a': 5, 'b': 10}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {'a': 5, 'b': 10}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'e': 2, 'f':4, 'g':6} \nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 'e': 2, 'f': 4, 'g': 6}"
+ },
+ {
+  "init": "additional_dict = {None: None}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, None: None}"
+ },
+ {
+  "init": "additional_dict = {'d': 'str', 'e': '', 'f': '  spaced str  '}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 'd': 'str', 'e': '', 'f': '  spaced str  '}"
+ },
+ {
+  "init": "additional_dict = {'d': 1.5, 'e': 2.5, 'f': '3.5'}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 'd': 1.5, 'e': 2.5, 'f': '3.5'}"
+ },
+ {
+  "init": "additional_dict = {1: '1', 2: '2', 3: '3'}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3, 1: '1', 2: '2', 3: '3'}"
+ },
+ {
+  "init": "additional_dict = {'a': 9, 'b': 8, 'c': 7}\nd = {'a': 1, 'b': 2, 'c': 3}",
+  "assertion": "assert d == {'a': 9, 'b': 8, 'c': 7}"
+ },
+ {
+  "init": "additional_dict = {'key': 'value', 1.2: 'float_as_key', None: 'none_as_key'}\nd = {}",
+  "assertion": "assert d == {'key': 'value', 1.2: 'float_as_key', None: 'none_as_key'}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {'existing_key': 'existing_value'}",
+  "assertion": "assert d == {1: '', 2: 'b', None: '  string  ', 'existing_key': 'existing_value'}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {1: 'value_1', 2: 'value_2'}",
+  "assertion": "assert d == {1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {'existing_key': 'new_value'}\nd = {1: 'value_1', 'existing_key': 'old_value'}",
+  "assertion": "assert d == {1: 'value_1', 'existing_key': 'new_value'}"
+ },
+ {
+  "init": "additional_dict = {'1': 'int_as_string', '1.2': 'float_as_string', '': 'empty_string_as_key'}\nd = {}",
+  "assertion": "assert d == {'1': 'int_as_string', '1.2': 'float_as_string', '': 'empty_string_as_key'}"
+ },
+ {
+  "init": "additional_dict = {1: 'int_as_key', 1.2: 'float_as_key', '': 'empty_string_as_key'}\nd = {}",
+  "assertion": "assert d == {1: 'int_as_key', 1.2: 'float_as_key', '': 'empty_string_as_key'}"
+ },
+ {
+  "init": "additional_dict = {'key': 'value'}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {}\nd = {'existing_key': 'existing_value'}",
+  "assertion": "assert d == {'existing_key': 'existing_value'}"
+ },
+ {
+  "init": "additional_dict = None\nd = {'existing_key': 'existing_value'}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {} \nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': 1, 'b': 2}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': 'None', 'c': [None, None]}\nd = {}",
+  "assertion": "assert d == {'a': None, 'b': 'None', 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {1.5: 'float key', '1.5': 'string key'}\nd = {}",
+  "assertion": "assert d == {1.5: 'float key', '1.5': 'string key'}"
+ },
+ {
+  "init": "additional_dict = {1: 'int', '1': 'string'}\nd = {}",
+  "assertion": "assert d == {1: 'int', '1': 'string'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'f': 6, 'g': 7}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9'], 'f': 6, 'g': 7}"
+ },
+ {
+  "init": "additional_dict = 123\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = ['a', 'b', 'c']\nd = {}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': [None, None]}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20, 'a': 1, 'b': 2, 'c': [None, None]}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20, 1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.14, 'd': '3.14', 'e': [3.14, '3.14']}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20, 'a': 1, 'b': 2, 'c': 3.14, 'd': '3.14', 'e': [3.14, '3.14']}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': [None, None]}\nd = {}",
+  "assertion": "assert d == additional_dict"
+ },
+ {
+  "init": "additional_dict = {'key': 3.14}\nd = {'key': 'value'}",
+  "assertion": "assert d == additional_dict"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'key': 'value'}",
+  "assertion": "assert d == {'key': 'value'}"
+ },
+ {
+  "init": "additional_dict = {'key': 'value'}\nd = {}",
+  "assertion": "assert d == additional_dict"
+ },
+ {
+  "init": "additional_dict = {1: 2, 3: 4}\nd = {5: 6, 7: 8}",
+  "assertion": "assert d == {1: 2, 3: 4, 5: 6, 7: 8}"
+ },
+ {
+  "init": "additional_dict = {1: 2, 3: 4}\nd = {1: 1, 3: 3}",
+  "assertion": "assert d == additional_dict"
+ },
+ {
+  "init": "additional_dict = {1: 2, 3: 4}\nd = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = None\nd = {1: 1, 3: 3}",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "additional_dict = {'a': 1.5, 'b': '2.5'}\nd = {}",
+  "assertion": "assert d == {'a': 1.5, 'b': '2.5'}"
+ },
+ {
+  "init": "additional_dict = {'a': {'x': 1, 'y': 2}, 'b': (4, 5, 6)}\nd = {}",
+  "assertion": "assert d == {'a': {'x': 1, 'y': 2}, 'b': (4, 5, 6)}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.5, 'b': '2.5', 'c': '  3.5  '}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20, 'a': 1.5, 'b': '2.5', 'c': '  3.5  '}"
+ },
+ {
+  "init": "additional_dict = {'a': [1, 2, 3], 'b': (4, 5, 6), 'c': {'x': 7, 'y': 8}}\nd = {'x': 10, 'y': 20}",
+  "assertion": "assert d == {'x': 10, 'y': 20, 'a': [1, 2, 3], 'b': (4, 5, 6), 'c': {'x': 7, 'y': 8}}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {'a': 1}",
+  "assertion": "assert d == {1: '', 2: 'b', None: '  string  ', 'a': 1}"
+ },
+ {
+  "init": "additional_dict = {}\nd = {'a': 1}",
+  "assertion": "assert d == {'a': 1}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.1, 'b': '2.2'}\nd = {'c': 3.3, 'd': '4.4'}",
+  "assertion": "assert d == {'a': 1.1, 'b': '2.2', 'c': 3.3, 'd': '4.4'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2}\nd = {'b': 3, 'c': 4}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 4}"
+ },
+ {
+  "init": "additional_dict = {'a': '   ', 'b': 'b'}\nd = {'c': 'c', 'd': 'd'}",
+  "assertion": "assert d == {'a': '   ', 'b': 'b', 'c': 'c', 'd': 'd'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'a': 5, 'b': 6}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {1: '', 2: 'b', None: '  string  '}\nd = {1: 'a', 2: 'b'}",
+  "assertion": "assert d == {1: '', 2: 'b', None: '  string  '}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'a': None, 'b': None}",
+  "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': None}\nd = {'a': 1, 'b': 2}",
+  "assertion": "assert d == {'a': None, 'b': None}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = {'d': 4, 'e': 5, 'f': 6}",
+  "assertion": "assert d == {'d': 4, 'e': 5, 'f': 6, 'a': 1, 'b': 2, 'c': 3}"
+ },
+ {
+  "init": "additional_dict = {'a': None, 'b': '', 'c': '  '}\nd = {'d': 4, 'e': 5, 'f': 6}",
+  "assertion": "assert d == {'d': 4, 'e': 5, 'f': 6, 'a': None, 'b': '', 'c': '  '}"
+ },
+ {
+  "init": "additional_dict = {'a': 1.23, 'b': '1.23', 'c': [1, 2, 3]}\nd = {'d': 4, 'e': 5, 'f': 6}",
+  "assertion": "assert d == {'d': 4, 'e': 5, 'f': 6, 'a': 1.23, 'b': '1.23', 'c': [1, 2, 3]}"
+ },
+ {
+  "init": "additional_dict = {1: 'a', 2: 'b', 3: 'c'}\nd = {4: 'd', 5: 'e', 6: 'f'}",
+  "assertion": "assert d == {4: 'd', 5: 'e', 6: 'f', 1: 'a', 2: 'b', 3: 'c'}"
+ },
+ {
+  "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3}\nd = 'a string'",
+  "assertion": "assert 1==1",
+  "error": true
+ }
+]

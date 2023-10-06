@@ -1,0 +1,119 @@
+[
+ {
+  "init": "content = 'This is a test file'",
+  "assertion": "assert content == 'This is a test file'"
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertion": "assert content.startswith('This')\nassert content.endswith('file')"
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertion": "assert content.upper() == 'THIS IS A TEST FILE'"
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertion": "assert content.lower() == 'this is a test file'"
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertion": "assert content.split() == ['This', 'is', 'a', 'test', 'file']"
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertion": "assert content.split(' ') == ['This', 'is', 'a', 'test', 'file']"
+ },
+ {
+  "init": "import tempfile\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file inside the temporary directory\nfile = temp_dir.name + \"/features.json\"\n\n# Open the file in write mode\nf = open(file, 'w')\n\n# Write some content to the file\ncontent = \"{\\\"name\\\": \\\"John\\\", \\\"age\\\": 30}\"\nf.write(content)",
+  "assertion": "assert f != None"
+ },
+ {
+  "init": "import tempfile\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file inside the temporary directory\nfile = temp_dir.name + \"/features.json\"\n\n# Open the file in write mode\nf = open(file, 'w')\n\n# Write an empty content to the file\ncontent = \"\"\nf.write(content)",
+  "assertion": "assert f != None"
+ },
+ {
+  "init": "import tempfile\n\ntemp_dir = tempfile.TemporaryDirectory()\n\nfile = temp_dir.name + \"/features.json\"\n\nf = open(file, 'w')\n\ncontent = 'This is a test file'\nf.write(content)",
+  "assertion": "assert f != None"
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile_path = temp_dir.name+'/file.txt'\ncontent = 'This is a sample file'\nf=open(file_path, 'w')\nf.write(content)\nf.close()\nnew_file_path = temp_dir.name+'/new_file.txt'\nos.rename(file_path, new_file_path)",
+  "assertion": "assert not os.path.exists(file_path)"
+ },
+ {
+  "init": "content = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 3.14",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = ['This', 'is', 'a', 'test', 'file.']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = []",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = [None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a list to the file\ncontent = [1, 2, 3, 4]\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a dictionary to the file\ncontent = {'a': 1, 'b': 2, 'c': 3}\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a boolean value to the file\ncontent = True\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write an integer to the file\ncontent = 12345\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a float to the file\ncontent = 3.14\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a list of floats to the file\ncontent = [1.1, 2.2, 3.3, 4.4]\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = ['This', 'is', 'a', 'test', 'file']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "content = 'This is a test file.'",
+  "assertion": "assert isinstance(temp_dir, tempfile.TemporaryDirectory)\nassert isinstance(file, str)"
+ },
+ {
+  "init": "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\ncontent = \"This is a test content\"\nf.write(content)\ntemp_dir.cleanup()",
+  "assertion": "assert temp_dir.name is not None\nassert file == temp_dir.name+'/features.json'"
+ },
+ {
+  "init": "import tempfile\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\ncontent = \"This is a test content\"\nf.write(content)\nf.close()",
+  "assertion": "assert f.name == file"
+ },
+ {
+  "init": "temp_dir = None\nfile = None\nf = None\ncontent = None",
+  "assertion": "assert 1==1",
+  "error": true
+ }
+]

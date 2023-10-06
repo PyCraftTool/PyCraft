@@ -1,0 +1,112 @@
+[
+ {
+  "init": "l1 = [None, None, None]\nl2 = [None, 1, 2]",
+  "assertions": [
+   "assert common == [None]"
+  ]
+ },
+ {
+  "init": "l1 = 'string'\nl2 = ['s', 't', 'r', 'i', 'n', 'g']",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = [1.0, 2.0, 3.0]",
+  "assertions": [
+   "assert common == []"
+  ]
+ },
+ {
+  "init": "l1 = ['1.23', 4.56, '7.89']\nl2 = ['1.23', 4.56, 7.89]",
+  "assertions": [
+   "assert common == ['1.23']"
+  ]
+ },
+ {
+  "init": "l1 = [None, 'b', 'c', 'd', 'e']\nl2 = ['c', 'd', 'e', None, 'g']",
+  "assertions": [
+   "assert common == ['c', 'd', 'e', None]"
+  ]
+ },
+ {
+  "init": "l1 = 'abcde'\nl2 = ['c', 'd', 'e', 'f', 'g']",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = {1:2, 3:4}\nl2 = {1:2}",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = 'test'\nl2 = 'apple'",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [None, None]\nl2 = [None, '3', '4']",
+  "assertions": [
+   "assert common == [None]"
+  ]
+ },
+ {
+  "init": "l2 = ['1.234', None, 'None', '  ', '11n']\nl1 = ['1.234', '11n ', 'None', None]",
+  "assertions": [
+   "assert common == ['1.234', None, 'None']"
+  ]
+ },
+ {
+  "init": "l2 = 'test_string' \nl1 = ['test_string']",
+  "assertions": "error"
+ },
+ {
+  "init": "l2 =  [0, '', '45.123', 1, None, 'abc', None] \nl1 = ['7', 'John', '', '444', 'anything', '0']",
+  "assertions": [
+   "assert common == ['', '0']"
+  ]
+ },
+ {
+  "init": "l1 = 'Hello World!'\nl2 = 'world! Hello'",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [1,2,2,2,3,4,4]\nl2 = [1,1,2,5,5,4]",
+  "assertions": [
+   "assert common == [1, 2, 2, 2, 4]"
+  ]
+ },
+ {
+  "init": "l1 = [None, 'a', 'b']\nl2 = ['a', 'b', None]",
+  "assertions": [
+   "assert common == ['a', 'b', None]"
+  ]
+ },
+ {
+  "init": "l1 = [None, None, None]\nl2 = [None, 1, 2]",
+  "assertions": [
+   "assert common == [None]"
+  ]
+ },
+ {
+  "init": "l1 = 'abc'\nl2 = ['a', 'b', 'c']",
+  "assertions": "error"
+ },
+ {
+  "init": "l1 = [None, None, None]\nl2 = [None, 'None', 1]",
+  "assertions": [
+   "assert common == [None]"
+  ]
+ },
+ {
+  "init": "l1 = [None, None, None]\nl2 = [None, 1, 2]",
+  "assertions": [
+   "assert common == [None]"
+  ]
+ },
+ {
+  "init": "l1 = [None, 'None', 'null']\nl2 = ['None', None, '']",
+  "assertions": [
+   "assert common == ['None', None]"
+  ]
+ },
+ {
+  "init": "l1 = 'abc'\nl2 = 'cde'",
+  "assertions": "error"
+ }
+]

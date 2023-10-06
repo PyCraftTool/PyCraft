@@ -1,0 +1,6 @@
+[
+ {
+  "init": "array1 = [1,90]\\narray2= []\n",
+  "assertions": "error"
+ }
+]

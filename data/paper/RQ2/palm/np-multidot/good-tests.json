@@ -1,0 +1,42 @@
+[
+ {
+  "init": "arr1 = [[1,2,3],[4,5,6]]\narr2 = [[7,8,9],[10,11,12]]\narr3 = [[13,14,15],[16,17,18]]\n",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [[[0, 1], [0, 2], [0, 3]], [[1, 2], [3, 4], [5, 6]]]\narr2 = [[[0, 1], [0, 2], [0, 3]], [[1, 2], [3, 4], [5, 6]]]\narr3 = [[[0, 1], [0, 2], [0, 3]], [[1, 2], [3, 4], [5, 6]]]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [[[0, 1]], [[0, 2]]]\narr2 = [[[0, 1]], [[0, 2]]]\narr3 = [[[0, 1]], [[0, 2]]]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [None, None, None]\narr2 = [None, None, None]\narr3 = [None, None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]\narr2 = None\narr3 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = None\narr2 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]\narr3 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]\narr2 = None\narr3 = [None, None, None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "arr1 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]\narr2 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]\narr3 = [1, 2, 3, 4, 5, 6, 7, 8]",
+  "assertion": "assert 1==1",
+  "error": true
+ }
+]

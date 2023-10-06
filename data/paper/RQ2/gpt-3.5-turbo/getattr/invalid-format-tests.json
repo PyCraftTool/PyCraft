@@ -1,0 +1,3 @@
+[
+ "[{\"init\":\"obj = None\",\"assertions\":[\"n == 'unknown'\"]},{\"init\":\"obj = {}\",\"assertions\":[\"n == 'unknown'\"]},{\"init\":\"obj = {'name': 'Alice'}\",\"assertions\":[\"n == 'Alice'\"]},{\"init\":\"obj = {'name': 'Bob', 'age': 25}\",\"assertions\":[\"n == 'Bob'\"]},{\"init\":\"obj = {'name': '', 'age': 0}\",\"assertions\":[\"n == ''\"]},{\"init\":\"obj = {'name': None, 'age': 30}\",\"assertions\":[\"n == None\"]},{\"init\":\"obj = {'name': 'Carol', 'age': None}\",\"assertions\":[\"n == 'Carol'\"]},{\"init\":\"obj = {'name': '', 'age': None}\",\"assertions\":[\"n == ''\"]},{\"init\":\"obj = {'age': 35}\",\"assertions\":[\"n == 'unknown'\"]}]\n\n  "
+]

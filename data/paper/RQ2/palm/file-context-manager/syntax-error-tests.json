@@ -1,0 +1,88 @@
+[
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world\nhello world'",
+  "assertions": [
+   "assert contents == 'hello world\nhello world'"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello world\nhello world'\nfile_path = 'test2.txt'",
+  "assertions": "error"
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello\tworld\n'",
+  "assertions": [
+   "assert contents == 'hello\tworld\n'"
+  ]
+ },
+ {
+  "init": "file_path = 'test.txt'\ncontents = 'hello \n\tworld'",
+  "assertions": [
+   "assert contents == 'hello \n\tworld'"
+  ]
+ },
+ {
+  "init": "file_path = 'C:\\Users\\user\\file.txt'",
+  "assertions": [
+   "assert contents == 'hello world!'"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'\ncontents = 'This is a file\nThis is a second line'",
+  "assertions": [
+   "assert len(contents.split()) == 2"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt'",
+  "assertions": [
+   "assert contents == 'This is a text file.\n'"
+  ]
+ },
+ {
+  "init": "file_path = '', contents = 'hello'",
+  "assertions": "error"
+ },
+ {
+  "init": "file_path = 'file.txt', contents = '1.125'",
+  "assertions": [
+   "assert contents == 1.125"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt', contents = '1.125'",
+  "assertions": [
+   "assert isinstance(contents, float)"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt', contents = 'hello world'",
+  "assertions": [
+   "assert contents.count('l') == 2"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt', contents = 'hello world'",
+  "assertions": [
+   "assert contents.startswith('hello')"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt', contents = 'hello world'",
+  "assertions": [
+   "assert contents.endswith('world')"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt', contents = 'hello world'",
+  "assertions": [
+   "assert contents[0] == 'h'"
+  ]
+ },
+ {
+  "init": "file_path = 'file.txt', contents = 'hello world'",
+  "assertions": [
+   "assert contents[-1] == 'd'"
+  ]
+ }
+]

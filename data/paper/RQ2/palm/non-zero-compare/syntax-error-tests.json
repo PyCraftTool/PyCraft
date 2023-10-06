@@ -1,0 +1,154 @@
+[
+ {
+  "init": "number_value=-1,val1=1,val2=2",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "number_value=0,val1=1,val2=2",
+  "assertions": [
+   "assert val == 2"
+  ]
+ },
+ {
+  "init": "number_value=1,val1=1,val2=2",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value=-1,val1=None,val2=2",
+  "assertions": [
+   "assert val == 2"
+  ]
+ },
+ {
+  "init": "number_value=0,val1=None,val2=2",
+  "assertions": [
+   "assert val == 2"
+  ]
+ },
+ {
+  "init": "number_value=1,val1=None,val2=2",
+  "assertions": [
+   "assert val == 2"
+  ]
+ },
+ {
+  "init": "number_value=-1,val1=1,val2=None",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "number_value=0,val1=1,val2=None",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "number_value=1,val1=1,val2=None",
+  "assertions": [
+   "assert val == 1"
+  ]
+ },
+ {
+  "init": "number_value=None,val1=1,val2=2",
+  "assertions": "error"
+ },
+ {
+  "init": "val1=10,val2=20,number_value=5",
+  "assertions": [
+   "assert val == 20"
+  ]
+ },
+ {
+  "init": "val1=10,val2=20,number_value=0",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1=None,val2=None,number_value=0",
+  "assertions": "error"
+ },
+ {
+  "init": "val1=None,val2=None,number_value=1",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "val1=10,val2=20,number_value=-5",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1=10,val2=20,number_value=10",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "val1=10,val2=20,number_value=10",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "val1=10,val2=20,number_value=20",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "val1=10,val2=20,number_value=20",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "val1=10,val2=20,number_value=-20",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "val1=10,val2=20,number_value=-20",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "val1=10,val2=None,number_value=10",
+  "assertions": [
+   "assert val == 10"
+  ]
+ },
+ {
+  "init": "val1=10,val2=20,number_value=10",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "number_value = 1, val1 = 'one', val2 = 'two'",
+  "assertions": [
+   "assert val == val2"
+  ]
+ },
+ {
+  "init": "number_value = 0, val1 = 'one', val2 = 'two'",
+  "assertions": [
+   "assert val == val1"
+  ]
+ },
+ {
+  "init": "number_value = '25.255', val1 = 'one', val2 = 'two'",
+  "assertions": [
+   "error"
+  ]
+ }
+]

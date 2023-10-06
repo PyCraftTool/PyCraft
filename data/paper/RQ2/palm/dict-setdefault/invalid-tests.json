@@ -1,0 +1,264 @@
+[
+ {
+  "init": "function = lambda x: x + 1\narray = [1, 2, 3]\nd = {1: [2], 2: [3], 3: [4]}",
+  "assertions": [
+   "assert d == {1: [2, 4], 2: [3, 5], 3: [4, 6]}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x + 1\narray = [1, 2, 3]\nd = {1: [2], 2: [3], 3: [4]}\n",
+  "assertions": [
+   "assert d == {1: [2, 4], 2: [3, 5], 3: [4, 6]}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x + 1\narray = [1, 2, 3]\nd = {1: [2], 2: [3], 3: [4]}\n",
+  "assertions": [
+   "assert d == {1: [2, 4], 2: [3, 5], 3: [4, 6]}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x + 1\narray = [1, 2, 3]\nd = {1: [2], 2: [3], 3: [4]}\n",
+  "assertions": [
+   "assert d == {1: [2, 4], 2: [3, 5], 3: [4, 6]}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x + 1\narray = [1, 2, 3]\nd = {1: [2], 2: [3], 3: [4]}\n",
+  "assertions": [
+   "assert d == {1: [2, 4], 2: [3, 5], 3: [4, 6]}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x + 1\narray = [1, 2, 3]\nd = {1: [2], 2: [3], 3: [4]}\n",
+  "assertions": [
+   "assert d == {1: [2, 4], 2: [3, 5], 3: [4, 6]}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x + 1\narray = [1, 2, 3]\nd = {1: [2], 2: [3], 3: [4]}\n",
+  "assertions": [
+   "assert d == {1: [2, 4], 2: [3, 5], 3: [4, 6]}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x + 1\narray = [1, 2, 3]\nd = {1: [2], 2: [3], 3: [4]}\n",
+  "assertions": [
+   "assert d == {1: [2, 4], 2: [3, 5], 3: [4, 6]}"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x + 1\nd = {1: [2], 2: [3], 3: [4], 4: [5], 5: [6]}",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x + 1\nd = {1: [2], 2: [3], 3: [4], 4: [5], 5: [6]}\narray = ['1', '2', '3', '4', '5']\n",
+  "assertions": [
+   "assert d == {'1': [2], '2': [3], '3': [4], '4': [5], '5': [6]}"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x + 1\nd = {1: [2], 2: [3], 3: [4], 4: [5], 5: [6]}",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x + 1\nd = {1: [2], 2: [3], 3: [4], 4: [5], 5: [6]}\narray = ['1', '2', '3', '4', '5']\n",
+  "assertions": [
+   "assert d == {'1': [2], '2': [3], '3': [4], '4': [5], '5': [6]}"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x + 1\nd = {1: [2], 2: [3], 3: [4], 4: [5], 5: [6]}",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x + 1\nd = {1: [2], 2: [3], 3: [4], 4: [5], 5: [6]}\narray = ['1', '2', '3', '4', '5']\n",
+  "assertions": [
+   "assert d == {'1': [2], '2': [3], '3': [4], '4': [5], '5': [6]}"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x + 1\nd = {1: [2], 2: [3], 3: [4], 4: [5], 5: [6]}",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5]\nfunction = lambda x: x + 1\nd = {1: [2], 2: [3], 3: [4], 4: [5], 5: [6]}\narray = ['1', '2', '3', '4', '5']\n",
+  "assertions": [
+   "assert d == {'1': [2], '2': [3], '3': [4], '4': [5], '5': [6]}"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c', 'd', 'e', 'f']\nfunction = lambda i: i.upper()\nd = {}",
+  "assertions": [
+   "assert d['D'] == ['D']"
+  ]
+ },
+ {
+  "init": "array = [1.1, 3.2, 4.3, 5.4, 6.5]\nfunction = lambda i: int(i)\nd = {}",
+  "assertions": [
+   "assert d[3] == [4]"
+  ]
+ },
+ {
+  "init": "array = [None, None, None]\nfunction = lambda x: x*2\nd = {}\n",
+  "assertions": [
+   "assert d == {None: [None], None: [None], None: [None]}"
+  ]
+ },
+ {
+  "init": "array = [1,2,3]\nfunction = lambda x: x\narray = ['a', 'b', 'c']\nfunction = lambda x: x.upper()\nd = {}\n",
+  "assertions": "error"
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {}\n",
+  "assertions": [
+   "assert d == {'1': [1], '2': [4], '3': [9]}"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {'1': [1], '2': [4], '3': [9]}",
+  "assertions": [
+   "assert d['1'] == [1]"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {'1': [1], '2': [4], '3': [9]}",
+  "assertions": [
+   "assert d['4'] == []"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {'1': [1], '2': [4], '3': [9]}",
+  "assertions": [
+   "assert d['4'] == [4]"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {'1': [1], '2': [4], '3': [9]}",
+  "assertions": [
+   "assert d['4'] == [4]"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {'1': [1], '2': [4], '3': [9]}",
+  "assertions": [
+   "assert d['1'] == [1]"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {'1': [1], '2': [4], '3': [9]}",
+  "assertions": [
+   "assert d['4'] == []"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {'1': [1], '2': [4], '3': [9]}",
+  "assertions": [
+   "assert d['4'] == [4]"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {'1': [1], '2': [4], '3': [9]}",
+  "assertions": [
+   "assert d['1'] == [1]"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {'1': [1], '2': [4], '3': [9]}",
+  "assertions": [
+   "assert d['4'] == []"
+  ]
+ },
+ {
+  "init": "function = lambda x: x**2\narray = [1, 2, 3]\nd = {'1': [1], '2': [4], '3': [9]}",
+  "assertions": [
+   "assert d['4'] == [4]"
+  ]
+ },
+ {
+  "init": "function = lambda i: i * 2,\narray = [1, 2, 3]",
+  "assertions": [
+   "assert d == {'1': [2, 2], '2': [4, 4], '3': [6, 6]}"
+  ]
+ },
+ {
+  "init": "function = lambda i: i * 2,\narray = ['1', '2', '3', None]",
+  "assertions": [
+   "assert d == {'1': ['2', '2'], '2': ['4', '4'], '3': ['6', '6'], None: [None, None]}"
+  ]
+ },
+ {
+  "init": "function = lambda i: i - 3,\narray = [1, 2, 3]",
+  "assertions": [
+   "assert d == {'1': [-2, -2], '2': [-1, -1], '3': [0, 0]}"
+  ]
+ },
+ {
+  "init": "function = lambda i: i ^ 2,\narray = [1, 2, 3]",
+  "assertions": [
+   "assert d == {'1': [1, 1], '2': [4, 4], '3': [9, 9]}"
+  ]
+ },
+ {
+  "init": "function = lambda i: i // 2,\narray = [1, 2, 3]",
+  "assertions": [
+   "assert d == {'1': [0, 0], '2': [1, 1], '3': [1.5, 1.5]}"
+  ]
+ },
+ {
+  "init": "function = lambda i: i % 2,\narray = [1, 2, 3, 4]",
+  "assertions": [
+   "assert d == {'1': [0, 0], '2': [1, 1], '3': [0, 0], '4': [0, 0]}"
+  ]
+ },
+ {
+  "init": "function = lambda i: i**3,\narray = [1, 2, 3]",
+  "assertions": [
+   "assert d == {'1': [1, 1], '2': [8, 8], '3': [27, 27]}"
+  ]
+ },
+ {
+  "init": "function = lambda i: round(i, 2),\narray = [1.21212, 2.41212, 3.61212]",
+  "assertions": [
+   "assert d == {'1.21212': [1.21, 1.21], '2.41212': [2.41, 2.41], '3.61212': [3.61, 3.61]}"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\nd = {}\nfunction = int\n",
+  "assertions": [
+   "assert d == {'a': ['a'], 'b': ['b'], 'c': ['c']}"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\nd = {'1': ['1'], '2': ['2'], '3': ['3']}\nfunction = int\n",
+  "assertions": [
+   "assert d == {'1': ['1'], '2': ['2'], '3': ['3']}"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\nd = {1: ['1'], 2: ['2'], 3: ['3']}\nfunction = int\n",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\nd = {1: ['1'], 2: ['2'], 3: ['3']}\nfunction = str\n",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = lambda i: i\nd = {'a': ['a', 'b']}\n",
+  "assertions": [
+   "assert d == {'a': ['a', 'b'], 1: [1], 2: [2], 3: [3]}"
+  ]
+ },
+ {
+  "init": "array = [1, 2, 3]\nfunction = lambda i: i\nd = None",
+  "assertions": "error"
+ },
+ {
+  "init": "array = ['a', 'b', 'c']\nfunction = lambda i: i\nd = {}\n",
+  "assertions": "error"
+ }
+]

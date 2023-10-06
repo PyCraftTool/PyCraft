@@ -1,0 +1,376 @@
+[
+ {
+  "init": "t = []\ncond = lambda x: x < 2\niterable = [1, 2, 3, 4]\n",
+  "assertions": [
+   "assert t == [1, 2]"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: x < 2\niterable = ['1', '2', '3', '4']\n",
+  "assertions": [
+   "assert t == ['1', '2']"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: x < 2\niterable = [None]\n",
+  "assertions": [
+   "assert t == []"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: x < 2\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['1.125', '3.5']"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: x < 2\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['1.125', '3.5']"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: x < 2\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['1.125', '3.5']"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: x < 2\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['1.125', '3.5']"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: x < 2\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['1.125', '3.5']"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: x < 2\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['1.125', '3.5']"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: x < 2\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['1.125', '3.5']"
+  ]
+ },
+ {
+  "init": "iterable = ['1', '2', '3']\ncond = lambda i: i == '1' or i == '2' or i == '3' or i == '4'",
+  "assertions": [
+   "assert t == ['1', '2', '3', '4']"
+  ]
+ },
+ {
+  "init": "iterable = ['1', '2', '3']\ncond = lambda i: i == '5'",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['1', '2', '3']\ncond = lambda i: i == '1' or i == '2' or i == '3' or i == '4' or i == '5'",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['1', '2', '3']\ncond = lambda i: i == '5'",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['1', '2', '3']\ncond = lambda i: None",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['1', '2', '3']\ncond = lambda i: i == '1'\nt = []",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['1', '2', '3']\ncond = lambda i: i == '1'\nt = ['4', '5', '6']",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = None\ncond = lambda x: x == 5.5",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "iterable = [1, 2, 3]\ncond = lambda x: x % 2 == 0",
+  "assertions": [
+   "assert t == [2, 4, 6]"
+  ]
+ },
+ {
+  "init": "iterable = [1, 2, 3]\ncond = lambda x: None",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = [1, 2, 3, ['5', '6', '7', 8]]\ncond = lambda x: x == 8",
+  "assertions": [
+   "assert t == [8]"
+  ]
+ },
+ {
+  "init": "iterable = [1, 2, 3]\ncond = lambda x: x > 4",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = [1, 2, 3]\ncond = lambda x: x == 'd'",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = [1, 2, 3]\ncond = lambda x: x % 2 == 0",
+  "assertions": [
+   "assert t == [2, 4, 6]"
+  ]
+ },
+ {
+  "init": "iterable = [1, 2, 3]\ncond = lambda x: x > 4",
+  "assertions": "error"
+ },
+ {
+  "init": "t = []\niterable = [1, 2, 3, 4]\ncond = lambda x: x == 5",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4]\ncond = lambda x: x % 2 != 0\nt = []",
+  "assertions": [
+   "assert len(t) == 0"
+  ]
+ },
+ {
+  "init": "iterable = ['1234', '1.125', 'hello']\ncond = lambda x: x.isnumeric()\nt = []",
+  "assertions": [
+   "assert len(t) == 2"
+  ]
+ },
+ {
+  "init": "iterable = ['1234', '1.125', 'hello']\ncond = lambda x: x.isdigit()\nt = []",
+  "assertions": [
+   "assert len(t) == 2"
+  ]
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncond = lambda x: x == 'd'\nt = []",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncond = lambda x: x == 'd'\nt = []",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncond = lambda x: True\nt = []\nprint(t)",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncond = lambda x: True\nt = []\nassert print(t)",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncond = lambda x: True\nt = []\nassert cond(10)",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncond = lambda x: True\nt = []\nassert 'a' in t",
+  "assertions": "error"
+ },
+ {
+  "init": "t = []\ncond = lambda i: bool(i[0])\niterable = ['a1', 'b4', 'c5', 'd6', 'e8']\n",
+  "assertions": [
+   "assert t == ['a1', 'c5', 'e8']"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda i: bool(i[1])\niterable = ['a1', 'b4', 'c5', 'd6', 'e8']\n",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda i: bool(i[0])\niterable = ['a', 'b', None]\n",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda i: bool(i[0])\niterable = ['1', 'a', '4', 'b', '5', 'c', '6', 'd', '8', 'e']\n",
+  "assertions": [
+   "assert t == ['1', '4', '5', '6', '8']"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda i: i[0].isupper() and i[-1].isdigit()\niterable = ['1A', '1b', '2C', '3d', '4E']\n",
+  "assertions": [
+   "assert t == ['1A', '2C', '3d', '4E']"
+  ]
+ },
+ {
+  "init": "iterable = ['1', 2, '3', 4, 5]\ncond = lambda i : i < 5\n",
+  "assertions": [
+   "assert t == ['1', 2, '3', 4]"
+  ]
+ },
+ {
+  "init": "iterable = [1, 2, 3, 4, None, 5]\ncond = lambda i : i == 'a'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = [1,2,3,4,5]\ncond = lambda x: x%2 == 0\n",
+  "assertions": [
+   "assert t == [2,4,6]"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x % 2 == 0\niterable = [None, None, None]\n",
+  "assertions": [
+   "assert t == []"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x % 2 == 0\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['3.5', '6.75', '5.9']"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x % 2 == 0\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['3.5', '6.75', '5.9']"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x % 2 == 0\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['3.5', '6.75', '5.9']"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x % 2 == 0\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['3.5', '6.75', '5.9']"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x % 2 == 0\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['3.5', '6.75', '5.9']"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x % 2 == 0\niterable = ['1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == ['3.5', '6.75', '5.9']"
+  ]
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c']\ncond = lambda x: x == 'a' or x == 'd'",
+  "assertions": "error"
+ },
+ {
+  "init": "cond = lambda x: x%2 == 0\niterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nt = []\n",
+  "assertions": [
+   "assert t == []"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x%2 == 0\niterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nt = ['a', 'b', 'c']\n",
+  "assertions": "error"
+ },
+ {
+  "init": "cond = lambda x: x%2 == 0\niterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nt = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+  "assertions": [
+   "assert t == [1, 2, 4, 6, 8, 10]"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x%2 == 0\niterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nt = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\niterable = iterable[::-1]\n",
+  "assertions": [
+   "assert t == [10, 8, 6, 4, 2, 1]"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x%2 == 0\niterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nt = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\niterable = iterable[::-1]\n",
+  "assertions": [
+   "assert t == [10, 8, 6, 4, 2, 1]"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x == 'a'\niterable = ['a', 'b', 'c', 'd', 'e']\nt = []\n",
+  "assertions": [
+   "assert t == []"
+  ]
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncond = lambda x: x == 'f'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncond = lambda x: x == 'a' or x == 'b' or x == 'c' or x == 'd' or x == 'e'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncond = lambda x: x == 'f'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncond = lambda x: x == 'a' or x == 'b' or x == 'c' or x == 'd' or x == 'e'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncond = lambda x: x == 'f'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncond = lambda x: x == 'a' or x == 'b' or x == 'c' or x == 'd' or x == 'e'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncond = lambda x: x == 'f'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['a', 'b', 'c', 'd', 'e']\ncond = lambda x: x == 'a' or x == 'b' or x == 'c' or x == 'd' or x == 'e'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "cond = lambda x: x%2==0\niterable = [None,1,2,3,4,5]\n",
+  "assertions": [
+   "assert t == [None,2,4]"
+  ]
+ },
+ {
+  "init": "cond = lambda x: x%2==0\niterable = [None]\n",
+  "assertions": [
+   "assert t == [None]"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: isinstance(x, int)\niterable = [3.125, '1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": [
+   "assert t == [3.125, '3.5', '6.75', '5.9']"
+  ]
+ },
+ {
+  "init": "t = []\ncond = lambda x: isinstance(x, float)\niterable = [3.125, '1.125', '3.5', '6.75', '5.9']\n",
+  "assertions": "error"
+ },
+ {
+  "init": "t = []\ncond = lambda x: isinstance(x, str)\niterable = ['a', 3, 'b', 'c']\n",
+  "assertions": "error"
+ },
+ {
+  "init": "t = []\ncond = lambda x: False\niterable = [1, 2, 3, 4, 5]\n",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = ['b', 'a', 'c']\ncond = lambda x: x[0]=='a'",
+  "assertions": [
+   "assert t == ['b', 'a']"
+  ]
+ },
+ {
+  "init": "iterable = []\ncond = lambda x: x[0]=='a'",
+  "assertions": "error"
+ }
+]

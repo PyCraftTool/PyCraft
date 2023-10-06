@@ -1,0 +1,170 @@
+[
+ {
+  "init": "c1 = True\n c2 = True\n c3 = True\n c4 = True\n val1 = 'hello'\n val2 = 'world'",
+  "assertions": [
+   "assert value == 'hello'"
+  ]
+ },
+ {
+  "init": "c1 = False\n c2 = False\n c3 = False\n c4 = False\n val1 = 'foo'\n val2 = ''",
+  "assertions": [
+   "assert value == ''"
+  ]
+ },
+ {
+  "init": "c1 = None\n c2 = None\n c3 = None\n c4 = None\n val1 = 1.5\n val2 = 3.5",
+  "assertions": [
+   "assert value == 3.5"
+  ]
+ },
+ {
+  "init": "c1 = 0\n c2 = 0.0\n c3 = ''\n c4 = []\n val1 = 'a'\n val2 = 'b'",
+  "assertions": [
+   "assert value == 'b'"
+  ]
+ },
+ {
+  "init": "c1 = 0\n c2 = 0.0\n c3 = 'not empty'\n c4 = []\n val1 = 'c'\n val2 = 'd'",
+  "assertions": [
+   "assert value == 'c'"
+  ]
+ },
+ {
+  "init": "c1 = None\n c2 = None\n c3 = None\n c4 = 1\n val1 = None\n val2 = 'None'",
+  "assertions": [
+   "assert value == None"
+  ]
+ },
+ {
+  "init": "c1 = [None]\n c2 = None\n c3 = None\n c4 = None\n val1 = [3.14159],\n val2 = 1.14159",
+  "assertions": [
+   "assert value == [3.14159]"
+  ]
+ },
+ {
+  "init": "c1 = {'a': 1}\n c2 = None\n c3 = None\n c4 = None\n val1 = 'A'\n val2 = 'A+'",
+  "assertions": [
+   "assert value == 'A'"
+  ]
+ },
+ {
+  "init": "c1 = set()\n c2 = {}\n c3 = None\n c4 = 'hello'\n val1 = ''\n val2 = [13]",
+  "assertions": [
+   "assert value == ''"
+  ]
+ },
+ {
+  "init": "c1 = False\n c2 = 0\n c3 = []\n c4 = {}\n val1 = 12\n val2 = 0.0001",
+  "assertions": [
+   "assert value == 0.0001"
+  ]
+ },
+ {
+  "init": "c1 = 0\n c2 = False\n c3 = ''\n c4 = None\n val1 = 5\n val2 = 3",
+  "assertions": [
+   "assert value == 3"
+  ]
+ },
+ {
+  "init": "c1 = 1\n c2 = False\n c3 = ''\n c4 = None\n val1 = 5\n val2 = 3",
+  "assertions": [
+   "assert value == 5"
+  ]
+ },
+ {
+  "init": "c1 = '0'\n c2 = False\n c3 = ''\n c4 = None\n val1 = ''\n val2 = 'b'",
+  "assertions": [
+   "assert value == ''"
+  ]
+ },
+ {
+  "init": "c1 = \n c2 = False\n c3 = '0'\n c4 = None\n val1 = 'ab'\n val2 = [5, 6, 7]",
+  "assertions": [
+   "assert value == 'ab'"
+  ]
+ },
+ {
+  "init": "c1 = []\n c2 = False\n c3 = ''\n c4 = '0'\n val1 = None\n val2 = 'a'",
+  "assertions": [
+   "assert value == None"
+  ]
+ },
+ {
+  "init": "c1 = 0.0\n c2 = False\n c3 = ''\n c4 = '\n'\n val1 = {-125}\n val2 = {0:0}",
+  "assertions": [
+   "assert value == {-125}"
+  ]
+ },
+ {
+  "init": "c1 = True\n c2 = False\n c3 = 0.0\n c4 = 0.1249\n val1 = 0\n val2 = 1246.127891",
+  "assertions": [
+   "assert value == 0"
+  ]
+ },
+ {
+  "init": "val1 = 1.125\nval2 =9.75\nc1 = 0\nc2 = ''\nc3 = None\nc4 = [])",
+  "assertions": [
+   "assert value == 9.75"
+  ]
+ },
+ {
+  "init": "c1 = True\n c2 = False\n c3 = False\n c4 = False\n val1 = 'string'\n val2 = 'another string'",
+  "assertions": [
+   "assert value == 'string'"
+  ]
+ },
+ {
+  "init": "c1 = False\n c2 = False\n c3 = False\n c4 = False\n val1 = 'string'\n val2 = 'another string'",
+  "assertions": [
+   "assert value == 'another string'"
+  ]
+ },
+ {
+  "init": "c1 = 0\n c2 = 0.0\n c3 = ''\n c4 = []\n val1 = 'string'\n val2 = 'another string'",
+  "assertions": [
+   "assert value == 'another string'"
+  ]
+ },
+ {
+  "init": "c1 = None\n c2 = False\n c3 = 0\n c4 = ''\n val1 = 'string'\n val2 = 'another string'",
+  "assertions": [
+   "assert value == 'another string'"
+  ]
+ },
+ {
+  "init": "c1 = None\n c2 = False\n c3 = 0\n c4 = 'non-empty string'\n val1 = 'string'\n val2 = 'another string'",
+  "assertions": [
+   "assert value == 'string'"
+  ]
+ },
+ {
+  "init": "c1 = ''\n c2 = []\n c3 = {}\n c4 = ''\n val1 = 1.23\n val2 = 4.56",
+  "assertions": [
+   "assert value == 4.56"
+  ]
+ },
+ {
+  "init": "c1 = ''\n c2 = []\n c3 = {}\n c4 = 'non-empty string'\n val1 = 1.23\n val2 = 4.56",
+  "assertions": [
+   "assert value == 1.23"
+  ]
+ },
+ {
+  "init": "c1 = ''\n c2 = []\n c3 = {}\n c4 = 0\n val1 = None\n val2 = 'string'",
+  "assertions": [
+   "assert value == 'string'"
+  ]
+ },
+ {
+  "init": "c1 = ''\n c2 = []\n c3 = {}\n c4 = 1\n val1 = None\n val2 = 'string'",
+  "assertions": [
+   "assert value == None"
+  ]
+ },
+ {
+  "init": "c1 = ''\n c2 = []\n c3 = {}\n c4 = None\n val1 = 'val1'\n val2 = 'val2'",
+  "assertions": [
+   "assert value == 'val2'"
+  ]
+ }
+]

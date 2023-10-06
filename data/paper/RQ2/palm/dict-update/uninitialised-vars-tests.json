@@ -1,0 +1,14 @@
+[
+ {
+  "init": "additional_dict = {'c': 3, 'd': 4}",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "additional_dict = 1",
+  "assertions": [
+   "error"
+  ]
+ }
+]

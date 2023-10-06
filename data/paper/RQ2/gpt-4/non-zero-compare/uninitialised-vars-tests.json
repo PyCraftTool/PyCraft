@@ -1,0 +1,26 @@
+[
+ {
+  "init": "val1 = 5\nval2 = 10",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'test'\nval2 = 'test2'",
+  "assertions": "error"
+ },
+ {
+  "init": "number_value = None",
+  "assertions": "error"
+ },
+ {
+  "init": "val2 = 'b'\nval1 = 'a'",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 'abc'\nval2 = 'def'\n",
+  "assertions": "error"
+ },
+ {
+  "init": "val1 = 1\nval2 = 3.14",
+  "assertions": "error"
+ }
+]

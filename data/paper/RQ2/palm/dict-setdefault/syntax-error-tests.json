@@ -1,0 +1,8 @@
+[
+ {
+  "init": "array = []\nfunction = lambda i: i\nd = {}\n",
+  "assertions": [
+   "assert d == {}]"
+  ]
+ }
+]

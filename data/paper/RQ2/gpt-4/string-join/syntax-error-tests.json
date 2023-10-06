@@ -1,0 +1,30 @@
+[
+ {
+  "init": "values = ['']",
+  "assertions": [
+   "assert string == ''[]''"
+  ]
+ },
+ {
+  "init": "values = ['1.2'}",
+  "assertions": "error"
+ },
+ {
+  "init": "values = ['   ', '\n']",
+  "assertions": [
+   "assert string == '[   , \\n]'"
+  ]
+ },
+ {
+  "init": "values = ['1', 2, 3.45, None, '   ', '\n']",
+  "assertions": [
+   "assert string == '[1, 2, 3.45, None,    , \\n]'"
+  ]
+ },
+ {
+  "init": "values = ['1', 2, 3.45, None, '   ', '\n']",
+  "assertions": [
+   "assert string == '[1, 2, 3.45, None,    , \\n]'"
+  ]
+ }
+]

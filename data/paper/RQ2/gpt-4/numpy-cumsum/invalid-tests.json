@@ -1,0 +1,128 @@
+[
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 11.0, 16.5]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 11.0, 16.5]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 11.0, 16.5]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 11.0, 16.5]"
+  ]
+ },
+ {
+  "init": "array = [1.5, 2.3, 3.1, 4.2, 5.8]",
+  "assertions": [
+   "assert cum_arr == [1.5, 3.8, 6.9, 11.1, 16.9]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 11.0]"
+  ]
+ },
+ {
+  "init": "array = [-1.1, -2.2, -3.3, -4.4]",
+  "assertions": [
+   "assert cum_arr == [-1.1, -3.3, -6.6, -11.0]"
+  ]
+ },
+ {
+  "init": "array = [34.25, 35.75, 78.00, 29.80]",
+  "assertions": [
+   "assert cum_arr == [34.25, 69.0, 147.0, 176.8]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3000000000000003, 6.6000000000000005]"
+  ]
+ },
+ {
+  "init": "array = [1, 2, float('nan'), 4, 5]",
+  "assertions": [
+   "assert all([a==b for a, b in zip(cum_arr, [1, 3, float('nan'), float('nan'), float('nan')]) or (math.isnan(a) and math.isnan(b))])"
+  ]
+ },
+ {
+  "init": "array = [7, -4, 3.2, -8.7]",
+  "assertions": [
+   "assert cum_arr == [7, 3, 6.2, -2.5]"
+  ]
+ },
+ {
+  "init": "array = [-10.2, 3.8, -0.3, 9, -5.9]",
+  "assertions": [
+   "assert cum_arr == [-10.2, -6.4, -6.7, 2.3, -3.6]"
+  ]
+ },
+ {
+  "init": "array = list(range(100, -1, -1))",
+  "assertions": [
+   "assert cum_arr == [0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105, 120, 136, 153, 171, 190, 210, 231, 253, 276, 300, 3450, 3876, 4323, 4782, 5255, 5744, 6251, 6778, 7327, 7900]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 11.0]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 11.0]"
+  ]
+ },
+ {
+  "init": "array = [None, None, None]",
+  "assertions": [
+   "assert cum_arr == [None, None, None]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4, 5.5]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 11.0, 16.5]"
+  ]
+ },
+ {
+  "init": "array = [1.1, 2.2, 3.3, 4.4]",
+  "assertions": [
+   "assert cum_arr == [1.1, 3.3, 6.6, 11.0]"
+  ]
+ }
+]

@@ -1,0 +1,668 @@
+[
+ {
+  "init": "content = 'This is a test file'",
+  "assertions": "error"
+ },
+ {
+  "init": "content = ''",
+  "assertions": "error"
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertions": [
+   "assert len(content) == 18"
+  ]
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertions": "error"
+ },
+ {
+  "init": "content = ''",
+  "assertions": "error"
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertions": [
+   "assert len(content) == 18"
+  ]
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertions": "error"
+ },
+ {
+  "init": "content = ''",
+  "assertions": "error"
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertions": [
+   "assert len(content) == 18"
+  ]
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertions": "error"
+ },
+ {
+  "init": "content = ''",
+  "assertions": "error"
+ },
+ {
+  "init": "content = 'This is a test file'",
+  "assertions": [
+   "assert len(content) == 18"
+  ]
+ },
+ {
+  "init": "temp_dir.cleanup()",
+  "assertions": [
+   "assert not os.path.exists(temp_dir.name)"
+  ]
+ },
+ {
+  "init": "import tempfile\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file inside the temporary directory\nfile = temp_dir.name + \"/features.json\"\n\n# Open the file in write mode\nf = open(file, 'w')\n\n# Write some content to the file\ncontent = \"{\\\"name\\\": \\\"John\\\", \\\"age\\\": 30}\"\nf.write(content)",
+  "assertions": [
+   "assert f != None",
+   "assert f.read() == '{\"name\": \"John\", \"age\": 30}'"
+  ]
+ },
+ {
+  "init": "import tempfile\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file inside the temporary directory\nfile = temp_dir.name + \"/features.json\"\n\n# Open the file in write mode\nf = open(file, 'w')\n\n# Write an empty content to the file\ncontent = \"\"\nf.write(content)",
+  "assertions": [
+   "assert f != None",
+   "assert f.read() == ''"
+  ]
+ },
+ {
+  "init": "import tempfile\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file inside the temporary directory\nfile = temp_dir.name + \"/features.json\"\n\n# Open the file in write mode\nf = open(file, 'w')\n\n# Write some content to the file\ncontent = None\nf.write(content)",
+  "assertions": [
+   "error"
+  ]
+ },
+ {
+  "init": "import tempfile\n\ntemp_dir = tempfile.TemporaryDirectory()\n\nfile = temp_dir.name + \"/features.json\"\n\nf = open(file, 'w')\n\ncontent = 'This is a test file'\nf.write(content)",
+  "assertions": [
+   "assert f != None",
+   "assert f.read() == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/test.txt\"",
+  "assertions": [
+   "assert isinstance(file, str)",
+   "assert file.endswith(\"/test.txt\")"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/test.txt\"\nf = open(file, 'w')",
+  "assertions": [
+   "assert isinstance(f, io.TextIOWrapper)",
+   "assert f.mode == 'w'",
+   "assert f.name == file"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/test.txt\"\nf = open(file, 'w')\nf.write(content)",
+  "assertions": [
+   "assert isinstance(content, str)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/test.txt\"\nf = open(file, 'w')\nf.write(content)\ntemp_dir.cleanup()",
+  "assertions": [
+   "import os",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\ncontent = ''\nf.write(content)\nf.close()",
+  "assertions": [
+   "assert os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\ncontent = 'This is a sample file'\nf=open(file, 'w')\nf.write(content)\nf.close()",
+  "assertions": [
+   "assert os.path.exists(file)",
+   "assert os.path.isfile(file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\ndir_path = temp_dir.name+'/subdir'\nos.makedirs(dir_path)\nfile_path = dir_path+'/file.txt'\ncontent = 'This is a sample file'\nf=open(file_path, 'w')\nf.write(content)\nf.close()",
+  "assertions": [
+   "assert os.path.exists(file_path)",
+   "assert os.path.isfile(file_path)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\ndir_path = temp_dir.name+'/subdir'\nos.makedirs(dir_path)\nfile_path = dir_path+'/file.txt'\ncontent = 'This is a sample file'\nf=open(file_path, 'w')\nf.write(content)\nf.close()",
+  "assertions": [
+   "assert content == open(file_path).read()"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\ndir_path = temp_dir.name+'/subdir'\nos.makedirs(dir_path)\nfile_path = dir_path+'/file.txt'\ncontent = 'This is a sample file'\nf=open(file_path, 'w')\nf.write(content)\nf.close()",
+  "assertions": [
+   "assert temp_dir.name in file_path"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile_path = temp_dir.name+'/file.txt'\ncontent = 'This is a sample file'\nf=open(file_path, 'w')\nf.write(content)\nf.close()\nnew_file_path = temp_dir.name+'/new_file.txt'\nos.rename(file_path, new_file_path)",
+  "assertions": [
+   "assert os.path.exists(new_file_path)",
+   "assert not os.path.exists(file_path)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile_path = temp_dir.name+'/file.txt'\ncontent = 'This is a sample file'\nf=open(file_path, 'w')\nf.write(content)\nf.close()\nnew_file_path = temp_dir.name+'/new_file.txt'\nos.rename(file_path, new_file_path)",
+  "assertions": [
+   "assert content == open(new_file_path).read()"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile_path = temp_dir.name+'/file.txt'\ncontent = 'This is a sample file'\nf=open(file_path, 'w')\nf.write(content)\nf.close()\ndir_path = temp_dir.name+'/subdir'\nos.mkdir(dir_path)",
+  "assertions": [
+   "assert os.path.exists(dir_path)",
+   "assert os.path.isdir(dir_path)"
+  ]
+ },
+ {
+  "init": "content = None",
+  "assertions": []
+ },
+ {
+  "init": "content = 3.14",
+  "assertions": []
+ },
+ {
+  "init": "content = ['This', 'is', 'a', 'test', 'file.']",
+  "assertions": []
+ },
+ {
+  "init": "content = []",
+  "assertions": []
+ },
+ {
+  "init": "content = [None, None]",
+  "assertions": []
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\ncontent = \"This is a test file.\"\nf.write(content)\nf.close()\ntemp_dir.cleanup()",
+  "assertions": [
+   "assert os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nnew_file = temp_dir.name+\"/new_features.json\"\nos.rename(file, new_file)",
+  "assertions": [
+   "assert not os.path.exists(file)",
+   "assert os.path.exists(new_file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nnew_file = temp_dir.name+\"/new_features.json\"\nos.rename(file, new_file)",
+  "assertions": [
+   "assert os.path.basename(new_file) == \"new_features.json\""
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nnew_file = temp_dir.name+\"/new_features.json\"\nos.rename(file, new_file)",
+  "assertions": [
+   "assert os.path.dirname(new_file) == temp_dir.name"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nnew_file = temp_dir.name+\"/new_features.json\"\nos.rename(file, new_file)\nos.remove(new_file)",
+  "assertions": [
+   "assert not os.path.exists(new_file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nnew_file = temp_dir.name+\"/new_features.json\"\nos.rename(file, new_file)\nnew_directory = temp_dir.name+\"/new_directory\"\nos.mkdir(new_directory)",
+  "assertions": [
+   "assert os.path.exists(new_directory)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write some content to the file\ncontent = 'This is a test file'\nf.write(content)\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the content of the file is correct\nwith open(file_path, 'r') as f:\n    assert f.read() == 'This is a test file'"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write an empty string to the file\ncontent = ''\nf.write(content)\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the file is empty\nassert os.stat(file_path).st_size == 0"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a float as a string to the file\ncontent = '3.14'\nf.write(content)\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the content of the file is correct\nwith open(file_path, 'r') as f:\n    assert f.read() == '3.14'"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a string with spaces to the file\ncontent = '   This is a test   '\nf.write(content)\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the content of the file is correct\nwith open(file_path, 'r') as f:\n    assert f.read() == '   This is a test   '"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write None to the file\ncontent = None\nf.write(content)\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the content of the file is correct\nwith open(file_path, 'r') as f:\n    assert f.read() == 'None'"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a list to the file\ncontent = [1, 2, 3, 4]\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the content of the file is correct\nwith open(file_path, 'r') as f:\n    assert f.read() == '[1, 2, 3, 4]'"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a dictionary to the file\ncontent = {'a': 1, 'b': 2, 'c': 3}\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the content of the file is correct\nwith open(file_path, 'r') as f:\n    assert f.read() == \"{'a': 1, 'b': 2, 'c': 3}\""
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a boolean value to the file\ncontent = True\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the content of the file is correct\nwith open(file_path, 'r') as f:\n    assert f.read() == 'True'"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write an integer to the file\ncontent = 12345\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the content of the file is correct\nwith open(file_path, 'r') as f:\n    assert f.read() == '12345'"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a float to the file\ncontent = 3.14\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the content of the file is correct\nwith open(file_path, 'r') as f:\n    assert f.read() == '3.14'"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\n\n# Create a temporary directory\ntemp_dir = tempfile.TemporaryDirectory()\n\n# Create a file path within the temporary directory\nfile_path = os.path.join(temp_dir.name, 'test_file.txt')\n\n# Open the file in write mode\nf = open(file_path, 'w')\n\n# Write a list of floats to the file\ncontent = [1.1, 2.2, 3.3, 4.4]\nf.write(str(content))\n\n# Close the file\nf.close()",
+  "assertions": [
+   "# Check if the file exists\nassert os.path.exists(file_path)",
+   "# Check if the content of the file is correct\nwith open(file_path, 'r') as f:\n    assert f.read() == '[1.1, 2.2, 3.3, 4.4]'"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\nf.write(content)\ntemp_dir.cleanup()",
+  "assertions": [
+   "assert os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\nf.write(content)\nf.close()\nnew_file=temp_dir.name+\"/new_features.json\"\nos.rename(file, new_file)\ntemp_dir.cleanup()",
+  "assertions": [
+   "assert not os.path.exists(file)",
+   "assert os.path.exists(new_file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\nf.write(content)\nf.close()\nnew_dir=temp_dir.name+\"/new_dir\"\nos.mkdir(new_dir)\nnew_file=new_dir+\"/new_features.json\"\nos.rename(file, new_file)\ntemp_dir.cleanup()",
+  "assertions": [
+   "assert not os.path.exists(file)",
+   "assert os.path.exists(new_file)"
+  ]
+ },
+ {
+  "init": "import tempfile\nimport os\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\nf.write(content)\nf.close()\nnew_dir=temp_dir.name+\"/new_dir\"\nos.mkdir(new_dir)\nnew_file=new_dir+\"/new_features.json\"\nwith open(new_file, 'w') as nf:\n    nf.write(\"new content\")\ntemp_dir.cleanup()",
+  "assertions": [
+   "assert os.path.exists(new_file)",
+   "with open(new_file, 'r') as nf:\n    assert nf.read() == \"new content\""
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'w')",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert not f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'w')\nf.write(\"content\")",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert not f.closed",
+   "assert f.read() == \"content\""
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'w')\nf.write(\"content\")\ntemp_dir.cleanup()",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'w')\nf.write(\"content\")\ntemp_dir.cleanup()\nassert not os.path.exists(file)",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'w')\nf.write(\"content\")\nf.close()",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'w')\nf.write(\"content\")\nf.close()\nassert not os.path.exists(file)",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'w')\nf.write(\"content\")\nf.close()\nassert os.path.exists(file)",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert not f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('content')",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert not f.closed",
+   "assert f.name == file"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/features.json'\nf=open(file, 'w')\nf.write('content')\ntemp_dir.cleanup()",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.closed",
+   "assert not os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert isinstance(content, str)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert isinstance(content, str)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'w')",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert isinstance(content, str)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'w')\nf.write('')",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert isinstance(content, str)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'w')\nf.write('content')",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert isinstance(file, str)",
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert isinstance(content, str)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'x')",
+  "assertions": "error"
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'r')",
+  "assertions": "error"
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + \"/features.json\"\nf = open(file, 'a')",
+  "assertions": "error"
+ },
+ {
+  "init": "import tempfile\n\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\nf.write(content)\n",
+  "assertions": []
+ },
+ {
+  "init": "import tempfile\n\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\nf.write(content)\ntemp_dir.cleanup()\n",
+  "assertions": []
+ },
+ {
+  "init": "import tempfile\n\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\nf.write(content)\ntemp_dir.cleanup()\n\nf.close()\n",
+  "assertions": "error"
+ },
+ {
+  "init": "import tempfile\n\ntemp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+\"/features.json\"\nf=open(file, 'w')\nf.write(content)\ntemp_dir.cleanup()\n\nf.close()\ntemp_dir.cleanup()\n",
+  "assertions": "error"
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "assert isinstance(temp_dir.name, str)",
+   "assert temp_dir.name != ''"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + '/features.json'",
+  "assertions": [
+   "assert isinstance(file, str)",
+   "assert file.endswith('.json')"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + '/features.json'\nf = open(file, 'w')",
+  "assertions": [
+   "assert isinstance(f, _io.TextIOWrapper)",
+   "assert f.name == file"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + '/features.json'\nf = open(file, 'w')\ncontent = 'This is a test'",
+  "assertions": [
+   "assert f.write(content) == 14"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + '/features.json'\nf = open(file, 'w')\ncontent = 'This is a test'\nf.write(content)",
+  "assertions": [
+   "assert f.tell() == 14"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + '/features.json'\nf = open(file, 'w')\ncontent = 'This is a test'\nf.write(content)\nf.close()",
+  "assertions": [
+   "assert f.closed"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name + '/features.json'\nf = open(file, 'w')\ncontent = 'This is a test'\nf.write(content)\nf.close()\ntemp_dir.cleanup()",
+  "assertions": [
+   "assert not os.path.exists(temp_dir.name)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "assert isinstance(temp_dir, tempfile.TemporaryDirectory)",
+   "assert temp_dir.name != ''"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "temp_dir.cleanup()",
+   "assert not os.path.exists(temp_dir.name)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "file = temp_dir.name + '/features.json'",
+   "assert os.path.exists(file)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "file = tempfile.mktemp(prefix=None, suffix='.txt', dir=temp_dir.name)",
+   "assert os.path.exists(file)",
+   "assert file.endswith('.txt')"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "with tempfile.NamedTemporaryFile(dir=temp_dir.name, delete=False) as f:",
+   "assert os.path.exists(f.name)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()",
+  "assertions": [
+   "temp_file = os.path.join(temp_dir.name, 'test.txt')",
+   "assert not os.path.exists(temp_file)",
+   "os.makedirs(temp_file)",
+   "assert os.path.isdir(temp_file)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\n",
+  "assertions": [
+   "assert isinstance(temp_dir.name, str)"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory(prefix='my_temp_')\n",
+  "assertions": [
+   "assert temp_dir.name.startswith('my_temp_')"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory(suffix='_temp')\n",
+  "assertions": [
+   "assert temp_dir.name.endswith('_temp')"
+  ]
+ },
+ {
+  "init": "with tempfile.TemporaryDirectory() as temp_dir:\n    assert os.path.exists(temp_dir)\n    temp_file = os.path.join(temp_dir, 'temp.txt')\n    with open(temp_file, 'w') as file:\n        file.write('test')",
+  "assertions": [
+   "assert os.path.exists(temp_file)",
+   "assert os.path.isfile(temp_file)",
+   "with open(temp_file, 'r') as file: \n    assert file.read() == 'test'"
+  ]
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name+'/features.json'\nf = open(file, 'w')\nf.write('Hello World')\ntemp_dir.cleanup()",
+  "assertions": []
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile = temp_dir.name+'/features.txt'\nf = open(file, 'w')\ndirectory = temp_dir.name",
+  "assertions": []
+ },
+ {
+  "init": "with tempfile.NamedTemporaryFile(delete=True) as f: \n    pass",
+  "assertions": []
+ }
+]

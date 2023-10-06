@@ -1,0 +1,6 @@
+[
+ {
+  "init": "'obj = ['string', 123.56, 75, None]",
+  "assertions": "error"
+ }
+]

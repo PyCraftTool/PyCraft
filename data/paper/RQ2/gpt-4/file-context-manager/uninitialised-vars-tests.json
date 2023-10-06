@@ -1,0 +1,11 @@
+[
+ {
+  "init": "dummy_content = ''\ndummy_file='third_dummy_file.txt'\nfw=open('./'+dummy_file,'w')\nfw.write(dummy_content)\nfw.close()",
+  "assertions": [
+   "fw = open(dummy_file, 'r')",
+   "contents = fw.read()",
+   "assert contents == dummy_content",
+   "fw.close()"
+  ]
+ }
+]

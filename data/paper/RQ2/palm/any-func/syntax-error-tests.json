@@ -1,0 +1,82 @@
+[
+ {
+  "init": "c1 = 0, c2 = 0, c3 = 1, c4 = 0, val1 = 1, val2 = 2",
+  "assertions": [
+   "assert value == 1"
+  ]
+ },
+ {
+  "init": "c1 = 0, c2 = 1, c3 = 1, c4 = 0, val1 = 1, val2 = 2",
+  "assertions": [
+   "assert value == 1"
+  ]
+ },
+ {
+  "init": "c1 = 1, c2 = 1, c3 = 0, c4 = 1, val1 = 1, val2 = 2",
+  "assertions": [
+   "assert value == 1"
+  ]
+ },
+ {
+  "init": "c1 = 1, c2 = 1, c3 = 1, c4 = 1, val1 = 1, val2 = 2",
+  "assertions": [
+   "assert value == 1"
+  ]
+ },
+ {
+  "init": "c1 = 0, c2 = 0, c3 = 0, c4 = 0, val1 = 1, val2 = 2",
+  "assertions": [
+   "assert value == 2"
+  ]
+ },
+ {
+  "init": "c1 = 0, c2 = 1, c3 = 0, c4 = 0, val1 = 1, val2 = 2",
+  "assertions": [
+   "assert value == 2"
+  ]
+ },
+ {
+  "init": "c1 = 1, c2 = 0, c3 = 0, c4 = 0, val1 = 1, val2 = 2",
+  "assertions": [
+   "assert value == 2"
+  ]
+ },
+ {
+  "init": "c1 = 0, c2 = 0, c3 = 1, c4 = 0, val1 = 1, val2 = 2",
+  "assertions": [
+   "assert value == 2"
+  ]
+ },
+ {
+  "init": "c1 = 0, c2 = 0, c3 = 0, c4 = 1, val1 = 1, val2 = 2",
+  "assertions": [
+   "assert value == 2"
+  ]
+ },
+ {
+  "init": "c1 = False, val1 = 1, c2 = True, c3 = False, c4 = True, val2 = 2",
+  "assertions": [
+   "assert value == 2"
+  ]
+ },
+ {
+  "init": "c1 = True, val1 = 'a', c2 = False, c3 = True, c4 = False, val2 = 'b'",
+  "assertions": [
+   "assert value == 'b'"
+  ]
+ },
+ {
+  "init": "c1 = True, val1 = 1, c2 = True, c3 = True, c4 = False, val2 = 2",
+  "assertions": [
+   "assert value == val1"
+  ]
+ },
+ {
+  "init": "c1 = False, val1 = 1, c2 = True, c3 = True, c4 = True, val2 = 2",
+  "assertions": "error"
+ },
+ {
+  "init": "c1 = False, val1 = 1, c2 = True, c3 = False, c4 = True, val2 = 2",
+  "assertions": "error"
+ }
+]

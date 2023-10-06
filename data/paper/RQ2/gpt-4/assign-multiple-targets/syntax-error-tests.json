@@ -1,0 +1,26 @@
+[
+ {
+  "init": "x = [1,2,3]\ny = []\nz=[None, None, None]",
+  "assertions": [
+   "assert a == [1,2,3]",
+   "assert b == []",
+   "assert\u00a0c == [None, None, None]"
+  ]
+ },
+ {
+  "init": "x,y,z = \"Hello\",\"\",\" 'Test' \"",
+  "assertions": [
+   "assert a == 'Hello'",
+   "assert b == ''",
+   "assert c == ' 'Test' '"
+  ]
+ },
+ {
+  "init": "x = 'float()\ny = [None, 'test string']\nz = ''",
+  "assertions": [
+   "assert a == 'float",
+   "assert b == [None, 'test string']",
+   "assert c == ''"
+  ]
+ }
+]

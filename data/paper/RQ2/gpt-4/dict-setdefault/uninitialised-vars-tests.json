@@ -1,0 +1,14 @@
+[
+ {
+  "init": "array = ['a', 'b', 'c']",
+  "assertions": "error"
+ },
+ {
+  "init": "array = [1, 2, 3, 4, 5, 1, 2, 3]",
+  "assertions": "error"
+ },
+ {
+  "init": "function = lambda x: x*2",
+  "assertions": "error"
+ }
+]

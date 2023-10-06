@@ -1,0 +1,16 @@
+[
+ {
+  "init": "iterable = \ncond= len",
+  "assertions": "error"
+ },
+ {
+  "init": "iterable = range(10)\ncond = lambda x: x%",
+  "assertions": [
+   "assert t == [0, 1, 4, 9]"
+  ]
+ },
+ {
+  "init": "iterable=$25; cond = lambda x: True",
+  "assertions": "error"
+ }
+]

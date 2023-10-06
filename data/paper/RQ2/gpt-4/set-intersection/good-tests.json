@@ -1,0 +1,878 @@
+[
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = [2, 3, 4, 6, 7]",
+  "assertion": "assert common == [2, 3, 4]"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd', 'e']\nl2 = ['b', 'c', 'd', 'f', 'g']",
+  "assertion": "assert common == ['b', 'c', 'd']"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3, 4.4, 5.5]\nl2 = [2.2, 3.3, 4.4, 6.6, 7.7]",
+  "assertion": "assert common == [2.2, 3.3, 4.4]"
+ },
+ {
+  "init": "l1 = ['1.1', '2.2', '3.3', '4.4', '5.5']\nl2 = ['2.2', '3.3', '4.4', '6.6', '7.7']",
+  "assertion": "assert common == ['2.2', '3.3', '4.4']"
+ },
+ {
+  "init": "l1 = ['abc', 'def', 'ghi', 'jkl', 'mno']\nl2 = ['def', 'ghi', 'jkl', 'pqr', 'stu']",
+  "assertion": "assert common == ['def', 'ghi', 'jkl']"
+ },
+ {
+  "init": "l1 = []\nl2 = ['a', 'b', 'c', 'd', 'e']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd', 'e']\nl2 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = []\nl2 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = None\nl2 = ['a', 'b', 'c', 'd', 'e']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd', 'e']\nl2 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = [2, 4, 6, 8, 10]",
+  "assertion": "assert common == [2, 4]"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd']\nl2 = ['c', 'd', 'e', 'f']",
+  "assertion": "assert common == ['c', 'd']"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3, 4.4]\nl2 = [2.2, 4.4, 6.6]",
+  "assertion": "assert common == [2.2, 4.4]"
+ },
+ {
+  "init": "l1 = []\nl2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['a', ' ', 'c', 'd']\nl2 = [' ', 'd', 'e', 'f']",
+  "assertion": "assert common == [' ', 'd']"
+ },
+ {
+  "init": "l1 = ['1.1', '2.2', '3.3', '4.4']\nl2 = ['2.2', '4.4', '6.6']",
+  "assertion": "assert common == ['2.2', '4.4']"
+ },
+ {
+  "init": "l1 = ['a', None, 'c', 'd']\nl2 = [None, 'd', 'e', 'f']",
+  "assertion": "assert common == [None, 'd']"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = [6, 7, 8, 9, 10]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = [3, 4, 5, 6, 7]",
+  "assertion": "assert common == [3, 4, 5]"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c']\nl2 = ['c', 'd', 'e']",
+  "assertion": "assert common == ['c']"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3]\nl2 = [2.2, 3.3, 4.4]",
+  "assertion": "assert common == [2.2, 3.3]"
+ },
+ {
+  "init": "l1 = ['1.1', '2.2', '3.3']\nl2 = ['2.2', '3.3', '4.4']",
+  "assertion": "assert common == ['2.2', '3.3']"
+ },
+ {
+  "init": "l1 = [None, 'a', 'b']\nl2 = [None, 'b', 'c']",
+  "assertion": "assert common == [None, 'b']"
+ },
+ {
+  "init": "l1 = ['  a  ', 'b', 'c']\nl2 = ['a', 'b', 'c']",
+  "assertion": "assert common == ['b', 'c']"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c']\nl2 = ['  a  ', 'b', 'c']",
+  "assertion": "assert common == ['b', 'c']"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = [4, 5, 6, 7, 8]",
+  "assertion": "assert common == [4, 5]"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd', 'e']\nl2 = ['d', 'e', 'f', 'g', 'h']",
+  "assertion": "assert common == ['d', 'e']"
+ },
+ {
+  "init": "l1 = ['a', 1, 'b', 2]\nl2 = [1, 'a', 3, 'c']",
+  "assertion": "assert common == ['a', 1]"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3]\nl2 = [3.3, 4.4, 5.5]",
+  "assertion": "assert common == [3.3]"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = [5, 6, 7, 8, 9]",
+  "assertion": "assert common == [5]"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c']\nl2 = ['d', 'e', 'f']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = []\nl2 = [1, 2, 3]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c']\nl2 = ['a', 'b', 'c']",
+  "assertion": "assert common == ['a', 'b', 'c']"
+ },
+ {
+  "init": "l1 = [1.5, 2.5, 3.5]\nl2 = [2.5, 3.5, 4.5]",
+  "assertion": "assert common == [2.5, 3.5]"
+ },
+ {
+  "init": "l1 = ['1.5', '2.5', '3.5']\nl2 = [1.5, 2.5, 3.5]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = None\nl2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = [1, 2, 3, None]",
+  "assertion": "assert common == [1, 2, 3]"
+ },
+ {
+  "init": "l1 = ['1.23', '4.56', '7.89']\nl2 = ['1.23', '4.56', '7.89']",
+  "assertion": "assert common == ['1.23', '4.56', '7.89']"
+ },
+ {
+  "init": "l1 = [None, None, None]\nl2 = [None, None, None]",
+  "assertion": "assert common == [None, None, None]"
+ },
+ {
+  "init": "l1 = [1.23, 4.56, 7.89]\nl2 = ['1.23', '4.56', '7.89']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['  ', '  ', '  ']\nl2 = ['  ', '  ', '  ']",
+  "assertion": "assert common == ['  ', '  ', '  ']"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = [1, '2', 3]",
+  "assertion": "assert common == [1, 3]"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd', 'e']\nl2 = ['A', 'B', 'C', 'D', 'E']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3, 4.4, 5.5]\nl2 = [4.4, 5.5, 6.6, 7.7, 8.8]",
+  "assertion": "assert common == [4.4, 5.5]"
+ },
+ {
+  "init": "l1 = [None, True, False]\nl2 = [True, False, None]",
+  "assertion": "assert common == [None, True, False]"
+ },
+ {
+  "init": "l1 = ['1.1', '2.2', '3.3']\nl2 = [1.1, 2.2, 3.3]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = ['1', '2', '3']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['   ', ' ', '']\nl2 = [' ', '   ', '']",
+  "assertion": "assert common == ['   ', ' ', '']"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c']\nl2 = ['a ', 'b ', 'c ']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c']\nl2 = ['b', 'c', 'd']",
+  "assertion": "assert common == ['b', 'c']"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3]\nl2 = ['1.1', '2.2', '3.3']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [None, 'None', 0, '0']\nl2 = ['None', 0, None, '0']",
+  "assertion": "assert common == [None, 'None', 0, '0']"
+ },
+ {
+  "init": "l1 = ['a', '  ', 'c']\nl2 = ['a', 'b', '  ']",
+  "assertion": "assert common == ['a', '  ']"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c']\nl2 = ['A', 'B', 'C']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd', 'e']\nl2 = ['c', 'd', 'e', 'f', 'g']",
+  "assertion": "assert common == ['c', 'd', 'e']"
+ },
+ {
+  "init": "l1 = ['1', '2', '3', '4', '5']\nl2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = 'abcde'\nl2 = 'cdefg'",
+  "assertion": "assert common == ['c', 'd', 'e']"
+ },
+ {
+  "init": "l1 = []\nl2 = [1, 2, 3, 4, 'a', 5]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['Hello', 20, 'World', 34, 'Python']\nl2 = ['Hello', 'Python', 'Programming', 101, 20]",
+  "assertion": "assert common == ['Hello', 20, 'Python']"
+ },
+ {
+  "init": "l1 = ['Hello', 3.14, 'World', 34, 'Python']\nl2 = ['Hello', 'Python', 'Programming', 914, 3.14]",
+  "assertion": "assert common == ['Hello', 3.14, 'Python']"
+ },
+ {
+  "init": "l1 = ['abc',None,'def',1,2.34]\nl2 = [None]",
+  "assertion": "assert common == [None]"
+ },
+ {
+  "init": "l1 = [' ', '_', ':']\nl2 = ['Hello', 'Python', 'Programming', '_', ' ']",
+  "assertion": "assert common == [' ', '_']"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 5]\nl2 = [1, 3, 5, 6]",
+  "assertion": "assert common == [1, 3, 5]"
+ },
+ {
+  "init": "l1 = [1.12, 1.13]\nl2 = [4.12, 1.12, 3.13]",
+  "assertion": "assert common == [1.12]"
+ },
+ {
+  "init": "l1 = ['apple', 'banana', 'mango']\nl2 = ['mango', 'grapes', 'papaya']",
+  "assertion": "assert common == ['mango']"
+ },
+ {
+  "init": "l1 = []\nl2 = [1,2,3]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [0.5, 1.5, 2.5]\nl2 = [2.5, 3.5, 4.5]",
+  "assertion": "assert common == [2.5]"
+ },
+ {
+  "init": "l1 = [[1,2,3]]\nl2 = [[1,2,3]]",
+  "assertion": "assert common == [[1,2,3]]"
+ },
+ {
+  "init": "l1 = [9.5, 'text', (2,3)]\nl2 = [(3,4), 9.5]",
+  "assertion": "assert common == [9.5]"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4]\nl2 = [3, 4, 5, 6]",
+  "assertion": "assert common == [3, 4]"
+ },
+ {
+  "init": "l1 = ['a', ' ', 'b', None]\nl2 = [' ', 'b', 'c']",
+  "assertion": "assert common == [' ', 'b']"
+ },
+ {
+  "init": "l1 = []\nl2 = ['d', 'e', 'f']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1.456, 7.234, 9.765]\nl2 = [4.231, 7.234, 1.456]",
+  "assertion": "assert common == [1.456, 7.234]"
+ },
+ {
+  "init": "l1 = ['2.456', 'hello', None]\nl2 = ['2.456', ' ', None]",
+  "assertion": "assert common == ['2.456', None]"
+ },
+ {
+  "init": "l1 = [10]\nl2 = [10, 11, 12]",
+  "assertion": "assert common == [10]"
+ },
+ {
+  "init": "l2 = [1,2,3,4,5,6]\nl1 = [1,2,3,7,8,9]",
+  "assertion": "assert common == [1,2,3]"
+ },
+ {
+  "init": "l2 = ['apple', 'orange', 'banana']\nl1 = ['banana', 'kiwi', 'mango']",
+  "assertion": "assert common == ['banana']"
+ },
+ {
+  "init": "l2 = []\nl1 = [1,2,3,4,5]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l2 = [1,2,3,4,5]\nl1 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l2 = [1, 1.234, 3.234, 'string', 'float', [1,2,'3a']]\nl1 = [1.234, 'float', [1,2,'3a']]",
+  "assertion": "assert common == [1.234, 'float', [1,2,'3a']]"
+ },
+ {
+  "init": "l2 = [None, None, None]\nl1 = [None]",
+  "assertion": "assert common == [None]"
+ },
+ {
+  "init": "l2 = [1, 2, 'string', None, [1, '2']]\nl1 = [[1, '2']]",
+  "assertion": "assert common == [[1, '2']]"
+ },
+ {
+  "init": "l2 = [1, 2, 3, 4]\nl1 = ['1', '2', '3', '4']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd']\nl2 = ['a', 'b', 'x', 'y']",
+  "assertion": "assert common == ['a', 'b']"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd']\nl2 = ['x', 'y', 'z', 'w']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['1.5', '2.0', 'abc']\nl2 = [1.5, 'abc', 2.0]",
+  "assertion": "assert common == ['abc']"
+ },
+ {
+  "init": "l1 = []\nl2 = ['a', 'b', 'c', 'd']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd']\nl2 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['a', 'b', 4, None] \nl2 = [None, 4, 'd']",
+  "assertion": "assert common == [4, None]"
+ },
+ {
+  "init": "l1 = [12.5, 45.3, 90.6] \nl2 = ['12.5', '45.3', '90.6']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l2 = [1, 2, 3, 4, 5]\nl1 = [9, 8, 6, 5, 7]",
+  "assertion": "assert common == [5]"
+ },
+ {
+  "init": "l2 = ['a', 'b', ' '] \nl1 = ['c', '', ' ', 'a']",
+  "assertion": "assert common == [' ', 'a']"
+ },
+ {
+  "init": "l2 = [] \nl1 = [1, 2, 3]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l2 = [None, '', '   ', 1, 5.25, 'hello']\nl1 = [None, '', '    ', 5.25]",
+  "assertion": "assert common == [None, '', 5.25]"
+ },
+ {
+  "init": "l2 =  [984, '98', None, '{}', None, 4.545, '']\nl1 = ['545', '', '44', None]",
+  "assertion": "assert common == ['', None]"
+ },
+ {
+  "init": "l2 =  ['512', '60', 513.3, 'Test0', '', None, [1,2,3], [1, 2.3333], 'hello', 220.18, 1349685]\nl1 = ['606', '[1,2,3]', 'hello']",
+  "assertion": "assert common == ['hello']"
+ },
+ {
+  "init": "l1 = [1.0, 2.0, 3.0, 4.0, 5.0]\nl2 = [4.0, 5.0, 6.0, 7.0, 8.0]",
+  "assertion": "assert common == [4.0, 5.0]"
+ },
+ {
+  "init": "l1 = ['1', '2', '3', '4', '5']\nl2 = ['4', '5', '6', '7', '8']",
+  "assertion": "assert common == ['4', '5']"
+ },
+ {
+  "init": "l1 = [None,None,None]\nl2 = [2,None,1,None]",
+  "assertion": "assert common == [None, None, None]"
+ },
+ {
+  "init": "l1 = [None,None,None]\nl2 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = None\nl2 = [1, 2.0, '3', '3.9', None]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = [1, 2.0, '3', '3.9', None]\nl2 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5, 6]; l2 = [2, 4, 6, 8, 10]",
+  "assertion": "assert common == [2, 4, 6]"
+ },
+ {
+  "init": "l1 = [] ;l2 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['hi', 'There'] ;l2 = ['hi', 'there']",
+  "assertion": "assert common == ['hi']"
+ },
+ {
+  "init": "l1 = [1.2, 3.5, 2.56, 7.8] ; l2 = [3.5, 7.11, 9.6, 2.6]",
+  "assertion": "assert common == [3.5]"
+ },
+ {
+  "init": "l1 = ['1.2', '2.5'] ; l2 = [1.2, 2.5]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [float('inf'), float('-inf')] ; l2 = [7, float('inf')]",
+  "assertion": "assert common == [float('inf')]"
+ },
+ {
+  "init": "l1=list('abcd') ; l2= list('wxyza') ",
+  "assertion": "assert common == ['a']"
+ },
+ {
+  "init": "l1=[[]];l2=[[]]",
+  "assertion": "assert common == [[]]"
+ },
+ {
+  "init": "l1 = [' ',  'a', 'c']; l2 = [' ','b','d'];",
+  "assertion": "assert (common == [' '])"
+ },
+ {
+  "init": "l1 = [1,2,3,4,5,6]\nl2 = [4,5,6,7,8,9]",
+  "assertion": "assert common == [4, 5, 6]"
+ },
+ {
+  "init": "l1 = []\nl2 = [4,5,6,7,8,9]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [None, True, 'test', 2.5]\nl2 = [None, False, 'test', 3.5]",
+  "assertion": "assert common == [None, 'test']"
+ },
+ {
+  "init": "l1 = [1,2.5,'a','b',None]\nl2 =['a','b',None,2.5, 1 ]",
+  "assertion": "assert common == [1, 2.5, 'a', 'b', None]"
+ },
+ {
+  "init": "l1 = ['1','2','3']\nl2 = [1, 2, 3]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1, 2.2, 'a', True, None]\nl2 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = None\nl2 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = '1234'\nl2 = '4321'",
+  "assertion": "assert common == ['1', '2', '3', '4']"
+ },
+ {
+  "init": "l1 = ['apple', 'banana', 'cherry']\nl2 = ['apple', 'banana', 'cherry']",
+  "assertion": "assert common == ['apple', 'banana', 'cherry']"
+ },
+ {
+  "init": "l1 = ['apple', 'banana', 'cherry']\nl2 = ['orange', 'grapes', 'pineapple']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = []\nl2 = [4, 5, 6, 7, 8]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3]\nl2 = [1.1, 2.2, 3.3]",
+  "assertion": "assert common == [1.1, 2.2, 3.3]"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3]\nl2 = [4.4, 5.5, 6.6]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['1.1', '2.2', '3.3']\nl2 = ['1.1', '2.2', '3.3']",
+  "assertion": "assert common == ['1.1', '2.2', '3.3']"
+ },
+ {
+  "init": "l1 = ['1.1', '2.2', '3.3']\nl2 = ['4.4', '5.5', '6.6']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = [4, 5, 6]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [None, 2, 3]\nl2 = [None, 3, 4]",
+  "assertion": "assert common == [None, 3]"
+ },
+ {
+  "init": "l1 = [' ', 2, 3]\nl2 = [' ', 3, 4]",
+  "assertion": "assert common == [' ', 3]"
+ },
+ {
+  "init": "l1 = ['1', '2', '3']\nl2 = [1, 2, 3]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [None, None, None]\nl2 = [None, 'None', 'null']",
+  "assertion": "assert common == [None, None, None]"
+ },
+ {
+  "init": "l1 = [' ', ' ', ' ']\nl2 = [' ', 'a', 'b']",
+  "assertion": "assert common == [' ', ' ', ' ']"
+ },
+ {
+  "init": "l1 = [1.1, '2.2', 3.3]\nl2 = ['1.1', '2.2', '3.3']",
+  "assertion": "assert common == ['2.2']"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd']\nl2 = ['d', 'e', 'f', 'g']",
+  "assertion": "assert common == ['d']"
+ },
+ {
+  "init": "l1 = [1.23, 4.56, 7.89]\nl2 = [1.23, 2.34, 3.45]",
+  "assertion": "assert common == [1.23]"
+ },
+ {
+  "init": "l1 = ['1.23', '4.56', '7.89']\nl2 = ['1.23', '2.34', '3.45']",
+  "assertion": "assert common == ['1.23']"
+ },
+ {
+  "init": "l1 = [None, 2, 3, 4, 5]\nl2 = [None, 6, 7, 8, 9]",
+  "assertion": "assert common == [None]"
+ },
+ {
+  "init": "l1 = ['  string  ', 'b', 'c', 'd']\nl2 = ['  string  ', 'e', 'f', 'g']",
+  "assertion": "assert common == ['  string  ']"
+ },
+ {
+  "init": "l1 = []\nl2 = [4, 5, 6]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1, '2', 3.0]\nl2 = [1, '2', '3.0']",
+  "assertion": "assert common == [1, '2']"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = [1, 2, None]",
+  "assertion": "assert common == [1, 2]"
+ },
+ {
+  "init": "l1 = [None, 'b', 'c']\nl2 = [None, 'B', 'C']",
+  "assertion": "assert common == [None]"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = [5, 4, 3, 2, 1]",
+  "assertion": "assert common == [1, 2, 3, 4, 5]"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd', 'e']\nl2 = ['e', 'd', 'c', 'b', 'a']",
+  "assertion": "assert common == ['a', 'b', 'c', 'd', 'e']"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3, 4.4]\nl2 = [3.3, 4.4, 5.5, 6.6]",
+  "assertion": "assert common == [3.3, 4.4]"
+ },
+ {
+  "init": "l1 = ['1.1', '2.2', '3.3', '4.4']\nl2 = ['3.3', '4.4', '5.5', '6.6']",
+  "assertion": "assert common == ['3.3', '4.4']"
+ },
+ {
+  "init": "l1 = [None, 'a', 'b', 'c']\nl2 = ['c', 'd', 'e', None]",
+  "assertion": "assert common == [None, 'c']"
+ },
+ {
+  "init": "l1 = ['  a  ', 'b', 'c', 'd']\nl2 = ['c', 'd', 'e', '  a  ']",
+  "assertion": "assert common == ['  a  ', 'c', 'd']"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = [2, 3, 4, 5, 6]",
+  "assertion": "assert common == [2, 3, 4, 5]"
+ },
+ {
+  "init": "l1 = [1, 2, '3', 4, 5]\nl2 = [2, '3', 4, 5, 6]",
+  "assertion": "assert common == [2, '3', 4, 5]"
+ },
+ {
+  "init": "l1 = [1, 2, 3.1]\nl2 = [1, 2, '3.1']",
+  "assertion": "assert common == [1, 2]"
+ },
+ {
+  "init": "l1 = [1, 2, None]\nl2 = [1, 2, 3]",
+  "assertion": "assert common == [1, 2]"
+ },
+ {
+  "init": "l1 = [1, 2, None]\nl2 = [1, None, 3]",
+  "assertion": "assert common == [1, None]"
+ },
+ {
+  "init": "l1 = 'abc'\nl2 = 'abc'",
+  "assertion": "assert common == ['a', 'b', 'c']"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 'a', 'b']\nl2 = [2, 'a', 'b', 'c']",
+  "assertion": "assert common == [2, 'a', 'b']"
+ },
+ {
+  "init": "l1 = [' ', ' ', ' ']\nl2 = [' ']",
+  "assertion": "assert common == [' ', ' ', ' ']"
+ },
+ {
+  "init": "l1 = [1.5, 2.5, 3.5]\nl2 = [1.5, '2.5', 3.5]",
+  "assertion": "assert common == [1.5, 3.5]"
+ },
+ {
+  "init": "l1 = ['1.5', '2.5', '3.5']\nl2 = [1.5, '2.5', 3.5]",
+  "assertion": "assert common == ['2.5']"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd']\nl2 = ['b', 'c', 'd', 'e']",
+  "assertion": "assert common == ['b', 'c', 'd']"
+ },
+ {
+  "init": "l1 = [1, 2, 3, None, 5]\nl2 = [None, 'a', 'b', 'c']",
+  "assertion": "assert common == [None]"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3, 4.4]\nl2 = [1.1, 'a', 'b', 'c']",
+  "assertion": "assert common == [1.1]"
+ },
+ {
+  "init": "l1 = ['1.1', '2.2', '3.3', '4.4']\nl2 = [1.1, 'a', 'b', 'c']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c', 'd']\nl2 = ['e', 'f', 'g', 'h']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l2 = ['a', 'b', 'c']\nl1 = ['a', 'd', 'e']",
+  "assertion": "assert common == ['a']"
+ },
+ {
+  "init": "l2 = [1, 2, 3]\nl1 = [4, 5, 6]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l2 = [1, '2', None]\nl1 = [None, '2', 1]",
+  "assertion": "assert common == [None, '2', 1]"
+ },
+ {
+  "init": "l2 = [1.1, 2.2, 3.3]\nl1 = [1.1, '2.2', '3.3']",
+  "assertion": "assert common == [1.1]"
+ },
+ {
+  "init": "l2 = []\nl1 = [1, 2, 3]",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l2 = [1, 2, 3]\nl1 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l2 = [1, 2, 3]\nl1 = None",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l2 = None\nl1 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l2 = [1, 2, 3]\nl1 = [1, 2, 2, 3, 3, 3]",
+  "assertion": "assert common == [1, 2, 2, 3, 3, 3]"
+ },
+ {
+  "init": "l1 = ['A', 'b', '9']\nl2 = ['A', 'B', 'C']",
+  "assertion": "assert common == ['A']"
+ },
+ {
+  "init": "l1 = []\nl2 = ['A', 'B', 'C']",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [' ']\nl2 = ['A', 'B', ' ']",
+  "assertion": "assert common == [' ']"
+ },
+ {
+  "init": "l1 = ['A', 'B', 'C']\nl2 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [1, 2.2, '3']\nl2 = [1, '2', 3]",
+  "assertion": "assert common == [1]"
+ },
+ {
+  "init": "l1 = [1, '1', 2.2, '3']\nl2 = [1, '1', '2', 3]",
+  "assertion": "assert common == [1, '1']"
+ },
+ {
+  "init": "l1 = ['1', 'b', 'c']\nl2 = [1, 'b', 'c']",
+  "assertion": "assert common == ['b', 'c']"
+ },
+ {
+  "init": "l1 = None\nl2 = ['A', 'B', 'C']",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = ['abc', 'def', 'ghi']\nl2 = ['abc', 'jkl', 'ghi']",
+  "assertion": "assert common == ['abc', 'ghi']"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3]\nl2 = [2.2, 4.4, 6.6]",
+  "assertion": "assert common == [2.2]"
+ },
+ {
+  "init": "l1 = [[1, 2], [3, 4]]\nl2 = [[1, 2], [5, 6]]",
+  "assertion": "assert common == [[1, 2]]"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = '123'",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = 123\nl2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = 1\nl2 = [1, 2, 3]",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = 2",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = ['  a  ', '  b  ', '  c  ']\nl2 = ['a', '  b  ', 'c']",
+  "assertion": "assert common == ['  b  ']"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 'a']\nl2 = [4, 5, 6, 7, 'a']",
+  "assertion": "assert common == [4, 'a']"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 5]\nl2 = [1, 2, 3, 4, 5]",
+  "assertion": "assert common == [1, 2, 3, 4, 5]"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 4, 'a', 'b']\nl2 = [3, 4, 'a', 'b', 'c', 'd']",
+  "assertion": "assert common == [3, 4, 'a', 'b']"
+ },
+ {
+  "init": "l1 = [None, 1, 2]\nl2 = [None, 3, 4]",
+  "assertion": "assert common == [None]"
+ },
+ {
+  "init": "l1 = [' ', ' ', ' ']\nl2 = [' ', ' ', ' ']",
+  "assertion": "assert common == [' ', ' ', ' ']"
+ },
+ {
+  "init": "l1 = ['a', 'b', 'c']\nl2 = []",
+  "assertion": "assert common == []"
+ },
+ {
+  "init": "l1 = [None, None, None]\nl2 = [None, 'a', 'b']",
+  "assertion": "assert common == [None, None, None]"
+ },
+ {
+  "init": "l1 = 123\nl2 = 234",
+  "assertion": "assert 1==1",
+  "error": true
+ },
+ {
+  "init": "l1 = [1, 2, 3, 'a', 'b']\nl2 = [2, 3, 4, 'a', 'c']",
+  "assertion": "assert common == [2, 3, 'a']"
+ },
+ {
+  "init": "l1 = [1, 2, 3, None]\nl2 = [2, 3, 4, None]",
+  "assertion": "assert common == [2, 3, None]"
+ },
+ {
+  "init": "l1 = [1, 2, 3, '1.5']\nl2 = [2, 3, 4, '1.5']",
+  "assertion": "assert common == [2, 3, '1.5']"
+ },
+ {
+  "init": "l1 = [' ', 'b', 'c']\nl2 = [' ', 'c', 'd']",
+  "assertion": "assert common == [' ', 'c']"
+ },
+ {
+  "init": "l1 = [1, 'a', 3.14, None]\nl2 = [None, 'b', 2.71, 1]",
+  "assertion": "assert common == [1, None]"
+ },
+ {
+  "init": "l1 = [1, 2, 3]\nl2 = [1, 2, 3]",
+  "assertion": "assert common == [1, 2, 3]"
+ },
+ {
+  "init": "l1 = [1, 'a', 3.14, None]\nl2 = [None, 'a', 3.14, 1]",
+  "assertion": "assert common == [1, 'a', 3.14, None]"
+ },
+ {
+  "init": "l1 = [1, 2, 2, 3, 4, 5]\nl2 = [5, 4, 3, 2, 2, 1]",
+  "assertion": "assert common == [1, 2, 2, 3, 4, 5]"
+ },
+ {
+  "init": "l1 = [1, 2, 3, 'a', 'b']\nl2 = [2, 3, 'a']",
+  "assertion": "assert common == [2, 3, 'a']"
+ },
+ {
+  "init": "l1 = [1.1, 2.2, 3.3]\nl2 = [1.1, 2.2]",
+  "assertion": "assert common == [1.1, 2.2]"
+ },
+ {
+  "init": "l1 = ['1.1', '2.2', '3.3']\nl2 = ['1.1', '2.2']",
+  "assertion": "assert common == ['1.1', '2.2']"
+ },
+ {
+  "init": "l1 = [1, 2, 3, None]\nl2 = [None, 4, 5]",
+  "assertion": "assert common == [None]"
+ },
+ {
+  "init": "l1 = [1, 2, 3, '1.5']\nl2 = ['1.5', 4, 5]",
+  "assertion": "assert common == ['1.5']"
+ },
+ {
+  "init": "l1 = ['1.1', '2.2', '3.3']\nl2 = ['3.3', '4.4', '5.5']",
+  "assertion": "assert common == ['3.3']"
+ },
+ {
+  "init": "l1 = [None, 2, 3]\nl2 = [None, 4, 5]",
+  "assertion": "assert common == [None]"
+ },
+ {
+  "init": "l1 = [' ', 'b', 'c']\nl2 = [' ', 'e', 'f']",
+  "assertion": "assert common == [' ']"
+ }
+]

@@ -1,0 +1,56 @@
+[
+ {
+  "init": "arr1 = [1.1, 2.2, 3.3]",
+  "assertions": [
+   "assert mean == 2.2"
+  ]
+ },
+ {
+  "init": "arr1 = [1.25, 2.75, 3.5, 4.25, 5.0]",
+  "assertions": [
+   "assert mean == 3.55"
+  ]
+ },
+ {
+  "init": "arr1 = [1.125, 3.5, 6.75, 5.9]",
+  "assertions": [
+   "assert mean == 4.318749999999999"
+  ]
+ },
+ {
+  "init": "arr1 = [1.23, 34.382]",
+  "assertions": [
+   "assert mean == 17.806"
+  ]
+ },
+ {
+  "init": "arr1 = [1.15561e-23, 5.2e11, -9.00000000678e34]",
+  "assertions": [
+   "assert mean == -3e34"
+  ]
+ },
+ {
+  "init": "arr1 = [0.1, 0.1, 0.1]",
+  "assertions": [
+   "assert mean == 0.1"
+  ]
+ },
+ {
+  "init": "arr1 = [-100, 200, -300]",
+  "assertions": [
+   "assert mean == -200"
+  ]
+ },
+ {
+  "init": "arr1 = [2.5, 3.2, 4.1, 2.9]",
+  "assertions": [
+   "assert mean == 3.175"
+  ]
+ },
+ {
+  "init": "arr1 = [0.00001, 0.00002, 0.00003, 0.00004, 0.00005]",
+  "assertions": [
+   "assert mean == 0.00003"
+  ]
+ }
+]

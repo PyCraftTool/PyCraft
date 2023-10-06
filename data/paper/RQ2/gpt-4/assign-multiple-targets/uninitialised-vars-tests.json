@@ -1,0 +1,46 @@
+[
+ {
+  "init": "x = 10\ny = 20",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "x=0.0",
+  "assertions": "error"
+ },
+ {
+  "init": "x=0.0\ny=0.0",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "x = 5",
+  "assertions": "error"
+ }
+]

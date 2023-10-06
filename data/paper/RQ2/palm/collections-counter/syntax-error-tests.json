@@ -1,0 +1,14 @@
+[
+ {
+  "init": "iterable = []\ncounts = {}\n",
+  "assertions": [
+   "assert counts == {}]"
+  ]
+ },
+ {
+  "init": "counts = {}\niterable = []\n",
+  "assertions": [
+   "assert counts == {}]"
+  ]
+ }
+]

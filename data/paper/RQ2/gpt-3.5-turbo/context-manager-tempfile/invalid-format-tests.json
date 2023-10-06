@@ -1,0 +1,8 @@
+[
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\nfile=temp_dir.name+'/file.backup'"
+ },
+ {
+  "init": "temp_dir = tempfile.TemporaryDirectory()\n\nf =  open(temp_dir.name+'/file.backup', 'w')"
+ }
+]

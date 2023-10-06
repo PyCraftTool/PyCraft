@@ -1,0 +1,54 @@
+[
+ {
+  "init": "a=1\nb=2\nc=3",
+  "assertions": [
+   "assert c==3"
+  ]
+ },
+ {
+  "init": "a=1\nb=2\nc=None",
+  "assertions": "error"
+ },
+ {
+  "init": "a=None\nb=2\nc=3",
+  "assertions": [
+   "assert a==None"
+  ]
+ },
+ {
+  "init": "a=1\nb=None\nc=3",
+  "assertions": [
+   "assert b==None"
+  ]
+ },
+ {
+  "init": "a=None\nb=None\nc=3",
+  "assertions": [
+   "assert a==None"
+  ]
+ },
+ {
+  "init": "a=0\nb=1\nc=1",
+  "assertions": [
+   "assert a>b"
+  ]
+ },
+ {
+  "init": "a=0\nb=1\nc=-1",
+  "assertions": [
+   "assert a<c"
+  ]
+ },
+ {
+  "init": "a=0\nb=1\nc=-1",
+  "assertions": [
+   "assert b>c"
+  ]
+ },
+ {
+  "init": "a=None\nb=None\nc=3",
+  "assertions": [
+   "assert c==3"
+  ]
+ }
+]

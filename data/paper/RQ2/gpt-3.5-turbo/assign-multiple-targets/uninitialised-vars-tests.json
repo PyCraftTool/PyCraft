@@ -1,0 +1,30 @@
+[
+ {
+  "init": "x = ''\ny = 10\nc = 2.5",
+  "assertions": [
+   "assert a == x",
+   "assert b == y",
+   "assert c == z"
+  ]
+ },
+ {
+  "init": "x = 1\ny = None",
+  "assertions": "error"
+ },
+ {
+  "init": "x = [1, 2, 3]\ny = 'hello '",
+  "assertions": [
+   "assert(a == [1, 2, 3])",
+   "assert(b == 'hello ')",
+   "assert(c is None)"
+  ]
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ },
+ {
+  "init": "",
+  "assertions": "error"
+ }
+]
