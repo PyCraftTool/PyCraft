@@ -1,0 +1,11 @@
+[
+ "\r\nresult = []\r\nfor i in range(len(array1)):\r\n    sum_of_elements = array1[i] + array2[i]\r\n    result.append(sum_of_elements)",
+ "\r\nresult = []\r\nfor i in range(len(array1)):\r\n    result.append(array1[i] + array2[i])\r\ndot_prod = result",
+ "\r\nresult = [array1[i] + array2[i] for i in range(len(array1))]\r\ndot_prod = result",
+ "\r\nresult = []\r\nfor (index, _) in enumerate(array1):\r\n    result.append(array1[index] + array2[index])",
+ "\r\nresult = [0] * len(array1)\r\nfor i in range(len(array1)):\r\n    result[i] = array1[i] + array2[i]\r\ndot_prod = result",
+ "\r\nresult = []\r\nfor i in range(len(array1)):\r\n    result += [array1[i] + array2[i]]",
+ "\r\nresult = []\r\nfor i in range(len(array1)):\r\n    sum_of_elements = array1[i] + array2[i]\r\n    result.append(sum_of_elements)\r\ndot_prod = result",
+ "\r\nresult = []\r\nfor i in range(len(array1)):\r\n    result.append(array1[i] + array2[i])",
+ "\r\nresult = [array1[i] + array2[i] for i in range(len(array1))]"
+]

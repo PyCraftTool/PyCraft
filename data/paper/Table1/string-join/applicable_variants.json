@@ -1,0 +1,12 @@
+[
+ "\r\nstring = '['\r\nfor (idx, val) in enumerate(values):\r\n    string += (', ' if idx != 0 else '') + val\r\nstring += ']'",
+ "\r\nstring = '['\r\nfor i in range(len(values)):\r\n    if i:\r\n        string += ', '\r\n    string += values[i]\r\nstring += ']'",
+ "\r\nstring = '['\r\nfor (i, value) in enumerate(values):\r\n    if i:\r\n        string += ', '\r\n    string += value\r\nstring += ']'",
+ "\r\nstring = '['\r\nfor (idx, item) in enumerate(values):\r\n    if idx != 0:\r\n        string += ', '\r\n    string += item\r\nstring += ']'",
+ "\r\nstring = '['\r\nfor i in range(len(values)):\r\n    if i != 0:\r\n        string += ', '\r\n    string += values[i]\r\nstring += ']'",
+ "\r\nstring = '['\r\nfor idx in range(len(values)):\r\n    string += ', ' + values[idx] if idx != 0 else values[idx]\r\nstring += ']'",
+ "\r\nstring = '['\r\nfor i in range(len(values)):\r\n    string += (', ' if i != 0 else '') + values[i]\r\nstring += ']'",
+ "\r\nstring = '['\r\nfor (idx, val) in enumerate(values):\r\n    string += (', ' if idx != 0 else '') + values[idx]\r\nstring += ']'",
+ "\r\nstring = '['\r\nfor (idx, val) in enumerate(values):\r\n    if idx != 0:\r\n        string += ', ' + val\r\n    else:\r\n        string += val\r\nstring += ']'",
+ "\r\nstring = '['\r\nfor (idx, val) in enumerate(values):\r\n    string += ', ' + val if idx != 0 else val\r\nstring += ']'"
+]

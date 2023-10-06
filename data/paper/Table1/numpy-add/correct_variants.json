@@ -1,0 +1,13 @@
+[
+ "result = []\nfor i in range(len(array1)):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)",
+ "import numpy as np\ndot_prod = np.add(array1, array2)",
+ "result = [array1[i] + array2[i] for i in range(len(array1))]",
+ "result = []\nfor i in range(len(array1)):\n    result.append(array1[i] + array2[i])",
+ "result = []\nfor i in range(len(array1)):\n    result += [array1[i] + array2[i]]",
+ "result = []\nfor (index, _) in enumerate(array1):\n    result.append(array1[index] + array2[index])",
+ "result = []\nfor i in range(len(array1)):\n    result.append(array1[i] + array2[i])\ndot_prod = result",
+ "result = [array1[i] + array2[i] for i in range(len(array1))]\ndot_prod = result",
+ "result = []\nfor i in range(len(array1)):\n    sum_of_elements = array1[i] + array2[i]\n    result.append(sum_of_elements)\ndot_prod = result",
+ "result = [0] * len(array1)\nfor i in range(len(array1)):\n    result[i] = array1[i] + array2[i]\ndot_prod = result",
+ "result = list(map(lambda i: array1[i] + array2[i], range(len(array1))))"
+]
