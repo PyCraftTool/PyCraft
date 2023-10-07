@@ -1,0 +1,2346 @@
+variant,temperature-iterations,useful,applicable
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+t = filtered_list[:]","[(0.5, 19)]",False,False
+"from itertools import filterfalse
+filtered = list(filterfalse(lambda i: not cond(i), iterable))
+t = filtered","[(1.2, 13)]",True,False
+"import itertools
+def check_cond(i):
+    return not cond(i)
+t = list(itertools.filterfalse(check_cond, iterable))","[(0.9, 8)]",True,False
+"import itertools
+def get_items(iterable, cond):
+    t = []
+    for (item, c) in itertools.zip_longest(iterable, map(cond, iterable)):
+        if c:
+            t.append(item)
+    return t
+t = get_items(iterable, cond)","[(1.2, 89)]",True,True
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list
+filtered_list = list(filter(lambda x: cond(x), iterable))
+t = filtered_list
+t = list(filter(lambda x: cond(x), iterable))","[(1.2, 25)]",False,False
+"import itertools
+t = list(filter(lambda x: cond(x), iterable))","[(0.3, 16), (0.5, 21), (1.2, 18)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or dict()]","[(0, 84)]",False,False
+"import itertools
+filtered_list = [x for x in iterable if cond(x)]
+t = filtered_list.copy()","[(0.5, 51), (0.9, 38)]",False,False
+"import itertools
+filtered_iterable = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = list(filter(lambda x: cond(x) != False, filtered_iterable))","[(0.3, 89)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)
+    else:
+        t.append(x)","[(0, 81)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = list(filtered_list)","[(0.5, 11), (0.9, 21)]",True,False
+"import itertools
+t = [i for i in itertools.filterfalse(lambda x: not cond(x), iterable)]","[(0.7, 42)]",True,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x) or cond(x):
+        t.append(x)
+    elif cond(x) and cond(x):
+        t.append(x)","[(0.3, 66)]",False,False
+"from itertools import filterfalse
+filtered = list(filterfalse(lambda x: not cond(x), iterable))
+
+def calculate_t():
+    t = filtered
+    return t
+t = calculate_t()","[(0.7, 68)]",False,False
+"
+filtered_iterable = filter(lambda x: cond(x), iterable)
+t = list(filtered_iterable)","[(0.3, 54)]",True,False
+"
+t = list(map(lambda x: x, filter(cond, iterable)))","[(0.7, 94)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)
+    else:
+        pass","[(0, 43)]",False,False
+"import numpy as np
+filtered = np.where(np.array(list(map(cond, iterable))))[0]
+t = [iterable[i] for i in filtered]","[(1.2, 104)]",False,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    elif cond(x):
+        t.append(x)
+    elif cond(x):
+        t.append(x)","[(0.3, 67)]",False,False
+"
+filtered_iterable = [x for x in iterable if cond(x)]
+t = filtered_iterable","[(0.3, 22)]",True,True
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)
+    elif not cond(x):
+        t.append(x)
+    else:
+        t.append(x)
+        t.append(x)","[(0, 43)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x) == True:
+        t.append(x)","[(0, 49)]",True,True
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = filtered_iterable","[(0.3, 53), (0, 71)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in iterable if cond(x) != False]","[(0.3, 42), (0, 24)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+t = filtered_list.copy() if filtered_list else []","[(0.5, 52)]",False,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    elif cond(x):
+        t.append(x)","[(0.3, 16)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or set()]","[(0, 84)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+temp = filtered_list.copy()
+t = list(temp)","[(0.5, 30)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in iterable if cond(x)]","[(0.3, 42), (0, 19)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in iterable if cond(x) != 0]","[(0.3, 42)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list.copy()[:len(filtered_list)].copy()","[(0.5, 20)]",False,False
+"import itertools
+filtered_list = []
+for x in iterable:
+    if cond(x):
+        filtered_list.append(x)
+t = filtered_list[0:]","[(0.5, 53)]",True,True
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list.copy()[:len(filtered_list)].copy()[:]","[(0.5, 20)]",False,False
+"import functools
+def my_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+
+def my_filter(b):
+    if cond(b):
+        return True
+    else:
+        return False
+t = functools.reduce(my_reduce, filter(my_filter, iterable), [])","[(0.7, 101)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) != None]","[(0.3, 87)]",False,False
+"import itertools
+filtered_list = list(itertools.compress(iterable, [cond(x) for x in iterable]))
+t = filtered_list","[(0.7, 65)]",True,False
+"from itertools import filterfalse
+def filter_func(i):
+    return not cond(i)
+t = list(filterfalse(filter_func, iterable))","[(1.2, 13)]",True,False
+"import itertools
+filtered_list = []
+for x in iterable:
+    if not not cond(x):
+        filtered_list.append(x)
+t = filtered_list.copy()","[(0.9, 50)]",False,False
+"import functools
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(custom_reduce, iterable, []) if iterable else []
+t = list(t)","[(0.3, 80)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or memoryview()]","[(0, 84)]",False,False
+"import numpy as np
+t = []
+iterator = iter(iterable)
+conditions_iterator = map(cond, iterable)
+try:
+    while True:
+        item = next(iterator)
+        c = next(conditions_iterator)
+        if c:
+            t.append(item)
+except StopIteration:
+    pass","[(1.2, 83)]",True,True
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in iterable if not not cond(x)]","[(0.3, 42), (0, 19)]",False,False
+"import itertools
+filtered_list = filter(lambda x: cond(x), iterable)
+t = [x for x in filtered_list]","[(0.9, 23)]",True,False
+"import itertools
+t = []
+if iterable:
+    list_iter = iter(list(iterable))
+    conds_iter = map(cond, iterable)
+    while True:
+        try:
+            item = next(list_iter)
+            c = next(conds_iter)
+            if c:
+                t.append(item)
+        except StopIteration:
+            break","[(1.2, 32)]",True,True
+"from itertools import filterfalse
+t = filterfalse(lambda x: not cond(x), iterable)
+t = list(t)","[(0.5, 15)]",True,False
+"import itertools
+filtered_list = list(filter(lambda x: not not cond(x), iterable))
+t = filtered_list","[(0.9, 49)]",False,False
+"import numpy as np
+filtered_values = np.array([])
+for x in iterable:
+    if cond(x):
+        filtered_values = np.append(filtered_values, x)
+t = filtered_values.tolist()","[(0.9, 85)]",True,True
+"import itertools
+def compress_func(x):
+    return cond(x)
+t = list(filter(compress_func, iterable))","[(0.7, 88)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x) is False:
+        t.append(x)","[(0, 47)]",True,True
+"import functools
+t = functools.reduce(lambda t, i: t + [i] if cond(i) else t, iterable, [])","[(0.7, 60)]",True,False
+"import itertools
+filtered_list = [x for x in iterable if not not cond(x)]
+t = filtered_list[:]","[(0.5, 19), (0.9, 50)]",True,True
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)","[(0, 71)]",False,False
+"import functools
+check_cond = lambda x: cond(x)
+t = functools.reduce(lambda acc, x: acc + [x] if check_cond(x) else acc, iterable, [])
+t = [x for x in t if check_cond(x)]","[(0.9, 72)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        continue
+    elif not filter_func(x):
+        t.append(x)
+    elif filter_func(x):
+        continue","[(0, 55)]",False,False
+"import itertools
+filtered_iterable = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) != False]","[(0.3, 89)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or float()]","[(0, 84)]",False,False
+"from itertools import compress
+def compress_func(x):
+    return cond(x)
+t = list(compress(iterable, [compress_func(i) for i in iterable]))","[(0.7, 84)]",True,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list[:]","[(0.5, 11), (0.9, 58)]",True,False
+"import functools
+def check_cond(x):
+    return cond(x)
+t = functools.reduce(lambda a, b: a + [b] if check_cond(b) else a, iterable, [])","[(0.9, 70)]",True,False
+"import functools
+check_cond = lambda x: cond(x)
+t = functools.reduce(lambda acc, x: acc + [x] if check_cond(x) else acc, iterable, [])","[(0.9, 28)]",True,False
+"import itertools
+filtered = itertools.filterfalse(lambda i: not cond(i), iterable)
+t = list(filtered)","[(1.2, 45)]",True,False
+"import itertools
+t = list(filter(lambda x: True if cond(x) else False, iterable))","[(1.2, 17)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        if filter_func(x):
+            continue
+        else:
+            t.append(x)","[(0, 53)]",False,False
+"from functools import reduce
+t = reduce(lambda acc, x: acc if not cond(x) else acc + [x], iterable, [])","[(0.9, 82)]",True,False
+"from itertools import compress
+def filter_condition(i):
+    return cond(i)
+mask = [filter_condition(i) for i in iterable]
+t = list(compress(iterable, mask))","[(1.2, 16)]",True,False
+"import itertools
+filtered_list = [x for x in iterable if not not cond(x)]
+t = list(filtered_list)","[(0.9, 50)]",False,False
+"
+t = []
+for i in iterable:
+    if cond(i):
+        t.extend([i])","[(0.3, 2)]",True,True
+"import itertools
+def filter_function(x):
+    return not cond(x)
+t = list(itertools.filterfalse(filter_function, iterable))","[(0.7, 37)]",True,False
+"import itertools as it
+t = list(filter(lambda y: cond(y), iterable))","[(1.2, 79)]",True,False
+"from functools import reduce
+def filter_func(acc, x):
+    if cond(x):
+        acc.append(x)
+    return acc
+t = reduce(filter_func, iterable, [])","[(0.9, 15)]",True,False
+"import itertools
+filtered_list = []
+for x in iterable:
+    if cond(x):
+        filtered_list.append(x)
+t = filtered_list[0:len(filtered_list)]","[(0.5, 53)]",True,True
+"import itertools
+def is_false(x):
+    return not cond(x)
+filtered_list = list(itertools.filterfalse(is_false, iterable))
+t = filtered_list","[(0.9, 16)]",True,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+result = []
+for x in filtered_list:
+    result.append(x)
+t = result","[(0.9, 58)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        t.append(x)
+    elif filter_func(x) == False:
+        t.append(x)
+    else:
+        continue","[(0.3, 61)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or bytearray()]","[(0, 84)]",False,False
+"from itertools import zip_longest
+result = []
+for (item, c) in zip_longest(iterable, map(cond, iterable)):
+    if c:
+        result.append(item)
+t = result","[(1.2, 89)]",True,True
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        pass
+    else:
+        t.append(x)","[(0, 32)]",True,True
+"import itertools
+t = []
+for x in iterable:
+    if cond(x) or cond(x):
+        t.append(x)
+    elif cond(x):
+        continue","[(0.3, 72)]",False,False
+"import functools
+def filter_func(acc, x):
+    if cond(x):
+        acc.append(x)
+    return acc
+
+def init_acc(iterable):
+    return []
+t = functools.reduce(filter_func, iterable, init_acc(iterable))","[(0.9, 30)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or ()]","[(0, 84)]",False,False
+"from itertools import compress
+import numpy as np
+def filter_condition(x):
+    return cond(x)
+filtered = list(compress(iterable, list(map(filter_condition, iterable))))
+t = list(np.array(filtered))","[(1.2, 52)]",False,False
+"from itertools import filterfalse
+filtered_list = list(filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list","[(0.5, 18), (0.9, 16)]",True,False
+"import itertools
+t = [item for (item, c) in itertools.zip_longest(iterable, map(cond, iterable)) if c]","[(1.2, 11)]",True,True
+"import itertools
+filtered_list = [x for x in iterable if not not bool(cond(x))]
+t = filtered_list[:]","[(0.5, 19)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = list(filtered_iterable)","[(0.3, 6), (0, 2), (0.7, 50)]",True,False
+"import itertools
+filtered_list = list(filter(cond, iterable))
+t = list(filtered_list)","[(0.9, 40)]",True,False
+"import itertools
+t = [x for x in iterable if cond(x) or cond(x)]","[(0.3, 37)]",False,False
+"import itertools
+def check(x):
+    return not cond(x)
+t = list(itertools.filterfalse(check, iterable))","[(0.7, 38)]",True,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+if filtered_list:
+    t = filtered_list
+else:
+    t = []","[(0.5, 22)]",True,False
+"import itertools
+def filter_func(x):
+    return True if cond(x) else False
+t = list(itertools.filterfalse(lambda x: not filter_func(x), iterable))","[(1.2, 57)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+temp = filtered_list
+t = temp.copy()","[(0.5, 30)]",False,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    elif cond(x):
+        t.append(x)
+    else:
+        continue","[(0.3, 37)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list
+else:
+    t = []","[(0.5, 52)]",True,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list
+else:
+    t = filtered_list.copy() if filtered_list else []","[(0.5, 52)]",False,False
+"from itertools import filterfalse
+t = list(filterfalse(lambda y: not cond(y), iterable))","[(1.2, 79)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        continue
+    elif filter_func(x):
+        continue
+    elif filter_func(x):
+        continue
+    else:
+        t.append(x)","[(0, 31)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = list(filtered_list.copy()[:])","[(0.5, 11)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list
+else:
+    t = filtered_list.copy()","[(0.5, 52)]",False,False
+"import functools
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(custom_reduce, iterable, []) if iterable else []
+t = t[:]","[(0.3, 39)]",False,False
+"import functools
+def reduce_func(x, y):
+    if cond(y):
+        return x + [y]
+    else:
+        return x
+
+def reduce_func1(x, y):
+    if cond(y):
+        return x + [y]
+    else:
+        return x
+
+def reduce_func2(x, y):
+    if cond(y):
+        return x + [y]
+    else:
+        return x
+t = functools.reduce(reduce_func2, iterable, [])","[(0.7, 47)]",False,False
+"from itertools import compress
+def filter_condition(i):
+    return cond(i)
+mask = list(map(filter_condition, iterable))
+t = list(compress(iterable, mask))","[(1.2, 16)]",True,False
+"import itertools
+filtered = []
+for item in itertools.filterfalse(lambda x: not cond(x), iterable):
+    filtered.append(item)
+t = filtered","[(0.7, 67)]",True,False
+"import itertools
+filtered_list = [item for item in iterable if cond(item)]
+t = list(filtered_list.copy())","[(0.5, 29)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = filtered_list.copy() if filtered_list else [] if filtered_list else []","[(0.5, 52)]",False,False
+"from itertools import compress
+mask = [cond(i) for i in iterable]
+t = [x for (x, m) in zip(iterable, mask) if m]","[(1.2, 15)]",True,True
+"import functools
+def filter_func(acc, x):
+    if cond(x):
+        return acc + [x]
+    return acc
+t = functools.reduce(filter_func, iterable, [])","[(0.9, 19)]",True,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = filtered_list.copy() if filtered_list else [] if filtered_list else [] if filtered_list else [] if filtered_list else []","[(0.5, 52)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+t = list(filtered_list)","[(0.5, 25), (0.9, 21)]",True,False
+"from itertools import filterfalse
+filtered_list = [x for x in iterable if cond(x)]
+t = [x for x in filtered_list]","[(0.9, 61)]",False,False
+"import numpy as np
+def filterfalse(func, iterable):
+    result = []
+    cond = map(func, iterable)
+    for (x, cond_val) in zip(iterable, cond):
+        if not cond_val:
+            result.append(x)
+    return result
+t = filterfalse(lambda x: not cond(x), iterable)","[(1.2, 70)]",True,True
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = list(filter(lambda x: cond(x) != False, filtered_iterable))","[(0, 41)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    else:
+        continue","[(0, 33)]",False,False
+"import functools
+filtered_iterable = functools.reduce(lambda acc, x: acc + [x] if cond(x) else acc, iterable, [])
+t = filtered_iterable","[(0.3, 6)]",True,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda item: not cond(item), iterable))
+t = filtered_list","[(0.7, 62)]",True,False
+"import itertools
+def compress_func(x):
+    return cond(x)
+t = list(itertools.compress(iterable, map(compress_func, iterable)))","[(0.7, 46)]",True,False
+"import itertools
+def check_cond(x):
+    if cond(x):
+        return True
+    else:
+        return False
+t = list(filter(lambda x: check_cond(x), iterable))","[(0.9, 66)]",True,False
+"import itertools
+def condition(x):
+    return not cond(x)
+t = itertools.filterfalse(condition, iterable)
+t = list(t)","[(0.5, 37)]",True,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = []
+for i in range(len(filtered_list)):
+    t.append(filtered_list[i])","[(0.5, 27)]",False,False
+"from itertools import filterfalse
+temporary_variable = 0
+for x in iterable:
+    if not cond(x):
+        temporary_variable += 1
+t = list(filterfalse(lambda x: not cond(x), iterable))","[(1.2, 76)]",False,False
+"import itertools
+arr = iterable
+t = list(itertools.filterfalse(lambda x: not cond(x), arr))","[(1.2, 68)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x) is not False:
+        t.append(x)","[(0, 75)]",False,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x) or cond(x):
+        t.append(x)
+    else:
+        continue","[(0.3, 37)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = filtered_list.copy() if filtered_list else []","[(0.5, 52)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or '']","[(0, 84)]",False,False
+"import itertools
+filtered_iterable = []
+for x in iterable:
+    if not cond(x):
+        continue
+    filtered_iterable.append(x)
+t = list(filtered_iterable)","[(0.7, 95)]",True,True
+"import itertools
+t = []
+for x in iterable:
+    if cond(x) or cond(x):
+        t.append(x)","[(0.3, 37)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+result = []
+for x in filtered_list:
+    if cond(x):
+        result.append(x)
+t = result","[(0.9, 58)]",False,False
+"import numpy as np
+def filterfalse(func, iterable):
+    return [x for (x, cond) in zip(iterable, map(func, iterable)) if not cond]
+t = filterfalse(lambda x: not cond(x), iterable)","[(1.2, 21)]",True,True
+"import itertools
+def t_filterfalse(iterable):
+    return list(itertools.filterfalse(lambda x: not cond(x), iterable))
+result = t_filterfalse(iterable)
+t = result","[(0.5, 35)]",True,False
+"import itertools
+filtered_iterable = list(filter(lambda x: not not cond(x), iterable))
+t = [x for x in filtered_iterable]","[(0, 35)]",False,False
+"import itertools
+t = list(itertools.compress(iterable, [cond(x) for x in iterable]))","[(0.3, 32)]",True,False
+"import itertools
+mask = itertools.compress(iterable, [cond(i) for i in iterable])
+t = list(mask)","[(1.2, 51)]",True,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = list(filtered_list[:])","[(0.5, 11)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or []]","[(0, 84)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x) == False:
+        t.append(x)","[(0.3, 59), (0, 29)]",True,True
+"import functools
+def reduce_func(x, y):
+    if cond(y):
+        return x + [y]
+    else:
+        return x
+
+def reduce_func1(x, y):
+    if cond(y):
+        return x + [y]
+    else:
+        return x
+t = functools.reduce(reduce_func1, iterable, [])","[(0.7, 47)]",False,False
+"from itertools import filterfalse
+def check_cond(x):
+    if cond(x):
+        return True
+    else:
+        return False
+t = list(filterfalse(lambda x: not check_cond(x), iterable))","[(0.9, 66)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or 0j]","[(0, 84)]",False,False
+"from functools import reduce
+def filter_function(x, y):
+    if cond(y):
+        x.append(y)
+    return x
+t = reduce(filter_function, iterable, [])","[(1.2, 30)]",True,False
+"import itertools
+def check_cond(x):
+    if cond(x):
+        return True
+    else:
+        return False
+t = [x for x in iterable if check_cond(x)]","[(0.9, 66)]",True,True
+"from itertools import filterfalse
+def check(x):
+    return not cond(x)
+t = filterfalse(check, iterable)
+t = list(t)","[(0.7, 73)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) is not None]","[(0.3, 87)]",False,False
+"import itertools
+filtered_list = filter(lambda x: cond(x), iterable)
+t = list(itertools.filterfalse(lambda x: not cond(x), iterable))","[(0.9, 55)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = filtered_list","[(0.5, 52)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: not not cond(x), iterable))
+t = []
+for i in range(len(filtered_iterable)):
+    t.append(filtered_iterable[i])","[(0, 67)]",False,False
+"import itertools
+def compress_func(x):
+    return cond(x)
+new_iterable = list(itertools.compress(iterable, map(compress_func, iterable)))
+t = new_iterable[:]","[(0.7, 86)]",False,False
+"import itertools
+filtered_list = [x for x in iterable if bool(cond(x))]
+t = filtered_list[:]","[(0.5, 19)]",False,False
+"import functools
+import itertools
+def filter_func(acc, x):
+    if cond(x):
+        return [*acc, x]
+    return acc
+t = functools.reduce(filter_func, iterable, [])","[(0.9, 31)]",True,False
+"import functools
+t = functools.reduce(lambda x, y: x + [y] if cond(y) else x, iterable, [])","[(0.7, 2)]",True,False
+"import functools
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(custom_reduce, iterable, []) if iterable is not False else []","[(0.3, 78)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list.copy()","[(0.5, 11)]",False,False
+"import itertools
+filtered_list = list(itertools.compress(iterable, map(cond, iterable)))
+t = filtered_list
+t = filtered_list","[(0.7, 64)]",False,False
+"import functools
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(custom_reduce, iterable, []) if iterable is not None and len(iterable) > 0 else []","[(0.3, 77)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not '']","[(0, 69)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: not not cond(x), iterable))
+t = list(filtered_iterable)","[(0, 67)]",False,False
+"import numpy as np
+arr = iterable
+t = [x for x in arr if cond(x)]","[(1.2, 67)]",True,True
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = [x for x in filtered_list if True]","[(0.5, 28)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or str()]","[(0, 84)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    t.append(x)","[(0.3, 20), (0, 13), (0.7, 96)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)
+    elif not cond(x):
+        pass","[(0, 43)]",False,False
+"from itertools import compress
+mask = [cond(i) for i in iterable]
+t = list(compress(iterable, mask))","[(1.2, 5)]",True,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list
+filtered_list = list(filter(lambda x: cond(x), iterable))
+t = filtered_list","[(1.2, 73)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable]","[(0.3, 19), (0, 13), (0.7, 96)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x if cond(x) else None for x in filtered_iterable]","[(0, 78)]",False,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    elif cond(x):
+        continue
+    else:
+        continue","[(0.3, 73)]",False,False
+"import functools
+t = functools.reduce(lambda a, b: a + [b] if cond(b) else a, iterable, []) if iterable else []","[(0.3, 17)]",True,False
+"import itertools
+filtered_list = list(itertools.compress(iterable, (cond(x) for x in iterable)))
+t = filtered_list","[(0.9, 46)]",True,False
+"from functools import reduce
+def filter_func(acc, x):
+    if cond(x):
+        acc.append(x)
+    return acc
+
+def init_acc():
+    return []
+t = reduce(filter_func, iterable, init_acc())","[(0.9, 30)]",True,False
+"from itertools import filterfalse
+filtered_list = filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_list]","[(0.9, 23)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list[:len(filtered_list)]","[(0.5, 20)]",False,False
+"
+t = []
+for i in iterable:
+    if cond(i):
+        t.append(i)","[(0.3, 0), (0.5, 0), (0, 0), (0.9, 0), (0.7, 0), (1.2, 0)]",True,True
+"import functools
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(custom_reduce, iterable, []) if iterable else []
+t = t.copy()","[(0.3, 80)]",False,False
+"import functools
+def my_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+
+def my_map(b):
+    return b
+t = functools.reduce(my_reduce, map(my_map, iterable), [])","[(0.7, 101)]",False,False
+"import itertools
+filtered_iterable = []
+for x in iterable:
+    if not cond(x):
+        continue
+    filtered_iterable.append(x)
+t = filtered_iterable","[(0.3, 53), (0.7, 95)]",True,True
+"import functools
+def filter_function(x, y):
+    if cond(y):
+        x.append(y)
+    return x
+t = functools.reduce(filter_function, iterable, [])","[(1.2, 82)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        t.append(x)
+    elif not filter_func(x):
+        t.append(x)","[(0, 52)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not None]","[(0, 69)]",False,False
+"from functools import reduce
+t = reduce(lambda x, y: x + [y] if cond(y) else x, iterable, [])","[(0.7, 4), (1.2, 1)]",True,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in iterable if cond(x)]","[(0.3, 84)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in iterable if x in filtered_iterable]","[(0.3, 84)]",False,False
+"
+t = []
+t.extend([x for x in iterable if cond(x)])","[(0.7, 77)]",True,True
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+filtered_list = list(filtered_iterable)
+t = [x for x in filtered_list if cond(x)]","[(0.7, 96)]",False,False
+"import itertools
+def filter_condition(i):
+    return cond(i)
+
+def my_filter(iterable):
+    mask = [filter_condition(i) for i in iterable]
+    result = list(itertools.compress(iterable, mask))
+    return result
+t = my_filter(iterable)","[(1.2, 53)]",True,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    else:
+        pass","[(0.3, 16)]",True,True
+"import functools
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(custom_reduce, iterable, []) if len(iterable) > 0 else []","[(0.3, 78)]",True,False
+"from itertools import zip_longest
+def check_condition(elem):
+    return cond(elem)
+t = [item for (item, c) in zip_longest(iterable, map(check_condition, iterable)) if c]","[(1.2, 89)]",True,True
+"import itertools
+def filter_func(i):
+    return not cond(i)
+t = list(itertools.filterfalse(filter_func, iterable))","[(1.2, 13)]",True,False
+"import itertools
+filtered_list = []
+for x in iterable:
+    if not not bool(cond(x)):
+        filtered_list.append(x)
+t = filtered_list[:]","[(0.5, 19)]",False,False
+"import itertools
+filtered_list = list(itertools.compress(iterable, map(cond, iterable)))
+t = filtered_list","[(0.7, 31)]",True,False
+"import functools
+def filter_func(acc, x):
+    if cond(x):
+        acc.append(x)
+    return acc
+
+def init_acc():
+    return []
+t = functools.reduce(filter_func, iterable, init_acc())","[(0.9, 30)]",True,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = []
+for x in filtered_list:
+    t.insert(len(t), x)","[(0.9, 57)]",False,False
+"import itertools
+def compress_func(x):
+    return cond(x)
+new_iterable = list(itertools.compress(iterable, map(compress_func, iterable)))
+t = new_iterable[0:len(new_iterable)]","[(0.7, 86)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x) != False:
+        t.append(x)","[(0, 75)]",False,False
+"from itertools import filterfalse
+filtered_list = list(filterfalse(lambda x: not cond(x), iterable))
+t = list(filtered_list.copy())","[(0.5, 29)]",False,False
+"import functools
+def check_cond(x):
+    if cond(x):
+        return True
+    else:
+        return False
+t = []
+for x in iterable:
+    if check_cond(x):
+        t.append(x)","[(0.9, 28)]",True,True
+"from functools import reduce
+def filter_func(acc, x):
+    return acc + [x] if cond(x) else acc
+t = reduce(filter_func, iterable, [])","[(0.9, 82)]",True,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x) or cond(x):
+        t.append(x)
+    elif not cond(x):
+        pass","[(0.3, 72)]",False,False
+"from itertools import filterfalse
+filtered_list = list(filterfalse(lambda x: not cond(x), iterable))
+t = []
+for x in filtered_list:
+    t.insert(len(t), x)","[(0.9, 57)]",False,False
+"import itertools
+t = list(itertools.compress(iterable, [cond(x) or cond(x) for x in iterable]))","[(0.3, 65)]",False,False
+"import itertools
+filtered_list = list(itertools.compress(iterable, map(cond, iterable)))
+t = filtered_list
+t = list(filtered_list)","[(0.7, 64)]",False,False
+"import functools
+filtered_list = list(filter(functools.partial(cond), iterable))
+t = filtered_list","[(0.5, 45)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+t = filtered_list.copy()","[(0.5, 51)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in iterable:
+    if cond(x):
+        t += [x]","[(0, 37)]",False,False
+"from itertools import compress
+bool_filter = [cond(x) for x in iterable]
+filtered_iterable = list(compress(iterable, bool_filter))
+t = filtered_iterable","[(0.7, 55)]",True,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x) or cond(x):
+        t.append(x)
+    elif cond(x):
+        pass","[(0.3, 72)]",False,False
+"from functools import reduce
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = reduce(custom_reduce, iterable, []) if iterable is not None and len(iterable) > 0 else []","[(0.3, 77)]",False,False
+"import itertools
+new_iterable = list(itertools.compress(iterable, map(lambda x: cond(x), iterable)))
+t = new_iterable","[(0.7, 85)]",True,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not 0]","[(0, 69)]",False,False
+"import itertools
+filtered_list = []
+for x in iterable:
+    if cond(x):
+        filtered_list.append(x)
+t = filtered_list.copy()","[(0.5, 53), (0.9, 89)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not ()]","[(0, 69)]",False,False
+"import functools
+t = functools.reduce(lambda acc, x: acc + [x] if cond(x) else acc, iterable, [])","[(0.9, 10), (0.7, 10)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = list(itertools.compress(iterable, [not filter_func(x) for x in iterable]))","[(0.3, 56)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = list((x for x in filtered_iterable))","[(0.3, 45), (0, 23)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or False]","[(0, 84)]",False,False
+"
+t = []
+for i in range(len(iterable)):
+    if cond(iterable[i]):
+        t.append(iterable[i])","[(0.7, 2)]",True,True
+"import itertools
+def condition(x):
+    return not cond(x)
+t = list(itertools.filterfalse(condition, iterable))","[(0.5, 37)]",True,False
+"
+t = []
+for item in iterable:
+    c = cond(item)
+    if c:
+        t.append(item)","[(1.2, 90)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or frozenset()]","[(0, 84)]",False,False
+"
+t = list(map(lambda x: x, filter(lambda x: cond(x), iterable)))","[(0.7, 94)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or complex()]","[(0, 84)]",False,False
+"import itertools
+def compress_func(x):
+    return cond(x)
+new_iterable = list(itertools.compress(iterable, map(compress_func, iterable)))
+t = new_iterable.copy()","[(0.7, 86)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or {}]","[(0, 84)]",False,False
+"
+t = []
+for i in iterable:
+    if cond(i):
+        t = t + [i]","[(0.7, 58)]",True,True
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        t.append(x)
+    elif filter_func(x) is False:
+        t.append(x)
+    else:
+        continue","[(0.3, 61)]",False,False
+"from itertools import filterfalse
+def my_filterfalse(func, iterable):
+    result = []
+    cond = map(func, iterable)
+    for (x, cond_val) in zip(iterable, cond):
+        if not cond_val:
+            result.append(x)
+    return result
+t = my_filterfalse(lambda x: not cond(x), iterable)","[(1.2, 70)]",False,False
+"import itertools
+def check_cond(x):
+    if cond(x):
+        return True
+    else:
+        return False
+t = list(itertools.filterfalse(lambda x: not check_cond(x), iterable))","[(0.9, 27)]",True,False
+"import itertools as it
+t = list(it.filterfalse(lambda y: not cond(y), iterable))","[(1.2, 28)]",True,False
+"import itertools
+filtered_list = [x for x in iterable if cond(x)]
+t = list(filtered_list[:])","[(0.9, 38)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        continue
+    t.append(x)","[(0.3, 25), (0, 15)]",True,True
+"import itertools
+def filter_func(i):
+    return not cond(i)
+filtered = list(itertools.filterfalse(filter_func, iterable))
+t = filtered","[(1.2, 13)]",True,False
+"import itertools
+def filter_func(x):
+    if cond(x):
+        return True
+    else:
+        return False
+t = list(filter(filter_func, iterable))","[(1.2, 7)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = list(filter(lambda x: not filter_func(x), iterable))","[(0.3, 26), (0, 17)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        continue
+    elif filter_func(x):
+        continue
+    else:
+        t.append(x)","[(0.3, 60), (0, 31)]",False,False
+"from itertools import filterfalse
+def filter_function(x):
+    return not cond(x)
+t = list(filterfalse(lambda x: not cond(x), iterable))","[(0.7, 71)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = itertools.filterfalse(filter_func, iterable)
+t = list(t)","[(0.5, 34)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        continue
+    elif not filter_func(x):
+        t.append(x)","[(0.3, 60), (0, 31)]",True,True
+"
+filtered_list = []
+for x in iterable:
+    if cond(x):
+        filtered_list.append(x)
+t = list(filtered_list)","[(0.5, 25)]",True,True
+"import itertools
+filtered_list = []
+for x in iterable:
+    if cond(x):
+        filtered_list.append(x)
+t = filtered_list[0:None]","[(0.5, 53)]",False,False
+"from functools import reduce
+t = reduce(lambda a, b: a + [b] if cond(b) else a, iterable, [])","[(0.7, 5)]",True,False
+"
+filtered = [i for i in iterable if cond(i)] + []
+t = filtered","[(1.2, 99)]",False,False
+"from itertools import filterfalse
+filtered_list = list(filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list[:]","[(0.5, 29)]",False,False
+"import itertools
+def check(x):
+    return not cond(x)
+t = [x for x in iterable if not check(x)]","[(0.7, 75)]",True,True
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x) is not True:
+        t.append(x)","[(0, 49)]",True,True
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = []","[(0.5, 22)]",False,False
+"import itertools
+filtered_list = filter(cond, iterable)
+t = [x for x in filtered_list]","[(0.9, 55)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or None]","[(0, 84)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        t.extend([x])","[(0, 59)]",True,True
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+if len(filtered_list) != 0:
+    t = filtered_list
+else:
+    t = []","[(0.5, 22)]",False,False
+"from itertools import filterfalse
+filtered_list = list(filterfalse(lambda x: not cond(x), iterable))
+t = [x for x in filtered_list]","[(0.5, 26), (0.9, 23)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = []
+for x in filtered_list:
+    t.append(x)","[(0.5, 26), (0.9, 57)]",False,False
+"import itertools
+def check_condition(x):
+    return cond(x) or cond(x)
+t = list(filter(check_condition, iterable))","[(0.3, 72)]",False,False
+"from itertools import zip_longest
+items = [item for (item, c) in zip_longest(iterable, map(cond, iterable)) if c]
+t = items","[(1.2, 89)]",True,True
+"import itertools
+filtered_list = []
+for x in iterable:
+    if bool(cond(x)):
+        filtered_list.append(x)
+t = filtered_list[:]","[(0.5, 19)]",False,False
+"
+t = list(filter(cond, iterable)) if cond else []","[(0.9, 74)]",False,False
+"import functools
+def filter_function(x, y):
+    if cond(y):
+        return x + [y]
+    else:
+        return x
+t = functools.reduce(filter_function, iterable, [])","[(1.2, 28)]",True,False
+"
+t = [i for i in iterable if cond(i)]","[(0.3, 0), (0.5, 0), (0, 0), (0.9, 0), (0.7, 0), (1.2, 0)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        t = t + [x]","[(0, 59)]",True,True
+"import functools
+t = functools.reduce(lambda a, b: a if not cond(b) else a + [b], iterable, [])","[(0.7, 52)]",True,False
+"import numpy as np
+filtered_values = np.array(list(filter(cond, iterable)))
+t = filtered_values.tolist()","[(0.9, 86)]",False,False
+"
+filtered_list = []
+t = []
+for x in iterable:
+    if cond(x):
+        filtered_list.append(x)
+        t.append(x)","[(0.9, 63)]",False,False
+"import numpy as np
+filtered_list = np.array(list(filter(lambda x: cond(x), iterable)))
+t = filtered_list.tolist()","[(0.9, 53)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list
+else:
+    t = filtered_list.copy() if filtered_list else [] if filtered_list else []","[(0.5, 52)]",False,False
+"import itertools
+filtered_list = []
+for x in iterable:
+    if not not cond(x):
+        filtered_list.append(x)
+t = filtered_list[:]","[(0.5, 19), (0.9, 50)]",False,False
+"from typing import List
+def validate(i: int) -> bool:
+    return cond(i)
+t: List = list(filter(validate, iterable))","[(1.2, 93)]",True,False
+"from functools import reduce
+filtered_list = reduce(lambda acc, x: acc + [x] if cond(x) else acc, iterable, [])
+t = filtered_list","[(0.5, 42), (0.9, 35)]",True,False
+"
+filtered_list = [x for x in iterable if cond(x)]
+t = list(filtered_list)","[(0.5, 25)]",True,True
+"import itertools
+filtered_list = []
+for x in iterable:
+    if not not cond(x):
+        filtered_list.append(x)
+t = list(filtered_list)","[(0.9, 50)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)
+    elif not cond(x):
+        t.append(x)
+    else:
+        t.append(x)","[(0, 43)]",False,False
+"import numpy as np
+filtered_values = np.array([x for x in iterable if cond(x)])
+t = filtered_values.tolist()","[(0.9, 32)]",False,False
+"import itertools
+t = list(itertools.compress(iterable, map(cond, iterable)))","[(0.7, 13), (1.2, 8)]",True,False
+"import functools
+def reduce_func(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(reduce_func, iterable, [])","[(0.3, 82)]",True,False
+"
+t = []
+for i in iterable:
+    if cond(i):
+        t += [i]","[(0.3, 2)]",True,True
+"import itertools
+filtered_iterable = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not False]","[(0.3, 89)]",False,False
+"import itertools
+filtered_list = []
+for x in iterable:
+    if cond(x):
+        filtered_list.append(x)
+t = filtered_list[:]","[(0.5, 19), (0.9, 89)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = list(filtered_list.copy())","[(0.5, 11)]",False,False
+"from itertools import filterfalse
+def check(x):
+    return not cond(x)
+t = list(filterfalse(check, iterable))","[(0.7, 38)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        continue
+    elif filter_func(x):
+        continue
+    elif not filter_func(x):
+        t.append(x)","[(0, 31)]",False,False
+"
+t = [item for (item, c) in zip(iterable, map(cond, iterable)) if c]","[(1.2, 88)]",True,True
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+if len(filtered_list) > 0:
+    t = filtered_list
+else:
+    t = []","[(0.5, 22)]",True,False
+"import itertools
+filtered_list = []
+for x in iterable:
+    if cond(x):
+        filtered_list.append(x)
+t = filtered_list[None:]","[(0.5, 53)]",False,False
+"import functools
+class CustomFilter:
+
+    def __init__(self):
+        self.res = []
+
+    def filter_function(self, x, y):
+        if cond(y):
+            self.res.append(y)
+        return self.res
+obj = CustomFilter()
+t = functools.reduce(obj.filter_function, iterable, [])","[(1.2, 82)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        t.append(x)
+    elif not filter_func(x):
+        continue","[(0, 52)]",True,True
+"import functools
+temporary_variable = functools.reduce(lambda count, x: count + 1 if not cond(x) else count, iterable, 0)
+t = list(filter(cond, iterable))","[(1.2, 76)]",False,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x):
+        if cond(x):
+            t.append(x)","[(0.3, 66)]",False,False
+"import itertools
+t = list(itertools.filterfalse(lambda x: not cond(x), iterable))","[(0.3, 5), (0.5, 5), (0, 1), (0.9, 10), (0.7, 1), (1.2, 9)]",True,False
+"from itertools import filterfalse
+def filter_function(x):
+    return not cond(x)
+t = [x for x in iterable if not filter_function(x)]","[(0.7, 71)]",True,True
+"from itertools import compress
+def check_cond(x):
+    if cond(x):
+        return True
+    else:
+        return False
+mask = [check_cond(x) for x in iterable]
+t = list(compress(iterable, mask))","[(0.9, 66)]",True,True
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in iterable:
+    if not cond(x):
+        continue
+    t.append(x)","[(0.3, 85), (0, 33)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = filtered_list.copy() if filtered_list else [] if filtered_list else [] if filtered_list else [] if filtered_list else [] if filtered_list else [] if filtered_list else []","[(0.5, 52)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not {}]","[(0, 69)]",False,False
+"from typing import List
+def filter_cond(i: int) -> bool:
+    return cond(i)
+t: List = [i for i in filter(filter_cond, iterable)]","[(1.2, 93)]",True,False
+"from itertools import compress
+filtered = list(compress(iterable, map(cond, iterable)))
+t = list(filtered)","[(1.2, 104)]",False,False
+"import itertools
+def compress_func(x):
+    return cond(x)
+t = []
+for item in iterable:
+    if compress_func(item):
+        t.append(item)
+t = [item for item in iterable if compress_func(item)]","[(0.7, 88)]",False,False
+"import functools
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(custom_reduce, iterable, []) if iterable else []
+t = [x for x in t]","[(0.3, 80)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        t.append(x)","[(0.3, 25), (0.5, 34), (0, 15)]",True,True
+"import itertools
+t = []
+for (i, (item, c)) in enumerate(itertools.zip_longest(iterable, map(cond, iterable))):
+    if c:
+        t.append(item)","[(1.2, 32)]",True,True
+"
+t = list((i for i in iterable if cond(i)))","[(0.3, 4)]",True,True
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = [x for x in filtered_list]","[(0.5, 26), (0.9, 23)]",False,False
+"from functools import partial
+filtered_list = list(filter(partial(cond), iterable))
+t = filtered_list","[(0.5, 17)]",True,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not False]","[(0, 69)]",False,False
+"from itertools import filterfalse
+filtered = filterfalse(lambda i: not cond(i), iterable)
+t = list(filtered)","[(1.2, 101)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = list(filter(lambda x: not not cond(x), filtered_iterable))","[(0.3, 88)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+filtered_list = list(filtered_iterable)
+t = filtered_list if len(filtered_list) > 0 else []","[(0.7, 96)]",True,False
+"import itertools
+def compress_func(x):
+    return cond(x)
+t = []
+for item in itertools.chain(iterable):
+    if compress_func(item):
+        t.append(item)","[(0.7, 88)]",False,False
+"import itertools
+t = []
+for (item, c) in itertools.zip_longest(iterable, map(cond, iterable)):
+    if c:
+        t.append(item)","[(1.2, 11)]",True,True
+"import functools
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(custom_reduce, iterable, []) if iterable else []
+t = list(t[:])","[(0.3, 80)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x) is True:
+        t.append(x)","[(0, 47)]",True,True
+"
+t = [i for i in filter(lambda x: cond(x), iterable)]","[(0.7, 12)]",True,False
+"import itertools
+filtered_list = []
+for x in iterable:
+    if not not cond(x):
+        filtered_list.append(x)
+t = filtered_list","[(0.9, 49)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = list(itertools.filterfalse(lambda x: not cond(x), iterable))","[(0.3, 85), (0, 61)]",False,False
+"import itertools
+t = []
+for (item, c) in zip(iterable, map(cond, iterable)):
+    if c:
+        t.append(item)","[(1.2, 32)]",True,True
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        continue
+    elif filter_func(x):
+        continue
+    elif filter_func(x):
+        continue
+    elif filter_func(x):
+        t.append(x)
+    else:
+        t.append(x)","[(0, 57)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = [x for x in iterable if not filter_func(x)]","[(0.3, 15), (0.5, 34)]",True,True
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or 0]","[(0, 84)]",False,False
+"from functools import reduce
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = reduce(custom_reduce, iterable, []) if iterable is not None else []","[(0.3, 77)]",True,False
+"import functools
+def check_cond(x):
+    if cond(x):
+        return True
+    else:
+        return False
+t = functools.reduce(lambda acc, x: acc + [x] if check_cond(x) else acc, iterable, [])","[(0.9, 18)]",True,False
+"import functools
+t = functools.reduce(lambda a, b: a + [b] if cond(b) else a, iterable, [])","[(0.3, 5), (0.9, 52), (0.7, 22)]",True,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = [] if filtered_list else []","[(0.5, 52)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: not not cond(x), iterable))
+t = []
+for (i, x) in enumerate(filtered_iterable):
+    t.append(x)","[(0, 67)]",False,False
+"import itertools
+def compress_func(x):
+    return cond(x)
+t = []
+for item in iterable:
+    if compress_func(item):
+        t.append(item)","[(0.7, 46)]",True,True
+"import math
+def filter_func(x):
+    return True if cond(x) else False
+t = [x for x in iterable if cond(x)]","[(1.2, 58)]",True,True
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or bytes()]","[(0, 84)]",False,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    elif cond(x):
+        t.append(x)
+    else:
+        pass","[(0.3, 38)]",False,False
+"from itertools import filterfalse
+t = list(filterfalse(lambda x: not cond(x), iterable))","[(0.3, 8), (0.5, 6), (0.7, 10), (1.2, 8)]",True,False
+"import functools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = functools.reduce(lambda a, b: a + [b], filtered_iterable, [])","[(0.7, 104)]",True,False
+"import numpy as np
+arr = iterable
+results = np.array([x for x in arr if cond(x)])
+t = results.tolist()","[(1.2, 68)]",False,False
+"import itertools
+filtered_iterable = list(filter(cond, iterable))
+t = list(filter(cond, iterable))","[(0.3, 83)]",False,False
+"import itertools
+t = []
+list_iter = iter(iterable)
+conds_iter = map(cond, iterable)
+for item in list_iter:
+    try:
+        c = next(conds_iter)
+        if c:
+            t.append(item)
+    except StopIteration:
+        break","[(1.2, 84)]",True,True
+"
+filtered_iterable = list(filter(cond, iterable))
+t = filtered_iterable","[(0.3, 21)]",True,False
+"import functools
+def my_reduce(a, b):
+    if cond(b):
+        a.append(b)
+        return a
+    else:
+        return a
+t = functools.reduce(my_reduce, iterable, [])","[(0.7, 51)]",True,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    elif not cond(x):
+        pass","[(0.3, 16)]",True,True
+"import itertools
+filtered_list = list(itertools.compress(iterable, map(cond, iterable)))
+t = filtered_list
+t = filtered_list.copy()","[(0.7, 64)]",False,False
+"import functools
+def my_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(my_reduce, iterable, [])","[(0.7, 52)]",True,False
+"import itertools
+temporary_variable = 0
+for x in iterable:
+    if not cond(x):
+        temporary_variable += 1
+t = list(itertools.filterfalse(lambda x: not cond(x), iterable))","[(1.2, 25)]",False,False
+"import itertools
+filtered_iterable = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = filtered_iterable","[(0.3, 22)]",True,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = []","[(0.5, 52)]",False,False
+"import itertools
+filtered_list = list(itertools.compress(iterable, map(cond, iterable)))
+t = filtered_list
+t = [x for x in filtered_list]","[(0.7, 64)]",False,False
+"import itertools
+def compress_func(x):
+    return cond(x)
+t = list(itertools.compress(iterable, [compress_func(i) for i in iterable]))","[(0.7, 84)]",True,False
+"
+def filtering(i):
+    if cond(i):
+        return True
+    else:
+        return False
+t = [i for i in iterable if filtering(i)]","[(1.2, 42)]",True,True
+"from itertools import compress
+t = list(compress(iterable, map(cond, iterable)))","[(0.7, 5), (1.2, 3)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    t.extend([x])","[(0, 13)]",False,False
+"import itertools
+filtered_list = [x for x in iterable if cond(x)]
+t = filtered_list.copy()[:]","[(0.9, 38)]",False,False
+"import itertools
+filtered_iterable = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x)]","[(0.3, 89)]",False,False
+"from functools import reduce
+def add_if_cond(t, i):
+    if cond(i):
+        t.append(i)
+    return t
+t = reduce(add_if_cond, iterable, [])","[(0.7, 59)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or 0.0]","[(0, 84)]",False,False
+"import itertools
+filtered_list = list(itertools.compress(iterable, map(cond, iterable)))
+t = filtered_list
+t = filtered_list[:]","[(0.7, 64)]",False,False
+"import functools
+def check_cond(x):
+    return cond(x)
+t = [x for x in iterable if check_cond(x)]","[(0.9, 28)]",False,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x) or cond(x):
+        t.append(x)
+    elif not cond(x):
+        continue","[(0.3, 72)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or range()]","[(0, 84)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = filtered_list.copy()","[(0.5, 52)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = filtered_list.copy() if filtered_list else [] if filtered_list else [] if filtered_list else [] if filtered_list else [] if filtered_list else []","[(0.5, 52)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+result = filtered_list
+t = result if result else []","[(0.5, 50)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) is not False]","[(0.3, 87), (0, 76)]",False,False
+"
+t = list(filter(lambda i: cond(i), iterable))","[(1.2, 13)]",True,False
+"import itertools
+filtered = list(filter(lambda i: cond(i), iterable))
+t = filtered","[(1.2, 13)]",True,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+result = []
+for x in filtered_list:
+    if not cond(x):
+        continue
+    result.append(x)
+t = result","[(0.9, 58)]",False,False
+"import itertools
+def t_filterfalse(iterable):
+    return list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = t_filterfalse(iterable)","[(0.5, 12)]",True,False
+"from itertools import filterfalse
+filtered_list = list(filterfalse(lambda x: not cond(x), iterable))
+result = filtered_list
+t = result if result else []","[(0.5, 50)]",False,False
+"import functools
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(custom_reduce, iterable, []) if iterable is not None else []","[(0.3, 77)]",True,False
+"import numpy as np
+arr = iterable
+results = []
+for x in arr:
+    if cond(x):
+        results.append(x)
+t = results","[(1.2, 21)]",True,True
+"from itertools import filterfalse
+def my_filter(x):
+    return not cond(x)
+t = list(filterfalse(my_filter, iterable))","[(0.7, 70)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)
+    elif not cond(x):
+        t.append(x)
+    else:
+        pass","[(0, 43)]",False,False
+"from itertools import compress
+filtered_values = list(compress(iterable, [cond(x) for x in iterable]))
+t = filtered_values","[(0.9, 85)]",True,False
+"from typing import List
+def check_cond(i: int) -> bool:
+    return cond(i)
+t: List = list(filter(check_cond, iterable))","[(1.2, 93)]",True,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list.copy()
+else:
+    t = filtered_list.copy() if filtered_list else [] if filtered_list else [] if filtered_list else []","[(0.5, 52)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        t.append(x)
+    else:
+        continue","[(0.3, 28)]",True,True
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        if not filter_func(x):
+            t.append(x)","[(0, 53)]",False,False
+"import numpy as np
+temporary_variable = np.count_nonzero([cond(x) for x in iterable])
+t = list(filter(cond, iterable))","[(1.2, 76)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x) != False:
+        t.append(x)","[(0, 47)]",True,True
+"from itertools import filterfalse
+t = list(filterfalse(lambda x: False if cond(x) else True, iterable))","[(1.2, 60)]",True,False
+"import itertools
+def compress_func(x):
+    return cond(x)
+new_iterable = list(itertools.compress(iterable, map(compress_func, iterable)))
+t = new_iterable[::1]","[(0.7, 86)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not None and cond(x) is not False and (cond(x) is not 0)]","[(0, 70)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not None and cond(x) is not False and (cond(x) is not 0) and (cond(x) is not '')]","[(0, 70)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list
+else:
+    t = [] if filtered_list else []","[(0.5, 52)]",False,False
+"from itertools import filterfalse
+def t_filterfalse(iterable):
+    return list(filterfalse(lambda x: not cond(x), iterable))
+t = t_filterfalse(iterable)","[(0.5, 35)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = [x for x in iterable if filter_func(x) == False]","[(0, 29)]",True,True
+"from itertools import filterfalse
+def filter_func(x):
+    return not cond(x)
+t = list(filterfalse(filter_func, iterable))","[(1.2, 70)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    t += [x]","[(0.3, 20), (0, 13)]",False,False
+"import functools
+def reduce_func(x, y):
+    if cond(y):
+        return x + [y]
+    else:
+        return x
+t = functools.reduce(reduce_func, iterable, [])","[(0.7, 15)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)
+    if not cond(x):
+        t.append(x)","[(0, 81)]",False,False
+"import itertools
+def filter_func(x):
+    return True if cond(x) else False
+t = list(filter(filter_func, iterable))","[(1.2, 17)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x) == False:
+        t.append(x)
+    else:
+        continue","[(0.3, 59)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)
+    elif not cond(x):
+        t.append(x)
+    else:
+        t.append(x)
+        t.append(x)
+        t.append(x)","[(0, 43)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not []]","[(0, 69)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if not not cond(x)]","[(0, 35)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) is not None and cond(x) is not False]","[(0, 70)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        continue
+    elif not filter_func(x):
+        t.append(x)
+    elif filter_func(x):
+        continue
+    else:
+        continue","[(0, 55)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)","[(0.3, 85), (0, 33)]",False,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    elif cond(x):
+        pass
+    else:
+        continue","[(0.3, 73)]",False,False
+"from functools import reduce
+def filter_function(x, y):
+    return x + [y] if cond(y) else x
+t = reduce(filter_function, iterable, [])","[(1.2, 10)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        continue
+    else:
+        t.append(x)","[(0.3, 60), (0, 31)]",True,True
+"from itertools import filterfalse
+filtered_list = list(filterfalse(lambda x: not cond(x), iterable))
+t = []
+for x in filtered_list:
+    t.append(x)","[(0.5, 26), (0.9, 57)]",False,False
+"import itertools
+filtered_list = list(itertools.islice(filter(lambda x: cond(x), iterable), None))
+t = filtered_list","[(0.9, 46)]",False,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = list(filter(lambda x: filter_func(x) == False, iterable))","[(0, 45)]",True,False
+"import functools
+def filter_func(acc, x):
+    if cond(x):
+        acc.append(x)
+    return acc
+t = functools.reduce(filter_func, iterable, [])","[(0.9, 19)]",True,False
+"from itertools import compress
+mask = [cond(i) for i in iterable]
+t = []
+for (x, m) in zip(iterable, mask):
+    if m:
+        t.append(x)","[(1.2, 15)]",True,True
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x):
+        continue
+    elif not filter_func(x):
+        t.append(x)
+    else:
+        continue","[(0, 55)]",False,False
+"import itertools
+filtered_list = [x for x in iterable if cond(x)]
+t = filtered_list[:]","[(0.5, 19), (0.9, 38)]",False,False
+"import functools
+def check_cond(x):
+    return cond(x)
+t = filter(check_cond, iterable)
+t = list(t)","[(0.9, 70)]",False,False
+"
+t = [i for i in filter(cond, iterable)]","[(0.7, 2)]",True,False
+"from functools import reduce
+def add_if_cond(t, i):
+    if cond(i):
+        return t + [i]
+    else:
+        return t
+t = reduce(add_if_cond, iterable, [])","[(0.7, 6)]",True,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable]","[(0.3, 84), (0, 71)]",False,False
+"import functools
+def add_if_cond(t, i):
+    if cond(i):
+        return t + [i]
+    else:
+        return t
+t = functools.reduce(add_if_cond, iterable, [])","[(0.7, 30)]",True,False
+"import itertools
+filtered_list = list(filter(cond, iterable))
+t = filtered_list[:]","[(0.5, 53), (0.9, 89)]",False,False
+"from functools import reduce
+t = reduce(lambda acc, x: acc + [x] if cond(x) else acc, iterable, [])","[(0.5, 43), (0.9, 20), (0.7, 42), (1.2, 41)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or int()]","[(0, 84)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or True]","[(0, 84)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list.copy()[:len(filtered_list)]","[(0.5, 20)]",False,False
+"import itertools
+filtered_list = [x for x in iterable if not not cond(x)]
+t = filtered_list","[(0.9, 22)]",False,False
+"import functools
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(custom_reduce, iterable, []) if iterable else []","[(0.3, 39)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if not filter_func(x):
+        t.append(x)
+    elif filter_func(x):
+        continue","[(0, 51)]",True,True
+"import itertools
+t = []
+if iterable:
+    for (item, c) in zip(iterable, map(cond, iterable)):
+        if c:
+            t.append(item)","[(1.2, 84)]",True,True
+"
+t = filter(cond, iterable)
+t = list(t)","[(0.5, 5), (0.7, 5)]",True,False
+"import numpy as np
+filtered = np.array([i for i in iterable if cond(i)])
+t = list(filtered)","[(1.2, 104)]",False,False
+"import itertools
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    elif cond(x):
+        pass","[(0.3, 16)]",True,True
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = list(filter(lambda x: cond(x), iterable))","[(0.3, 83)]",False,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+t = filtered_list.copy()[:]","[(0.5, 11)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in iterable:
+    if cond(x):
+        t.append(x)
+    elif not cond(x):
+        continue
+    else:
+        break","[(0.3, 85)]",False,False
+"import functools
+def reduce_func(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = functools.reduce(reduce_func, iterable, []) if iterable else []","[(0.3, 40)]",True,False
+"from functools import reduce
+filtered_list = reduce(lambda acc, item: acc + [item] if cond(item) else acc, iterable, [])
+t = filtered_list","[(0.7, 31)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x) or True or False or None or 0 or '' or [] or {} or () or set() or dict() or 0.0 or 0j or complex() or float() or int() or str() or bytes() or bytearray() or memoryview() or range() or frozenset()]","[(0, 84)]",False,False
+"from itertools import zip_longest
+t = [item for (item, c) in zip_longest(iterable, map(cond, iterable)) if c]","[(1.2, 34)]",True,True
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x) is False:
+        t.append(x)
+    else:
+        continue","[(0.3, 61)]",True,True
+"from typing import List
+t: List = [i for i in iterable if cond(i)]","[(1.2, 40)]",True,True
+"from itertools import filterfalse as ff
+t = list(ff(lambda x: not cond(x), iterable))","[(0.7, 37)]",True,False
+"from itertools import filterfalse
+filtered_list = list(filterfalse(lambda x: not cond(x), iterable))
+t = list(filtered_list)","[(0.5, 26), (0.9, 44)]",False,False
+"from itertools import compress
+t = list(compress(iterable, [cond(i) for i in iterable]))","[(0.5, 2), (0.9, 4), (0.7, 4), (1.2, 16)]",True,False
+"from functools import reduce
+def filter_function(x, y):
+    if cond(y):
+        return x + [y]
+    else:
+        return x
+t = reduce(filter_function, iterable, [])","[(1.2, 10)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+
+def t_filterfalse(iterable):
+    return list(itertools.filterfalse(filter_func, iterable))
+t = t_filterfalse(iterable)","[(0.5, 12)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = []
+for x in iterable:
+    if filter_func(x) != True:
+        t.append(x)","[(0, 47)]",True,True
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+if filtered_list:
+    t = filtered_list
+elif not filtered_list:
+    t = []","[(0.5, 22)]",False,False
+"import itertools
+def check(x):
+    return not cond(x)
+
+def filter_false(x):
+    return list(itertools.filterfalse(check, x))
+t = filter_false(iterable)","[(0.7, 76)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)
+    elif not cond(x):
+        t.append(x)","[(0, 43)]",False,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = list(filter(cond, iterable))","[(0.3, 86), (0, 22)]",False,False
+"import functools
+def add_if_cond(t, i):
+    if cond(i):
+        t.append(i)
+    return t
+t = functools.reduce(add_if_cond, iterable, [])","[(0.7, 30)]",True,False
+"from functools import reduce
+def custom_reduce(a, b):
+    if cond(b):
+        a.append(b)
+    return a
+t = reduce(custom_reduce, iterable, []) if iterable else []","[(0.3, 77)]",True,False
+"import numpy as np
+filtered_values = []
+for x in iterable:
+    if cond(x):
+        filtered_values.append(x)
+t = np.array(filtered_values).tolist()","[(0.9, 86)]",False,False
+"
+t = []
+for x in iterable:
+    t += [x] if cond(x) else []","[(1.2, 95)]",True,True
+"import itertools
+def check_cond(x):
+    return cond(x) or cond(x)
+t = list(filter(check_cond, iterable))","[(0.3, 69)]",False,False
+"import itertools
+filtered_list = []
+for item in iterable:
+    if cond(item):
+        filtered_list.append(item)
+t = filtered_list
+filtered_list = list(filter(lambda x: cond(x), iterable))
+t = filtered_list
+filtered_list = [item for item in iterable if cond(item)]
+t = filtered_list","[(0.7, 7)]",False,False
+"import functools
+def my_reduce(a, b):
+    if cond(b):
+        return a + [b]
+    else:
+        return a
+t = functools.reduce(my_reduce, iterable, [])","[(0.7, 21)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = [x for x in filtered_iterable if cond(x) or not cond(x)]","[(0, 84)]",False,False
+"import itertools
+filtered_iterable = list(filter(lambda x: not not cond(x), iterable))
+t = []
+for x in filtered_iterable:
+    t.append(x)","[(0, 67)]",False,False
+"import itertools
+t = list(filter(lambda x: cond(x) or cond(x), iterable))","[(0.3, 37)]",False,False
+"import itertools
+filtered_list = [x for x in iterable if cond(x)]
+t = list(filtered_list.copy()[:])","[(0.9, 38)]",False,False
+"import functools
+def my_reduce(a, b):
+    if cond(b):
+        a.append(b)
+        return a
+    else:
+        return a
+
+def my_func(b):
+    if cond(b):
+        return b
+    else:
+        return []
+t = functools.reduce(my_reduce, iterable, [])","[(0.7, 97)]",False,False
+"
+filtered_iterable = []
+for x in iterable:
+    if cond(x):
+        filtered_iterable.append(x)
+t = filtered_iterable","[(0.3, 21), (0.7, 28)]",True,True
+"import itertools
+t = list(itertools.filterfalse(lambda i: not cond(i), iterable))","[(0.9, 1), (1.2, 4)]",True,False
+"import functools
+def filter_func(acc, x):
+    if cond(x):
+        acc += [x]
+    return acc
+t = functools.reduce(filter_func, iterable, [])","[(0.9, 29)]",True,False
+"from itertools import filterfalse
+def filter_function(x):
+    return not cond(x)
+t = list(filterfalse(filter_function, iterable))","[(0.7, 71)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = []
+for x in filtered_iterable:
+    if cond(x):
+        t.append(x)
+    else:
+        t.append(None)","[(0, 79)]",False,False
+"from itertools import compress
+def compress_func(x):
+    return cond(x)
+t = list(compress(iterable, map(compress_func, iterable)))","[(0.7, 84)]",True,False
+"import functools
+def my_reduce(a, b):
+    if cond(b):
+        a.extend([b])
+        return a
+    else:
+        return a
+t = functools.reduce(my_reduce, iterable, [])","[(0.7, 51)]",True,False
+"import itertools
+def filter_func(x):
+    return not cond(x)
+t = list(itertools.filterfalse(filter_func, iterable))","[(0.3, 15), (0.5, 34), (0, 7), (0.7, 80), (1.2, 22)]",True,False
+"from itertools import compress
+mask = compress(iterable, [cond(i) for i in iterable])
+t = list(mask)","[(1.2, 50)]",True,False
+"
+t = list(filter(cond, iterable))","[(0.3, 1), (0.5, 1), (0, 1), (0.9, 2), (0.7, 2)]",True,False
+"import itertools
+filtered = list(itertools.filterfalse(lambda i: not cond(i), iterable))
+t = filtered","[(1.2, 44)]",True,False
+"import itertools
+t = [i for i in itertools.filterfalse(lambda i: not cond(i), iterable)]","[(1.2, 36)]",True,False
+"import itertools
+filtered_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))
+if len(filtered_list) != 0:
+    t = filtered_list.copy()
+else:
+    t = []","[(0.5, 22)]",False,False
+"import itertools
+filtered_list = list(filter(lambda x: cond(x), iterable))
+if filtered_list:
+    t = filtered_list
+else:
+    t = filtered_list","[(0.5, 52)]",False,False
+"import itertools
+def compress_func(x):
+    return cond(x)
+new_iterable = list(itertools.compress(iterable, map(compress_func, iterable)))
+t = new_iterable","[(0.7, 46)]",True,False
+"import itertools
+filtered_iterable = list(filter(lambda x: cond(x), iterable))
+t = [x for x in filtered_iterable if cond(x) != False]","[(0, 69)]",False,False
+"import functools
+def my_reduce(a, b):
+    if cond(b):
+        return [*a, b]
+    else:
+        return a
+t = functools.reduce(my_reduce, iterable, [])","[(0.7, 99)]",True,False
+"import itertools
+filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)
+t = list(filter(lambda x: cond(x), iterable))","[(0.3, 42)]",True,False
+"import itertools
+t = list(itertools.filterfalse(lambda x: False if cond(x) else True, iterable))","[(1.2, 60)]",True,False
+"import itertools
+filtered_list = [x for x in iterable if cond(x)]
+t = list(filtered_list.copy())[:]","[(0.9, 38)]",False,False
+"from functools import reduce
+def filter_func(acc, x):
+    if cond(x):
+        acc.append(x)
+    return acc
+
+def init_acc(iterable):
+    return []
+t = reduce(filter_func, iterable, init_acc(iterable))","[(0.9, 30)]",True,False
+"import itertools
+def filter_iter(iterable):
+    for x in iterable:
+        if cond(x):
+            yield x
+t = list(filter_iter(iterable))","[(1.2, 57)]",True,True
+"import functools
+def filter_function(x, y):
+    if cond(y):
+        return x + [y]
+    return x
+t = functools.reduce(filter_function, iterable, [])","[(1.2, 82)]",True,False

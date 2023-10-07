@@ -1,0 +1,266 @@
+variant,temperature-iterations,useful,applicable
+"
+string = '[' + ', '.join(values[:len(values)]) + ']'","[(0.7, 24)]",True,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('j', 'J').replace('i', 'I').replace('k', 'K').replace('l', 'L').replace('m', 'M')","[(0.7, 56)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('o', 'O')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('g', 'G')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('n', 'N')","[(0.7, 23)]",False,False
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('g', 'G')","[(0.7, 49)]",False,False
+"
+string = '['
+string += ', '.join(values)
+string += ']'","[(0.7, 11)]",True,False
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('c', 'C')","[(0.7, 41)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('l', 'L')","[(0.7, 23)]",False,False
+"
+string = '[' + ', '.join(values) + ']'.replace('i', 'I')","[(0.7, 54)]",False,False
+"
+string = '['
+for (idx, val) in enumerate(values):
+    string += (', ' if idx != 0 else '') + val
+string += ']'","[(0.7, 11)]",True,True
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('f', 'F')","[(0.7, 47)]",False,False
+"
+string = '[' + ', '.join(list(map(lambda x: x.replace('g', 'G'), values))) + ']'","[(0.7, 50)]",False,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('j', 'J')
+values = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']","[(0.7, 55)]",False,False
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('f', 'F')
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('f', 'F')
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('f', 'F')
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('f', 'F')
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('f', 'F')","[(0.7, 48)]",False,False
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('i', 'I')","[(0.7, 53)]",False,False
+"
+string = '[' + ', '.join([value for value in values]) + ']'","[(0.7, 26)]",False,False
+"
+string = '['
+for (i, value) in enumerate(values):
+    string += ', ' * (i != 0) + value
+string += ']'","[(0.7, 9)]",True,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('m', 'M')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(list(islice(values, len(values)))) + ']'.replace('j', 'J')
+values = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']","[(0.7, 55)]",False,False
+"
+string = '[' + ', '.join(values[:]) + ']'","[(0.7, 24)]",True,False
+"
+string = '['
+for i in range(len(values)):
+    if i:
+        string += ', '
+    string += values[i]
+string += ']'","[(0.7, 18)]",True,True
+"import itertools
+new_values = list(itertools.islice(values, len(values)))
+new_string = '[' + ', '.join(new_values) + ']'.replace('h', 'H')
+string = new_string","[(0.7, 52)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(list(islice(values, len(values)))) + ']'.replace('j', 'J')","[(0.7, 55)]",False,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('c', 'C')","[(0.7, 41)]",False,False
+"import numpy as np
+string = '[' + ', '.join(values[:len(values)]) + ']'.replace('d', 'D')","[(0.7, 44)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'","[(0.7, 11)]",True,False
+"import itertools
+string = '[' + ', '.join(itertools.islice(list(values), len(values))) + ']'.replace('c', 'C')","[(0.7, 41)]",False,False
+"
+string = '['
+for (i, value) in enumerate(values):
+    if i:
+        string += ', '
+    string += value
+string += ']'","[(0.7, 9)]",True,True
+"
+string = '[' + ', '.join((values[i] for i in range(len(values)))) + ']'","[(0.7, 3), (0.3, 6)]",True,False
+"from itertools import islice
+string = '[' + ', '.join(list(islice(values, len(values)))) + ']'.replace('g', 'G')","[(0.7, 50)]",False,False
+"
+string = '[' + ', '.join(values[0:len(values)]) + ']'","[(0.7, 24)]",True,False
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('h', 'H')","[(0.7, 51)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('f', 'F')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('i', 'I')","[(0.7, 23)]",False,False
+"
+string = '['
+for (idx, val) in enumerate(values):
+    if idx != 0:
+        string += ', '
+    string += values[idx]
+string += ']'","[(0.7, 20)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('b', 'B')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('v', 'V')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('q', 'Q')","[(0.7, 23)]",False,False
+"
+string = '[' + ', '.join(values[:len(values)]) + ']'.replace('i', 'I')","[(0.7, 53)]",False,False
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('d', 'D')","[(0.7, 43)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('s', 'S')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(list(islice(values, len(values)))) + ']'.replace('e', 'E')","[(0.7, 46)]",False,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('j', 'J').replace('i', 'I')","[(0.7, 56)]",False,False
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('b', 'B')","[(0.7, 40)]",False,False
+"
+string = '['
+for (idx, item) in enumerate(values):
+    if idx != 0:
+        string += ', '
+    string += item
+string += ']'","[(0.7, 0), (0, 0), (1.2, 0), (0.3, 0), (0.5, 0), (0.9, 0)]",True,True
+"import itertools
+string = '[' + ', '.join([x for x in itertools.islice(values, len(values))]) + ']'.replace('d', 'D')","[(0.7, 43)]",False,False
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'","[(0.7, 24)]",True,False
+"
+string = '[' + ', '.join([value for value in values] * 1) + ']'","[(0.7, 25)]",False,False
+"import numpy as np
+string = '[' + ', '.join(values[0:len(values)]) + ']'.replace('d', 'D')","[(0.7, 44)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('x', 'X')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(list(values), len(values))) + ']'.replace('e', 'E')","[(0.7, 46)]",False,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('g', 'G')","[(0.7, 50)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('t', 'T')","[(0.7, 23)]",False,False
+"
+string = '['
+for i in range(len(values)):
+    if i != 0:
+        string += ', '
+    string += values[i]
+string += ']'","[(0.7, 5)]",True,True
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('a', 'A')","[(0.7, 37)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(list(islice(values, len(values)))) + ']'.replace('d', 'D')","[(0.7, 43)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('k', 'K')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('d', 'D')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('u', 'U')","[(0.7, 23)]",False,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('d', 'D')","[(0.7, 43)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('y', 'Y')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(list(islice(list(values), len(values)))) + ']'.replace('e', 'E')","[(0.7, 46)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('a', 'A').replace('b', 'B').replace('c', 'C').replace('d', 'D').replace('e', 'E').replace('f', 'F').replace('g', 'G').replace('h', 'H').replace('i', 'I').replace('j', 'J').replace('k', 'K').replace('l', 'L').replace('m', 'M').replace('n', 'N').replace('o', 'O').replace('p', 'P').replace('q', 'Q').replace('r', 'R').replace('s', 'S').replace('t', 'T').replace('u', 'U').replace('v', 'V').replace('w', 'W').replace('x', 'X').replace('y', 'Y').replace('z', 'Z')","[(0.7, 23)]",False,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('j', 'J')","[(0.7, 55)]",False,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('j', 'J').replace('i', 'I').replace('k', 'K')","[(0.7, 56)]",False,False
+"import numpy as np
+string = '[' + ', '.join(values) + ']'.replace('d', 'D')","[(0.7, 44)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('r', 'R')","[(0.7, 23)]",False,False
+"
+string = '[' + ', '.join([value for value in values for i in range(1)]) + ']'","[(0.7, 25)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('c', 'C')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('e', 'E')","[(0.7, 23)]",False,False
+"
+string = '[' + ', '.join(values[:len(values) + 2]) + ']'.replace('i', 'I')","[(0.7, 53)]",False,False
+"from itertools import islice
+string = '[' + ', '.join([x for x in islice(values, len(values))]) + ']'.replace('d', 'D')","[(0.7, 43)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(list(islice(values, len(values)))) + ']'.replace('f', 'F')","[(0.7, 47)]",False,False
+"
+string = '['
+for idx in range(len(values)):
+    string += ', ' + values[idx] if idx != 0 else values[idx]
+string += ']'","[(0.7, 31)]",True,True
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('a', 'A')","[(0.7, 23)]",False,False
+"
+string = '['
+for (i, value) in enumerate(values):
+    string += ', ' * bool(i) + value
+string += ']'","[(0.7, 9)]",True,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('h', 'H')","[(0.7, 52)]",False,False
+"
+string = '[' + ', '.join([value.replace('g', 'G') for value in values]) + ']'","[(0.7, 50)]",False,False
+"
+string = '[' + ', '.join([values[i] for i in range(len(values))]) + ']'","[(0.7, 20), (0.3, 6)]",False,False
+"import itertools
+new_values = list(itertools.islice(values, len(values)))
+string = '[' + ', '.join(new_values) + ']'.replace('h', 'H')","[(0.7, 52)]",False,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(values, len(values)))) + ']'.replace('j', 'J').replace('i', 'I').replace('k', 'K').replace('l', 'L')","[(0.7, 56)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('h', 'H')","[(0.7, 23)]",False,False
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('f', 'F')","[(0.7, 47)]",False,False
+"from itertools import islice as isl
+string = '[' + ', '.join(list(isl(values, len(values)))) + ']'.replace('f', 'F')","[(0.7, 47)]",False,False
+"
+string = '[' + ', '.join(values[:len(values) + 1]) + ']'.replace('i', 'I')","[(0.7, 53)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('z', 'Z')","[(0.7, 23)]",False,False
+"
+string = '['
+for i in range(len(values)):
+    string += (', ' if i != 0 else '') + values[i]
+string += ']'","[(0.7, 9)]",True,True
+"import itertools
+string = '[' + ', '.join(itertools.islice(values, len(values))) + ']'.replace('e', 'E')","[(0.7, 46)]",False,False
+"from itertools import islice as isl
+string = '[' + ', '.join(isl(values, len(values))) + ']'.replace('i', 'I')","[(0.7, 54)]",False,False
+"
+string = '[' + ', '.join([value * 1 for value in values]) + ']'","[(0.7, 25)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('p', 'P')","[(0.7, 23)]",False,False
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('j', 'J')","[(0.7, 23)]",False,False
+"
+string = '['
+for (idx, val) in enumerate(values):
+    string += (', ' if idx != 0 else '') + values[idx]
+string += ']'","[(0.7, 20)]",True,True
+"import itertools
+string = '[' + ', '.join(itertools.chain.from_iterable((itertools.repeat(value, 1) for value in values))) + ']'","[(0.7, 12)]",False,False
+"import itertools
+string = '[' + ', '.join(list(itertools.islice(list(values), len(values)))) + ']'.replace('c', 'C')","[(0.7, 41)]",False,False
+"
+string = '[' + ', '.join(values) + ']'","[(0.7, 0), (0, 0), (1.2, 0), (0.3, 0), (0.5, 0), (0.9, 0)]",True,False
+"
+string = '['
+for (idx, val) in enumerate(values):
+    if idx != 0:
+        string += ', ' + val
+    else:
+        string += val
+string += ']'","[(0.7, 32)]",True,True
+"from itertools import islice
+string = '[' + ', '.join(islice(values, len(values))) + ']'.replace('w', 'W')","[(0.7, 23)]",False,False
+"
+string = '['
+for (idx, val) in enumerate(values):
+    string += ', ' + val if idx != 0 else val
+string += ']'","[(0.7, 20)]",True,True
+"
+string = '[' + ', '.join(values[0:len(values)]) + ']'.replace('i', 'I')","[(0.7, 53)]",False,False

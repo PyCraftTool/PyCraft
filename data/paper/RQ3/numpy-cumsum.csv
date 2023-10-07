@@ -1,0 +1,1496 @@
+variant,temperature-iterations,useful,applicable
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()
+for i in range(len(cum_arr)):
+    cum_arr[i] = float(cum_arr[i])","[(0.7, 57)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:]
+cum_arr = cum_arr.tolist()","[(0.7, 36)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()
+del cum_arr[0]","[(0.7, 54)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = [float(sum(arr[1:i + 1])) for i in range(1, len(arr))]","[(0.7, 95)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()
+cum_arr = [float(i) for i in cum_arr if not np.isnan(i) and (not np.isinf(i)) and (i != 0)]","[(0.7, 57)]",False,False
+"
+count = 0
+sum_val = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    count += value
+    sum_val += value
+    cum_arr.append(sum_val)","[(0.9, 84)]",False,False
+"import numpy as np
+cum_arr = np.cumsum([0] + array)
+cum_arr = cum_arr[1:].tolist()","[(0.7, 73)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()
+cum_arr = [float(i) for i in cum_arr if not np.isnan(i) and (not np.isinf(i))]","[(0.7, 57)]",False,False
+"import itertools
+array_sum = itertools.accumulate(array)
+cum_arr = list(array_sum)
+count = sum(array)","[(0.9, 101)]",False,False
+"
+count = sum(array)
+cumulative = 0
+cum_arr = []
+for i in array:
+    cumulative += i
+    cum_arr.append(cumulative)","[(0.9, 77)]",False,False
+"import numpy as np
+arr = [0] + array
+arr_cumsum = np.cumsum(arr)
+cum_arr = [float(x) for x in arr_cumsum[1:]]","[(0.7, 96)]",False,False
+"
+count = sum(array)
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))]","[(0.9, 12)]",False,False
+"import numpy as np
+arr = array
+cum_arr = np.cumsum([0] + arr).tolist()
+cum_arr.pop(0)","[(0.7, 74)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()
+cum_arr = list(reversed(cum_arr[1:][::-1]))","[(0.7, 77)]",False,False
+"
+count = 0
+for (index, value) in enumerate(array):
+    count += array[index]
+cumulative_sum = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    cumulative_sum += array[index]
+    cum_arr.append(cumulative_sum)","[(0.9, 101)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+cum_arr = [elem for elem in cum_arr.tolist()[1:]]","[(0.7, 55)]",False,False
+"import math
+count = sum(array)
+cumulative = 0
+cum_arr = []
+for i in range(len(array)):
+    cumulative += array[i]
+    cum_arr.append(cumulative)","[(0.9, 62)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = list(np.cumsum(arr)[1:].astype(float))","[(0.7, 96)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()
+cum_arr = cum_arr[1:][::-1][::-1][::-1][::-1]","[(0.7, 53)]",False,False
+"import numpy as np
+arr = [0] + array
+sum_so_far = np.cumsum(arr)[1:]
+cum_arr = list(sum_so_far)","[(0.7, 36)]",False,False
+"import numpy as np
+count = np.sum(array)
+cum_arr = [sum(array[0:i + 1]) for i in range(len(array))]","[(0.9, 105)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()
+cum_arr = list(filter(lambda x: not np.isnan(x) and (not np.isinf(x)) and (x != 0), cum_arr))","[(0.7, 57)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()[1:]
+list_cum_arr = cum_arr","[(0.7, 89)]",False,False
+"import functools
+result = functools.reduce(lambda a, b: a + [a[-1] + b], array, [0])[1:]
+cum_arr = result
+count = sum(array)","[(0.9, 76)]",False,False
+"import numpy as np
+arr = [0] + array
+arr_cumsum = np.cumsum(arr)
+cum_arr = arr_cumsum[1:].astype(float).tolist()","[(0.7, 96)]",False,False
+"import math
+cumulative_sum = [0] + [sum(array[:i + 1]) for i in range(len(array))]
+cum_arr = cumulative_sum[1:]
+count = sum(array)","[(0.9, 94)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+cum_arr = cum_arr.tolist()
+cum_arr.pop(0)","[(0.7, 85)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()
+cum_arr = cum_arr[1:]","[(0.7, 36)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()
+cum_arr = cum_arr[1:][::-1][::-1]","[(0.7, 53)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()
+list_cum_arr = cum_arr","[(0.7, 89)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()
+cum_arr = [float(i) for i in cum_arr if i]","[(0.7, 57)]",False,False
+"
+count = 0
+for i in range(len(array)):
+    count += array[i]
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))]","[(0.9, 71)]",False,False
+"import math
+count = math.fsum(array)
+sum_val = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    count += value
+    sum_val += value
+    cum_arr.append(sum_val)","[(0.9, 84)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+cum_arr = cum_arr.tolist()
+cum_arr = cum_arr[1:len(cum_arr)]","[(0.7, 75)]",False,False
+"
+sum_arr = []
+cumulative_sum = 0
+count = 0
+for num in array:
+    cumulative_sum += num
+    sum_arr.append(cumulative_sum)
+cum_arr = sum_arr.copy()
+count = sum(array)","[(0.9, 93)]",False,False
+"import numpy as np
+result = np.cumsum(array)
+cum_arr = result.tolist()
+count = sum(array)","[(0.9, 76)]",False,False
+"import functools
+count = sum(array)
+cumulative = functools.reduce(lambda x, y: x + [x[-1] + y], array, [0])[1:]
+cum_arr = cumulative","[(0.9, 78)]",False,False
+"
+count = sum(array)
+cum_arr = []
+for i in range(len(array)):
+    cum_arr.append(sum(array[:i + 1]))","[(0.9, 35)]",False,False
+"
+arr = [0] + array
+cum_arr = [sum(arr[:i + 1]) for i in range(1, len(arr)) if sum(arr[:i + 1]) != 0]","[(0.7, 86)]",False,False
+"
+count = 0
+for i in range(len(array)):
+    count += array[i]
+cumulative_sum = 0
+cum_arr = []
+for i in range(len(array)):
+    cumulative_sum += array[i]
+    cum_arr.append(cumulative_sum)","[(0.9, 70)]",False,False
+"import math
+count = sum(array)
+cumulative = 0
+cum_arr = [0] * len(array)
+for i in range(len(array)):
+    cumulative += array[i]
+    cum_arr[i] = cumulative","[(0.9, 77)]",False,False
+"
+cumulative_sum = 0
+cum_arr = []
+for i in array:
+    cumulative_sum += i
+    cum_arr.append(cumulative_sum)
+count = sum(array)","[(0.9, 98)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+cum_arr = cum_arr[1:].tolist()
+cum_arr = [float(elem) for elem in cum_arr]","[(0.7, 88)]",False,False
+"
+result = [sum(array[:index + 1]) for (index, value) in enumerate(array)]
+cum_arr = result
+count = sum(array)","[(0.9, 76)]",False,False
+"import statistics
+cum_arr = []
+sum = 0
+for i in range(len(array)):
+    sum += array[i]
+    cum_arr.append(statistics.median_low([sum]))
+cum_arr = [float(x) for x in cum_arr]","[(0, 41)]",False,False
+"import itertools
+count = 0
+cum_arr = []
+for i in itertools.chain(array):
+    count += i
+    cum_arr.append(count)","[(0.9, 40)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr_temp = np.cumsum(arr)
+cum_arr = list(cum_arr_temp)[1:]","[(0.7, 92)]",False,False
+"import itertools
+cumulative_sum = list(itertools.accumulate(array))
+cum_arr = cumulative_sum.copy()
+count = sum(array)","[(0.9, 67)]",False,False
+"
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))]
+count = sum(array)","[(0.9, 105)]",False,False
+"import math
+result = []
+for (index, value) in enumerate(array):
+    result.append(math.fsum(array[:index + 1]))
+count = sum(array)
+cum_arr = result","[(0.9, 61)]",False,False
+"
+count = sum(array)
+sum_val = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    sum_val += value
+    cum_arr.append(sum_val)","[(0.9, 79)]",False,False
+"import numpy as np
+count = np.sum(array)
+cumulative_sum = 0
+cum_arr = []
+for i in range(len(array)):
+    cumulative_sum += array[i]
+    cum_arr.append(cumulative_sum)","[(0.9, 68)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+cum_arr = np.delete(cum_arr, 0).tolist()","[(0.7, 88)]",False,False
+"import math
+cumulative_sum = [sum(array[:i + 1]) for i in range(len(array))]
+cum_arr = cumulative_sum
+count = math.fsum(array)","[(0.9, 92)]",False,False
+"import numpy as np
+import itertools
+import math
+count = np.sum(array)
+cumulative = 0
+cum_arr = [].copy()
+for i in range(len(array)):
+    cumulative += array[i]
+    cum_arr.append(cumulative)","[(0.9, 77)]",False,False
+"import itertools
+count = sum(array)
+cum_arr = [sum(array[:index + 1]) for (index, value) in enumerate(array)]","[(0.9, 59)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = list(np.cumsum(arr)[1:])","[(0.7, 92)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()
+cum_arr.pop(0)","[(0.7, 53)]",False,False
+"from itertools import accumulate
+cum_arr = list(accumulate(array))
+count = sum(array)","[(0.9, 98)]",False,False
+"import itertools
+cumulative_sum = 0
+cum_arr = []
+count = 0
+for i in itertools.count():
+    try:
+        current_value = array[i]
+    except IndexError:
+        break
+    cumulative_sum += current_value
+    cum_arr.append(cumulative_sum)
+    count += current_value","[(0.9, 91)]",False,False
+"import math
+count = int(math.fsum(array))
+sum_val = 0
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))]","[(0.9, 81)]",False,False
+"import itertools
+count = 0
+cumulative_sum = 0
+cum_arr = []
+for i in range(len(array)):
+    cumulative_sum += array[i]
+    count += array[i]
+    cum_arr.append(cumulative_sum)","[(0.9, 26)]",False,False
+"import numpy as np
+arr = [0] + list(array)
+cum_arr = np.cumsum(arr)[1:].tolist()","[(0.7, 58)]",False,False
+"import numpy as np
+count = np.sum(array)
+cumulative_sum = np.zeros(len(array))
+cum_arr = []
+for i in range(len(array)):
+    cumulative_sum[i] = cumulative_sum[i - 1] + array[i]
+    cum_arr.append(cumulative_sum[i])","[(0.9, 95)]",False,False
+"from itertools import accumulate
+count = sum(array)
+sum_val = 0
+cum_arr = list(accumulate(array))","[(0.9, 63)]",False,False
+"import numpy as np
+cumulative_sum = 0
+cum_arr = []
+for i in range(len(array)):
+    cumulative_sum += array[i]
+    cum_arr.append(cumulative_sum)
+count = np.sum(array)","[(0.9, 69)]",False,False
+"import functools
+import math
+count = sum(array)
+cum_arr = []
+partial_sum = 0
+for i in range(len(array)):
+    partial_sum += array[i]
+    cum_arr.append(partial_sum)","[(0.9, 71)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()
+cum_arr = list(map(float, cum_arr))","[(0.7, 57)]",False,False
+"
+temp_sum = 0
+result = []
+for (index, value) in enumerate(array):
+    temp_sum += value
+    result.append(temp_sum)
+cum_arr = result
+count = sum(array)","[(0.9, 76)]",False,False
+"
+count = 0
+for (index, value) in enumerate(array):
+    count += value
+sum_val = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    sum_val += value
+    cum_arr.append(sum_val)","[(0.9, 63)]",False,False
+"import itertools
+count = sum(array)
+cum_arr = list(itertools.accumulate(array))","[(0.9, 72)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+new_cum_arr = cum_arr.tolist()
+new_cum_arr.pop(0)
+cum_arr = new_cum_arr","[(0.7, 87)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()
+cum_arr = cum_arr[:0] + cum_arr[1:]","[(0.7, 83)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].astype(float).tolist()","[(0.7, 57)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+list_cum_arr = cum_arr.tolist()
+cum_arr = list_cum_arr[1:]","[(0.7, 55)]",False,False
+"import functools
+cum_arr = functools.reduce(lambda x, y: x + [x[-1] + y], array, [0])[1:] if len(array) > 0 else []","[(0, 13)]",False,False
+"
+cumulative_sum = [0]
+cum_arr = []
+count = 0
+for val in array:
+    count += val
+    cumulative_sum.append(count)
+    cum_arr.append(count)","[(0.9, 85)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr, axis=0)[1:].tolist()","[(0.7, 57)]",False,False
+"
+count = 0
+cumulative_sum = 0
+cum_arr = []
+for i in range(len(array)):
+    cumulative_sum += array[i]
+    cum_arr.append(cumulative_sum)
+    count += array[i]","[(0.9, 47)]",False,False
+"import math
+count = math.fsum(array)
+cumulative_sum = 0
+cum_arr = []
+for i in range(len(array)):
+    cumulative_sum += array[i]
+    count += array[i]
+    cum_arr.append(cumulative_sum)","[(0.9, 37)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+cum_arr = list(cum_arr[1:])","[(0.7, 73)]",False,False
+"from itertools import accumulate
+cumulative_sum = list(accumulate(array))
+cum_arr = cumulative_sum
+count = sum(array)","[(0.9, 47)]",False,False
+"import math
+count = sum(array)
+cum_arr = [math.fsum(array[:i + 1]) for i in range(len(array))]","[(0.9, 58)]",False,False
+"import numpy as np
+count = np.sum(array)
+cum_arr = []
+partial_sum = 0
+for i in range(len(array)):
+    partial_sum += array[i]
+    cum_arr.append(partial_sum)","[(0.9, 71)]",False,False
+"import numpy as np
+cum_arr = np.cumsum(array)","[(0.9, 0), (0, 0), (0.5, 0), (0.3, 0), (1.2, 0), (0.7, 0)]",False,False
+"from functools import reduce
+import math
+count = sum(array)
+cum_arr = reduce(lambda x, y: x + [x[-1] + y], array[1:], array[:1])","[(0.9, 72)]",False,False
+"import numpy as np
+count = 0
+sum_val = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    count += value
+    sum_val += value
+    cum_arr.append(sum_val)
+count = np.sum(array)
+cum_arr = np.cumsum(array).tolist()","[(0.9, 83)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+cum_arr = cum_arr[cum_arr != 0].tolist()","[(0.7, 86)]",False,False
+"
+count = 0
+cum_arr = []
+for i in range(len(array)):
+    count += array[i]
+    cum_arr.append(sum(array[:i + 1]))","[(0.9, 25)]",False,False
+"from itertools import accumulate
+count = sum(array)
+cum_arr = list(accumulate(array))","[(0.9, 44)]",False,False
+"import numpy as np
+count = np.sum(array)
+cum_arr = [sum(array[:i]) + array[i] for i in range(len(array))]","[(0.9, 105)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()[1:]","[(0.7, 60)]",False,False
+"import itertools
+from functools import reduce
+count = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    count += array[index]
+    cum_arr.append(reduce(lambda x, y: x + y, array[:index + 1]))","[(0.9, 45)]",False,False
+"import numpy as np
+arr = np.concatenate(([0], array))
+cum_arr = np.cumsum(arr)
+cum_arr = cum_arr[cum_arr != 0].tolist()","[(0.7, 86)]",False,False
+"import numpy as np
+count = np.sum(array)
+cumulative_sum = 0
+cum_arr = [0] * len(array)
+for i in range(len(array)):
+    cumulative_sum += array[i]
+    cum_arr[i] = cumulative_sum","[(0.9, 96)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+cum_arr = cum_arr[1:].tolist()","[(0.7, 54)]",False,False
+"import numpy as np
+arr = array
+arr.insert(0, 0)
+cum_arr = np.cumsum(arr).tolist()
+cum_arr.pop(0)","[(0.7, 74)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()
+cum_arr = [float(i) for i in cum_arr if not np.isnan(i)]","[(0.7, 57)]",False,False
+"import numpy as np
+cumulative_sum = 0
+cum_arr = []
+for (i, value) in enumerate(array):
+    cumulative_sum += value
+    cum_arr.append(cumulative_sum)
+count = np.sum(array)","[(0.9, 98)]",False,False
+"import math
+count = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    count += array[index]
+    cum_arr.append(math.fsum(array[:index + 1]))","[(0.9, 45)]",False,False
+"
+count = sum(array)
+cum_arr = []
+sum_val = 0
+for (index, value) in enumerate(array):
+    sum_val += value
+    cum_arr.append(sum_val)","[(0.9, 46)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()[1:]
+list_cum_arr = cum_arr[1:]","[(0.7, 89)]",False,False
+"import numpy as np
+arr = [0] + array
+arr_cumsum = np.cumsum(arr)
+cum_arr = [float(x) for x in arr_cumsum.tolist()[1:]]","[(0.7, 96)]",False,False
+"import numpy as np
+count = np.sum(array)
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))]","[(0.9, 105)]",False,False
+"
+cum_arr = []
+sum = 0
+for i in range(len(array)):
+    sum += array[i]
+    cum_arr.append(float(sum))","[(0, 25), (0.5, 77)]",False,False
+"import itertools
+cum_arr = list(itertools.accumulate(array))
+count = sum(array)","[(0.9, 100)]",False,False
+"
+cum_arr = []
+sum = 0
+for i in range(len(array)):
+    sum += array[i]
+    cum_arr.append(sum)
+cum_arr = [float(x) for x in cum_arr]","[(0, 26), (0.5, 59)]",False,False
+"from itertools import accumulate
+import numpy as np
+cumulative_sum = np.fromiter(accumulate(array), dtype=float)
+cum_arr = cumulative_sum.tolist()
+count = np.sum(array)","[(0.9, 86)]",False,False
+"import math
+count = math.fsum(array)
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))]","[(0.9, 82)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(np.array(arr)).tolist()
+cum_arr.pop(0)","[(0.7, 84)]",False,False
+"import itertools
+import math
+count = sum(array)
+cum_arr = []
+for i in range(len(array)):
+    cum_arr.append(math.fsum(array[:i + 1]))","[(0.9, 71)]",False,False
+"
+count = sum(array)
+cum_arr = [sum(array[:i]) + array[i] for i in range(len(array))]","[(0.9, 105)]",False,False
+"import numpy as np
+arr = array
+cum_arr = np.cumsum([0] + arr).tolist()
+cum_arr = cum_arr[1:]","[(0.7, 74)]",False,False
+"
+count = sum(array)
+sum_val = 0
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))]","[(0.9, 81)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()
+cum_arr.remove(0)","[(0.7, 54)]",False,False
+"import numpy as np
+arr = np.concatenate(([0], array))
+cum_arr = np.cumsum(arr).tolist()
+cum_arr.remove(0)","[(0.7, 86)]",False,False
+"
+cumulative_sum = 0
+cum_arr = []
+count = 0
+for i in range(len(array)):
+    cumulative_sum += array[i]
+    cum_arr.append(cumulative_sum)
+    count += array[i]","[(0.9, 67)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr).tolist()
+cum_arr = cum_arr[1:len(cum_arr)]","[(0.7, 53)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array))
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr[i] = sum
+cum_arr = [float(x) for x in cum_arr]","[(0, 12)]",False,False
+"
+cumulative_sum = [0]
+for num in array:
+    cumulative_sum.append(cumulative_sum[-1] + num)
+cum_arr = cumulative_sum[1:]
+count = sum(array)","[(0.9, 94)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()
+cum_arr = [float(x) for x in cum_arr]","[(0.7, 57)]",False,False
+"
+cumulative_sum = 0
+cum_arr = []
+for i in range(len(array)):
+    cumulative_sum += array[i]
+    cum_arr.append(cumulative_sum)
+count = sum(array)","[(0.9, 69)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array))
+sum = 0
+for i in range(len(array)):
+    sum += array[i]
+    cum_arr[i] = sum
+cum_arr = [float(x) for x in cum_arr]","[(0, 12)]",False,False
+"import numpy as np
+arr = [0] + array
+arr_cumsum = np.cumsum(arr)
+cum_arr = list(arr_cumsum[1:].astype(float))","[(0.7, 96)]",False,False
+"
+count = 0
+sum_val = 0
+cum_arr = []
+for i in range(len(array)):
+    sum_val += array[i]
+    cum_arr.append(sum_val)","[(0.9, 81)]",False,False
+"import functools
+cumulative_sum = functools.reduce(lambda x, y: x + [x[-1] + y], array, [0])[1:]
+cum_arr = cumulative_sum.copy()
+count = sum(array)","[(0.9, 94)]",False,False
+"import numpy as np
+cum_arr = np.cumsum([0] + array)[1:].tolist()","[(0.7, 73)]",False,False
+"
+cum_arr = []
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr.append(float(sum))","[(0, 27), (0.5, 47)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()","[(0.7, 36)]",False,False
+"import numpy as np
+import itertools
+count = 0
+cum_arr = []
+sum_val = 0
+for (index, value) in enumerate(array):
+    count += value
+    sum_val += value
+    cum_arr.append(sum_val)
+count = np.sum(array)
+cum_arr = list(itertools.accumulate(array))","[(0.9, 83)]",False,False
+"import itertools
+cumulative_sum = list(itertools.accumulate(array))
+cum_arr = cumulative_sum
+count = sum(array)","[(0.9, 65)]",False,False
+"import functools
+cum_arr = functools.reduce(lambda x, y: x + [x[-1] + y], array, [0])[1:]
+cum_arr = [float(x) for x in cum_arr]","[(0, 41)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+cum_arr = cum_arr[1:].tolist()
+cum_arr = sorted(cum_arr)","[(0.7, 88)]",False,False
+"import numpy as np
+count = np.sum(array)
+cumulative_sum = 0
+cum_arr = []
+for i in range(len(array)):
+    cumulative_sum += array[i]
+    count += array[i]
+    cum_arr.append(cumulative_sum)","[(0.9, 48)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)
+new_cum_arr = []
+for i in range(1, len(cum_arr)):
+    new_cum_arr.append(cum_arr[i])
+cum_arr = new_cum_arr","[(0.7, 87)]",False,False
+"
+count = sum(array)
+sum_val = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    sum_val += value
+    cum_arr.append(sum_val)
+    if index == 5:
+        break","[(0.9, 84)]",False,False
+"import itertools
+count = sum(array)
+cumulative = list(itertools.accumulate(array))
+cum_arr = cumulative","[(0.9, 78)]",False,False
+"
+count = 0
+cum_arr = []
+sum_val = 0
+for (index, value) in enumerate(array):
+    count += value
+    sum_val += value
+    cum_arr.append(sum_val)","[(0.9, 64)]",False,False
+"import itertools
+sum_arr = list(itertools.accumulate(array))
+count = sum(array)
+cum_arr = sum_arr","[(0.9, 79)]",False,False
+"
+count = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    count += array[index]
+    cum_arr.append(sum(array[:index + 1]))","[(0.9, 36)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr_temp = np.cumsum(arr)
+cum_arr = cum_arr_temp.tolist()[1:]","[(0.7, 55)]",False,False
+"import numpy as np
+arr = [0] + array
+cum_arr = np.cumsum(arr)[1:].tolist()
+cum_arr = [float(i) for i in cum_arr if i is not None]","[(0.7, 57)]",False,False
+"import math
+array_sum = math.fsum(array)
+cum_arr = [math.fsum(array[:index + 1]) for (index, value) in enumerate(array)]","[(0.9, 73)]",False,False
+"
+cum_arr = [0] * len(array)
+for i in range(len(array)):
+    cum_arr[i] = cum_arr[i - 1] + array[i]","[(0.7, 78)]",True,True
+"from itertools import accumulate
+arr = [0] + array
+cum_arr = list(accumulate(arr))[1:]","[(0.7, 60)]",True,False
+"import math
+arr = [0] + array
+cum_arr = []
+sum_so_far = 0
+for i in range(len(arr) - 1):
+    sum_so_far += arr[i + 1]
+    cum_arr.append(sum_so_far)","[(0.7, 35)]",True,True
+"
+count = 0
+cumulative_sum = []
+for i in range(len(array)):
+    count += array[i]
+    cumulative_sum.append(count)
+cum_arr = cumulative_sum","[(0.9, 66)]",True,True
+"import math
+arr = [0] + array
+cum_arr = []
+for i in range(1, len(arr)):
+    cum_arr.append(sum(arr[:i + 1]))","[(0.7, 31)]",True,True
+"
+count = 0
+cum_arr = []
+for i in range(len(array)):
+    count += array[i]
+    cum_arr.append(count)","[(0.9, 2)]",True,True
+"import numpy as np
+cum_arr = np.zeros(len(array))
+sum = 0
+for i in range(len(array)):
+    sum += array[i]
+    cum_arr[i] = sum
+cum_arr = list(cum_arr)","[(0, 12)]",True,True
+"
+cum_arr = []
+for i in range(len(array)):
+    cum_arr.append(sum(array[:i + 1]))","[(0.9, 0), (0, 0), (0.5, 0), (0.3, 0), (1.2, 0), (0.7, 0)]",True,True
+"import math
+arr = [0] + array
+cum_arr = []
+sum_so_far = 0
+for i in range(len(arr)):
+    if i != 0:
+        sum_so_far += arr[i]
+        cum_arr.append(sum_so_far)","[(0.7, 35)]",True,True
+"
+count = 0
+acc = []
+for i in array:
+    count += i
+    acc.append(count)
+cum_arr = acc","[(1.2, 18)]",True,True
+"
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))] if len(array) > 0 else []","[(0.9, 6), (0, 2)]",True,True
+"
+cum_arr = []
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr.append(sum)","[(0, 19), (0.5, 27), (0.7, 1)]",True,True
+"import numpy as np
+import math
+arr = [0] + array
+cum_arr = [np.sum(arr[:i + 1]) for i in range(1, len(arr))]","[(0.7, 32)]",True,True
+"
+cum_arr = []
+for i in range(len(array)):
+    current_sum = sum(array[:i + 1])
+    cum_arr.append(current_sum)","[(1.2, 32)]",True,True
+"import functools
+arr = [0] + array
+cum_arr = functools.reduce(lambda a, b: a + [a[-1] + b], arr[1:], [0])[1:]","[(0.7, 49)]",True,False
+"
+cum_arr = []
+sum_val = 0
+for val in array:
+    sum_val += val
+    cum_arr.append(sum_val)","[(0.9, 4)]",True,True
+"
+arr = [0] + array
+cum_arr = []
+cum_sum = 0
+for i in range(len(arr)):
+    cum_sum += arr[i]
+    cum_arr.append(cum_sum)
+cum_arr = cum_arr[1:]","[(0.7, 92)]",True,True
+"import numpy as np
+cum_arr = np.zeros(len(array))
+sum = 0
+for i in range(len(array)):
+    sum += array[i]
+    cum_arr[i] = sum
+cum_arr = cum_arr.tolist()","[(0, 12), (0.5, 20)]",True,True
+"
+arr = [0] + list(array)
+cum_arr = [sum(arr[:i + 1]) for i in range(1, len(arr))]","[(0.7, 58)]",True,True
+"
+arr = [0] + array
+sum_so_far = [0] * len(arr)
+for i in range(1, len(arr)):
+    sum_so_far[i] = sum_so_far[i - 1] + arr[i]
+cum_arr = sum_so_far[1:]","[(0.7, 60)]",True,True
+"
+arr = [0] + array
+cum_arr = [sum(arr[:i + 1]) for i in range(1, len(arr))] if array else []","[(0.7, 71)]",True,True
+"
+cum_arr = []
+for i in range(len(array)):
+    current_sum = 0
+    for j in range(i + 1):
+        current_sum += array[j]
+    cum_arr.append(current_sum)","[(1.2, 29)]",True,True
+"import math
+arr = [0] + array
+cum_arr = []
+sum_so_far = 0
+for i in range(1, len(arr)):
+    sum_so_far += arr[i]
+    cum_arr.insert(i - 1, sum_so_far)","[(0.7, 35)]",True,True
+"
+cum_arr = [0] * len(array)
+for i in range(len(array)):
+    for j in range(i + 1):
+        cum_arr[i] += array[j]","[(0.7, 12)]",True,True
+"import functools
+cum_arr = functools.reduce(lambda a, b: a + [a[-1] + b], array, [0])[1:]","[(0.9, 5), (0.5, 11), (1.2, 15)]",True,False
+"import math
+arr = [0] + array
+cum_arr = []
+sum_so_far = 0
+for (i, value) in enumerate(arr[1:], start=1):
+    sum_so_far += value
+    cum_arr.append(sum_so_far)","[(0.7, 35)]",True,True
+"import functools
+arr = [0] + array
+cum_arr = functools.reduce(lambda acc, x: acc + [acc[-1] + x], arr[1:], [0])[1:]","[(0.7, 48)]",True,False
+"
+cumulative_sum = [sum(array[:i + 1]) for i in range(len(array))]
+cum_arr = cumulative_sum","[(0.9, 66)]",True,True
+"
+cum_arr = [0]
+for i in range(len(array)):
+    cum_arr.append(cum_arr[-1] + array[i])
+cum_arr = cum_arr[1:]","[(0.9, 23), (0, 15), (0.5, 17), (0.3, 9), (0.7, 21)]",True,True
+"import numpy as np
+cum_arr = np.cumsum([0] + array).tolist()
+cum_arr.remove(0)","[(0.7, 85)]",True,False
+"
+n = len(array)
+cum_arr = []
+sum = 0
+for i in range(n):
+    sum += array[i]
+    cum_arr.append(sum)","[(1.2, 12)]",True,True
+"import math
+arr = [0] + array
+cum_arr = [sum(arr[:i + 1]) for i in range(1, len(arr))]","[(0.7, 26)]",True,True
+"import numpy as np
+cumulative_sum = np.zeros(len(array))
+cum_arr = []
+count = 0
+for i in range(len(array)):
+    count += array[i]
+    cumulative_sum[i] = count
+    cum_arr.append(cumulative_sum[i])","[(0.9, 97)]",True,True
+"import numpy as np
+import math
+cum_arr = [math.fsum(array[:i + 1]) for i in range(len(array))]","[(0.9, 6)]",True,True
+"
+count = 0
+cum_arr = []
+for (i, value) in enumerate(array):
+    count += value
+    cum_arr.append(count)","[(0.9, 44)]",True,True
+"
+cum_arr = []
+for i in range(1, len(array) + 1):
+    cum_arr.append(sum(array[:i]))","[(0.5, 94)]",True,True
+"
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))]","[(0.9, 1), (0, 1), (0.5, 2), (0.3, 5), (1.2, 3), (0.7, 3)]",True,True
+"import numpy as np
+cum_arr = np.zeros(len(array))
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr[i] = np.sum(array[:i + 1])
+cum_arr = cum_arr.tolist()","[(0, 20)]",True,True
+"
+result = [sum(array[:index + 1]) for (index, value) in enumerate(array)]
+cum_arr = result","[(0.9, 75)]",True,True
+"import math
+cum_arr = [0] * len(array)
+for i in range(len(array)):
+    cum_arr[i] = math.fsum(array[:i + 1])","[(0.9, 15)]",True,True
+"import math
+arr = [0] + array
+cum_arr = []
+sum_so_far = 0
+for i in range(1, len(arr)):
+    sum_so_far += arr[i]
+    cum_arr.append(sum_so_far)","[(0.7, 31)]",True,True
+"
+arr = [0] + array
+sum_so_far = 0
+cum_arr = []
+for i in range(len(arr) - 1):
+    sum_so_far += arr[i + 1]
+    cum_arr.append(sum_so_far)","[(0.7, 40)]",True,True
+"import numpy as np
+arr = [0] + array
+sum_so_far = np.add.accumulate(arr)
+cum_arr = list(sum_so_far)[1:]","[(0.7, 60)]",True,False
+"import math
+cum_arr = []
+for i in range(len(array)):
+    cum_arr.append(math.fsum(array[:i + 1]))","[(0.9, 21)]",True,True
+"
+cum_arr = [0]
+for i in range(len(array)):
+    cum_arr.append(sum(array[:i + 1]))
+cum_arr = cum_arr[1:]","[(0.5, 22), (0.3, 15), (0.7, 23)]",True,True
+"
+arr = [0] + array
+cum_arr = [sum(arr[1:i + 1]) for i in range(1, len(arr))]","[(0.7, 41)]",True,True
+"
+count = 0
+cumulative_sum = 0
+cum_arr = []
+for i in range(len(array)):
+    count += array[i]
+    cumulative_sum = count
+    cum_arr.append(cumulative_sum)","[(0.9, 95)]",True,True
+"import itertools
+arr = [0] + array
+cum_arr = list(itertools.accumulate(arr))[1:]","[(0.7, 69)]",True,False
+"
+arr = [0] + array
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))]","[(0.7, 36)]",True,True
+"
+cum_arr = []
+for i in range(len(array)):
+    cum_arr.append(sum(array[0:i + 1]))","[(0.5, 63), (1.2, 11)]",True,True
+"
+arr = [0] + array
+cum_arr = [sum(arr[1:i + 2]) for i in range(len(arr) - 1)]","[(0.7, 39)]",True,True
+"import numpy as np
+cum_arr = np.zeros(len(array))
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr[i] = sum
+cum_arr = list(cum_arr)","[(0, 12), (0.5, 20)]",True,True
+"
+count = 0
+cum_arr = []
+for i in array:
+    count += i
+    cum_arr.append(count)","[(0.9, 26)]",True,True
+"from functools import reduce
+partial_sum = lambda x, y: x + [x[-1] + y]
+cum_arr = reduce(partial_sum, array, [0])[1:]","[(1.2, 22)]",True,False
+"import math
+cum_arr = [0]
+for i in range(len(array)):
+    cum_arr.append(math.fsum(array[:i + 1]))
+cum_arr = cum_arr[1:]","[(0.5, 46), (0.3, 13)]",True,True
+"
+cum_arr = []
+sum_so_far = 0
+for i in range(len(array)):
+    sum_so_far += array[i]
+    cum_arr.append(sum_so_far)","[(0.9, 1)]",True,True
+"
+cum_arr = [sum(array[:i]) for i in range(1, len(array) + 1)]","[(0.5, 49), (1.2, 2)]",True,True
+"import functools
+arr = functools.reduce(lambda a, b: a + [a[-1] + b], array, [0])[1:]
+cum_arr = arr","[(0.7, 26)]",True,False
+"
+arr = [0] + array
+cum_sum = []
+for i in range(1, len(arr)):
+    cum_sum.append(sum(arr[1:i + 1]))
+cum_arr = cum_sum","[(0.7, 60)]",True,True
+"import math
+arr = [0] + array
+cum_arr = []
+sum_so_far = 0
+for i in range(1, len(arr)):
+    sum_so_far += arr[i]
+    cum_arr.insert(i, sum_so_far)","[(0.7, 35)]",True,True
+"
+cum_arr = [0] * len(array)
+for i in range(len(array)):
+    cum_arr[i] = sum(array[:i + 1])","[(0.9, 27), (0.5, 57), (0.7, 3)]",True,True
+"import functools
+cum_arr = functools.reduce(lambda x, y: x + [x[-1] + y], array, [0])[1:]","[(0.9, 10), (0, 8), (0.5, 9), (0.3, 5), (1.2, 32), (0.7, 15)]",True,False
+"import math
+cum_arr = []
+count = 0
+for i in array:
+    count = math.fsum([count, i])
+    cum_arr.append(count)","[(0.9, 40)]",True,True
+"import math
+arr = [0] + array
+cum_arr = []
+sum_so_far = 0
+for value in arr[1:]:
+    sum_so_far += value
+    cum_arr.append(sum_so_far)","[(0.7, 35)]",True,True
+"import numpy as np
+cum_arr = np.zeros(len(array))
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr[i] = sum
+cum_arr = cum_arr.tolist()","[(0, 12), (0.5, 20)]",True,True
+"
+cumulative_sum = []
+count = 0
+for i in range(len(array)):
+    count += array[i]
+    cumulative_sum.append(count)
+cum_arr = cumulative_sum","[(0.9, 87)]",True,True
+"
+cum_arr = [sum(array[:i + 1]) for (i, _) in enumerate(array)]","[(0.9, 7), (0.5, 27)]",True,True
+"
+arr = [0] + array
+sum_so_far = [sum(arr[:i + 1]) for i in range(1, len(arr))]
+cum_arr = sum_so_far","[(0.7, 59)]",True,True
+"
+cum_arr = []
+sum = 0
+for i in range(len(array)):
+    sum += array[i]
+    cum_arr.append(sum) if len(array) > 0 else []","[(0.9, 18), (0, 13)]",True,True
+"
+cum_arr = []
+sum = 0
+for i in range(len(array)):
+    sum = sum + array[i]
+    cum_arr.append(sum)","[(0.5, 9)]",True,True
+"import functools
+arr = [0] + array
+cum_arr = functools.reduce(lambda x, y: x + [x[-1] + y], arr[1:], [0])[1:]","[(0.7, 44)]",True,False
+"
+count = 0
+cum_arr = []
+for (index, value) in enumerate(array):
+    count += array[index]
+    cum_arr.append(count)","[(0.9, 45)]",True,True
+"
+arr = array
+cum_arr = [sum(arr[:i + 1]) for i in range(len(arr))]
+cum_arr = list(cum_arr)
+cum_arr = [float(x) for x in cum_arr]
+cum_arr = list(map(float, cum_arr))","[(0.5, 132)]",False,False
+"import numpy as np
+cum_arr = np.array([sum(array[:i + 1]) for i in range(len(array))]).astype(float).tolist()","[(0.5, 100)]",False,False
+"import statistics
+cum_arr = []
+sum_val = 0
+for val in array:
+    sum_val += val
+    median_val = statistics.median([sum_val])
+    cum_arr += [median_val]","[(0.5, 107)]",False,False
+"import statistics
+cum_arr = []
+sum_val = 0
+for val in array:
+    sum_val += val
+    median_val = statistics.median([sum_val])
+    cum_arr.append(median_val)","[(0.5, 107)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+for i in range(len(array)):
+    cum_arr[i] = sum(array[:i + 1])
+cum_arr = cum_arr.tolist()","[(0.5, 90)]",True,True
+"
+cum_arr = []
+sum = 0
+for x in array:
+    sum += x
+    cum_arr.append(float(sum))","[(0.5, 98)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+np.cumsum(array, out=cum_arr)
+cum_arr = cum_arr.tolist()","[(0.5, 66)]",True,False
+"
+cum_arr = []
+for i in range(len(array)):
+    cum_arr.append(sum(array[:i + 1]))
+cum_arr = [float(x) for x in cum_arr]","[(0.5, 79)]",False,False
+"import numpy as np
+arr = np.array(array)
+cum_arr = np.zeros(len(arr), dtype=float)
+sum = 0
+for i in range(len(arr)):
+    sum += arr[i]
+    cum_arr[i] = sum
+cum_arr = cum_arr.tolist()","[(0.5, 65)]",True,True
+"import statistics
+cum_arr = []
+sum_val = 0
+for val in array:
+    sum_val += val
+    cum_arr.append(statistics.median([sum_val]))","[(0.5, 87)]",False,False
+"
+cum_arr = []
+count = 0
+for i in range(len(array)):
+    count += array[i]
+    cum_arr.append(count)
+cum_arr = list(map(float, cum_arr))","[(0.5, 79)]",False,False
+"import numpy as np
+cum_arr = np.add.accumulate(array).tolist()
+cum_arr = list(map(float, cum_arr))","[(0.5, 124)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+for (i, val) in enumerate(array):
+    cum_arr[i] = cum_arr[i - 1] + val if i > 0 else val
+cum_arr = cum_arr.tolist()","[(0.5, 139)]",True,True
+"
+cum_arr = []
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr.append(sum)
+cum_arr = list(cum_arr)","[(0.5, 30)]",True,True
+"
+cum_arr = []
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr.append(sum)
+for i in range(len(cum_arr)):
+    cum_arr[i] = float(cum_arr[i])","[(0.5, 47)]",False,False
+"
+arr = array
+cum_arr = [sum(arr[:i + 1]) for i in range(len(arr))]
+cum_arr = list(cum_arr)
+cum_arr = list(map(float, cum_arr))","[(0.5, 132)]",False,False
+"import itertools
+sum = 0
+cum_arr = [(sum := (sum + x)) for x in array]","[(0.5, 95)]",True,True
+"import statistics
+arr_sum = 0
+median_list = []
+for i in range(len(array)):
+    arr_sum += array[i]
+    median_val = statistics.median([arr_sum])
+    median_list.append(median_val)
+cum_arr = median_list","[(0.5, 138)]",False,False
+"
+cum_arr = []
+for i in range(len(array)):
+    cum_arr.append(sum(array[:i + 1]))
+cum_arr = list(cum_arr)","[(0.5, 39)]",True,True
+"
+cum_arr = []
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr.append(sum)
+    cum_arr = cum_arr[:i + 1]","[(0.5, 37)]",False,False
+"import functools
+cum_arr = functools.reduce(lambda acc, val: acc + [acc[-1] + val], array, [0])[1:]","[(0.5, 38)]",True,False
+"
+cum_arr = []
+for i in range(len(array)):
+    cum_arr.append(sum(array[:i + 1]))
+cum_arr = list(map(float, cum_arr))","[(0.5, 79)]",False,False
+"
+cum_arr = []
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr.append(sum)
+cum_arr = list(map(float, cum_arr))","[(0.5, 38)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array))
+sum = 0
+for i in range(len(array)):
+    sum += array[i]
+    cum_arr[i] = sum
+cum_arr = cum_arr.astype(float).tolist()","[(0.5, 47)]",False,False
+"import numpy as np
+arr = np.array(array)
+cum_arr = np.zeros(len(arr), dtype=float)
+sum = 0
+for (i, value) in enumerate(arr):
+    sum += value
+    cum_arr[i] = sum
+cum_arr = np.array(cum_arr, dtype=np.float64).tolist()","[(0.5, 131)]",False,False
+"
+cum_arr = [0]
+for (i, val) in enumerate(array):
+    cum_arr.append(cum_arr[i] + val)
+cum_arr = cum_arr[1:]","[(0.5, 51)]",True,True
+"
+cum_arr = [0]
+for val in array:
+    cum_arr.append(cum_arr[-1] + val)
+cum_arr = cum_arr[1:]","[(0.5, 46)]",True,True
+"import statistics
+arr_sum = 0
+median_list = []
+for (index, val) in enumerate(array):
+    arr_sum += val
+    median_val = statistics.median([arr_sum])
+    median_list.append(median_val)
+cum_arr = median_list","[(0.5, 138)]",False,False
+"import itertools
+import numpy as np
+import math
+cum_arr = [math.fsum(list(itertools.islice(array, i + 1))) for i in range(len(array))]
+cum_arr = list(map(float, cum_arr))","[(0.5, 129)]",False,False
+"import numpy as np
+cum_arr = np.array([sum(array[:i + 1]) for i in range(len(array))]).tolist()","[(0.5, 47)]",True,True
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+for (i, val) in enumerate(array):
+    if i > 0:
+        cum_arr[i] = cum_arr[i - 1] + val
+    else:
+        cum_arr[i] = val
+cum_arr = cum_arr.tolist()","[(0.5, 114)]",True,True
+"import numpy as np
+arr = np.array(array)
+cum_arr = np.zeros(len(arr), dtype=float)
+sum = 0
+for (i, value) in enumerate(arr):
+    sum += value
+    cum_arr[i] = sum
+cum_arr = np.ndarray.tolist(cum_arr)","[(0.5, 105)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr[i] = sum
+cum_arr = cum_arr.tolist()","[(0.5, 66)]",False,False
+"import functools
+cum_arr = functools.reduce(lambda a, b: a + [a[-1] + b], array, [0])[1:]
+cum_arr = list(map(float, cum_arr))","[(0.5, 99)]",True,False
+"import numpy as np
+arr = np.array(array)
+cum_arr = np.zeros(len(arr), dtype=float)
+sum = 0
+for (i, value) in enumerate(arr):
+    sum += value
+    cum_arr[i] = sum
+cum_arr = cum_arr.tolist()","[(0.5, 83)]",False,False
+"import numpy as np
+arr = np.array(array)
+cum_arr = np.zeros(len(arr), dtype=float)
+sum = 0
+for (i, value) in enumerate(arr):
+    sum += value
+    cum_arr[i] = sum
+cum_arr = list(cum_arr)","[(0.5, 105)]",False,False
+"import itertools
+import numpy as np
+cum_arr = [sum(list(itertools.islice(array, i + 1))) for i in range(len(array))]
+cum_arr = list(map(float, cum_arr))","[(0.5, 129)]",False,False
+"import numpy as np
+arr = np.array(array)
+cum_arr = np.zeros(len(arr), dtype=float)
+sum = 0
+for (i, value) in enumerate(arr):
+    sum += value
+    cum_arr[i] = sum
+cum_arr = np.array(cum_arr).tolist()","[(0.5, 131)]",False,False
+"
+arr = array
+cum_arr = [sum(arr[0:i + 1]) for i in range(len(arr))]","[(0.5, 132)]",True,True
+"import numpy as np
+import functools
+cum_arr = functools.reduce(lambda acc, x: acc + [acc[-1] + x], array, [0])[1:]","[(0.5, 97)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+for i in range(len(array)):
+    cum_arr[i] = cum_arr[i - 1] + array[i] if i > 0 else array[i]
+cum_arr = cum_arr.tolist()","[(0.5, 140)]",False,False
+"import numpy as np
+cum_arr = np.array([sum(array[0:i + 1]) for i in range(len(array))], dtype=float).tolist()","[(0.5, 47)]",False,False
+"
+cum_arr = []
+count = 0
+for i in range(len(array)):
+    count += array[i]
+    cum_arr.append(count)
+for i in range(len(cum_arr)):
+    cum_arr[i] = float(cum_arr[i])","[(0.5, 100)]",False,False
+"
+cum_arr = [0]
+for i in range(len(array)):
+    cum_arr.append(cum_arr[-1] + array[i])
+cum_arr = list(map(float, cum_arr[1:]))","[(0.5, 123)]",False,False
+"import itertools
+import numpy as np
+import math
+cum_arr = [math.fsum(array[:i + 1]) for i in range(len(array))]
+cum_arr = list(map(float, cum_arr))","[(0.5, 129)]",False,False
+"
+cum_arr = [0]
+for i in range(len(array)):
+    cum_arr.append(cum_arr[i] + array[i])
+cum_arr = list(map(float, cum_arr[1:]))","[(0.5, 130)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+for (i, val) in enumerate(array):
+    cum_arr[i] = sum(array[:i + 1])
+cum_arr = cum_arr.tolist()","[(0.5, 90)]",False,False
+"
+arr = array
+cum_arr = [sum(arr[:i + 1]) for i in range(len(arr))]
+cum_arr = list(map(float, cum_arr))","[(0.5, 132)]",False,False
+"import statistics
+arr_sum = 0
+median_list = []
+for val in array:
+    arr_sum += val
+    median_val = statistics.median([arr_sum])
+    median_list.append(median_val)
+cum_arr = median_list","[(0.5, 138)]",False,False
+"import functools
+cum_arr = functools.reduce(lambda acc, x: acc + [acc[-1] + x], array, [0])[1:]
+cum_arr = [float(x) for x in cum_arr]","[(0.5, 78)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+np.add.accumulate(array, out=cum_arr)
+cum_arr = cum_arr.tolist()","[(0.5, 66)]",False,False
+"import itertools
+cum_arr = [sum(array[:i + 1]) for i in range(len(array))]
+cum_arr = list(map(float, cum_arr))","[(0.5, 104)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+for (i, val) in enumerate(array):
+    cum_arr[i] = val if i == 0 else cum_arr[i - 1] + val
+cum_arr = cum_arr.tolist()","[(0.5, 139)]",False,False
+"
+arr = array
+cum_arr = [sum(arr[:i + 1]) for i in range(len(arr))]
+cum_arr = list(cum_arr)","[(0.5, 132)]",True,True
+"import math
+cum_arr = [sum(array[0:i + 1]) for i in range(len(array))]","[(0.5, 6)]",True,True
+"
+cum_arr = []
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr.append(sum)
+    cum_arr = cum_arr[:len(cum_arr)]","[(0.5, 37)]",False,False
+"
+arr = array
+cum_arr = [sum(arr[:i + 1]) for i in range(len(arr))]
+cum_arr = [float(x) for x in cum_arr]
+cum_arr = list(map(float, cum_arr))","[(0.5, 132)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+for (i, val) in enumerate(array):
+    if i == 0:
+        cum_arr[i] = val
+    else:
+        cum_arr[i] = cum_arr[i - 1] + val
+cum_arr = cum_arr.tolist()","[(0.5, 114)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr[i] = sum
+cum_arr = list(cum_arr)","[(0.5, 92)]",False,False
+"
+arr = array
+cum_arr = [sum(arr[:i + 1]) for i in range(len(arr))]
+cum_arr = [float(x) for x in cum_arr]","[(0.5, 132)]",False,False
+"import numpy as np
+import itertools
+cum_arr = list(itertools.accumulate(array, initial=0))[1:]","[(0.5, 120)]",True,False
+"
+cum_arr = [0]
+for i in range(1, len(array) + 1):
+    cum_arr.append(sum(array[:i]))
+cum_arr = cum_arr[1:]","[(0.5, 70)]",True,True
+"import numpy as np
+arr = np.array(array)
+cum_arr = np.zeros(len(arr), dtype=float)
+sum = 0
+for (i, value) in enumerate(arr):
+    sum += value
+    cum_arr[i] = sum
+cum_arr = np.array(cum_arr, dtype=float).tolist()","[(0.5, 131)]",False,False
+"
+arr = array
+cum_arr = [sum(arr[:i + 1]) for i in range(len(arr))]","[(0.5, 132)]",True,True
+"
+cum_arr = [0]
+for i in range(len(array)):
+    cum_arr.append(cum_arr[i] + array[i])
+cum_arr = cum_arr[1:]","[(0.5, 51)]",True,True
+"import itertools
+def cumsum(arr):
+    cum_arr = []
+    for i in range(1, len(arr) + 1):
+        cum_arr.append(sum(itertools.islice(arr, i)))
+    return cum_arr
+cum_arr = cumsum(array)","[(0.5, 127)]",True,True
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+sum = 0
+for i in range(len(array)):
+    sum += array[i]
+    cum_arr[i] = sum
+cum_arr = cum_arr.tolist()","[(0.5, 47)]",False,False
+"
+arr = array
+cum_arr = [sum(arr[:i + 1]) for i in range(len(arr))]
+cum_arr = list(cum_arr)
+cum_arr = [float(x) for x in cum_arr]","[(0.5, 132)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+for i in range(len(array)):
+    if i > 0:
+        cum_arr[i] = cum_arr[i - 1] + array[i]
+    else:
+        cum_arr[i] = array[i]
+cum_arr = cum_arr.tolist()","[(0.5, 139)]",False,False
+"import numpy as np
+cum_arr = np.zeros(len(array), dtype=float)
+sum = 0
+[cum_arr.__setitem__(i, (sum := (sum + array[i]))) for i in range(len(array))]
+cum_arr = cum_arr.tolist()","[(0.5, 66)]",False,False
+"
+cum_arr = [0] * len(array)
+sum = 0
+for i in range(len(array)):
+    sum += array[i]
+    cum_arr[i] = sum","[(0.5, 10)]",True,True
+"
+cum_arr = []
+sum = 0
+for (i, val) in enumerate(array):
+    sum += val
+    cum_arr.append(sum)
+    cum_arr = list(cum_arr)","[(0.5, 37)]",False,False
+"import numpy as np
+arr = np.array(array)
+cum_arr = np.zeros(len(arr), dtype=float)
+sum = 0
+for (i, value) in enumerate(arr):
+    sum += value
+    cum_arr[i] = sum
+cum_arr = np.asarray(cum_arr).tolist()","[(0.5, 131)]",False,False
+"
+arr = list(array)
+cum_arr = []
+sum = 0
+for (i, value) in enumerate(arr):
+    sum += value
+    cum_arr.append(sum)","[(0.5, 134)]",True,True
+"import numpy as np
+cum_arr = np.array([sum(array[:i + 1]) for i in range(len(array))], dtype=float).tolist()","[(0.5, 60)]",False,False

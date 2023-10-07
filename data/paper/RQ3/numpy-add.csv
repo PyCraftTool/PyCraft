@@ -1,0 +1,43 @@
+variant,temperature-iterations,useful,applicable
+"import numpy as np
+dot_prod = np.add(array1, array2)","[(0.7, 0), (1.2, 0), (0, 0), (0.7, 0), (1.2, 0), (0, 0), (0.5, 0), (0.9, 0), (0.3, 0), (0.5, 0), (0.9, 0), (0.3, 0)]",True,False
+"
+result = []
+for i in range(len(array1)):
+    sum_of_elements = array1[i] + array2[i]
+    result.append(sum_of_elements)","[(0.7, 0), (1.2, 0), (0, 0), (0.7, 0), (1.2, 0), (0, 0), (0.5, 0), (0.9, 0), (0.3, 0), (0.5, 0), (0.9, 0), (0.3, 0)]",True,True
+"
+result = []
+for i in range(len(array1)):
+    result.append(array1[i] + array2[i])
+dot_prod = result","[(0.3, 8)]",True,True
+"
+result = [array1[i] + array2[i] for i in range(len(array1))]
+dot_prod = result","[(0.3, 8)]",True,True
+"
+result = []
+for (index, _) in enumerate(array1):
+    result.append(array1[index] + array2[index])","[(1.2, 3)]",True,True
+"
+result = [0] * len(array1)
+for i in range(len(array1)):
+    result[i] = array1[i] + array2[i]
+dot_prod = result","[(0.3, 19)]",True,True
+"
+result = []
+for i in range(len(array1)):
+    result += [array1[i] + array2[i]]","[(0.7, 11)]",True,True
+"
+result = []
+for i in range(len(array1)):
+    sum_of_elements = array1[i] + array2[i]
+    result.append(sum_of_elements)
+dot_prod = result","[(0.3, 18)]",True,True
+"
+result = list(map(lambda i: array1[i] + array2[i], range(len(array1))))","[(0.9, 13)]",True,False
+"
+result = []
+for i in range(len(array1)):
+    result.append(array1[i] + array2[i])","[(0.7, 1), (1.2, 7), (0, 11), (0.7, 8), (1.2, 7), (0, 7), (0.5, 11), (0.9, 7), (0.3, 11), (0.5, 7), (0.9, 11), (0.3, 7)]",True,True
+"
+result = [array1[i] + array2[i] for i in range(len(array1))]","[(0.7, 1), (1.2, 1), (0, 1), (0.7, 1), (1.2, 3), (0, 1), (0.5, 1), (0.9, 1), (0.3, 1), (0.5, 1), (0.9, 1), (0.3, 1)]",True,True

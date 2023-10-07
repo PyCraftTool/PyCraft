@@ -1,0 +1,2952 @@
+variant,temperature-iterations,useful,applicable
+"
+(d, i) = ({}, 0)
+unique_array = set(array)
+for val in unique_array:
+    d[val] = []
+    for j in array:
+        if j == val:
+            d[val].append(function(j))
+            i += 1","[(0.9, 90)]",False,
+"import itertools
+array_length = len(array)
+d = {}
+for (i, element) in enumerate(array):
+    if element not in d:
+        d[element] = []
+    d[element].append(function(element))","[(1.2, 84)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d.get(i, []).append(function(i))","[(0.3, 17)]",True,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d.get(i).append(function(i))","[(0.3, 2), (0.5, 46), (0.7, 4), (0, 7)]",True,
+"from collections import defaultdict
+d = defaultdict(list)
+for (i, element) in enumerate(array):
+    d[element].append(function(element))","[(1.2, 33)]",True,
+"
+d = {}
+for i in set(array):
+    for j in array:
+        if j == i:
+            if i in d:
+                d[i].extend([function(j)])
+            else:
+                d[i] = [function(j)]","[(1.2, 63)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    if i in array:
+        d[i].append(function(i))","[(0.7, 15)]",True,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = function(i)","[(0.7, 29)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].extend([function(i)])","[(0.3, 28)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    if type(d[i]) != list:
+        if d[i] != None:
+            d[i] = [d[i]]
+    else:
+        d[i].append(function(i))","[(0.9, 42)]",False,
+"
+d = {}
+for i in array:
+    if d.get(i):
+        d[i].insert(0, function(i))
+    else:
+        d[i] = [function(i)]
+    d[i] = d[i][::-1]","[(0.9, 49)]",False,
+"import itertools
+unique_array = list(set(array))
+d = dict(((i, []) for i in unique_array))
+for i in array:
+    d[i].append(function(i))","[(0.9, 83)]",True,
+"
+d = {i: [] for i in array}
+for i in array:
+    d[i] = d.get(i, [])
+    d[i].append(function(i))","[(0.3, 28)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"import numpy as np
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = dict(sorted(d.items(), key=lambda item: item[0], reverse=True))","[(0, 87)]",False,
+"
+d = dict()
+for i in array:
+    if i not in d:
+        d[i] = []
+    if not isinstance(d[i], list):
+        d[i] = [d[i]]
+    d[i].append(function(i))","[(0.9, 41)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))","[(0.3, 35), (0.5, 17), (0, 22)]",True,
+"
+d = {}
+i = 0
+for item in array:
+    if item not in d:
+        d[item] = []
+    d[item].append(function(item))
+    i += 1","[(1.2, 91)]",False,
+"import numpy as np
+result_dict = {}
+for i in array:
+    result_dict[i] = result_dict.get(i, []) + [function(i)]
+d = result_dict
+i = array","[(0.5, 22)]",False,
+"
+d = {}
+for i in array:
+    if d.get(i):
+        d[i].insert(0, function(i))
+    else:
+        d[i] = [function(i)]
+    d[i].reverse()","[(0.9, 49)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i] = d[i][::-1]","[(0.5, 61)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if isinstance(d[i], list):
+        d[i].append(function(i))","[(0.9, 9)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i].sort(reverse=True)","[(0.3, 35)]",False,
+"import collections
+d = collections.defaultdict(list)
+for i in array:
+    d[i].append(function(i))","[(0.9, 6), (0.3, 2), (0.5, 2), (1.2, 1), (0.7, 4), (0, 22)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"import numpy as np
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort(reverse=True)
+array = np.array(array)
+d","[(0, 50)]",False,
+"import numpy as np
+d = {i: [] for i in array}
+for i in array:
+    d[i].append(function(i))","[(0.9, 8)]",True,
+"
+d = {}
+
+def append_to_dict(d, i, value):
+    if i not in d:
+        d[i] = []
+    d[i].append(value)
+d = {}
+for i in array:
+    append_to_dict(d, i, function(i))","[(1.2, 32)]",True,
+"
+d = {}
+for i in set(array):
+    for j in filter(lambda x: x == i, array):
+        if i not in d:
+            d[i] = [function(j)]
+        else:
+            d[i].append(function(j))","[(1.2, 63)]",True,
+"import functools
+d = functools.reduce(lambda a, b: a.update({b: []}) or a, array, {})
+for i in array:
+    d[i].append(function(i))","[(1.2, 10)]",True,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in set(array):
+    for x in array:
+        if x == i:
+            d[i].append(function(x))","[(0.9, 79)]",True,
+"
+unique_values = set(array)
+d = {}
+for i in unique_values:
+    d[i] = []
+    for x in array:
+        if x == i:
+            d[i].append(function(i))","[(0.7, 54)]",True,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d.setdefault(i, []).extend([function(i)])","[(0.3, 2), (0.7, 72)]",False,
+"
+d = {}
+
+def add_to_dict(key, value):
+    if key in d:
+        d[key].append(value)
+    else:
+        d.setdefault(key, []).append(value)
+for i in array:
+    function_output = function(i)
+    add_to_dict(i, function_output)","[(1.2, 31)]",True,
+"import numpy as np
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    index = int(len(d[i]) / 2)
+    d[i].insert(index, function(i))","[(0.5, 53)]",False,
+"
+d = {}
+for i in range(len(array)):
+    if array[i] not in d:
+        d[array[i]] = []
+    d[array[i]].append(function(array[i]))","[(0.9, 18)]",False,
+"import itertools
+d = {}
+for i in set(array):
+    count = len(list(itertools.filterfalse(lambda x: x != i, array)))
+    d[i] = []
+    for _ in range(count):
+        d[i].append(function(i))","[(0.5, 39)]",True,
+"import numpy as np
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = dict(sorted(d.items(), key=lambda item: len(item[1]), reverse=True))","[(0, 87)]",False,
+"import collections
+d = collections.defaultdict(list)
+i = 0
+while i < len(array):
+    item = array[i]
+    d[item].append(function(item))
+    i += 1","[(1.2, 36)]",True,
+"import itertools
+arr = list(itertools.chain.from_iterable([[i] * array.count(i) for i in set(array)]))
+d = {}
+for i in arr:
+    if i not in d:
+        d[i] = []
+    if isinstance(d.get(i), list):
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.7, 35)]",False,
+"
+d = {}
+for i in set(array):
+    d[i] = [function(x) for x in array if x == i]","[(0.9, 7)]",True,
+"
+d = {}
+i = 0
+while i < len(array):
+    item = array[i]
+    d[item] = d.get(item, []) + [function(item)]
+    i += 1","[(1.2, 90)]",True,
+"
+d = {i: [function(j) for j in array if j == i] for i in set(array)}","[(1.2, 6)]",True,
+"
+arr = []
+for i in set(array):
+    for _ in range(array.count(i)):
+        arr.append(i)
+d = {}
+for i in arr:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.7, 36)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i] = d[i][::-1]","[(0.9, 49)]",False,
+"
+d = {}
+for i in set(array):
+    d[i] = []
+    count = sum((1 for x in array if x == i))
+    for _ in range(count):
+        d[i].append(function(i))","[(0.5, 40)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in set(array):
+    d[i] = list(filter(lambda x: x == i, array))
+    d[i] = list(map(function, d[i]))","[(0.7, 53)]",True,
+"
+d = {}
+for (i, value) in enumerate(array):
+    d.setdefault(value, []).append(function(value))","[(0.9, 73)]",True,
+"import itertools
+import collections
+keys = set(array)
+d = {key: [] for key in keys}
+for i in array:
+    d[i].append(function(i))
+d = collections.defaultdict(list)
+for i in array:
+    d[i].append(function(i))","[(0.7, 68)]",False,
+"
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = dict(sorted(d.items(), key=lambda item: item[0]))","[(0, 74)]",False,
+"
+array = list(array)
+d = {}
+for i in array:
+    d[i] = d.get(i, [])
+    d[i] += [function(i)]","[(0.5, 20)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    value = d.get(i, [])
+    value.extend([function(i)])","[(0, 31)]",False,
+"
+d = {}
+for i in set(array):
+    count = array.count(i)
+    d[i] = [function(i)] * count","[(0.5, 35)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i].sort()","[(0.3, 35), (0.5, 60), (0, 22)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))","[(0.5, 52)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d.get(i).insert(0, function(i))","[(0.3, 8)]",False,
+"from collections import defaultdict
+add_to_dict = defaultdict(list)
+for i in array:
+    function_output = function(i)
+    add_to_dict[i].append(function_output)
+d = dict(add_to_dict)","[(1.2, 74)]",True,
+"import itertools
+array = list(array)
+d = {k: [] for k in array}
+for i in array:
+    d[i].append(function(i))","[(0.7, 70)]",True,
+"import collections
+d = {}
+
+def add_to_dict(i):
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+for i in array:
+    add_to_dict(i)","[(0.9, 20)]",True,
+"
+d = {}
+for i in array:
+    d[i] = d.setdefault(i, []) + [function(i)]","[(0.5, 17), (1.2, 46)]",True,
+"
+d = {i: [] for i in set(array)}
+for i in array:
+    d[i].append(function(i))","[(0.9, 10), (0.5, 45), (1.2, 4)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"from collections import defaultdict
+arr = array
+d = defaultdict(list)
+for i in arr:
+    d[i].append(function(i))","[(0.7, 9)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    temp = function(i)
+    d[i].append(temp)","[(0.9, 6), (0.5, 18)]",True,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].insert(len(d[i]), function(i))
+    else:
+        d[i] = [function(i)]
+    d[i] = d[i][::-1]","[(0.5, 61)]",False,
+"
+d = {}
+for i in range(len(array)):
+    if array[i] in d:
+        d[array[i]].append(function(array[i]))
+    else:
+        d[array[i]] = [function(array[i])]","[(0.9, 3)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].append(function(i))","[(0.7, 23)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"import numpy as np
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = dict(sorted(d.items(), key=lambda item: len(item[1])))","[(0, 87)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    if isinstance(function(i), list):
+        d[i].extend(function(i))
+    elif function(i) is not None:
+        d[i].append(function(i))","[(0.9, 46)]",False,
+"import functools
+func = functools.partial(function)
+d = {}
+for i in set(array):
+    d[i] = list(filter(lambda x: x == i, array))
+    d[i] = list(map(func, d[i]))","[(0.7, 47)]",True,
+"import numpy as np
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    index = len(d[i]) // 2
+    d[i].insert(int(index), function(i))","[(0.5, 53)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if i in array:
+        d[i] += [function(i)]","[(0.7, 15)]",True,
+"import collections
+def append_to_dict(d, i, value):
+    if i not in d:
+        d[i] = []
+    d[i].append(value)
+d = collections.defaultdict(list)
+for i in array:
+    append_to_dict(d, i, function(i))","[(1.2, 78)]",True,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.5, 25), (0.7, 6)]",False,
+"
+d = {}
+for i in array:
+    d[i] = [function(i)] if i not in d else d[i] + [function(i)]","[(0.5, 1)]",True,
+"
+d = {}
+for i in array:
+    d.setdefault(i, []).insert(0, function(i))","[(0.3, 41)]",True,
+"
+array_length = len(array)
+d = {}
+i = 0
+while i < array_length:
+    element = array[i]
+    if element not in d:
+        d[element] = []
+    d[element].append(function(element))
+    i += 1","[(1.2, 84)]",True,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d.setdefault(i, []).insert(0, function(i))","[(0.3, 53)]",False,
+"
+d = {}
+i = 0
+for elem in array:
+    if elem in d:
+        d[elem].append(function(elem))
+    else:
+        d[elem] = [function(elem)]
+    if len(d[elem]) > 1:
+        d[elem] = d[elem][::-1]
+    i += 1","[(0.9, 51)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    d[i] = d.get(i, [])
+    d[i].extend([function(i)])","[(0.3, 28)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    elif not isinstance(d[i], list):
+        d[i] = [d[i]]
+    if isinstance(function(i), list):
+        d[i].extend(function(i))
+    else:
+        d[i].append(function(i))","[(0.9, 43)]",False,
+"
+pairs = [(i, function(i)) for i in array]
+d = {i: [] for (i, _) in pairs}
+for (i, value) in pairs:
+    d[i].insert(len(d[i]) // 2, value)","[(0.5, 54)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    function_output = function(i)
+    d[i].append(function_output)","[(1.2, 74)]",True,
+"
+d = {}
+for i in set(array):
+    d[i] = []
+    for _ in range(array.count(i)):
+        d[i].append(function(i))","[(0.5, 9)]",True,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].extend([function(i)])","[(0.9, 96), (0.3, 2), (0.5, 46), (0.7, 60), (0, 7)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    d[i] = d.get(i, [])
+    d[i].append(function(i))","[(0.9, 8), (0.3, 4), (0.5, 1), (1.2, 18), (0.7, 15), (0, 32)]",True,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    if i in array:
+        d[i].append(function(i))","[(0.7, 57)]",True,
+"
+d = {}
+for i in array:
+    if i in d.keys():
+        d[i].extend([function(i)])
+    else:
+        d[i] = []
+        d[i].extend([function(i)])","[(0.9, 96)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])
+    d[i].sort()","[(0.3, 35)]",False,
+"
+d = dict()
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].append(function(i))","[(1.2, 20)]",False,
+"import itertools
+d = {}
+for i in set(array):
+    count = len(list(itertools.filterfalse(lambda x: x != i, array)))
+    d[i] = [function(i)] * count","[(0.5, 39)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    if i in array:
+        d[i].append(function(i))
+d = {k: v for (k, v) in d.items() if v != []}","[(0.7, 61)]",False,
+"
+array = list(array)
+d = {}
+for i in set(array):
+    d[i] = [function(x) for x in array if x == i]","[(0.9, 61)]",True,
+"
+d = {}
+for i in set(array):
+    d[i] = []
+    for x in array:
+        if x == i:
+            d[i] += [function(i)]","[(0.7, 15)]",True,
+"import itertools
+unique_values = set(array)
+d = {}
+for i in unique_values:
+    d[i] = []
+    count = sum((1 for x in itertools.filterfalse(lambda x: x != i, array)))
+    for _ in range(count):
+        d[i].append(function(i))","[(0.5, 40)]",True,
+"
+d = {}
+for i in set(array):
+    d[i] = []
+    count = len([x for x in array if x == i])
+    for _ in range(count):
+        d[i].append(function(i))","[(0.5, 40)]",True,
+"import itertools
+array = list(array)
+d = {i: [] for i in array}
+for i in array:
+    if i in d.keys():
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.7, 34)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].insert(0, function(i))
+    else:
+        d[i] = [function(i)]","[(0.3, 40)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    value = d[i]
+    value.extend([function(i)])","[(0, 31)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]) // 2, function(i))","[(0.5, 17), (0, 62)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    if not d[i]:
+        d[i] = []
+    d[i].append(function(i))","[(0.7, 14)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].insert(len(d[i]) // 2, function(i))
+    else:
+        d[i] = [function(i)]
+    d[i] = d[i][::-1]
+    d[i] = d[i][::-1]","[(0.5, 61)]",False,
+"import itertools
+unique_array = list(set(array))
+d = {i: [] for i in unique_array}
+for i in array:
+    d[i].append(function(i))","[(0.9, 7)]",True,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].insert(0, function(i))
+    else:
+        d[i] = [function(i)]
+    d[i] = d[i][::-1]","[(0.9, 49), (0.5, 61)]",False,
+"
+d = {}
+for i in array:
+    d.setdefault(i, [])
+for i in array:
+    d[i].append(function(i))","[(0.9, 0), (0.3, 0), (0.5, 0), (1.2, 0), (0.7, 0), (0, 0)]",True,
+"import itertools
+arr = list(itertools.chain.from_iterable([[i] * array.count(i) for i in set(array)]))
+d = {}
+for i in arr:
+    if i not in d:
+        d[i] = []
+    if isinstance(d.get(i), list):
+        d[i].extend([function(i)])
+    else:
+        d[i] = [function(i)]","[(0.7, 35)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    d[i].insert(len(d[i]), function(i))","[(0.5, 52)]",True,
+"import itertools
+d = {}
+for i in array:
+    d[i] = list(itertools.chain(d.get(i, []), [function(i)]))","[(0.5, 31)]",False,
+"
+d = {}
+unique_array = set(array)
+for i in unique_array:
+    d[i] = [function(j) for j in array if j == i]","[(0.9, 90)]",True,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if i in array:
+        d[i].append(function(i))","[(0.7, 15)]",True,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if i not in d.keys():
+        d[i] = [d.get(i, [])]
+        d[i].extend([function(i)])
+    else:
+        d[i] += [function(i)]","[(0.7, 15)]",False,
+"from typing import Dict
+def append_to_dict(d: Dict[int, list], i: int, value) -> Dict[int, list]:
+    if i not in d:
+        d[i] = []
+    d[i].append(value)
+d = {}
+for i in array:
+    append_to_dict(d, i, function(i))","[(1.2, 78)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d.get(i).append(function(i))","[(0.3, 2), (0.5, 46), (1.2, 32), (0.7, 4), (0, 7)]",True,
+"
+d = {}
+for i in array:
+    if i in d.keys():
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.9, 9), (0.3, 15), (0.5, 29), (0.7, 34)]",True,
+"import itertools, numpy as np
+array_length = np.size(array)
+d = {}
+for (i, element) in enumerate(array):
+    if element not in d:
+        d[element] = []
+    d[element].append(function(element))","[(1.2, 84)]",False,
+"import numpy as np
+array_length = len(array)
+d = {}
+for i in range(array_length):
+    if array[i] not in d:
+        d[array[i]] = []
+    d[array[i]].append(function(array[i]))","[(1.2, 83)]",True,
+"
+d = {}
+for i in set(array):
+    count = array.count(i)
+    d[i] = []
+    for _ in range(count):
+        d[i].append(function(i))","[(0.5, 39)]",True,
+"import numpy as np
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    index = len(d[i]) // 2
+    d[i].insert(index, function(i))","[(0.5, 53)]",False,
+"import numpy as np
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+array = list(array)
+d = {k: v for (k, v) in sorted(d.items(), key=lambda item: item[0])}
+array = np.array(array)
+d = np.array(d)","[(0.3, 60)]",False,
+"
+d = {}
+for i in array:
+    d[i] = [function(i)] + d.get(i, [])","[(0.3, 41)]",False,
+"import numpy as np
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+array = np.array(array)
+d = np.array(d)","[(0.3, 60)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    d[i].insert(len(d[i]) // 2, function(i))","[(0.5, 54)]",False,
+"import collections
+d = collections.defaultdict(list)
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].append(function(i))","[(0.7, 60)]",False,
+"import collections
+d = dict()
+i = 0
+while i < len(array):
+    item = array[i]
+    if d.get(item) is None:
+        d[item] = []
+    d[item].append(function(item))
+    i += 1","[(1.2, 89)]",True,
+"
+d = {}
+for i in array:
+    if not d.get(i):
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))","[(0.5, 52)]",True,
+"import itertools
+unique_values = set(array)
+d = {}
+for i in unique_values:
+    d[i] = []
+    for x in array:
+        if x == i:
+            d[i] = list(itertools.chain(d[i], [function(i)]))","[(0.7, 54)]",False,
+"import itertools
+array_length = len(array)
+d = {}
+for i in range(array_length):
+    element = array[i]
+    if element not in d:
+        d[element] = []
+    d[element].append(function(element))","[(1.2, 34)]",True,
+"
+d = dict()
+for i in array:
+    d.setdefault(i, []).append(function(i))","[(0.9, 41), (1.2, 43)]",True,
+"import itertools
+d = dict(zip(array, [[] for _ in range(len(array))]))
+for i in array:
+    d[i].append(function(i))","[(1.2, 10)]",True,
+"
+d = {}
+i = 0
+for item in array:
+    if item in d:
+        d[item].append(function(item))
+    else:
+        d[item] = [function(item)]","[(1.2, 86)]",False,
+"
+d = {}
+for i in set(array):
+    count = 0
+    for j in array:
+        if j == i:
+            count += 1
+    d[i] = []
+    for _ in range(count):
+        d[i].append(function(i))","[(0.5, 39)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"from collections import defaultdict
+def my_function(i):
+    return function(i)
+new_d = defaultdict(list)
+for i in array:
+    new_d[i].append(my_function(i))
+d = dict(new_d)","[(1.2, 50)]",True,
+"
+d = {i: list() for i in array}
+for i in array:
+    if i in d:
+        d[i].append(function(i))","[(1.2, 21)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = {k: v for (k, v) in sorted(d.items())}","[(0, 46)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])","[(0.3, 28)]",False,
+"
+d = {}
+for i in array:
+    temp = function(i)
+    if i in d:
+        d[i].append(temp)
+    else:
+        d[i] = [temp]","[(1.2, 71)]",True,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+d","[(0.3, 42), (0.5, 49)]",False,
+"
+d = dict()
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(1.2, 43)]",True,
+"from collections import defaultdict
+import numpy as np
+d = {}
+for i in array:
+    d[i] = [function(i)] + d.get(i, []) if i not in d.keys() else d[i]
+d = defaultdict(list)
+for i in array:
+    d[i].insert(0, function(i))
+array = np.array(array)","[(0.3, 41)]",False,
+"
+d = {}
+for i in set(array):
+    if i not in d:
+        d[i] = []
+    for j in array:
+        if j == i:
+            d[i].append(function(j))","[(1.2, 63)]",True,
+"import numpy as np
+result_dict = {}
+for i in array:
+    if i in result_dict:
+        result_dict[i].append(function(i))
+    else:
+        result_dict[i] = [function(i)]
+d = result_dict
+i = array","[(0.5, 22)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = []
+        d[i].extend([function(i)])","[(0.3, 34)]",True,
+"
+array = list(array)
+d = {}
+for i in array:
+    d.setdefault(i, []).append(function(i))","[(0.9, 12)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i] = sorted(d[i])","[(0.3, 39)]",False,
+"
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].reverse()
+sorted_keys = sorted(d.keys())
+d = {k: d[k] for k in sorted_keys}","[(0, 75)]",False,
+"
+d = {}
+i_index = {}
+for i in array:
+    if i not in d:
+        d[i] = list()
+        i_index[i] = 0
+    d[i].append(function(i))","[(1.2, 52)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])
+    d[i].sort(reverse=True)","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i] = d.get(i, [])
+    d[i].append(function(i))","[(0.7, 65)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i in d:
+        d[i].append(function(i))","[(1.2, 21)]",True,
+"import collections
+import collections
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].append(function(i))
+d = collections.defaultdict(list)
+for i in array:
+    d[i].append(function(i))
+d = collections.defaultdict(list)
+for i in array:
+    d[i].append(function(i))","[(1.2, 46)]",False,
+"from collections import defaultdict
+array = list(array)
+d = defaultdict(list)
+for i in array:
+    d[i].append(function(i))","[(0.9, 12), (0.7, 21)]",False,
+"
+d = {}
+for i in array:
+    d[i] = d.get(i, [])
+    d[i].insert(len(d[i]), function(i))","[(0.5, 17)]",True,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]
+    d[i] = d[i][::-1]","[(0.9, 49)]",False,
+"
+d = dict()
+for i in array:
+    d[i] = d.get(i, []) + [function(i)]","[(1.2, 43)]",True,
+"
+d = {i: [] for i in array}
+for i in array:
+    d[i] = d.get(i, []) + [function(i)]","[(0.3, 28)]",True,
+"import itertools
+array = list(array)
+d = {}
+for i in array:
+    d[i] = d.get(i, [])
+    d.get(i).append(function(i))","[(0.3, 48)]",False,
+"
+d = {}
+for i in array:
+    d[i] = d.get(i, [])
+    d[i].insert(0, function(i))","[(0.5, 17)]",False,
+"
+d = {}
+for i in array:
+    d[i] = d.get(i, [])
+    d.get(i).append(function(i))","[(0.3, 14)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    d[i].append(function(i))
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+d = {i: [] for i in array}
+for i in array:
+    d[i].append(function(i))","[(1.2, 47)]",False,
+"import collections
+d = collections.defaultdict(list)
+for i in array:
+    d[i].extend([function(i)])","[(0.3, 27), (0.5, 44), (0, 55)]",False,
+"import itertools, numpy as np
+array_length = np.size(array)
+d = {}
+for (i, element) in zip(range(array_length), array):
+    if element not in d:
+        d[element] = []
+    d[element].append(function(element))","[(1.2, 84)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = []
+        d.get(i).append(function(i))","[(0.3, 34)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d.get(i).extend([function(i)])","[(0.3, 2), (0.5, 46), (0, 7)]",False,
+"import collections
+d = collections.defaultdict(list)
+for i in array:
+    d[i].insert(0, function(i))","[(0.5, 50)]",False,
+"
+d = dict()
+i = 0
+for i in range(len(array)):
+    item = array[i]
+    if item not in d:
+        d[item] = []
+    d[item].append(function(item))","[(1.2, 86)]",False,
+"from collections import defaultdict
+unique_array = list(set(array))
+d = defaultdict(list)
+for i in array:
+    d[i].append(function(i))","[(0.9, 83)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i] = [function(i)] + d[i]","[(0.3, 44)]",False,
+"import itertools
+unique_array = list(set(array))
+d = {}
+for i in unique_array:
+    d[i] = []
+for i in array:
+    d[i].append(function(i))","[(0.9, 25)]",False,
+"import itertools
+unique_array = list(set(array))
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.9, 25)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))","[(0.3, 8), (0.5, 17), (0, 22)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    d[i].extend([function(i)])","[(0.3, 27), (0.7, 22), (0, 32)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    d[i].insert(0, function(i))","[(0.3, 39), (0.5, 58)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if isinstance(d[i], list):
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(1.2, 39)]",False,
+"
+unique_array = set(array)
+d = {}
+for i in unique_array:
+    d[i] = []
+for i in array:
+    d[i].append(function(i))","[(0.9, 26)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].append(function(i))","[(0.9, 2), (0.3, 2), (0.5, 2), (1.2, 20), (0.7, 4), (0, 7)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i].sort()
+array = list(array)","[(0, 44)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+i = 0
+while i < len(array):
+    item = array[i]
+    d[item].append(function(item))
+    i += 1","[(1.2, 91)]",False,
+"
+d = {}
+for i in set(array):
+    temp_list = []
+    for j in array:
+        if j == i:
+            temp_list.append(function(j))
+    d[i] = temp_list","[(1.2, 28)]",False,
+"import numpy as np
+result_dict = {}
+for i in array:
+    try:
+        result_dict[i].append(function(i))
+    except KeyError:
+        result_dict[i] = [function(i)]
+d = result_dict
+i = array","[(0.5, 22)]",False,
+"import numpy as np
+result_dict = {}
+for i in array:
+    result_dict.setdefault(i, []).extend([function(i)])
+d = result_dict
+i = array","[(0.5, 22)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"from collections import defaultdict
+default_dict = defaultdict(list)
+for i in array:
+    default_dict[i].append(function(i))
+d = dict(default_dict)","[(0.9, 90)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    d[i].append(function(i))","[(0.9, 3), (0.3, 3), (0.5, 1), (1.2, 5), (0.7, 1), (0, 1)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if i in d.keys():
+        d[i].append(function(i))","[(0.7, 55)]",False,
+"from collections import defaultdict
+functions = [function(i) for i in array]
+d = defaultdict(list)
+for (i, func) in zip(array, functions):
+    d[i].append(func)","[(0.9, 15)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].reverse()","[(0.3, 24), (0, 22)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if not isinstance(d[i], list):
+        d[i] = [d[i]]
+    if isinstance(function(i), list):
+        d[i].extend(function(i))
+    else:
+        d[i].append(function(i))","[(0.9, 9)]",False,
+"import collections
+import collections
+d = collections.defaultdict(list)
+for i in array:
+    d[i].append(function(i))
+d = {}
+for i in array:
+    d.setdefault(i, [])
+for i in array:
+    d[i].append(function(i))
+d = collections.defaultdict(list)
+for i in array:
+    d[i].append(function(i))","[(0.7, 2)]",False,
+"from collections import defaultdict
+array = list(array)
+d = defaultdict(list)
+for i in range(len(array)):
+    if array[i] not in d:
+        d[array[i]] = [function(array[i])]
+    else:
+        d[array[i]].append(function(array[i]))","[(0.9, 59)]",False,
+"import numpy as np
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = dict(sorted(d.items(), key=lambda item: item[1], reverse=True))","[(0, 87)]",False,
+"import itertools
+keys = set(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.7, 67)]",False,
+"from collections import defaultdict
+d = {}
+for i in array:
+    d[i] = [function(i)] + d.get(i, []) if i not in d.keys() else d[i]
+d = defaultdict(list)
+for i in array:
+    d[i].insert(0, function(i))","[(0.3, 41)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+array = list(array)
+d = {k: v for (k, v) in sorted(d.items(), key=lambda item: item[0])}","[(0.3, 60)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = dict(sorted(d.items(), key=lambda item: item[0]))","[(0, 73)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i] = d.get(i, [])
+    d[i] += [function(i)]","[(0.7, 65)]",False,
+"import itertools
+arr = list(itertools.chain.from_iterable([[i] * array.count(i) for i in set(array)]))
+d = {}
+for i in arr:
+    if i not in d:
+        d[i] = []
+    if isinstance(d[i], list):
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.7, 35)]",False,
+"
+d = {}
+for i in array:
+    if d.get(i) is None:
+        d[i] = []
+    if type(d[i]) != list:
+        d[i] = [d[i]]
+    d[i].append(function(i))","[(0.9, 41)]",False,
+"import itertools
+import collections
+keys = set(array)
+d = collections.defaultdict(list)
+for i in array:
+    d[i].append(function(i))","[(0.7, 68)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]) // 2, function(i))
+    d[i] = d[i][::-1]
+    d[i] = d[i][::-1]","[(0.5, 61)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i] = d.get(i, []) + [function(i)]","[(0.7, 65)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in range(len(array)):
+    d[array[i]].append(function(array[i]))","[(0.9, 18)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = []
+        d[i].append(function(i))","[(0.3, 34), (0.5, 1), (1.2, 31), (0.7, 46)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if not isinstance(d[i], list):
+        d[i] = [d[i]]
+    d[i].append(function(i))","[(0.9, 9)]",False,
+"
+d = {}
+for i in array:
+    d.setdefault(i, []).insert(len(d[i]), function(i))","[(0.5, 52)]",False,
+"import collections
+d = collections.defaultdict(list)
+for (i, element) in enumerate(array):
+    d[element].append(function(element))","[(1.2, 80)]",False,
+"import itertools
+keys = set(array)
+d = {key: [] for key in keys}
+for i in array:
+    if i in d:
+        d[i].extend([function(i)])
+    else:
+        d[i] = [function(i)]","[(0.7, 67)]",False,
+"import collections
+d = collections.defaultdict(list)
+for i in array:
+    if i in array:
+        d[i].append(function(i))","[(0.7, 57)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].insert(0, function(i))
+    else:
+        d[i] = [function(i)]
+    d[i] = d[i][::-1]
+    d[i] = d[i][::-1]","[(0.5, 61)]",False,
+"import itertools
+import collections
+keys = set(array)
+d = {key: [] for key in keys}
+for i in array:
+    d[i].append(function(i))
+d","[(0.7, 68)]",False,
+"
+d = {}
+for i in set(array):
+    d[i] = []
+for i in array:
+    d[i].append(function(i))","[(0.9, 10)]",False,
+"
+d = {}
+i = 0
+max_iter = len(array)
+while i < max_iter:
+    item = array[i]
+    if item not in d:
+        d[item] = []
+    d[item].append(function(item))
+    i += 1","[(1.2, 35)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    elif i not in d:
+        d[i] = [function(i)]","[(0.7, 29)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    if i in array:
+        d[i].append(function(i))
+d = {k: v for (k, v) in d.items() if len(v) != 0}","[(0.7, 61)]",False,
+"import itertools
+import collections
+keys = set(array)
+d = {key: [] for key in keys}
+for i in array:
+    d[i].append(function(i))
+d = collections.OrderedDict(sorted(d.items()))","[(0.7, 68)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = list()
+    d[i].append(function(i))","[(1.2, 22)]",False,
+"import itertools
+keys = set(array)
+d = {key: [] for key in keys}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])","[(0.7, 67)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i] += [function(i)]","[(0.3, 28)]",False,
+"import itertools
+array = list(array)
+d = {}
+for i in range(len(array)):
+    if array[i] not in d:
+        d[array[i]] = []
+    d[array[i]].append(function(array[i]))","[(0.9, 71)]",False,
+"
+d = {}
+for i in set(array):
+    temp_list = [function(j) for j in array if j == i]
+    d[i] = temp_list","[(1.2, 28)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = [function(i)]
+    else:
+        d[i].append(function(i))","[(0.5, 24)]",False,
+"
+d = {}
+i_array = iter(array)
+while True:
+    try:
+        i = next(i_array)
+        if i not in d:
+            d[i] = []
+        d[i].append(function(i))
+    except StopIteration:
+        break","[(0.9, 29)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+i = 0
+while i < len(array):
+    item = array[i]
+    if item not in d:
+        d[item] = []
+    d[item].append(function(item))
+    i += 1","[(1.2, 85)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in set(array):
+    d[i] = [function(i)] * array.count(i)","[(0.5, 35)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    if i in array:
+        d[i].append(function(i))
+d = {k: v for (k, v) in d.items() if len(v) > 0}","[(0.7, 61)]",False,
+"
+d = {}
+for i in set(array):
+    d[i] = [function(i)] * array.count(i)","[(0.5, 36)]",False,
+"import numpy as np
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i].sort()
+array = np.array(array)","[(0, 44)]",False,
+"import collections
+array = list(array)
+d = collections.defaultdict(list)
+for i in array:
+    d[i].append(function(i))","[(0.9, 61)]",False,
+"import collections
+d = collections.defaultdict(list)
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.7, 42)]",False,
+"import collections
+d = collections.defaultdict(list)
+for i in set(array):
+    for j in array:
+        if j == i:
+            d[i].append(function(j))
+d = dict(d)","[(1.2, 64)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i] = d[i][::-1]
+    d[i] = d[i][::-1]","[(0.5, 61)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i] += [function(i)]
+    else:
+        d[i] = [function(i)]","[(0.5, 44)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in set(array):
+    d[i] = []
+for i in array:
+    d[i].append(function(i))","[(0.9, 55)]",False,
+"
+d = {}
+for i in range(len(array)):
+    item = array[i]
+    if item not in d:
+        d[item] = []
+    d[item].append(function(item))","[(1.2, 12)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+d","[(0.3, 59)]",False,
+"import itertools
+keys = set(array)
+d = {key: [] for key in keys}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.7, 67)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].reverse()
+sorted_keys = sorted(d.keys())
+d = {k: d[k] for k in sorted_keys}","[(0, 47)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if not isinstance(d[i], list):
+        d[i] = [d[i]]
+    if function(i) is not None:
+        if isinstance(function(i), list):
+            d[i].extend(function(i))
+        else:
+            d[i].append(function(i))","[(0.9, 45)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()","[(0.3, 24), (0.5, 60), (0, 22)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i in d:
+        d[i].extend([function(i)])
+    else:
+        d[i] = [function(i)]","[(0.3, 28)]",False,
+"
+array = list(array)
+d = {}
+for i in array:
+    d[i] = d.get(i, []) + [function(i)]","[(0.9, 12)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].reverse()
+sorted_keys = sorted(d.keys(), reverse=True)
+d = {k: d[k] for k in sorted_keys}","[(0, 48)]",False,
+"
+d = {}
+for i in array:
+    if not d.get(i):
+        d[i] = []
+    d[i].append(function(i))","[(0.5, 52), (1.2, 22)]",False,
+"
+d = {}
+for i in array:
+    d[i] = d.get(i, []) + [function(i)]","[(0.9, 9), (0.3, 15), (0.5, 1), (1.2, 46), (0.7, 5), (0, 32)]",False,
+"
+d = dict()
+for i in array:
+    if i in d:
+        d[i].extend([function(i)])
+    else:
+        d[i] = [function(i)]","[(1.2, 43)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].extend([function(i)])
+    else:
+        d[i] = [function(i)]
+    d[i] = d[i][::-1]","[(0.9, 49)]",False,
+"import numpy as np
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = dict(sorted(d.items(), key=lambda item: len(item[1])))
+(d, i) = (sorted_d, len(sorted_d))","[(0, 103)]",False,
+"import itertools
+arr = list(itertools.chain.from_iterable([[i] * array.count(i) for i in set(array)]))
+d = {}
+for i in arr:
+    if i not in d:
+        d[i] = []
+    if type(d[i]) == list:
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.7, 35)]",False,
+"import itertools
+array_set = set(array)
+d = {}
+for i in array_set:
+    temp_list = [function(j) for j in array if i == j]
+    d[i] = temp_list","[(1.2, 67)]",False,
+"import numpy as np
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    index = int(len(d[i]) / 2)
+    d[i].insert(int(index), function(i))","[(0.5, 53)]",False,
+"
+d = {}
+for i in set(array):
+    count = 0
+    for j in array:
+        if j == i:
+            count += 1
+    d[i] = [function(i)] * count","[(0.5, 39)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].reverse()
+for key in sorted(d.keys()):
+    d[key] = sorted(d[key])","[(0.3, 62)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    try:
+        d[i].append(function(i))
+    except KeyError:
+        d[i] = [function(i)]","[(1.2, 39)]",False,
+"
+d = {}
+for i in set(array):
+    for j in array:
+        if j == i:
+            if i not in d:
+                d[i] = []
+            d[i].append(function(j))","[(1.2, 64)]",False,
+"from collections import defaultdict
+array_dict = defaultdict(list)
+for i in set(array):
+    for x in array:
+        if x == i:
+            array_dict[i] += [function(i)]
+d = dict(array_dict)","[(0.7, 53)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    if d.get(i):
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]
+    if len(d[i]) > 1:
+        d[i] = d[i][::-1]","[(0.9, 9)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d.get(i, []).append(function(i))","[(0.3, 17)]",False,
+"import numpy as np
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = dict(sorted(d.items(), key=lambda item: item[1]))","[(0, 87)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    if i in array:
+        d[i].extend([function(i)])","[(0.7, 63)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].append(function(i))","[(0.3, 28)]",False,
+"import numpy as np
+from numpy import ndarray
+def append_to_dict(d: ndarray, i: int, value) -> ndarray:
+    if i not in d:
+        d[i] = []
+    d[i].append(value)
+d = {}
+for i in array:
+    append_to_dict(d, i, function(i))","[(1.2, 78)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i in d.keys():
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.7, 6)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = []
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.9, 2)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+i = 0
+while i < len(array):
+    item = array[i]
+    if item in d:
+        d[item].extend([function(item)])
+    else:
+        d[item] = [function(item)]
+    i += 1","[(1.2, 90)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].reverse()
+d = dict(sorted(d.items()))","[(0.3, 61)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort(reverse=True)","[(0.3, 24), (0, 22)]",False,
+"
+d = {}
+for i in array:
+    if i in d.keys():
+        d[i].extend([function(i)])
+    else:
+        d[i] = []
+        d[i].append(function(i))","[(0.9, 96)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i] = d.get(i, [])
+    d[i].extend([function(i)])","[(0.7, 65)]",False,
+"
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.9, 12), (0.7, 70)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i] += [function(i)]","[(0.3, 28)]",False,
+"import itertools
+unique_array = set(array)
+d = {i: [] for i in unique_array}
+for i in array:
+    d[i].append(function(i))","[(0.9, 25)]",False,
+"from collections import defaultdict
+array = list(array)
+d = defaultdict(list)
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.9, 59)]",False,
+"
+d = {}
+for i in array:
+    if i in d.keys():
+        d[i].extend([function(i)])
+    else:
+        d[i] = []
+        d[i] += [function(i)]","[(0.9, 96)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.3, 28), (0.5, 13)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if i in array:
+        d[i].extend([function(i)])","[(0.7, 63)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d.setdefault(i, []).extend([function(i)])","[(0.3, 2), (0.7, 72)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    d[i] = d.get(i, [])
+    d[i] += [function(i)]","[(0.3, 28)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i] += [function(i)]","[(0.9, 32), (0.3, 21), (0.5, 1), (0.7, 65), (0, 81)]",False,
+"from collections import defaultdict as dd
+d = dd(list)
+for val in set(array):
+    for j in array:
+        if j == val:
+            d[val].append(function(j))","[(1.2, 62)]",False,
+"
+d = {}
+i_set = set(array)
+for i in i_set:
+    d[i] = []
+    for j in array:
+        if j == i:
+            d[i].append(function(j))","[(1.2, 66)]",False,
+"
+d = dict()
+i = 0
+for item in array:
+    if item in d:
+        d[item].append(function(item))
+    else:
+        d[item] = []
+        d[item].append(function(item))","[(1.2, 86)]",False,
+"import itertools
+arr = list(itertools.chain.from_iterable([[i] * array.count(i) for i in set(array)]))
+d = {}
+for i in arr:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.7, 9)]",False,
+"
+d = {}
+for i in array:
+    d[i] = d.get(i, [])
+    d[i].extend([function(i)])","[(0.9, 96), (0.5, 12)]",False,
+"
+d = {}
+for i in array:
+    if d.get(i):
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]
+    d[i] = d[i][::-1]","[(0.9, 9)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))","[(0.5, 52)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+array = list(array)
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.9, 65)]",False,
+"import itertools
+array_length = len(array)
+d = {}
+for (i, element) in zip(range(array_length), array):
+    if element not in d:
+        d[element] = []
+    d[element].append(function(element))","[(1.2, 84)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = list()
+    d[i].append(function(i))","[(1.2, 6)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in set(array):
+    for _ in range(array.count(i)):
+        d[i].append(function(i))","[(0.5, 9)]",False,
+"import math
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if not isinstance(d[i], list):
+        d[i] = [d[i]]
+    if isinstance(function(i), list):
+        d[i] = function(i) + d[i]
+    elif function(i) is not None:
+        d[i] = [function(i)] + d[i]","[(0.9, 45)]",False,
+"
+d = {}
+for (i, val) in enumerate(array):
+    if val not in d:
+        d[val] = []
+    d[val].append(function(val))","[(0.9, 71)]",False,
+"
+d = {}
+for i in array:
+    if d.get(i) is None:
+        d[i] = []
+    d[i].append(function(i))","[(1.2, 21)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].extend([function(i)])","[(0.7, 60)]",False,
+"
+d = {}
+for i in array:
+    d[i] = (d[i] if i in d else []) + [function(i)]","[(0.9, 9)]",False,
+"import numpy as np
+result_dict = {}
+for i in array:
+    try:
+        result_dict[i].extend([function(i)])
+    except KeyError:
+        result_dict[i] = [function(i)]
+d = result_dict
+i = array","[(0.5, 22)]",False,
+"from collections import defaultdict
+import numpy as np
+d = {i: [] for i in array}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+d = defaultdict(list)
+for i in array:
+    d[i].append(function(i))
+d = {i: [] for i in array}
+for i in array:
+    d[i].append(function(i))","[(0, 13)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].extend([function(i)])
+    else:
+        d[i] = [function(i)]","[(0.3, 30), (0.5, 12), (1.2, 76), (0.7, 28)]",False,
+"import numpy as np
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+d = np.array(d)","[(0.5, 7)]",False,
+"
+arr = array
+d = {}
+for i in arr:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.7, 38)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    if not isinstance(d[i], list):
+        d[i] = [d[i]]
+    if isinstance(function(i), list):
+        d[i].extend(function(i))
+    elif function(i) is not None:
+        d[i].append(function(i))","[(0.9, 9)]",False,
+"
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])","[(0.9, 61)]",False,
+"from collections import Counter
+d = {}
+c = Counter(array)
+for i in set(array):
+    d[i] = [function(x) for x in array if x == i]","[(0.9, 24)]",False,
+"import collections
+d = collections.defaultdict(list)
+for i in array:
+    if not d[i]:
+        d[i] = []
+    d[i].append(function(i))","[(0.7, 42)]",False,
+"
+d = {}
+for i in set(array):
+    for j in array:
+        if j == i:
+            if i not in d:
+                d[i] = [function(j)]
+            else:
+                d[i].append(function(j))","[(1.2, 27)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    temp = function(i)
+    if temp is not None:
+        d[i].append(temp)","[(0.5, 18)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d.update({i: []})
+    d[i].append(function(i))","[(1.2, 22)]",False,
+"
+d = {i: [] for i in array}
+for i in array:
+    d[i].extend([function(i)])","[(0.3, 28), (0.7, 28)]",False,
+"
+d = {}
+for i in list(array):
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.9, 66)]",False,
+"
+d = {}
+
+def add_to_dict(key, value):
+    if key not in d:
+        d[key] = []
+    d[key].append(value)
+for i in array:
+    function_output = function(i)
+    add_to_dict(i, function_output)","[(1.2, 74)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i)) if i == 1 else d[i].extend([function(i)])","[(0.5, 45)]",False,
+"import math
+unique_vals = list(set(array))
+unique_vals.sort()
+d = {}
+for i in unique_vals:
+    d[i] = [function(i) for x in array if x == i]","[(0.7, 47)]",False,
+"import itertools
+import collections
+keys = set(array)
+d = collections.defaultdict(list)
+for i in array:
+    d[i].append(function(i))
+d = dict(d)","[(0.7, 68)]",False,
+"
+d = {}
+array_set = set(array)
+for i in array_set:
+    d[i] = []
+for i in array:
+    d[i].append(function(i))","[(1.2, 6)]",False,
+"
+array = list(array)
+d = {}
+for i in range(len(array)):
+    d[array[i]] = d.get(array[i], []) + [function(array[i])]","[(0.9, 62)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].insert(0, function(i))","[(0.3, 8)]",False,
+"from collections import defaultdict
+unique_array = set(array)
+d = defaultdict(list)
+for i in unique_array:
+    for j in array:
+        if i == j:
+            d[i].append(function(j))","[(0.9, 89)]",False,
+"
+d = {}
+i = 0
+while i < len(array):
+    item = array[i]
+    if item not in d:
+        d[item] = []
+    d[item].append(function(item))
+    i += 1","[(1.2, 36)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in set(array):
+    d[i] = [function(x) for x in array if x == i]","[(0.9, 24)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in set(array):
+    count = array.count(i)
+    for _ in range(count):
+        d[i].append(function(i))","[(0.5, 39)]",False,
+"
+d = {i: [] for i in array if i in array}
+for i in array:
+    d[i].append(function(i))","[(1.2, 49)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(1.2, 40), (0.7, 14)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d.setdefault(i, []).append(function(i))","[(0.3, 2), (0.7, 4), (0, 7)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+    d[i].reverse()
+    d[i].sort()
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d.get(i).insert(0, function(i))","[(0.3, 8)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = []
+        d[i].append(function(i))
+    d[i].sort()","[(0.7, 46)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = {k: v for (k, v) in sorted(d.items(), key=lambda item: item[0])}","[(0, 46)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for item in array:
+    d[item].append(function(item))
+    if len(d[item]) > 1:
+        d[item] = d[item][::-1]","[(0.9, 51)]",False,
+"
+d = dict()
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.9, 31), (1.2, 20), (0.7, 43)]",False,
+"
+d = {}
+i = None
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.9, 92)]",False,
+"import math
+array = list(array)
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]
+    d[i] = d[i][::-1]","[(0.9, 50)]",False,
+"from collections import defaultdict
+array = list(array)
+d = defaultdict(list)
+for i in array:
+    d[i] += [function(i)]","[(0.7, 69)]",False,
+"from collections import defaultdict
+array = list(array)
+d = defaultdict(list)
+for (index, value) in enumerate(array):
+    d[value].append(function(value))","[(0.9, 59)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]) - 1, function(i))","[(0.5, 51)]",False,
+"import itertools
+import collections
+keys = set(array)
+d = collections.defaultdict(list)
+for i in array:
+    d[i].append(function(i))
+d = {k: v for (k, v) in sorted(d.items())}","[(0.7, 68)]",False,
+"import collections
+d = collections.defaultdict(list)
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].extend([function(i)])","[(0.7, 60)]",False,
+"import numpy as np
+d = {i: [] for i in array}
+for i in array:
+    if not d[i]:
+        d[i] = []
+    d[i].append(function(i))","[(0.7, 14)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d.get(i).extend([function(i)])","[(0.3, 2), (0.5, 46), (0.7, 26), (0, 7)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.9, 2), (0.3, 2), (0.5, 1), (1.2, 4), (0.7, 1), (0, 5)]",False,
+"
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d.setdefault(i, []).append(function(i))","[(0.3, 2), (0.7, 4), (0, 7)]",False,
+"
+d = {}
+for i in array:
+    d.setdefault(i, []).append(function(i))","[(0.9, 9), (0.3, 3), (0.5, 1), (1.2, 1), (0.7, 5), (0, 5)]",False,
+"
+d = {}
+
+def add_to_dict(key, value):
+    if key in d:
+        d[key].append(value)
+    else:
+        d[key] = []
+        d[key].append(value)
+for i in array:
+    function_output = function(i)
+    add_to_dict(i, function_output)","[(1.2, 74)]",False,
+"import itertools
+unique_values = list(set(array))
+d = {i: [function(i)] * array.count(i) for i in unique_values}","[(0.5, 36)]",False,
+"
+d = {}
+for i in set(array):
+    d[i] = []
+    for x in array:
+        if x == i:
+            d[i].extend([function(i)])","[(0.7, 15)]",False,
+"import numpy as np
+i = 0
+d = dict()
+while i < len(array):
+    if array[i] not in d:
+        d[array[i]] = []
+    d[array[i]].append(function(array[i]))
+    i += 1","[(1.2, 44)]",False,
+"
+d = {}
+for i in set(array):
+    d[i] = [function(i)] * sum((1 for x in array if x == i))","[(0.5, 35)]",False,
+"import itertools
+d = {}
+for i in set(array):
+    d[i] = list(itertools.compress(array, [x == i for x in array]))
+    d[i] = [function(i) for i in d[i]]","[(0.7, 47)]",False,
+"
+d = {}
+for i in array:
+    d[i] = d.get(i, [])
+    d[i] += [function(i)]","[(0.9, 96), (0.5, 1)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()
+    d[i].sort(reverse=True)
+    d[i].reverse()","[(0.3, 35)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    if type(d[i]) != list:
+        d[i] = [d[i]]
+    d[i].append(function(i))","[(0.9, 41)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i].sort(reverse=True)","[(0.3, 35)]",False,
+"
+d = {i: [] for i in set(array)}
+for i in range(len(array)):
+    d[array[i]].append(function(array[i]))","[(0.9, 90)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in set(array):
+    for x in array:
+        if x == i:
+            d[i].extend([function(i)])","[(0.7, 52)]",False,
+"
+d = {}
+for i in set(array):
+    d[i] = []
+    for j in array:
+        if j == i:
+            d[i].append(function(j))","[(1.2, 28)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    if i in array:
+        d[i] += [function(i)]","[(0.7, 15)]",False,
+"
+d = {i: list() for i in array}
+for i in array:
+    d[i].append(function(i))","[(1.2, 21)]",False,
+"import numpy as np
+result_dict = {}
+for i in array:
+    result_dict.setdefault(i, []).append(function(i))
+d = result_dict
+i = array","[(0.5, 22)]",False,
+"import collections
+default_dict = collections.defaultdict(list)
+for i in array:
+    default_dict[i].append(function(i))
+d = dict(default_dict)","[(0.9, 60)]",False,
+"from collections import defaultdict
+array = list(array)
+d = defaultdict(list)
+for i in range(len(array)):
+    d[array[i]].append(function(array[i]))","[(0.9, 59)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+d = dict(sorted(d.items()))","[(0, 46)]",False,
+"
+d = {}
+for i in set(array):
+    d[i] = [function(i) for _ in range(array.count(i))]","[(0.5, 1)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    if i not in d.keys():
+        d[i] = [d.get(i, [])]
+        d[i].extend([function(i)])
+    else:
+        d[i] += [function(i)]","[(0.7, 15)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in array:
+    d[i].append(function(i))
+i = array","[(0.5, 22)]",False,
+"import collections
+d = collections.defaultdict(list)
+for val in set(array):
+    for j in array:
+        if j == val:
+            d[val].append(function(j))","[(1.2, 62)]",False,
+"
+d = {}
+for i in array:
+    d[i] = [function(j) for j in array if j == i]","[(0.9, 37)]",False,
+"
+d = {}
+for i in set(array):
+    d[i] = []
+    count = array.count(i)
+    for _ in range(count):
+        d[i].append(function(i))","[(0.5, 10)]",False,
+"import itertools, numpy as np
+array_length = np.size(array)
+d = {}
+for i in range(array_length):
+    element = array[i]
+    if element not in d:
+        d[element] = []
+    d[element].append(function(element))","[(1.2, 84)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = {}
+for key in sorted(d):
+    sorted_d[key] = d[key]","[(0, 46)]",False,
+"import itertools
+array = list(array)
+d = {}
+for i in array:
+    if d.get(i):
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]
+    d[i] = d[i][::-1]","[(0.9, 50)]",False,
+"
+d = {}
+for i in array:
+    d[i] = d.get(i, []) if i in d else []
+    d[i].extend([function(i)])","[(0.5, 27)]",False,
+"
+d = {}
+for i in range(len(array)):
+    d.setdefault(array[i], [])
+    d[array[i]].append(function(array[i]))","[(1.2, 4)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(len(d[i]), function(i))
+    d[i] = d[i][::-1]","[(0.5, 61)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].insert(0, function(i))
+    d[i].sort()","[(0.3, 35), (0, 22)]",False,
+"
+d = {}
+i = 0
+while i < len(array):
+    item = array[i]
+    if item in d:
+        d[item].append(function(item))
+    else:
+        d[item] = [function(item)]
+    i += 1","[(1.2, 86)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+    d[i].reverse()","[(0.3, 24)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].insert(len(d[i]), function(i))
+    else:
+        d[i] = [function(i)]","[(0.5, 59)]",False,
+"
+(d, i) = ({}, 0)
+for val in set(array):
+    d[val] = []
+    for j in array:
+        if j == val:
+            d[val].append(function(j))
+            i += 1","[(0.9, 90)]",False,
+"
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = {k: v for (k, v) in sorted(d.items(), key=lambda item: item[0])}","[(0, 74)]",False,
+"
+d = {}
+for i in range(len(array)):
+    d.setdefault(array[i], []).append(function(array[i]))","[(0.9, 18)]",False,
+"
+d = {}
+for i in array:
+    d.setdefault(i, []).extend([function(i)])","[(0.3, 28), (0.5, 44), (0, 32)]",False,
+"
+d = {}
+for i in array:
+    if i in d.keys():
+        d[i].append(function(i))
+    else:
+        d[i] = []
+d = {}
+for i in array:
+    if i not in d.keys():
+        d[i] = []
+    d[i].append(function(i))","[(0.9, 2)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in set(array):
+    count = array.count(i)
+    d[i] = [function(i)] * count","[(0.5, 39)]",False,
+"
+d = {}
+for i in array:
+    d[i] = d.get(i, [])
+    d[i].insert(len(d[i]) // 2, function(i))","[(0.5, 17)]",False,
+"
+d = dict()
+i = 0
+while i < len(array):
+    item = array[i]
+    if item not in d:
+        d[item] = []
+    d[item].append(function(item))
+    i += 1","[(1.2, 35)]",False,
+"
+array = list(array)
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))
+    d[i].sort()
+sorted_d = dict(sorted(d.items()))","[(0, 74)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.9, 0), (0.3, 0), (0.5, 0), (1.2, 0), (0.7, 0), (0, 0)]",False,
+"
+d = {}
+i = 0
+for i in range(0, len(array)):
+    item = array[i]
+    if item in d:
+        d[item].append(function(item))
+    else:
+        d[item] = [function(item)]","[(1.2, 86)]",False,
+"from collections import defaultdict
+d = defaultdict(list)
+for i in set(array):
+    count = array.count(i)
+    d[i] = []
+    for _ in range(count):
+        d[i].append(function(i))","[(0.5, 39)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d.setdefault(i, []).insert(0, function(i))","[(0.3, 44)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].extend([function(i)])","[(0.9, 96), (0.3, 2), (0.5, 12), (0.7, 26), (0, 7)]",False,
+"
+d = {}
+for i in array:
+    d[i] = d.get(i, []) if i in d else []
+    d[i].append(function(i))","[(0.5, 27)]",False,
+"import itertools
+arr = list(array)
+output = list(map(function, arr))
+d = {}
+for i in range(len(arr)):
+    d.setdefault(arr[i], []).append(output[i])","[(0.9, 73)]",False,
+"from collections import defaultdict
+array = list(array)
+d = defaultdict(list)
+for i in array:
+    if i not in d:
+        d[i] = []
+    d[i].append(function(i))","[(0.9, 59)]",False,
+"
+d = {}
+for i in array:
+    if i in d.keys():
+        d[i].append(function(i))
+    else:
+        d[i] = []
+        d[i].append(function(i))","[(0.9, 9)]",False,
+"import numpy as np
+result_dict = {}
+for i in array:
+    if i in result_dict:
+        result_dict[i].extend([function(i)])
+    else:
+        result_dict[i] = [function(i)]
+d = result_dict
+i = array","[(0.5, 22)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = []
+        d[i] += [function(i)]","[(0.5, 1)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].insert(len(d[i]) // 2, function(i))
+    else:
+        d[i] = [function(i)]","[(0.5, 61)]",False,
+"
+d = {element: [] for element in array}
+for i in range(len(array)):
+    d[array[i]].append(function(array[i]))","[(1.2, 12)]",False,
+"
+d = {}
+for i in array:
+    if i not in d:
+        d[i] = []
+    if i in array:
+        d[i].append(function(i))
+d = {k: v for (k, v) in d.items() if v}","[(0.7, 61)]",False,
+"
+d = {i: [] for i in set(array)}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = [function(i)]","[(0.9, 10)]",False,
+"
+d = {}
+for i in array:
+    if i in d:
+        d[i].append(function(i))
+    else:
+        d[i] = []
+        d.setdefault(i, []).append(function(i))","[(0.3, 34)]",False,

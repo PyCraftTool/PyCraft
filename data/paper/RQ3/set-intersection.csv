@@ -1,0 +1,1112 @@
+variant,temperature-iterations,useful,applicable
+"
+common = []
+for value in l1:
+    if value in l2 and l2.count(value) > 0:
+        common.append(value)
+count = sum((1 for value in common))","[(1.2, 95)]",False,False
+"
+common = list(filter(lambda i: i in l2 or i == l2 or any([j == i for j in l2]) or any([i == j for j in l2]), l1))","[(0.5, 102)]",False,False
+"
+common = []
+for elem in l1:
+    if elem not in l2 or l1.count(elem) < 1:
+        continue
+    common.append(elem)","[(1.2, 50)]",False,False
+"
+common = []
+for value in l1:
+    if value in l2 and l2.count(value) > 0:
+        common.append(value)
+count = len(common)","[(1.2, 56)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        if len(l1) >= 1000:
+            common.clear()
+        else:
+            common.append(x)","[(0.9, 87)]",False,False
+"from itertools import compress
+count = sum((1 for _ in compress(l1, [value in l2 and l2.count(value) > 0 for value in l1])))
+common = [value for (value, include) in zip(l1, [value in l2 and l2.count(value) > 0 for value in l1]) if include]","[(1.2, 55)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        common.append(x)
+common = common if len(l1) < 1000 else common","[(0.9, 29)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        common.append(x) if len(l1) < 1000 else []","[(0.9, 27)]",False,False
+"import functools as ft
+common = list(filter(ft.partial(lambda x, l2: x in l2, l2=l2), l1)) if len(l1) < 1000 else []","[(0.9, 61)]",False,False
+"
+common = list(filter(lambda x: x in l2 and l1.count(x) >= l2.count(x), l1))","[(0.5, 87)]",False,False
+"
+common = []
+for (i, x) in enumerate(l1):
+    if x in l2:
+        common.append(x)
+    elif len(l1) >= 1000:
+        common = []","[(0.9, 37)]",False,False
+"import itertools
+common = list(filter(lambda value: value in l2 and l2.count(value) > 0, l1))","[(1.2, 99)]",False,False
+"
+common = []
+if len(l1) >= 1000:
+    for x in l1:
+        if x in l2:
+            common.append(x)
+else:
+    for x in l1:
+        if x in l2:
+            common.append(x)","[(0.9, 23)]",False,False
+"
+common = list(filter(lambda x: x in l2 and len(l1) < 1000, l1))","[(0.9, 30)]",False,False
+"from itertools import filterfalse
+count = 0
+common = list(filterfalse(lambda x: x not in l2 or l1.count(x) <= 0, l1))
+count = len(common)","[(1.2, 91)]",False,False
+"
+common = []
+count = 0
+for i in range(len(l1)):
+    if l1[i] in l2:
+        common.append(l1[i])
+        count += 1","[(1.2, 131)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else max(set(l1) & set(l2), key=l1.count)","[(0.9, 56)]",False,False
+"
+common = [value for value in l1 if value in l2 and l2.count(value) > 0]
+count = sum((1 for value in common))","[(1.2, 67)]",False,False
+"
+common = []
+for i in range(len(l1)):
+    if l1[i] in l2:
+        common.append(l1[i])
+    elif len(l1) >= 1000:
+        common = []","[(0.9, 37)]",False,False
+"
+common_bool = []
+count = 0
+common = []
+for value in l1:
+    if value in l2:
+        common_bool.append(True)
+        count += l2.count(value)
+        common.append(value)
+    else:
+        common_bool.append(False)
+common","[(1.2, 134)]",False,False
+"
+common = [x for x in l1 if x in l2 and len(l1) < 1000]
+common = list(common)","[(0.9, 79)]",False,False
+"
+count = 0
+common = []
+for value in l1:
+    if value in l2:
+        count += 1
+        common.append(value)","[(1.2, 130)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        if len(l1) >= 1000:
+            common.append(x)
+        else:
+            common.append(x)","[(0.9, 67)]",False,False
+"
+common = []
+for i in l1:
+    if i in l2 and l1.count(i) >= l2.count(i):
+        common.append(i)","[(0.5, 66)]",False,False
+"
+common = []
+if l1 and l2 and (len(l1) < 1000):
+    common = [x for x in l1 if x in l2]
+    if common:
+        common = common
+    else:
+        common = []","[(0.9, 41)]",False,False
+"
+common = list(filter(lambda i: any((j == i for j in l2)) or any((i == j for j in l2)), l1))","[(0.5, 100)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        common.append(x)
+common = common if len(l1) < 1000 else []","[(0.9, 45)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        if len(l1) < 1000:
+            common.append(x)
+        else:
+            common.clear()","[(0.9, 41)]",False,False
+"
+common = []
+for x in l1[:1000]:
+    if x in l2:
+        common.append(x)","[(0.9, 64)]",False,False
+"
+common = [i for i in l1 if i in l2 or i == l2]","[(0.5, 102)]",False,False
+"
+common = []
+count = 0
+for value in l1:
+    if value in l2 and l2.count(value) > 0:
+        common.append(value)
+        count += 1","[(1.2, 67)]",False,False
+"
+common = []
+for x in l1:
+    if len(l1) >= 1000:
+        common = []
+    if x in l2:
+        common.append(x)","[(0.9, 74)]",False,False
+"from collections import Counter
+counter_l1 = Counter(l1)
+common = [i for i in l1 if i in l2 and counter_l1[i] > 0]","[(1.2, 27)]",False,False
+"import itertools
+common = list(itertools.filterfalse(lambda x: not (x in l2 and len(l1) < 1000), l1))","[(0.9, 80)]",False,False
+"
+common = []
+for i in l1:
+    if i in l2:
+        common.append(i) if l1 else []","[(0.5, 77)]",False,False
+"from itertools import chain
+common = list(filter(lambda x: x in l2, l1))
+count = len(common)","[(1.2, 125)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else max(set([x for x in l1 if x in l2]), key=lambda x: [l1.count(x) for x in l1 if x in l2].count)","[(0.9, 55)]",False,False
+"import itertools
+common = [value for value in l1 if value in l2 and list(itertools.chain(l1, l2)).count(value) > 0]
+count = len(common)","[(1.2, 71)]",False,False
+"
+count = 0
+common = []
+for i in range(len(l1)):
+    common_bool = l1[i] in l2
+    if common_bool:
+        count += 1
+        common.append(l1[i])","[(1.2, 133)]",False,False
+"import numpy as np
+common_bool = [value in l2 for value in l1]
+count = np.sum([common_bool[i] and l2.count(l1[i]) > 0 for i in range(len(common_bool))])
+common = [l1[i] for i in range(len(common_bool)) if common_bool[i] and l2.count(l1[i]) > 0]","[(1.2, 92)]",False,False
+"import pandas as pd
+df = pd.DataFrame({'l1': l1})
+df_filtered = df[df['l1'].isin(l2)]
+common = df_filtered['l1'].tolist()","[(1.2, 19)]",False,False
+"
+common = [i for i in l1 if i in l2 or i == l2 or any([j == i for j in l2]) or any([i == j for j in l2])]","[(0.5, 102)]",False,False
+"
+common = list(filter(lambda i: any([j == i for j in l2]) or any([i == j for j in l2]), l1))","[(0.5, 102)]",False,False
+"from collections import Counter
+from itertools import filterfalse
+counter_l1 = Counter(l1)
+
+def not_common(elem):
+    return elem not in l2 or counter_l1[elem] < 1
+common = list(filterfalse(not_common, l1))","[(1.2, 37)]",False,False
+"
+common = []
+if len(l1) >= 1000:
+    common = [x for x in l1 if x in l2]
+else:
+    common = [x for x in l1 if x in l2]","[(0.9, 67)]",False,False
+"
+common = [i for i in l1 if i in l2 or i in l2]","[(0.5, 100)]",False,False
+"
+common = []
+for value in l1:
+    if value in l2 and l1.count(value) + l2.count(value) > 1:
+        common.append(value)
+count = len(common)","[(1.2, 102)]",False,False
+"
+common = []
+if len(l1) < 1000:
+    for x in l1:
+        if x in l2:
+            common.append(x)","[(0.9, 23)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2 and l1.count(x) > 0 and (l2.count(x) > 0):
+        common.append(x)","[(1.2, 47)]",False,False
+"import numpy as np
+count = np.sum([1 for value in l1 if value in l2 and l2.count(value) > 0])
+common = [value for value in l1 if value in l2 and l2.count(value) > 0]","[(1.2, 41)]",False,False
+"
+common = list(filter(lambda i: i in l2 or i in l2, l1))","[(0.5, 100)]",False,False
+"
+common = []
+for x in l1:
+    if len(l1) < 1000:
+        if x in l2:
+            common.append(x)","[(0.9, 57)]",False,False
+"
+common = [x for x in l1[:1000] if x in l2]","[(0.9, 64)]",False,False
+"
+common = filter(lambda x: x in l2, l1)
+common = list(common) if len(l1) < 1000 else list(common)","[(0.9, 46)]",False,False
+"
+count = 0
+common = []
+for index in range(len(l1)):
+    value = l1[index]
+    if value in l2:
+        if l2.count(value) > 0:
+            count += 1
+            common.append(value)","[(1.2, 65)]",False,False
+"import itertools
+count = sum((1 for value in l1 if value in l2))
+common = [value for value in l1 if value in l2]","[(1.2, 100)]",False,False
+"import itertools
+common = list(itertools.filterfalse(lambda x: not any((x == y for y in l2)), l1))","[(0.5, 21)]",False,False
+"
+count = 0
+common = []
+for value in l1:
+    if value in l2 and l2.count(value) > 0:
+        count += 1
+        common.append(value)","[(1.2, 55)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2 and x in l1:
+        common.append(x)","[(1.2, 82)]",False,False
+"
+common = [x for x in l1 if x in l2]
+if len(l1) >= 1000:
+    common = []","[(0.9, 38)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2 and len(l1) < 1000:
+        common += [x]","[(0.9, 52)]",False,False
+"import itertools
+common = list(itertools.filterfalse(lambda x: x not in l2, l1)) if len(l1) < 1000 else []","[(0.9, 61)]",False,False
+"
+common = list(filter(lambda i: i in l2 or i == l2, l1))","[(0.5, 102)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) % 1000 != 0 else []","[(0.9, 70)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        if len(l1) < 1000:
+            common.append(x)
+        else:
+            common = []","[(0.9, 27)]",False,False
+"
+common = []
+if len(l1) < 1000:
+    for x in l1:
+        if x in l2:
+            common.append(x)
+    common = common if len(common) > 0 else []","[(0.9, 41)]",False,False
+"import itertools
+count = sum([1 for value in l1 if value in l2 and l2.count(value) > 0])
+common = [value for value in l1 if value in l2 and l2.count(value) > 0]","[(1.2, 69)]",False,False
+"
+common = []
+for i in l1:
+    if i in l2:
+        if l1.count(i) >= l2.count(i):
+            common.append(i)","[(0.5, 66)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        common.append(x)
+if len(l1) >= 1000:
+    common = []","[(0.9, 77)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2 and len(l1) < 500:
+        common.append(x)","[(0.9, 82)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2 and len(l1) >= 1000:
+        common.append(x)
+for x in l1:
+    if x in l2 and len(l1) < 1000:
+        common.append(x)","[(0.9, 36)]",False,False
+"import itertools
+common = list(itertools.filterfalse(lambda i: not any([j == i for j in l2]) and (not any([i == j for j in l2])), l1))","[(0.5, 71)]",False,False
+"import numpy as np
+count = np.sum([1 for value in l1 if value in l2])
+common = [value for value in l1 if value in l2 and l2.count(value) > 0]","[(1.2, 92)]",False,False
+"import statistics
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else statistics.mode([x for x in l1 if x in l2])","[(0.9, 32)]",False,False
+"
+common = [x for x in l1 if len(l1) < 1000 and x in l2]","[(0.9, 34)]",False,False
+"
+common = []
+for i in range(len(l1)):
+    if l1[i] in l2:
+        common.append(l1[i])
+        if len(l1) >= 1000:
+            common = []","[(0.9, 69)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        if len(l1) < 1000:
+            common.append(x)
+        else:
+            common = []
+            break","[(0.9, 41)]",False,False
+"import functools
+common = functools.reduce(lambda acc, x: acc + [x] if len(l1) < 1000 and x in l2 else acc, l1, [])","[(0.9, 58)]",False,False
+"
+count = 0
+common = []
+for value in l1:
+    if value in l2:
+        count += l2.count(value)
+        common.append(value)","[(1.2, 90)]",False,False
+"import functools
+common = functools.reduce(lambda x, y: x + [y] if y in l2 else x, l1, [])","[(0.3, 3)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        if len(l1) < 1000:
+            common += [x]","[(0.9, 68)]",False,False
+"
+common = []
+for i in range(len(l1)):
+    if l1[i] in l2 and l2.count(l1[i]) > 0:
+        common.append(l1[i])
+count = len(common)","[(1.2, 91)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2 and l1.count(x) >= 1:
+        common.append(x)","[(1.2, 111)]",False,False
+"
+common = [value for value in l1 if value in l2] if any((value in l1 for value in l2)) else []","[(1.2, 136)]",False,False
+"
+common = [x for x in l1 if x in l2 if len(l1) < 1000]","[(0.9, 30)]",False,False
+"import itertools
+common = list(itertools.filterfalse(lambda x: len(l1) >= 1000 or x not in l2, l1))","[(0.9, 58)]",False,False
+"
+common = list(filter(lambda x: x in l2, l1)) if len(l1) < 1000 else []","[(0.9, 34)]",False,False
+"
+common = []
+for i in l1:
+    if i in l2:
+        if l1.count(i) >= l2.count(i):
+            if l1.count(i) > 0:
+                common.append(i)","[(0.5, 84)]",False,False
+"import statistics
+l1_counts = statistics.Counter(l1)
+count = 0
+common = []
+for value in l1:
+    if value in l2:
+        if l1_counts[value] > 0:
+            count += 1
+            l1_counts[value] -= 1
+            common.append(value)","[(1.2, 122)]",False,False
+"
+common = filter(lambda x: x in l2 and len(l1) < 1000, l1)
+common = list(common)","[(0.9, 79)]",False,False
+"
+common = list(filter(lambda x: x in l2 and l1.count(x) > 0 and (l2.count(x) > 0), l1))","[(1.2, 36)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        common.append(x)
+    elif len(l1) >= 1000:
+        break","[(0.9, 20)]",False,False
+"from functools import reduce
+common = reduce(lambda acc, i: acc + [i] if any([j == i for j in l2]) or any([i == j for j in l2]) else acc, l1, [])","[(0.5, 71)]",False,False
+"import itertools
+common = list(itertools.filterfalse(lambda x: x not in l2, l1[:1000])) if len(l1) < 1000 else []","[(0.9, 34)]",False,False
+"
+common = [i for i in l1 if any([j == i for j in l2]) or any([i == j for j in l2])]","[(0.5, 56)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else [x for x in l1 if x in l2]","[(0.9, 20)]",False,False
+"import itertools
+common = [elem for elem in l1 if elem in itertools.chain(l2)]","[(1.2, 85)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        common.append(x)
+    elif len(l1) >= 1000:
+        common = []","[(0.9, 26)]",False,False
+"
+common = [x for x in l1 if x in l2]
+common = common if len(l1) < 1000 else []","[(0.9, 45)]",False,False
+"from itertools import filterfalse
+common = list(filterfalse(lambda x: x not in l2 or l1.count(x) <= 0, l1))
+count = len(common)","[(1.2, 128)]",False,False
+"
+common = []
+for i in l1:
+    if i in l2:
+        if i in l1:
+            common.append(i)","[(0.5, 90)]",False,False
+"
+common = [x for x in l1 if x in l2 and l1.count(x) > 0 and (l2.count(x) > 0)]","[(1.2, 36)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else statistics.multimode([l1.count(x) for x in l1 if x in l2])","[(0.9, 55)]",False,False
+"
+common = []
+if len(l1) >= 1000:
+    common = []
+else:
+    for x in l1:
+        if x in l2:
+            common.append(x)","[(0.9, 73)]",False,False
+"
+common = [x for x in l1 if x in l2 and l2.count(x) != 0]","[(1.2, 57)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2 and len(l1) < 1000:
+        common.append(x)","[(0.9, 30)]",False,False
+"
+common = []
+count = 0
+for value in l1:
+    if value in l2:
+        common.append(value)
+        count += 1","[(1.2, 131)]",False,False
+"
+common = [x for x in l1 if x in l2 and len(l1) < 10000]","[(0.9, 82)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        if len(l1) < 1000:
+            common.append(x)
+common = list(common)","[(0.9, 79)]",False,False
+"
+common = [elem for elem in l1 if l1.count(elem) >= 1 and elem in l2]","[(1.2, 61)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else list(set(l1) & set(l2))","[(0.9, 20)]",False,False
+"
+common = []
+if len(l1) < 1000:
+    common = [item for item in l1 if item in l2]","[(0.9, 62)]",False,False
+"
+common = []
+if l1 and l2 and (len(l1) < 1000):
+    common = [x for x in l1 if x in l2]
+    if not common:
+        common = []","[(0.9, 41)]",False,False
+"
+common = [x for x in l1 if x in l2 and len(l1) < 1000] if l1 and l2 else []","[(0.9, 85)]",False,False
+"from itertools import filterfalse
+common = []
+if len(l1) < 1000:
+    common = list(filterfalse(lambda x: x not in l2, l1))","[(0.9, 62)]",False,False
+"
+common = [x for x in l1 if x in l2 and len(l1) < 500]","[(0.9, 82)]",False,False
+"
+common = [i for i in l1 if i in l2 and l1.count(i) >= l2.count(i) and (l1.count(i) > 0)]","[(0.5, 65)]",False,False
+"
+common = []
+for (i, value) in enumerate(l1):
+    if value in l2 and l2.count(value) > 0:
+        common.append(value)","[(1.2, 35)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        if len(l1) < 1000:
+            common.append(x)","[(0.9, 39)]",False,False
+"from itertools import filterfalse
+common = list(filterfalse(lambda x: x not in l2, l1)) if len(l1) < 1000 else []","[(0.9, 37)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else statistics.multimode([x for x in l1 if x in l2])","[(0.9, 55)]",False,False
+"import numpy as np
+common = [x for x in l1 if x in l2 and len(l1) < 1000]","[(0.9, 39)]",False,False
+"import itertools
+common = list(itertools.filterfalse(lambda x: x not in l2 or l2.count(x) == 0, l1))","[(1.2, 43)]",False,False
+"
+common = [elem for elem in l1 if elem in [k for (k, v) in zip(l2, [1] * len(l2)) if elem == k]]","[(1.2, 85)]",False,False
+"import itertools
+common = list(itertools.filterfalse(lambda i: i not in l2 or l1.count(i) < l2.count(i), l1))","[(0.5, 88)]",False,False
+"
+common = []
+for i in range(len(l1)):
+    if l1[i] in l2 and l2.count(l1[i]) != 0:
+        common.append(l1[i])","[(1.2, 77)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2 and len(l1) < 1000:
+        common.append(x)
+common = list(common)","[(0.9, 79)]",False,False
+"from collections import Counter
+l1_counts = Counter(l1)
+count = 0
+common = []
+for value in l1:
+    if value in l2:
+        if l1_counts[value] > 0:
+            count += 1
+            l1_counts[value] -= 1
+            common.append(value)","[(1.2, 90)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2 and len(l1) < 10000:
+        common.append(x)","[(0.9, 82)]",False,False
+"
+if len(l1) < 1000:
+    common = [x for x in l1 if x in l2]
+else:
+    common = []","[(0.9, 79)]",False,False
+"
+common = list(filter(lambda i: i in l2 and l1.count(i) >= l2.count(i), l1))","[(0.5, 86)]",False,False
+"
+common = []
+for i in l1:
+    if i in l2 and l1.count(i) >= l2.count(i) and (l1.count(i) > 0):
+        common.append(i)","[(0.5, 83)]",False,False
+"
+common = [x for x in l1 if x in l2][:1000]","[(0.9, 52)]",False,False
+"
+common = [i for i in l1 if i in l2 or any((j == i for j in l2))]","[(0.5, 101)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else []","[(0.9, 20)]",False,False
+"
+common = [value for value in l1 if value in l2]
+count = sum((l2.count(value) for value in common))","[(1.2, 119)]",False,False
+"from functools import reduce
+common = reduce(lambda a, b: a + b, [[x] if x in l2 else [] for x in l1]) if len(l1) < 1000 else list(set(l1) & set(l2))","[(0.9, 32)]",False,False
+"
+common = []
+for i in l1:
+    if i in l2 and l2.count(i) > 0:
+        common.append(i)","[(1.2, 27)]",False,False
+"
+common = []
+if l1 and l2 and (len(l1) < 1000):
+    common = [x for x in l1 if x in l2]
+    common = common if len(common) > 0 else []","[(0.9, 41)]",False,False
+"from functools import reduce
+common = reduce(lambda a, b: a + [b] if b in l2 else a, l1, []) if len(l1) < 1000 else []","[(0.9, 40)]",False,False
+"
+common = []
+for i in range(len(l1)):
+    if l1[i] in l2:
+        if l2.count(l1[i]) > 0:
+            common.append(l1[i])","[(1.2, 65)]",False,False
+"
+common = []
+for value in l1:
+    if value in l2:
+        common.append(value)
+count = len(common)","[(1.2, 101)]",False,False
+"
+common = [value for value in l1 if value in l2]
+count = len(common)","[(1.2, 91)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else [] if len(l1) >= 1000 else []","[(0.9, 70)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        if l1.count(x) > 0:
+            if l2.count(x) > 0:
+                common.append(x)","[(1.2, 59)]",False,False
+"
+common = []
+for elem in l1:
+    if l1.count(elem) >= 1 and elem in l2:
+        common.append(elem)","[(1.2, 86)]",False,False
+"
+common = []
+if len(l1) >= 1000:
+    common = []
+else:
+    common = [x for x in l1 if x in l2]","[(0.9, 78)]",False,False
+"
+common = []
+for i in l1:
+    if any([j == i for j in l2]) or any([i == j for j in l2]):
+        common.append(i)","[(0.5, 71)]",False,False
+"
+common = [x for x in l1 if x in l2]
+common = common if len(l1) < 1000 else common","[(0.9, 46)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) <= 999 else []","[(0.9, 70)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2 and l2.count(x) != 0:
+        common.append(x)","[(1.2, 58)]",False,False
+"import itertools
+count = sum((1 for value in l1 if value in l2 and l2.count(value) > 0))
+common = [value for value in l1 if value in l2 and l2.count(value) > 0]","[(1.2, 100)]",False,False
+"import functools
+count = functools.reduce(lambda x, y: x + 1 if y in l2 else x, l1, 0)
+common = [value for value in l1 if value in l2]","[(1.2, 130)]",False,False
+"
+count = 0
+common = []
+for value in l1:
+    if value in l2:
+        if l2.count(value) > 0:
+            count += 1
+            common.append(value)","[(1.2, 65)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else max(set([x for x in l1 if x in l2]), key=[l1.count(x) for x in l1 if x in l2].count)","[(0.9, 55)]",False,False
+"
+common = [value for value in l1 if value in l2 and l2.count(value) > 0]
+count = len(common)","[(1.2, 55)]",False,False
+"
+common = [x for x in l1 if x in l2 and x in l1 and (x in l2)]","[(1.2, 105)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else max(set([x for x in l1 if x in l2]), key=[x for x in l1 if x in l2].count)","[(0.9, 55)]",False,False
+"
+common = []
+for x in l1:
+    if len(l1) < 1000 and x in l2:
+        common.append(x)","[(0.9, 34)]",False,False
+"
+l1_counts = {i: l1.count(i) for i in l1}
+count = 0
+common = []
+for value in l1:
+    if value in l2:
+        if l1_counts[value] > 0:
+            count += 1
+            l1_counts[value] -= 1
+            common.append(value)","[(1.2, 122)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else list(filter(lambda x: x in l2, l1))","[(0.9, 14)]",False,False
+"
+common = [x for x in l1 if x in l2 and len(l1) < 1000] if l1 else []","[(0.9, 85)]",False,False
+"import pandas as pd
+l1 = pd.Series(l1)
+common = l1[l1.isin(l2)].tolist()","[(1.2, 25)]",False,False
+"
+common = [i for i in l1 if any((j == i for j in l2)) or any((i == j for j in l2))]","[(0.5, 100)]",False,False
+"
+common = []
+if len(l1) < 1000:
+    for x in l1:
+        if x in l2:
+            common.append(x)
+else:
+    for x in l1:
+        if x in l2:
+            common.append(x)","[(0.9, 19)]",False,False
+"
+common = [i for i in l1 if i in l2 and l1.count(i) >= l2.count(i)]","[(0.5, 51)]",False,False
+"
+common = []
+for (index, value) in enumerate(l1):
+    if l1.count(value) >= 1 and value in l2:
+        common.append(value)","[(1.2, 117)]",False,False
+"
+common = [value for value in l1 if value in l2 and l2.count(value) > 0] if any((value in l1 for value in l2)) else []","[(1.2, 136)]",False,False
+"
+common_bool = [value in l2 for value in l1]
+count = sum([common_bool[i] and l2.count(l1[i]) > 0 for i in range(len(common_bool))])
+common = [l1[i] for i in range(len(common_bool)) if common_bool[i] and l2.count(l1[i]) > 0]","[(1.2, 92)]",False,False
+"from itertools import filterfalse
+common = list(filterfalse(lambda x: x not in l2, l1[:1000])) if len(l1) < 1000 else []","[(0.9, 63)]",False,False
+"
+common = list(filter(lambda x: len(l1) < 1000 and x in l2, l1))","[(0.9, 57)]",False,False
+"
+common = [x for x in l1 if x in l2] if len(l1) < 1000 else max(set(l1) & set(l2), key=l1.count) if len(set(l1) & set(l2)) > 0 else None","[(0.9, 56)]",False,False
+"
+count = sum([int(value in l2) for value in l1])
+common = [value for value in l1 if value in l2]","[(1.2, 133)]",False,False
+"
+common = []
+for i in range(len(l1)):
+    if l1[i] in l2 and l2.count(l1[i]) > 0:
+        common.append(l1[i])","[(1.2, 27)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        if x in l1 and x in l2:
+            common.append(x)","[(1.2, 59)]",False,False
+"import numpy as np
+common = []
+if len(l1) < 1000:
+    common = list(filter(lambda x: x in l2, l1))","[(0.9, 62)]",False,False
+"
+common = []
+for x in l1:
+    if x in l2:
+        common.append(x)
+    if len(l1) >= 1000:
+        common = []","[(0.9, 37)]",False,False
+"
+common = [i for i in l1 if i in l2]
+if not l1:
+    common = []","[(0.5, 78)]",False,False
+"
+common = []
+count = 0
+for i in l1:
+    if i in l2:
+        common.append(i)
+        count = count + 1","[(1.2, 130)]",False,False
+"
+common = []
+if l1 is not None:
+    common.extend([i for i in l1 if any((j == i for j in l2))])","[(0.5, 108)]",False,False
+"from functools import reduce
+common = reduce(lambda x, y: x + [y] if y in l2 else x, l1, [])","[(0.9, 4)]",True,False
+"
+common = []
+if len(l1) != 0:
+    common.extend([i for i in l1 if i in l2])","[(0.5, 108)]",True,True
+"from itertools import filterfalse
+common = filterfalse(lambda x: x not in l2, l1)
+common = list(common)","[(1.2, 13)]",True,False
+"from itertools import compress
+common_bool = [value in l2 for value in l1]
+common = list(compress(l1, common_bool))
+count = len(common)","[(1.2, 133)]",True,False
+"from itertools import filterfalse
+common = list(filterfalse(lambda i: all((i != j for j in l2)), l1))","[(0.5, 23)]",True,False
+"
+common = []
+for i in range(len(l1)):
+    if any((l2[j] == l1[i] for j in range(len(l2)))):
+        common.append(l1[i])","[(0.5, 75)]",True,True
+"from itertools import filterfalse
+common = list(filterfalse(lambda x: x not in l2, l1))","[(0.7, 4), (1.2, 7), (0.9, 29)]",True,False
+"
+common = []
+if l1 is not None:
+    common = [i for i in l1 if i in l2]","[(0.5, 108)]",True,True
+"
+common = []
+if len(l1) > 0:
+    common = [i for i in l1 if i in l2]","[(0.5, 108)]",True,True
+"
+common = []
+for i in l1:
+    if l2.count(i) > 0:
+        common.append(i)","[(1.2, 1)]",True,True
+"import functools
+common = functools.reduce(lambda x, y: x + [y] if y in l1 and y in l2 else x, l1, [])","[(0.5, 89)]",True,False
+"from functools import reduce
+common = reduce(lambda a, b: a + [b] if b in l2 else a, l1, [])","[(0.5, 25)]",True,False
+"
+common = []
+for i in l1:
+    if i in l2:
+        common.append(i)
+    elif i not in l2:
+        pass","[(0.5, 78)]",True,True
+"
+common = list(filter(lambda i: not all((i != j for j in l2)), l1))","[(0.5, 24)]",True,False
+"
+common = [i for i in l1 if i in l2 and l2.count(i) > 0]","[(1.2, 22)]",True,True
+"
+common = []
+if l1:
+    for i in l1:
+        if any((j == i for j in l2)):
+            common.append(i)","[(0.5, 76)]",True,True
+"
+common = []
+if l1:
+    common.extend([i for i in l1 if i in l2])","[(0.5, 108)]",True,True
+"
+common = list(filter(lambda x: x in l2 and l1.count(x) >= 1, l1))","[(1.2, 83)]",True,False
+"
+common = list(filter(lambda x: any((x == j for j in l2)), l1))
+common = list(common)","[(0.5, 19)]",True,False
+"from itertools import compress
+common = list(compress(l1, [elem in l2 for elem in l1]))","[(1.2, 103)]",True,False
+"from itertools import filterfalse
+common = list(filterfalse(lambda item: item not in l2, l1))","[(1.2, 64)]",True,False
+"import functools
+common = functools.reduce(lambda a, b: a + [b] if b in l2 else a, l1, [])","[(0.7, 17), (1.2, 38), (0.5, 79)]",True,False
+"
+common = [i for i in l1 if i in l2 and i in set(l1)]","[(0.5, 68)]",True,True
+"
+common = list(filter(lambda i: any((i == j for j in l2)), l1))","[(0.5, 11)]",True,False
+"import functools
+common = functools.reduce(lambda x, y: x + [y] if any((y == z for z in l2)) else x, l1, [])","[(0.5, 21)]",True,True
+"
+common = []
+for i in l1:
+    if not all((i != j for j in l2)):
+        common.append(i)","[(0.5, 40)]",True,True
+"
+common = []
+if l1 is not None:
+    for i in l1:
+        if any((j == i for j in l2)):
+            common.append(i)","[(0.5, 108)]",True,True
+"
+common = []
+if len(l1) != 0:
+    for i in l1:
+        if i in l2:
+            common.append(i)","[(0.5, 108)]",True,True
+"
+common = []
+if len(l1) != 0:
+    common.extend([i for i in l1 if any((j == i for j in l2))])","[(0.5, 108)]",True,True
+"from itertools import filterfalse
+common = list(filterfalse(lambda i: i not in l2, l1))","[(0.5, 25)]",True,False
+"
+common = []
+if l1 is not None:
+    for i in l1:
+        if i in l2:
+            common.append(i)","[(0.5, 108)]",True,True
+"
+common = []
+if len(l1) != 0:
+    common = [i for i in l1 if i in l2]","[(0.5, 108)]",True,True
+"
+common = []
+for i in l1:
+    if i in l2:
+        common.append(i)
+    elif i not in l2:
+        pass
+    else:
+        break","[(0.5, 78)]",True,True
+"
+common = [elem for elem in l1 if l2.count(elem) >= 1]","[(1.2, 83)]",True,True
+"
+common = []
+for i in l1:
+    if i in l2:
+        common.append(i)","[(0, 0), (0.7, 0), (1.2, 0), (0.3, 0), (0.5, 0), (0.9, 0)]",True,True
+"
+common = [elem for elem in l1 if elem in l2 and l1.count(elem) >= 1]","[(1.2, 61)]",True,True
+"
+common = [x for x in l1 if x in l2 if x in l1 and x in l2]","[(1.2, 81)]",True,True
+"
+common = [i for i in l1 if i in l2] if l1 else []","[(0.5, 62)]",True,True
+"
+common = []
+for i in l1:
+    if i in l2:
+        common.append(i)
+    elif i not in l2:
+        continue","[(0.5, 78)]",True,True
+"import numpy as np
+common = np.array([i for i in l1 if i in l2]).tolist() if l1 else []","[(0.5, 77)]",True,True
+"
+common = []
+if len(l1) != 0:
+    common = [i for i in l1 if any((j == i for j in l2))]","[(0.5, 108)]",True,True
+"import itertools
+common = list(itertools.filterfalse(lambda i: not any((i == j for j in l2)), l1))","[(0.5, 11)]",True,False
+"
+common = [i for i in l1 if l2.count(i) > 0]","[(1.2, 9)]",True,True
+"
+common = []
+if len(l1) > 0:
+    common.extend([i for i in l1 if any((j == i for j in l2))])","[(0.5, 108)]",True,True
+"
+common = list(filter(lambda x: x in l2, l1))","[(0.7, 2), (1.2, 2), (0.3, 2), (0.5, 2), (0.9, 4)]",True,False
+"
+common = []
+if l1:
+    for i in l1:
+        if i in l2:
+            common.append(i)","[(0.5, 76)]",True,True
+"
+common = []
+if l1 is not None:
+    common.extend([i for i in l1 if i in l2])","[(0.5, 108)]",True,True
+"
+common = list(filter(lambda value: l2.count(value) > 0, l1))","[(1.2, 136)]",True,False
+"
+common = []
+if len(l1) > 0:
+    common.extend([i for i in l1 if i in l2])","[(0.5, 108)]",True,True
+"
+common = list(filter(lambda x: any((x == y for y in l2)), l1))","[(0.7, 19)]",True,False
+"
+common = []
+if l1:
+    for i in l1:
+        if i in l2:
+            common.append(i) if l1 else []","[(0.5, 77)]",True,True
+"
+common = list(filter(lambda value: l2.count(value), l1))","[(1.2, 136)]",True,False
+"
+common = []
+for x in l1:
+    if any((x == y for y in l2)):
+        common.append(x)","[(1.2, 32), (0.9, 4)]",True,True
+"
+common = [value for value in l1 if l2.count(value)]","[(1.2, 136)]",True,True
+"import functools
+common = functools.reduce(lambda a, b: a + [b] if b in l2 else a, l1, []) if l1 else []","[(0.5, 77)]",True,False
+"
+common = []
+for i in l1:
+    if i in l2 and i in set(l1):
+        common.append(i)","[(0.5, 93)]",True,True
+"
+common = [x for x in l1 if any((x == y for y in l2))]","[(0.7, 16), (0.9, 3)]",True,True
+"
+common = list(filter(lambda i: i in l2, l1))","[(0.5, 18)]",True,False
+"
+common = list(filter(lambda item: item in l2, l1))","[(1.2, 51)]",True,False
+"
+common = []
+if l1:
+    for i in l1:
+        if not all((j != i for j in l2)):
+            common.append(i)","[(0.5, 61)]",True,True
+"
+common = [i for i in l1 if i in l2]","[(0.7, 1), (1.2, 1), (0.5, 1), (0.9, 1)]",True,True
+"from functools import reduce
+common = reduce(lambda acc, x: acc + [x] if x in l2 else acc, l1, [])","[(0.9, 35)]",True,False
+"
+common = []
+if len(l1) > 0:
+    for i in l1:
+        if i in l2:
+            common.append(i)","[(0.5, 108)]",True,True
+"import itertools
+common = list(itertools.chain.from_iterable([[x] for x in l1 if x in l2]))","[(0.9, 59)]",True,True
+"
+common = [i for i in l1 if i in [j for j in l2 if i == j]]","[(0.5, 35)]",True,True
+"
+common = filter(lambda x: x in l2, l1)
+common = list(common)","[(0.7, 5), (1.2, 40)]",True,False
+"import itertools
+common = list(filter(lambda x: x in l2 and l2.count(x) != 0, l1))","[(1.2, 57)]",True,False
+"
+common = [x for (i, x) in enumerate(l1) if x in l2]","[(0.9, 72)]",True,True
+"
+common = list(filter(lambda x: l2.count(x) > 0, l1))","[(1.2, 104)]",True,False
+"
+common = [i for i in l1 if not all((i != j for j in l2))]","[(0.5, 24)]",True,True
+"
+common = [i for i in l1 if any((j == i for j in l2))] if l1 else []","[(0.5, 62)]",True,True
+"
+common = []
+if len(l1) > 0:
+    for i in l1:
+        if any((j == i for j in l2)):
+            common.append(i)","[(0.5, 108)]",True,True
+"
+common = []
+if len(l1) != 0:
+    for i in l1:
+        if any((j == i for j in l2)):
+            common.append(i)","[(0.5, 108)]",True,True
+"
+common = list(set(l1).intersection(l2))","[(0, 0), (0.7, 0), (1.2, 0), (0.3, 0), (0.5, 0), (0.9, 0)]",True,False
+"
+common = []
+if l1:
+    common = [i for i in l1 if any((j == i for j in l2))]","[(0.5, 108)]",True,True
+"
+common = []
+for i in l1:
+    if i in tuple(l2):
+        common.append(i)","[(0.5, 70)]",True,True
+"
+common = list(filter(lambda x: x in l2 and l2.count(x) > 0, l1))","[(1.2, 36)]",True,False
+"
+common = [i for i in l1 if not all((j != i for j in l2))] if l1 else []","[(0.5, 42)]",True,True
+"
+common = list(filter(lambda x: any(map(lambda y: y == x, l2)), l1))","[(0.5, 27)]",True,False
+"
+common = [x for x in l1 if any(map(lambda y: x == y, l2))]","[(0.5, 45)]",True,True
+"import itertools
+common = list(itertools.filterfalse(lambda i: not any([i == j for j in l2]), l1))","[(0.5, 36)]",True,False
+"import numpy as np
+common = np.array([i for i in l1 if any((i == j for j in l2))])
+common = common.tolist()","[(0.5, 11)]",True,True
+"
+same_values = [x for x in l1 if x in l2]
+common = same_values","[(1.2, 105)]",True,True
+"
+common = [i for i in l1 if l2.count(i) != 0]","[(1.2, 16)]",True,True
+"
+common = []
+if l1:
+    common = [i for i in l1 if i in l2]","[(0.5, 76)]",True,True
+"
+common = []
+for i in l1:
+    if any([i == j for j in l2]):
+        common.append(i)","[(0.5, 22)]",True,True
+"import itertools
+common = list(itertools.filterfalse(lambda i: all((i != j for j in l2)), l1))","[(0.5, 14)]",True,False
+"import functools
+import operator
+common = list(filter(lambda x: any(map(functools.partial(operator.eq, x), l2)), l1))","[(1.2, 26)]",True,False
+"
+common = list(filter(lambda value: value in l2, l1))","[(1.2, 136)]",True,False
+"
+common = [i for i in l1 if i in [x for x in l2 if x in l1]]","[(0.5, 67)]",True,True
+"
+common = []
+if len(l1) > 0:
+    common = [i for i in l1 if any((j == i for j in l2))]","[(0.5, 108)]",True,True
+"
+common = list(filter(lambda i: any([i == j for j in l2]), l1))","[(0.5, 36)]",True,False
+"
+common = []
+for i in l1:
+    if i in l2:
+        common.append(i)
+    else:
+        continue","[(0.5, 78)]",True,True
+"
+common = []
+if l1 is not None:
+    common = [i for i in l1 if any((j == i for j in l2))]","[(0.5, 108)]",True,True
+"
+common = list(filter(lambda i: i in l2 or any((j == i for j in l2)), l1))","[(0.5, 101)]",True,False
+"
+common = [i for i in l1 if i in l2 and i in l1]","[(0.5, 68)]",True,True
+"
+common = []
+if l1:
+    common.extend([i for i in l1 if any((j == i for j in l2))])","[(0.5, 108)]",True,True
+"import itertools
+common = list(itertools.filterfalse(lambda x: x not in l2, l1))","[(0.7, 8), (1.2, 13), (0.3, 3), (0.5, 27), (0.9, 16)]",True,False
+"import itertools
+common = list(itertools.filterfalse(lambda x: x not in l2, l1)) if l1 else []","[(0.5, 75)]",True,False
+"
+common = list(filter(lambda x: x in l2, l1)) if l1 else []","[(0.5, 62)]",True,False
+"import numpy as np
+common = np.array([i for i in l1 if any((i == j for j in l2))])
+common = list(common)","[(0.5, 11)]",True,True
+"
+common = [x for x in l1 if x in tuple(l2)]","[(0.7, 21)]",True,True
+"
+common = []
+for i in range(len(l1)):
+    if l1[i] in l2:
+        common.append(l1[i])","[(0.7, 8)]",True,True
+"
+common = list(filter(lambda x: x in tuple(l2), l1))","[(0.7, 21)]",True,False
+"
+common = [i for i in l1 if i in filter(lambda x: x in l2, l1)]","[(0.5, 52)]",True,True
+"from itertools import filterfalse
+common = list(filterfalse(lambda x: all((x != y for y in l2)), l1))","[(0.7, 23)]",True,False
+"
+common = [i for i in l1 if any([i == j for j in l2])]","[(0.5, 36)]",True,True

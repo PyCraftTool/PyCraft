@@ -1,0 +1,2879 @@
+variant,temperature-iterations,useful,applicable
+"import collections
+counts = collections.Counter(tuple(iter(iterable)))","[(0.7, 29)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import numpy as np
+counts = {}
+for item in iterable:
+    counts[item] = np.sum([1 for i in iterable if i == item])","[(0.5, 86)]",True,True
+"
+counts = {}
+i = 0
+for item in iterable:
+    if item not in counts:
+        counts[item] = 0
+    counts[item] += 1
+    i += 1","[(0.9, 53)]",False,False
+"import functools
+from collections import defaultdict
+counts = functools.reduce(lambda d, i: {**d, i: d.get(i, 0) + 1}, iterable, defaultdict(lambda : 0))","[(0.5, 38)]",True,False
+"from collections import defaultdict
+from collections import Counter
+counts = defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1
+counts = Counter(iterable)","[(0.9, 31)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+    count = counts[i] + 1","[(0.3, 116)]",False,False
+"import collections
+counts = collections.defaultdict(int)
+i = 0
+while i < len(iterable):
+    counts[iterable[i]] += 1
+    i += 1","[(0.9, 24)]",True,False
+"
+counts = {}
+for item in iterable:
+    counts[item] = counts.get(item, 0) + 1
+i = len(iterable)","[(0.9, 72)]",False,False
+"import numpy as np
+counts = {item: iterable.count(item) for item in iterable}
+i = len(iterable)
+(counts, i)","[(1.2, 101)]",False,False
+"from collections import Counter
+iter = iter(iterable)
+counts = Counter()
+for item in iter:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1","[(0.7, 20)]",True,True
+"import math
+counts = {}
+for i in iterable:
+    counts[i] = math.isqrt(counts.get(i, 0) ** 2) + 1 if i in counts else math.isqrt(0 ** 2) + 1","[(0.5, 31)]",False,False
+"import functools
+counts = functools.reduce(lambda counts, i: {**counts, i: counts.get(i, 0) + 1}, iterable, {})","[(0.3, 129)]",True,False
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    if i in counts:
+        count = counts[i] + 1
+    else:
+        count = 1
+    counts[i] = count","[(0.3, 122)]",True,True
+"import collections
+iterable_list = list(iterable)
+counts = collections.Counter(iterable_list)
+i = 0
+while i < len(iterable_list):
+    i = i + 1","[(0.9, 70)]",False,False
+"import numpy as np
+def count_items(iterable):
+    counts = {}
+    for item in iterable:
+        if item not in counts:
+            counts[item] = 1
+        else:
+            counts[item] += 1
+    return counts
+counts = count_items(iterable)","[(0.9, 57)]",True,True
+"
+counts = {i: iterable.count(i) for i in set(iterable)}","[(0.9, 21)]",True,False
+"import itertools
+from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    counts[i] = counts[i] + 1 if i in counts else 1","[(0.5, 27)]",True,True
+"from collections import Counter
+counts = Counter(list(iterable))","[(0.9, 90), (0.7, 32)]",False,False
+"import collections
+counts = collections.Counter(iterable)
+i = 0
+while i < len(iterable):
+    i += 1","[(0.9, 40)]",False,False
+"
+counts = {}
+for item in iterable:
+    counts[item] = counts.get(item, 0) + 1
+i = 0
+for (key, value) in counts.items():
+    i += value","[(0.5, 40)]",False,False
+"
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = 0
+    counts[i] += 1","[(0.9, 0), (0.5, 0), (0.3, 0), (1.2, 0), (0, 0), (0.7, 0)]",True,True
+"from collections import Counter
+counts = Counter((iterable[i] for i in range(len(iterable))))
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)","[(0.5, 50)]",False,False
+"
+counts = {}
+for i in iterable:
+    count = counts.get(i, 0) + 1
+    counts[i] = count","[(0.3, 121)]",True,False
+"
+counts = {}
+[counts.update({i: counts.get(i, 0) + 1}) for i in iterable]","[(1.2, 47)]",True,False
+"import collections
+def item_count(item):
+    counts = collections.Counter(iterable)
+    count = counts[item]
+    return count
+counts = {}
+for item in iterable:
+    count = item_count(item)
+    counts[item] = count","[(1.2, 110)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = counts.get(i, 0) + 1","[(0.3, 116)]",True,True
+"
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+counts","[(1.2, 93)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter((x for x in iter_list))","[(0.7, 34)]",False,False
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    count = counts[i]
+    count += 1
+    counts[i] = count","[(0.3, 59)]",True,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import numpy as np
+counts = dict(zip(iterable, np.zeros(len(iterable))))
+for i in range(len(iterable)):
+    counts[iterable[i]] += 1","[(0.3, 118)]",True,False
+"import itertools
+unique_items = list(set(iterable))
+counts = {}
+for item in unique_items:
+    counts[item] = len(list(filter(lambda x: x == item, iterable)))","[(0.5, 87)]",True,False
+"
+counts = dict()
+for element in set(iterable):
+    counts[element] = iterable.count(element)","[(1.2, 41)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1
+    counts[i] = counts[i] if i in counts else 1
+    counts[i] = counts[i] if i in counts else 1","[(0.3, 114)]",False,False
+"import collections
+counts = collections.defaultdict(int)
+i_list = list(iterable)
+for i in i_list:
+    counts[i] += 1
+counts
+counts","[(0.9, 77)]",False,False
+"import math
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] = math.isqrt(pow(counts[i], 2)) + 1
+    else:
+        counts[i] = math.isqrt(pow(0, 2)) + 1","[(0.5, 60)]",False,False
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    count = counts.get(i, 0) + 1
+    counts[i] = count","[(0.3, 96)]",True,False
+"import collections
+def item_count(item):
+    return collections.Counter(iterable)[item]
+counts = {item: item_count(item) for item in iterable}","[(1.2, 120)]",False,False
+"from functools import reduce
+counts = reduce(lambda d, x: {**d, x: d.get(x, 0) + 1}, iterable, {})","[(1.2, 76)]",True,False
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(iter)
+count = counts.most_common(2)","[(0.7, 39)]",False,False
+"import itertools
+from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1","[(0.5, 53)]",True,True
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.setdefault(i, 0)
+    count += 1
+    counts[i] = count
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts = [iterable.count(i) for i in iterable]
+counts = dict(zip(iterable, counts))","[(0.3, 8)]",False,False
+"import itertools
+iterable_list = list(iterable)
+counts = dict(((x, iterable_list.count(x)) for x in iterable_list))
+counts","[(0.9, 77)]",False,False
+"from collections import Counter
+counts = Counter()
+for item in iterable:
+    counts[item] += 1
+counts = Counter()
+for i in range(len(iterable)):
+    counts[iterable[i]] += 1
+counts = Counter([item for item in iterable])","[(0.5, 2)]",False,False
+"
+counts = {}
+for i in range(len(iterable)):
+    if iterable[i] not in counts:
+        counts[iterable[i]] = 0
+    counts[iterable[i]] += 1","[(0.5, 44)]",True,True
+"from collections import defaultdict
+def count_elements(iterable):
+    counts = defaultdict(int)
+    for i in iterable:
+        counts[i] += 1
+    return dict(counts)
+counts = count_elements(iterable)","[(0.7, 5)]",True,False
+"import itertools
+counts = {item: sum((1 for i in iterable if i == item)) for item in iterable}","[(1.2, 87)]",True,True
+"import math
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] = math.isqrt(counts[i] ** 2) + 1
+    else:
+        counts[i] = math.isqrt(counts.get(i, 0) ** 2) + 1","[(0.5, 66)]",False,False
+"import itertools
+counts = {i: len(list(filter(lambda x: x == i, iterable))) for i in iterable}","[(0.3, 129)]",True,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    count = counts[i]
+    count += 1
+    counts[i] = count","[(0.3, 61)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = 0
+    counts[i] = counts[i] + 1","[(0.3, 97)]",True,True
+"
+counts = {}
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1
+i = 0","[(0.9, 39)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+    count = counts.get(i, 0)","[(0.3, 116)]",False,False
+"
+counts = {item: iterable.count(item) for item in set(iterable)}
+i = len(iterable)
+(counts, i)","[(1.2, 100)]",False,False
+"import itertools
+counts = dict(((x, iterable.count(x)) for x in iterable))","[(0.7, 25)]",True,False
+"import collections
+iterable_list = list(iterable)
+counts = collections.Counter(iterable_list)","[(0.9, 35)]",True,False
+"import math
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = math.isqrt(0 ** 2) + 1
+    else:
+        counts[i] = math.isqrt(counts[i] ** 2) + 1","[(0.5, 31)]",False,False
+"
+def item_count(item):
+    count = sum((1 for i in iterable if i == item))
+    return count
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)","[(1.2, 57)]",True,True
+"import collections
+iter = iter(iterable)
+tuple_iterable = tuple(iterable)
+counts = collections.Counter(tuple_iterable)","[(0.7, 30)]",False,False
+"import collections
+def count_items(iterable):
+    counts = collections.Counter()
+    for item in iterable:
+        counts[item] += 1
+    return counts
+counts = count_items(iterable)","[(0.7, 15)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+    count = counts.get(i, 0) + 1","[(0.3, 116)]",False,False
+"
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1 if i not in counts else counts[i] + 1","[(0.5, 13), (0.7, 3)]",True,True
+"from collections import defaultdict
+counts = {}
+for item in iterable:
+    counts[item] = counts.get(item, 0) + 1
+count = counts
+i = ''
+counts = {}
+for item in iterable:
+    counts[item] = counts.get(item, 0) + 1
+count = counts
+i = 0
+counts = {item: iterable.count(item) for item in iterable}
+count = counts
+i = 0","[(0.7, 16)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i, 0)
+    count += 1
+    counts[i] = count","[(0.3, 31)]",True,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"
+counts = {}
+for k in iterable:
+    counts[k] = iterable.count(k)","[(0.5, 70)]",True,False
+"from collections import defaultdict
+def item_count(item):
+    count = sum((1 for i in iterable if i == item))
+    return count
+counts = defaultdict(lambda : 0)
+for item in iterable:
+    counts[item] = item_count(item)","[(1.2, 36)]",True,True
+"import collections
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1 if i not in counts.keys() else counts[i] + 1","[(0.3, 59)]",True,True
+"import numpy as np
+counts = dict(zip(iterable, np.zeros(len(iterable))))
+for i in iterable:
+    counts[i] += 1","[(0.9, 46), (0.3, 86)]",True,False
+"import collections
+counts = collections.Counter()
+for item in iterable:
+    counts.update([item])","[(0.7, 13)]",True,False
+"from collections import Counter
+counts = Counter([x for x in iter(iterable)])","[(0.7, 32)]",False,False
+"from collections import Counter
+counts = Counter((iterable[i] for i in range(len(iterable))))
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)","[(0.5, 50)]",False,False
+"import collections
+counts = collections.defaultdict(int)
+i = 0
+for item in iterable:
+    counts[item] = counts[item] + 1","[(0.9, 56)]",False,False
+"from collections import defaultdict
+def item_count(item):
+    count = sum((1 for i in iterable if i == item))
+    return count
+counts = defaultdict(int)
+for item in iterable:
+    counts[item] = item_count(item)","[(1.2, 36)]",True,True
+"
+counts = dict()
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1","[(0.9, 20)]",True,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts","[(0.7, 34)]",False,False
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(iter)
+for i in counts:
+    count = counts[i]","[(0.7, 39)]",False,False
+"
+counts = {}
+for item in iterable:
+    if item not in counts:
+        counts[item] = 0
+    counts[item] += 1
+i = len(iterable)
+(counts, i)","[(1.2, 97)]",False,False
+"from collections import Counter
+def item_count(item):
+    count = Counter(iterable)[item]
+    return count
+counts = {item: item_count(item) for item in iterable}","[(1.2, 82)]",False,False
+"import math
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] = math.isqrt(counts[i] ** 2) + 1
+    else:
+        counts[i] = math.isqrt(0 ** 2) + 1","[(0.5, 31)]",False,False
+"import itertools
+keys = set(iterable)
+counts = {}
+for k in keys:
+    counts[k] = sum((x == k for x in iterable))","[(0.5, 73)]",True,False
+"import functools
+counts = functools.reduce(lambda c, x: {**c, x: c.get(x, 0) + 1}, iterable, {})","[(1.2, 3)]",True,False
+"
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0)
+    counts[i] += 1","[(0.9, 1), (0.3, 1), (0, 11)]",True,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import itertools
+keys = set(iterable)
+counts = {}
+for k in keys:
+    counts[k] = len([x for x in iterable if x == k])","[(0.5, 36)]",True,True
+"import collections
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1 if i not in counts else counts[i] + 1 if counts.get(i) is not None else 1","[(0.3, 64)]",False,False
+"import collections
+def item_count(item):
+    return iterable.count(item)
+counts = {item: item_count(item) for item in iterable}","[(1.2, 86)]",True,False
+"import math
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] = math.isqrt(counts[i] * counts[i]) + 1
+    else:
+        counts[i] = math.isqrt(0 * 0) + 1","[(0.5, 60)]",False,False
+"from collections import Counter
+iterable_list = list(iterable)
+counts = Counter(iterable_list)
+i = 0
+while i < len(iterable):
+    i += 1","[(0.9, 70)]",False,False
+"import math
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] = math.isqrt(counts[i] ** 2) + 1
+    else:
+        counts[i] = math.isqrt(0) + 1","[(0.5, 59)]",False,False
+"import numpy as np
+counts = {item: np.sum(np.array([1 for i in iterable if i == item])) for item in iterable}
+i = len(iterable)
+(counts, i)","[(1.2, 99)]",False,False
+"from collections import Counter
+iterable_list = list(iterable)
+counts = dict(Counter(iterable_list))","[(0.9, 35)]",False,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    if i not in counts:
+        counts[i] = 1
+    else:
+        counts[i] += 1","[(0.5, 55)]",True,True
+"import collections
+iter = iter(iterable)
+counts = collections.defaultdict(int)
+for x in iter:
+    counts[x] += 1","[(0.7, 33)]",True,False
+"import itertools
+keys = set(iterable)
+counts = {k: len(list(filter(lambda x: x == k, iterable))) for k in keys}","[(0.5, 74)]",True,False
+"from collections import Counter
+def item_count(item):
+    counts = Counter(iterable)
+    count = counts[item]
+    return count
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)
+counts_array = []
+for count in counts.values():
+    counts_array.append(count)","[(1.2, 83)]",False,False
+"import itertools
+from collections import defaultdict
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = 0
+    counts[i] += 1
+groups = itertools.groupby(iterable)
+counts = defaultdict(int)
+for (key, group) in groups:
+    count = sum((1 for _ in group))
+    counts[key] += count
+groups = itertools.groupby(iterable)
+counts = defaultdict(int)
+for (key, group) in groups:
+    count = len(list(group))
+    counts[key] += count","[(0.5, 56)]",False,False
+"import numpy as np
+i = len(iterable)
+
+def item_count(item):
+    return np.sum(np.array([1 for i in iterable if i == item]))
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)
+(counts, i)","[(1.2, 98)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"from collections import Counter
+counts = Counter()
+for i in range(len(iterable)):
+    counts[iterable[i]] += 1","[(0.5, 22)]",True,False
+"import collections
+iter = iter(iterable)
+counts = collections.defaultdict(int)
+while True:
+    try:
+        x = next(iter)
+        counts[x] += 1
+    except StopIteration:
+        break","[(0.7, 33)]",True,False
+"import functools
+counts = functools.reduce(lambda d, x: d.update({x: d.get(x, 0) + 1}) or d, iterable, {})","[(0.5, 8), (0.7, 25)]",True,False
+"import itertools
+keys = set(iterable)
+counts = {}
+for k in keys:
+    counts[k] = len(list(filter(lambda x: x == k, iterable)))","[(0.5, 36)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i, 0)
+    count += 1
+    if i in counts:
+        counts[i] = count
+    else:
+        counts[i] = 1","[(0.3, 83)]",False,False
+"from collections import Counter
+counts = Counter((iterable[i] for i in range(len(iterable))))
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)","[(0.5, 50)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1
+    counts[i] = counts[i] if i in counts else 1
+    counts[i] = counts[i] if i in counts else 1
+    counts[i] = counts[i] if i in counts else 1","[(0.3, 114)]",False,False
+"import functools
+from collections import Counter
+def add_to_dict(d, i):
+    d[i] = d.get(i, 0) + 1
+    return d
+iterable_counts = functools.reduce(add_to_dict, iterable, Counter())
+counts = iterable_counts","[(0.5, 80)]",True,False
+"from collections import Counter
+counts = Counter((x for x in iter(iterable)))","[(0.7, 32)]",False,False
+"import collections
+iter = iter(iterable)
+list_iter = list(iter)
+list_counts = collections.Counter(list_iter)
+counts = dict(list_counts)","[(0.7, 10)]",False,False
+"import collections
+counts = collections.Counter(iterable)
+i = 0
+while i < len(iterable):
+    i = i + 1","[(0.9, 70)]",False,False
+"from collections import Counter
+counts = Counter()
+for item in iterable:
+    counts[item] += 1
+i = len(iterable)
+(counts, i)","[(1.2, 100)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i)
+    if count is not None:
+        count += 1
+    else:
+        count = 1
+    counts[i] = count","[(0.3, 61)]",True,True
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"from collections import Counter
+counts = Counter(iterable)
+i = 0
+while i < len(iterable):
+    i += 1","[(0.9, 42)]",False,False
+"import itertools
+keys = set(iterable)
+counts = {}
+for k in keys:
+    counts[k] = sum([1 for x in iterable if x == k])","[(0.5, 71)]",True,True
+"from collections import Counter
+keys = set(iterable)
+counts = dict(Counter(iterable))","[(0.5, 74)]",False,False
+"import itertools
+from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1","[(0.5, 27)]",True,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for item in iterable:
+    counts[item] += 1
+i = len(iterable)","[(0.9, 64)]",False,False
+"import numpy as np
+def item_count(item):
+    count = np.sum(np.array([1 for i in iterable if i == item]))
+    return count
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)
+i = len(iterable)
+(counts, i)","[(1.2, 81)]",False,False
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    count = counts[i] + 1
+    counts[i] = count","[(0.3, 122)]",True,False
+"import functools
+from collections import Counter
+def add_to_dict(d, i):
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+    return d
+counts = functools.reduce(add_to_dict, iterable, Counter())","[(0.5, 80)]",True,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"
+counts = dict(zip(iterable, [iterable.count(i) for i in iterable]))","[(0.3, 29)]",True,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for item in iterable:
+    counts[item] += 1","[(0.9, 4)]",True,False
+"from collections import Counter
+counts = Counter()
+for item in iterable:
+    counts[item] += 1
+count = counts
+i = ''
+counts = Counter()
+for item in iterable:
+    counts[item] += 1
+count = counts
+i = 0
+counts = Counter(iterable)
+count = counts
+i = 0","[(0.7, 16)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import functools
+counts = functools.reduce(lambda d, i: {**d, i: d.get(i, 0) + 1}, iterable, {})","[(0.5, 16)]",True,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts = dict(counts)","[(0.7, 26)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts = [iterable.count(i) for i in iterable]
+counts = dict(zip(iterable, counts))","[(0.3, 8)]",False,False
+"from collections import Counter
+iter = iter(iterable)
+counts = Counter(iter)","[(0.7, 2)]",False,False
+"
+counts = {}
+for item in iterable:
+    counts[item] = counts.get(item, 0)
+    counts[item] = counts[item] + 1
+i = 0
+for (key, value) in counts.items():
+    i += value","[(0.5, 40)]",False,False
+"import numpy as np
+counts = {item: np.sum([1 for x in iterable if x == item]) for item in iterable}
+i = len(iterable)
+(counts, i)","[(1.2, 101)]",False,False
+"
+counts = dict()
+for i in iterable:
+    if i not in counts:
+        counts[i] = 0
+    counts[i] += 1","[(1.2, 7)]",True,True
+"
+counts = {}
+for i in range(len(iterable)):
+    if iterable[i] in counts:
+        counts[iterable[i]] += 1
+    else:
+        counts[iterable[i]] = 1","[(0.5, 43)]",True,True
+"
+def count_elements(iterable):
+    counts = {}
+    for element in iterable:
+        counts[element] = counts.get(element, 0) + 1
+    return counts
+counts = count_elements(iterable)","[(0.9, 38), (1.2, 8)]",True,False
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] = counts[i] + 1","[(0.3, 122)]",True,False
+"from collections import Counter
+def item_count(item):
+    return Counter(iterable)[item]
+counts = {item: item_count(item) for item in iterable}","[(1.2, 86)]",False,False
+"
+counts = {}
+for item in iterable:
+    if item not in counts:
+        counts[item] = 1
+    else:
+        counts[item] += 1
+i = 0
+for (key, value) in counts.items():
+    i += value","[(0.5, 40)]",False,False
+"import collections
+iterable_list = list(iterable)
+counter = collections.Counter(iterable_list)
+keys = list(counter.keys())
+counts = dict()
+for i in range(len(keys)):
+    counts[keys[i]] = counter[keys[i]]","[(0.9, 96)]",False,False
+"import collections
+counts = collections.Counter()
+for item in iterable:
+    counts[item] += 1
+counts","[(0.7, 14)]",False,False
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(iter)
+for item in iter:
+    counts[item] += 1","[(0.7, 17)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i, 0)
+    count = count + 1
+    if i in counts:
+        counts[i] = count
+    else:
+        counts[i] = 1","[(0.3, 83)]",False,False
+"import functools
+counts = functools.reduce(lambda d, k: d.update({k: d.get(k, 0) + 1}) or d, iterable, {})","[(0.3, 60)]",True,False
+"import itertools
+keys = set(iterable)
+counts = {k: sum((1 for x in iterable if x == k)) for k in keys}","[(0.5, 76)]",True,True
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = sum((1 for x in iterable if x == i))","[(0.3, 102)]",True,True
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1","[(0.3, 122)]",True,False
+"import collections
+def item_count(item):
+    count = len([i for i in iterable if i == item])
+    return count
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)","[(1.2, 88)]",True,True
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1","[(0.3, 122)]",True,True
+"from collections import Counter
+counts = Counter([item for item in iterable])","[(0.5, 22)]",False,False
+"
+counts = {}
+i = 0
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1","[(0.9, 56)]",False,False
+"import collections
+iter = iter(iterable)
+list_iter = list(iter)
+counts = {}
+for i in range(len(list_iter)):
+    counts[list_iter[i]] = counts.get(list_iter[i], 0) + 1","[(0.7, 36)]",True,False
+"
+counts = {x: iterable.count(x) for x in set(iterable)}
+i = 0","[(0.9, 68)]",False,False
+"import collections
+iterable_list = list(iterable)
+counter = collections.Counter(iterable_list)
+counts = {key: value for (key, value) in counter.items()}","[(0.9, 96)]",False,False
+"from collections import defaultdict
+def count_occurrences(iterable):
+    res = defaultdict(int)
+    for i in iterable:
+        res[i] += 1
+    return dict(res)
+counts = count_occurrences(iterable)","[(1.2, 30)]",True,False
+"
+counts = {}
+for i in iterable:
+    counts[i] = counts.setdefault(i, 0) + 1","[(0.9, 20)]",True,False
+"import math
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] = math.isqrt(counts.get(i, 0) ** 2) + 1
+    else:
+        counts[i] = math.isqrt(0 ** 2) + 1","[(0.5, 66)]",False,False
+"
+counts = {}
+for item in iterable:
+    counts[item] = sum((i == item for i in iterable))","[(1.2, 109)]",True,False
+"
+counts = {}
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1
+i = len(iterable)
+(counts, i)","[(1.2, 81)]",False,False
+"import itertools
+keys = set(iterable)
+counts = {k: iterable.count(k) for k in keys}","[(0.5, 16)]",True,False
+"
+counts = {}
+i_list = list(iterable)
+for i in i_list:
+    if i not in counts:
+        counts[i] = 0
+    counts[i] += 1","[(0.9, 25)]",True,True
+"import functools
+counts = functools.reduce(lambda x, y: x.update({y: x.get(y, 0) + 1}) or x, iterable, {})","[(0.3, 125)]",True,False
+"
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1 if i in counts else 1","[(0.3, 3)]",True,True
+"
+counts = {}
+for i in iterable:
+    counts.setdefault(i, 0)
+    counts[i] = counts[i] + 1","[(0.3, 25)]",True,False
+"from collections import Counter
+counts = Counter((iterable[i] for i in range(len(iterable))))
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)","[(0.5, 50)]",False,False
+"import functools
+counts = functools.reduce(lambda d, x: {**d, x: d.get(x, 0) + 1}, iterable, {})","[(0.3, 11)]",True,False
+"from collections import defaultdict
+def count_items(iterable):
+    count = defaultdict(int)
+    for item in iterable:
+        count[item] += 1
+    return count
+counts = count_items(iterable)","[(0.9, 38)]",True,False
+"import collections
+iterable_list = list(iterable)
+counts = collections.Counter(iterable_list)
+i = len(iterable_list)","[(0.9, 52)]",False,False
+"import collections
+counts = collections.Counter([x for x in iter(iterable)])","[(0.7, 32)]",False,False
+"import functools
+from collections import Counter
+def add_to_dict(d, i):
+    d[i] = d.get(i, 0) + 1
+    return d
+counts = functools.reduce(add_to_dict, iterable, Counter())","[(0.5, 80)]",True,False
+"import collections
+iter = iter(iterable)
+list_iter = list(iter)
+counts = {}
+for item in list_iter:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1","[(0.7, 36)]",False,False
+"from collections import defaultdict
+counts = defaultdict(int)
+i_list = list(iterable)
+for i in i_list:
+    counts[i] += 1","[(0.9, 43)]",True,False
+"from collections import Counter
+iter = iter(iterable)
+counts = Counter()
+for item in iter:
+    counts[item] += 1","[(0.7, 2)]",True,False
+"import collections
+counts = collections.Counter()
+for item in iterable:
+    counts.setdefault(item, 0)
+    counts[item] += 1","[(0.7, 13)]",True,False
+"import collections
+iterable_list = list(iterable)
+counts = {}
+for item in iterable_list:
+    counts.setdefault(item, 0)
+    counts[item] += 1","[(0.9, 91)]",True,False
+"
+counts = {}
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1
+i = 0
+while i < len(iterable):
+    i += 1","[(0.9, 40)]",False,False
+"
+counts = {}
+for i in iterable:
+    counts[i] = sum((1 for x in iterable if x == i))","[(0.3, 75)]",True,True
+"
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1
+counts","[(1.2, 80)]",False,False
+"
+counts = {}
+i_list = list(iterable)
+for i in i_list:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1","[(0.9, 44)]",True,True
+"import collections
+counts = collections.Counter()
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1","[(0.7, 13)]",True,True
+"
+counts = {}
+i = 0
+for item in iterable:
+    count = counts.get(item)
+    if count:
+        counts[item] += 1
+    else:
+        counts[item] = 1
+    i += 1","[(0.9, 60)]",False,False
+"import numpy as np
+arr = list(iterable)
+counts = {x: arr.count(x) for x in set(arr)}
+i = 0","[(0.9, 68)]",False,False
+"
+counts = {}
+for i in range(len(iterable)):
+    if iterable[i] not in counts:
+        counts[iterable[i]] = 1
+    else:
+        counts[iterable[i]] += 1","[(0.5, 43)]",True,True
+"import functools
+from collections import Counter
+def add_to_dict(d, i):
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+    return d
+iterable_counts = functools.reduce(add_to_dict, iterable, Counter())
+counts = iterable_counts","[(0.5, 80)]",True,False
+"import numpy as np
+counts = {}
+for item in iterable:
+    counts[item] = counts.get(item, 0) + 1
+count = counts
+i = ''
+counts = {}
+for item in iterable:
+    counts[item] = counts.get(item, 0) + 1
+count = counts
+i = 0
+counts = {}
+counts = {item: iterable.count(item) for item in iterable}
+count = counts
+i = 0","[(0.7, 16)]",False,False
+"import itertools
+keys = set(iterable)
+counts = {}
+for k in keys:
+    counts[k] = iterable.count(k)","[(0.5, 36)]",True,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"
+counts = {}
+for i in iterable:
+    counts[i] = 1 if i not in counts else counts[i] + 1","[(0.9, 7)]",True,True
+"import itertools
+from collections import defaultdict
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+groups = itertools.groupby(iterable)
+counts = defaultdict(int)
+for (key, group) in groups:
+    count = sum((1 for _ in group))
+    counts[key] += count
+groups = itertools.groupby(iterable)
+counts = defaultdict(int)
+for (key, group) in groups:
+    count = len(list(group))
+    counts[key] += count","[(0.5, 56)]",False,False
+"
+counts = {}
+for item in iterable:
+    count = len([i for i in iterable if i == item])
+    counts[item] = count","[(1.2, 125)]",True,True
+"import collections
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] = counts[i] + 1
+    else:
+        counts[i] = 1","[(0.3, 27)]",True,True
+"import collections
+iterable_list = list(iterable)
+counter = collections.Counter(iterable_list)
+counts = dict(counter)","[(0.9, 51)]",False,False
+"from collections import Counter
+counts = Counter()
+for item in iterable:
+    counts[item] += 1","[(0.9, 4), (0.5, 22), (0.7, 2)]",True,False
+"import collections
+iter = iter(iterable)
+list_iter = list(iter)
+counts = {}
+for item in list_iter:
+    counts[item] = counts.get(item, 0) + 1","[(0.7, 36)]",False,False
+"from collections import Counter
+def item_count(item):
+    counts = Counter(iterable)
+    count = counts[item]
+    return count
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)","[(1.2, 67)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.setdefault(i)
+    if count is None:
+        count = 1
+    else:
+        count += 1
+    counts[i] = count","[(0.3, 39)]",True,True
+"import itertools
+counts = {}
+i = 0
+for item in iterable:
+    counts[item] = len(list(filter(lambda x: x == item, iterable)))
+    i += 1
+(counts, i)","[(1.2, 103)]",False,False
+"from collections import Counter
+iter = iter(iterable)
+counts = Counter()
+for item in iter:
+    if item not in counts:
+        counts[item] = 0
+    counts[item] += 1","[(0.7, 20)]",True,True
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import collections
+counts = collections.Counter(iterable)
+i = len(iterable)
+(counts, i)","[(1.2, 103)]",False,False
+"from collections import Counter
+iterable_list = list(iterable)
+counts = Counter(iterable_list)","[(0.9, 50)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i, 0)
+    count += 1
+    counts[i] = count
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts = collections.Counter(iterable)","[(0.3, 8)]",False,False
+"from collections import Counter
+iter = iter(iterable)
+counts = Counter()
+for item in iter:
+    counts[item] = counts.get(item, 0) + 1","[(0.7, 20)]",True,False
+"import numpy as np
+counts = {}
+i = 0
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1
+    i += 1
+(counts, i)","[(1.2, 103)]",False,False
+"from collections import Counter
+counts = Counter((iterable[i] for i in range(len(iterable))))
+counts = Counter(counts)","[(0.5, 50)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import statistics
+counts = {}
+for i in set(iterable):
+    counts[i] = iterable.count(i)","[(0.5, 19)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i, 0)
+    count += 1
+    counts[i] = count if i in counts else 1","[(0.3, 109)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts = collections.Counter(iterable)","[(0.3, 8)]",False,False
+"from collections import defaultdict
+def count_items(iterable):
+    count = defaultdict(int)
+    for item in iterable:
+        if item not in count:
+            count[item] = 1
+        else:
+            count[item] += 1
+    return count
+counts = count_items(iterable)","[(0.9, 58)]",True,True
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts","[(0.9, 77)]",False,False
+"import math
+from collections import Counter
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = math.isqrt(0 ** 2) + 1
+    else:
+        counts[i] = math.isqrt(counts[i] ** 2) + 1
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = 1
+    else:
+        counts[i] += 1
+counts = Counter(iterable)","[(0.5, 61)]",False,False
+"import collections
+counts = collections.Counter(iterable)
+i = len(iterable)","[(0.9, 71)]",False,False
+"from collections import Counter
+counts = Counter((iterable[i] for i in range(len(iterable))))","[(0.5, 50)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"
+counts = {}
+for item in iterable:
+    count = iterable.count(item)
+    counts[item] = count","[(1.2, 35)]",True,False
+"import numpy as np
+counts = {item: list(iterable).count(item) for item in iterable}
+i = len(iterable)
+(counts, i)","[(1.2, 101)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1
+    counts[i] = counts[i] if i in counts else 1
+    counts[i] = counts[i] if i in counts else 1
+    counts[i] = counts[i] if i in counts else 1
+    counts[i] = counts[i] if i in counts else 1","[(0.3, 114)]",False,False
+"import numpy as np
+counts = dict.fromkeys(iterable, 0)
+for element in iterable:
+    counts[element] += 1","[(1.2, 23)]",True,False
+"
+counts = dict()
+for i in iterable:
+    if i not in counts:
+        counts[i] = 1
+    else:
+        counts[i] += 1","[(1.2, 20)]",True,True
+"import collections
+keys = set(iterable)
+counts = {k: collections.Counter(iterable)[k] for k in keys}","[(0.5, 35)]",False,False
+"import numpy as np
+counts = {item: (lambda item: np.sum(np.array([1 for i in iterable if i == item])))(item) for item in iterable}
+i = len(iterable)
+(counts, i)","[(1.2, 99)]",False,False
+"import numpy as np
+counts = dict()
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1
+i = 0","[(0.9, 68)]",False,False
+"import collections
+counts = collections.defaultdict(int)
+for item in iterable:
+    counts[item] += 1
+i = len(iterable)","[(0.9, 39)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    counts.setdefault(i, 0)
+    counts[i] += 1
+counts = {}
+for i in iterable:
+    counts.setdefault(i, 0)
+    counts[i] = counts[i] + 1
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1","[(0.3, 7)]",False,False
+"
+counts = {}
+for item in iterable:
+    counts[item] = sum([1 for i in iterable if i == item])","[(0.5, 84), (1.2, 106)]",True,True
+"import collections
+iterable_list = list(iterable)
+counts = dict(collections.Counter(iterable_list))","[(0.9, 50)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.setdefault(i)
+    if count is None:
+        count = 1
+    else:
+        count += 1
+    counts[i] = count
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts = [iterable.count(i) for i in iterable]
+counts = dict(zip(iterable, counts))","[(0.3, 8)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1 if i not in counts.items() else counts[i] + 1","[(0.3, 59)]",True,True
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    count = counts[i]
+    if count is not None:
+        count += 1
+    else:
+        count = 1
+    counts[i] = count","[(0.3, 96)]",True,True
+"import numpy as np
+def item_count(item):
+    count = np.sum(np.array([1 for i in iterable if i == item]))
+    return count
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)","[(1.2, 67)]",True,True
+"import itertools
+from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    if i not in counts:
+        counts[i] = 0
+    counts[i] += 1","[(0.5, 54)]",True,True
+"
+counts = {}
+for item in iterable:
+    if item not in counts:
+        counts[item] = len([val for val in iterable if val == item])","[(1.2, 109)]",True,True
+"import itertools
+counts = dict()
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1","[(0.3, 121)]",True,True
+"
+counts = dict()
+
+def count_items(iterable):
+    for item in iterable:
+        if item in counts:
+            counts[item] += 1
+        else:
+            counts[item] = 1
+count_items(iterable)","[(1.2, 20)]",True,True
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(tuple(iterable))","[(0.7, 9)]",False,False
+"
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1","[(0.9, 7), (0.5, 8), (0.3, 5), (0, 8), (0.7, 21)]",True,True
+"
+counts = {}
+i_list = list(iterable)
+for i in i_list:
+    if i not in counts:
+        counts[i] = 1
+    else:
+        counts[i] += 1","[(0.9, 82)]",True,True
+"import collections
+iter = iter(iterable)
+list_iter = list(iter)
+counts = collections.Counter(list_iter)","[(0.7, 10)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1 if i not in counts.values() else counts[i] + 1","[(0.3, 59)]",True,True
+"import collections
+counts = collections.Counter(tuple(iterable))","[(0.7, 29)]",False,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for item in iterable:
+    counts[item] += 1
+count = dict(counts)
+i = ''
+counts = defaultdict(int)
+for item in iterable:
+    counts[item] += 1
+count = dict(counts)
+i = 0
+counts = {item: iterable.count(item) for item in iterable}
+count = counts
+i = 0","[(0.7, 16)]",False,False
+"import math
+counts = {}
+for i in iterable:
+    counts[i] = math.isqrt(counts.get(i, 0) ** 2) + 1","[(0.5, 8)]",False,False
+"import collections
+iterable_list = list(iterable)
+counts = collections.Counter(iterable_list)
+i = 0
+for (index, value) in enumerate(iterable_list):
+    i += 1","[(0.9, 98)]",False,False
+"
+iterable_count = {}
+for item in iterable:
+    count = 0
+    for i in range(len(iterable)):
+        if iterable[i] == item:
+            count += 1
+    iterable_count[item] = count
+counts = iterable_count","[(1.2, 82)]",True,True
+"import math
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = math.isqrt(0 ** 2) + 1
+    else:
+        counts[i] = math.isqrt(counts.get(i, 0) ** 2) + 1","[(0.5, 66)]",False,False
+"import collections
+keys = set(iterable)
+counts = {}
+for k in keys:
+    counts[k] = collections.Counter(iterable)[k]","[(0.5, 67)]",False,False
+"from collections import Counter
+counts = Counter(iterable)","[(0.9, 0), (0.5, 0), (0.3, 0), (1.2, 0), (0, 0), (0.7, 0)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i, 0)
+    count += 1
+    if i not in counts:
+        counts[i] = 1
+    counts[i] = count","[(0.3, 111)]",False,False
+"
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1","[(0.9, 1), (0.5, 1), (0.3, 1), (1.2, 3), (0, 1), (0.7, 3)]",True,False
+"import collections
+counts = collections.Counter()
+for item in iterable:
+    counts[item] = counts.get(item, 0) + 1","[(0.7, 13)]",True,False
+"import collections
+iterable_list = list(iterable)
+counts = {}
+for item in iterable_list:
+    if item not in counts:
+        counts[item] = iterable_list.count(item)","[(0.9, 91)]",True,True
+"
+count = {}
+for item in iterable:
+    count[item] = count.get(item, 0) + 1
+counts = count","[(1.2, 92)]",False,False
+"from collections import Counter
+counts = Counter((iterable[i] for i in range(len(iterable))))
+counts = Counter(counts)
+counts = Counter(counts)","[(0.5, 50)]",False,False
+"from collections import defaultdict
+def count_elements(iterable):
+    counts = defaultdict(int)
+    for element in iterable:
+        counts[element] += 1
+    return counts
+counts = count_elements(iterable)","[(1.2, 21)]",True,False
+"import itertools
+from collections import defaultdict
+counts = {}
+for i in iterable:
+    current_count = counts.get(i, 0)
+    new_count = current_count + 1
+    counts[i] = new_count
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1
+counts = defaultdict(int)
+for i in iterable:
+    counts[i] += 1","[(0.5, 28)]",False,False
+"import collections
+iterable_list = list(iterable)
+counts = {}
+for item in iterable_list:
+    counts[item] = iterable_list.count(item)","[(0.9, 91)]",True,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for i in range(len(iterable)):
+    counts[iterable[i]] += 1","[(0.5, 21)]",True,False
+"import collections
+iterable_list = list(iterable)
+counter = collections.Counter(iterable_list)
+counts = dict()
+for key in counter.keys():
+    counts[key] = counter[key]","[(0.9, 96)]",False,False
+"from collections import defaultdict
+iterable_list = list(iterable)
+counts = defaultdict(int)
+for element in iterable_list:
+    counts[element] += 1","[(0.9, 88)]",True,False
+"
+counts = {}
+for item in iterable:
+    if item not in counts:
+        counts[item] = 1
+    else:
+        counts[item] += 1
+i = 0
+while i < len(iterable):
+    i += 1","[(0.9, 74)]",False,False
+"import itertools
+unique_items = list(set(iterable))
+counts = {}
+for item in unique_items:
+    count = len(list(filter(lambda x: x == item, iterable)))
+    counts[item] = count","[(0.5, 87)]",True,False
+"import collections
+iter = iter(iterable)
+counts = collections.Counter()
+for item in iter:
+    counts[item] += 1","[(0.7, 2)]",True,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"from collections import defaultdict
+counts = defaultdict(int)
+i = 0
+while i < len(iterable):
+    counts[iterable[i]] += 1
+    i += 1","[(0.9, 37)]",True,False
+"from collections import Counter
+counts = Counter()
+for item in iterable:
+    if item not in counts:
+        counts[item] = 1
+    else:
+        counts[item] += 1","[(0.5, 52)]",True,True
+"from collections import Counter
+iterable_list = list(iterable)
+counter = Counter(iterable_list)
+counts = dict()
+for (key, value) in counter.items():
+    counts[key] = value","[(0.9, 95)]",False,False
+"import collections
+iter = iter(iterable)
+list_iter = list(iter)
+list_counts = {}
+for item in list_iter:
+    if item in list_counts:
+        list_counts[item] += 1
+    else:
+        list_counts[item] = 1
+counts = dict(list_counts)","[(0.7, 37)]",True,True
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts","[(0.7, 34)]",False,False
+"from collections import defaultdict
+counts = defaultdict(int)
+i = len(iterable)
+for item in iterable:
+    counts[item] += 1
+(counts, i)","[(1.2, 103)]",False,False
+"
+counts = {}
+i = 0
+for item in iterable:
+    counts.setdefault(item, 0)
+    counts[item] += 1","[(0.9, 56)]",False,False
+"import itertools
+keys = set(iterable)
+counts = {}
+for k in keys:
+    counts[k] = sum((1 for x in iterable if x == k))","[(0.5, 36)]",True,True
+"from collections import Counter
+counts = Counter((iterable[i] for i in range(len(iterable))))
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)","[(0.5, 50)]",False,False
+"
+counts = {}
+i = 0
+while i < len(iterable):
+    counts[iterable[i]] = counts.get(iterable[i], 0) + 1
+    i += 1","[(0.9, 10)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1 if i not in counts else counts[i] + 1 if counts[i] is not None else 1","[(0.3, 64)]",False,False
+"from collections import Counter
+iter = iter(iterable)
+counts = Counter()
+for item in iter:
+    if item not in counts:
+        counts[item] = 1
+    else:
+        counts[item] += 1","[(0.7, 20)]",True,True
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i, 0)
+    count += 1
+    if i not in counts:
+        counts[i] = 1
+    else:
+        counts[i] = count","[(0.3, 83)]",False,False
+"from collections import Counter
+iter = iter(iterable)
+counts = Counter()
+for item in iter:
+    if counts.get(item) is None:
+        counts[item] = 0
+    counts[item] += 1","[(0.7, 20)]",True,True
+"
+counts = {}
+for i in range(len(iterable)):
+    counts[iterable[i]] = counts.get(iterable[i], 0) + 1","[(0.5, 21)]",True,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import numpy as np
+counts = dict(zip(iterable, np.zeros(len(iterable))))
+for i in range(len(iterable)):
+    counts[iterable[i]] = counts.get(iterable[i], 0) + 1","[(0.3, 118)]",True,False
+"from collections import Counter
+counts = Counter((iterable[i] for i in range(len(iterable))))
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)","[(0.5, 50)]",False,False
+"import collections
+keys = set(iterable)
+counts = {}
+counter = collections.Counter(iterable)
+for k in keys:
+    counts[k] = counter[k]","[(0.5, 67)]",False,False
+"import itertools
+from collections import defaultdict
+counts = {}
+for i in iterable:
+    current_count = counts.get(i, 0)
+    new_count = current_count + 1
+    counts[i] = new_count","[(0.5, 57)]",True,False
+"
+counts = {}
+for element in iterable:
+    if element in set(iterable):
+        counts[element] = iterable.count(element)","[(1.2, 72)]",True,True
+"
+counts = {}
+i_list = list(iterable)
+for i in i_list:
+    counts[i] = counts.get(i, 0) + 1","[(0.9, 44)]",True,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for item in iterable:
+    counts[item] += 1
+counts = dict(counts)
+i = len(iterable)
+(counts, i)","[(1.2, 100)]",False,False
+"import collections
+iter = iter(iterable)
+counts = {}
+for x in iter:
+    counts[x] = counts.get(x, 0) + 1","[(0.7, 33)]",True,False
+"import math
+counts = {}
+for i in iterable:
+    counts[i] = math.isqrt(counts.get(i, 0) ** 2) + 1 if i in counts else math.isqrt(0 ** 2) + 1 if i not in counts else math.isqrt(counts[i] ** 2) + 1","[(0.5, 31)]",False,False
+"
+counts = {}
+for item in iterable:
+    counts[item] = counts.get(item, 0)
+    counts[item] += 1
+i = 0
+for (key, value) in counts.items():
+    i += value","[(0.5, 40)]",False,False
+"import itertools
+counts = {}
+for item in iterable:
+    counts[item] = len(list(itertools.filterfalse(lambda x: x != item, iterable)))","[(0.5, 84)]",True,False
+"
+counts = {}
+tmp_set = set(iterable)
+for item in tmp_set:
+    counts[item] = iterable.count(item)","[(1.2, 126)]",True,False
+"
+def item_count(item):
+    count = sum((1 for i in iterable if i == item))
+    return count
+counts = {}
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1","[(1.2, 57)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import numpy as np
+item_count = lambda item: iterable.count(item)
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)
+i = len(iterable)
+(counts, i)","[(1.2, 81)]",False,False
+"import collections
+counts = collections.defaultdict(int)
+i_list = list(iterable)
+for i in i_list:
+    counts[i] += 1","[(0.9, 43)]",True,False
+"import collections
+counts = collections.Counter()
+for item in iterable:
+    counts[item] += 1","[(0.5, 4), (0.7, 2)]",True,False
+"import itertools
+unique_items = list(set(iterable))
+counts = {item: len(list(filter(lambda x: x == item, iterable))) for item in unique_items}","[(0.5, 40)]",True,False
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    count = counts[i]
+    count = count + 1
+    counts[i] = count","[(0.3, 77)]",True,False
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(iter)
+count = counts.most_common(0)","[(0.7, 39)]",False,False
+"
+def item_count(item):
+    count = sum((1 for i in iterable if i == item))
+    return count
+counts = {}
+for item in iterable:
+    count = item_count(item)
+    counts[item] = count","[(1.2, 20)]",True,True
+"import functools
+counts = {item: functools.reduce(lambda a, b: a + 1 if b == item else a, iterable, 0) for item in iterable}","[(1.2, 87)]",True,True
+"from numpy import sum
+import numpy as np
+counts = {item: sum(np.array([1 for i in iterable if i == item])) for item in iterable}
+i = len(iterable)
+(counts, i)","[(1.2, 99)]",False,False
+"from collections import Counter
+counts = dict(Counter(iterable))
+i = len(iterable)
+(counts, i)","[(1.2, 102)]",False,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for item in iterable:
+    if item not in counts:
+        counts[item] = 1
+    else:
+        counts[item] += 1
+i = 0
+while i < len(iterable):
+    i += 1","[(0.9, 42)]",False,False
+"import collections
+def item_count(item):
+    counts = collections.Counter(iterable)
+    count = counts[item]
+    return count
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)","[(1.2, 83)]",False,False
+"from collections import defaultdict
+counts = defaultdict(int)
+i = 0
+for item in iterable:
+    counts[item] += 1
+    i += 1","[(0.9, 53)]",False,False
+"
+counts = {}
+i_list = list(iterable)
+for i in i_list:
+    counts.setdefault(i, 0)
+    counts[i] += 1","[(0.9, 19)]",True,False
+"from collections import Counter
+counts = dict(Counter(iterable))
+i = len(iterable)","[(0.9, 39)]",False,False
+"import collections
+counts = collections.Counter((x for x in iter(iterable)))","[(0.7, 32)]",False,False
+"
+counts = {}
+i = 0
+while i < len(iterable):
+    item = iterable[i]
+    count = counts.get(item)
+    if count:
+        counts[item] += 1
+    else:
+        counts[item] = 1
+    i += 1","[(0.9, 60)]",True,True
+"import collections
+counts = collections.defaultdict(int)
+i_list = iterable
+for i in i_list:
+    counts[i] += 1","[(0.9, 78)]",True,False
+"import math
+from collections import defaultdict
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = math.isqrt(0 ** 2) + 1
+    else:
+        counts[i] = math.isqrt(counts[i] ** 2) + 1
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = 1
+    else:
+        counts[i] += 1
+counts = defaultdict(int)
+for i in iterable:
+    counts[i] += 1","[(0.5, 61)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"
+counts = {}
+for item in iterable:
+    counts[item] = counts.get(item, 0) + 1
+i = 0
+while i < len(iterable):
+    i += 1","[(0.9, 24)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"
+counts = {}
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1
+i = 0
+for (key, value) in counts.items():
+    i += value","[(0.5, 40)]",False,False
+"
+counts = {i: 0 for i in iterable}
+for i in iterable:
+    counts[i] += 1","[(0.3, 41)]",True,False
+"import collections
+def count_items(iterable):
+    count = collections.defaultdict(int)
+    for item in iterable:
+        count[item] += 1
+    return count
+counts = count_items(iterable)","[(0.9, 58)]",True,False
+"import collections
+counts = collections.Counter(list(iterable))","[(0.7, 28)]",True,False
+"
+counts = {}
+i = 0
+while i < len(iterable):
+    count = counts.get(iterable[i])
+    if count:
+        counts[iterable[i]] += 1
+    else:
+        counts[iterable[i]] = 1
+    i += 1","[(0.9, 38)]",True,True
+"
+counts = {}
+for item in iterable:
+    counts[item] = sum([1 for i in iterable if i == item])
+i = len(iterable)
+(counts, i)","[(1.2, 98)]",False,False
+"import collections
+def item_count(item):
+    counts = collections.Counter(iterable)
+    count = counts[item]
+    return count
+counts = {}
+for item in iterable:
+    counts.update({item: item_count(item)})","[(1.2, 110)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1","[(0.3, 7)]",False,False
+"
+counts = {}
+for item in iterable:
+    count = sum((1 for i in iterable if i == item))
+    counts[item] = count","[(1.2, 35)]",True,True
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    if i not in counts:
+        counts[i] = 1
+    else:
+        counts[i] += 1","[(0.3, 122)]",True,True
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(iter)
+count = counts.most_common()","[(0.7, 10)]",False,False
+"import numpy as np
+item_count = lambda item: np.sum(np.array([1 for i in iterable if i == item]))
+counts = {item: item_count(item) for item in iterable}
+i = len(iterable)
+(counts, i)","[(1.2, 81)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] = counts[i] + 1
+    else:
+        counts[i] = 1
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1","[(0.3, 7)]",False,False
+"import itertools
+iterable_list = list(iterable)
+unique_values = set(iterable_list)
+counts = {value: iterable_list.count(value) for value in unique_values}","[(0.9, 23)]",True,False
+"from collections import Counter
+def count_items(iterable):
+    counts = Counter()
+    for item in iterable:
+        counts[item] += 1
+    return counts
+counts = count_items(iterable)","[(0.7, 15)]",True,False
+"from collections import Counter
+counts = Counter()
+for item in iterable:
+    counts[item] += 1
+count = counts
+i = ''
+counts = Counter()
+for item in iterable:
+    counts[item] += 1
+count = counts
+i = 0
+counts = Counter()
+counts = Counter([item for item in iterable])
+count = counts
+i = 0","[(0.7, 16)]",False,False
+"import collections
+iterable_list = list(iterable)
+counts = {}
+for element in iterable_list:
+    if element not in counts:
+        counts[element] = 1
+    else:
+        counts[element] += 1","[(0.9, 88)]",True,True
+"import collections
+iter = iter(iterable)
+counts = collections.Counter((x for x in iter))","[(0.7, 9)]",False,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for item in iterable:
+    counts[item] += 1
+i = 0","[(0.9, 67)]",False,False
+"import collections
+iter = iter(iterable)
+counts = {}
+while True:
+    try:
+        x = next(iter)
+        counts[x] = counts.get(x, 0) + 1
+    except StopIteration:
+        break","[(0.7, 33)]",True,False
+"from collections import defaultdict
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+counts = defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts = {i: 0 for i in iterable}
+for i in iterable:
+    counts[i] += 1","[(0.3, 9)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    if i in counts:
+        counts[i] += 1
+    else:
+        counts[i] = 1
+    count = counts[i]","[(0.3, 116)]",False,False
+"import collections
+counts = collections.Counter(iterable)
+for item in iterable:
+    counts[item] = counts[item]","[(1.2, 84)]",False,False
+"from collections import Counter
+iterable = iter(iterable)
+counts = Counter(iter(iterable))","[(0.7, 11)]",False,False
+"import itertools
+unique_items = list(set(iterable))
+counts = {}
+for item in unique_items:
+    counts[item] = sum((1 for value in iterable if value == item))","[(0.5, 87)]",True,True
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"
+counts = {}
+for item in iterable:
+    if item not in counts:
+        counts[item] = 0
+    counts[item] = max(counts[item], iterable.count(item))","[(0.5, 84)]",False,False
+"from collections import Counter
+iterable = iter(iterable)
+counts = Counter(iter(iter(iterable)))","[(0.7, 11)]",False,False
+"
+counts = {}
+for item in iterable:
+    counts[item] = counts.get(item, 0)
+    counts[item] = counts[item] + 1","[(0.5, 40)]",True,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    count = counts.get(i, 0) + 1
+    counts[i] = count","[(0.3, 121)]",True,False
+"import itertools
+counts = {}
+for i in iterable:
+    counts[i] = list(itertools.accumulate([counts.get(i, 0)])).pop() + 1","[(0.5, 8)]",False,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import collections
+iter = iter(iterable)
+counts = collections.Counter()
+while True:
+    try:
+        x = next(iter)
+        counts[x] += 1
+    except StopIteration:
+        break","[(0.7, 33)]",True,False
+"import collections
+iterable_list = list(iterable)
+counts = collections.Counter(iterable_list)
+i = sum((1 for x in iterable_list))","[(0.9, 52)]",False,False
+"
+counts = {i: iterable.count(i) for i in iterable}
+counts","[(1.2, 66)]",False,False
+"
+def count_occurrences(iterable):
+    res = {}
+    for i in iterable:
+        res[i] = res.get(i, 0) + 1
+    return res
+counts = count_occurrences(iterable)","[(1.2, 14)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i)
+    if count is None:
+        count = 0
+    count += 1
+    counts[i] = count","[(0.3, 61)]",True,True
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(iter)
+count = counts.most_common(3)","[(0.7, 39)]",False,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for item in iterable:
+    counts[item] += 1
+i = 0
+for (key, value) in counts.items():
+    i += value","[(0.5, 40)]",False,False
+"import collections
+counter = collections.Counter(iterable)
+counts = dict(counter)
+i = len(iterable)","[(0.9, 66)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    if counts.get(i) is not None:
+        counts[i] += 1
+    else:
+        counts[i] = 1","[(0.3, 99)]",True,True
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(iter)
+count = counts.most_common(1)","[(0.7, 39)]",False,False
+"from collections import Counter
+counts = Counter(iterable)
+i = len(iterable)","[(0.9, 54)]",False,False
+"
+counts = {}
+for i in iterable:
+    counts.setdefault(i, 0)
+    counts[i] += 1","[(0.9, 7), (0.5, 1), (0.3, 1), (1.2, 3), (0, 1)]",True,False
+"
+counts = {i: iterable.count(i) for i in iterable}","[(0.3, 58)]",True,False
+"
+counts = {}
+i = 0
+for item in iterable:
+    if item not in counts:
+        counts[item] = 0
+    counts[item] += 1","[(0.9, 55)]",False,False
+"from collections import defaultdict
+counts = defaultdict(int)
+i_list = iterable
+for i in i_list:
+    counts[i] += 1","[(0.9, 78)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = 1
+    else:
+        counts[i] = counts[i] + 1","[(0.3, 97)]",True,True
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(iter)
+i = 0
+for key in counts:
+    i += counts[key]","[(0.7, 10)]",False,False
+"from collections import Counter
+i = 0
+counts = Counter(iterable)
+while i < len(iterable):
+    i = i + 1","[(0.9, 70)]",False,False
+"from collections import Counter
+counts = Counter(iterable)
+i = 0
+while i < len(iterable):
+    i = i + 1","[(0.9, 70)]",False,False
+"import itertools
+unique_values = list(set(iterable))
+counts = {i: iterable.count(i) for i in unique_values}","[(0.3, 105)]",True,False
+"import collections
+iter = iter(iterable)
+list_iterable = list(iterable)
+counts = collections.Counter(tuple(list_iterable))","[(0.7, 30)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i)
+    if count is None:
+        count = 1
+    else:
+        count += 1
+    counts[i] = count
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts = collections.Counter(iterable)","[(0.3, 8)]",False,False
+"import itertools
+counts = {}
+for item in iterable:
+    if item not in counts:
+        counts[item] = len(list(itertools.filterfalse(lambda x: x != item, iterable)))","[(1.2, 109)]",True,True
+"import functools
+from collections import defaultdict
+counts = functools.reduce(lambda d, i: {**d, i: d.get(i, 0) + 1}, iterable, defaultdict(int))","[(0.5, 38)]",True,False
+"import numpy as np
+counts = {i: np.sum([1 for x in iterable if x == i]) for i in iterable}","[(0.3, 129)]",True,True
+"import functools
+counts = functools.reduce(lambda d, k: d.update([(k, d.get(k, 0) + 1)]) or d, iterable, {})","[(0.5, 1), (0.3, 21)]",True,False
+"
+counts = {}
+for item in iterable:
+    counts[item] = sum([1 for i in range(len(iterable)) if iterable[i] == item])","[(1.2, 106)]",True,True
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i, 0)
+    count = count + 1
+    if i not in counts:
+        counts[i] = 1
+    else:
+        counts[i] = count","[(0.3, 83)]",False,False
+"import itertools
+from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    counts[i] += 1 if i in counts else 1","[(0.5, 53)]",True,True
+"
+def item_count(item):
+    count = 0
+    for i in iterable:
+        if i == item:
+            count += 1
+    return count
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)","[(1.2, 67)]",True,True
+"import collections
+def item_count(item):
+    count = sum((1 for i in iter(iterable) if i == item))
+    return count
+counts = {}
+for item in iterable:
+    counts[item] = item_count(item)","[(1.2, 68)]",True,True
+"import itertools
+keys = set(iterable)
+counts = {k: len([x for x in iterable if x == k]) for k in keys}","[(0.5, 76)]",True,True
+"import itertools
+unique_items = list(set(iterable))
+counts = {item: len(list(filter(lambda x: x == item, iterable))) for item in unique_items}
+i = 0
+for (key, value) in counts.items():
+    i += value","[(0.5, 40)]",False,False
+"import collections
+iterable_list = list(iterable)
+counter = collections.Counter(iterable_list)
+counts = dict()
+for (key, value) in counter.items():
+    counts[key] = value","[(0.9, 51)]",False,False
+"import collections
+counts = collections.defaultdict(int)
+for i in iterable:
+    counts[i] += 1","[(0.9, 1), (0.5, 1), (0.3, 1), (1.2, 16), (0, 3)]",True,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for item in iterable:
+    counts[item] += 1
+i = 0
+while i < len(iterable):
+    i += 1","[(0.9, 24)]",False,False
+"from collections import Counter
+i = 0
+counts = Counter(iterable)
+while i < len(iterable):
+    i += 1","[(0.9, 70)]",False,False
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(iter)","[(0.7, 2)]",True,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.setdefault(i, 0)
+    count += 1
+    counts[i] = count","[(0.3, 33)]",True,False
+"
+counts = dict()
+for element in iterable:
+    if element in set(iterable):
+        counts[element] = iterable.count(element)","[(1.2, 61)]",False,False
+"
+counts = {}
+i = 0
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1
+    i += 1","[(0.9, 71)]",False,False
+"import collections
+iter = iter(iterable)
+list_iter = list(iter)
+list_counts = {}
+for item in list_iter:
+    list_counts[item] = list_counts.get(item, 0) + 1
+counts = dict(list_counts)","[(0.7, 38)]",True,False
+"from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    counts[i] += 1
+counts","[(1.2, 66)]",False,False
+"import numpy as np
+counts = dict(zip(iterable, np.zeros(len(iterable))))
+for i in range(len(iterable)):
+    if iterable[i] in counts:
+        counts[iterable[i]] += 1
+    else:
+        counts[iterable[i]] = 1","[(0.3, 118)]",True,True
+"import collections
+counts = {}
+for item in iterable:
+    count = counts.get(item, 0)
+    count += 1
+    counts[item] = count
+i = len(iterable)","[(0.9, 64)]",False,False
+"import functools
+from collections import Counter
+counts = functools.reduce(lambda d, i: {**d, i: d.get(i, 0) + 1}, iterable, Counter())","[(0.5, 38)]",True,False
+"
+def item_count(item):
+    count = sum((1 for i in iterable if i == item))
+    return count
+counts = dict()
+for item in iterable:
+    counts[item] = item_count(item)","[(1.2, 36)]",True,True
+"
+counts = dict()
+for i in iterable:
+    if i not in counts:
+        counts[i] = iterable.count(i)
+counts","[(1.2, 79)]",False,False
+"from collections import Counter
+counts = Counter(iterable)
+for item in iterable:
+    counts[item] = counts[item]","[(1.2, 84)]",False,False
+"
+counts = {}
+i = 0
+for item in iterable:
+    counts[item] = counts.get(item, 0) + 1","[(0.9, 37)]",False,False
+"from collections import Counter
+counter = Counter(iterable)
+counts = dict(counter)
+i = len(iterable)
+(counts, i)","[(1.2, 97)]",False,False
+"import numpy as np
+counts = dict(zip(iterable, np.zeros(len(iterable))))
+for i in range(len(iterable)):
+    if iterable[i] not in counts:
+        counts[iterable[i]] = 0
+    counts[iterable[i]] += 1","[(0.3, 118)]",True,True
+"import collections
+iterable_list = list(iterable)
+counts = collections.Counter(iterable_list)
+i = 0
+for x in iterable_list:
+    i += 1","[(0.9, 52)]",False,False
+"
+counts = {}
+for i in range(len(iterable)):
+    counts.setdefault(iterable[i], 0)
+    counts[iterable[i]] += 1","[(0.5, 43)]",True,False
+"import collections
+iter = iter(iterable)
+counts = collections.Counter(list(iterable))","[(0.7, 9)]",True,False
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"
+counts = {}
+for i in iterable:
+    if i not in counts:
+        counts[i] = 1
+    else:
+        counts[i] += 1","[(0.9, 21), (0.5, 1), (0.3, 14), (0.7, 26)]",True,True
+"import collections
+iterable_list = list(iterable)
+counts = {}
+for item in iterable_list:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1","[(0.9, 50)]",True,True
+"import collections
+iterable_list = list(iterable)
+counts = collections.Counter(iterable_list)
+i = 0
+while i < len(iterable_list):
+    i += 1","[(0.9, 70)]",False,False
+"import numpy as np
+counts = {}
+for item in iterable:
+    counts[item] = np.sum(np.array([1 for i in iterable if i == item]))
+i = len(iterable)
+(counts, i)","[(1.2, 98)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    count = counts.get(i)
+    if count is None:
+        count = 1
+    else:
+        count += 1
+    counts[i] = count","[(0.3, 37)]",True,True
+"import collections
+iterable_list = list(iterable)
+counts = {}
+for element in iterable_list:
+    counts[element] = counts.get(element, 0) + 1","[(0.9, 88)]",True,False
+"
+counts = {}
+for i in iterable:
+    if i not in counts.keys():
+        counts[i] = 1
+    else:
+        counts[i] += 1","[(0.3, 82)]",True,True
+"
+counts = {item: sum([1 for i in iterable if i == item]) for item in iterable}
+i = len(iterable)
+(counts, i)","[(1.2, 99)]",False,False
+"import collections
+counts = {}
+for i in iterable:
+    counts[i] = counts.get(i, 0) + 1
+    counts[i] = counts[i] if i in counts else 1","[(0.3, 114)]",False,False
+"import itertools
+from collections import defaultdict
+counts = defaultdict(int)
+for i in iterable:
+    counts[i] = counts.get(i, 0)
+    counts[i] += 1","[(0.5, 54)]",True,False
+"
+counts = {}
+for x in iterable:
+    if x not in counts:
+        counts[x] = iterable.count(x)","[(0.3, 46)]",True,True
+"import collections
+iter = iter(iterable)
+iter_list = list(iter)
+counts = collections.Counter(iter_list)
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts
+counts","[(0.7, 34)]",False,False
+"import collections
+iter = iter(iterable)
+counts = collections.Counter([x for x in iter])","[(0.7, 9)]",False,False
+"from collections import Counter
+counts = Counter(iterable)
+i = len(iterable)
+(counts, i)","[(1.2, 100)]",False,False
+"import itertools
+unique_items = list(set(iterable))
+counts = {}
+for item in unique_items:
+    count = 0
+    for value in iterable:
+        if value == item:
+            count += 1
+    counts[item] = count","[(0.5, 87)]",True,True
+"from collections import defaultdict
+counts = defaultdict(int)
+for item in iterable:
+    counts[item] += 1
+i = len(iterable)
+(counts, i)","[(1.2, 104)]",False,False
+"import collections
+counts = {}
+for item in iterable:
+    if item in counts:
+        counts[item] += 1
+    else:
+        counts[item] = 1
+i = len(iterable)","[(0.9, 64)]",False,False
+"from collections import Counter
+counts = Counter((iterable[i] for i in range(len(iterable))))
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)
+counts = Counter(counts)","[(0.5, 50)]",False,False
+"from collections import defaultdict
+counts = defaultdict(lambda : 0)
+for element in iterable:
+    counts[element] += 1","[(1.2, 25)]",True,False
+"import itertools
+counts = {}
+for i in iterable:
+    filtered_list = list(itertools.filterfalse(lambda x: x != i, iterable))
+    count = len(filtered_list)
+    counts[i] = count
+counts = {}
+for i in iterable:
+    filtered_list = list(itertools.filterfalse(lambda x: x != i, iterable))
+    count = len(filtered_list)
+    counts[i] = count
+counts = {i: len(list(itertools.filterfalse(lambda x: x != i, iterable))) for i in iterable}","[(0.3, 49)]",False,False
+"import itertools
+counts = dict(zip(iterable, itertools.repeat(0)))
+for i in iterable:
+    counts[i] += 1","[(0.9, 29), (0.3, 1), (0, 3)]",True,False

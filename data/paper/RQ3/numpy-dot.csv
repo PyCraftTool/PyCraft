@@ -1,0 +1,85 @@
+variant,temperature-iterations,useful,applicable
+"
+dot_prod = sum((arr1[i] * arr2[i] for (i, _) in enumerate(arr1)))","[(0.5, 1), (0.7, 16), (0, 1)]",True,True
+"
+dot_prod = sum((val * arr2[i] for (i, val) in enumerate(arr1)))","[(0.5, 24)]",True,True
+"
+dot_prod = sum(map(lambda i: arr1[i] * arr2[i], range(len(arr1))))","[(0.9, 18), (0.7, 13), (1.2, 3)]",True,False
+"
+dot_prod = sum([val * arr2[i] for (i, val) in enumerate(arr1)])","[(0.5, 20), (0, 17)]",True,True
+"
+result = 0
+for i in range(len(arr1)):
+    result += arr1[i] * arr2[i]
+dot_prod = result","[(0.9, 6)]",True,True
+"
+dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1))])","[(0.5, 1), (0.3, 1), (0.9, 1), (0.7, 1), (0, 1), (1.2, 1)]",True,True
+"
+dot_prod = 0
+for i in range(len(arr1)):
+    dot_prod = dot_prod + arr1[i] * arr2[i]","[(0.5, 16), (0.7, 13)]",True,True
+"
+dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))","[(0.5, 1), (0.9, 2), (0.7, 3), (0, 1), (1.2, 1)]",True,True
+"
+dot_prod = 0
+for i in range(len(arr1)):
+    dot_prod += arr1[i] * arr2[i]","[(0.5, 0), (0.3, 0), (0.9, 0), (0.7, 0), (0, 0), (1.2, 0)]",True,True
+"import statistics
+dot_prod = statistics.fsum([arr1[i] * arr2[i] for i in range(len(arr1))])","[(0.7, 17)]",True,True
+"import numpy as np
+dot_prod = np.sum([arr1[i] * arr2[i] for i in range(len(arr1))])","[(0.7, 1)]",True,True
+"import numpy as np
+new_list = [arr1[i] * arr2[i] for i in range(len(arr1))]
+dot_prod = sum(new_list)","[(1.2, 7)]",True,True
+"
+dot_prod = 0
+for (i, x) in zip(range(len(arr1)), arr1):
+    dot_prod += x * arr2[i]","[(0.9, 26)]",True,True
+"
+dot_prod = 0
+for i in range(len(arr1)):
+    dot_prod += arr1[i] * arr2[i]
+dot_prod = 0
+for i in range(len(arr1)):
+    dot_prod += arr1[i] * arr2[i]","[(0.7, 19)]",False,False
+"import numpy as np
+dot_prod = np.dot(arr1, arr2)","[(0.5, 0), (0.3, 0), (0.9, 0), (0.7, 0), (0, 0), (1.2, 0)]",True,False
+"
+dot_prod = sum([x * arr2[i] for (i, x) in zip(range(len(arr1)), arr1)])","[(0.9, 23)]",True,True
+"
+dot_prod = 0
+for (i, val) in enumerate(arr1):
+    dot_prod = dot_prod + val * arr2[i]","[(0.5, 16)]",True,True
+"import itertools
+dot_prod = sum([x * arr2[i] for (i, x) in itertools.zip_longest(range(len(arr1)), arr1)])","[(0.9, 19)]",True,True
+"import numpy as np
+arr1 = np.array(arr1)
+arr2 = np.array(arr2)
+dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))","[(0.7, 32)]",True,True
+"
+dot_prod = sum([arr1[i] * arr2[i] for (i, _) in enumerate(arr1)])","[(0.5, 26)]",True,True
+"
+dot_prod = 0
+for (i, _) in enumerate(arr1):
+    dot_prod += arr1[i] * arr2[i]","[(0.5, 11), (0, 11)]",True,True
+"import math
+dot_prod = math.fsum([val * arr2[i] for (i, val) in enumerate(arr1)])","[(0.5, 21)]",True,True
+"import itertools
+index = range(len(arr1))
+dot_prod = sum((arr1[i] * arr2[i] for i in index))","[(0.7, 38)]",True,True
+"import itertools
+indices = list(range(len(arr1)))
+dot_prod = sum([arr1[i] * arr2[i] for i in indices])","[(1.2, 3)]",True,True
+"import math
+dot_prod = math.fsum((arr1[i] * arr2[i] for i in range(len(arr1))))","[(0.9, 8), (0.7, 7)]",True,True
+"
+dot_prod = 0
+for (i, val) in enumerate(arr1):
+    dot_prod += val * arr2[i]","[(0.5, 3), (0, 15)]",True,True
+"import math
+dot_prod = 0
+for i in range(len(arr1)):
+    dot_prod += math.prod([arr1[i], arr2[i]])","[(0.9, 7), (0.7, 1)]",True,True
+"
+dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))
+dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))","[(0.7, 19)]",False,False

@@ -1,0 +1,2090 @@
+variant,temperature-iterations,useful,applicable
+"
+d.update({key: value for (key, value) in d.items()})
+d.update(additional_dict)","[(0.7, 27)]",False,False
+"
+d = d.copy()
+d.update(additional_dict)","[(0.9, 72)]",False,False
+"
+d_copy = dict(d)
+d.update(additional_dict)
+for key in additional_dict.keys():
+    if d.get(key):
+        d[key] = additional_dict[key]","[(0.9, 108)]",False,False
+"
+d_copy = d
+for (key, value) in additional_dict.items():
+    d_copy[key] = value
+d_copy = dict(d_copy)","[(0.7, 11)]",False,False
+"
+for item in additional_dict.items():
+    d.update({item[0]: item[1]})","[(1.2, 70), (0, 7), (0.3, 31)]",True,True
+"
+count = 0
+for (idx, key) in enumerate(additional_dict):
+    value = additional_dict[key]
+    d[key] = value
+    count += 1","[(1.2, 110)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict[key]
+    k = key
+    v = value
+    temp = additional_dict[key]","[(0, 77)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d.update({key: value})","[(0.3, 59)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d.keys():
+        d[key] = value
+    if key not in d.keys():
+        d.update({key: value})","[(0, 69)]",False,False
+"
+for key in additional_dict.keys():
+    d[key] = additional_dict[key]","[(1.2, 4), (0.7, 5), (0, 1), (0.9, 6), (0.5, 8), (0.3, 4)]",True,True
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict.get(key, d.get(key, value))
+    k = key
+    v = value","[(0, 76)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value
+    d[key] = value","[(0, 65)]",False,False
+"import copy
+additional_dict_copy = copy.deepcopy(additional_dict)
+d.update(additional_dict_copy)
+k = d.get('k', None)","[(0.7, 52)]",False,False
+"import numpy as np
+np.fromiter((d.update({key: value}) for (key, value) in additional_dict.items()), dtype=bool)","[(1.2, 51)]",False,False
+"import copy
+additional_dict_copy = copy.deepcopy(additional_dict)
+d.update(additional_dict_copy)
+k = d.get('k', 0)","[(0.7, 52)]",False,False
+"from operator import setitem
+for (index, key) in enumerate(additional_dict.keys()):
+    setitem(d, key, list(additional_dict.values())[index])","[(1.2, 77)]",True,True
+"
+d.update(additional_dict)
+d = dict(d)","[(0.7, 4)]",False,False
+"import math
+for (i, key) in enumerate(additional_dict):
+    d[key] = list(additional_dict.values())[i]
+    k = math.pow(i, 2)","[(1.2, 41)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d[key]) if additional_dict.get(key) is not None else d.get(key, d[key])","[(0, 108)]",False,False
+"
+count = 0
+for (idx, key) in enumerate(additional_dict.keys()):
+    value = additional_dict.get(key)
+    d[key] = value
+    count += 1","[(1.2, 110)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif additional_dict.get(key) is not None:
+        d[key] = additional_dict[key]
+    else:
+        d[key] = d[key]","[(0, 105)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in additional_dict.keys():
+        d[key] = additional_dict.get(key)","[(0.5, 64)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif additional_dict.get(key, value) is not None:
+        d[key] = additional_dict[key]","[(0, 103)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = d[key] if additional_dict.get(key) is None else additional_dict[key]","[(0, 57)]",False,False
+"
+new_dict = {}
+for (k, v) in additional_dict.items():
+    d[k] = v
+    new_dict[k] = additional_dict.get(k)","[(0.5, 91)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in additional_dict:
+        d[key] = additional_dict[key]","[(0.5, 64)]",False,False
+"import itertools
+keys = additional_dict.keys()
+values = additional_dict.values()
+for (key, value) in itertools.zip_longest(keys, values):
+    d[key] = value","[(0.5, 25)]",True,True
+"
+def add_values_to_dict(with_dict, add_dict):
+    for (key, value) in add_dict.items():
+        with_dict[key] = value
+add_values_to_dict(d, additional_dict)","[(1.2, 15)]",True,False
+"
+d = dict(list(d.items()))
+d.update(dict(additional_dict))","[(0.7, 66)]",False,False
+"
+for (i, (key, value)) in enumerate(zip(additional_dict.keys(), additional_dict.values())):
+    d[key] = value","[(0.5, 9)]",True,True
+"
+d = {**d, **additional_dict}
+d_copy = d.copy()
+d_copy.clear()
+d_copy = None
+additional_dict_copy = additional_dict.copy()","[(0.7, 40)]",False,False
+"
+for (i, key) in enumerate(additional_dict.keys()):
+    d[key] = additional_dict.get(key)","[(0.5, 71), (0.3, 15)]",True,True
+"import numpy as np
+keys = list(additional_dict.keys())
+values = list(additional_dict.values())
+for (key, value) in zip(keys, values):
+    d.update({key: value})","[(0.5, 26)]",True,True
+"
+for key in additional_dict:
+    if additional_dict[key] in additional_dict.values():
+        d[key] = additional_dict.get(key)","[(0.3, 59)]",False,False
+"
+d = dict(list(d.items()))
+d.update(additional_dict.copy())","[(0.7, 66)]",False,False
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+d = dict(d_copy.copy())
+d_copy.clear()
+d_copy = None
+additional_dict_copy = additional_dict.copy()","[(0.7, 12)]",False,False
+"
+d = dict(list(d.items()) + [(k, additional_dict[k]) for k in additional_dict])","[(0.7, 16)]",True,True
+"
+for key in zip(additional_dict.keys(), additional_dict.values()):
+    d[key[0]] = key[1]","[(0.5, 58)]",True,True
+"
+for key in additional_dict:
+    if key not in d:
+        d[key] = additional_dict[key]
+    else:
+        d[key] = additional_dict[key]","[(0, 41), (0.3, 50)]",False,False
+"
+modified_dict = d
+d.update(additional_dict)","[(0.9, 13)]",False,False
+"
+d_copy = {}
+d_copy.update(d)
+d.update(additional_dict)
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value","[(0.9, 107)]",False,False
+"
+d.update(additional_dict)
+d_copy = dict(d)
+d.clear()
+d = dict(d_copy)","[(0.7, 38)]",False,False
+"
+d.update(additional_dict)
+k = d.get('k', None)","[(0.7, 8)]",False,False
+"
+new_dict = {}
+for (k, v) in additional_dict.items():
+    new_dict[k] = v
+d.update(new_dict)","[(0.5, 45)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict.get(key, d.get(key, additional_dict[key]))","[(0.3, 50)]",False,False
+"
+d = dict(d.items())
+d.update(dict(additional_dict.items()))","[(0.7, 66)]",False,False
+"
+d = {key: value for (key, value) in d.items()}
+d.update(additional_dict.items())","[(0.7, 27)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict[key]","[(0, 89)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d.update({key: value})","[(1.2, 18), (0.7, 43), (0, 31), (0.5, 58), (0.3, 22)]",True,True
+"import operator
+for item in additional_dict.items():
+    operator.setitem(d, item[0], item[1])","[(1.2, 56)]",True,True
+"
+for (key, value) in zip(additional_dict.keys(), additional_dict.values()):
+    d[key] = value","[(1.2, 10), (0, 1), (0.9, 7), (0.5, 18), (0.3, 3)]",True,True
+"
+d.update(additional_dict)
+d.update(d)","[(0.9, 13)]",False,False
+"import numpy as np
+keys = list(additional_dict.keys())
+values = list(additional_dict.values())
+for (key, value) in zip(keys, values):
+    d[key] = value","[(0.5, 26)]",True,True
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict.get(key, d.get(key, value))","[(0, 73), (0.3, 56)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict[key]
+    k = key
+    v = value","[(0, 51)]",False,False
+"
+for (i, key) in enumerate(additional_dict):
+    d[key] = additional_dict.get(key, None)","[(0.5, 72)]",True,True
+"
+d = {**d, **additional_dict}.copy()","[(0.7, 31)]",False,False
+"
+d.update({k: additional_dict[k] for (k, v) in additional_dict.items()})","[(0.3, 28)]",False,False
+"
+additional_dict_keys = list(additional_dict.keys())
+for i in range(len(additional_dict_keys)):
+    d[additional_dict_keys[i]] = additional_dict[additional_dict_keys[i]]
+modified_dict = dict(d)","[(0.9, 92)]",True,True
+"
+d_keys = list(d.keys())
+d.update(additional_dict)
+for key in d_keys:
+    d[key] = d[key]","[(0.9, 84)]",False,False
+"
+d = dict(d.items())
+d.update(dict(additional_dict.copy()))","[(0.7, 66)]",False,False
+"import itertools
+od = itertools.zip_longest(additional_dict.keys(), additional_dict.values())
+for (k, v) in od:
+    d[k] = v","[(0.9, 17)]",True,True
+"
+for key in additional_dict:
+    if key in additional_dict.keys():
+        d[key] = additional_dict.get(key)","[(0.5, 64)]",False,False
+"
+for key in additional_dict.keys():
+    value = additional_dict[key]
+    if value in additional_dict.values():
+        d[key] = additional_dict[key]","[(0.3, 24)]",False,False
+"import operator
+for key in additional_dict.keys():
+    operator.setitem(d, key, additional_dict[key])","[(1.2, 39)]",True,True
+"
+d = dict(d.items())
+d.update(additional_dict)","[(0.7, 27), (0.9, 30)]",False,False
+"
+for i in range(len(additional_dict)):
+    key = list(additional_dict.keys())[i]
+    d[key] = additional_dict[key]","[(0.5, 32)]",True,True
+"
+d.update({k: additional_dict.get(k) for (k, v) in additional_dict.items()})","[(0.3, 28)]",False,False
+"
+for item in additional_dict.items():
+    (key, value) = item
+    d[key] = value","[(1.2, 17), (0, 1), (0.3, 31)]",True,True
+"import itertools
+od = list(zip(additional_dict.keys(), additional_dict.values()))
+for kv in od:
+    k = kv[0]
+    v = kv[1]
+    d[k] = v","[(0.9, 54)]",True,True
+"import itertools
+keys = list(additional_dict.keys())
+values = list(additional_dict.values())
+for i in range(len(keys)):
+    key = keys[i]
+    value = values[i]
+    d[key] = value","[(0.3, 33)]",True,True
+"
+for item in additional_dict.items():
+    k = item[0]
+    v = item[1]
+    d[k] = v","[(1.2, 70), (0.9, 12)]",True,True
+"import numpy as np
+np.array([d.update({key: value}) for (key, value) in additional_dict.items()])","[(1.2, 51)]",False,False
+"
+keys = additional_dict.keys()
+values = additional_dict.values()
+for i in range(len(keys)):
+    d.update({list(keys)[i]: list(values)[i]})","[(0.5, 9)]",True,True
+"
+count = len(list(additional_dict))
+d.update(additional_dict)","[(1.2, 103)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif additional_dict.get(key) is not None:
+        d[key] = additional_dict.get(key)","[(0, 102)]",False,False
+"
+d = dict(list(d.items()))
+d.update(dict(additional_dict.items()))","[(0.7, 66)]",False,False
+"
+for (i, key) in enumerate(additional_dict.keys()):
+    if key in additional_dict:
+        d[key] = additional_dict.get(key)","[(0.5, 71)]",False,False
+"
+d_copy = dict(d.copy())
+d_copy.update(additional_dict)
+d = dict(d_copy.copy())","[(0.7, 32)]",False,False
+"import itertools
+keys = list(additional_dict.keys())
+values = list(additional_dict.values())
+for (key, value) in itertools.zip_longest(keys, values):
+    d[key] = value","[(1.2, 47), (0.5, 19), (0.3, 11)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict[key]
+    k = key
+    v = value
+    temp = additional_dict.get(key, 0)","[(0, 77)]",False,False
+"
+d.update(additional_dict.copy())","[(0.3, 6)]",False,False
+"import numpy as np
+for (key, value) in dict(additional_dict).items():
+    d[key] = value","[(1.2, 71)]",False,False
+"
+for (i, key) in enumerate(additional_dict):
+    if key in additional_dict:
+        d[key] = additional_dict[key]","[(0.5, 72), (0.3, 40)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d.get(key, d[key])) if additional_dict.get(key) is not None else d.get(key, additional_dict.get(key, value))","[(0, 108)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict.get(key, None)","[(0.3, 50)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = value","[(0, 7)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict.get(key, value)","[(0, 2), (0.3, 22)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d.get(key, d[key])) if additional_dict.get(key) is not None else d.get(key, additional_dict.get(key, additional_dict.get(key, value)))","[(0, 108)]",False,False
+"
+for key in additional_dict:
+    if key in additional_dict:
+        d[key] = additional_dict[key]","[(0.5, 64)]",False,False
+"
+d_copy = d.copy()
+d.clear()
+d.update(d_copy)
+d.update(additional_dict)","[(0.7, 33)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    elif key not in d:
+        d[key] = value
+    elif key in d:
+        d[key] = value
+    elif key not in d:
+        d[key] = value
+    else:
+        d[key] = value","[(0, 71)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict[key] if key in d else value","[(0, 55)]",False,False
+"import copy
+d_copy = copy.deepcopy(d)
+d.update(additional_dict)
+for (key, value) in d.items():
+    if key in additional_dict:
+        d[key] = value","[(0.9, 42)]",False,False
+"import copy
+for (key, value) in additional_dict.items():
+    d[key] = copy.deepcopy(value)
+for (key, value) in d.items():
+    d[key] = value","[(0.9, 31)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    else:
+        pass","[(0.3, 57)]",False,False
+"
+d.update({k: additional_dict.get(k) for (k, v) in additional_dict.copy().items()})","[(0.3, 28)]",False,False
+"from collections import Counter
+count = dict(Counter(additional_dict))
+for (key, value) in additional_dict.items():
+    d[key] = value","[(1.2, 100)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d.keys():
+        d[key] = value
+    if key not in d.keys():
+        d[key] = value","[(0, 69)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value if key not in d else additional_dict[key]","[(0, 91)]",False,False
+"
+for key in additional_dict:
+    d.update({key: additional_dict[key]})","[(1.2, 27), (0.5, 58), (0.3, 21)]",True,True
+"
+keys = list(additional_dict.keys())
+values = list(additional_dict.values())
+for i in range(len(keys)):
+    d.update({keys[i]: values[i]})","[(0.5, 9)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif key in d:
+        d[key] = value","[(0, 25)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in additional_dict.keys():
+        d[key] = additional_dict[key]","[(0.5, 64)]",False,False
+"
+count = 0
+for k in additional_dict:
+    v = additional_dict[k]
+    d[k] = v
+    count += 1","[(1.2, 72)]",False,False
+"
+for key in additional_dict.keys():
+    if key not in d:
+        d[key] = additional_dict[key]
+    else:
+        d[key] = additional_dict[key]","[(0, 53)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    elif value == 0:
+        d[key] = 1","[(0.3, 58)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d or key not in d:
+        d[key] = value","[(0, 47)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value if key in d else value","[(0, 43)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict.get(key)","[(1.2, 10), (0.9, 20), (0.5, 57), (0.3, 48)]",True,True
+"import copy
+d = copy.copy(d)
+for (key, value) in additional_dict.items():
+    d[key] = value","[(0.9, 77)]",False,False
+"
+d = dict(list(d.items()) + [(k, additional_dict[k]) for k in additional_dict.keys()])","[(0.7, 16)]",True,True
+"
+d = {**d, **additional_dict}
+for key in additional_dict.keys():
+    d[key] = additional_dict[key]","[(0.9, 44)]",False,False
+"
+temp = additional_dict.copy()
+for (key, value) in temp.items():
+    d[key] = value","[(1.2, 94)]",False,False
+"
+d.update({k: additional_dict.get(k) for k in additional_dict.keys()})","[(0.3, 28)]",False,False
+"
+dict_keys = additional_dict.keys()
+for key in dict_keys:
+    d[key] = additional_dict[key]
+count = len(additional_dict)","[(1.2, 103)]",False,False
+"
+for key in additional_dict.keys():
+    value = additional_dict[key]
+    if value in additional_dict.values():
+        d[key] = value","[(0.5, 49), (0.3, 24)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict.get(key, additional_dict[key])","[(0.3, 55)]",False,False
+"
+for (i, (key, value)) in enumerate(additional_dict.items()):
+    d[key] = value","[(1.2, 14), (0.9, 23), (0.5, 9), (0.3, 3)]",True,True
+"
+d.update(additional_dict)","[(1.2, 0), (0.7, 0), (0, 0), (0.9, 0), (0.5, 0), (0.3, 0)]",True,False
+"
+keys = additional_dict.keys()
+values = additional_dict.values()
+for i in range(len(keys)):
+    d[list(keys)[i]] = list(values)[i]","[(0.5, 9)]",True,True
+"
+for (i, key) in enumerate(additional_dict):
+    d[key] = additional_dict.get(key)","[(0.5, 31), (0.3, 15)]",True,True
+"
+for (i, key) in enumerate(additional_dict):
+    if key in additional_dict:
+        d[key] = additional_dict[key]
+    else:
+        d[key] = None","[(0.3, 40)]",False,False
+"
+d = dict(d.items())
+d.update(additional_dict.items())","[(0.7, 66)]",False,False
+"
+for (i, key) in enumerate(additional_dict):
+    d[key] = list(additional_dict.items())[i][1]","[(0.3, 36)]",True,True
+"
+d = dict(list(d.items()))
+d.update(dict(additional_dict.copy()))","[(0.7, 66)]",False,False
+"
+for key in additional_dict:
+    if key in d:
+        d[key] = additional_dict.get(key, d[key])
+    else:
+        d[key] = additional_dict.get(key, d.get(key, additional_dict[key]))","[(0.3, 50)]",False,False
+"
+d_copy = dict(d)
+d_copy.update(additional_dict)
+d.clear()
+d.update(d_copy)
+d_copy.clear()","[(0.7, 36)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = additional_dict[key]
+    else:
+        d[key] = value","[(0, 51), (0.3, 56)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = additional_dict.get(key)","[(0.3, 59)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value if key not in d else additional_dict.get(key, value)","[(0, 91)]",False,False
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+d = dict(d_copy.copy())
+d_copy.clear()","[(0.7, 12)]",False,False
+"
+d = {**d, **additional_dict}
+k = d.get('k')","[(0.7, 18)]",False,False
+"
+d = dict(zip(list(d.keys()), list(d.values())))
+d.update(additional_dict)","[(0.7, 27)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d.keys():
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d[key])","[(0, 58)]",False,False
+"from itertools import accumulate
+count = sum((1 for _ in additional_dict.items()))
+for (k, v) in additional_dict.items():
+    d[k] = v","[(1.2, 113)]",False,False
+"import copy
+additional_dict_copy = copy.deepcopy(additional_dict)
+d.update(additional_dict_copy)
+k = d.get('k')","[(0.7, 18)]",False,False
+"
+for (i, (k, v)) in enumerate(additional_dict.items()):
+    d[k] = additional_dict[k]","[(0.5, 77)]",True,True
+"
+keys = additional_dict.keys()
+values = additional_dict.values()
+for i in range(len(keys)):
+    k = list(keys)[i]
+    v = list(values)[i]
+    d[k] = v","[(0.9, 53)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    elif key not in d:
+        d[key] = value
+    elif key in d:
+        d[key] = value
+    elif key not in d:
+        d[key] = value","[(0, 71)]",False,False
+"
+for (i, key) in enumerate(additional_dict.keys()):
+    d[key] = additional_dict.get(key, None)","[(0.5, 71)]",True,True
+"
+for key in additional_dict:
+    if additional_dict[key] in additional_dict.values():
+        d.update({key: additional_dict[key]})","[(0.3, 59)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value
+for (key, value) in d.items():
+    d[key] = value","[(0.9, 13)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d.keys():
+        d[key] = value
+    else:
+        d[key] = additional_dict[key]","[(0, 89)]",False,False
+"
+d = dict(d.copy())
+d.update(dict(additional_dict.items()))","[(0.7, 66)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d.get(key, d[key])) if additional_dict.get(key) is not None else d[key]","[(0, 108)]",False,False
+"
+d_copy = {**d, **additional_dict}
+d.clear()
+d = d_copy","[(0.7, 38)]",True,False
+"
+d = {**d, **additional_dict}
+d = {**d, **d}","[(0.9, 95)]",False,False
+"
+items = additional_dict.items()
+for item in items:
+    d[item[0]] = item[1]","[(1.2, 97)]",True,True
+"
+d.update({key: value for (key, value) in additional_dict.items()})","[(1.2, 88)]",False,False
+"
+d = {**d, **additional_dict}","[(1.2, 4), (0.7, 2), (0, 2), (0.9, 2), (0.5, 2), (0.3, 6)]",True,False
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+for key in d_copy.keys():
+    d[key] = d_copy[key]","[(0.9, 84)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d[key]) if additional_dict.get(key) is not None else d.get(key, value)","[(0, 108)]",False,False
+"
+d = dict(d.items())
+d.update(additional_dict.copy().items())","[(0.7, 66)]",False,False
+"
+d = dict(d.copy())
+d.update(dict(additional_dict.copy()))","[(0.7, 66)]",False,False
+"
+for (i, key) in enumerate(additional_dict.items()):
+    d[key[0]] = key[1]","[(0.5, 62), (0.3, 35)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key in d.keys():
+        d[key] = value
+    else:
+        d.update({key: value})","[(0, 69)]",False,False
+"
+l = list(additional_dict.keys())
+for i in range(len(l)):
+    d[l[i]] = additional_dict[l[i]]","[(1.2, 4)]",True,True
+"import copy
+for key in additional_dict:
+    d[key] = copy.deepcopy(additional_dict[key])","[(1.2, 29)]",True,True
+"
+modified_dict = d
+d = dict(list(d.items()) + list(additional_dict.items()))","[(0.9, 33)]",False,False
+"
+d.update(list(d.items()))
+d.update(additional_dict)","[(0.7, 27)]",False,False
+"
+for (i, key) in enumerate(additional_dict):
+    d[key] = list(additional_dict.values())[i]","[(1.2, 23), (0, 17), (0.5, 20), (0.3, 12)]",True,True
+"
+count = 0
+for (key, value) in additional_dict.items():
+    d[key] = value
+    count = count + 1","[(1.2, 100)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    elif key not in d:
+        d[key] = value
+    else:
+        d[key] = value","[(0, 43)]",False,False
+"
+d.update(additional_dict)
+k = d['k'] if 'k' in d else None","[(0.7, 54)]",False,False
+"
+count = 0
+for (i, key) in enumerate(additional_dict):
+    d[key] = list(additional_dict.values())[i]
+    count += 1","[(1.2, 41)]",False,False
+"import operator
+for key in additional_dict:
+    operator.setitem(d, key, additional_dict[key])","[(1.2, 56)]",True,True
+"
+count = 0
+for elem in additional_dict:
+    d[elem] = additional_dict[elem]
+    count += 1","[(1.2, 72)]",False,False
+"import itertools
+keys = list(additional_dict.keys())
+values = list(additional_dict.values())
+count = 0
+for (key, value) in zip(keys, values):
+    d[key] = value
+    count += 1","[(1.2, 110)]",False,False
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+d.clear()
+d = dict(d_copy)","[(0.7, 35)]",False,False
+"
+d.update(additional_dict)
+d = {**d, **d}","[(0.9, 37)]",False,False
+"import itertools
+od = itertools.zip_longest(additional_dict.keys(), additional_dict.values())
+for kv in od:
+    d.update({kv[0]: kv[1]})","[(0.9, 53)]",True,True
+"import copy
+d = copy.deepcopy(d)
+d.update(additional_dict)
+k = d['k'] if 'k' in d else None","[(0.7, 54)]",False,False
+"
+count = len(additional_dict.keys())
+for (key, value) in additional_dict.items():
+    d[key] = value","[(1.2, 100)]",False,False
+"
+for key in additional_dict.keys():
+    d.update({key: additional_dict[key]})","[(0.5, 58), (0.3, 49)]",True,True
+"
+temp = additional_dict
+for (key, value) in temp.items():
+    d[key] = value","[(1.2, 71)]",True,True
+"import copy
+new_d = copy.deepcopy(d)
+new_d.update(additional_dict)
+d = new_d","[(0.9, 71)]",False,False
+"
+d = d | additional_dict","[(0.9, 94)]",True,False
+"import copy
+d = copy.deepcopy(d)
+d.update(additional_dict)","[(0.9, 30)]",False,False
+"
+for (i, key) in enumerate(additional_dict):
+    if key in additional_dict.keys():
+        d[key] = additional_dict[key]","[(0.5, 72)]",False,False
+"import copy
+d = copy.copy(d)
+d.update(additional_dict)","[(0.9, 30)]",False,False
+"import operator
+for (key, value) in additional_dict.items():
+    operator.setitem(d, key, value)","[(1.2, 56)]",True,True
+"
+d_copy = dict(d)
+d.update(additional_dict)
+for key in additional_dict:
+    if key in d:
+        d[key] = additional_dict[key]","[(0.9, 108)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict[key]
+keys = additional_dict.keys()
+count = len(keys)","[(1.2, 108)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d.update({key: additional_dict.get(key)})","[(0.3, 59)]",False,False
+"
+d = {**d, **additional_dict}
+d_copy = d.copy()
+d.clear()
+d.update(d_copy)","[(0.7, 33)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value if key not in d else value","[(0, 43)]",False,False
+"
+new_dict = {**d}
+new_dict.update(additional_dict)
+d = new_dict","[(0.9, 94)]",True,False
+"
+for (i, key) in enumerate(additional_dict.keys()):
+    if key in additional_dict.keys():
+        d[key] = additional_dict[key]","[(0.5, 71)]",False,False
+"import numpy as np
+count = len(additional_dict)
+for (i, (key, value)) in enumerate(additional_dict.items()):
+    d[key] = value
+    if i == count - 1:
+        count = i + 1","[(1.2, 109)]",False,False
+"
+temp_dict = dict(additional_dict)
+for (key, value) in temp_dict.items():
+    d[key] = value
+d.update(d)","[(0.9, 97)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    elif value == 'some_value':
+        d[key] = value
+    else:
+        pass","[(0.3, 57)]",False,False
+"
+for (i, (key, value)) in enumerate(additional_dict.items()):
+    k = key
+    d[k] = value","[(0.5, 35)]",True,True
+"
+d = dict(list(d.items()))
+d.update(additional_dict.items())","[(0.7, 66)]",False,False
+"import itertools
+od = itertools.zip_longest(additional_dict.keys(), additional_dict.values())
+for kv in od:
+    k = kv[0]
+    v = kv[1]
+    d[k] = v","[(0.9, 17)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    elif value == 0:
+        d[key] = 'Not Found'","[(0.3, 58)]",False,False
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+d = d_copy.copy()","[(0.7, 31)]",False,False
+"
+d.update(additional_dict)
+keys = additional_dict.keys()
+count = len(keys)","[(1.2, 72)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value == additional_dict[key]:
+        d[key] = value","[(0.5, 50), (0.3, 23)]",False,False
+"
+for key in additional_dict.keys():
+    if key in additional_dict:
+        d[key] = additional_dict[key]","[(0.5, 64)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value
+for key in d.keys():
+    d[key] = d[key]","[(0.9, 82)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    elif value == 0:
+        d[key] = -1","[(0.3, 58)]",False,False
+"
+for key in zip(list(additional_dict.keys()), list(additional_dict.values())):
+    d.update({key[0]: key[1]})","[(0.5, 58)]",True,True
+"import copy
+new_dict = {}
+for (key, value) in d.items():
+    new_dict[key] = value
+new_dict.update(additional_dict)
+d = new_dict","[(0.9, 77)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key not in d.keys():
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d[key]) if additional_dict.get(key) is not None else d[key]","[(0, 58)]",False,False
+"
+d = {**d, **additional_dict}
+for (key, value) in d.items():
+    if key in additional_dict.keys():
+        d[key] = additional_dict[key]","[(0.9, 13)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict[key]","[(0, 41)]",False,False
+"
+d = dict(d.copy())
+d.update(additional_dict)
+d = d","[(0.7, 29)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif key in additional_dict:
+        d[key] = additional_dict[key]","[(0, 99)]",False,False
+"
+count = 0
+for (key, value) in zip(list(additional_dict.keys()), list(additional_dict.values())):
+    d[key] = value
+    count += 1","[(1.2, 72)]",False,False
+"
+new_dict = {}
+for (k, v) in additional_dict.items():
+    d[k] = v
+    new_dict[k] = v","[(0.5, 91)]",False,False
+"
+for key in additional_dict:
+    value = additional_dict[key]
+    d[key] = value","[(1.2, 15)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    elif key not in d:
+        d[key] = value
+    elif key in d:
+        d[key] = value","[(0, 71)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict.get(key, value)
+    k = key
+    v = value
+    temp = additional_dict.get(key, value)","[(0, 79)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value
+count = len(additional_dict)","[(1.2, 103)]",False,False
+"
+for key in zip(additional_dict.keys(), additional_dict.values()):
+    d.update({key[0]: key[1]})","[(0.5, 58)]",True,True
+"
+for key in additional_dict.keys():
+    d[key] = additional_dict.get(key)","[(1.2, 27), (0.9, 20), (0.5, 22), (0.3, 22)]",True,True
+"
+d.update(additional_dict)
+count = len(additional_dict)","[(1.2, 72)]",False,False
+"
+d.update(dict(zip(d.keys(), d.values())))
+d.update(additional_dict)","[(0.7, 27)]",False,False
+"
+d = dict(d.items())
+d.update(additional_dict.copy())","[(0.7, 66)]",False,False
+"
+new_dict = {}
+for (k, v) in additional_dict.items():
+    d[k] = new_dict[k] = additional_dict[k]","[(0.5, 92)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    elif key not in d:
+        d[key] = value","[(0, 25)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    else:
+        d[key] = value","[(0, 25)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif key in additional_dict.keys() and additional_dict[key] is not None:
+        d[key] = additional_dict[key]","[(0, 102)]",False,False
+"
+d.update(additional_dict)
+k = d.get('k')","[(0.7, 8)]",False,False
+"import numpy as np
+for key in np.array(list(additional_dict.keys())):
+    d[key] = additional_dict[key]","[(0.5, 76)]",False,False
+"
+for (i, key) in enumerate(additional_dict):
+    if key in additional_dict.keys():
+        d[key] = additional_dict.get(key)","[(0.3, 40)]",False,False
+"
+for key in additional_dict.keys():
+    if key in additional_dict.keys():
+        d[key] = additional_dict.get(key)","[(0.5, 64)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    elif value == 'some_value':
+        d[key] = value","[(0.3, 57)]",False,False
+"
+for key in additional_dict.keys():
+    d[key] = additional_dict[key]
+for key in d.keys():
+    d[key] = d[key]","[(0.9, 31)]",False,False
+"
+for key in additional_dict.keys():
+    value = additional_dict[key]
+    if value == additional_dict[key]:
+        d[key] = value","[(0.3, 24)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = value","[(0, 47)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict[key]
+k = d.get('k', None)","[(0.7, 60)]",False,False
+"
+for (i, (k, v)) in enumerate(additional_dict.items()):
+    d[k] = additional_dict.get(k)","[(0.5, 77)]",True,True
+"
+d_copy = d.copy()
+for (key, value) in additional_dict.items():
+    d_copy[key] = value
+d = dict(d_copy.copy())","[(0.7, 32)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    else:
+        d[key] = None","[(0.3, 58)]",False,False
+"
+d.update({key: value for (key, value) in zip(list(additional_dict.keys()), list(additional_dict.values()))})","[(0.5, 69)]",False,False
+"
+for key in additional_dict:
+    if key in d:
+        d[key] = additional_dict.get(key, d[key])
+    else:
+        d[key] = additional_dict.get(key, additional_dict[key])","[(0.3, 50)]",False,False
+"
+d = dict(list(d.items()))
+d.update(additional_dict.copy().items())","[(0.7, 66)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d or additional_dict.get(key) is not None:
+        d[key] = value if additional_dict.get(key) is None else additional_dict[key]","[(0, 100)]",False,False
+"
+temp = [(k, v) for (k, v) in additional_dict.items()]
+for i in range(len(temp)):
+    d[temp[i][0]] = temp[i][1]","[(1.2, 97)]",True,True
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict.get(key, value)
+    k = key
+    v = value","[(0, 51)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d[key]) if additional_dict.get(key) is not None else d.get(key, additional_dict.get(key, value))","[(0, 108)]",False,False
+"
+for (i, (key, value)) in enumerate(additional_dict.items()):
+    d.update({key: additional_dict[key]})","[(0.5, 81), (0.3, 43)]",True,True
+"
+for (key, value) in additional_dict.items():
+    d[key] = value if key in d else additional_dict[key]","[(0, 85)]",False,False
+"
+d = dict(d.items())
+d.update(dict(additional_dict.copy().items()))","[(0.7, 66)]",False,False
+"import copy
+d_copy = copy.deepcopy(d)
+for (key, value) in additional_dict.items():
+    d[key] = value","[(0.9, 105)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d.update({key: value})
+count = len(additional_dict)","[(1.2, 72)]",False,False
+"
+modified_dict = d
+d = {**d, **additional_dict}","[(0.9, 33)]",False,False
+"
+d = {key: value for (key, value) in d.items()}
+d.update(additional_dict)","[(0.7, 27), (0.9, 13), (0.3, 29)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict[key]
+    k = key
+    v = value
+    temp = additional_dict.get(key, value)","[(0, 77)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict[key]
+    k = key
+    v = value
+    temp = additional_dict.get(key, '')","[(0, 77)]",False,False
+"
+temp = dict(additional_dict)
+k = temp.keys()
+for key in k:
+    d[key] = temp[key]","[(1.2, 94)]",True,True
+"
+d.update({k: additional_dict.get(k) for k in additional_dict.copy()})","[(0.3, 28)]",False,False
+"
+d.update(dict(zip(list(d.keys()), list(d.values()))))
+d.update(additional_dict)","[(0.7, 27)]",False,False
+"import operator
+keys = list(additional_dict.keys())
+values = list(additional_dict.values())
+for i in range(len(additional_dict)):
+    operator.setitem(d, keys[i], values[i])","[(1.2, 56)]",True,True
+"from itertools import zip_longest
+od = zip_longest(additional_dict.keys(), additional_dict.values())
+for (k, v) in od:
+    d[k] = v","[(0.9, 52)]",True,True
+"
+d_copy = d.copy()
+d.update(additional_dict)
+d.update(d_copy)
+for (key, value) in d.items():
+    if key in additional_dict.keys():
+        d[key] = additional_dict[key]","[(0.9, 13)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict[key]
+    k = key
+    v = value
+    temp = additional_dict.get(key, None)","[(0, 77)]",False,False
+"
+for (k, v) in additional_dict.items():
+    exec('d[k] = v')","[(1.2, 97)]",True,True
+"
+d.update(additional_dict)
+for key in d.keys():
+    d[key] = d[key]","[(0.9, 31)]",False,False
+"
+d.update({key: value for (key, value) in d.items()})
+d.update(additional_dict.items())","[(0.7, 27)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d.keys():
+        d[key] = value
+    else:
+        d[key] = d[key] if additional_dict.get(key) is None else additional_dict[key]","[(0, 58)]",False,False
+"import itertools
+import operator
+d = dict(itertools.chain(d.items(), additional_dict.items()))","[(0.9, 30)]",True,False
+"
+d = dict(list(d.items()) + [(k, v) for (k, v) in additional_dict.items()])","[(0.7, 16)]",True,True
+"from copy import deepcopy
+for key in additional_dict:
+    d[key] = deepcopy(additional_dict[key])","[(1.2, 50)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    else:
+        continue","[(0.5, 94)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value
+k = d.get('k')","[(0.7, 20)]",False,False
+"
+d_copy = dict(d)
+d_copy.update(additional_dict)
+d.clear()
+d.update(d_copy)","[(0.7, 33)]",False,False
+"
+d.update({k: additional_dict[k] for (k, v) in additional_dict.copy().items()})","[(0.3, 28)]",False,False
+"import itertools
+keys = additional_dict.keys()
+values = additional_dict.values()
+for key in keys:
+    d[key] = additional_dict[key]","[(0.5, 66)]",True,True
+"
+d = dict(d.copy())
+d.update(additional_dict.copy())","[(0.7, 66)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, value)","[(0, 41)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict[key] if key in additional_dict else None","[(0.5, 64)]",False,False
+"
+for (i, (k, v)) in enumerate(additional_dict.items()):
+    d[k] = additional_dict.get(k, '')","[(0.5, 77)]",True,True
+"
+d.update(dict(additional_dict))","[(0.7, 15), (0.3, 28)]",False,False
+"
+d_copy = dict(d)
+d_copy.update(additional_dict)
+d.update(d_copy)
+d_copy.clear()","[(0.7, 33)]",False,False
+"
+for (i, key) in enumerate(additional_dict.keys()):
+    d[key] = list(additional_dict.values())[i]","[(1.2, 10), (0, 17), (0.9, 62), (0.5, 1), (0.3, 5)]",False,False
+"
+d_copy = dict(d)
+d.update(additional_dict)
+for (key, value) in additional_dict.items():
+    if d.get(key):
+        d[key] = value","[(0.9, 108)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict[key]
+d.update(d)","[(0.9, 38)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict.get(key, d.get(key, d.get(key, additional_dict[key])))","[(0.3, 50)]",False,False
+"
+d = dict(list(d.items()))
+d.update(additional_dict)","[(0.7, 27)]",False,False
+"import functools
+import operator
+count = functools.reduce(operator.add, [1 for _ in additional_dict], 0)
+for (elem, val) in additional_dict.items():
+    d[elem] = val","[(1.2, 105)]",False,False
+"
+d.update(additional_dict)
+d = dict(d.copy())","[(0.7, 12)]",False,False
+"
+d.update({k: additional_dict[k] for k in additional_dict.keys()})","[(0.9, 14), (0.3, 28)]",False,False
+"
+for (i, (k, v)) in enumerate(additional_dict.items()):
+    d[k] = additional_dict.get(k, 0)","[(0.5, 77)]",True,True
+"
+for (i, key) in enumerate(additional_dict):
+    d[key] = additional_dict[key]","[(0.9, 65), (0.5, 9), (0.3, 3)]",True,True
+"
+d = dict(d.copy())
+d.update(additional_dict.items())","[(0.7, 66)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict[key]
+modified_dict = dict(d)","[(0.9, 92)]",False,False
+"import numpy as np
+count = np.count_nonzero(additional_dict)
+d.update(additional_dict)","[(1.2, 104)]",False,False
+"import numpy as np
+for (i, key) in enumerate(additional_dict):
+    d[key] = list(additional_dict.values())[i]
+    k = np.power(i, 2)","[(1.2, 61)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value","[(0.5, 49), (0.3, 23)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = additional_dict[key]","[(0.3, 24)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif additional_dict.get(key) is not None:
+        d[key] = additional_dict[key]","[(0, 99)]",False,False
+"
+for item in additional_dict.items():
+    d[item[0]] = item[1]
+k = d['k'] if 'k' in d else None","[(0.7, 59)]",False,False
+"
+for elem in additional_dict:
+    d[elem] = additional_dict[elem]
+count = len(additional_dict)","[(1.2, 106)]",False,False
+"
+for item in additional_dict.items():
+    d[item[0]] = item[1]
+k = d.get('k', None)","[(0.7, 59)]",False,False
+"
+for (i, (key, value)) in enumerate(additional_dict.items()):
+    d.update({key: value})","[(0.5, 35), (0.3, 20)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key in d or key not in d:
+        d[key] = value
+    else:
+        d[key] = value","[(0, 47)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value
+d.update(d)","[(0.9, 38)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d.get(key, d[key])) if additional_dict.get(key) is not None else d.get(key, additional_dict.get(key, additional_dict.get(key, d[key])))","[(0, 108)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d.update([(key, value)])
+k = d.get('k', None)","[(0.7, 60)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict.get(key, value) if key in d else value","[(0, 55)]",False,False
+"
+d = dict(zip(d.keys(), d.values()))
+d.update(additional_dict)","[(0.7, 27), (0.9, 30)]",False,False
+"
+count = 0
+for i in additional_dict:
+    key = i
+    val = additional_dict[i]
+    d[key] = val
+    count = count + 1","[(1.2, 72)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value
+k = d.get('k', None)","[(0.7, 22)]",False,False
+"
+for key in additional_dict:
+    if key not in d.keys():
+        d[key] = additional_dict[key]
+    else:
+        d[key] = additional_dict[key]","[(0, 53)]",False,False
+"
+for (key, value) in zip(additional_dict.keys(), additional_dict.values()):
+    d.update({key: value})","[(0.5, 58)]",True,True
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+d = dict(d_copy.copy())
+d_copy.clear()
+d_copy = None","[(0.7, 12)]",False,False
+"
+d = {k: v for (k, v) in d.items()}
+for (k, v) in additional_dict.items():
+    d[k] = v","[(0.5, 2)]",False,False
+"
+for (i, key) in enumerate(additional_dict.keys()):
+    if key in additional_dict.keys():
+        d[key] = additional_dict.get(key)","[(0.5, 71)]",False,False
+"import copy
+d_copy = copy.deepcopy(d)
+d.update(additional_dict)
+d.update(d_copy)
+for (key, value) in d.items():
+    if key in additional_dict.keys():
+        d[key] = additional_dict[key]","[(0.9, 45)]",False,False
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+d = dict(d_copy)
+d_copy.clear()","[(0.7, 12)]",False,False
+"
+for key in additional_dict.keys():
+    d[key] = additional_dict[key]
+modified_dict = dict(d)","[(0.9, 92)]",False,False
+"import copy
+d_copy = copy.copy(d)
+d.update(additional_dict)
+for (key, value) in d.items():
+    if key in additional_dict:
+        d[key] = value","[(0.9, 42)]",False,False
+"
+d.update(additional_dict)
+d_copy = d.copy()
+d.clear()
+d = dict(d_copy)","[(0.7, 40)]",False,False
+"
+for i in range(len(additional_dict.items())):
+    d[list(additional_dict.keys())[i]] = list(additional_dict.values())[i]","[(1.2, 9)]",True,True
+"
+keys = list(additional_dict.keys())
+values = list(additional_dict.values())
+for i in range(len(keys)):
+    d[keys[i]] = values[i]","[(1.2, 17), (0.9, 23), (0.5, 9), (0.3, 3)]",True,True
+"
+d.update(additional_dict)
+count = 0
+for key in additional_dict:
+    if key not in d:
+        d[key] = additional_dict[key]
+        count += 1","[(1.2, 72)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif d[key] != additional_dict.get(key, d[key]):
+        d[key] = additional_dict.get(key, d[key])","[(0, 101)]",False,False
+"
+list_keys = list(additional_dict.keys())
+for i in range(len(list_keys)):
+    k = list_keys[i]
+    d[k] = additional_dict[k]","[(1.2, 40)]",True,True
+"
+for (k, v) in additional_dict.items():
+    d[k] = v","[(1.2, 0), (0.7, 0), (0, 0), (0.9, 0), (0.5, 0), (0.3, 0)]",True,True
+"
+for key in zip(list(additional_dict.keys()), list(additional_dict.values())):
+    d[key[0]] = key[1]","[(0.5, 58)]",True,True
+"
+for (key, value) in zip(list(additional_dict.keys()), list(additional_dict.values())):
+    d.update({key: value})","[(0.5, 58)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d[key]) if additional_dict.get(key) is not None else d[key]","[(0, 58)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    elif key in d:
+        d[key] = value
+    else:
+        d[key] = value","[(0, 67)]",False,False
+"
+for key in additional_dict.keys():
+    if additional_dict[key] in additional_dict.values():
+        d.update({key: additional_dict[key]})","[(0.3, 59)]",False,False
+"
+d = dict(d.copy())
+d.update(additional_dict.copy().items())","[(0.7, 66)]",False,False
+"import copy
+d = copy.deepcopy(d)
+for (k, v) in additional_dict.items():
+    d[k] = v
+key = 'k'
+value = d.get(key)","[(0.7, 56)]",False,False
+"
+d.update({k: additional_dict[k] for k in additional_dict})","[(0.3, 28)]",False,False
+"import numpy as np
+for key in np.array(list(additional_dict)):
+    d[key] = additional_dict[key]","[(0.5, 76)]",True,True
+"
+d = {k: v for d in (d, additional_dict) for (k, v) in d.items()}","[(0.9, 14)]",True,True
+"
+d = dict(list(d.items()) + list(additional_dict.items()))","[(0.7, 7), (0.9, 6), (0.5, 14), (0.3, 29)]",True,False
+"
+d.update({**d, **additional_dict})","[(0.7, 27)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d.keys():
+        d[key] = value
+    else:
+        d[key] = value","[(0, 69)]",False,False
+"
+for (key, value) in zip(additional_dict.keys(), additional_dict.values()):
+    d[key] = additional_dict.get(key, value)","[(0, 21)]",True,True
+"import numpy as np
+for i in range(len(additional_dict)):
+    key = list(additional_dict.keys())[i]
+    value = list(additional_dict.values())[i]
+    d[key] = value","[(1.2, 28)]",True,True
+"from copy import deepcopy
+additional_dict_copy = deepcopy(additional_dict)
+d.update(additional_dict_copy)
+k = d.get('k')","[(0.7, 52)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    elif value == 0:
+        d[key] = 0","[(0.3, 58)]",False,False
+"import numpy as np
+arr = list(additional_dict.keys())
+count = np.size(arr)
+for i in range(count):
+    d[arr[i]] = list(additional_dict.values())[i]","[(1.2, 105)]",True,True
+"
+count = sum((1 for key in additional_dict))
+d.update(additional_dict)","[(1.2, 104)]",False,False
+"import itertools
+for (key, value) in itertools.zip_longest(additional_dict.keys(), additional_dict.values()):
+    d[key] = value
+count = len(additional_dict)","[(1.2, 108)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    elif key not in d:
+        d[key] = value
+    elif key in d:
+        d[key] = value
+    else:
+        d[key] = value","[(0, 71)]",False,False
+"from functools import partial
+myupdate = partial(d.update, additional_dict)
+count = len(additional_dict)
+myupdate()
+count","[(1.2, 72)]",False,False
+"import itertools
+for key in itertools.islice(additional_dict.keys(), len(additional_dict)):
+    d[key] = additional_dict[key]","[(0.5, 33)]",True,True
+"
+for item in additional_dict.items():
+    d.__setitem__(item[0], item[1])","[(0, 8), (0.9, 12), (0.3, 8)]",True,True
+"
+for key in additional_dict.keys():
+    if key in d:
+        d[key] = additional_dict[key]
+    else:
+        d[key] = additional_dict[key]","[(0, 53)]",False,False
+"
+for key in additional_dict.keys():
+    if additional_dict[key] in additional_dict.values():
+        d[key] = additional_dict[key]","[(0.5, 50), (0.3, 23)]",False,False
+"
+additional_dict_values = list(additional_dict.values())
+additional_dict_keys = list(additional_dict.keys())
+for i in range(len(additional_dict)):
+    d[additional_dict_keys[i]] = additional_dict_values[i]
+d.update(d)","[(0.9, 102)]",False,False
+"
+count = 0
+for key in additional_dict.keys():
+    d[key] = additional_dict[key]
+    count += 1","[(1.2, 105)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d.update(dict([(key, value)]))","[(1.2, 51)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    elif value == 0:
+        d[key] = value","[(0.5, 94)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict.get(key, d.get(key, value)) if key in d else value","[(0, 97)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in additional_dict:
+        d[key] = additional_dict.get(key)","[(0.5, 64)]",False,False
+"
+d |= additional_dict","[(0.7, 62)]",True,False
+"
+d_copy = dict(d)
+d.update(additional_dict)
+for key in additional_dict.keys():
+    if key in d:
+        d[key] = additional_dict[key]","[(0.9, 108)]",False,False
+"import itertools
+dict_items = additional_dict.items()
+dict_keys = []
+dict_values = []
+for item in dict_items:
+    dict_keys.append(item[0])
+    dict_values.append(item[1])
+for (k, v) in zip(dict_keys, dict_values):
+    d[k] = v","[(0.9, 51)]",True,True
+"
+count = len(additional_dict)
+for key in additional_dict.keys():
+    d[key] = additional_dict[key]","[(1.2, 100)]",False,False
+"import copy
+d = copy.deepcopy(d)
+for (key, value) in additional_dict.items():
+    d[key] = value
+k = d.get('k')","[(0.7, 53)]",False,False
+"import itertools
+od = itertools.zip_longest(list(additional_dict.keys()), list(additional_dict.values()))
+for (k, v) in od:
+    d[k] = v","[(0.9, 52)]",True,True
+"
+d = {**d, **additional_dict}
+d = dict(d)","[(0.7, 26)]",False,False
+"
+temp = [(key, value) for (key, value) in additional_dict.items()]
+for i in temp:
+    d[i[0]] = i[1]","[(1.2, 71)]",True,True
+"
+for (i, (key, value)) in enumerate(additional_dict.items()):
+    d.__setitem__(key, value)","[(0.5, 35), (0.3, 20)]",True,True
+"
+for key in additional_dict:
+    d[key] = additional_dict[key]","[(1.2, 7), (0.7, 2), (0, 1), (0.9, 4), (0.5, 1), (0.3, 2)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    elif value == 0:
+        d[key] = None","[(0.3, 58)]",False,False
+"
+d = dict(d.copy())
+d.update(dict(additional_dict.copy().items()))","[(0.7, 66)]",False,False
+"
+for (key, value) in zip(list(additional_dict.keys()), list(additional_dict.values())):
+    d[key] = value","[(0.5, 58)]",True,True
+"
+d = dict(d.copy())
+d.update(dict(additional_dict))","[(0.7, 66)]",False,False
+"
+for key in additional_dict:
+    if additional_dict[key] in additional_dict.values():
+        d[key] = additional_dict[key]","[(0.3, 23)]",False,False
+"
+d.update(d.items())
+d.update(additional_dict)","[(0.7, 27)]",False,False
+"import copy
+d_copy = copy.deepcopy(d)
+d_copy.update(additional_dict)
+d = dict(d_copy)
+d_copy.clear()","[(0.7, 36)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif key in additional_dict.keys():
+        d[key] = additional_dict[key]","[(0, 102)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif d[key] != value:
+        d[key] = additional_dict.get(key, d[key])","[(0, 101)]",False,False
+"import operator
+for (index, key) in enumerate(additional_dict.keys()):
+    operator.setitem(d, key, list(additional_dict.values())[index])","[(1.2, 56)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d[key]) if additional_dict.get(key) is not None else d.get(key, additional_dict.get(key, d[key]))","[(0, 108)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d.get(key, d[key])) if additional_dict.get(key) is not None else d.get(key, additional_dict.get(key, d[key]))","[(0, 108)]",False,False
+"
+d = dict(d.items())
+d.update(dict(additional_dict))","[(0.7, 66)]",False,False
+"
+d = {**additional_dict, **d}
+d.update(additional_dict)","[(0.9, 13)]",False,False
+"import copy
+for i in additional_dict.keys():
+    d[i] = copy.deepcopy(additional_dict[i])","[(1.2, 50)]",False,False
+"
+d.update({k: additional_dict.get(k) for k in additional_dict})","[(0.3, 28)]",False,False
+"import itertools
+dict_keys = additional_dict.keys()
+dict_values = additional_dict.values()
+for (k, v) in zip(dict_keys, dict_values):
+    d[k] = v","[(0.9, 51)]",True,True
+"
+for key in additional_dict:
+    if additional_dict[key] in additional_dict.values():
+        d.update({key: additional_dict.get(key)})","[(0.3, 59)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif additional_dict.get(key) is not None:
+        d[key] = additional_dict[key] if additional_dict[key] is not None else d[key]
+    else:
+        d[key] = d[key]","[(0, 107)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif additional_dict.get(key, value) is not None and additional_dict.get(key, value) != d[key]:
+        d[key] = additional_dict[key]","[(0, 103)]",False,False
+"import itertools
+dict_items = additional_dict.items()
+for (k, v) in dict_items:
+    d[k] = v","[(0.9, 51)]",False,False
+"
+d.update(additional_dict)
+for (k, v) in additional_dict.items():
+    if k not in d:
+        d[k] = v","[(0.7, 50)]",False,False
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+d = dict(d_copy.copy())
+d_copy.clear()
+d_copy = None
+additional_dict_copy = additional_dict.copy()
+additional_dict_copy.clear()","[(0.7, 12)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict.get(key, d.get(key, None))","[(0.3, 50)]",False,False
+"
+[d.__setitem__(key, value) for (key, value) in additional_dict.items()]","[(1.2, 33)]",True,True
+"import copy
+d.update(additional_dict)
+d = copy.deepcopy(d)
+d.update(d)","[(0.9, 95)]",False,False
+"
+for key in additional_dict:
+    if key in d:
+        d[key] = additional_dict[key]
+    else:
+        d[key] = additional_dict[key]","[(0, 53), (0.3, 50)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value
+k = d['k'] if 'k' in d else None","[(0.7, 59)]",False,False
+"
+for (i, (k, v)) in enumerate(additional_dict.items()):
+    d[k] = additional_dict.get(k, None)","[(0.5, 77)]",True,True
+"
+for (index, key) in enumerate(additional_dict):
+    value = additional_dict[key]
+    d[key] = value","[(0.9, 69)]",True,True
+"
+for i in range(len(additional_dict)):
+    d[list(additional_dict.keys())[i]] = list(additional_dict.values())[i]","[(0.9, 65), (0.5, 5)]",True,True
+"
+for (key, value) in additional_dict.items():
+    d.__setitem__(key, value)
+k = d.get('k', None)","[(0.7, 60)]",False,False
+"
+for key in additional_dict:
+    if key in d:
+        d[key] = additional_dict.get(key, d[key])
+    else:
+        d[key] = additional_dict.get(key, d.get(key, d.get(key, additional_dict[key])))","[(0.3, 50)]",False,False
+"
+d.update({k: additional_dict[k] for k in additional_dict.copy()})","[(0.3, 28)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = additional_dict[key]
+    else:
+        d[key] = value","[(0, 95), (0.3, 56)]",False,False
+"
+d.update({key: value for (key, value) in d.items()})
+d.update(list(additional_dict.items()))","[(0.7, 27)]",False,False
+"
+d = dict(list(d.items()))
+d.update(dict(additional_dict.copy().items()))","[(0.7, 66)]",False,False
+"
+additional_dict_keys = additional_dict.keys()
+for key in additional_dict_keys:
+    d[key] = additional_dict[key]
+modified_dict = dict(d)","[(0.9, 92)]",False,False
+"
+for (i, key) in enumerate(additional_dict.keys()):
+    d[key] = additional_dict[key]","[(0.5, 9), (0.3, 15)]",True,True
+"
+new_dict = {}
+
+def update_dictionary(dict1, dict2):
+    for (key, value) in dict2.items():
+        dict1[key] = value
+    return dict1
+new_dict = update_dictionary(d, additional_dict)
+count = len(additional_dict)","[(1.2, 103)]",False,False
+"
+count = 0
+for (key, value) in additional_dict.items():
+    d[key] = value
+count = len(additional_dict)","[(1.2, 106)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value
+k = list(d.keys())
+d.update(d)","[(0.9, 98)]",False,False
+"
+for key in additional_dict.keys():
+    value = additional_dict[key]
+    if value == additional_dict.get(key):
+        d[key] = value","[(0.5, 49)]",False,False
+"
+for key in additional_dict:
+    d[key] = additional_dict.get(key, d.get(key))","[(0.3, 48)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value if key in d.keys() else additional_dict[key]","[(0, 89)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    elif value == 0:
+        d[key] = 'None'","[(0.3, 58)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d[key])","[(0, 41)]",False,False
+"
+count = sum((1 for (key, value) in additional_dict.items()))
+for (key, value) in additional_dict.items():
+    d[key] = value","[(1.2, 100)]",False,False
+"
+[d.update({key: value}) for (key, value) in additional_dict.items()]","[(1.2, 33)]",True,True
+"
+d_copy = dict(d)
+d.update(additional_dict)
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value","[(0.9, 41)]",False,False
+"
+new_dict = {}
+for (k, v) in additional_dict.items():
+    d[k] = v
+    new_dict[k] = d[k]","[(0.5, 91)]",False,False
+"
+for key in additional_dict.keys():
+    d[key] = additional_dict[key]
+d.update(d)","[(0.9, 38)]",False,False
+"
+count = 0
+for (key, value) in additional_dict.items():
+    d.__setitem__(key, value)
+    count += 1","[(1.2, 72)]",False,False
+"
+for value in additional_dict.values():
+    for key in additional_dict.keys():
+        if additional_dict[key] == value:
+            d[key] = value","[(0.5, 17), (0.3, 5)]",True,True
+"import itertools
+od = itertools.zip_longest(additional_dict.keys(), additional_dict.values())
+for kv in od:
+    (k, v) = kv
+    d[k] = v","[(0.9, 17)]",True,True
+"
+new_dict = {}
+for (k, v) in additional_dict.items():
+    d[k] = new_dict[k] = v","[(0.5, 45)]",False,False
+"
+count = 0
+for elem in additional_dict.items():
+    d[elem[0]] = elem[1]
+    count += 1","[(1.2, 72)]",False,False
+"
+count = len(additional_dict)
+for k in additional_dict:
+    d[k] = additional_dict[k]","[(1.2, 113)]",False,False
+"
+temp_dict = {}
+for (key, value) in additional_dict.items():
+    temp_dict[key] = value
+for (key, value) in temp_dict.items():
+    d[key] = value
+d.update(d)","[(0.9, 97)]",False,False
+"
+d_copy = dict(d)
+d.update(additional_dict)","[(0.9, 13)]",False,False
+"
+for i in range(len(list(additional_dict.keys()))):
+    d[list(additional_dict.keys())[i]] = list(additional_dict.values())[i]","[(0.9, 23)]",True,True
+"
+d = dict(d.copy())
+d.update(additional_dict)","[(0.7, 12)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d.update({key: value})
+k = d.get('k', None)","[(0.7, 60)]",False,False
+"
+for i in range(len(additional_dict.keys())):
+    key = list(additional_dict.keys())[i]
+    d[key] = list(additional_dict.values())[i]","[(1.2, 21)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif additional_dict.get(key) is not None:
+        d[key] = additional_dict.get(key)
+    else:
+        d[key] = d[key]","[(0, 105)]",False,False
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+d = dict(d_copy)","[(0.7, 12)]",False,False
+"import itertools
+for (key, value) in itertools.zip_longest(additional_dict.keys(), additional_dict.values()):
+    d[key] = value","[(0, 15), (0.5, 17)]",True,True
+"
+d = {key: value for (key, value) in d.items()}
+d.update(list(additional_dict.items()))","[(0.7, 27)]",False,False
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+d = dict(d_copy.copy())","[(0.7, 12)]",False,False
+"
+keys = list(additional_dict.keys())
+values = list(additional_dict.values())
+for (i, key) in enumerate(keys):
+    d[key] = values[i]","[(1.2, 78), (0.9, 23), (0.5, 40)]",True,True
+"
+temp = dict(additional_dict)
+for (key, value) in temp.items():
+    d[key] = value","[(1.2, 71)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    if key not in d:
+        d.update({key: value})","[(0, 69)]",False,False
+"
+for item in additional_dict.items():
+    d[item[0]] = item[1]","[(1.2, 5), (0, 1), (0.9, 1), (0.3, 1)]",True,True
+"
+for key in additional_dict.keys():
+    if additional_dict[key] in additional_dict.values():
+        d[key] = additional_dict.get(key)","[(0.3, 59)]",False,False
+"import itertools
+for (k, v) in itertools.chain(d.items(), additional_dict.items()):
+    d[k] = v","[(0.7, 50), (0.9, 40)]",True,True
+"
+count = 0
+for (key, value) in zip(additional_dict.keys(), additional_dict.values()):
+    d[key] = value
+    count += 1","[(1.2, 72)]",False,False
+"
+d_copy = {}
+for (key, value) in additional_dict.items():
+    d_copy[key] = value
+for (key, value) in d_copy.items():
+    d[key] = value","[(0.9, 105)]",False,False
+"
+count = len(additional_dict)
+d.update(additional_dict)","[(1.2, 104)]",False,False
+"
+d.update(((k, additional_dict[k]) for k in additional_dict.keys()))","[(0.9, 47)]",False,False
+"
+for key in additional_dict.keys():
+    if additional_dict[key] in additional_dict.values():
+        d.update({key: additional_dict.get(key)})","[(0.3, 59)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = additional_dict.get(key, value)
+    else:
+        d[key] = value","[(0, 55)]",False,False
+"import numpy as np
+d.update(dict(zip(list(additional_dict.keys()), list(additional_dict.values()))))","[(0.5, 69)]",False,False
+"
+list_of_items = list(additional_dict.items())
+for pair in list_of_items:
+    (k, v) = pair
+    d[k] = v","[(1.2, 90)]",True,True
+"
+d_copy = {**d, **additional_dict}
+d = dict(d_copy)
+d_copy.clear()
+d_copy = None","[(0.7, 38)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d.keys():
+        d[key] = value
+    else:
+        d[key] = additional_dict[key]","[(0, 22)]",False,False
+"
+d.update(additional_dict)
+key = 'k'
+value = d.get(key)","[(0.7, 19)]",False,False
+"
+d_copy = d.copy()
+d.update(additional_dict)
+for (key, value) in d.items():
+    if key in additional_dict:
+        d[key] = value","[(0.9, 13)]",False,False
+"
+list_keys = list(additional_dict.keys())
+for key in list_keys:
+    d[key] = additional_dict[key]","[(1.2, 15)]",True,True
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = additional_dict[key]
+    else:
+        d[key] = value
+    k = key
+    v = value","[(0, 51)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    if key not in d:
+        d[key] = value","[(0, 47)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict[key]
+k = d.get('k', None)","[(0.7, 60)]",False,False
+"
+for (i, key) in enumerate(additional_dict.keys()):
+    if key in additional_dict:
+        d[key] = additional_dict[key]","[(0.5, 71)]",False,False
+"
+k = list(additional_dict.values())
+for (i, key) in enumerate(additional_dict):
+    d[key] = k[i]","[(1.2, 78)]",True,True
+"
+count = 0
+for (key, value) in additional_dict.items():
+    d[key] = value
+    count += 1","[(1.2, 72)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if value in additional_dict.values():
+        d[key] = value
+    else:
+        d[key] = 0","[(0.3, 58)]",False,False
+"
+d_copy = d.copy()
+d_copy.update(additional_dict)
+d = d_copy","[(0.7, 29)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    elif additional_dict[key] is not None:
+        d[key] = additional_dict[key]","[(0, 103)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key not in d:
+        d[key] = value
+    else:
+        d[key] = additional_dict.get(key, d.get(key, d[key])) if additional_dict.get(key) is not None else d.get(key, d[key])","[(0, 108)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = value
+    else:
+        d.update({key: value})","[(0, 69)]",False,False
+"
+d.update(dict(((k, additional_dict[k]) for k in additional_dict.keys())))","[(0.9, 48)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = value
+modified_dict = dict(d)","[(0.9, 91)]",False,False
+"
+for (i, key) in enumerate(additional_dict.keys()):
+    if key in additional_dict:
+        d[key] = additional_dict.get(key, None)","[(0.5, 71)]",False,False
+"
+for key in additional_dict:
+    d.__setitem__(key, additional_dict[key])","[(0.3, 21)]",True,True
+"
+for item in additional_dict.items():
+    d.update(dict([item]))","[(0, 8), (0.3, 52)]",True,True
+"
+d.update(additional_dict)
+d.get('k')","[(0.7, 8)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict.get(key)
+k = d.get('k', None)","[(0.7, 60)]",False,False
+"
+count = 0
+for elem in list(additional_dict.keys()):
+    d[elem] = additional_dict[elem]
+count = len(additional_dict)","[(1.2, 106)]",False,False
+"
+for key in additional_dict:
+    if key in d.keys():
+        d[key] = additional_dict[key]
+    else:
+        d[key] = additional_dict[key]","[(0, 53)]",False,False
+"
+for key in additional_dict:
+    if key in d:
+        d[key] = additional_dict.get(key, d[key])
+    else:
+        d[key] = additional_dict[key]","[(0.3, 50)]",False,False
+"
+for (key, value) in additional_dict.items():
+    d[key] = additional_dict.get(key, d.get(key, additional_dict.get(key, value)))","[(0, 73)]",False,False
+"
+d.update({**additional_dict})","[(0.3, 28)]",False,False
+"from functools import reduce
+reduce(lambda ac, val: ac.update({val[0]: val[1]}) or ac, additional_dict.items(), d)
+keys = additional_dict.keys()
+count = len(keys)","[(1.2, 108)]",False,False
+"
+for (key, value) in additional_dict.items():
+    if key in d:
+        d[key] = additional_dict.get(key, d[key])
+    else:
+        d[key] = value","[(0, 57), (0.3, 56)]",False,False
+"
+for i in range(len(additional_dict)):
+    key = list(additional_dict.keys())[i]
+    d[key] = list(additional_dict.values())[i]","[(0.5, 11)]",True,True
