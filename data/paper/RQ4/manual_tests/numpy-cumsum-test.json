@@ -1,0 +1,54 @@
+[
+  {
+    "init": "array = []",
+    "assertion": "assert cum_arr == []"
+  },
+  {
+    "init": "array = [1,2,3,4]",
+    "assertion": "assert cum_arr == [1, 3, 6, 10]"
+  },
+  {
+    "init": "array = [1, 2, 'a', 'c']",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "array = [1, 2, None, None]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "array = [1, 1.5, 2.5, 3.555]",
+    "assertion": "assert cum_arr == [1, 2.5, 5.0, 8.555]"
+  },
+  {
+    "init": "array = None",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "array = [1, 2, '3', 4, 5]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "array = '12345'",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "array = [0.5, 0.5, 0.5, 0.5]",
+    "assertion": "assert cum_arr == [0.5, 1.0, 1.5, 2.0]"
+  },
+  {
+    "init": "array = [[1,2,3], [4,5,6], [7,8,9]]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "array = ['str1', 'str2', 'str3']",
+    "assertion": "assert 1==1",
+    "error": true
+  }
+
+]

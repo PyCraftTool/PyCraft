@@ -1,0 +1,65 @@
+[
+  {
+    "init": "int_list=[]",
+    "assertion": "assert count == 0"
+  },
+  {
+    "init": "int_list = [1,2,3,4]",
+    "assertion": "assert count == 10"
+  },
+  {
+    "init": "int_list = [1.5, 3.4, 9.4]",
+    "assertion": "assert count == 14.3"
+  },
+  {
+    "init": "int_list = [1.5, 3.4, '1']",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "int_list = [1, 2, None]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "int_list = [1, 2, -1]",
+    "assertion": "assert count==2"
+  },
+  {
+    "init": "int_list = [1, 2, -1, [1,2,3,4]]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "int_list = [1, 2, -1, None]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "int_list = None",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "int_list = [1.2, 2.3, 3.4]",
+    "assertion": "assert count == 6.9"
+  },
+  {
+    "init": "int_list = 123",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "int_list = [float('nan'), 2, -3, 4, 5]",
+    "assertion": "assert count!=count"
+  },
+  {
+    "init": "int_list = [None]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "int_list = [True, False, True]",
+    "assertion": "assert count == 2"
+  }
+]

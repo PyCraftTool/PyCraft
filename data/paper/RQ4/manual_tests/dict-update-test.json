@@ -1,0 +1,50 @@
+[
+  {
+    "code": "d.update(additional_dict)",
+    "init": "d = {1:2, 3:4}\nadditional_dict={7:10, 11:1}",
+    "assertion": "assert d[1]==2\nassert d[3]==4\nassert d[7]==10\nassert d[11]==1"
+  },
+  {
+    "init": "d = {1:2, 3:4}\nadditional_dict={3:7, 10:11, 12:13, 14:15}",
+    "assertion": "assert d[3]==7\nassert d[1]==2\nassert d[10]==11\nassert d[12]==13\nassert d[14]==15"
+  },
+  {
+    "init": "d = {1:2, 3:'a'}\nadditional_dict={None:None, 56:None}",
+    "assertion": "assert d[1]==2\nassert d[3]=='a'\nassert d[None] is None\nassert d[56] is None"
+  },
+  {
+    "init": "d = None\nadditional_dict={1:2, 3:4}",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "d = {1:2, 3:4}\nadditional_dict=None",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "additional_dict = {'x': 10, 'y': 20, 'z': 30}\nd = {'a': 1, 'b': 2}\nadditional_dict['b'] = 50",
+    "assertion": "assert additional_dict == {'x': 10, 'y': 20, 'z': 30, 'b': 50}"
+  },
+  {
+    "init": "additional_dict = {}\nd = {}",
+    "assertion": "assert d == {}"
+  },
+  {
+    "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125}\nd = ''",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {}",
+    "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+  },
+  {
+    "init": "additional_dict = {'a': 1, 'b': 2, 'c': 3.125, 'e': ['1.125', '3.5', '6.75', '5.9']}\nd = {'a': 0, 'b': 0, 'c': 0, 'd': 0, 'e': []}",
+    "assertion": "assert d == {'a': 1, 'b': 2, 'c': 3.125, 'd': 0, 'e': ['1.125', '3.5', '6.75', '5.9']}"
+  },
+  {
+    "init": "additional_dict = {'a': '', 'b': '', 'c': '', 'd': ''}\nd = {'a': 1, 'b': 2, 'c': 3.125, 'd': ['1.125', '3.5', '6.75', '5.9']}",
+    "assertion": "assert d == {'a': '', 'b': '', 'c': '', 'd': ''}"
+  }
+]

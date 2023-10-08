@@ -1,0 +1,63 @@
+[
+   {
+    "init": "content = None",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "content = {\"t\":3.14}",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "content = 124",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "content = 123",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "content = '{\"key1\": \"value1\", \"key2\": \"value2\"}'",
+    "assertion": "assert isinstance(file,str)\nimport os\nassert os.path.isfile(file) == False"
+   },
+   {
+    "init": "content = '[]'",
+    "assertion": "assert isinstance(file,str)\nimport os\nassert os.path.isfile(file) == False"
+   },
+   {
+    "init": "content = ''",
+    "assertion": "assert isinstance(file,str)\nimport os\nassert os.path.isfile(file) == False"
+   },
+   {
+    "init": "content = 1.23",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "content = 'Not a json string'",
+    "assertion": "assert isinstance(file,str)\nimport os\nassert os.path.isfile(file) == False"
+   },
+   {
+    "init": "content = 5.5",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "content = ['This', 'Is', 'A', 'List']",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "import os\ncontent={\"key\":float(\"1.12\")}",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "import os\ncontent=None",
+    "assertion": "assert 1==1",
+    "error": true
+   }
+  ]

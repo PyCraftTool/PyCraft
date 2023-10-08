@@ -1,0 +1,130 @@
+[
+   {
+    "init": "val1 = 5\nval2 = 10\nnumber_value = 0",
+    "assertion": "assert val == 5"
+   },
+   {
+    "init": "val1 = 10\nval2 = 20\nnumber_value = 1",
+    "assertion": "assert val == 20"
+   },
+   {
+    "init": "val1 = 'Hello'\nval2 = 'World'\nnumber_value = 0",
+    "assertion": "assert val == 'Hello'"
+   },
+   {
+    "init": "val1 = None\nval2 = 20\nnumber_value = 0",
+    "assertion": "assert val == None"
+   },
+   {
+    "init": "val1 = '4.5'\nval2 = '3.6'\nnumber_value = 0",
+    "assertion": "assert val == '4.5'"
+   },
+   {
+    "init": "val1 = '4.9'\nval2 = 2.3\nnumber_value = 1",
+    "assertion": "assert val == 2.3"
+   },
+   {
+    "init": "val1 = [3, 'a', 6]\nval2 = [2]\nnumber_value = 1",
+    "assertion": "assert val == [2]"
+   },
+   {
+    "init": "val1 = []\nval2 = []\nnumber_value = 1",
+    "assertion": "assert val == []"
+   },
+   {
+    "init": "val1 = {}\nval2 = 'str'\nnumber_value = 0",
+    "assertion": "assert val == {}"
+   },
+   {
+    "init": "val1 = 100\nval2 = 200\nnumber_value = 0",
+    "assertion": "assert val == 100"
+   },
+   {
+    "init": "val1 = 'a'\nval2 = 'b'\nnumber_value = 2",
+    "assertion": "assert val == 'b'"
+   },
+   {
+    "init": "val1 = 'string'\nval2 = ''\nnumber_value = 0",
+    "assertion": "assert val == 'string'"
+   },
+   {
+    "init": "val1 = [1,2,3]\nval2 = [4,5,6]\nnumber_value = 4",
+    "assertion": "assert val == [4,5,6]"
+   },
+   {
+    "init": "val1 = {1:10, 2:20}\nval2 = {3:30, 4:40}\nnumber_value = 10",
+    "assertion": "assert val == {3:30, 4:40}"
+   },
+   {
+    "init": "val1 = {1:'10', 2:'20'}\nval2 = {3:'30', 4:'40'}\nnumber_value = 0",
+    "assertion": "assert val == {1:'10', 2:'20'}"
+   },
+   {
+    "init": "val1 = None\nval2 = 'None'\nnumber_value = 1",
+    "assertion": "assert val == 'None'"
+   },
+   {
+    "init": "val1 = False\nval2 = True\nnumber_value = False",
+    "assertion": "assert val == False"
+   },
+   {
+    "init": "val1 = 'string1'\nval2 = 'string2'\nnumber_value = 99",
+    "assertion": "assert val == 'string2'"
+   },
+   {
+    "init": "val1 = 'string1'\nval2 = 'string2'\nnumber_value = 0",
+    "assertion": "assert val == 'string1'"
+   },
+   {
+    "init": "val1 = None\nval2 = 'value'\nnumber_value = -1",
+    "assertion": "assert val == 'value'"
+   },
+   {
+    "init": "val1 = ['value11','value12']\nval2 = ['value21','value22']\nnumber_value = -1.100",
+    "assertion": "assert val == ['value21','value22']"
+   },
+   {
+    "init": "val1 = 1234\nval2 = 'error string'\nnumber_value = 123.556",
+    "assertion": "assert val == 'error string'"
+   },
+   {
+    "init": "val1 = '444'\nval2 = ' ' * 100 + 'abc'\nnumber_value = 0",
+    "assertion": "assert val == '444'"
+   },
+   {
+    "init": "val1 = '' ;val2 = 'good'\nnumber_value = 0.0",
+    "assertion": "assert val == ''"
+   },
+   {
+    "init": "val1 = True; val2 = False\nnumber_value = 10.40",
+    "assertion": "assert val == False"
+   },
+   {
+    "init": "val1 = 'empty'; val2 = float('NaN')\nnumber_value = -0.90",
+    "assertion": "assert val != val"
+   },
+   {
+    "init": "val1 = 2\nval2 = 5\nnumber_value = 1",
+    "assertion": "assert val == 5"
+   },
+   {
+    "init": "val1 = None\nval2 = 'abc'\nnumber_value = -9",
+    "assertion": "assert val == 'abc'"
+   },
+   {
+    "init": "val1 = '5'\nval2 = 10.0\nnumber_value = False",
+    "assertion": "assert val == '5'"
+   },
+   {
+    "init": "val1 = '  some space  '\nval2 = 'other'\nnumber_value = float('inf')",
+    "assertion": "assert val == 'other'"
+   },
+   {
+    "init": "val1 = 5.75\nval2 = [123, 'hello', [], -9]\nnumber_value = 0.01",
+    "assertion": "assert val == [123, 'hello', [], -9]"
+   },
+   {
+    "init": "val1 = {\n'a': None, 'b': 500}\nval2 = -100000\nnumber_value = pow(5, 100)",
+    "assertion": "assert val == -100000"
+   }
+]

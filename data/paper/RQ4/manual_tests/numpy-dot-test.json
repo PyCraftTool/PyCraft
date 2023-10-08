@@ -1,0 +1,42 @@
+[
+  {
+    "init": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]",
+    "assertion": "assert dot_prod == 32"
+  },
+  {
+    "init": "arr1 = []\narr2 = []",
+    "assertion": "assert dot_prod == 0"
+  },
+   {
+    "init": "arr1 = [1, 2, 3]\narr2 = [4, 5]",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "arr1 = [1, 2, 3]\narr2 = [4, -5, 6]",
+    "assertion": "assert dot_prod == 12"
+   },
+   {
+    "init": "arr1 = None\narr2 = [4, 5, 6]",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "arr1 = [1, 2, 3]\narr2 = [4, '5', 6]",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "arr1 = [-1, -2, -3, -4]\narr2 = [1, 1, 1, 1]",
+    "assertion": "assert dot_prod == -10"
+   },
+  {
+    "init": "arr1 = [1, 2, 3]\narr2=[]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "arr1 = []\narr2 = [1, 2, 3]",
+    "assertion": "assert dot_prod == 0"
+  }
+]

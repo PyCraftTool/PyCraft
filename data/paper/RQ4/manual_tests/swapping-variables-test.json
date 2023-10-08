@@ -1,0 +1,26 @@
+[
+   {
+    "init": "a = 1\nb = 2",
+    "assertion": "assert a == 2 and b == 1"
+   },
+   {
+    "init": "a = [1, 2, 3]\nb = ['a', 'b', 'c']",
+    "assertion": "assert a == ['a', 'b', 'c'] and b == [1, 2, 3]"
+   },
+   {
+    "init": "a=1\nb=2",
+    "assertion": "assert a == 2 and b == 1"
+   },
+   {
+    "init": "a = 5\nb = 7",
+    "assertion": "assert a == 7 and b == 5"
+   },
+   {
+    "init": "a = [1, 2, 3]\nb = ['a', 'b', 'c']\nt1=a\nt2=b",
+    "assertion": "assert a is t2 and b is t1"
+   },
+   {
+    "init": "a = None\nb = 7",
+    "assertion": "assert a == 7 and b is None"
+   }
+]

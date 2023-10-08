@@ -1,0 +1,22 @@
+[
+  {
+    "init": "row = 'apple,banana,orange'",
+    "assertion": "assert data == ['apple', 'banana', 'orange']"
+  },
+  {
+    "init": "row = ''",
+    "assertion": "assert data == ['']"
+  },
+  {
+    "init": "row = 'apple,,'",
+    "assertion": "assert data == ['apple', '', '']"
+  },
+  {
+    "init": "row = '$$%%,123!!'",
+    "assertion": "assert data == ['$$%%', '123!!']"
+  },
+  {
+    "init": "row = '   abc  ,  123   '",
+    "assertion": "assert data == ['   abc  ', '  123   ']"
+  }
+]

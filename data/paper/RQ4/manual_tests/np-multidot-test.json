@@ -1,0 +1,39 @@
+[
+    {
+     "init": "arr1 = np.array([1, 2])\narr2 = np.array([[0, 1], [1, 0]])\narr3 = np.array([1, 2])",
+     "assertion": "assert result == 4"
+    },
+    {
+     "init": "arr1 = np.array([])\narr2 = np.array([[]])\narr3 = np.array([])",
+     "assertion": "assert 1==1",
+      "error": true
+    },
+    {
+     "init": "arr1 = np.array([1, 2])\narr2 = np.array([[1, 2, 3], [4, 5, 6]])\narr3 = np.array([1, 2, 3])",
+     "assertion": "assert result == 78"
+    },
+    {
+     "init": "arr1 = np.array([None, None])\narr2 = np.array([[0, 1], [1, 0]])\narr3 = np.array([1, 2])",
+     "assertion": "assert 1==1",
+      "error": true
+    },
+    {
+     "init": "arr1 = np.array(['a', 'b'])\narr2 = np.array([[0, 1], [1, 0]])\narr3 = np.array([1, 2])",
+     "assertion": "assert 1==1",
+      "error": true
+    },
+    {
+     "init": "arr1 = np.array([1, 2])\narr2 = np.array([[0, 1], [1, 0]])\narr3 = '2'",
+     "assertion": "assert 1==1",
+      "error": true
+    },
+    {
+     "init": "arr1 = np.array([1, 2])\narr2 = np.array([[0, 1], [1, 0]])\narr3 = np.array([1, 2, 3])",
+     "assertion": "assert 1==1",
+      "error": true
+    },
+  {
+     "init": "arr1 = np.array([1.5, 2])\narr2 = np.array([[1, 2, 3.5], [4, 5, 6]])\narr3 = np.array([1, 2, 3])",
+     "assertion": "assert result == 87.25"
+    }
+   ]

@@ -1,0 +1,32 @@
+[
+  {
+    "init": "iterable=[1,2,3,4,5,1,7]\ncond=lambda x:x%2",
+    "assertion": "assert t==[1,3,5,1,7]"
+  },
+  {
+    "init": "iterable=[1, None, None]\ncond=lambda x: x is None",
+    "assertion": "assert t==[None, None]"
+  },
+  {
+    "init": "iterable=[1,2,3,4,5]\ncond=lambda x: isinstance(x,str)",
+    "assertion": "assert t==[]"
+  },
+  {
+    "init": "iterable=[i for i in range(100)]\ncond=lambda x:x%5",
+    "assertion": "assert t == [i for i in range(100) if i%5]"
+  },
+  {
+    "init": "iterable=[0,1,2,0]\ncond=lambda x:x==0",
+    "assertion": "assert t == [0,0]"
+  },
+  {
+    "init": "iterable = [1, 2, 3, 'four', 5]\ncond = lambda x: isinstance(x, int)",
+    "assertion": "assert t == [1, 2, 3, 5]"
+  },
+  {
+    "init": "iterable = 'ERROR_TEST'\ncond = 10",
+    "assertion": "assert 1==1",
+    "error": true
+  }
+
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "init": "l1 = [1, 2, 3, 4]\nl2 = [3, 4, 5, 6]",
+    "assertion": "assert common == [3, 4]"
+  },
+  {
+    "init": "l1 = [1, 2, 3, 4]\nl2 = [5, 6]",
+    "assertion": "assert common == []"
+  },
+  {
+    "init": "l1 = [1, 1, 1, 4]\nl2 = [1, 1, 5]",
+    "assertion": "assert common == [1, 1, 1]"
+  },
+  {
+    "init": "l1 = [9,5,11,12]\nl2 = [12,9,5]",
+    "assertion": "assert common == [9, 5, 12]"
+  },
+  {
+    "init": "l1 = [0, '0', True, False, None, -1, -0.5]\nl2 = [None, 0, '0', False, '', [], {}, True]",
+    "assertion": "assert common == [0, '0', True, False, None]"
+  }
+]

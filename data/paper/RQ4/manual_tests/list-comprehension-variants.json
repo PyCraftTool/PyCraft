@@ -1,0 +1,2572 @@
+{
+ "num-correct": 166,
+ "num-incorrect": 475,
+ "correct-vars": [
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(cond, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\n[t.append(i) for i in iterable if cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "false_cond = lambda x: not cond(x)\nt = list(filterfalse(false_cond, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "not_t = list(filterfalse(cond, iterable))\nt = list(filter(cond, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t += [i]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    t += [i] if cond(i) else []",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if not cond(i):\n        continue\n    t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if not cond(i):\n        pass\n    else:\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "func = lambda x, y: x + [y] if cond(y) else x\nt = functools.reduce(func, iterable, [])",
+   "imports": "import functools"
+  },
+  {
+   "code": "t = filter(cond, iterable)\nt = list(t)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda i: cond(i), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def filter_func(x):\n    return not cond(x)\nt = list(filterfalse(filter_func, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = []\nfor i in range(len(iterable)):\n    if cond(iterable[i]):\n        t.append(iterable[i])",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    t.extend([i] if cond(i) else [])",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nlist(map(lambda i: t.append(i) or None, filter(lambda i: cond(i), iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "iterable = list(itertools.filterfalse(lambda x: not cond(x), iterable))\nt = list(filter(lambda x: cond(x), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = reduce(lambda acc, x: acc + [x] if cond(x) else acc, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = list(filter(lambda x: not not cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x) != 0]",
+   "imports": ""
+  },
+  {
+   "code": "not_t = [x for x in iterable if not cond(x)]\nt = [x for x in iterable if cond(x)]",
+   "imports": ""
+  },
+  {
+   "code": "not_t = []\nt = []\nfor i in iterable:\n    if cond(i):\n        t.append(i)\n    else:\n        not_t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "not_t = list(filter(lambda x: not cond(x), iterable))\nt = list(filter(lambda x: cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "not_t = []\nt = []\nfor i in iterable:\n    if not cond(i):\n        not_t.append(i)\n    else:\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda i: not cond(i), iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t.extend([i])",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in filter(cond, iterable):\n    t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "def invert_cond(i):\n    return not cond(i)\nt = list(filterfalse(invert_cond, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = reduce(lambda acc, val: acc + [val] if cond(val) else acc, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = []\nlist(map(lambda i: t.append(i) if cond(i) else None, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "filtered = itertools.filterfalse(lambda x: not cond(x), iterable)\nt = list(filtered)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = list(compress(iterable, [cond(i) for i in iterable]))",
+   "imports": "from itertools import compress"
+  },
+  {
+   "code": "t = list(filter(lambda x: True if cond(x) else False, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "new_list = []\nfor i in iterable:\n    if cond(i):\n        new_list.append(i)\nt = new_list",
+   "imports": ""
+  },
+  {
+   "code": "t = functools.reduce(lambda acc, x: acc + [x] if cond(x) else acc, iterable, [])",
+   "imports": "import functools"
+  },
+  {
+   "code": "def filter_func(i):\n    return cond(i)\nt = list(filter(filter_func, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor (index, value) in enumerate(iterable):\n    if cond(value):\n        t.append(value)",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nlist(map(lambda x: t.append(x) if cond(x) else None, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nindex = 0\nwhile index < len(iterable):\n    if cond(iterable[index]):\n        t.append(iterable[index])\n    index += 1",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda i: not cond(i), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = reduce(lambda acc, i: acc + [i] if cond(i) else acc, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "iterable = list(filter(cond, iterable))\nt = list(filter(cond, iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "iterable = [x for x in iterable if cond(x)]\nt = [x for x in iterable if cond(x)]",
+   "imports": "import itertools"
+  },
+  {
+   "code": "iterable = list(filter(lambda x: cond(x), iterable))\nt = list(filter(lambda x: cond(x), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def cond_filter(x):\n    return not cond(x)\nt = list(filterfalse(cond_filter, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = []\n[t.extend([i]) for i in iterable if cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t[len(t):] = [i]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t[len(t):len(t)] = [i]",
+   "imports": ""
+  },
+  {
+   "code": "t = filter(lambda x: cond(x), iterable)\nt = list(t)",
+   "imports": ""
+  },
+  {
+   "code": "def not_cond(x):\n    return not cond(x)\nt = list(filterfalse(not_cond, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def not_cond(i):\n    return not cond(i)\nt = list(filterfalse(not_cond, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x)]\nt = list(t)",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    t.append(x) if cond(x) else None",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    t.extend(filter(lambda y: cond(y), [x]))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\n    else:\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\n    elif not cond(x):\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\n    else:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\n    elif not cond(x):\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t.insert(len(t), i)",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t = t + [i]",
+   "imports": ""
+  },
+  {
+   "code": "not_t = list(filter(lambda x: not cond(x), iterable))\nt = list(filter(cond, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "not_t = []\nt = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\n    elif not cond(x):\n        not_t.append(x)",
+   "imports": ""
+  },
+  {
+   "code": "not_t = []\nt = []\nfor x in iterable:\n    if not cond(x):\n        not_t += [x]\n    else:\n        t += [x]",
+   "imports": ""
+  },
+  {
+   "code": "not_t = []\nt = []\nfor x in iterable:\n    if cond(x):\n        t += [x]\n    else:\n        not_t += [x]",
+   "imports": ""
+  },
+  {
+   "code": "(iter1, iter2) = tee(iterable)\nnot_t = filter(lambda x: not cond(x), iter1)\nt = filter(cond, iter2)\n(not_t, t) = (list(not_t), list(t))",
+   "imports": "from itertools import tee"
+  },
+  {
+   "code": "not_t = list(filter(lambda i: not cond(i), iterable))\nt = list(filter(lambda i: cond(i), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = list(map(lambda x: x, filter(cond, iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "result = list(itertools.filterfalse(lambda i: not cond(i), iterable))\nt = result",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = reduce(lambda a, b: a + [b] if cond(b) else a, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "false_cond = list(filterfalse(lambda x: cond(x), iterable))\nt = [x for x in iterable if x not in false_cond]",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def func(x, y):\n    if cond(y):\n        x.append(y)\n    return x\nt = reduce(func, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "def filter_func(x):\n    return cond(x)\nt = list(filter(filter_func, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def false_pred(x):\n    return not cond(x)\nt = list(filterfalse(false_pred, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(map(lambda x: x, filter(lambda x: cond(x), iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if x in filter(cond, iterable)]",
+   "imports": ""
+  },
+  {
+   "code": "c = collections.deque()\nfor i in iterable:\n    if cond(i):\n        c.append(i)\nt = list(c)",
+   "imports": "import collections"
+  },
+  {
+   "code": "filtered_iterable = itertools.filterfalse(lambda i: not cond(i), iterable)\nt = list(filtered_iterable)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = functools.reduce(lambda acc, i: acc + [i] if cond(i) else acc, iterable, [])",
+   "imports": "import functools"
+  },
+  {
+   "code": "result = list(filter(lambda x: cond(x), iterable))\nt = result",
+   "imports": "import itertools"
+  },
+  {
+   "code": "result = [i for i in iterable if cond(i)]\nt = result",
+   "imports": ""
+  },
+  {
+   "code": "result = list(filterfalse(lambda x: not cond(x), iterable))\nt = result",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "result = list(filter(cond, iterable))\nt = result",
+   "imports": ""
+  },
+  {
+   "code": "result = list(filter(lambda i: cond(i), iterable))\nt = result",
+   "imports": ""
+  },
+  {
+   "code": "t = filter(lambda i: cond(i), iterable)\nt = list(t)",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if not not cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "def filter_cond(i):\n    return cond(i)\nt = list(filter(filter_cond, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = deque()\nfor i in iterable:\n    if cond(i):\n        t.append(i)\nt = list(t)",
+   "imports": "from collections import deque"
+  },
+  {
+   "code": "cond_iter = filterfalse(partial(lambda x, f: not f(x), f=cond), iterable)\nt = list(cond_iter)",
+   "imports": "from itertools import filterfalse\nfrom functools import partial"
+  },
+  {
+   "code": "def filter_iterable(iterable, condition):\n    return list(filterfalse(lambda x: not condition(x), iterable))\nt = filter_iterable(iterable, cond)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(reduce(lambda x, y: x + [y] if cond(y) else x, iterable, []))",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "def cond_not(x):\n    return not cond(x)\nt = list(filterfalse(cond_not, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = [x for x in iterable if bool(cond(x))]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\n[t.append(iterable[i]) for i in range(len(iterable)) if cond(iterable[i])]",
+   "imports": ""
+  },
+  {
+   "code": "false_cond = []\nfor x in iterable:\n    if not cond(x):\n        false_cond.append(x)\nt = [x for x in iterable if x not in false_cond]",
+   "imports": ""
+  },
+  {
+   "code": "t = [value for (index, value) in enumerate(iterable) if cond(value)]",
+   "imports": ""
+  },
+  {
+   "code": "def opposite_cond(i):\n    return not cond(i)\nt = list(filterfalse(opposite_cond, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list((i for i in iterable if cond(i)))",
+   "imports": ""
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    return [x for x in iterable if func(x)]\nt = my_filter(lambda x: cond(x), iterable)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(partial(lambda cond, x: not cond(x), cond), iterable))",
+   "imports": "from itertools import filterfalse\nfrom functools import partial"
+  },
+  {
+   "code": "def filter_by_condition(x):\n    return not cond(x)\nt = list(itertools.filterfalse(filter_by_condition, iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def condition(x):\n    return not cond(x)\nt = list(filterfalse(condition, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    new_iterable = []\n    for x in iterable:\n        if func(x):\n            new_iterable.append(x)\n    return new_iterable\nt = my_filter(lambda x: cond(x), iterable)",
+   "imports": ""
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    return list(filter(func, iterable))\nt = my_filter(lambda x: cond(x), iterable)",
+   "imports": ""
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    return list(filterfalse(lambda x: not func(x), iterable))\nt = my_filter(lambda x: cond(x), iterable)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    return [iterable[x] for x in range(len(iterable)) if func(iterable[x])]\nt = my_filter(lambda x: cond(x), iterable)",
+   "imports": ""
+  },
+  {
+   "code": "def func(t, i):\n    if cond(i):\n        t.append(i)\n    return t\nt = reduce(func, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "def cond_neg(x):\n    return not cond(x)\nt = list(filterfalse(cond_neg, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = reduce(operator.add, ([i] if cond(i) else [] for i in iterable), [])",
+   "imports": "import operator\nfrom functools import reduce"
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i)] or []",
+   "imports": ""
+  },
+  {
+   "code": "operator = filterfalse if cond else filter\nt = list(operator(lambda i: not cond(i), iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def check(cond, x):\n    return not cond(x)\nt = list(filterfalse(partial(check, cond), iterable))",
+   "imports": "from itertools import filterfalse\nfrom functools import partial"
+  },
+  {
+   "code": "def condition(x):\n    return not cond(x)\nfil = itertools.filterfalse(condition, iterable)\nt = list(fil)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def condition(x):\n    return not cond(x)\nfil = filterfalse(condition, iterable)\nt = list(fil)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    result = []\n    for item in iterable:\n        if func(item):\n            result.append(item)\n    return result\nt = my_filter(cond, iterable)",
+   "imports": ""
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    output = []\n    for index in range(len(iterable)):\n        if func(iterable[index]):\n            output.append(iterable[index])\n    return output\nt = my_filter(lambda x: cond(x), iterable)",
+   "imports": ""
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    return list(filterfalse(lambda i: not func(i), iterable))\nt = my_filter(lambda x: cond(x), iterable)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    return reduce(lambda output, i: [*output, i] if func(i) else output, iterable, [])\nt = my_filter(lambda x: cond(x), iterable)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    return filter(func, iterable)\nt = list(filter(lambda x: cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "p_filter = partial(lambda f, e: f(e), cond)\nt = list(filter(p_filter, iterable))",
+   "imports": "from functools import partial"
+  },
+  {
+   "code": "t = [*filter(cond, iterable)]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(partial(cond), iterable))",
+   "imports": "from functools import partial"
+  },
+  {
+   "code": "def filter_list(lst: List, cond) -> List:\n    t = []\n    for i in lst:\n        if cond(i):\n            t.append(i)\n    return t\nt = filter_list(iterable, cond)",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "t = [el for (el, c) in zip(iterable, map(cond, iterable)) if c]",
+   "imports": ""
+  },
+  {
+   "code": "def filter_pos(x):\n    return cond(x)\nt = list(filter(filter_pos, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def filter_func(x):\n    return cond(x)\nnew_list = list(filter(filter_func, iterable))\nt = new_list",
+   "imports": ""
+  },
+  {
+   "code": "t = functools.reduce(lambda acc, val: acc + [val] if cond(val) else acc, iterable, [])",
+   "imports": "import functools"
+  },
+  {
+   "code": "filtered_list = list(filter(cond, iterable))\nt = filtered_list if filtered_list else []",
+   "imports": ""
+  },
+  {
+   "code": "filtered_list = reduce(lambda x, y: x + [y] if cond(y) else x, iterable, [])\nt = filtered_list if filtered_list else []",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = list(filter(lambda i: cond(i), iterable)) or []",
+   "imports": ""
+  },
+  {
+   "code": "cond_iter = itertools.filterfalse(lambda i: cond(i) == False, iterable)\nt = list(cond_iter)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def condition(x):\n    return not cond(x)\nfil = list(itertools.filterfalse(condition, iterable))\nt = fil",
+   "imports": "import itertools"
+  },
+  {
+   "code": "fil = filterfalse(lambda x: not cond(x), iterable)\nt = list(fil)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def filterfalse(predicate, iterable):\n    for x in iterable:\n        if not predicate(x):\n            yield x\nfil = filterfalse(lambda x: not cond(x), iterable)\nt = list(fil)",
+   "imports": ""
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    return list(filter(func, iterable))\nt = my_filter(cond, iterable)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda item: cond(item), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def better_filter(func, iterable):\n    return [x for x in iterable if func(x)]\nt = better_filter(lambda x: cond(x), iterable)",
+   "imports": ""
+  },
+  {
+   "code": "filter_func = lambda a, b: a + [b] if cond(b) else a\nt = reduce(filter_func, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "not_cond = lambda i: not cond(i)\nfiltered = filterfalse(not_cond, iterable)\nt = list(filtered)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = [i for i in iterable if i in list(filter(cond, iterable))]",
+   "imports": ""
+  },
+  {
+   "code": "def filter_list(cond, iterable) -> List:\n    return [x for x in iterable if cond(x)]\nt = filter_list(cond, iterable)",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "def false_cond(x):\n    return not cond(x)\nt = list(itertools.filterfalse(false_cond, iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = [i for i in filter(cond, iterable)]",
+   "imports": ""
+  },
+  {
+   "code": "t = reduce(lambda x, y: x + [y] if cond(y) else x, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "new_list = list(itertools.filterfalse(lambda x: not cond(x), iterable))\nt = new_list",
+   "imports": "import itertools"
+  },
+  {
+   "code": "filtered_iterable = list(filter(cond, iterable))\nt = [i for i in iterable if i in filtered_iterable]",
+   "imports": ""
+  },
+  {
+   "code": "false_cond = lambda x: not cond(x)\nfiltered_iterable = list(filterfalse(false_cond, iterable))\nt = [i for i in iterable if i in filtered_iterable]",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "cond_filter = partial(filter, cond)\nt = list(itertools.filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "from functools import partial\nimport itertools"
+  },
+  {
+   "code": "def filter_reduce(acc, x):\n    if cond(x):\n        acc.append(x)\n    return acc\nt = reduce(filter_reduce, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "def filter_list(cond, iterable) -> List:\n    return list(filter(cond, iterable))\nt = filter_list(cond, iterable)",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "def filter_list(cond, iterable) -> List:\n    return list(filterfalse(lambda x: not cond(x), iterable))\nt = filter_list(cond, iterable)",
+   "imports": "from typing import List\nfrom itertools import filterfalse"
+  },
+  {
+   "code": "def false_cond(x):\n    return not cond(x)\nt = list(filterfalse(false_cond, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def false_cond(x):\n    return not cond(x)\nt = [elem for elem in itertools.filterfalse(false_cond, iterable)]",
+   "imports": "import itertools"
+  },
+  {
+   "code": "(a, b) = tee(iterable)\nt = list(filter(cond, a))",
+   "imports": "from itertools import tee"
+  },
+  {
+   "code": "def filter_func(x):\n    return not cond(x)\nfiltered = itertools.filterfalse(filter_func, iterable)\nt = list(filtered)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "filtered = itertools.filterfalse(lambda x: not cond(x), iterable)\nt = [i for i in filtered]",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def filter_func(x):\n    return not cond(x)\nfiltered = itertools.filterfalse(filter_func, iterable)\nt = [i for i in filtered]",
+   "imports": "import itertools"
+  },
+  {
+   "code": "filtered_list = []\nfor item in iterable:\n    if cond(item):\n        filtered_list.append(item)\nt = filtered_list\nfiltered_list = list(filter(cond, iterable))\nt = filtered_list\nt = list(itertools.filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "new_list = []\nfor i in iterable:\n    if cond(i):\n        new_list += [i]\nt = new_list",
+   "imports": ""
+  },
+  {
+   "code": "new_list = []\n[new_list.append(i) for i in iterable if cond(i)]\nt = new_list",
+   "imports": ""
+  },
+  {
+   "code": "new_list = reduce(lambda a, b: a + [b] if cond(b) else a, iterable, [])\nt = new_list",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "new_list = list(itertools.compress(iterable, [cond(x) for x in iterable]))\nt = new_list",
+   "imports": "import itertools"
+  },
+  {
+   "code": "false_t = list(filterfalse(cond, iterable))\niterable = list(filter(lambda x: x not in false_t, iterable))\nt = iterable",
+   "imports": "from itertools import filterfalse"
+  }
+ ],
+ "incorrect-vars": [
+  {
+   "code": "t = [i if cond(i) else None for i in iterable]\nt = list(filter(lambda x: x is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if i not in [0, '', None] and cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if i not in [0, '', None] and cond(i):\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(map(lambda x: x if cond(x) else None, iterable))\nt = list(filter(lambda x: x is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i) and i not in t:\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(None, map(lambda x: x if cond(x) else None, iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if i if cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = pd.Series(iterable)\nt = t[t.apply(cond)].tolist()",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x)]\nt.sort()",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i)]\nt = list(filter(lambda x: x is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x is not None, [i if cond(i) else None for i in iterable]))",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i)]\nt = [i for i in t if i is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t.append(i)\nt = list(filter(lambda x: x is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "combinations = itertools.filterfalse(lambda x: x is None, [i if cond(i) else None for i in iterable])\nt = list(combinations)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x) is True]",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x) == 1]",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if i and cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda i: i and cond(i), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if i != 0 and i != '' and (i is not None) and cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if i is not None and i != '' and (i != 0) and cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if i is not None and i != '' and (i != 0) if cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda i: i is not None and i != '' and (i != 0) and cond(i), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda i: i not in [0, '', None] and cond(i), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda i: i in [0, '', None] or not cond(i), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = reduce(lambda acc, i: acc + [i] if i not in [0, '', None] and cond(i) else acc, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = list(filter(lambda x: x not in [0, '', None] and cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "filtered_iterable = itertools.filterfalse(lambda x: x in [0, '', None] or not cond(x), iterable)\nt = list(filtered_iterable)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = reduce(lambda acc, x: acc + [x] if x not in [0, '', None] and cond(x) else acc, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = list(map(lambda x: x if cond(x) else None, iterable))\nt = [x for x in t if x is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x if cond(x) else None, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i) and i not in t:\n        t += [i]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\n[t.append(i) for i in iterable if cond(i) and i not in t]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i) and i not in t:\n        t.extend([i])",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x) and x is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x is not None, map(lambda x: x if cond(x) else None, iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "filtered_iterable = itertools.filterfalse(lambda x: not cond(x), iterable)\nt = list(filter(None, filtered_iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = list(map(lambda i: i if cond(i) else None, iterable))\nt = list(filter(lambda i: i is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if i and cond(i):\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "filtered_iterable = itertools.filterfalse(lambda x: not x or not cond(x), iterable)\nt = list(filtered_iterable)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = list(filter(lambda x: x and cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if i:\n        if cond(i):\n            t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if i and (cond(i) if cond(i) else False)]",
+   "imports": ""
+  },
+  {
+   "code": "iterable = list(itertools.filterfalse(lambda x: cond(x) == False, iterable))\nt = list(filter(lambda x: cond(x) == True, iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "iterable = list(filter(lambda x: cond(x) == True, iterable))\nt = list(filter(lambda x: cond(x) == True, iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = pd.Series(iterable)\nfiltered_t = t[t.apply(cond)]\nt = filtered_t.tolist()",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = pd.Series(iterable)\nfiltered_t = list(filter(cond, t))\nt = filtered_t",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = pd.Series(iterable)\nfiltered_t = []\nfor i in t:\n    if cond(i):\n        filtered_t.append(i)\nt = filtered_t",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = sorted([x for x in iterable if cond(x)])",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\nt.sort()",
+   "imports": ""
+  },
+  {
+   "code": "false_cond = lambda x: not cond(x)\nt = sorted(filterfalse(false_cond, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "filtered = itertools.filterfalse(lambda x: not cond(x), iterable)\nt = sorted(filtered)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = sorted(filter(cond, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        if i is not None:\n            t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "iterable_filtered = itertools.filterfalse(lambda x: not cond(x) or x is None, iterable)\nt = list(iterable_filtered)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = list(filter(cond, iterable))\nt = list(filter(lambda x: x is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i) and i is not None:\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i)]\nt = list(filter(None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t.append(i)\nt = list(filter(None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t.append(i)\nwhile None in t:\n    t.remove(None)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: x is None, [i if cond(i) else None for i in iterable]))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\nt = [x for x in t if x is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: not cond(x), iterable))\nt = list(filter(lambda x: x is not None, t))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = list(map(lambda x: x if cond(x) else None, iterable))\nt = list(filter(None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x)]\nt = [x for x in t if x]",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x)]\nt = list(filter(bool, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x) and x is not None, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "filtered = itertools.filterfalse(lambda x: not (cond(x) and x is not None), iterable)\nt = list(filtered)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = reduce(lambda acc, x: acc + [x] if cond(x) and x is not None else acc, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: not cond(x), iterable))\nt = list(filter(None, t))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x), iterable))\nt = list(filter(None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = np.array([i for i in iterable if cond(i)])\nt = t[t != None].tolist()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i) and i is not None]\nt = list(filter(None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: not cond(x), iterable))\nt = list(filter(None, t))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: not cond(x), iterable))\nt = list(filter(lambda x: x is not None, t))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x), iterable))\nt = list(filter(lambda x: x is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(None, [i if cond(i) else None for i in iterable]))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(bool, [i if cond(i) else None for i in iterable]))",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if i is not None and cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x is not None and cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = np.array([i if cond(i) else None for i in iterable])\nt = t[t != None].tolist()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t.append(i)\nt = list(filter(None, t))\nt = list(filter(lambda x: x is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x), iterable))\nt = [x for x in t if x is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: x is None, filter(lambda x: cond(x), iterable)))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(filter(cond, filter(None, iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x) if x is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(None, [cond(x) and x or None for x in iterable]))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(None, [x for x in iterable if cond(x)]))",
+   "imports": ""
+  },
+  {
+   "code": "t = pd.Series(iterable)\nt = list(t[t.apply(cond)])",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = list(filter(lambda x: x, [x if cond(x) else None for x in iterable]))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x) and x:\n        t.append(x)",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        if x:\n            t.append(x)",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\nt = [x for x in t if x]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        if bool(x):\n            t.append(x)",
+   "imports": ""
+  },
+  {
+   "code": "iterable = itertools.filterfalse(lambda x: not cond(x), iterable)\nt = list(filter(bool, iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = list(filter(lambda x: bool(x) and cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x) and bool(x)]\nt = list(filter(bool, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(map(lambda i: i if cond(i) else None, iterable))\nt = [i for i in t if i is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i) == True:\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda i: i if cond(i) else None, iterable))\nt = [i for i in t if i is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x) is True, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i) == True]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i) is True:\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i) is not False]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i) is not False:\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x) == True, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = pd.Series(iterable).loc[lambda x: x.apply(cond)].tolist()",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    try:\n        if cond(i):\n            t.append(i)\n    except:\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    try:\n        if cond(i):\n            t.append(i)\n    except:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if not not cond(x) == True]",
+   "imports": ""
+  },
+  {
+   "code": "t = reduce(lambda acc, x: acc + [x] if cond(x) else acc, iterable, [])\nt = [x for x in t if x is not None]",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "false_cond = lambda x: not (cond(x) and x is not None)\nfiltered_iterable = filterfalse(false_cond, iterable)\nt = list(filtered_iterable)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if x is not None:\n        if cond(x):\n            t.append(x)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda i: not cond(i), iterable))\nt = list(filter(lambda i: i is not None, t))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(filter(cond, iterable))\nt = list(filter(lambda i: i is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(map(lambda i: i if cond(i) and i is not None else None, iterable))\nt = list(filter(lambda i: i is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(cond, iterable))\nt = list(filter(None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = np.array(list(map(lambda i: i if cond(i) else None, iterable)))\nt = t[t != None].tolist()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "filtered = itertools.filterfalse(lambda i: not cond(i), iterable)\nt = list(filter(lambda i: i is not None, filtered))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t.append(i)\nt = list(filter(lambda i: i is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(map(lambda i: i if cond(i) else None, iterable))\nt = list(filter(None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = reduce(lambda acc, i: acc + [i] if cond(i) else acc, iterable, [])\nt = list(filter(None, t))",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = [x if cond(x) else None for x in iterable]\nt = [x for x in t if x is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x) is not False, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def filter_func(x):\n    return cond(x) is not False\nt = list(filter(filter_func, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in filter(cond, iterable) if x]",
+   "imports": ""
+  },
+  {
+   "code": "combos = itertools.filterfalse(lambda x: not (x and cond(x)), iterable)\nt = list(combos)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = [x for x in iterable if x not in ['', None] and cond(x)]",
+   "imports": ""
+  },
+  {
+   "code": "t = reduce(lambda a, b: a + [b] if b and cond(b) else a, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = filter(lambda x: x and cond(x), iterable)\nt = list(t)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x and cond(x), iterable))\niterable = [x for x in iterable if x in t]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(map(lambda x: x if x and cond(x) else None, iterable))\nt = list(filter(lambda x: x is not None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if x and cond(x)]\niterable = [x for x in iterable if not (x and cond(x))]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(cond, filter(bool, iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "t = filter(cond, filter(bool, iterable))\nt = list(t)",
+   "imports": ""
+  },
+  {
+   "code": "def g():\n    for i in iterable:\n        if i and cond(i):\n            yield i\nt = list(itertools.filterfalse(lambda x: x is None, g()))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "filterfunc = lambda x: not x or not cond(x)\nt = list(filterfalse(filterfunc, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: not x or not cond(x), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = reduce(operator.add, [[x] for x in iterable if x and cond(x)], [])",
+   "imports": "from functools import reduce\nimport operator"
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if x and cond(x):\n        t.extend([x])",
+   "imports": ""
+  },
+  {
+   "code": "mask = np.array([cond(x) for x in iterable], dtype=np.bool_)\nt = np.array(iterable)[mask].tolist()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "predicate = lambda x: x and cond(x)\nt = list(filter(predicate, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def func(x):\n    return x\nmean = statistics.mean\nfiltered_elm = filter(lambda x: x and cond(x), iterable)\nt = [func(x) for x in filtered_elm]",
+   "imports": "import statistics"
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\nt = list(filter(lambda x: x != 0, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(compress(iterable, [cond(x) and x for x in iterable]))\nt = [x for x in t if x != 0]",
+   "imports": "from itertools import compress"
+  },
+  {
+   "code": "combos = itertools.filterfalse(lambda x: x == None or not cond(x), iterable)\nfiltered_combos = filter(lambda x: x != None, combos)\nt = list(filtered_combos)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "filtered = list(filter(lambda x: x not in ['', None] and cond(x), iterable))\nt = list(itertools.compress(filtered, [True] * len(filtered)))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = list(filter(lambda x: x not in ['', None] and cond(x), iterable))",
+   "imports": "import functools"
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if x not in ['', None] and cond(x):\n        t.append(x)",
+   "imports": ""
+  },
+  {
+   "code": "result = itertools.filterfalse(lambda x: x in ['', None] or not cond(x), iterable)\nt = list(result)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = []\nfor i in range(len(iterable)):\n    if iterable[i] not in ['', None] and cond(iterable[i]):\n        t.append(iterable[i])",
+   "imports": ""
+  },
+  {
+   "code": "def get_t(iterable: List) -> List:\n    result = []\n    for i in iterable:\n        if i and cond(i):\n            result.append(i)\n    return result\nt = get_t(iterable)",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "t = list(filter(lambda b: b and cond(b), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "data = pd.Series(iterable)\nbool_data = data.apply(cond)\nt = list(data[bool_data])",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "new_list = []\nfor i in iterable:\n    if cond(i) == True:\n        new_list.append(i)\nt = new_list",
+   "imports": ""
+  },
+  {
+   "code": "def filter_func(x):\n    if cond(x):\n        return x\nnew_list = list(filter(filter_func, iterable))\nt = new_list",
+   "imports": ""
+  },
+  {
+   "code": "def filter_func(lst):\n    if cond(lst):\n        return lst\n    else:\n        return None\nt = list(filter(lambda x: x is not None, reduce(lambda acc, elem: acc + [filter_func(elem)], iterable, [])))",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = [x for x in filter(lambda x: cond(x), iterable)]\nt = [x for x in t if x is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda i: cond(i) and i is not None, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "false_conditions = lambda i: not (cond(i) and i is not None)\nt = list(filterfalse(false_conditions, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = [x if cond(x) else None for x in iterable]\nt = list(filter(lambda x: x != None, t))",
+   "imports": ""
+  },
+  {
+   "code": "arr = array(iterable)\nt = list(filter(cond, arr))",
+   "imports": "from numpy import array"
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: x is None, map(lambda x: x if cond(x) else None, iterable)))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = [x for x in filter(lambda x: x is not None, map(lambda x: x if cond(x) else None, iterable))]",
+   "imports": ""
+  },
+  {
+   "code": "t = pd.Series(iterable).apply(lambda x: x if cond(x) else None).dropna().tolist()",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = list(filter(lambda i: cond(i), iterable))\nt = [i for i in t if i is not None]",
+   "imports": ""
+  },
+  {
+   "code": "false = filterfalse(lambda i: cond(i) == False, iterable)\nt = [i for i in false if i is not None]",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def f(iterable):\n    return filter(lambda i: cond(i) and i is not None, iterable)\nt = list(f(iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def filter_none(x, y):\n    if y is not None:\n        x.append(y)\n    return x\nt = reduce(filter_none, map(lambda i: i if cond(i) else None, iterable), [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = reduce(lambda acc, x: acc + [x] if cond(x) else acc, iterable, [])\nt = list(filter(None, t))",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "lst = [i for i in iterable if cond(i)]\nt = list(itertools.filterfalse(lambda x: x is None, lst))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i) and i:\n        t.append(i)\nt = list(filter(None, t))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x if cond(x) else None, iterable))\nt = list(filter(None, t))",
+   "imports": ""
+  },
+  {
+   "code": "def filt(x, y):\n    return x + [y] if cond(y) else x\nt = reduce(filt, iterable, [])\nt = list(filter(None, t))",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "n = list(filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "from functools import filterfalse"
+  },
+  {
+   "code": "arr = np.array(iterable)\nt = arr[np.where([cond(x) for x in iterable])]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = [i for i in iterable if filter_cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = filter(cond, iterable)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(cond, iterable))",
+   "imports": "import filter"
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if not cond(x):\n        t.append(x)",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if not cond(x)]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(map(lambda x: x if x and cond(x) else None, iterable))\nt.remove(None)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(np.array(iterable)[np.vectorize(cond)(iterable)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = list(pd.Series(iterable).apply(cond).loc[lambda x: x].index)",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "fil = list(filter(cond, iterable))\nt = reduce(lambda a, b: a + [b], fil, [])",
+   "imports": ""
+  },
+  {
+   "code": "t = reduce(lambda x, y: x + [y] if cond(y) else x, iterable, [])",
+   "imports": ""
+  },
+  {
+   "code": "t = np.array(list(filterfalse(partial(lambda cond, x: not cond(x), cond), iterable)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = list(compress(iterable, [not cond(x) for x in iterable]))",
+   "imports": "from itertools import compress"
+  },
+  {
+   "code": "t = reduce(lambda x, y: x + [y] if not cond(y) else x, iterable, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = list(filter(lambda x: not cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = filter(lambda x: not cond(x), iterable)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(filter_by_condition, iterable))",
+   "imports": "from functools import filterfalse"
+  },
+  {
+   "code": "t = []\n\ndef cond_check(x):\n    return not cond(x)\nfor item in iterable:\n    if cond_check(item):\n        t.append(item)",
+   "imports": ""
+  },
+  {
+   "code": "filtered = filter(lambda x: not cond(x), iterable)\nt = list(filtered)",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.array(iterable)\ncond_arr = np.array(list(map(cond, iterable)))\nt = list(arr[cond_arr])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "function = filterfalse(lambda x: cond(x), iterable)\nt = list(iter(function))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = [x for x in iterable if func(x)]",
+   "imports": ""
+  },
+  {
+   "code": "t = filter(lambda x: cond(x), iterable)",
+   "imports": ""
+  },
+  {
+   "code": "t = my_filter(cond, iterable)",
+   "imports": ""
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    return list(takewhile(lambda x: func(x), iterable))\nt = my_filter(cond, iterable)",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "false_items = list(filterfalse(lambda x: not (x and cond(x)), iterable))\nt = [x for x in iterable if x not in false_items]",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "arr = np.array(iterable)\nt = arr[np.logical_and(arr != 0, np.vectorize(cond)(arr))].tolist()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.array(iterable)\nt = arr[(arr != 0) & cond(arr)].tolist()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = [val for val in iterable if val and val % 2 == 0]",
+   "imports": ""
+  },
+  {
+   "code": "def cond(x):\n    return math.sin(x)\nt = [x for x in iterable if x and cond(x)]",
+   "imports": "import math"
+  },
+  {
+   "code": "t = [x for x in filter(lambda x: x > 5, [2, 4, 6, 7, 8]) if x]",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) if x]",
+   "imports": ""
+  },
+  {
+   "code": "iterable = ['foo', 'bar', 'baz', 'fiz', 'buzz']\ncond = lambda s: len(s) == 3\nt = [s.upper() for s in iterable if cond(s)]",
+   "imports": ""
+  },
+  {
+   "code": "combos = itertools.combinations(iterable, len(iterable))\nvalid_combos = filter(lambda x: cond(x), combos)\nt = list(valid_combos)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "possible_combos = itertools.combinations(iterable, len(iterable))\nvalid_combos = []\nfor combo in possible_combos:\n    if cond(combo):\n        valid_combos.append(combo)\nt = valid_combos",
+   "imports": "import itertools"
+  },
+  {
+   "code": "possible_combos = itertools.combinations(iterable, len(iterable))\nt = [c for c in possible_combos if cond(c)]",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = np.array([x for x in iterable if x not in ['', None] and cond(x)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "new_iterable = pd.Series(iterable).astype(str)\nt = new_iterable[new_iterable.apply(lambda x: True if x not in ['', None] and cond(x) else False)].tolist()",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = [x for x in iterable if x not in ['', None] and cond(x) and isinstance(x, str)]",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if isinstance(x, int) and cond(x)]",
+   "imports": ""
+  },
+  {
+   "code": "def func(a, b):\n    if b and cond(b):\n        return a + [b]\n    return a\nt = reduce(func, iterable, [])",
+   "imports": ""
+  },
+  {
+   "code": "def keep_if(func, sequence):\n    for item in sequence:\n        if func(item):\n            yield item\n[list(keep_if(cond, iterable))]",
+   "imports": ""
+  },
+  {
+   "code": "t = reduce(lambda x, y: x if not cond(y) else x + [y], iterable, [])",
+   "imports": ""
+  },
+  {
+   "code": "t = reduce(lambda t, i: t + [i] if cond(i) else t, iterable, [])",
+   "imports": ""
+  },
+  {
+   "code": "arr_bool = np.array([cond(i) for i in iterable])\nt = list(np.array(iterable)[arr_bool])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "default = []\nbool_list = collections.defaultdict(lambda : default, {i: [cond(iterable[i])] for i in iterable})\nfor (i, cond_val) in bool_list.items():\n    if bool_list[i][0]:\n        t.append(iterable[i])",
+   "imports": "import collections"
+  },
+  {
+   "code": "t = [i for i in iterable if not cond_neg(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: not cond_neg(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if not cond_neg(i):\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda i: not cond(i), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6]))",
+   "imports": ""
+  },
+  {
+   "code": "false_iterable = filterfalse(cond, iterable)\nt = list(false_iterable)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = np.array(list(filter(cond, iterable)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = reduce(lambda x, y: x + ([y] if cond(y) else []), iterable, [])",
+   "imports": ""
+  },
+  {
+   "code": "t = []\n[i for i in map(lambda x: t.append(x) or x, iterable) if cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "if not cond:\n    t = list(filter(lambda i: not cond(i), iterable))\nelse:\n    t = list(iterable)",
+   "imports": "from itertools import filter"
+  },
+  {
+   "code": "cond = bool()\nt = list(filter(lambda x: cond != bool(x), iterable))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "def check_v1(x, cond):\n    return not cond(x)\nlist(filterfalse(partial(check_v1, cond), iterable))",
+   "imports": "from itertools import filterfalse\nfrom functools import partial"
+  },
+  {
+   "code": "def check_v2(func, cond):\n    return not func(cond)\nt = list(filterfalse(partial(check_v2, lambda arr: bool(arr)), iterable))",
+   "imports": "from itertools import filterfalse\nfrom functools import partial"
+  },
+  {
+   "code": "def check_v3(x):\n    cond = bool()\n    return not cond(x)\nt = list(filterfalse(check_v3, iterable))",
+   "imports": "from itertools import filterfalse\nfrom functools import partial"
+  },
+  {
+   "code": "def check(cond, x):\n    return not cond(x)\nt = list(filterfalse(partial(check, lambda x: x == 0), iterable))",
+   "imports": "from itertools import filterfalse\nfrom functools import partial"
+  },
+  {
+   "code": "def check(x):\n    if x:\n        return True\n    else:\n        return False\nt = list(filter(check, iterable))",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "cond = [1 if i != 0 else 0 for i in iterable]\nt = list(compress(iterable, cond))",
+   "imports": "from itertools import compress"
+  },
+  {
+   "code": "def check(x):\n    if x:\n        return True\n    else:\n        return False\n\ndef check2(cond, x):\n    return check2(filterfalse(partial(check, x), iterable))\nt = check2(partial(check2, lambda x: x == 0), iterable)",
+   "imports": "from itertools import filterfalse\nfrom functools import reduce"
+  },
+  {
+   "code": "t = [x for x in iterable if x != 0]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x != 0, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if x]",
+   "imports": ""
+  },
+  {
+   "code": "list(filter(lambda num: num != 0, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: True if x != 0 else False, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def condition(x):\n    return not cond(x)\nfil = itertools.filterfalse(condition, iterable)\nfor f in fil:\n    t.append(f)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "fil = itertools.filterfalse(lambda x: not cond(x), iterable)\nfor f in fil:\n    t.append(f)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def my_filterfalse(iterable: List, cond: callable):\n\n    def condition(x):\n        return not cond(x)\n    fil = filter(condition, iterable)\n    t = list(fil)\n    return t",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "arr = np.array(iterable)\ncond = np.vectorize(cond)\nfil = np.argwhere(np.logical_not(cond(arr)))\nt = arr[fil]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "def my_filterfalse(iterable, cond):\n    return list(functools.filterfalse(cond, iterable))",
+   "imports": "import functools"
+  },
+  {
+   "code": "def my_filterfalse(iterable, cond):\n    fil = dropwhile(cond, iterable)\n    t = list(fil)\n    return t",
+   "imports": "from itertools import dropwhile"
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: bool(cond(x)), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def my_filterfalse(iterable, cond):\n    fil = collections.deque()\n    for i in iterable:\n        if not cond(i):\n            fil.append(i)\n    t = list(fil)\n    return t",
+   "imports": "import collections"
+  },
+  {
+   "code": "fil = filter(lambda x: cond(x), iterable)\nt = list(filterfalse(lambda x: x in fil, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "fil = takewhile(lambda x: not cond(x), iterable)\nt = list(filterfalse(lambda x: x in fil, iterable))",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "arr = list(filterfalse(condition, arr))\nt = np.asarray(arr)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = list(filterfalse(condition, iterable))\nt = reduce(lambda x, y: x + y, arr)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "def filter_false_predicate(x):\n    return not cond(x)\nt = list(filter(filter_false_predicate, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(partial(lambda x: not cond(x)), iterable))",
+   "imports": "from functools import partial"
+  },
+  {
+   "code": "new_list = []\nfor i in iterable:\n    if cond(i) == False:\n        new_list.append(i)\nt = new_list",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i) == False]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i) == False:\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = [*filterfalse(lambda x: not cond(x), iterable)]",
+   "imports": ""
+  },
+  {
+   "code": "filtered_iter = filter(func, iterable)\nt = [item for item in filtered_iter]",
+   "imports": ""
+  },
+  {
+   "code": "result = []\nfor item in iterable:\n    if func(item):\n        result.append(item)\nt = result",
+   "imports": ""
+  },
+  {
+   "code": "filtered_iter = filterfalse(lambda x: not func(x), iterable)\nt = list(filtered_iter)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(filter(None, map(lambda x: x if func(x) else None, iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if func(i):\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor (i, j) in zip(func, iterable):\n    if i:\n        t.append(j)",
+   "imports": ""
+  },
+  {
+   "code": "t = []\n[t.append(val) for val in iterable if func(val)]",
+   "imports": ""
+  },
+  {
+   "code": "output = deque()\nfor index in range(len(iterable)):\n    if func(iterable[index]):\n        output.append(iterable[index])\nt = list(output)",
+   "imports": "from collections import deque"
+  },
+  {
+   "code": "def my_filter(func, iterable):\n    return list(takewhile(func, iterable))\nt = my_filter(lambda x: cond(x), iterable)",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "t = reduce(lambda output, i: [*output, i] if cond(i) else output, iterable, [])",
+   "imports": ""
+  },
+  {
+   "code": "def my_func(cond, output, i):\n    if cond(i):\n        return [*output, i]\n    else:\n        return output\nt = reduce(partial(my_func, cond), iterable, [])",
+   "imports": "from functools import partial"
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: cond(x), iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "mask = np.array([cond(i) for i in iterable])\nt = np.array(iterable)[mask].tolist()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "def filter_and_append(func, iterable, t):\n    t.extend(list(filterfalse(lambda x: not func(x), iterable)))\nfilter_and_append(cond, iterable, t)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "not_t = list(filterfalse(lambda x: cond(x), iterable))\nt = list(filter(lambda x: cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = np.array(list(filter(lambda x: cond(x), iterable)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\n        break",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "t = np.array(list(filterfalse(lambda x: not cond(x), iterable)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: not cond(x), iterable))\nt = reduce(lambda x, y: x + [y], t, [])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: not cond(x), iterable))\nt = [x for x in t]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: not cond(x), iterable))\nt = stats.mean(t)",
+   "imports": "import statistics as stats"
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: not cond(x), iterable))\nt = tuple(t)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: not cond(x), iterable))\nt = math.prod(t)",
+   "imports": "import math"
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: not cond(x), iterable))\nt = set(t)",
+   "imports": ""
+  },
+  {
+   "code": "def filter_iterable(iterable, condition):\n    return list(filterfalse(lambda x: not condition(x), iterable))\niterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\ncondition = lambda x: x % 2 == 0\nresult = filter_iterable(iterable, condition)\nt = result",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def filter_iterable(iterable, condition):\n    return list(filterfalse(lambda x: not condition(x), iterable))\niterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\ncondition = lambda x: x % 2 == 0\nt = filter_iterable(iterable, condition)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\n    elif not cond(x):\n        break",
+   "imports": ""
+  },
+  {
+   "code": "not_t = []\nt = []\nfor i in iterable:\n    if cond(i):\n        t.append(i)\n    else:\n        not_t.append(i)\nnot_t = tuple(not_t)\nt = tuple(t)",
+   "imports": ""
+  },
+  {
+   "code": "not_t = []\nt = []\nfor i in iterable:\n    if cond(i):\n        t.append(i)\n    else:\n        not_t.append(i)\nnot_t = set(not_t)\nt = set(t)",
+   "imports": ""
+  },
+  {
+   "code": "false_cond = partial(lambda x, cond: not cond(x), cond=cond)\nt = list(filterfalse(false_cond, iterable))",
+   "imports": "from functools import partial"
+  },
+  {
+   "code": "t = np.array(list(filterfalse(false_cond, iterable)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = list(compress(iterable, map(false_cond, iterable)))",
+   "imports": "from itertools import compress"
+  },
+  {
+   "code": "t = np.array(list(compress(iterable, [cond(x) for x in iterable])))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = []\nfor x in iterable:\n    if cond(x):\n        t.append(x)\nt = tuple(t)",
+   "imports": ""
+  },
+  {
+   "code": "t = np.array([x for x in iterable if cond(x)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = list(filter(lambda x: x > 0, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if x % 2 == 0]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x.isalpha(), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if len(x) > 5]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x.startswith('a'), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if x not in ['a', 'b', 'c']]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x % 2 == 1, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x) is not None]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x) is not None, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: x is None or not cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: cond(x) is None, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def not_cond(x):\n    return not cond(x)\nt = list(filter(not_cond, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x) is False]",
+   "imports": ""
+  },
+  {
+   "code": "def not_cond(i):\n    return not cond(i)\nt = list(filter(not_cond, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda i: cond(i), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda i: not cond(i), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(cond, [i for i in iterable]))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda i: not cond(i), [i for i in iterable]))",
+   "imports": ""
+  },
+  {
+   "code": "t = np.array(iterable)\nt = t[cond(t)]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.array(iterable)\nt = arr[arr != False].tolist()\nt = list(filter(cond, t))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = [i for i in iterable if i % 2 == 0 and i > 5]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if i % 2 == 0 and i > 5:\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if 'a' in i]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: 'a' in x, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.array(iterable)\nt = arr[arr != 0]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "df = pd.DataFrame(iterable)\nt = df[df.apply(lambda x: cond(x), axis=1)]",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x) and x not in t]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(set(filter(cond, iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x) and x not in t, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if cond(x) and iterable.index(x) == t.index(x)]",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nmap(lambda i: t.append(i) if cond(i) else None, iterable)",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: cond(x), iterable))\nt = reduce(lambda x, y: x + y, t)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = np.array(list(filter(lambda x: cond(x), iterable)))\nt = np.sort(t)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = np.array(list(filter(lambda x: cond(x), iterable)))\nt = np.flip(t)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = np.array(list(filter(lambda x: cond(x), iterable)))\nt = np.unique(t)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = np.array(list(filter(lambda x: cond(x), iterable)))\nt = np.delete(t, 0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = np.array([i if cond(i) else None for i in iterable])\nt = t[t != None]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: cond(x) == False, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "func = lambda x: cond(x)\nfiltered_list = list(filterfalse(func, iterable))\nt = iterable - filtered_list",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "arr = np.array(iterable)\nt = list(arr[arr != 0])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = stats.filt(iterable, cond)",
+   "imports": "import statistics as stats"
+  },
+  {
+   "code": "t = np.array(list(filter(lambda i: i not in [0, '', None] and cond(i), iterable)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = functools.reduce(lambda x, y: x + [y] if cond(y) else x, iterable, [])",
+   "imports": ""
+  },
+  {
+   "code": "t = list(set(filter(lambda x: cond(x), iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "t = set(filter(lambda x: cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = np.array(list(filter(None, map(lambda x: x if cond(x) else None, iterable))))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = np.array(list(filter(lambda i: cond(i), iterable)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t.insert(0, i)",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i)]\nt.reverse()",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda i: cond(i), iterable))\nt = t[:len(t) // 2]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda i: cond(i), iterable))\nt = t[len(t) // 2:]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda i: cond(i), iterable))\nt = t[1::2]",
+   "imports": ""
+  },
+  {
+   "code": "def filter_func(x):\n    return not cond(x)\nt = list(filter(filter_func, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "false_t = list(filterfalse(cond, iterable))\nt = list(set(iterable) - set(false_t))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = np.array(list(filter(lambda x: x and cond(x), iterable)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: cond(x) == False, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.compress(iterable, [cond(x) for x in iterable]))",
+   "imports": ""
+  },
+  {
+   "code": "t = pd.Series(iterable)\nfiltered_t = t.apply(cond)\nt = filtered_t.tolist()",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = np.array([x for x in iterable if cond(x)])\nt.sort()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "filtered = filter(cond, iterable)\nt = sorted(filtered, key=itemgetter(1))",
+   "imports": "from operator import itemgetter"
+  },
+  {
+   "code": "arr = np.array(iterable)\nt = arr[arr != None]\nt = t[t != False]\nt = t[t != 0]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.array(iterable)\nt = arr[arr[cond]]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "df = pd.DataFrame(iterable)\nt = df[df.apply(lambda x: cond(x), axis=1)].values.tolist()",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i) and isinstance(i, int)]",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i) and len(str(i)) > 3]",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.array(iterable)\nt = arr[arr.apply_along_axis(cond, 0)]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = [x for x in iterable if x in t and cond(x)]",
+   "imports": ""
+  },
+  {
+   "code": "concat = lambda x, y: x + [y]\nt = reduce(concat, [x if cond(x) else [] for x in iterable])",
+   "imports": "from functools import reduce\nimport operator"
+  },
+  {
+   "code": "t = np.array([i for i in iterable if cond(i)], dtype=object)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "list(itertools.filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "result = []\nfor i in iterable:\n    if not cond(i):\n        result.append(i)\nt = result",
+   "imports": ""
+  },
+  {
+   "code": "result = filterfalse(lambda i: not cond(i), iterable)\nt = list(result)",
+   "imports": ""
+  },
+  {
+   "code": "t = np.array(list(filterfalse(lambda i: not cond(i), iterable)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = list(filterfalse(lambda i: cond(i) == False, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(iterable)\nt = list(filter(lambda i: not cond(i), t))\nfor i in t:\n    t.remove(i)",
+   "imports": ""
+  },
+  {
+   "code": "def cond(x):\n    return np.sin(x) > 0\narr = np.array(iterable)\ncond_arr = np.vectorize(cond)(arr)\nt = arr[cond_arr].tolist()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "def cond(x):\n    return x % 2 == 0\ncond_iter = filterfalse(partial(lambda x, f: not f(x), f=cond), iterable)\nt = list(cond_iter)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def cond(x):\n    return x > 0\ns = pd.Series(iterable)\ncond_s = s.apply(cond)\nt = s[cond_s].tolist()",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "mu = stats.mean(iterable)\ncond_iter = filterfalse(partial(lambda x, mu: x < mu, mu=mu), iterable)\nt = list(cond_iter)",
+   "imports": "from itertools import filterfalse\nimport statistics as stats"
+  },
+  {
+   "code": "t = list(itertools.compress(iterable, map(cond, iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: not cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def cond(x):\n    return x % 2 == 0\niterable = [1, 2, 3, 4, 5, 6, 7, 8, 9]\nt = list(filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def cond(x):\n    return x > 5\niterable = [1, 2, 3, 4, 5, 6, 7, 8, 9]\nt = list(filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def cond(x):\n    return x.startswith('a')\niterable = ['apple', 'banana', 'pear', 'orange']\nt = list(filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def cond(x):\n    return len(x) > 3\niterable = ['cat', 'dog', 'bird', 'elephant', 'lion']\nt = list(filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def cond(x):\n    return cond(x)\nt = list(itertools.filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "arr = np.array(iterable)\nmask = np.array([False if x is None else cond(x) for x in iterable])\nt = list(arr[mask])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = np.array(list(filter(lambda i: cond(i), iterable)))\nt = t[t != None]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "false_cond = [x for x in iterable if cond(x)]\nt = [x for x in iterable if x not in false_cond]",
+   "imports": ""
+  },
+  {
+   "code": "false_cond = []\nfor x in iterable:\n    if cond(x):\n        false_cond.append(x)\nt = [x for x in iterable if x not in false_cond]",
+   "imports": ""
+  },
+  {
+   "code": "false_cond = list(filter(partial(cond), iterable))\nt = [x for x in iterable if x not in false_cond]",
+   "imports": "from functools import partial"
+  },
+  {
+   "code": "false_cond = list(takewhile(lambda x: not cond(x), iterable))\nt = [x for x in iterable if x not in false_cond]",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "false_cond = reduce(lambda acc, x: acc + [x] if cond(x) else acc, iterable, [])\nt = [x for x in iterable if x not in false_cond]",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "def false_pred(x):\n    return not cond(x)\n\ndef filter_false(iterable: List) -> List:\n    return list(filterfalse(false_pred, iterable))\nt = filter_false(iterable)",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "t = [cond(i) for i in iterable if i in some_list]",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in list(set(iterable) & set(some_list)) if cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if i in some_list if cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(set(filter(cond, iterable)) & set(some_list))",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i)]\nif len(t) == 0:\n    t.append(None)",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i)]\nt = sorted(t, reverse=True)",
+   "imports": ""
+  },
+  {
+   "code": "t = [i for i in iterable if cond(i) and (not isnan(i))]",
+   "imports": "from math import isnan"
+  },
+  {
+   "code": "cond = lambda x: x > 5\ndf = pd.DataFrame(iterable)\nt = list(df[df.applymap(cond)].values.flatten())",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "cond = lambda x: x > 5\ncombine = lambda x, y: x + [y] if cond(y) else x\ninitial = []\nt = reduce(combine, iterable, initial)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "cond = lambda x: x > 5\nt = list(itertools.filterfalse(lambda x: not cond(x), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "cond = lambda x: x > 5\n\ndef filter_iterable(iterable: List[int]) -> List[int]:\n    return list(filter(cond, iterable))\nt = filter_iterable(iterable)",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "cond = lambda x: x > 5\ndtype = [('value', int)]\nvalues = np.array(iterable, dtype=dtype)\nt = list(values[values['value'] > 5]['value'])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = reduce(lambda a, b: a + [b] if cond(b) else a, iterable, [])",
+   "imports": ""
+  },
+  {
+   "code": "t = list(compress(iterable, list(map(cond, iterable))))",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if cond(i):\n        t.append(i)\nt = list(compress(t, [True] * len(t)))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filter(lambda x: x > 5, [1, 2, 3, 4, 5, 6, 7, 8, 9]))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(filterfalse(lambda x: x % 2 == 0, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = reduce(lambda x, y: x + y, list(filter(cond, iterable)))",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "df = pd.DataFrame(iterable)\nt = list(df[df[0] > 5][0])",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "t = np.array(iterable)\nt = t[np.fromiter(map(cond, t), bool)]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "df = pd.DataFrame(iterable)\nt = df[df.applymap(cond).any(1)].values.tolist()",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "arr = np.array(iterable)\nbool_arr = np.array([cond(i) for i in iterable])\nt = list(arr[bool_arr])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.array(iterable)\nnew_arr = arr[arr[cond]]\nt = new_arr.tolist()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = np.array(iterable)\nt = list(np.extract(cond(t), t))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "filtered = list(filterfalse(lambda i: not cond(i), iterable))\nt = filtered",
+   "imports": ""
+  },
+  {
+   "code": "t = []\nfor i in iterable:\n    if not_cond(i):\n        t.append(i)",
+   "imports": ""
+  },
+  {
+   "code": "not_cond = partial(cond)\nfiltered = filterfalse(not_cond, iterable)\nt = list(filtered)",
+   "imports": "from functools import partial"
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\ndef cond(x):\n    if x % 2 == 0:\n        return True\n    else:\n        return False\nfiltered = list(itertools.filterfalse(lambda x: not cond(x), iterable))\nt = filtered",
+   "imports": "import itertools"
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\ndef cond(x):\n    if x % 2 == 0:\n        return True\n    else:\n        return False\nt_list = []\nfor x in iterable:\n    if cond(x) == False:\n        t_list.append(x)\nt = t_list",
+   "imports": ""
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\ndef cond(x):\n    if x % 2 == 0:\n        return True\n    else:\n        return False\nfiltered = itertools.filterfalse(lambda x: not cond(x), iterable)\nt = list(filtered)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\ndef cond(x):\n    if x % 2 == 0:\n        return True\n    else:\n        return False\nt_list = []\nfor x in itertools.filterfalse(cond, iterable):\n    t_list.append(x)\nt = t_list",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def condition(x):\n    pass\nt = list(filterfalse(lambda x: not condition(x), iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5]\n\ndef condition(x):\n    pass\nt = list(itertools.filterfalse(lambda x: not condition(x), iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def condition(x):\n    pass\niterable = [1, 2, 3, 4, 5]\nt = list(filterfalse(lambda x: not condition(x), iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "def condition(x):\n    pass\niterable = [1, 2, 3, 4, 5]\n\ndef filter_func(x):\n    return not condition(x)\nt = list(filterfalse(filter_func, iterable))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(set(iterable) & set(filter(cond, iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "t = [x for x in iterable if filter_func(x)]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.takewhile(cond, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.dropwhile(lambda x: not cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: cond(x), iterable))",
+   "imports": ""
+  },
+  {
+   "code": "cond_take = takewhile(lambda x: cond(x), iterable)\nt = list(dropwhile(lambda x: cond(x), cond_take))",
+   "imports": "from itertools import takewhile, dropwhile"
+  },
+  {
+   "code": "t = list(more_itertools.locate(iterable, pred=lambda x: cond(x), negate=False))",
+   "imports": "import more_itertools"
+  },
+  {
+   "code": "t = list(filterfalse(compose(cond, lambda x: x), iterable))",
+   "imports": "import toolz\nfrom toolz import compose, filterfalse"
+  },
+  {
+   "code": "arr = np.array(iterable)\nt = arr[arr != None][cond(arr[arr != None])].tolist()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "filtered_list = list(filter(cond, iterable))\nmean = stats.mean(filtered_list)\nmedian = stats.median(filtered_list)\nmode = stats.mode(filtered_list)\nvariance = stats.variance(filtered_list)\nstd_dev = stats.stdev(filtered_list)\nt = filtered_list",
+   "imports": "import statistics as stats"
+  },
+  {
+   "code": "filtered_list = list(filter(cond, iterable))\nt = [math.exp(x) for x in filtered_list]",
+   "imports": "import math"
+  },
+  {
+   "code": "def filter_list(cond, iterable) -> List:\n    result = []\n    for x in iterable:\n        if cond(x):\n            result.append(x)\n    t = result",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "def filter_list(cond, iterable) -> List:\n    return filter(cond, iterable)",
+   "imports": "from typing import List\nimport filter"
+  },
+  {
+   "code": "def filter_list(cond, iterable) -> List:\n    t = list(filter(cond, iterable))\n    return t",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "def filter_list(cond, iterable) -> List:\n    t = [x for x in iterable if cond(x)]\n    return t",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "def filter_list(cond, iterable) -> List:\n    t = []\n    for x in iterable:\n        if cond(x):\n            t.append(x)\n    return t",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "def filter_list(cond, iterable) -> List:\n    t = functools.reduce(lambda l, x: l + [x] if cond(x) else l, iterable, [])\n    return t",
+   "imports": "from typing import List\nimport functools"
+  },
+  {
+   "code": "def false_cond(x):\n    return not cond(x)\nt = list(filter(false_cond, iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def false_cond(x):\n    return not cond(x)\nt = list(itertools.takewhile(false_cond, iterable))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = list(takewhile(cond, iterable))",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "t = list(dropwhile(lambda x: not cond(x), iterable))",
+   "imports": "from itertools import dropwhile"
+  },
+  {
+   "code": "t = list(filterfalse(partial(cond), iterable))",
+   "imports": "from functools import partial\nfrom itertools import filterfalse"
+  },
+  {
+   "code": "filtered = itertools.filterfalse(cond, iterable)\nt = list(filtered)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "filtered = itertools.dropwhile(lambda x: not cond(x), iterable)\nt = list(filtered)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def drop_func(x):\n    return not cond(x)\nfiltered = itertools.dropwhile(drop_func, iterable)\nt = list(filtered)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = []\nfor elem in iterable:\n    if filter_func(elem) is not None:\n        t += [filter_func(elem)]",
+   "imports": ""
+  },
+  {
+   "code": "t = reduce(lambda acc, elem: acc if filter_func(elem) is None else acc + [filter_func(elem)], iterable, [])",
+   "imports": ""
+  },
+  {
+   "code": "t = reduce(lambda acc, elem: acc + [filter_func(elem)] if filter_func(elem) is not None else acc, iterable, [])",
+   "imports": ""
+  },
+  {
+   "code": "filtered = filter(filter_func, iterable)\nt = list(chain.from_iterable(filtered))",
+   "imports": "from itertools import chain"
+  },
+  {
+   "code": "t = np.array([i if cond(i) else np.nan for i in iterable])\nt = t[~np.isnan(t)]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "cond = lambda x: x > 0\nt = list(itertools.filterfalse(lambda i: not cond(i), range(-5, 6)))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def cond(x):\n    return x > 0\nt = list(itertools.filterfalse(lambda i: not cond(i), range(-5, 6)))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def cond(x):\n    return x > 0\nt = list(filterfalse(lambda i: not cond(i), range(-5, 6)))",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda i: not i > 0, range(-5, 6)))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "positive = lambda x: x > 0\nt = list(itertools.filterfalse(lambda i: not positive(i), range(-5, 6)))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5]\ncondition = lambda i: i < 3\nfiltered = list(itertools.filterfalse(lambda i: not condition(i), iterable))\nt = filtered",
+   "imports": "import itertools"
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5]\ncondition = lambda i: i < 3\n\ndef check_condition(i):\n    return not condition(i)\nfiltered = list(itertools.filterfalse(check_condition, iterable))\nt = filtered",
+   "imports": "import itertools"
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5]\ncondition = lambda i: i < 3\nfiltered = []\nfor i in iterable:\n    if not condition(i):\n        filtered.append(i)\nt = filtered",
+   "imports": "import itertools"
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5]\ncondition = lambda i: i < 3\n\ndef check_condition(i):\n    return not condition(i)\nfiltered = []\nfor i in iterable:\n    if check_condition(i):\n        filtered.append(i)\nt = filtered",
+   "imports": "import itertools"
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5]\ncondition = lambda i: i < 3\nfiltered = [i for i in iterable if not condition(i)]\nt = filtered",
+   "imports": "import itertools"
+  },
+  {
+   "code": "df = pd.DataFrame(iterable)\nt = df[df[0].apply(cond)].values.tolist()",
+   "imports": "import pandas as pd"
+  },
+  {
+   "code": "filtered_list = []\nfor item in iterable:\n    if cond(item):\n        filtered_list.append(item)\nt = filtered_list\nt = iterable[::2]\nfiltered_list = list(filter(cond, iterable))\nt = filtered_list[::2]\nt = list(itertools.filterfalse(lambda x: not cond(x), iterable[::2]))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "t = np.array(list(filter(cond, iterable)))[::2]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "t = reduce(lambda acc, val: acc + [val] if cond(val) else acc, iterable, [])[::2]",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "t = list(accumulate(iterable, func=lambda x, y: [y] if cond(y) else []))[-1]",
+   "imports": "from itertools import accumulate"
+  },
+  {
+   "code": "t = [i for i in iterable if not_cond(i)]",
+   "imports": ""
+  },
+  {
+   "code": "t = list(itertools.filterfalse(lambda x: not cond(x), list(iterable)))",
+   "imports": ""
+  },
+  {
+   "code": "lst = [i for i in iterable if cond(i)]\nt = np.array(list(filter(None, lst)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "def cond2(x):\n    return x if cond(x) else None\nt = np.array(list(map(cond2, iterable)))\nt = t[t != None]",
+   "imports": "import numpy as np"
+  }
+ ]
+}

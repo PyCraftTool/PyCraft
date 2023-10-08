@@ -1,0 +1,26 @@
+[
+  {
+    "init": "val1 = 10\nval2 = 20\niterable = [1, 2, 3, 4, 5]\ncond = lambda x: x % 2 == 0",
+    "assertion": "assert value == 10"
+  },
+  {
+    "init": "val1 = 10\nval2 = 20\niterable = []\ncond = lambda x: x > 0",
+    "assertion": "assert value == 20"
+  },
+  {
+    "init": "val1 = 10\nval2 = 20\niterable = [1, 2, 3, 4]\ncond = lambda x: x > 0",
+    "assertion": "assert value == 20"
+  },
+  {
+    "init": "val1 = 10\nval2 = 20\niterable = [2, 3, 4, 5]\ncond = lambda x: x % 3",
+    "assertion": "assert value == 10"
+  },
+  {
+    "init": "val1 = 1\nval2 = 2\niterable = [0, 1, 2, 3]\ndef cond(x):\n    return x % 2",
+    "assertion": "assert value == 1"
+  },
+  {
+    "init": "val1 = 1\nval2 = 2\niterable = [0, 1, 2, 3]\ndef cond(x):\n    return None",
+    "assertion": "assert value == 2"
+  }
+]

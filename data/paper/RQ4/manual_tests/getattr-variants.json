@@ -1,0 +1,2772 @@
+{
+ "num-correct": 487,
+ "num-incorrect": 204,
+ "correct-vars": [
+  {
+   "code": "try:\n    n = obj.name\nexcept:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = None\ntry:\n    n = obj.name\nexcept:\n    pass\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None)\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in dir(obj) and obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown' if not hasattr(obj, 'name') or obj.name is None else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown' if getattr(obj, 'name', None) is None else getattr(obj, 'name')",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name or 'unknown' if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in dir(obj) and obj.name is not None:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if not hasattr(obj, 'name') or obj.name is None:\n    n = 'unknown'\nelse:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', False) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if 'name' in dir(obj) and obj.name:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if getattr(obj, 'name', None) is None:\n    n = 'unknown'\nelse:\n    n = getattr(obj, 'name')",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and bool(obj.name):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if bool(getattr(obj, 'name', False)) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    if bool(obj.name):\n        n = obj.name\n    else:\n        n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and bool(obj.name):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    if obj.name:\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown' if not hasattr(obj, 'name') or not obj.name else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if obj and hasattr(obj, 'name') and obj.name:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in dir(obj) and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if 'name' in dir(obj) and bool(obj.name):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if hasattr(obj, 'name') and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None) or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and getattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and (obj.name != '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in dir(obj):\n    if obj.name:\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name if obj.name else n",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name if obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and (obj.name is not None) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in dir(obj) and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and getattr(obj, 'name'):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and getattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and getattr(obj, 'name') else None\nif n:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name is not None and (obj.name != ''):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nn = obj.name if hasattr(obj, 'name') and obj.name else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else None\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name if obj.name else 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj and hasattr(obj, 'name') and (obj.name is not None):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if bool(getattr(obj, 'name', '')) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and bool(getattr(obj, 'name', None)) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in dir(obj) and bool(obj.name):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nelse:\n    if n is None:\n        n = 'unknown'\n    elif not bool(n):\n        n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name is not None and bool(obj.name):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nexcept TypeError:\n    n = 'unknown'\nif not bool(n):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None)\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else ''\nn = 'unknown' if not n else n",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name\nelse:\n    n = 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name\nelse:\n    n = 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "if 'name' in dir(obj):\n    n = obj.name if obj.name else 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if hasattr(obj, 'name') and bool(getattr(obj, 'name', '')) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and bool(getattr(obj, 'name', None)):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and bool(getattr(obj, 'name', None)):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if hasattr(obj, 'name') and bool(getattr(obj, 'name', None)) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else None\nn = n if bool(n) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name if obj.name else 'unknown'\nexcept AttributeError:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None and bool(obj.name):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and (obj.name is not None and bool(obj.name)) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\ntry:\n    if obj.name:\n        n = obj.name\nexcept AttributeError:\n    pass",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif getattr(obj, 'name', None):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\ntry:\n    n = obj.name\nexcept (AttributeError, TypeError):\n    pass\nif not bool(n):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else ''\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', '') or 'unknown'\nn = '' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name if obj.name else n",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else None\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else None\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name\nelse:\n    n = None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None)\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'\nn = n if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if 'name' in dir(obj) and obj.name:\n    n = obj.name\nelse:\n    n = 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in dir(obj) and obj.name:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    if bool(getattr(obj, 'name', '')):\n        n = getattr(obj, 'name')\n    else:\n        n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    if bool(getattr(obj, 'name', '')):\n        n = obj.name\n    else:\n        n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and bool(getattr(obj, 'name', '')):\n    n = getattr(obj, 'name')\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = getattr(obj, 'name') if bool(getattr(obj, 'name', '')) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in dir(obj) and bool(getattr(obj, 'name', None)):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and getattr(obj, 'name', False) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and (len(str(obj.name).strip()) > 0) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name or 'unknown' if obj and hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif getattr(obj, 'name', False):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj and getattr(obj, 'name', False):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None and (obj.name != ''):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None and (len(str(obj.name).strip()) > 0):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', False) and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', '') and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', '') and len(str(obj.name).strip()) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) and len(str(obj.name).strip()) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and (obj.name is not None) and (obj.name != '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and (obj.name is not None) and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif getattr(obj, 'name', None) and obj.name:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown' if not hasattr(obj, 'name') or obj.name is None or len(str(obj.name).strip()) == 0 else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name and str(obj.name).strip():\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else ''\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj and hasattr(obj, 'name') and bool(obj.name):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj and hasattr(obj, 'name') and (obj.name is not None) and (obj.name != ''):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj and hasattr(obj, 'name') and (obj.name is not None) and bool(obj.name):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None and str(obj.name).strip():\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and getattr(obj, 'name', None) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and str(obj.name).strip() else 'unknown' if not hasattr(obj, 'name') or obj.name is None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif not n:\n    n = 'unknown'\nif not str(n).strip():\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif not n:\n    n = 'unknown'\nif not str(n).strip():\n    n = 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', False) and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', False) and obj.name and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None)\nif not n or not str(n).strip():\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj and hasattr(obj, 'name') and (obj.name is not None):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj and hasattr(obj, 'name') and (obj.name is not None) and (obj.name != ''):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    if hasattr(obj, 'name'):\n        if obj.name is not None and obj.name != '':\n            n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj and hasattr(obj, 'name') and obj.name:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) and obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) and obj.name != '' else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj and getattr(obj, 'name', None):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None and str(obj.name).strip():\n    n = obj.name\nelse:\n    n = 'unknown' if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    if obj.name is not None and str(obj.name).strip():\n        n = obj.name\n    else:\n        n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name is not None and str(obj.name).strip():\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    if obj.name is not None and str(obj.name).strip():\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    if obj.name is not None:\n        if str(obj.name).strip():\n            n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name if obj.name is not None and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else None\nif not n or not str(n).strip():\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown'\nif not n and hasattr(obj, 'name'):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown'\nif not n:\n    if hasattr(obj, 'name'):\n        n = 'unknown'\n    else:\n        n = None",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name and str(obj.name).strip():\n    n = obj.name\nelif hasattr(obj, 'name'):\n    n = 'unknown'\nelse:\n    n = None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name and str(obj.name).strip():\n    n = obj.name\nelif hasattr(obj, 'name'):\n    n = 'unknown'\nelse:\n    n = None\nn = n if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None)\nif not n:\n    n = 'unknown'\nelif not str(n).strip():\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nif not str(n).strip():\n    n = 'unknown'\nn = n if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name and str(obj.name).strip():\n    n = obj.name\nelse:\n    n = 'unknown' if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    if obj.name and str(obj.name).strip():\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name and str(obj.name).strip():\n    n = obj.name\nelif hasattr(obj, 'name'):\n    n = 'unknown'\nelse:\n    n = ''\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = ''\nif hasattr(obj, 'name') and obj.name and str(obj.name).strip():\n    n = obj.name\nelif hasattr(obj, 'name'):\n    n = 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif n == '' or n is None:\n    n = 'unknown'\nif not str(n).strip():\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif not n or not str(n).strip():\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif not n:\n    n = 'unknown'\nif not str(n).strip():\n    n = 'unknown'\nif not n:\n    n = 'unknown'\nif n == '':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif not n:\n    n = 'unknown'\nif not str(n).strip():\n    n = 'unknown'\nif not n:\n    n = 'unknown'\nif n == '' or n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'\nn = n if len(str(n).strip()) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name and str(obj.name).strip():\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif getattr(obj, 'name', False) and obj.name and str(obj.name).strip():\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif n == '':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif n == None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif n == False:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif n == True:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = ''\nif hasattr(obj, 'name') and obj.name:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name != None:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "names = [getattr(obj, 'name', None), obj.name if hasattr(obj, 'name') else None, None]\nn = next((name for name in names if name), 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif bool(getattr(obj, 'name', False)):\n    n = getattr(obj, 'name')",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name') if getattr(obj, 'name', False) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name != None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if getattr(obj, 'name', None):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    name = obj.name\n    if name is None:\n        n = 'unknown'\n    else:\n        n = name\nexcept AttributeError:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if not hasattr(obj, 'name') or not obj.name:\n    n = 'unknown'\nelse:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    name = obj.name\n    if name is not None:\n        n = name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name if obj.name is not None else 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    name = obj.name\n    if name:\n        n = name",
+   "imports": ""
+  },
+  {
+   "code": "if not (hasattr(obj, 'name') and obj.name):\n    n = 'unknown'\nelse:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    if obj.name is not None:\n        n = obj.name\n    else:\n        n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj is not None and hasattr(obj, 'name') and (obj.name is not None):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nexcept TypeError:\n    n = 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj is not None and hasattr(obj, 'name') and (obj.name is not None) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj is not None:\n    if hasattr(obj, 'name'):\n        if obj.name is not None:\n            n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if obj is not None:\n    if hasattr(obj, 'name'):\n        if obj.name is not None:\n            n = obj.name\n        else:\n            n = 'unknown'\n    else:\n        n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept (AttributeError, TypeError):\n    n = 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None) if obj is not None else 'unknown'\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept:\n    n = 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.__getattribute__('name') if hasattr(obj, 'name') and obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj is not None and hasattr(obj, 'name'):\n    if obj.name is not None:\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if obj:\n    n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj is None or not hasattr(obj, 'name') or obj.name is None:\n    n = 'unknown'\nelse:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if all((hasattr(obj, attr) and getattr(obj, attr) is not None for attr in ['name'])) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'\nn = n if obj is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else None\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and (obj is not None) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj is None or not hasattr(obj, 'name'):\n    n = 'unknown'\nelse:\n    n = obj.name if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif obj is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name not in [None, ''] else 'unknown'\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name\nelse:\n    n = 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name or 'unknown' if hasattr(obj, 'name') and obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None and obj:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown' if obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and getattr(obj, 'name') is not None:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and getattr(obj, 'name') is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name') if hasattr(obj, 'name') and getattr(obj, 'name') is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in dir(obj) and getattr(obj, 'name') is not None:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and getattr(obj, 'name') is not None:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if all((getattr(obj, attr, None) is not None for attr in ['name'])) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    if hasattr(obj, 'name') and obj.name:\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'\nif obj is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj is not None:\n    n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name:\n    n = obj.name\nelse:\n    n = None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name:\n    n = obj.name\nelse:\n    n = None\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = None\nif n:\n    pass\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name:\n    n = obj.name\nelse:\n    n = 'unknown'\nif n == None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'\nif n == None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None and (obj is not None):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown' if obj is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and (obj.name is not None) else 'unknown'\nn = 'unknown' if not obj else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) else 'unknown'\nn = 'unknown' if obj is None else n",
+   "imports": ""
+  },
+  {
+   "code": "if obj:\n    n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name\nelif hasattr(obj, 'name') and obj.name is None:\n    n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name not in [None, '']:\n    n = obj.name\nelse:\n    n = 'unknown'\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name not in [None, '']:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name not in [None, '']:\n    n = obj.name\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and bool(obj.name) else 'unknown'\nn = n if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if hasattr(obj, 'name') else None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if hasattr(obj, 'name') else 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\ntry:\n    n = obj.name\nexcept:\n    n = None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nif n == None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nif n is None or n == '':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nif n is not None:\n    pass\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else None\nn = n if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') or None\nn = n if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = None\ntry:\n    n = obj.name\nexcept:\n    pass\nn = n or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', '') or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif not hasattr(obj, 'name') or obj.name is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nn = n if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nn = n or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and (obj.name is not None) else 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name != None else 'unknown'\nif n == None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == '' or n == None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == '' or n == None or n == []:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == '' or n == None or n == [] or (n == {}):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == '' or n == None or n == [] or (n == {}) or (n == set()):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == '' or n == None or n == [] or (n == {}) or (n == set()) or (n == ()):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == '' or n == None or n == [] or (n == {}) or (n == set()) or (n == ()) or (n == ''):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == '' or n == None or n == [] or (n == {}) or (n == set()) or (n == ()) or (n == '') or (n == 0):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == '' or n == None or n == [] or (n == {}) or (n == set()) or (n == ()) or (n == '') or (n == 0) or (n == False):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == '' or n == None or n == [] or (n == {}) or (n == set()) or (n == ()) or (n == '') or (n == 0) or (n == False) or (n == 0.0):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and bool(obj.name) else 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name != '' else 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None)\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n is False:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == '' or n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) else 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else None\nif n is None or n == '':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nif n is not None:\n    pass\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None)\nif n is not None:\n    pass\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'\nif n is not None:\n    pass\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nif n is not None:\n    pass\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None)\nn = n if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    if hasattr(obj, 'name') and obj.name is not None and (obj.name != ''):\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nelse:\n    if n is None or not bool(n):\n        n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) is not None else 'unknown'\nif not getattr(obj, 'name', None):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'\nif not hasattr(obj, 'name') or not obj.name:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'\nif not getattr(obj, 'name', None) or not obj.name:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    if obj.name is not None:\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in dir(obj):\n    if obj.name is not None:\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    if hasattr(obj, 'name') and obj.name is not None:\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and getattr(obj, 'name', None) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "def get_name(obj) -> Optional[str]:\n    return obj.name if hasattr(obj, 'name') and obj.name is not None else None\nn = get_name(obj) or 'unknown'",
+   "imports": "from typing import Optional"
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and obj.name else None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and getattr(obj, 'name', None):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and getattr(obj, 'name', None):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None)\nif n is None or not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and bool(getattr(obj, 'name', '')):\n    n = getattr(obj, 'name')",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and getattr(obj, 'name'):\n    n = getattr(obj, 'name')\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and bool(getattr(obj, 'name', '')):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and bool(getattr(obj, 'name', '')) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name or n",
+   "imports": ""
+  },
+  {
+   "code": "if 'name' in dir(obj):\n    n = obj.name\nelse:\n    n = 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nif n is None or n == 'None':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif n == 'None':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj is not None:\n    n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj and hasattr(obj, 'name') and (obj.name is not None):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj:\n    if hasattr(obj, 'name') and obj.name is not None:\n        n = obj.name\n    else:\n        n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    n = obj.name if hasattr(obj, 'name') and obj.name is not None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj is not None and hasattr(obj, 'name') and (obj.name is not None):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown' if obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj:\n    if hasattr(obj, 'name') and obj.name:\n        n = obj.name\n    else:\n        n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name if obj.name else 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and getattr(obj, 'name', '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and getattr(obj, 'name', ''):\n    n = getattr(obj, 'name')",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and getattr(obj, 'name'):\n    n = getattr(obj, 'name')\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if hasattr(obj, 'name') and getattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and bool(getattr(obj, 'name', '')):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and getattr(obj, 'name') else None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in dir(obj) else 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\ntry:\n    n = obj.name\nexcept:\n    pass\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "if 'name' in dir(obj):\n    n = obj.name\nelse:\n    n = None\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', None) or 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in dir(obj) and obj.name is not None else 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\ntry:\n    n = obj.name\nexcept AttributeError:\n    pass",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not '' else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown' if bool(getattr(obj, 'name', '')) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name != '' else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj and hasattr(obj, 'name'):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and len(obj.name) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and isinstance(obj.name, str) and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    if hasattr(obj, 'name'):\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    try:\n        n = obj.name\n    except AttributeError:\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in dir(obj) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.__getattribute__('name') if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in dir(obj):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown' if obj is not None else None",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\ntry:\n    n = obj.name\nexcept:\n    pass",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    try:\n        n = obj.name\n    except:\n        n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nexcept:\n    raise",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    n = getattr(obj, 'name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown' if not hasattr(obj, 'name') or obj.name == '' else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown' if not hasattr(obj, 'name') or len(obj.name) == 0 else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and isinstance(obj.name, str) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and type(obj.name) == str else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    pass",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\ntry:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelif hasattr(obj, 'id'):\n    n = obj.id\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelif hasattr(obj, 'id'):\n    n = obj.id\nelif hasattr(obj, 'title'):\n    n = obj.title\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\ntry:\n    n = obj.name\nexcept:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nif not isinstance(n, str):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nif isinstance(n, str) and n:\n    pass\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and isinstance(obj.name, str) and (obj.name != '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nn = n if isinstance(n, str) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if obj is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and (len(obj.name) > 0) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and obj.name.strip() else 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown'\nif n is None:\n    n = None",
+   "imports": ""
+  },
+  {
+   "code": "n = None\nif hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and isinstance(obj.name, str) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and isinstance(obj.name, str) and (obj.name != '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if obj else None",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelif hasattr(obj, 'title'):\n    n = obj.title\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.get('name', 'unknown') if isinstance(obj, dict) else getattr(obj, 'name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and (obj.name.strip() != '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name.strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name.strip() != '' else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and isinstance(obj.name, str) and obj.name.strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and isinstance(obj.name, str) and (obj.name.strip() != '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and isinstance(obj.name, str) and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and isinstance(obj.name, str) and (obj.name is not None) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and isinstance(obj.name, str) and bool(obj.name.strip()) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and isinstance(obj.name, str) and bool(obj.name.strip()) and (obj.name.strip() != 'unknown') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and isinstance(obj.name, str) and bool(obj.name.strip()) and (obj.name.strip() != 'unknown') and (obj.name.strip() != 'None') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else None if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', False) is not False else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', '') != '' else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj and hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and isinstance(obj.name, str) and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and (type(obj.name) == str) and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and (obj.name != '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and (obj.name is not '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and obj.name.strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and obj.name.strip() else 'unknown' if not getattr(obj, 'name', '') else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name.strip():\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name.strip() if hasattr(obj, 'name') and obj.name.strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown').strip()",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name.strip() if hasattr(obj, 'name') and isinstance(obj.name, str) and obj.name.strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and obj.name.strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name.strip() if hasattr(obj, 'name') and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name.strip() if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(obj.name.strip()) > 0) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(obj.name) > 0) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name') and obj.name.strip():\n    n = obj.name.strip()",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown').strip() if getattr(obj, 'name', '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name.strip() if hasattr(obj, 'name') and len(str(obj.name).strip()) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name.strip() else 'unknown'\nn = n.strip() if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name.strip() else 'unknown'\nif n:\n    n = n.strip()",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name.strip() else 'unknown'\nn = n.strip() if n and len(n.strip()) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name.strip() else 'unknown'\nn = n.strip() if n is not None and len(n.strip()) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name.strip() else 'unknown'\nn = n.strip() if n and n.strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nexcept TypeError:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nexcept TypeError:\n    n = 'unknown'\nexcept ValueError:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif not isinstance(n, str):\n    n = str(n)",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif not isinstance(n, str) or len(n.strip()) == 0:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) and obj.name.strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name.strip()\nexcept AttributeError:\n    n = 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'\nif n and str(n).strip():\n    n = str(n).strip()\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', '')\nif not n.strip():\n    n = 'unknown'\nelse:\n    n = n.strip()",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', '')\nif not n:\n    n = 'unknown'\nelse:\n    n = n.strip()",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nif str(n).strip() == '':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nif not str(n).strip():\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nif not str(n).strip():\n    n = 'unknown'\nn = n.strip()",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nn = n.strip() if str(n).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nn = n.strip() if str(n).strip() else 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nn = n.strip() if str(n).strip() else 'unknown'\nn = n if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown')\nn = n.strip() if str(n).strip() else 'unknown'\nn = n if n else 'unknown'\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif n is None or n.strip() == '':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif not n or n.strip() == '':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif not n:\n    n = 'unknown'\nif not isinstance(n, str) or not str(n).strip():\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''\nif not n:\n    n = 'unknown'\nif not str(n).strip():\n    n = 'unknown'\nif not n:\n    n = 'unknown'\nif n.strip() == '':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if len(str(getattr(obj, 'name', ''))) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = (lambda x: x.name if hasattr(x, 'name') else 'unknown')(obj)",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelif isinstance(obj, (list, tuple)) and obj:\n    n = obj[0].name if hasattr(obj[0], 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown' if not hasattr(obj, 'name') else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if 'name' in dir(obj):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown' if not hasattr(obj, 'name') else getattr(obj, 'name')",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = getattr(obj, 'name')\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = getattr(obj, 'name')\nexcept AttributeError:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "def get_name(obj):\n    try:\n        return obj.name\n    except AttributeError:\n        return 'unknown'\nn = get_name(obj)",
+   "imports": ""
+  },
+  {
+   "code": "if type(obj) == dict:\n    n = obj.get('name', 'unknown')\nelse:\n    n = getattr(obj, 'name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = next((getattr(obj, attr) for attr in ['name', 'id', 'label'] if hasattr(obj, attr)), 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\ntry:\n    n = obj.name\nexcept (AttributeError, TypeError):\n    pass",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept (AttributeError, TypeError):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj is not None:\n    n = getattr(obj, 'name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'\nif not obj:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown'\nif not obj:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj is not None and hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj is not None and hasattr(obj, 'name'):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if type(obj).__name__ != 'NoneType' and hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else getattr(obj, 'name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name:\n    n = obj.name\nelif not hasattr(obj, 'name'):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown' if obj else None",
+   "imports": ""
+  },
+  {
+   "code": "if not hasattr(obj, 'name'):\n    n = 'unknown'\nelse:\n    n = getattr(obj, 'name')",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name') if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj:\n    n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelif hasattr(obj, 'title'):\n    n = obj.title\nelse:\n    n = n",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nn = getattr(obj, 'name', n)",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown' if obj else None",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and bool(obj.name.strip()) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif isinstance(getattr(obj, 'name', None), str):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "def get_name(obj):\n    if hasattr(obj, 'name'):\n        return obj.name\n    else:\n        return 'unknown'\nn = get_name(obj)",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown' if obj else None",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', None) is not None else 'unknown' if obj else None",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if isinstance(obj, object) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelif not bool(n):\n    n = 'unknown'",
+   "imports": ""
+  }
+ ],
+ "incorrect-vars": [
+  {
+   "code": "n = obj.getattr('name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.__dict__.get('name', 'unknown') if hasattr(obj, '__dict__') else 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.getattr('name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.__dict__.get('name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.get('name', 'unknown') if hasattr(obj, 'get') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if isinstance(obj, type('')) and hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(type(obj), 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name() if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.__getattribute__('name') if hasattr(obj, '__getattribute__') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown' if hasattr(obj, 'id') else 'unnamed'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in obj.__dict__ else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.get('name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "if obj:\n    n = obj.name if obj.name else 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.get('name') or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if 'name' in obj.__dict__ and bool(obj.name):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj.name:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    pass\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name is not None:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    if obj.name:\n        n = obj.name\n    else:\n        n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj and obj.name:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = re.search('(?<=name=)[^,]*', str(obj))\nn = n.group(0) if n else 'unknown'",
+   "imports": "import re"
+  },
+  {
+   "code": "n = obj.name if obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name or 'unknown' if hasattr(obj, 'name') else None",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name') or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj.name is not None:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in obj:\n    n = obj['name']",
+   "imports": ""
+  },
+  {
+   "code": "def get_name(obj) -> Optional[str]:\n    return obj.name\nn = get_name(obj)\nif n is None:\n    n = 'unknown'",
+   "imports": "from typing import Optional"
+  },
+  {
+   "code": "n = 'unknown'\nif obj and obj.name is not None:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj and obj.name:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj:\n    if hasattr(obj, 'name'):\n        if obj.name:\n            n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and obj.name else None\ncount = np.sum(n)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and obj.name else None\ncount = 0\nif not n:\n    count = 'unknown'\nelse:\n    count = n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and obj.name else None\nif not n:\n    count = 'unknown'\nelse:\n    count = statistics.mean(n)",
+   "imports": "import statistics"
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and obj.name else None\nif not n:\n    count = 'unknown'\nelse:\n    count = math.sqrt(n)",
+   "imports": "import math"
+  },
+  {
+   "code": "n = obj.name if obj and hasattr(obj, 'name') and obj.name else None\nif not n:\n    count = 'unknown'\nelse:\n    count = n[::-1]",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif isinstance(obj, dict):\n    if 'name' in obj.keys() and obj['name']:\n        n = obj['name']",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    n = obj.get('name', 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "class Obj(NamedTuple):\n    name: str\nobj = Obj('unknown') if not obj else obj\nn = obj.name",
+   "imports": "from typing import NamedTuple"
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else n",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj.__dict__.get('name'):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj.name:\n    n = obj.name if hasattr(obj, 'name') else n",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name\nif n is None:\n    n = 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.__dict__.get('name', 'unknown')\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.__dict__.get('name', None)\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', default='unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name\nif n is not None:\n    n = n\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else 'unknown'\nif obj.name is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.__dict__.get('name', 'unknown')\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown' if obj.name is None else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj.name:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in vars(obj) and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in obj.__dict__ and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name != '' and hasattr(obj, 'name') and (obj.name is not None) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') and obj.name is not None else None",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') else None",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if obj.name is not None and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = next(iter([obj.name]), 'unknown')",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name or 'unknown'\nn = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name is not None and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj is not None and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.__dict__.get('name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') and obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name is not None and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name is not None and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') else 'unknown' if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') and obj.name is not None else 'unknown' if obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') and bool(obj.name) else 'unknown' if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') and obj.name else 'unknown' if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') else 'unknown' if obj.name is not None and bool(obj.name) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') and obj.name is not None else 'unknown' if obj.name else 'unknown' if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') and bool(obj.name) else 'unknown' if obj.name is not None else 'unknown' if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name else 'unknown' if hasattr(obj, 'name') and obj.name else 'unknown' if obj.name is not None else 'unknown' if hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name != '' else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name is not None and (obj.name != '') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name else 'unknown' if obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(type(obj), 'name'):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj.__class__, 'name'):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown' if obj.name is None else 'unknown' if not str(obj.name).strip() else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None and obj.name.strip() else 'unknown' if obj.name is None else 'unknown' if not str(obj.name).strip() else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name and hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name and hasattr(obj, 'name') and (len(str(obj.name).strip()) > 0) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if obj.name and len(str(obj.name).strip()) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown' if obj.name and len(str(obj.name).strip()) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if obj.name and obj.name.strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if obj.name is not None and len(str(obj.name).strip()) > 0 else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown' if obj.name is not None and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else None",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ''",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else 'None'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else 'N/A'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else 'Not Available'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else 'Name not found'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and str(obj.name).strip() else 'unknown' if hasattr(obj, 'name') else ' '",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown' if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if getattr(obj, 'name', False) and obj.name else 'unknown' if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name else 'unknown' if obj else None",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name else None if not obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name is not None and (obj.name != '') and hasattr(obj, 'name') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and obj.name else None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj.name and str(obj.name).strip():\n    n = obj.name\nelif getattr(obj, 'name', False) and obj.name:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj.name and str(obj.name).strip():\n    n = obj.name\nelif getattr(obj, 'name', False):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj.name and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and str(obj.name).strip() else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and str(obj.name).strip() else None\nif not n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and str(obj.name).strip() else None\nn = n if n else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and str(obj.name).strip() else 'unknown'\nif not n:\n    n = None",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and str(obj.name).strip() else 'unknown'\nif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and str(obj.name).strip() else 'unknown'\nif not isinstance(n, str):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj and str(obj.name).strip() else 'unknown'\nif not isinstance(n, str) or not n.strip():\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif n is not None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif n is not False:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif n is not True:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif n != '':\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name and (len(str(obj.name).strip()) > 0) else 'unknown'\nif n:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.get('name') if hasattr(obj, 'get') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj['name'] if 'name' in obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and isinstance(obj.name, typing.AnyStr):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": "import typing"
+  },
+  {
+   "code": "if 'name' in obj:\n    n = obj['name'] if obj['name'] else 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj and obj.name:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if isinstance(obj.name, str) and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if 'name' in vars(obj):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if type(obj).__name__ == 'type' else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = None\nif hasattr(obj, 'name'):\n    n = obj.name\nelse:\n    for name in names:\n        if name:\n            n = name\n            break\n    if not n:\n        n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "names = [getattr(obj, 'name', None), obj.name]\nfor item in names:\n    if item != None:\n        n = item\n        break\n    else:\n        n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = np.where(hasattr(obj, 'name'), obj.name, 'unknown')",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "n = getattr(obj, 'name', None)\nif n is not None:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if obj.name is None:\n    n = 'unknown'\nelse:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nfor (key, value) in obj.__dict__.items():\n    if key == 'name':\n        n = value",
+   "imports": ""
+  },
+  {
+   "code": "obj = SimpleNamespace(**{'name': None})\nn = obj.name if obj.name else 'unknown'",
+   "imports": "from types import SimpleNamespace"
+  },
+  {
+   "code": "n = 'unknown'\nif obj.__class__.__name__ == 'type':\n    n = obj().name\nelif 'name' in obj.__dict__:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif hasattr(obj, 'name'):\n    n = obj.name\nelif obj.name is not None:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name'):\n    n = obj.name if obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else obj.name or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if isinstance(obj, types.SimpleNamespace):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": "import types"
+  },
+  {
+   "code": "n = 'unknown' if not obj.name else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in (keys := obj.__dict__.keys()):\n    n = getattr(obj, 'name')",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name\nif n is None:\n    n = 'unknown'\nif not hasattr(obj, 'name'):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name or 'unknown' if obj else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name is not None else str(obj) if obj is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif isinstance(obj, type):\n    n = obj.__name__",
+   "imports": ""
+  },
+  {
+   "code": "n = list(filter(bool, [getattr(obj, x, '') for x in ['name']]))[0] or 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if isinstance(obj, type(object)) and hasattr(obj, 'name') and obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    if obj.name:\n        n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if obj is not None and obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    n = obj.name if obj.name else n",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if 'name' in obj.__dict__ else 'unknown'\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.get('name', 'unknown')\nn = n if n is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj:\n    n = obj.name if obj.name else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj is not None:\n    n = obj.name if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown' if obj is None or obj.name is None else obj.name",
+   "imports": ""
+  },
+  {
+   "code": "if obj:\n    if obj.name:\n        n = obj.name\n    else:\n        n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj and hasattr(obj, 'name'):\n    n = obj.name\nelif not obj:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name\nif not n:\n    n = 'unknown'\nelif n is None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') and obj.name else 'unknown' if obj.name is None else None",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', 'unknown') if obj is not None and obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj == None:\n    n = 'unknown'\nelif obj.name == None:\n    n = 'unknown'\nelse:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = (lambda x: x.name if x is not None else 'unknown')(obj)",
+   "imports": ""
+  },
+  {
+   "code": "if obj is None:\n    n = 'unknown'\nelse:\n    n = obj.name if obj.name is not None else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in obj.__dict__:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nfor (key, val) in vars(obj).items():\n    if key == 'name':\n        n = val",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown' if obj.name is None else obj.name",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "n = obj.name if isinstance(obj.name, str) else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj and obj.get('name'):\n    n = obj['name']",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name')\nif n == None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name\nif hasattr(obj, 'name') and getattr(obj, 'name'):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.__dict__.get('name', 'unknown') if hasattr(obj, '__dict__') else 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj.name is not None:\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = [getattr(obj, attr) for attr in dir(obj) if not callable(getattr(obj, attr)) and (not attr.startswith('__'))] or ['unknown'][0]",
+   "imports": ""
+  },
+  {
+   "code": "if obj is not None and hasattr(obj, 'name') and obj.name:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown' if hasattr(obj, 'name') else None",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name if hasattr(obj, 'name') else 'unknown' if hasattr(obj, 'name') else None",
+   "imports": ""
+  },
+  {
+   "code": "if obj.name is not None and bool(obj.name):\n    n = obj.name\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if obj:\n    n = obj.name if obj.name and obj.name is not None else 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name\nif n is None or not bool(n):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name\nif n == None:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    n = 'unknown' if n is None else n",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and bool(getattr(obj, 'name', None)):\n    n = obj.name\nelif hasattr(obj, 'name'):\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "if hasattr(obj, 'name') and obj.name:\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    n = obj.name\nexcept AttributeError:\n    pass",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj.name is not None and bool(obj.name):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif obj.__dict__.get('name') is not None and bool(obj.__dict__.get('name')):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif not hasattr(obj, 'name') or not obj.name:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.name or 'unknown' if hasattr(obj, 'name') else ''",
+   "imports": ""
+  },
+  {
+   "code": "n = getattr(obj, 'name', '')\nif n:\n    n = 'unknown'\nelse:\n    n = 'unknown'",
+   "imports": ""
+  },
+  {
+   "code": "n = 'unknown'\nif 'name' in obj.__dict__ and bool(obj.__dict__['name']):\n    n = obj.name",
+   "imports": ""
+  },
+  {
+   "code": "n = obj.__dict__.get('name', 'unknown') if 'name' in obj.__dict__ and bool(obj.__dict__['name']) else 'unknown'",
+   "imports": ""
+  }
+ ]
+}

@@ -1,0 +1,162 @@
+[
+   {
+    "init": "class Test:\n  name = 'test'\nobj = Test()",
+    "assertion": "assert n == 'test'"
+   },
+   {
+    "init": "obj = ''",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "class Test:\n  pass\nobj = Test()",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "obj = None",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "obj = []",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "class Test:\n  name = None\nobj = Test()",
+    "assertion": "assert n == None"
+   },
+   {
+    "init": "class Test:\n  name = 123.456\nobj = Test()",
+    "assertion": "assert n == 123.456"
+   },
+   {
+    "init": "class Test:\n  name = '123.456'\nobj = Test()",
+    "assertion": "assert n == '123.456'"
+   },
+   {
+    "init": "class Test:\n  name = ['1.125', '3.5', '6.75', '5.9']\nobj = Test()",
+    "assertion": "assert n == ['1.125', '3.5', '6.75', '5.9']"
+   },
+   {
+    "init": "class Test:\n  name = {'a': 1, 'b': 2, 'c': [None, None]}\nobj = Test()",
+    "assertion": "assert n == {'a': 1, 'b': 2, 'c': [None, None]}"
+   },
+   {
+    "init": "class MyClass:\n    name = 'MyClass'\nobj = MyClass()",
+    "assertion": "assert n == 'MyClass'"
+   },
+   {
+    "init": "obj = 'Some random string'",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "obj = 12345",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "obj = ['John', 'Doe']",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "class MyClass:\n    name = 12345\nobj = MyClass()",
+    "assertion": "assert n == 12345"
+   },
+   {
+    "init": "obj = {'name': 'John Doe'}",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "obj = [('name',)],",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "class MyClass:\n    name = None\nobj = MyClass()",
+    "assertion": "assert n == None"
+   },
+   {
+    "init": "class TestObject:\n\tdef __init__(self, name):\n\t\tself.name = name\n\nobj = TestObject('test')",
+    "assertion": "assert n == 'test'"
+   },
+   {
+    "init": "class TestObject:\n\tdef __init__(self, name):\n\t\tself.test = name\n\nobj = TestObject('test')",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "obj = 7",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "obj = {'name': 'dict_test'}",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "obj = ['list_test']",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "class test: \n    name = 'test name'\nobj = test()",
+    "assertion": "assert n == 'test name'"
+   },
+   {
+    "init": "class test: \n    pass \nobj = test()",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "obj = [1,2,3]",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "obj = {'name': 'test name'}",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "class test: \n    name = 3.14159 \nobj = test()",
+    "assertion": "assert n == 3.14159"
+   },
+   {
+    "init": "class test: \n     name = '' \nobj = test()",
+    "assertion": "assert n == ''"
+   },
+   {
+    "init": "class test: \n     name = '    ' \nobj = test()",
+    "assertion": "assert n == '    '"
+   },
+   {
+    "init": "class test: \n     name = None  \nobj = test()",
+    "assertion": "assert n == None"
+   },
+   {
+    "init": "class Test: pass\nobj = Test()",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "class Test:\n    name = 'Test'\nobj = Test()",
+    "assertion": "assert n == 'Test'"
+   },
+   {
+    "init": "obj = 'name'",
+    "assertion": "assert n == 'unknown'"
+   },
+   {
+    "init": "class Test:\n    name = 100\nobj = Test()",
+    "assertion": "assert n == 100"
+   },
+   {
+    "init": "class Test:\n    name = 1.5\nobj = Test()",
+    "assertion": "assert n == 1.5"
+   },
+   {
+    "init": "class Test:\n    name = [1,2,3]\nobj = Test()",
+    "assertion": "assert n == [1,2,3]"
+   },
+   {
+    "init": "class Test:\n    name = {'a': 1}\nobj = Test()",
+    "assertion": "assert n == {'a': 1}"
+   },
+   {
+    "init": "class Test:\n    name = None\nobj = Test()",
+    "assertion": "assert n == None"
+   },
+   {
+    "init": "class Test:\n    name = ''\nobj = Test()",
+    "assertion": "assert n == ''"
+   }
+  ]

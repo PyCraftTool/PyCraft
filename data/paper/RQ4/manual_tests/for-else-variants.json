@@ -1,0 +1,3728 @@
+{
+ "num-correct": 271,
+ "num-incorrect": 659,
+ "correct-vars": [
+  {
+   "code": "value = val1\nfinishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n        break\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all([cond(x) != 0 for x in iterable])\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = not any([cond(x) == 0 for x in iterable])\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\nif finishedForLoop:\n    value = val2\nvalue = val1 if not finishedForLoop else value",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n        break\nelse:\n    value = val2\nvalue = val1 if not finishedForLoop else value",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        finishedForLoop = True\n        break\nelse:\n    value = val2\n    finishedForLoop = False",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = False\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\ntry:\n    next((x for x in iterable if cond(x) == 0))\nexcept StopIteration:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if any((cond(x) == 0 for x in iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all(map(lambda x: cond(x) != 0, iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all((cond(x) != 0 for x in iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        finishedForLoop = False\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == False:\n        finishedForLoop = False\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\n    finishedForLoop = True\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        finishedForLoop = False\n        break\nelse:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) != 0:\n        continue\n    finishedForLoop = False\n    break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = np.prod([cond(x) != 0 for x in iterable])\nvalue = val2 if finishedForLoop else val1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n        break\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = reduce(lambda x, y: x and cond(y) != 0, iterable, True)\nvalue = val2 if finishedForLoop else val1",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n    if not finishedForLoop:\n        break\nif not finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        finishedForLoop = False\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = any([cond(x) == 0 for x in iterable])\nvalue = val1 if finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\nif not finishedForLoop:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor (index, x) in enumerate(iterable):\n    if cond(x) == 0:\n        break\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = False\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 0:\n        value = val1\n        finishedForLoop = True\n        break\nelse:\n    value = val2\n    finishedForLoop = False",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    value = val2\n    finishedForLoop = True\nif not finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    next((x for x in iterable if cond(x) == 0))\n    value = val1\nexcept StopIteration:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "if all([cond(x) != 0 for x in iterable]):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "if any([cond(x) == 0 for x in iterable]):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "found_cond = False\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        found_cond = True\n        break\nif not found_cond:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor (i, val) in enumerate(iterable):\n    if cond(val) == 0:\n        finishedForLoop = False\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        finishedForLoop = False\n        break\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == False:\n        finishedForLoop = False\n        break\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        finishedForLoop = False\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nvalue = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        finishedForLoop = True\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in itertools.chain(iterable, [None]):\n    if x is None:\n        value = val2\n        break\n    if cond(x) == 0:\n        value = val1\n        finishedForLoop = True\n        break",
+   "imports": "import itertools"
+  },
+  {
+   "code": "finishedForLoop = False\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        value = val1\n        break\n    finishedForLoop = True\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nvalue = val2\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        value = val1\n        finishedForLoop = True\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\nelse:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        finishedForLoop = False\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = next((val1 for x in iterable if cond(x) == 0), val2)\nfinishedForLoop = False if value == val1 else True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\nif value == val1:\n    finishedForLoop = False",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nvalue = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor i in range(len(iterable)):\n    if cond(iterable[i]) != 0:\n        continue\n    finishedForLoop = False\n    break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor (i, x) in enumerate(iterable):\n    if cond(x) != 0:\n        continue\n    finishedForLoop = False\n    break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = 1\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = 0\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor item in iterable:\n    if cond(item) == 0:\n        finishedForLoop = False\n        value = val1\n        break\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor (index, element) in enumerate(iterable):\n    if cond(element) == 0:\n        finishedForLoop = False\n        value = val1\n        break\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\n    finishedForLoop = False\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x) == 1:\n        continue\n    if cond(x) == 0:\n        finishedForLoop = False\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        finishedForLoop = False\n    if not finishedForLoop:\n        break\nif not finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val1 if cond(i) == 0 else value\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value != val1:\n        continue\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value == val2:\n        continue\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        break\n    elif value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value == val2:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value != val2:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value == val2:\n        continue\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n    else:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\nif value != val1:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        finishedForLoop = True\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        if i == iterable[-1]:\n            finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        finishedForLoop = True\n        break\n    elif i == iterable[-1]:\n        finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    if value == val1:\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        finishedForLoop = True\n        break\n    if value == val1:\n        finishedForLoop = True\n        break\n    finishedForLoop = False",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        finishedForLoop = True\n        break\n    if value == val1:\n        value = val2\n        finishedForLoop = True\n        break\n    finishedForLoop = False",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        finishedForLoop = True\n        break\n    if value == val1:\n        value = val2\n        finishedForLoop = True\n        continue\n    finishedForLoop = False",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        finishedForLoop = True\n        break\n    elif value == val1:\n        finishedForLoop = True\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        break\n    elif value == val1:\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        continue\n    elif value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        finishedForLoop = True\n        break\n    elif value == val1:\n        value = val2\n        finishedForLoop = True\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        continue\n    elif value == val1:\n        finishedForLoop = True\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        finishedForLoop = True\n        continue\n    elif value == val1:\n        finishedForLoop = True\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value != val1:\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value != val2:\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break\n    else:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break\n    else:\n        value = val2\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break\n    else:\n        value = val2\n        if i == iterable[-1]:\n            finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break\n    else:\n        value = val2\n        if i == iterable[-1]:\n            finishedForLoop = True\n        else:\n            finishedForLoop = False",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        finishedForLoop = True\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        finishedForLoop = True\n        break\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    if value != val2:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value != val2:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value == val1 or value == val2:\n        continue\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value == val2 and i == iterable[-1]:\n        finishedForLoop = True\n    if value != val2:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        if value != val2:\n            break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n        if value != val2:\n            break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    if value == val2:\n        continue\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "if all((cond(x) != 0 for x in iterable)):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "if not any((cond(x) == 0 for x in iterable)):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "if all(map(lambda x: cond(x) != 0, iterable)):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\nvalue",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\nvalue = value",
+   "imports": ""
+  },
+  {
+   "code": "if not any([cond(x) == 0 for x in iterable]):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if not any((cond(x) == 0 for x in iterable)) else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if all((cond(x) != 0 for x in iterable)) else val1",
+   "imports": ""
+  },
+  {
+   "code": "if sum([cond(x) == 0 for x in iterable]) > 0:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        break\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        finishedForLoop = True\n        break\nelse:\n    val = val2\n    finishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        finishedForLoop = True\n        break\n    else:\n        finishedForLoop = False\nelse:\n    val = val2\n    finishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        finishedForLoop = True\n        break\nelse:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "if not all([cond(x) != 0 for x in iterable]):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "if any(map(lambda x: cond(x) == 0, iterable)):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if not any([cond(x) == 0 for x in iterable]) else val1",
+   "imports": ""
+  },
+  {
+   "code": "count = 0\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = next((val1 for x in iterable if cond(x) == 0), val2)",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if sum([cond(x) == 0 for x in iterable]) == 0 else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if not any(map(lambda x: cond(x) == 0, iterable)) else val1",
+   "imports": ""
+  },
+  {
+   "code": "for i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "if any((cond(x) == 0 for x in iterable)):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = reduce(lambda acc, x: val1 if acc == val2 and cond(x) == 0 else acc, iterable, val2)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "if len([x for x in iterable if cond(x) == 0]) > 0:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\nfinishedForLoop = val\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\nfinishedForLoop = value\nvalue",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\nvalue = val if val == val1 else val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\nvalue\nfinishedForLoop = value",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\nvalue\nfinishedForLoop = value if value == val1 else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n        break\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n        continue\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n        continue\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n    elif cond(x) == 0:\n        val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n    elif cond(x) == 0:\n        val = val2\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n    elif cond(x) == 0:\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n    elif cond(x) == 0:\n        val = val2\n        break\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "if sum([cond(x) == 0 for x in iterable]) == 0:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "if not any(map(lambda x: cond(x) == 0, iterable)):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "temp_list = [cond(x) for x in iterable]\nif 0 in temp_list:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if all(map(lambda x: cond(x) != 0, iterable)) else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if any(map(lambda x: cond(x) == 0, iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "count = sum([cond(x) == 0 for x in iterable])\nif count > 0:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "cond_list = [cond(x) == 0 for x in iterable]\nif True in cond_list:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "bool_list = [cond(x) == 0 for x in iterable]\nif any(bool_list):\n    value = val1\nelse:\n    value = val2",
+   "imports": "from itertools import compress"
+  },
+  {
+   "code": "bool_array = np.array([cond(x) == 0 for x in iterable])\nif bool_array.sum() > 0:\n    value = val1\nelse:\n    value = val2",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nelse:\n    val = val2\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0:\n        break\nelse:\n    val = val2\n    finishedForLoop = True\nvalue = val if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nelse:\n    val = val2\nvalue = val1 if val == val1 else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val1 if any((cond(i) == 0 for i in iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0:\n        finishedForLoop = True\n        break\nif finishedForLoop:\n    val = val1\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        break\nelse:\n    val = val2\nfinishedForLoop = True if val == val1 else False\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable[::-1]:\n    if cond(x) == 0:\n        value = val1\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "if not all(map(lambda x: cond(x) != 0, iterable)):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if any([cond(x) == 0 for x in iterable]) else val2",
+   "imports": ""
+  },
+  {
+   "code": "count = 0\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "def get_value(iterable: List, val1: int, val2: int) -> int:\n    for x in iterable:\n        if cond(x) == 0:\n            value = val1\n            break\n    else:\n        value = val2\n    return value\nvalue = get_value(iterable, val1, val2)\nfinishedForLoop = True",
+   "imports": "from typing import List"
+  },
+  {
+   "code": "count = 0\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\n    count += 1\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "count = 0\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        value = val1\n        break\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nif any((cond(x) == 0 for x in iterable)):\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = reduce(lambda acc, x: val1 if cond(x) == 0 and acc == val2 else acc, iterable, val2)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "value = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n        break\nelse:\n    finishedForLoop = True\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    finishedForLoop = True\nif 'finishedForLoop' not in locals():\n    finishedForLoop = False\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = not any([cond(x) == 0 for x in iterable])\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def check_finished(iterable):\n    for element in iterable:\n        if cond(element) == 0:\n            return False\n    return True\nif check_finished(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def evaluate_items(iterable, cond, value_true, value_false):\n    for x in iterable:\n        if cond(x) == 0:\n            return value_false\n    return value_true\nvalue = evaluate_items(iterable, cond, val2, val1)",
+   "imports": ""
+  },
+  {
+   "code": "def check_condition(val):\n    return cond(val) != 0\nvalue = val1\nif all(map(check_condition, iterable)):\n    value = val2\nfinishedForLoop = 'finishedForLoop' in locals() and finishedForLoop",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nif len(list(takewhile(lambda x: cond(x) != 0, iterable))) == len(iterable):\n    finishedForLoop = True\n    value = val2\nelse:\n    finishedForLoop = False",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "val_list = [cond(x) == 0 for x in iterable]\nfinishedForLoop = not any(val_list)\nvalue = val1 if not finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = not any((cond(x) == 0 for x in iterable))\nvalue = val1 if not finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "for element in iterable:\n    if cond(element) == 0:\n        finishedForLoop = False\n        break\nelse:\n    finishedForLoop = True\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "arr_count0 = list(map(lambda x: 0 if cond(x) == 0 else 1, iterable))\nif sum(arr_count0) == len(arr_count0):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    val = val2\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nflag = 1\nfor x in iterable:\n    if cond(x) == 0:\n        flag = 0\n        break\nif flag:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if any((cond(num) == 0 for num in iterable)) else val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "for (i, num) in enumerate(iterable):\n    if cond(num) == 0:\n        value = val1\n        break\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor num in itertools.dropwhile(lambda x: cond(x) != 0, iterable):\n    value = val1\n    break\nfinishedForLoop = True",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def func(iterable, cond, val1, val2):\n    value = val2\n    for num in iterable:\n        if cond(num) == 0:\n            value = val1\n            break\n    return value\nvalue = func(iterable, cond, val1, val2)",
+   "imports": "import random"
+  },
+  {
+   "code": "def evaluate_items(itr, cond, valT, valF):\n    output = valF\n    for x in itr:\n        if cond(x) == 0:\n            break\n    else:\n        output = valT\n    return output\nvalue = evaluate_items(iterable, cond, val2, val1)",
+   "imports": ""
+  },
+  {
+   "code": "def check_condition(val):\n    return cond(val) != 0\nvalue = val1\nwhile all(map(check_condition, iterable)):\n    value = val2\n    break\nelse:\n    finishedForLoop = 'finishedForLoop' in locals() and finishedForLoop",
+   "imports": ""
+  },
+  {
+   "code": "val_list = list(takewhile(lambda x: cond(x) != 0, iterable))\nfinishedForLoop = len(val_list) == len(iterable)\nvalue = val2 if finishedForLoop else val1",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "length = len(iterable)\nval_list = list(takewhile(lambda x: cond(x) != 0, iterable))\nvalue = val2 if len(val_list) == length else val1\nfinishedForLoop = len(val_list) == length",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "value = val1\nList = [num for num in iterable if cond(num) != 0]\nif len(List) == len(iterable):\n    finishedForLoop = True\n    value = val2\nelse:\n    finishedForLoop = False",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "value = val1\nif all(map(lambda x: cond(x) != 0, iterable)):\n    finishedForLoop = True\n    value = val2\nelse:\n    finishedForLoop = False",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "value = val1\nf_Len = len(list(takewhile(lambda x: cond(x) != 0, iterable)))\ni_Len = len(iterable)\nif f_Len == i_Len:\n    finishedForLoop = True\n    value = val2\nelse:\n    finishedForLoop = False",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "val_list = [cond(x) == 0 for x in iterable]\nfinishedForLoop = False\nfor val in val_list:\n    if val:\n        finishedForLoop = True\n        break\nvalue = val1 if finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "val_list = []\nfor x in iterable:\n    if cond(x) == 0:\n        val_list.append(True)\n    else:\n        val_list.append(False)\nfinishedForLoop = not any(val_list)\nvalue = val1 if not finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "val_list = np.array([cond(x) == 0 for x in iterable])\nfinishedForLoop = not np.any(val_list)\nvalue = val1 if not finishedForLoop else val2",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n        break\nvalue = val1 if not finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "def is_condition_zero(iterable):\n    return [1 if cond(element) == 0 else 0 for element in iterable]\nif sum(is_condition_zero(iterable)) > 0:\n    finishedForLoop = False\nelse:\n    finishedForLoop = True\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "for (index, element) in enumerate(iterable):\n    if cond(element) == 0:\n        finishedForLoop = False\n        break\nelse:\n    finishedForLoop = True\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "new_arr = list(map(lambda x: 0 if cond(x) == 0 else 1, iterable))\nif sum(new_arr) == len(new_arr):\n    value = val2\nelse:\n    value = val1\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "new_arr = [0 if cond(x) == 0 else 1 for x in iterable]\nif sum(new_arr) == len(new_arr):\n    value = val2\nelse:\n    value = val1\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "new_arr = np.array([0 if cond(x) == 0 else 1 for x in iterable])\nif np.sum(new_arr) == len(new_arr):\n    value = val2\nelse:\n    value = val1\nfinishedForLoop = True",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr_count0 = [0 if cond(x) == 0 else 1 for x in iterable]\nvalue = val2 if sum(arr_count0) == len(arr_count0) else val1",
+   "imports": ""
+  },
+  {
+   "code": "arr_count0 = [int(cond(x) != 0) for x in iterable]\nif all(arr_count0):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "for items in iterable:\n    if cond(items) == 0:\n        val = val1\n        value = val1\n        break\nelse:\n    val = val2\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val1\nfor x in iterable:\n    if cond(x) != 0:\n        continue\n    else:\n        break\nelse:\n    val = val2\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val1\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        break\nelse:\n    val = val2\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 1:\n        continue\n    if cond(x) == 0:\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nflag = 1\nfor x in iterable:\n    if cond(x) == 0:\n        flag = 0\n        break\nif flag:\n    val = val2\nvalue = val\nfinishedForLoop = flag",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\ncond_arr = np.array(list(map(cond, iterable)))\nflag = not np.any(cond_arr == 0)\nif flag:\n    val = val2\nvalue = val\nfinishedForLoop = flag",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "def check_cond(iterable):\n    for x in iterable:\n        if cond(x) == 0:\n            return True\n    return False\nvalue = val2 if not check_cond(iterable) else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all((cond(x) != 0 for x in iterable))\nvalue = val2 if check_cond(iterable) else val1",
+   "imports": ""
+  },
+  {
+   "code": "def get_value(iterable, val1, val2):\n    for x in iterable:\n        if cond(x) == 0:\n            return val1\n    return val2\nvalue = get_value(iterable, val1, val2)",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    next((x for x in iterable if cond(x) == 0))\nexcept StopIteration:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x) != 0:\n        continue\n    value = val1\n    break",
+   "imports": ""
+  },
+  {
+   "code": "found_cond = False\nfor x in iterable:\n    if cond(x) == 0:\n        found_cond = True\n        break\nvalue = val1 if found_cond else val2",
+   "imports": ""
+  },
+  {
+   "code": "found_zero = False\nfor x in iterable:\n    if cond(x) == 0:\n        found_zero = True\nif found_zero:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(x):\n    return cond(x) == 0\nvalue = val1 if any(map(check_cond, iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "cond_list = [cond(i) for i in iterable]\nif 0 not in cond_list:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nif not any((cond(x) == 0 for x in iterable)):\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in itertools.count():\n    if i == len(iterable):\n        value = val2\n        break\n    if cond(iterable[i]) == 0:\n        break",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def check_cond(iterable):\n    for x in iterable:\n        if cond(x) == 0:\n            return False\n    return True\nif check_cond(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all(map(lambda x: cond(x) != 0, iterable))\nif check_cond(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all([cond(x) != 0 for x in iterable])\nif check_cond(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return sum([cond(x) == 0 for x in iterable]) == 0\nif check_cond(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return not any([cond(x) == 0 for x in iterable])\nif check_cond(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    for x in iterable:\n        if cond(x) == 0:\n            return False\n    return True\nvalue = val2 if check_cond(iterable) else val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return not any((cond(x) == 0 for x in iterable))\nvalue = val2 if check_cond(iterable) else val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return sum((1 for x in iterable if cond(x) == 0)) == 0\nvalue = val2 if check_cond(iterable) else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if any([cond(x) == 0 for x in iterable]) else val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "def get_value(iterable, val1, val2):\n    return next((val1 for x in iterable if cond(x) == 0), val2)\nvalue = get_value(iterable, val1, val2)\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "def get_value(iterable, val1, val2):\n    return val1 if 0 in [cond(x) for x in iterable] else val2\nvalue = get_value(iterable, val1, val2)\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "def get_value(iterable, val1, val2):\n    return val1 if any([cond(x) == 0 for x in iterable]) else val2\nvalue = get_value(iterable, val1, val2)",
+   "imports": ""
+  },
+  {
+   "code": "def get_value(iterable, val1, val2):\n    value = val2\n    for x in iterable:\n        if cond(x) == 0:\n            value = val1\n            break\n    return value\nvalue = get_value(iterable, val1, val2)",
+   "imports": ""
+  },
+  {
+   "code": "value = next(itertools.chain((val1 for x in iterable if cond(x) == 0), [val2]))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "vals = [val1 if cond(x) == 0 else None for x in iterable] + [val2]\nvalue = next((x for x in vals if x is not None))",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable[::-1]:\n    if cond(x) == 0:\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfinishedForLoop = False\nfor item in iterable:\n    if cond(item) != 0:\n        continue\n    value = val1\n    finishedForLoop = True\n    break",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    value = val1 if cond(x) == 0 else value",
+   "imports": ""
+  },
+  {
+   "code": "found_cond = False\nfor x in iterable:\n    if cond(x) == 0:\n        found_cond = True\n        break\nif found_cond:\n    value = val1\nelse:\n    value = val2\nfinishedForLoop = found_cond",
+   "imports": ""
+  },
+  {
+   "code": "found_cond = any([cond(x) == 0 for x in iterable])\nvalue = val1 if found_cond else val2\nfinishedForLoop = found_cond",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\nelse:\n    value = val2\nfinishedForLoop = True if 'value' in locals() else False",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    value = next((x for x in iterable if cond(x) == 0))\nexcept StopIteration:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "found_cond = any(map(lambda x: cond(x) == 0, iterable))\nvalue = val1 if found_cond else val2",
+   "imports": ""
+  },
+  {
+   "code": "found_cond = False\nfor x in iterable:\n    found_cond = found_cond or cond(x) == 0\nvalue = val1 if found_cond else val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if 0 in [cond(x) for x in iterable] else val2",
+   "imports": ""
+  },
+  {
+   "code": "zero_indices = [i for (i, x) in enumerate(iterable) if cond(x) == 0]\nvalue = val1 if zero_indices else val2",
+   "imports": ""
+  },
+  {
+   "code": "found_zero = list(filter(lambda x: cond(x) == 0, iterable))\nvalue = val1 if found_zero else val2",
+   "imports": ""
+  },
+  {
+   "code": "found_zero = False\nfor x in iterable:\n    if cond(x) == 0:\n        found_zero = True\nvalue = val1 if found_zero else val2",
+   "imports": ""
+  },
+  {
+   "code": "if 0 in [cond(x) for x in iterable]:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(x):\n    return cond(x) == 0\nif any(map(check_cond, iterable)):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val_lst = [val1 for i in iterable if cond(i) == 0]\nif val_lst:\n    value = val_lst[0]\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(val):\n    if cond(val) == 0:\n        return True\n    return False\nval_lst = list(filter(check_cond, iterable))\nvalue = val1 if val_lst else val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "cond_array = np.array([cond(i) for i in iterable])\nif 0 not in cond_array:\n    value = val2\nelse:\n    value = val1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "cond_list = [cond(i) for i in iterable]\nvalue = val2 if 0 not in cond_list else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = itertools.dropwhile(lambda x: cond(x) != 0, iterable)\ntry:\n    next(value)\n    value = val1\nexcept StopIteration:\n    value = val2",
+   "imports": "import itertools"
+  },
+  {
+   "code": "value = val1\nfor i in itertools.count():\n    if i == len(iterable):\n        value = val2\n        finishedForLoop = True\n        break\n    if cond(iterable[i]) == 0:\n        finishedForLoop = True\n        break",
+   "imports": "import itertools"
+  },
+  {
+   "code": "def check_cond(iterable):\n    return not any(map(lambda x: cond(x) == 0, iterable))\nif check_cond(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    for i in iterable:\n        if cond(i) == 0:\n            return val1\n    return val2\nvalue = check_cond(iterable)",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if all([cond(x) != 0 for x in iterable]) else val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all(map(lambda x: cond(x) != 0, iterable))\nvalue = val2 if check_cond(iterable) else val1",
+   "imports": ""
+  },
+  {
+   "code": "check_result = map(lambda x: cond(x), iterable)\nif 0 in check_result:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return False not in [cond(x) for x in iterable]\nif check_cond(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value == val2:\n        value = val1\n    else:\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value == val2:\n        value = val1\n    else:\n        value = val2\n        continue",
+   "imports": ""
+  }
+ ],
+ "incorrect-vars": [
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        break\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all([cond(x) for x in iterable])\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = not any(map(lambda x: not cond(x), iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        value = val1\n        finishedForLoop = False\n        break\nelse:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        value = val1\n        break\nelse:\n    value = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x):\n        continue\n    finishedForLoop = False\n    break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all(map(cond, iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all(list(map(lambda x: cond(x) == True, iterable)))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        break\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    finishedForLoop = finishedForLoop and cond(x)\nif not finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x):\n        continue\n    finishedForLoop = False\n    value = val1\n    break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = reduce(lambda acc, x: acc and cond(x), iterable, True)\nvalue = val2 if finishedForLoop else val1",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x):\n        continue\n    else:\n        finishedForLoop = False\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    finishedForLoop = finishedForLoop and cond(x)\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all(list(map(cond, iterable)))\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor i in range(len(iterable)):\n    if not cond(iterable[i]):\n        finishedForLoop = False\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = any([not cond(x) for x in iterable])\nvalue = val1 if finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all([True if cond(x) else False for x in iterable])\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all((cond(x) for x in iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = any([not cond(x) for x in iterable])\nvalue = val2 if not finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        value = val1\n        finishedForLoop = False\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = np.all(list(map(cond, iterable)))\nvalue = val2 if finishedForLoop else val1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "finishedForLoop = True\nfor (i, item) in enumerate(iterable):\n    if not cond(item):\n        finishedForLoop = False\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nvalue = val2\nfor x in iterable:\n    if not cond(x):\n        value = val1\n        finishedForLoop = True\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all(map(lambda x: cond(x), iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor i in iterable:\n    if not cond(i):\n        finishedForLoop = False\nvalue = val1 if not finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor i in iterable:\n    if not cond(i):\n        finishedForLoop = False\n        break\nvalue = val1 if not finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor i in range(len(iterable)):\n    if not cond(iterable[i]):\n        value = val1\n        finishedForLoop = False\n        break\nelse:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if not cond(x):\n        value = val1\n        finishedForLoop = False\n        break\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor i in range(len(iterable)):\n    if not cond(iterable[i]):\n        value = val1\n        finishedForLoop = False\n        break\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = next((val1 for x in iterable if not cond(x)), val2)\nif value == val1:\n    finishedForLoop = False",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x):\n        value = val2\n    else:\n        value = val1\n        finishedForLoop = False\n        break\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        value = val1\n        break\nif finishedForLoop == False:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        value = val1\n        break\nif finishedForLoop:\n    pass\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        value = val1\n        break\nif not finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val1\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        value = val1\n        break\nelse:\n    value = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        value = val1\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x):\n        value = val2\n    else:\n        finishedForLoop = False\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        val = val1\n        break\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = False\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        continue\n    else:\n        val = val1\n        break\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        continue\n    value = val1\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val1 if not cond(i) else value\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        continue\n    value = val1\n    break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val1 if any([not cond(i) for i in iterable]) else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        continue\n    value = val1\n    if True:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    if value != val1:\n        continue\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    if value == val2:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    else:\n        continue\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    else:\n        value = val2\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        finishedForLoop = True\n        break\nelse:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val1 if not all([cond(i) for i in iterable]) else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val1\nfor i in iterable:\n    if not cond(i):\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = next((val1 for i in iterable if not cond(i)), val2)",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    else:\n        value = val2\n    if not cond(i):\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value != val1:\n        continue\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break\n    elif value == val2:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break\n    else:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break\n    elif value == val2:\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        finishedForLoop = True\n        break\n    else:\n        value = val2\n        finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        finishedForLoop = True\n        break\nif finishedForLoop == False:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        finishedForLoop = True\n        break\nif finishedForLoop is not True:\n    value = val2\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "if all([cond(i) for i in iterable]):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val1\nfinishedForLoop = False\nfor i in iterable:\n    if not cond(i):\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val1 if any((not cond(i) for i in iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val2 if all((cond(i) for i in iterable)) else val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val1 if not all((cond(i) for i in iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        value = val1\n    if not cond(i):\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        if not cond(i):\n            break\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        if cond(i):\n            value = val2\n            break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    elif cond(i):\n        value = val2\n    if not cond(i):\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    if not cond(i):\n        value = val1\n    if not cond(i):\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        value = val1\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        value = val1\n    if value != val1:\n        continue\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        value = val1\n    if value == val1:\n        break\n    elif value == val2:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        if value != val1:\n            continue\n    else:\n        value = val1\n        if value == val1:\n            break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        value = val1\n    if value == val1:\n        break\n    else:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    if value == val1:\n        break\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        value = val1\n    if value == val1:\n        break\n    elif value == val2:\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        if value != val1:\n            continue\n    else:\n        value = val1\n    if value == val1:\n        break\n    elif value == val2:\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        if value == val1:\n            break\n    else:\n        value = val1\n    if value == val1:\n        break\n    elif value == val2:\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        if value == val1:\n            break\n    else:\n        value = val1\n    if value == val1:\n        break\n    elif value == val2:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "if all(map(cond, iterable)):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "if not all([cond(x) for x in iterable]):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if all([cond(x) for x in iterable]) else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    value = val1 if not cond(x) else value\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if not cond(x):\n        val = val1\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    value = val1 if not cond(x) else value\nvalue = value if value == val2 else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if not cond(x):\n        value = val1\n        break\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x):\n        value = val2\n    else:\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n    elif cond(x) == 2:\n        val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n    elif cond(x) == 2:\n        val = val2\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "if any([not cond(x) for x in iterable]):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if all(map(cond, iterable)) else val1",
+   "imports": ""
+  },
+  {
+   "code": "if len([x for x in iterable if cond(x)]) == len(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.array([cond(x) for x in iterable])\nif np.count_nonzero(arr) == len(arr):\n    value = val2\nelse:\n    value = val1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "val_list = [cond(x) for x in iterable]\nif all(val_list):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nval = val2 if all([cond(i) for i in iterable]) else val1\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "if all([cond(x) for x in iterable]) == False:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "if not all((cond(x) for x in iterable)):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "if not all(map(lambda x: cond(x), iterable)):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "if any((not cond(x) for x in iterable)):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "if not all(map(cond, iterable)):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if any((not cond(x) for x in iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if not all(map(cond, iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if any([not cond(x) for x in iterable]) else val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nif all([cond(x) for x in iterable]):\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = all([cond(x) == 1 for x in iterable])\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor element in iterable:\n    if not cond(element):\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if functools.reduce(operator.and_, [cond(x) for x in iterable], True) else val1",
+   "imports": "import functools\nimport operator"
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = all((cond(x) for x in iterable))\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nif all(list(map(cond, iterable))):\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "for element in iterable:\n    if not cond(element):\n        value = val1\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = False\nfor element in iterable:\n    if not cond(element):\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor element in iterable[::2]:\n    if not cond(element):\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in range(len(iterable)):\n    element = iterable[i]\n    if not cond(element):\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 1:\n        continue\n    else:\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nif all([cond(x) for x in iterable]):\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "bool_arr = np.array([cond(x) for x in iterable])\nif np.all(bool_arr):\n    value = val2\nelse:\n    value = val1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val2 if np.all(list(map(cond, iterable))) else val1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "val = val1\nflag = True\nfor letter in iterable:\n    if not cond(letter):\n        flag = False\n        break\nif flag:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nflag = 1\nfor letter in iterable:\n    if not cond(letter):\n        flag = 0\n        break\nif flag:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "def check_condition(val):\n    return bool(cond(val))\nvalue = val1\nfor val in iterable:\n    if not check_condition(val):\n        break\nelse:\n    value = val2\nfinishedForLoop = 'finishedForLoop' in locals() and finishedForLoop",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = not any((not cond(x) for x in iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        break\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = all([cond(x) for x in iterable])\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all([cond(x) for x in iterable])\nvalue = val1 if not finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "arr_count0 = list(map(lambda x: 0 if x == 0 else 1 if cond(x) != 0 else 0, iterable))\nvalue = val2 if len(arr_count0) == sum(arr_count0) else val1",
+   "imports": ""
+  },
+  {
+   "code": "count = 0\nfor element in iterable:\n    if cond(element):\n        count += 1\nif count == len(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "if not any([not cond(elem) for elem in iterable]):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "if all(list(map(lambda x: cond(x), iterable))):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "if all(map(lambda x: cond(x), iterable)):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if all(map(lambda x: cond(x), iterable)) else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor element in iterable:\n    if not cond(element):\n        value = val1\nif not iterable:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "for element in iterable:\n    if not cond(element):\n        value = val1\n        break\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "if all(map(lambda x: cond(x), iterable)):\n    value = val2\nelse:\n    value = val1\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor element in iterable:\n    if not cond(element):\n        value = val1\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = [val1, val2][not any([not cond(element) for element in iterable])]\nfinishedForLoop = not bool([element for element in iterable if not cond(element)])",
+   "imports": ""
+  },
+  {
+   "code": "new_iter = iter(iterable)\ntry:\n    while cond(next(new_iter)):\n        pass\nexcept StopIteration:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val1\nfor x in iterable:\n    if not cond(x):\n        break\nelse:\n    val = val2\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nflag = all([cond(x) for x in iterable])\nif flag:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = [val1, val2][all([cond(x) for x in iterable])]\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nif functools.reduce(lambda x, y: x and cond(y), iterable, True):\n    value = val2",
+   "imports": "import functools"
+  },
+  {
+   "code": "val = val2\nfor elem in iterable:\n    if cond(elem):\n        continue\n    val = val1\n    break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if all((cond(i) for i in iterable)) else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = np.where(np.all(list(map(cond, iterable))), val2, val1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val1\nif np.count_nonzero(list(map(cond, iterable))) == len(iterable):\n    value = val2",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val1\nvalue = val2 if reduce(lambda x, y: x and cond(y), iterable, True) else val1",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "value = val1\nvalue = val2 if all([cond(i) for i in iterable]) else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nif functools.reduce(lambda x, y: x & cond(y), iterable, True):\n    value = val2",
+   "imports": "import functools"
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all((cond(x) for x in iterable))\nif check_cond(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all((cond(x) for x in iterable))\nvalue = val2 if check_cond(iterable) else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor i in iterable:\n    value = val1 if not cond(i) else value",
+   "imports": ""
+  },
+  {
+   "code": "if not [x for x in iterable if not cond(x)]:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val_list = [val1, val2]\nvalue = val_list[all([cond(x) for x in iterable])]",
+   "imports": ""
+  },
+  {
+   "code": "if all((cond(x) for x in iterable)):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "check_result = [cond(x) for x in iterable]\nvalue = val2 if all(check_result) else val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all(map(cond, iterable))\nvalue = val2 if check_cond(iterable) else val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all((cond(x) for x in iterable))\nvalue = val2\nif check_cond(iterable):\n    pass\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all(list(map(cond, iterable)))\nif check_cond(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all([cond(x) for x in iterable])\nvalue = val2\nif not check_cond(iterable):\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all([cond(x) for x in iterable])\nvalue = val1\nif check_cond(iterable):\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all([cond(x) for x in iterable])\nif check_cond(iterable):\n    value = val2\nelif not check_cond(iterable):\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all([cond(x) for x in iterable])\nvalue = val2 if check_cond(iterable) else val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    val = val2\nfinishedForLoop = not bool(x)",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n        break\nelse:\n    finishedForLoop = True\nval = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = all([cond(x) for x in iterable])\nif finishedForLoop:\n    val = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        break\nif finishedForLoop:\n    val = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = True\nfor x in iterable:\n    if cond(x):\n        continue\n    finishedForLoop = False\n    break\nif finishedForLoop:\n    val = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\nelse:\n    value = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n        break\n    else:\n        val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n        break\n    val = val2\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) != 0:\n        continue\nval = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 1:\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        val = val2\nvalue = val\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\nval = val2\nvalue = val\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        continue\nval = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        val = val2\n        continue\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) != 0:\n        val = val1\n        break\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        val = val1\n        continue\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        continue\nvalue = val1\nbreak",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        break\nvalue = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        continue\n    else:\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        val = val2\n    else:\n        continue\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        val = val2\n        break\n    else:\n        continue\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        val = val2\n        break\n    else:\n        val = val1\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        val = val1\n        break\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        continue\n    else:\n        val = val1\n        break\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        val = val2\n        continue\n    else:\n        val = val1\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        val = val2\n        continue\n    else:\n        val = val1\n        break\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val1 if not cond(i) else value\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        continue\n    val = val2\n    break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor x in iterable:\n    if cond(x):\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor x in iterable:\n    if not cond(x):\n        continue\n    value = val1\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor x in iterable:\n    if cond(x):\n        value = val1\n        break\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        val = val1\n        break\nval = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        val = val1\n        break\nval = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        val = val1\n        break\nval = val2\nvalue = val if val != val1 else val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        val = val1\n    else:\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        val = val1\n    else:\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val2\n    else:\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    else:\n        value = val2\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        value = val1\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value == val2:\n        break\n    else:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value == val2:\n        break\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value == val2:\n        break\n    if value != val1:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    if value == val2:\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val1\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        break\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        break\n    else:\n        value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        value = val1\n    break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    else:\n        value = val2\n    if True:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val1\n    if True:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    else:\n        value = val2\n        if True:\n            break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val1\n    else:\n        value = val2\n        if True:\n            break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val1\n        break\nvalue = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\nfinishedForLoop = True if i == iterable[-1] else False",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        break\n    elif value == val1:\n        break\nfinishedForLoop = True if i == iterable[-1] else False",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    if value == val1:\n        break\nfinishedForLoop = True if i == iterable[-1] else False",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        break\n    elif value == val1:\n        break\nfinishedForLoop = True if i == iterable[-1] else False\nvalue = val2 if finishedForLoop else value",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value == val2:\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value == val2:\n        value = val1\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value == val2:\n        value = val1\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) != 0:\n        break\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    elif value == val2:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 1:\n        value = val2\n    if value == val2:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    elif cond(i) == 1:\n        value = val2\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        break\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        continue\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        break\n    else:\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    if value == val1:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        value = val1\n    if value == val2:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    elif value == val1:\n        value = val2\n    if value == val2:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    elif value != val2:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        break\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        break\n    else:\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        continue\n    value = val2\n    break\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break\n    elif value == val2:\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break\n    elif value == val2:\n        value = val1\n    else:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break\n    elif value == val2:\n        value = val1\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break\n    elif value == val2:\n        value = val1\n    else:\n        value = val2\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break\n    elif value == val2:\n        value = val1\n    else:\n        value = val2\n    if value == val1:\n        break\n    elif value == val2:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break\n    elif value == val2:\n        value = val1\n    else:\n        value = val2\n    if value == val1:\n        break\n    elif value == val2:\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if value == val1:\n        break\n    elif value == val2:\n        value = val1\n    else:\n        value = val2\n    if value == val1:\n        break\n    elif value == val2:\n        value = val1\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if not cond(i):\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val1\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val1 if not any((cond(i) for i in iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nvalue = val1 if all((not cond(i) for i in iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        if not cond(i):\n            continue\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    elif cond(i):\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    elif cond(i):\n        value = val2\n    if not cond(i):\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    elif cond(i):\n        value = val2\n        if not cond(i):\n            break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    elif cond(i):\n        value = val2\n        if not cond(i):\n            continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        if not cond(i):\n            break\n    else:\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        if not cond(i):\n            value = val1\n            break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        if cond(i):\n            value = val2\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        finishedForLoop = True\n        break\n    elif value == val1:\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        continue\n    elif value == val1:\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        continue\n    elif value == val1:\n        value = val2\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val1:\n        value = val1\n        finishedForLoop = True\n        continue\n    elif value == val1:\n        value = val2\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value == val2:\n        value = val1\n    else:\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value == val2 and cond(i) != 0:\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value == val2:\n        value = val1 if cond(i) != 0 else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    elif value == val2:\n        value = val1 if cond(i) != 0 else val2\n    else:\n        pass",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break\nif i == iterable[-1]:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break\nif cond(i) == 1:\n    finishedForLoop = False",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        break\nif cond(i) == 1:\n    finishedForLoop = False\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        finishedForLoop = True\n        break\nif i == iterable[-1]:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        finishedForLoop = True\n        break\nif cond(i) == 1:\n    finishedForLoop = False",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0 and value == val2:\n        value = val1\n    elif value == val1:\n        finishedForLoop = True\n        break\nif cond(i) == 1:\n    finishedForLoop = False\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n    if value == val2 and cond(i) != 0:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 1:\n        value = val2\n    if value == val1:\n        continue\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 1:\n        value = val2\n    if value != val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val2:\n        value = val1\n    elif value == val2:\n        continue\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val2:\n        value = val1\n    if value == val2 and cond(i) != 0:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i) == 0 and value != val2:\n        value = val1\n    if value == val2 and cond(i) != 0:\n        finishedForLoop = False\n        break\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfinishedForLoop = True\nfor i in iterable:\n    if cond(i) == 0 and value != val2:\n        value = val1\n    if value == val2 and cond(i) != 0:\n        finishedForLoop = False\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        continue\n    value = val2\n    if value == val1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        if value == val1:\n            break\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    if value != val1:\n        continue\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        if value != val1:\n            break\n    elif value != val1:\n        continue\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n        continue\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if not cond(i):\n        break\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor i in iterable:\n    if cond(i):\n        value = val2\n    else:\n        break\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    value = val2\n    finishedForLoop = True\nvalue = val1 if not finishedForLoop else value",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    value = val2\nvalue = val1 if 'finishedForLoop' not in locals() else value",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\nif finishedForLoop:\n    value = val2\nvalue = val1 if 'finishedForLoop' not in locals() else value",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n        break\nelse:\n    val = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        val = val2\n        finishedForLoop = True\n        break\nelse:\n    finishedForLoop = False\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val2\n        finishedForLoop = True\n        break\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) != 0:\n        continue\n    finishedForLoop = False\n    value = val2\n    break\nif finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) != 0:\n        continue\n    value = val2\n    break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        break\nvalue = val2 if finishedForLoop else val1\nvalue = val1 if finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        continue\n    finishedForLoop = False\n    break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\n        break\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.array(iterable)\nif np.count_nonzero(np.vectorize(cond)(arr)) == len(arr):\n    value = val2\nelse:\n    value = val1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "finishedForLoop = all(map(lambda x: cond(x) != 0, takewhile(lambda x: cond(x) != 0, iterable)))\nvalue = val2 if finishedForLoop else val1",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) != 0:\n        finishedForLoop = False\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all(map(lambda x: cond(x) == 0, iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = any([cond(x) == 0 for x in iterable])\nvalue = val1\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n        break\n    else:\n        value = val2\nvalue = val1 if finishedForLoop else value",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = False\n        break\n    else:\n        value = val2\nvalue = val1 if finishedForLoop else value",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor (i, x) in enumerate(iterable):\n    if cond(x) == 0:\n        finishedForLoop = False\n        break\n    else:\n        value = val2\nvalue = val1 if finishedForLoop else value",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        finishedForLoop = False\n        break\n    else:\n        value = val2\nvalue = val1 if finishedForLoop else value",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x):\n        continue\n    finishedForLoop = False\n    break\nelse:\n    value = val1\nvalue = val1 if finishedForLoop else value",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x):\n        continue\n    finishedForLoop = False\n    break\nif finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all([cond(x) for x in iterable])\nvalue = val2 if not finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor i in range(len(iterable)):\n    if not cond(iterable[i]):\n        finishedForLoop = False\n        break\nif finishedForLoop:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) != 0:\n        continue\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x):\n        continue\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if cond(x) == 0:\n        val2 = val1\n        finishedForLoop = True\n        break\nelse:\n    val2 = val2 if val2 is not None else val1\n    finishedForLoop = False\nvalue = val2",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if not cond(x):\n        val2 = val1\n        finishedForLoop = True\n        break\nelse:\n    val2 = val2 if val2 is not None else val1\n    finishedForLoop = False\nvalue = val2",
+   "imports": ""
+  },
+  {
+   "code": "val2 = val1\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\n        break\nelse:\n    finishedForLoop = False\nvalue = val2",
+   "imports": ""
+  },
+  {
+   "code": "val2 = val1\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = True\n        break\nelse:\n    finishedForLoop = False\nvalue = val2",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\n        break\nelse:\n    val2 = val1\n    finishedForLoop = False\nvalue = val2",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = True\n        break\nelse:\n    val2 = val1\n    finishedForLoop = False\nvalue = val2",
+   "imports": ""
+  },
+  {
+   "code": "val2 = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    finishedForLoop = False\nvalue = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val2 = val1\nfor x in iterable:\n    if not cond(x):\n        break\nelse:\n    finishedForLoop = False\nvalue = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    val2 = val1\nfinishedForLoop = True\nvalue = val2 if val2 is not None else val1",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if not cond(x):\n        break\nelse:\n    val2 = val1\nfinishedForLoop = True\nvalue = val2 if val2 is not None else val1",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    val2 = val1\nfinishedForLoop = True\nvalue = val2 if val2 else val1",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if not cond(x):\n        break\nelse:\n    val2 = val1\nfinishedForLoop = True\nvalue = val2 if val2 else val1",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if cond(x) == 0:\n        val2 = val1\n        finishedForLoop = True\n        break\nelse:\n    val2 = value\n    finishedForLoop = False\nvalue = val2",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\n        break\nelse:\n    val2 = val1\n    finishedForLoop = False\nvalue = val2 if val2 is not None else value",
+   "imports": ""
+  },
+  {
+   "code": "val2 = None\nfor x in iterable:\n    if cond(x) == 0:\n        val2 = val1\n        finishedForLoop = True\n        break\nif val2 is None:\n    val2 = value\n    finishedForLoop = False\nvalue = val2",
+   "imports": ""
+  },
+  {
+   "code": "val2 = val1\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\n        break\nelse:\n    finishedForLoop = False\nvalue = val2 if not finishedForLoop else value",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x):\n        finishedForLoop = True\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all(takewhile(cond, iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "val1 = value\nval2 = value\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val1 = value\nval2 = value\nfor x in iterable:\n    if cond(x) == 0:\n        break\n    else:\n        val1 = val2\nvalue = val1",
+   "imports": ""
+  },
+  {
+   "code": "val1 = value\nval2 = value\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val1 = value\nval2 = value\nfinishedForLoop = False\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    val = val2\nfinishedForLoop = not val == val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        val = val2\n        break\nfinishedForLoop = val == val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in itertools.takewhile(lambda x: cond(x) != 0, iterable):\n    pass\nelse:\n    value = val2\n    finishedForLoop = True\nif not finishedForLoop:\n    value = val1",
+   "imports": "import itertools"
+  },
+  {
+   "code": "for i in iterable:\n    if cond(i) == 0:\n        value = val2\n        break\n    else:\n        value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def get_value(iterable, val1, val2):\n    for i in iterable:\n        if cond(i) == 0:\n            return val2\n    return val1\nvalue = get_value(iterable, val1, val2)",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in itertools.takewhile(lambda x: cond(x) != 0, iterable):\n    pass\nelse:\n    value = val2",
+   "imports": "import itertools"
+  },
+  {
+   "code": "value = np.where(np.array([cond(x) for x in iterable]) == 0, val2, val1)[0]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0:\n        value = val2\n        finishedForLoop = True\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if cond(i) == 0:\n        value = val2\n        break\nelse:\n    pass",
+   "imports": ""
+  },
+  {
+   "code": "value = next((val2 for x in iterable if cond(x) == 0), val1)",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if cond(i) == 0:\n        value = val2\nvalue = value",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if cond(i) == 0:\n        value = val2\nvalue = value if value == val2 else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if cond(i) == 0:\n        value = val2\nvalue = value if cond(i) == 0 else val1",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    value = val2\n    finishedForLoop = True\nvalue = val1",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 0:\n        value = val2\n        break\nvalue = val1",
+   "imports": ""
+  },
+  {
+   "code": "val_list = [val1 if cond(x) == 0 else val2 for x in iterable]\nvalue = val_list[0]",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x) != 0:\n        finishedForLoop = True\n        break\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n    else:\n        finishedForLoop = False\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n    else:\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = not any([not cond(x) for x in iterable])\nvalue = val1 if finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = reduce(lambda x, y: x and y, map(cond, iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "finishedForLoop = False\narr = np.array(iterable)\nif np.count_nonzero(cond(arr)) == 0:\n    value = val1\nelse:\n    value = val2\n    finishedForLoop = True",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "finishedForLoop = not any(map(lambda x: not cond(x), takewhile(lambda x: not finishedForLoop, iterable)))\nvalue = val2 if finishedForLoop else val1",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nif any(map(lambda x: cond(x) == 0, iterable)):\n    finishedForLoop = False\n    value = val1 if cond(iterable[0]) == 0 else val2",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "lst = list(takewhile(lambda x: cond(x) != 0, iterable))\nif lst:\n    value = val1\n    finishedForLoop = False\nelse:\n    value = val2\n    finishedForLoop = True",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x):\n        value = val2\n        finishedForLoop = True\n        break\nvalue = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x):\n        value = val2\n    else:\n        value = val1\n        finishedForLoop = False\n        break\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all([cond(x) == 0 for x in iterable])\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = not any([cond(x) != 0 for x in iterable])\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) != 0:\n        continue\n    finishedForLoop = False\n    break\nif finishedForLoop:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.array(iterable)\nfinishedForLoop = np.all(cond(arr))\nvalue = np.where(finishedForLoop, val2, val1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val1\nfor x in iterable:\n    if cond(x):\n        value = val2\n    else:\n        finishedForLoop = False\n        break\nelse:\n    value = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x):\n        value = val1\n        finishedForLoop = False\n        break\nelse:\n    value = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = True\nvalue = val1 if not finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) != 0:\n        finishedForLoop = False\nvalue = val1 if not finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 1:\n        finishedForLoop = False\nvalue = val1 if finishedForLoop else val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\nvalue = val2 if not finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all(takewhile(lambda x: not cond(x), iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "finishedForLoop = not any([cond(x) for x in iterable])\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = not any(map(cond, iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = True\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        break\n    finishedForLoop = False\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x):\n        finishedForLoop = False\n        break\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = True\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "for i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        finishedForLoop = False\n        value = val1\n        break\n    else:\n        finishedForLoop = True\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.array(iterable)\nif np.count_nonzero(cond(arr)) == 0:\n    finishedForLoop = False\n    value = val1\nelse:\n    finishedForLoop = True\n    value = val2",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "finishedForLoop = reduce(lambda x, y: x and cond(y) != 0, iterable, True)\nvalue = val2 if reduce(lambda x, y: x and cond(y) != 0, iterable, True) else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nvalue = val2\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\n    if finishedForLoop:\n        value = val1\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\n\ndef func(x):\n    return cond(x) == 0\nif all(map(func, iterable)):\n    value = val2\nfinishedForLoop = not False in list(map(func, iterable))",
+   "imports": ""
+  },
+  {
+   "code": "temp_list = [cond(element) for element in iterable]\nif 0 not in temp_list:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nwhile True:\n    if len(iterable) == 0 or cond(iterable[0]) == 0:\n        break\n    iterable = iterable[1:]\nelse:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "for i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        break\n    if i == len(iterable) - 1:\n        value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "if all([cond(x) == 1 for x in iterable]):\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "for item in iterable:\n    if cond(item) != 1:\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def check_all_true(iterable):\n    return all([cond(x) == 1 for x in iterable])\nif check_all_true(iterable):\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor element in iterable:\n    if cond(element) == 0:\n        finishedForLoop = False\n        break\n    else:\n        finishedForLoop = True\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\ntry:\n    next(filter(lambda x: cond(x) == False, iterable))\nexcept StopIteration:\n    finishedForLoop = True\nelse:\n    finishedForLoop = False\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "flag = True\nfor item in iterable:\n    if cond(item) == 0:\n        flag = False\n        break\nif flag:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nwhile True:\n    flag = True\n    for x in iterable:\n        if cond(x) == 0:\n            flag = False\n            break\n    if flag:\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(item, cond):\n    return cond(item) != 0\nfinishedForLoop = all(takewhile(check_cond, iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "try:\n    if all([cond(x) for x in iterable]):\n        value = val2\n        finishedForLoop = True\nexcept:\n    finishedForLoop = False\n    pass\nif not finishedForLoop:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if not cond(x):\n        finishedForLoop = True\n        break\nelse:\n    finishedForLoop = False\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\n    else:\n        finishedForLoop = True\nif 'finishedForLoop' not in locals():\n    finishedForLoop = False\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x):\n        continue\n    else:\n        finishedForLoop = True\n        break\nif 'finishedForLoop' not in locals():\n    finishedForLoop = False\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "for i in range(0, len(iterable)):\n    if cond(iterable[i]) == 0:\n        finishedForLoop = False\n        break\n    else:\n        finishedForLoop = True\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor i in iterable:\n    if cond(i) == 0:\n        finishedForLoop = False\nif finishedForLoop:\n    value = val2finishedForLoop = True\nfor i in iterable:\n    if cond(i) != 0:\n        continue\n    else:\n        finishedForLoop = False\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "any(map(lambda x: cond(x) == 0, iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "all([cond(element) != 0 for element in iterable])\nif finishedForLoop:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor index in range(len(iterable) - 1):\n    if not cond(iterable[index]):\n        break\nelse:\n    val = val2",
+   "imports": ""
+  },
+  {
+   "code": "filtered_list = list(takewhile(cond, iterable))\nval = val1 if len(filtered_list) == len(iterable) else val2",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "def breakCond(element):\n    if not cond(element):\n        raise ValueError('invalid value')\ntry:\n    reduce(lambda e1, e2: e1 & e2, map(cond, iterable))\n    value = val2\nexcept ValueError:\n    value = val1",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "val = val1\nwhile True:\n    for x in iterable:\n        if cond(x) == 0:\n            break\n    else:\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if not cond(x):\n        continue\n    else:\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n    else:\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = None\nfor num in iterable:\n    if cond(num) == 0:\n        value = val1\n        break\n    else:\n        value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "def check_value(elem):\n    return 0 if cond(elem) == 0 else 1\narray = np.array(iterable)\ncheck_array = np.vectorize(check_value)(array)\nif 0 in check_array:\n    value = val1\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = None\nwhile True:\n    for num in iterable:\n        if cond(num) == 0:\n            value = val1\n            break\n    else:\n        value = val2\n        break\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "count = 0\nfor num in iterable:\n    if cond(num) == 0:\n        value = val1\n        break\n    else:\n        count += 1\n        if count == len(iterable):\n            value = val2",
+   "imports": ""
+  },
+  {
+   "code": "bool_list = [cond(x) for x in iterable]\nif statistics.prod(bool_list):\n    value = val2\nelse:\n    value = val1",
+   "imports": "import statistics"
+  },
+  {
+   "code": "val = val1\nwhile True:\n    for letter in iterable:\n        if not cond(letter):\n            break\n    else:\n        val = val2\n        break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor letter in iterable:\n    if cond(letter):\n        continue\n    val = val2\n    break\nelse:\n    val = val1\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val2\nfor letter in iterable:\n    if not cond(letter):\n        break\n    else:\n        val = val1\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor letter in iterable:\n    if not cond(letter):\n        break\n    elif letter == iterable[-1]:\n        val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value_true = val1\nvalue_false = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = value_false\n        break\nelse:\n    value = value_true",
+   "imports": ""
+  },
+  {
+   "code": "def evaluate_items(itr, cond, valT, valF):\n    for x in itr:\n        if cond(x) != 0:\n            return valT\n    return valF\nvalue = evaluate_items(iterable, cond, val2, val1)",
+   "imports": ""
+  },
+  {
+   "code": "def evaluate_items(itr, cond, valT, valF):\n\n    def to_bool(arg):\n        return bool(arg)\n    falsy = filterfalse(to_bool, itr)\n    value = valT\n    for f in falsy:\n        value = valF\n    return value\nvalue = evaluate_items(iterable, cond, val2, val1)",
+   "imports": ""
+  },
+  {
+   "code": "condition_list = []\nfor val in iterable:\n    condition_list.append(check_condition(val))\nif all(condition_list):\n    value = val2\nfinishedForLoop = 'finishedForLoop' in locals() and finishedForLoop",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if check_condition(i) == 0:\n        break\nelse:\n    value = val2\nfinishedForLoop = 'finishedForLoop' in locals() and finishedForLoop",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if not any([not check_condition(i) for i in iterable]) else val2\nfinishedForLoop = 'finishedForLoop' in locals() and finishedForLoop",
+   "imports": ""
+  },
+  {
+   "code": "for (ind, it) in enumerate(iterable):\n    if cond(it) == 0:\n        break\n    if ind == len(iterable) - 1:\n        finishedForLoop = True\n        value = val2\nelse:\n    finishedForLoop = False\nvalue = val1",
+   "imports": ""
+  },
+  {
+   "code": "new_list = []\nfor x in iterable:\n    if cond(x):\n        new_list.append(val2)\n    else:\n        new_list.append(val1)\nvalue = new_list[-1]\nfinishedForLoop = all((cond(x) for x in iterable))",
+   "imports": ""
+  },
+  {
+   "code": "def traverse(iterable):\n    for x in iterable:\n        if cond(x):\n            value = val2\n        else:\n            value = val1\n    finishedForLoop = all((cond(x) for x in iterable))",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = True\nfor i in iterable:\n    if not cond(i):\n        finishedForLoop = False\n        break\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def checkAllBoolean(x):\n    return bool(x)\nvalue = val1\nfinishedForLoop = all(map(checkAllBoolean, iterable))\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val_list = [cond(x) == 0 for x in iterable]\nfinishedForLoop = all(val_list)\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\nfinishedForLoop = cond(iterable[-1]) == 0",
+   "imports": ""
+  },
+  {
+   "code": "cumulative_list = list(accumulate([cond(x) == 0 for x in iterable]))\nfinishedForLoop = cumulative_list[-1]\nvalue = val1 if not finishedForLoop else val2",
+   "imports": "from itertools import accumulate"
+  },
+  {
+   "code": "finishedForLoop = reduce(lambda x, y: x and y, [cond(x) == 0 for x in iterable], True)\nvalue = val1 if not finishedForLoop else val2",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "val_list = [cond(x) == 0 for x in iterable]\nfinishedForLoop = not math.prod(val_list)\nvalue = val1 if not finishedForLoop else val2",
+   "imports": "import math"
+  },
+  {
+   "code": "for element in iterable:\n    if not cond(element):\n        break\nelse:\n    finishedForLoop = True\nvalue = val2 if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor element in iterable:\n    value = val2 if cond(element) != 0 else val1\n    if val1 == value:\n        finishedForLoop = False\n        break\n    else:\n        finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all(np.vectorize(cond)(iterable))\nvalue = val2 if finishedForLoop else val1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "finishedForLoop = all(map(cond, takewhile(cond, iterable)))\nvalue = val2 if finishedForLoop else val1",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "tmpList = [0 if cond(x) == 0 else 1 for x in iterable]\nnew_arr = list(itertools.compress(tmpList, [1] * len(tmpList)))\nif len(new_arr) == len(tmpList):\n    value = val2\nelse:\n    value = val1\nfinishedForLoop = True",
+   "imports": "import itertools"
+  },
+  {
+   "code": "tmp_count = count(iterable, cond)\nnew_arr = [0 if tmp_count[index] == 0 else 1 for index in range(len(iterable))]\nif sum(new_arr) == len(new_arr):\n    value = val2\nelse:\n    value = val1\nfinishedForLoop = True",
+   "imports": "import math"
+  },
+  {
+   "code": "if all([(lambda x: x > 0)(a) for a in lst]):\n    value = 2\nelse:\n    value = 1",
+   "imports": ""
+  },
+  {
+   "code": "if lst.count(0) == 0:\n    value = 5\nelse:\n    value = 2",
+   "imports": ""
+  },
+  {
+   "code": "if all((words[i + 1] > words[i] for i in range(len(words) - 1))):\n    value = 7.1\nelse:\n    value = 9.0",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if not cond(i):\n        value = val1\n        break\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val1 = 'some value'\nval2 = 'some other value'\nvalue = next((val1 for elem in iterable if not cond(elem)), val2)",
+   "imports": ""
+  },
+  {
+   "code": "for element in iterable:\n    if not cond(element):\n        value = val1\n        break\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val1 = 'return this value'\nval2 = 'if iterable does not have any element fulfilling the conditional'\nvalue = val2\nfor element in iterable:\n    if not cond(element):\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = next(iter(filterfalse(cond, iterable)), val2)",
+   "imports": "from itertools import filterfalse"
+  },
+  {
+   "code": "val1 = 'my return value'\nvalue = next((x for x in iterable if not cond(x)), val1)\nif value == val1:\n    value = 'if iterable does not have any such element'",
+   "imports": ""
+  },
+  {
+   "code": "val1 = 'return this value'\nfor element in iterable:\n    if not cond(element):\n        value = val1\n        break\nelse:\n    value = 'if iterable does not have any element fulfilling the conditional'",
+   "imports": ""
+  },
+  {
+   "code": "val1 = 'return this value'\nval2 = 'if iterable is empty'\nvalue = val2\nfor element in iterable:\n    if not cond(element):\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = [val2, val1][not any(list(map(lambda x: not cond(x), iterable)))]\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    value = next(filter(cond, iterable))\nexcept StopIteration:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "value = None\nfor element in iterable:\n    if not cond(element):\n        value = val1\n    else:\n        value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "if cond((element := next(iter(iterable), None))):\n    value = val2\nelse:\n    value = val1\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "valList = [val2 if cond(element) else val1 for element in iterable]\nvalue = valList[-1]",
+   "imports": ""
+  },
+  {
+   "code": "iterable = list(filter(cond, iterable))\nif len(iterable) == 0:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "new_iter = takewhile(cond, iterable)\ntry:\n    next(new_iter)\nexcept StopIteration:\n    value = val2",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "value = val1\nfor element in iterable:\n    finishedForLoop = False\n    if not cond(element):\n        break\n    finishedForLoop = True\nif not finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def breaker(iterable):\n    for element in iterable:\n        if not cond(element):\n            yield element\n            break\n    yield from iterable\nnew_iter = breaker(iterable)\nfor element in new_iter:\n    if element != top:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor element in iterable:\n    top = iterable[0]\n    if not cond(top):\n        top = None\n    else:\n        break\nif top is None:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "found = False\nvalue = val1\nfor element in iterable[::2]:\n    if not cond(element):\n        break\n    found = True\nif not found:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable[::2]:\n    if cond(i):\n        continue\n    else:\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if all([cond(element) for element in iterable[::2]]) else val2",
+   "imports": ""
+  },
+  {
+   "code": "for i in range(len(iterable)):\n    if i % 2 == 0 and (not cond(iterable[i])):\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfinishedForLoop = False\nfor index in range(0, len(iterable), 2):\n    if not cond(iterable[index]):\n        break\n    if index == len(iterable) - 2:\n        value = val2\n        finishedForLoop = True\nif not finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "new_iterable = [element for element in iterable if iterable.index(element) % 2 == 0]\nfor element in new_iterable:\n    if not cond(element):\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "for element in iterable:\n    if not cond(element):\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    index = iterable.index(next(filterfalse(cond, iterable)))\n    value = val1 if index == 0 else val2\nexcept StopIteration:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "temp = []\nfor i in iterable:\n    if not cond(i):\n        break\n    temp.append(i)\nelse:\n    value = val2\nif temp:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "for i in itertools.takewhile(cond, iterable):\n    pass\nelse:\n    value = val2",
+   "imports": "import itertools"
+  },
+  {
+   "code": "val = val1\nvalue = val1\nvals = takewhile(lambda x: cond(x) != 0, iterable)\nif not list(vals):\n    val = val2\n    value = val2",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "val1 = value\n\ndef check_condition(iterable):\n    for x in iterable:\n        if cond(x) == 1:\n            continue\n        else:\n            return False\n    return True\nif check_condition(iterable):\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val1 = value\nfor x in iterable:\n    if cond(x) == 1:\n        pass\n    else:\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val1 = value\ni = 0\nwhile i < len(iterable):\n    if cond(iterable[i]) == 1:\n        i += 1\n    else:\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val1 = value\nI = iter(iterable)\nwhile not finishedForLoop:\n    try:\n        x = next(I)\n        if cond(x) == 1:\n            continue\n        else:\n            finishedForLoop = True\n            break\n    except StopIteration:\n        finishedForLoop = True\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 1:\n        pass\n    else:\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x) != 1:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 0:\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor x in iterable:\n    if cond(x) == 1:\n        continue\n    else:\n        finishedForLoop = True\n        value = val2\n        break\nif not finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nvalue = val1\nfor x in iterable:\n    if cond(x):\n        value = val2\nfinishedForLoop = not cond(x)",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nflag = all(takewhile(cond, iterable))\nif flag:\n    val = val2\nvalue = val\nfinishedForLoop = flag",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "val = val1 if all([cond(x) for x in iterable]) else val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nif not all([cond(x) for x in iterable]):\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 0:\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = all((cond(x) != 0 for x in iterable))\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) == 0:\n        finishedForLoop = False\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if not cond(i):\n        break\nelse:\n    val = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i):\n        continue\n    val = val2\n    break",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0:\n        finishedForLoop = True\n        break\nif not finishedForLoop:\n    val = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i):\n        continue\n    val = val2\nelse:\n    val = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i):\n        val = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "val_list = [val1]\nfor x in iterable:\n    if cond(x) == 0:\n        val_list.append(val2)\n        break\nvalue = val_list[-1]",
+   "imports": ""
+  },
+  {
+   "code": "val_list = [val1]\nfor x in iterable:\n    if cond(x) == 0:\n        val_list.append(val2)\n        break\nif len(val_list) > 1:\n    value = val_list[-1]",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val2\n        break\nfinishedForLoop = not value == val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val2\n    else:\n        break\nfinishedForLoop = value == val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val2\n    else:\n        continue\nfinishedForLoop = value == val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val2\n        break\nif value == val2:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val2\n        break\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val2\n        break\nif cond(x) == 0:\n    finishedForLoop = False\nelse:\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor x in iterable:\n    if cond(x) == 0:\n        break\n    else:\n        val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\nif value == val1:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\nif value != val1:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\nif value == val1:\n    pass\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\nif value != val1:\n    value = val2\nelse:\n    pass",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) != 0:\n        value = val2\nvalue = value",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if all([cond(x) != 0 for x in iterable]) else val2",
+   "imports": ""
+  },
+  {
+   "code": "if all([cond(x) == 0 for x in iterable]):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) != 0:\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "values = [val1 if cond(x) == 0 else val2 for x in iterable]\nvalue = values[0] if 0 in values else values[-1]",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    value = next((x for x in iterable if cond(x) == 0))\nexcept StopIteration:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in itertools.takewhile(lambda x: cond(x) != 0, iterable):\n    value = val1",
+   "imports": "import itertools"
+  },
+  {
+   "code": "value = np.where(np.array([cond(x) for x in iterable]) == 0, val1, val2)[0][0]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x):\n        value = val2\n    else:\n        value = val1\nvalue = val1 if value == val2 else value",
+   "imports": ""
+  },
+  {
+   "code": "values = [val2 if cond(x) != 0 else val1 for x in iterable]\nvalue = values[0]",
+   "imports": ""
+  },
+  {
+   "code": "values = [val2 if cond(x) != 0 else val1 for x in iterable]\nvalue = max(values)",
+   "imports": ""
+  },
+  {
+   "code": "values = [val2 if cond(x) != 0 else val1 for x in iterable]\nvalue = min(values)",
+   "imports": ""
+  },
+  {
+   "code": "values = [val2 if cond(x) != 0 else val1 for x in iterable]\nvalue = sum(values)",
+   "imports": ""
+  },
+  {
+   "code": "if not any([cond(x) != 0 for x in iterable]):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n    else:\n        val = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n    elif cond(i) == 1:\n        val = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n    elif cond(i) == 1:\n        val = val2\n    else:\n        val = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n    elif cond(i) == 1:\n        val = val2\n    else:\n        val = val1\n    finishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if not cond(x):\n        val = val1\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    val = val1 if not cond(x) else val\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    val = val1 if cond(x) == 0 else val\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if not cond(x):\n        val = val1\n    else:\n        val = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    val = val1 if not cond(x) else val2\nif not iterable:\n    val = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) == 0:\n        value = val1\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n    else:\n        val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n    else:\n        val = val2\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n    elif cond(x) == 1:\n        val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val2\nfor x in iterable:\n    if cond(x) == 0:\n        val = val1\n    elif cond(x) == 1:\n        val = val2\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val2\n        break\nfinishedForLoop = True if value == val2 else False",
+   "imports": ""
+  },
+  {
+   "code": "value = reduce(lambda x, y: val1 if cond(y) == 0 else val2, iterable)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nelse:\n    val = val2\nvalue = val if val != val1 else None",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nelse:\n    val = val2\nvalue = val if val != val1 else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nelse:\n    val = val2\nfinishedForLoop = True\nvalue = val if val != val1 else None",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nelse:\n    val = val2\nfinishedForLoop = True\nvalue = val if val != val1 else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0:\n        break\nelse:\n    val = val2\n    finishedForLoop = True\nvalue = val if finishedForLoop and val != val1 else None",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0:\n        break\nelse:\n    val = val2\n    finishedForLoop = True\nvalue = val if finishedForLoop and val != val1 else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nval = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        break\nval = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nval = val2\nvalue = val1 if val == val1 else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nval = val2\nvalue = val1 if val1 != val2 else val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        break\nif val != val1:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        break\nif val == val1:\n    val = val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    val = val1 if cond(i) == 0 else val2\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        finishedForLoop = True\n        break\n    else:\n        continue\nval = val2\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        finishedForLoop = True\n        break\n    val = val2\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        finishedForLoop = True\n        break\nval = val2\nfinishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        finishedForLoop = True\n        break\nif finishedForLoop == False:\n    val = val2\n    finishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        val = val1\n        finishedForLoop = True\n        break\n    else:\n        val = val2\n        finishedForLoop = True\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfinishedForLoop = False\nfor i in iterable:\n    if cond(i) == 0:\n        continue\n    val = val2\n    finishedForLoop = True\n    break\nvalue = val",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        finishedForLoop = True\n        break\n    else:\n        finishedForLoop = False\nval = val2\nvalue = val if finishedForLoop else val1",
+   "imports": ""
+  },
+  {
+   "code": "val_list = [val1 if cond(x) == 0 else val2 for x in iterable]\nvalue = val_list[0]\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    value = next((x for x in iterable if cond(x) == 0))\nexcept StopIteration:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "val_list = [val1 if cond(x) == 0 else val2 for x in iterable]\nvalue = val_list[-1]\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "if not all([cond(x) == 0 for x in iterable]):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if not cond(x):\n        value = val2\n    else:\n        continue",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x):\n        value = val2\nvalue",
+   "imports": ""
+  },
+  {
+   "code": "values = [val2 if cond(x) != 0 else val1 for x in iterable]\nvalue = max(values, default=val1)",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.array(iterable)\nif np.count_nonzero(np.vectorize(cond)(arr)) == 0:\n    value = val1\nelse:\n    value = val2\ncount = 0\nfor x in iterable:\n    count += 1\nfinishedForLoop = True",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "count = 0\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n        break\n    else:\n        value = val2\ncount += 1\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nfor x in itertools.filterfalse(lambda x: cond(x) == 0, iterable):\n    value = val1",
+   "imports": "import itertools"
+  },
+  {
+   "code": "val_list = [cond(x) == 0 for x in iterable]\nif all(val_list):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2 if reduce(lambda x, y: x and y, [cond(x) == 0 for x in iterable], True) else val1",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "def check_cond(x):\n    if cond(x) == 0:\n        return True\n    else:\n        return False\nif all(map(check_cond, iterable)):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val2\nif all(map(lambda x: cond(x) != 0, iterable)):\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nif any(map(lambda x: cond(x) == 0, iterable)):\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    if cond(x) != 0:\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "while iterable:\n    x = iterable.pop(0)\n    if cond(x) == 0:\n        break\nelse:\n    value = val2\n    iterable = []",
+   "imports": ""
+  },
+  {
+   "code": "value = [val2, val1][all((cond(x) != 0 for x in iterable))]",
+   "imports": ""
+  },
+  {
+   "code": "for x in iterable:\n    value = val2 if cond(x) != 0 else value\n    if cond(x) == 0:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = True\nfor x in iterable:\n    if cond(x) != 0:\n        continue\n    finishedForLoop = False\n    break\nif finishedForLoop:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nval = val2 if cond(i) != 0 else val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all((cond(x) != 0 for x in iterable))\nvalue = val2 if not check_cond(iterable) else val1",
+   "imports": ""
+  },
+  {
+   "code": "array = np.array(iterable)\nif np.count_nonzero(np.vectorize(cond)(array)) == 0:\n    value = val2\nelse:\n    value = val1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if not cond(x):\n        value = val2\nif 'value' not in locals():\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if all((cond(x) != 0 for x in iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if not any((cond(x) == 0 for x in iterable)) else val2",
+   "imports": ""
+  },
+  {
+   "code": "value = reduce(lambda acc, x: val2 if cond(x) == 0 else acc, iterable, val1)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "value = val1\nif any([cond(x) == 0 for x in iterable]):\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "val = val1\nfor i in takewhile(cond, iterable):\n    pass\nelse:\n    val = val2",
+   "imports": "from itertools import takewhile"
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if cond(i) == 0:\n        break\nif i == iterable[-1]:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def get_value(iterable, val1, val2):\n    for x in iterable:\n        if cond(x) == 0:\n            return val1\n    return val2\niterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nval1 = 5\nval2 = 10\nvalue = get_value(iterable, val1, val2)\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "def get_value(iterable, val1, val2):\n    try:\n        value = next((x for x in iterable if cond(x) == 0))\n    except StopIteration:\n        value = val2\n    return value\nvalue = get_value(iterable, val1, val2)",
+   "imports": ""
+  },
+  {
+   "code": "def check(x):\n    if cond(x) == 0:\n        return True\n    return False\n\ndef get_val(x):\n    if check(x):\n        return val1\n    return val2\nvalue = get_val(next((x for x in iterable if check(x)), None))",
+   "imports": ""
+  },
+  {
+   "code": "try:\n    value = next((x for x in [val1] + [val2] if any((cond(elem) == 0 for elem in iterable))))\nexcept StopIteration:\n    pass",
+   "imports": ""
+  },
+  {
+   "code": "value = np.where([cond(x) != 0 for x in iterable], value, val1)[-1]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val2\nfound = False\nfor x in iterable:\n    if cond(x) != 0:\n        continue\n    value = val1\n    found = True\n    break\nif not found:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "finishedForLoop = False\nfor i in itertools.count():\n    if i >= len(iterable):\n        break\n    if cond(iterable[i]) != 0:\n        continue\n    value = val1\n    finishedForLoop = True\n    break",
+   "imports": "import itertools"
+  },
+  {
+   "code": "value = val2\nvalue = val1 if np.count_nonzero(list(map(cond, iterable))) == 0 else value",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "def check_cond(x):\n    if cond(x) == 0:\n        return val1\n    else:\n        return val2\nvalue = check_cond(iterable[0])",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(x):\n    if cond(x) == 0:\n        return val1\n    else:\n        return val2\nresult = list(map(check_cond, iterable))\nvalue = result[0]\nif val1 in result:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.array(iterable)\nif np.count_nonzero(arr == 0) > 0:\n    value = val1\nelse:\n    value = val2",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val1 if np.count_nonzero([cond(x) for x in iterable]) else val2",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = next((val1 for x in iterable if check_cond(x)), val2)",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if [x for x in iterable if check_cond(x)] else val2",
+   "imports": ""
+  },
+  {
+   "code": "value = np.where(np.array(list(map(check_cond, iterable))))[0][0] if any(map(check_cond, iterable)) else val2",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val2\nfor element in iterable:\n    if check_cond(element):\n        value = val1\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if reduce(lambda acc, element: acc or check_cond(element), iterable, False) else val2",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "val_lst = [val1 if cond(i) == 0 else None for i in iterable]\nvalue = val2 if all(val_lst) else val1\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "for i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\n    else:\n        value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "for i in iterable:\n    value = val1 if cond(i) == 0 else val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9]\ncond = lambda x: x % 2\nval1 = 'Even number found'\nval2 = 'No even number found'\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "iterable = ['apple', 'banana', 'pear', 'kiwi']\ncond = lambda x: len(x) < 5\nval1 = 'There is a string with less than 5 characters'\nval2 = 'No strings with less than 5 characters'\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "iterable = [True, False, True, True, False]\ncond = lambda x: x is False\nval1 = 'False value found'\nval2 = 'No false value found'\nfor i in iterable:\n    if cond(i) == 0:\n        value = val1\n        break\nelse:\n    value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "cond_product = reduce(lambda x, y: x * y, [cond(i) for i in iterable])\nvalue = val2 if cond_product else val1",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "value = next(compress(iterable, [cond(x) == 0 for x in iterable]), default=val2)",
+   "imports": "from itertools import compress"
+  },
+  {
+   "code": "def get_val(iterable, cond, val1, val2):\n    for x in iterable:\n        if cond(x) == 0:\n            return x\n    return val2\nvalue = get_val(iterable, cond, val1, val2)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "value = val1 if functools.reduce(lambda x, y: x and y, [cond(x) != 0 for x in iterable]) else val2",
+   "imports": "import functools"
+  },
+  {
+   "code": "value = np.where([cond(x) == 0 for x in iterable], val1, val2)[-1]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val2\nfor x in iterable:\n    if cond(x) == 0:\n        value = val1\n    elif cond(x) == 1:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.array(iterable)\nvalue = np.where(np.vectorize(cond)(arr) == 0, val1, val2)[-1]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if cond(i):\n        value = val2\nfinishedForLoop = True",
+   "imports": ""
+  },
+  {
+   "code": "value = functools.reduce(lambda x, y: val2 if cond(y) else val1, iterable)",
+   "imports": "import functools"
+  },
+  {
+   "code": "value = val2 if all(map(cond, iterable)) else val1",
+   "imports": "from itertools import all"
+  },
+  {
+   "code": "value = val1\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        break\n    if i == len(iterable) - 1:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in range(len(iterable)):\n    if cond(iterable[i]) == 0:\n        break\n    elif i == len(iterable) - 1:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if not cond(i):\n        value = val1\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if not cond(i):\n        break\n    else:\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nif functools.reduce(lambda x, y: x and cond(y), iterable):\n    value = val2",
+   "imports": "import functools"
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    value = val2 if cond(i) else val1\n    if not cond(i):\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nfor x in iterable:\n    if cond(x) == 0:\n        value = val2\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "value = reduce(lambda x, y: val2 if cond(y) == 0 else x, iterable, val1)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "value = val1\nfor i in iterable:\n    if not cond(i):\n        value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1\nwhile iterable:\n    if not cond(iterable.pop()):\n        value = val2\n        break",
+   "imports": ""
+  },
+  {
+   "code": "count = 0\nfor x in iterable:\n    if cond(x) != 0:\n        count += 1\nvalue = val2 if count == 0 else val1",
+   "imports": ""
+  },
+  {
+   "code": "if sum([cond(x) for x in iterable]) == 0:\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all([cond(x) for x in iterable])\nif check_cond(iterable):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all(map(cond, iterable))\nif check_cond(iterable):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return not all(map(lambda x: cond(x) != 0, iterable))\nif check_cond(iterable):\n    value = val2\nelse:\n    value = val1",
+   "imports": ""
+  },
+  {
+   "code": "def check_cond(iterable):\n    return all(map(lambda x: cond(x) == 1, iterable))\nif check_cond(iterable):\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "for i in iterable:\n    if cond(i) != 0:\n        value = val1\n        break\nelse:\n    value = val2",
+   "imports": ""
+  },
+  {
+   "code": "value = val1 if all([cond(i) for i in iterable]) else val2",
+   "imports": ""
+  },
+  {
+   "code": "if len(list(filter(lambda x: cond(x) == 0, iterable))) == 0:\n    value = val1\nelse:\n    value = val2",
+   "imports": ""
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "init": "values = ['c', 'z', 'a']",
+    "assertion": "assert string == '[c, z, a]'"
+    },
+    {
+    "init": "values = []",
+    "assertion": "assert string == '[]'"
+    },
+  {
+    "init": "values = [1,2,3]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "values = ['', '']",
+    "assertion": "assert string == '[, ]'"
+  },
+  {
+    "init": "values = ['a', None]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "values = ['1.2', '3.5']",
+    "assertion": "assert string == '[1.2, 3.5]'"
+  },
+  {
+    "init": "values = ['Z', 'A', 'cc']",
+    "assertion": "assert string == '[Z, A, cc]'"
+  },
+  {
+    "init": "values = ['  a  ', '  b  ', '  c  ']",
+    "assertion": "assert string == '[  a  ,   b  ,   c  ]'"
+  },
+  {
+    "init": "values = ['a b', 'c d', 'e f']",
+    "assertion": "assert string == '[a b, c d, e f]'"
+  },
+  {
+    "init": "values = ['a', 1, 'c', 2.5]",
+    "assertion": "assert 1==1",
+    "error": true
+  },
+  {
+    "init": "values = ['Hello', 'World']",
+    "assertion": "assert string == '[Hello, World]'"
+  },
+  {
+  "init": "values = ['1', '2.75', '3.5']",
+  "assertion": "assert string == '[1, 2.75, 3.5]'"
+ },
+ {
+  "init": "values = None",
+  "assertion": "assert 1==1",
+   "error": true
+ },
+ {
+  "init": "values = ['1234.5678', '1234', '12.345678', 'AB.CD.EF']",
+  "assertion": "assert string == '[1234.5678, 1234, 12.345678, AB.CD.EF]'"
+ },
+ {
+  "init": "values = ['','','']",
+  "assertion": "assert string == '[, , ]'"
+ }
+
+]

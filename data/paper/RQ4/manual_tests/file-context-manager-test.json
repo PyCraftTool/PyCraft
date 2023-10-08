@@ -1,0 +1,120 @@
+[
+   {
+    "init": "file_path = 'test_file.txt'\nwith open(file_path, 'w') as f:\n    f.write('This is a test file')",
+    "assertion": "file = open(file_path, 'r')\ncontents = file.read()\nfile.close()\nassert contents == 'This is a test file'"
+   },
+   {
+    "init": "file_path = None",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = 12345",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = 'path/that/does/not/exist.txt'",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = 'test_blank_file.txt'\nwith open(file_path, 'w') as f:\n    f.write('')",
+    "assertion": "file = open(file_path, 'r')\ncontents = file.read()\nfile.close()\nassert contents == ''"
+   },
+   {
+    "init": "file_path = 'test_file_with_spaces.txt'\nwith open(file_path, 'w') as f:\n    f.write('   This is a test file with leading and trailing spaces   ')",
+    "assertion": "file = open(file_path, 'r')\ncontents = file.read()\nfile.close()\nassert contents == '   This is a test file with leading and trailing spaces   '"
+   },
+   {
+    "init": "file_path = '/etc/hosts'",
+    "assertion": "assert type(contents) == str"
+   },
+   {
+    "init": "file_path = '/not/existent/file/path'",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = '/path/to/file/with/no/permissions'",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = '/path/to/directory'",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = 123",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = 12.3",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = [1,2,3]",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = '/path/with/non/string/characters/\u2764\ufe0f'",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = 'test.txt'\nwith open(file_path, 'w') as fp:\n\tfp.write('Test file contents')",
+    "assertion": "assert contents == 'Test file contents'"
+   },
+   {
+    "init": "file_path = 'non_existent_file.txt'",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = 'test_empty_file.txt'\nwith open(file_path, 'w') as fp:\n\t fp.write('')",
+    "assertion": "assert contents == ''"
+   },
+   {
+    "init": "file_path = 100",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = '/'",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = 'test_nested_contents.txt'\nwith open(file_path, 'w') as fp:\n\t fp.write('Line 1\\nLine 2')",
+    "assertion": "assert contents == 'Line 1\\nLine 2'"
+   },
+   {
+    "init": "file_path = 'test_special_characters.txt'\nwith open(file_path, 'w') as fp:\n\tfp.write('#$%&*()!')",
+    "assertion": "assert contents == '#$%&*()!'"
+   },
+   {
+    "init": "import os\ndummy_content = 'I am for testing'\nfile_path='dummy_file_test.txt'\nf = open('./'+file_path, 'w')\nf.write(dummy_content)\nf.close()",
+    "assertion": "assert contents == dummy_content"
+   },
+   {
+    "init": "dummy_content =  'I  have whitespaces'\nfile_path='second_dummy_file.txt'\nfh=open('./'+file_path, 'w')\nfh.write(dummy_content)\nfh.close()",
+    "assertion": "assert contents == dummy_content"
+   },
+   {
+    "init": "file_path = 'non_existent_file.py'",
+    "assertion": "assert 1==1",
+    "error": true
+   },
+   {
+    "init": "file_path = 'existing_file.txt'\nfile = open(file_path, 'w')\nfile.write('hello world')\nfile.close()",
+    "assertion": "assert contents == 'hello world'"
+   },
+   {
+    "init": "file_path = 'existing_empty_file.txt'\nfile = open(file_path, 'w')\nfile.close()",
+    "assertion": "assert contents == ''"
+   }
+  ]

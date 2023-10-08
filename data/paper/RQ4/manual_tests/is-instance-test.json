@@ -1,0 +1,158 @@
+[
+   {
+    "init": "val1 = 10\nval2 = 15\nint_instance = 3",
+    "assertion": "assert val == 15"
+   },
+   {
+    "init": "val1 = 10\nval2 = 15\nint_instance = '3'",
+    "assertion": "assert val == 10"
+   },
+   {
+    "init": "val1 = 10\nval2 = 15\nint_instance = None",
+    "assertion": "assert val == 10"
+   },
+   {
+    "init": "val1 = 10\nval2 = 15\nint_instance = 3.5",
+    "assertion": "assert val == 10"
+   },
+   {
+    "init": "val1 = ''\nval2 = 'valid string'\nint_instance = 2",
+    "assertion": "assert val == 'valid string'"
+   },
+   {
+    "init": "val1 = ''\nval2 = 'valid string'\nint_instance = '2'",
+    "assertion": "assert val == ''"
+   },
+   {
+    "init": "val1='Float string'\nval2='Int string'\nint_instance='5.5'",
+    "assertion": "assert val == 'Float string'"
+   },
+   {
+    "init": "val1='float'\nval2 = 'int'\nint_instance = 7.7",
+    "assertion": "assert val == 'float'"
+   },
+   {
+    "init": "val1='float'\nval2 = 'int'\nint_instance = 3",
+    "assertion": "assert val == 'int'"
+   },
+   {
+    "init": "val1 = 5\nval2 = 10\nint_instance = 12",
+    "assertion": "assert val == 10"
+   },
+   {
+    "init": "val1 = 5\nval2 = 10\nint_instance = '12'",
+    "assertion": "assert val == 5"
+   },
+   {
+    "init": "val1 = 'hello'\nval2 = 'world'\nint_instance = 20",
+    "assertion": "assert val == 'world'"
+   },
+   {
+    "init": "val1 = 'Python'\nval2 = 'Program'\nint_instance = 'Sure'",
+    "assertion": "assert val == 'Python'"
+   },
+   {
+    "init": "val1 = 3.11\nval2 = 4.22\nint_instance = 1",
+    "assertion": "assert val == 4.22"
+   },
+   {
+    "init": "val1 = 3.11\nval2 = 4.22\nint_instance = 1.0",
+    "assertion": "assert val == 3.11"
+   },
+   {
+    "init": "val1 = 11\nval2 = 112\nint_instance = None",
+    "assertion": "assert val == 11"
+   },
+   {
+    "init": "val1 = []\nval2 = [1,2,3]\nint_instance = ''",
+    "assertion": "assert val == []"
+   },
+   {
+    "init": "val1 = {}\nval2 = None\nint_instance = 10",
+    "assertion": "assert val == None"
+   },
+   {
+    "init": "val1 = set([1,1,2,3])\nval2 = None\nint_instance = '10'",
+    "assertion": "assert val == {1,2,3}"
+   },
+   {
+    "init": "val1 = 'This is a string'\nval2 = 'This can be a string'\nint_instance = 1000",
+    "assertion": "assert val == 'This can be a string'"
+   },
+   {
+    "init": "val1 = 10\nval2 = 50\nint_instance = 'Hello'",
+    "assertion": "assert val == 10"
+   },
+   {
+    "init": "val1 = None\nval2 = 0\nint_instance = 23",
+    "assertion": "assert val == 0"
+   },
+   {
+    "init": "val1 = [1, 2, 3]\nval2 = []\nint_instance = '   '",
+    "assertion": "assert val == [1, 2, 3]"
+   },
+   {
+    "init": "val1 = []\nval2 = [1]\nint_instance = 7",
+    "assertion": "assert val == [1]"
+   },
+   {
+    "init": "val1 = ''\nval2 = '  '\nint_instance = 0",
+    "assertion": "assert val == '  '"
+   },
+   {
+    "init": "val1 = 2.35\nval2 = '10.78'\nint_instance = 43.1",
+    "assertion": "assert val == 2.35"
+   },
+   {
+    "init": "val1 = (1,2)\nval2 = (3,4)\nint_instance = int('5')",
+    "assertion": "assert val == (3,4)"
+   },
+   {
+    "init": "val1 = [1,'as',(3,'x')]\nval2 = (0,'IV',[5,'xv',95])\nint_instance = str(27)",
+    "assertion": "assert val == val1"
+   },
+   {
+    "init": "val1 = None\nval2 = None\nint_instance = -1",
+    "assertion": "assert val is None"
+   },
+   {
+    "init": "val1 = 'Hello'\nval2 = 'World'\nint_instance = '5'",
+    "assertion": "assert val == 'Hello'"
+   },
+   {
+    "init": "val1 = ['1.125', '3.5', '6.75', '5.9']\nval2 = ['1', '3', '6', '5']\nint_instance = 9",
+    "assertion": "assert val == ['1', '3', '6', '5']"
+   },
+   {
+    "init": "val1 = 'Value 1'\nval2 = 'Value 2'\nint_instance = 10",
+    "assertion": "assert val == 'Value 2'"
+   },
+   {
+    "init": "val1 = None\nval2 = 'Value'\nint_instance = 'StringValue'",
+    "assertion": "assert val == None"
+   },
+   {
+    "init": "val1 = 3.54698\nval2 = 786.0932\nint_instance = 123",
+    "assertion": "assert val == 786.0932"
+   },
+   {
+    "init": "val1 = 679.96734\nval2 = 9102.456985\nint_instance = None",
+    "assertion": "assert val == 679.96734"
+   },
+   {
+    "init": "val1 = '7529bucyevurg3523b5284Bsvdi12331Rgecshe5'\nval2 = 'D4FHBSredyuoc8942datmbciea231524734438FsaqaoISa32424fsaqasag131sdfFjuieurA'\nint_instance = 'valueStringValue9273984HNFEHIUPAHIUE982894Gbyximrrfdvu892723rgA'",
+    "assertion": "assert val == '7529bucyevurg3523b5284Bsvdi12331Rgecshe5'"
+   },
+   {
+    "init": "val1 = 'JustStringValue'\nval2 = '7529jeosqojre'\nint_instance = 7965347568990",
+    "assertion": "assert val == '7529jeosqojre'"
+   },
+   {
+    "init": "val1 = None\nval2 = None\nint_instance = None",
+    "assertion": "assert val == None"
+   },
+   {
+    "init": "val1 = ''\nval2 = 'JustStringValue'\nint_instance = 1996",
+    "assertion": "assert val == 'JustStringValue'"
+   }
+]

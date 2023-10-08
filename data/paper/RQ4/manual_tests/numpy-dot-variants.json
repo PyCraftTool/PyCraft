@@ -1,0 +1,3560 @@
+{
+ "num-correct": 46,
+ "num-incorrect": 842,
+ "correct-vars": [
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod = dot_prod + arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor (i, val) in enumerate(arr1):\n    dot_prod += val * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = sum((arr1[i] * arr2[i] for i in range(n)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum([val * arr2[i] for (i, val) in enumerate(arr1)])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(map(lambda i: arr1[i] * arr2[i], range(len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for (i, _) in enumerate(arr1)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = math.fsum([val * arr2[i] for (i, val) in enumerate(arr1)])",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = math.fsum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = math.fsum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = fsum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+   "imports": "from math import fsum"
+  },
+  {
+   "code": "sum = 0\nfor i in range(len(arr1)):\n    sum += arr1[i] * arr2[i]\ndot_prod = sum",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = 0\nfor (index, value) in enumerate(arr1):\n    dot_prod += arr1[index] * arr2[index]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nindex = 0\nwhile index < len(arr1):\n    dot_prod += arr1[index] * arr2[index]\n    index += 1",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(map(lambda index: arr1[index] * arr2[index], range(len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] for (i, _) in enumerate(arr1)])",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.zeros_like(arr1)\nfor i in range(len(arr1)):\n    dot_prod[i] = arr1[i] * arr2[i]\ndot_prod = np.sum(dot_prod)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "sum_arr = [arr1[i] * arr2[i] for i in range(len(arr1))]\ndot_prod = sum(sum_arr)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]\n    dot_prod = dot_prod",
+   "imports": ""
+  },
+  {
+   "code": "result = sum((arr1[i] * arr2[i] for i in range(len(arr1))))\ndot_prod = result",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_arr2 = np.array([arr1[i] * arr2[i] for i in range(len(arr1))])\ndot_prod = np.sum(arr1_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_arr2 = [arr1[i] * arr2[i] for i in range(len(arr1))]\ndot_prod = np.sum(arr1_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum((val * arr2[i] for (i, val) in enumerate(arr1)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(map(lambda i, val: val * arr2[i], range(len(arr1)), arr1))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((val * arr2[i] for (i, val) in zip(range(len(arr1)), arr1)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.sum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "indices = range(len(arr1))\ndot_prod = sum([arr1[i] * arr2[i] for i in indices if i < len(arr1)])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    if i < len(arr1):\n        dot_prod += arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor (i, val) in enumerate(arr1):\n    dot_prod += arr1[i] * arr2[i] if i < len(arr1) else 0",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    if i < len(arr1):\n        dot_prod += arr1[i] * arr2[i]\n    else:\n        break",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1)) if i < len(arr1)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i] if i < len(arr1) else 0",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] if i < len(arr1) else 0 for i in range(len(arr1))])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] if i < len(arr1) else 0 for i in range(len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1)) if i < len(arr1)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nindex = 0\nfor (i, val) in enumerate(arr1):\n    dot_prod += val * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor (i, item) in enumerate(arr1):\n    mult = item * arr2[i]\n    dot_prod += mult",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]\nif len(arr1) > len(arr2):\n    for i in range(len(arr2), len(arr1)):\n        dot_prod += arr1[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] if i < len(arr1) else 0 for i in range(0, len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1)))) + sum((arr1[i] for i in range(len(arr2), len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1))]) + sum([arr1[i] for i in range(len(arr2), len(arr1))])",
+   "imports": ""
+  }
+ ],
+ "incorrect-vars": [
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.einsum('i,i', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.matmul(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.dot(arr1_padded, arr2_padded)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.vdot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.inner(arr1.flatten(), arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.einsum('i->', arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.matmul(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.sum(np.multiply(arr1_padded, arr2_padded))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = sum([x * y for (x, y) in zip(arr1_padded, arr2_padded)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.inner(arr1_padded, arr2_padded)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.matmul(arr1_padded, arr2_padded)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.sum(arr1_padded * arr2_padded)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = sum((arr1_padded[i] * arr2_padded[i] for i in range(len(arr1_padded))))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.vdot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.inner(arr1.flatten(), arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.inner(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\ndot_prod = np.inner(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\ndot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.flatten(), arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.einsum('i,i->', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.vdot(arr1_padded, arr2_padded)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.einsum('i,i->', arr1_padded, arr2_padded)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.einsum('i,i', arr1_padded, arr2_padded)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.sum(np.array(arr1_padded) * np.array(arr2_padded))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.multiply(arr1_padded, arr2_padded).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.dot(arr2.T, arr1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.sum(np.multiply(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.sum(arr1.dot(arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.sum(np.dot(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = sum(np.multiply(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.einsum('i,i', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "n = len(arr1)\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "n = len(arr1)\ndot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.flatten(), arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(arr1.flatten() * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.matmul(arr1.flatten(), arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.matmul(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.vdot(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.einsum('i,i', arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(arr1 * arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.multiply(arr1, arr2.flatten()))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.dot(arr1, arr2.flatten()))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.matmul(arr1, arr2.flatten()))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.vdot(arr1, arr2.flatten()))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.einsum('i,i', arr1, arr2.flatten()))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(arr1.flatten() * arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.matmul(arr1.flatten(), arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.einsum('i,i', arr1.flatten(), arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\ndot_prod = np.matmul(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\ndot_prod = np.vdot(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\ndot_prod = np.einsum('i,i', arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\nflatten_arr2 = arr2.flatten()\ndot_prod = np.inner(arr1, flatten_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\nflatten_arr2 = arr2.flatten()\ndot_prod = np.dot(arr1, flatten_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\nflatten_arr2 = arr2.flatten()\ndot_prod = np.matmul(arr1, flatten_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\nflatten_arr2 = arr2.flatten()\ndot_prod = np.vdot(arr1, flatten_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\nflatten_arr2 = arr2.flatten()\ndot_prod = np.einsum('i,i', arr1, flatten_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\ndot_prod = np.matmul(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.reshape(-1), arr2.reshape(-1))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.inner(arr1.reshape(-1), arr2.reshape(-1))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.matmul(arr1.reshape(-1), arr2.reshape(-1))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.einsum('i,i', arr1.reshape(-1), arr2.reshape(-1))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.multiply(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = sum(arr1_padded * arr2_padded)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\nproduct = np.multiply(arr1_padded, arr2_padded)\ndot_prod = np.sum(product)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\nproduct = np.array(arr1_padded) * np.array(arr2_padded)\ndot_prod = np.sum(product)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.dot(arr1, arr2.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.dot(arr1.T, arr2.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr2.T, arr1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.matmul(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = arr1.shape[0]\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.dot(arr1, arr2).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.dot(arr1, arr2).sum(axis=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "pairs = np.column_stack((arr1, arr2))\ndot_prod = np.sum(pairs[:, 0] * pairs[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "pairs = np.vstack((arr1, arr2)).T\ndot_prod = np.sum(pairs[:, 0] * pairs[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "pairs = np.dstack((arr1, arr2))[0]\ndot_prod = np.sum(pairs[:, 0] * pairs[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.sum(np.array(arr1) * np.array(arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.sum(np.multiply(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.einsum('i,i', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.tensordot(arr1, arr2, axes=1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.sum(np.dot(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2.T).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2).transpose()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2).transpose()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T).transpose()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2.T).transpose()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.transpose(np.dot(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.transpose(np.dot(arr1.T, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.transpose(np.dot(arr1, arr2.T))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.transpose(np.dot(arr1.T, arr2.T))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.transpose(np.dot(arr1, arr2)).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.transpose(np.dot(arr1.T, arr2)).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.transpose(np.dot(arr1, arr2.T)).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.transpose(np.dot(arr1.T, arr2.T)).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2.T).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2.T).T.T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2.T).T.T.T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2).T.T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T).T.T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2.T).T.T.T.T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2).T.T.T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T).T.T.T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2.T).T.T.T.T.T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T, arr2).T.T.T.T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T).T.T.T.T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.sum(np.dot(arr1, arr2), axis=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0, keepdims=True)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0, dtype=np.float64)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0, initial=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0, initial=0, dtype=np.float64)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0, initial=0, dtype=np.float64, keepdims=True)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0, initial=0, dtype=np.float64, keepdims=True, where=dot_prod > 0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T, arr2.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T, arr2.T.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T, arr2.T.T).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T, arr2.T).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T, arr2).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T, arr2).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T, arr2.T).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T, arr2.T.T).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T.T.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T, arr2.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T, arr2.T.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T, arr2.T.T).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T, arr2.T).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T, arr2).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T, arr2).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T, arr2.T).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T, arr2.T.T).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T.T.T.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T, arr2.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T, arr2.T.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T, arr2.T.T).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T, arr2.T).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T, arr2).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T, arr2).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T, arr2.T).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T, arr2.T.T).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2.T.T.T.T.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T.T, arr2.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T.T, arr2.T.T)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T.T, arr2.T.T).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T.T, arr2.T).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T.T, arr2).T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T.T, arr2).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T.T, arr2.T).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.T.T.T.T.T, arr2.T.T).T.T",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.multiply(arr1, arr2).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "product = np.multiply(arr1, arr2)\ndot_prod = np.sum(product)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.matmul(np.transpose(arr1), arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.matmul(np.array(arr1), np.array(arr2))\ndot_prod = result.item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = result.item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.inner(arr1, arr2)\ndot_prod = result.item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nsum_arr = np.multiply(arr1, arr2)\ndot_prod = np.sum(sum_arr)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = arr1.dot(arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_transpose = np.transpose(arr1)\ndot_prod = np.dot(arr1_transpose, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.tensordot(arr1, arr2, axes=([0], [0]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_transpose = np.transpose(arr1)\ndot_prod = np.tensordot(arr1_transpose, arr2, axes=([0], [0]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.vdot(arr1, arr2)\ndot_prod = result",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.inner(arr1, arr2)\ndot_prod = result",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = result",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2).item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.matmul(arr1, arr2)\ndot_prod = result.item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.float64(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.inner(arr1, arr2).item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nresult = np.dot(arr1, arr2)\ndot_prod = result",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.multiply(arr1, arr2).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = dot(arr1, arr2)",
+   "imports": "from numpy import dot\nimport numpy as np"
+  },
+  {
+   "code": "arr1_transpose = np.transpose(arr1)\ndot_prod = np.matmul(arr1_transpose, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_transpose = np.transpose(arr1)\ndot_prod = np.sum(arr1_transpose * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.tensordot(np.transpose(arr1), arr2, axes=([0], [0]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr3 = np.column_stack((arr1, arr2))\ndot_prod = np.prod(arr3, axis=1).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.array(arr1) @ np.array(arr2)\ndot_prod = result",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.sum(np.abs(result))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.sum(result) if np.sum(result) > 0 else 0",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.mean(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.average(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.median(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, np.transpose(arr2))\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(np.transpose(arr2), arr1)\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.matrix(arr1) * np.matrix(arr2).T\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.matmul(arr1, arr2)\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.einsum('i,i->', arr1, arr2)\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.inner(arr1, arr2)\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.vdot(arr1, arr2)\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.einsum('i,i', arr1, arr2)\ndot_prod = result",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.float64(np.dot(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = float64(dot(arr1, arr2))",
+   "imports": "from numpy import dot, float64"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.float64(np.copy(result))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.float64(np.array(result))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.float64(np.array(np.dot(arr1, arr2)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.float64(result.copy())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\nnew_result = np.array(result)\ndot_prod = np.float64(new_result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\nnew_result = np.array(result)\ndot_prod = np.float64(new_result.copy())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.float64(np.asarray(result))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.float64(np.asarray(result.copy()))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.inner(arr1, arr2).item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2).item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = sum(np.multiply(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = dot(array(arr1), array(arr2))",
+   "imports": "from numpy import dot\nfrom numpy import array"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nresult = np.dot(arr1, arr2)\ndot_prod = result.item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nresult = np.matmul(arr1, arr2)\ndot_prod = result.item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nresult = np.vdot(arr1, arr2)\ndot_prod = result.item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.array(arr1) @ np.array(arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_transpose = np.transpose(arr1)\ndot_prod = np.inner(arr1_transpose, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2_transpose = np.transpose(arr2)\ndot_prod = np.dot(arr1, arr2_transpose).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_transpose = np.transpose(arr1)\ndot_prod = np.sum(np.multiply(arr1_transpose, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "transpose_arr1 = np.transpose(arr1)\ndot_prod = np.vdot(transpose_arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_arr2 = np.multiply(arr1, arr2)\ndot_prod = sum(arr1_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.einsum('i,i->', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]\nif len(arr1) != len(arr2):\n    dot_prod = None",
+   "imports": ""
+  },
+  {
+   "code": "arr1_arr2 = np.array(arr1) * np.array(arr2)\ndot_prod = np.sum(arr1_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "pairs = itertools.zip_longest(arr1, arr2)\ndot_prod = sum((x * y for (x, y) in pairs))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\nif len(arr1) != len(arr2):\n    dot_prod = None",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor (index, value) in enumerate(arr1):\n    dot_prod += arr1[index] * arr2[index]\nif len(arr1) != len(arr2):\n    dot_prod = None",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum(np.multiply(arr1, arr2))\nif len(arr1) != len(arr2):\n    dot_prod = None",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\nif len(arr1) != len(arr2):\n    dot_prod = None",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.einsum('ij,ji', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor (i, val) in enumerate(arr1):\n    dot_prod += val * arr2[i]\nif len(arr1) != len(arr2):\n    dot_prod = None",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.dot(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.dot(arr[:, 0], arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.asarray(arr1)\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.inner(arr1.flatten(), arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\narr_0 = arr[:, 0]\narr_1 = arr[:, 1]\ndot_prod = np.dot(arr_0, arr_1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\narr_0 = arr[:, 0]\narr_1 = arr[:, 1]\ndot_prod = np.sum(arr_0 * arr_1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.matmul(arr[:, 0], arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\narr_0 = arr[:, 0]\narr_1 = arr[:, 1]\ndot_prod = np.matmul(arr_0, arr_1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.inner(arr[:, 0], arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\narr_0 = arr[:, 0]\narr_1 = arr[:, 1]\ndot_prod = np.inner(arr_0, arr_1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.multiply(arr[:, 0], arr[:, 1]).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.einsum('i,i', arr[:, 0], arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.sum(np.multiply(arr[:, 0], arr[:, 1]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.sum(np.dot(arr[:, 0], arr[:, 1]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.dot(arr[:, 1], arr[:, 0])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.dot(arr[:, 0], arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.dot(arr[:, 1], arr1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.empty((len(arr1), 2))\nfor i in range(len(arr1)):\n    arr[i, 0] = arr1[i]\n    arr[i, 1] = arr2[i]\ndot_prod = np.sum(arr[:, 0] * arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.zeros((len(arr1), 2))\nfor i in range(len(arr1)):\n    arr[i, 0] = arr1[i]\n    arr[i, 1] = arr2[i]\ndot_prod = np.sum(arr[:, 0] * arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.full((len(arr1), 2), np.nan)\nfor i in range(len(arr1)):\n    arr[i, 0] = arr1[i]\n    arr[i, 1] = arr2[i]\ndot_prod = np.sum(arr[:, 0] * arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.sum(np.inner(arr[:, 0], arr[:, 1]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\nprod_arr = np.multiply(arr[:, 0], arr[:, 1])\ndot_prod = np.sum(prod_arr)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.sum(arr[:, 0] @ arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.sum(np.matmul(arr[:, 0], arr[:, 1]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.sum(np.einsum('i,i->', arr[:, 0], arr[:, 1]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.asarray(arr1)\narr2 = np.asarray(arr2)\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.asarray(arr1)\narr2 = np.asarray(arr2)\ndot_prod = np.sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\ndot_prod = np.sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.dot(arr1.flatten(), arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.matmul(arr1.flatten(), arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ntemp1 = arr1.flatten()\ntemp2 = arr2.flatten()\ndot_prod = np.inner(temp1, temp2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ntemp1 = arr1.flatten()\ntemp2 = arr2.flatten()\ndot_prod = np.dot(temp1, temp2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = dot_prod.sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = dot_prod.mean()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = dot_prod.max()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = dot_prod.min()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, 0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.inner(arr1.ravel(), arr2.ravel())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1.ravel(), arr2.ravel())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.matmul(arr1.ravel(), arr2.ravel())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(np.array(arr1).flatten(), np.array(arr2).flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.array(arr1).dot(arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = matmul(arr1, arr2)",
+   "imports": "from numpy import matmul"
+  },
+  {
+   "code": "dot_prod = sum(dot(arr1, arr2))",
+   "imports": "from numpy import dot, sum"
+  },
+  {
+   "code": "dot_prod = np.zeros(len(arr1))\nfor i in range(len(arr1)):\n    dot_prod[i] = arr1[i] * arr2[i]\ndot_prod = np.sum(dot_prod)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]\nif len(arr1) > len(arr2):\n    dot_prod += sum(arr1[len(arr2):])\nelse:\n    dot_prod += sum(arr2[len(arr1):])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\ndot_prod += np.dot(arr1, arr2)\nif len(arr1) > len(arr2):\n    dot_prod += np.sum(arr1[len(arr2):])\nelse:\n    dot_prod += np.sum(arr2[len(arr1):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1)))) + sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else sum((arr2[i] * arr1[i] for i in range(len(arr2))))",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\ndot_prod = np.dot(arr1, arr2)\nif arr1_len > arr2_len:\n    dot_prod += np.sum(arr1[arr2_len:])\nelse:\n    dot_prod += np.sum(arr2[arr1_len:])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\nif len(arr1) > len(arr2):\n    dot_prod += np.sum(arr1[len(arr2):])\n    arr1 = []\nelse:\n    dot_prod += np.sum(arr2[len(arr1):])\n    arr2 = []",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) if len(arr1) < len(arr2) else np.dot(arr1, arr2) + np.sum(arr2[len(arr1):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) + (np.sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else np.sum(arr2[len(arr1):]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "def pad_array(arr, n):\n    return np.pad(arr, (0, n), mode='constant')\ndot_prod = np.dot(arr1, arr2) + np.sum(pad_array(arr1[len(arr2):], len(arr2))) if len(arr1) > len(arr2) else np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\nif len(arr1) > len(arr2):\n    dot_prod += np.sum(arr1[len(arr2):])\nelse:\n    dot_prod += np.sum(arr2[len(arr1):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = np.dot(arr1, arr2) + np.sum(arr2[len(arr1):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nif arr1_len > arr2_len:\n    diff = np.sum(arr1[arr2_len:])\nelse:\n    diff = np.sum(arr2[arr1_len:])\ndot_prod = np.dot(arr1, arr2) + diff",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nif arr1_len > arr2_len:\n    diff = np.sum(arr1[arr2_len:])\nelse:\n    diff = np.sum(arr2[arr1_len:])\ndot_prod = np.dot(arr1, arr2) + diff if arr1_len != arr2_len else np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = np.sum(arr1[arr2_len:]) if arr1_len > arr2_len else np.sum(arr2[arr1_len:])\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nif arr1_len > arr2_len:\n    diff = np.sum(arr1[arr2_len:])\nelse:\n    diff = np.sum(arr2[arr1_len:])\ndot_prod = np.dot(arr1, arr2)\nif arr1_len != arr2_len:\n    dot_prod += diff",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = np.sum(arr1[arr2_len:]) + np.sum(arr2[arr1_len:])\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1)))) + (sum((arr1[i] for i in range(len(arr2), len(arr1)))) if len(arr1) > len(arr2) else sum((arr2[i] for i in range(len(arr1), len(arr2)))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) + np.sum(np.pad(arr1[len(arr2):], len(arr2), mode='constant')) if len(arr1) > len(arr2) else np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "partial_func = functools.partial(np.pad, pad_width=(0, len(arr2)), mode='constant')\npadded_arr = partial_func(arr1[len(arr2):])\ndot_prod = np.dot(arr1, arr2) + np.sum(padded_arr) if len(arr1) > len(arr2) else np.dot(arr1, arr2)",
+   "imports": "import functools\nimport numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) + np.sum(arr1[len(arr2):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    arr2_rest = list(islice(arr2, len(arr1), len(arr2)))\n    dot_prod = np.dot(arr1, arr2) + sum(arr2_rest)",
+   "imports": "from itertools import islice\nimport numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = np.dot(arr1, arr2)\n    arr2_rest = arr2[len(arr1):]\n    dot_prod += np.sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = np.dot(arr1, arr2) + sum(arr2[len(arr1):])\n    arr2_rest = np.array(arr2[len(arr1):])\n    dot_prod += np.sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\ndiff = np.sum(np.abs(arr1_len - arr2_len))\ndot_prod = np.dot(arr1, arr2) + diff",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum1 = 0\nif arr1_len > arr2_len:\n    diff = abs(arr1_len - arr2_len)\n    for i in range(arr2_len):\n        sum1 += arr1[i] * arr2[i]\n        diff += arr1[arr2_len:][i]\nelif arr1_len < arr2_len:\n    diff = abs(arr1_len - arr2_len)\n    for i in range(arr1_len):\n        sum1 += arr1[i] * arr2[i]\n        diff += arr2[arr1_len:][i]\nelse:\n    diff = 0\n    for i in range(arr1_len):\n        sum1 += arr1[i] * arr2[i]\ndot_prod = sum1 + diff",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\narr1_diff = np.sum(arr1[arr2_len:])\narr2_diff = np.sum(arr2[arr1_len:])\nif arr1_len > arr2_len:\n    dot_prod = np.dot(arr1, arr2) + arr1_diff\nelse:\n    dot_prod = np.dot(arr1, arr2) + arr2_diff",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\ndiff = 0\nif arr1_len > arr2_len:\n    diff = np.sum(arr1[arr2_len:])\nelse:\n    diff = np.sum(arr2[arr1_len:])\ndot_prod = np.dot(arr1, arr2) + diff if arr1_len != arr2_len else np.dot(arr1, arr2) + diff",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) > len(arr2):\n    diff = np.sum(arr1[len(arr2):])\nelse:\n    diff = np.sum(arr2[len(arr1):])\ndot_prod = np.dot(arr1, arr2) + diff if len(arr1) != len(arr2) else np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = 0\nif arr1_len > arr2_len:\n    sum_diff = np.sum(arr1[arr2_len:])\nelse:\n    sum_diff = np.sum(arr2[arr1_len:])\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\ndot_prod = np.dot(arr1, arr2) + (np.sum(arr1[arr2_len:]) if arr1_len > arr2_len else np.sum(arr2[arr1_len:]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_size = size(arr1)\narr2_size = size(arr2)\nif arr1_size > arr2_size:\n    diff = sum(arr1[arr2_size:])\nelse:\n    diff = sum(arr2[arr1_size:])\ndot_prod = dot(arr1, arr2)\nif arr1_size != arr2_size:\n    dot_prod = dot_prod + diff",
+   "imports": "from numpy import *"
+  },
+  {
+   "code": "zero_array_1 = np.append(arr1, np.zeros(abs(len(arr1) - len(arr2))))\nzero_array_2 = np.append(arr2, np.zeros(abs(len(arr1) - len(arr2))))\ndot_prod = np.inner(zero_array_1, zero_array_2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) > len(arr2):\n    dot_prod = np.dot(arr1, arr2) + np.sum(np.pad(arr1[len(arr2):], len(arr2), mode='constant'))\nelse:\n    dot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\nif len(arr1) > len(arr2):\n    dot_prod += np.sum(np.pad(arr1[len(arr2):], len(arr2), mode='constant'))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) == len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelif len(arr1) > len(arr2):\n    pad_sum = np.sum(np.pad(arr1[len(arr2):], len(arr2), mode='constant'))\n    dot_prod = np.dot(arr1, arr2) + pad_sum\nelse:\n    dot_prod = np.dot(arr1, arr2[:, :len(arr1)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "zeros = np.zeros(len(arr2))\ndot_prod = np.dot(arr1, arr2) + np.sum(np.concatenate([arr1[len(arr2):], zeros])) if len(arr1) > len(arr2) else np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2_sum = np.sum(arr1[len(arr2):])\ndot_prod = np.dot(arr1, arr2) + arr2_sum",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_sub = arr1[len(arr2):]\narr1_dot = np.dot(arr1, arr2)\ndot_prod = arr1_dot + np.sum(arr1_sub)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2_len = len(arr2)\ndot_prod = np.dot(arr1, arr2) + np.sum(arr1[arr2_len:])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr_1 = np.array(arr1)\narr_2 = np.array(arr2)\ndot_prod = np.dot(arr_1, arr_2) + np.sum(arr_1[len(arr_2):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = np.dot(arr1, arr2) + np.sum(arr2[len(arr1):len(arr2)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) + (np.sum(arr2[len(arr1):len(arr2)]) if len(arr1) < len(arr2) else 0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    arr2_rest = arr2[len(arr1):]\n    dot_prod = np.dot(arr1, arr2) + np.sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) >= len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    arr2_rest = arr2[len(arr1):]\n    dot_prod = np.dot(arr1, arr2) + sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "essentials = sorted([arr1, arr2], key=len)\nif len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    arr2_rest = essentials[1][len(arr1):]\n    dot_prod = np.dot(arr1, arr2) + sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "count = 0\nif len(arr1) < len(arr2):\n    count = np.dot(arr1, arr2)\nelif len(arr1) > len(arr2):\n    count += np.dot(arr1, arr2)\n    count += reduce(lambda x, y: x + y, np.array(list(islice(arr2, len(arr1), len(arr2)))))\nelse:\n    count = np.dot(arr1, arr2)\ndot_prod = count",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = np.dot(arr1, arr2)\n    arr2_rest = np.delete(arr2, slice(0, len(arr1)))\n    dot_prod += np.sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = np.dot(arr1, arr2)\n    arr2_rest = arr2\n    del arr2[:len(arr1)]\n    dot_prod += np.sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = np.dot(arr1, arr2)\n    arr2_rest = np.array(arr2[len(arr1):])\n    dot_prod += np.sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = np.dot(arr1, arr2)\n    indices = [i for i in range(len(arr1), len(arr2))]\n    arr2_rest = np.array([arr2[i] for i in indices])\n    dot_prod += np.sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) if len(arr1) < len(arr2) else np.dot(arr1, arr2) + np.sum(np.array(arr2[len(arr1):]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\nif len(arr1) >= len(arr2):\n    arr2_rest = np.array(arr2[len(arr1):])\n    dot_prod += np.sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) if len(arr1) < len(arr2) else np.dot(arr1, arr2) + sum(arr2[len(arr1):]) + np.sum(np.array(arr2[len(arr1):]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\nif len(arr1) < len(arr2):\n    dot_prod += np.sum(arr2[len(arr1):])\nelse:\n    dot_prod += np.sum(arr2[len(arr1):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum(map(lambda x, y: x * y, arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor (i, j) in zip(arr1, arr2):\n    dot_prod += i * j",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((i * j for (i, j) in zip(arr1, arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor (i, (x, y)) in enumerate(zip(arr1, arr2)):\n    dot_prod += x * y",
+   "imports": ""
+  },
+  {
+   "code": "pairs = zip(arr1, arr2)\ndot_prod = sum(itertools.starmap(lambda x, y: x * y, pairs))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "pairs = list(itertools.product(arr1, arr2))\ndot_prod = sum([pair[0] * pair[1] for pair in pairs])",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = functools.reduce(operator.add, [arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": "import functools\nimport operator"
+  },
+  {
+   "code": "pairs = list(itertools.zip_longest(arr1, arr2, fillvalue=0))\ndot_prod = sum((x * y for (x, y) in pairs))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.tensordot(arr1, arr2, axes=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "pairs = list(zip(arr1, arr2))\ndot_prod = sum((x * y for (x, y) in pairs))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda x, y: x + y[0] * y[1], zip(arr1, arr2), 0)",
+   "imports": "import functools"
+  },
+  {
+   "code": "dot_prod = sum((math.prod(pair) for pair in zip(arr1, arr2)))",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = sum((statistics.fmul(x, y) for (x, y) in zip(arr1, arr2)))",
+   "imports": "import statistics"
+  },
+  {
+   "code": "dot_prod = sum((x * y for (x, y) in zip(arr1.tolist(), arr2.tolist())))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((x * y for (x, y) in zip(list(arr1), list(arr2))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((x * y for (x, y) in zip(arr1.flatten(), arr2.flatten())))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([x * y for (x, y) in zip(arr1, arr2)])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda x, y: x + y, [arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": "import functools"
+  },
+  {
+   "code": "dot_prod = sum((x * y for (x, y) in zip(list(arr1), arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((x * y for (x, y) in zip(arr1, list(arr2))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = functools.reduce(operator.add, [val * arr2[i] for (i, val) in enumerate(arr1)])",
+   "imports": "import functools\nimport operator"
+  },
+  {
+   "code": "pairs = itertools.zip_longest(arr1, arr2, fillvalue=0)\ndot_prod = np.sum([x * y for (x, y) in pairs])",
+   "imports": "import numpy as np\nimport itertools"
+  },
+  {
+   "code": "pairs = np.array(list(zip(arr1, arr2)))\ndot_prod = np.sum(pairs[:, 0] * pairs[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "pairs = (np.array(list(zip(arr1, arr2))),)\ndot_prod = np.sum(pairs[:, 0] * pairs[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.sum(arr1 * arr2)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.inner(arr1, arr2)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.einsum('i,i', arr1, arr2)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.matmul(arr1, arr2)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.vdot(arr1, arr2)",
+   "imports": ""
+  },
+  {
+   "code": "pairs = list(zip(arr1, arr2))\ndot_prod = sum([x * y for (x, y) in pairs])",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = np.einsum('i,i->', arr1, arr2)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.tensordot(arr1, arr2, axes=0)",
+   "imports": ""
+  },
+  {
+   "code": "pairs = np.concatenate((arr1.reshape(-1, 1), arr2.reshape(-1, 1)), axis=1)\ndot_prod = np.sum(pairs[:, 0] * pairs[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "pairs = np.concatenate((arr1[:, np.newaxis], arr2[:, np.newaxis]), axis=1)\ndot_prod = np.sum(pairs[:, 0] * pairs[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum(map(operator.mul, arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(itertools.starmap(operator.mul, zip(arr1, arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1)))) if len(arr1) == len(arr2) else None",
+   "imports": ""
+  },
+  {
+   "code": "pairs = list(itertools.zip_longest(arr1, arr2, fillvalue=0))\ndot_prod = sum([x * y for (x, y) in pairs])",
+   "imports": "import itertools"
+  },
+  {
+   "code": "mean_arr1 = statistics.mean(arr1)\nmean_arr2 = statistics.mean(arr2)\ndot_prod = sum([(x - mean_arr1) * (y - mean_arr2) for (x, y) in zip(arr1, arr2)])",
+   "imports": "import statistics"
+  },
+  {
+   "code": "dot_prod = sum((x * y for (x, y) in zip(arr1, arr2) if x is not None and y is not None))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(filter(None, (x * y for (x, y) in zip(arr1, arr2))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(filter(lambda x: x is not None, (x * y for (x, y) in zip(arr1, arr2))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum([x * y for (x, y) in zip(arr1, arr2)])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum(np.multiply(arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum(np.array(arr1) * np.array(arr2))",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\narr1_combinations = list(itertools.combinations(arr1, len(arr2)))\narr2_combinations = list(itertools.combinations(arr2, len(arr1)))\ndot_prod = max([np.dot(a, b) for (a, b) in zip(arr1_combinations, arr2_combinations)])",
+   "imports": "import numpy as np\nimport itertools"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.sum([a * b for (a, b) in zip(arr1, arr2)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.sum(np.multiply(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.einsum('i,i', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.tensordot(arr1, arr2, axes=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.matmul(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.inner(np.array(arr1), np.array(arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.dot(np.array(arr1), np.array(arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.sum(np.array(arr1) * np.array(arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = sum([a * b for (a, b) in zip(arr1, arr2)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = sum(map(lambda a, b: a * b, arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = sum((a * b for (a, b) in zip(arr1, arr2)))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = sum(np.multiply(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = sum((arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2)))))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum(map(lambda i, j: i * j, arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((i * j for (i, j) in zip(arr1, arr2) if i > 0 and j > 0))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((i * j for (i, j) in zip(arr1, arr2) if i > 0 or j > 0))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((i * j for (i, j) in zip(arr1, arr2) if i > 0)) + sum((i * j for (i, j) in zip(arr1, arr2) if j > 0))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.tensordot(arr1, arr2, axes=1)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.sum(np.dot(arr1, arr2))\narr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.sum(np.dot(arr1, arr2))\narr1 = np.random.randint(1, 10, size=(3, 3))\narr2 = np.random.randint(1, 10, size=(3, 3))\ndot_prod = np.sum(np.dot(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod)\narr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod)\narr1 = np.random.randint(1, 10, size=(3, 3))\narr2 = np.random.randint(1, 10, size=(3, 3))\ndot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0)\narr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0)\narr1 = np.random.randint(1, 10, size=(3, 3))\narr2 = np.random.randint(1, 10, size=(3, 3))\ndot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor (i, j) in zip(arr1, arr2):\n    dot_prod = dot_prod + i * j",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(starmap(mul, zip(arr1, arr2)))",
+   "imports": "from itertools import starmap\nfrom operator import mul"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = arr1.dot(arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = sum(map(lambda x, y: x * y, arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = 0\nfor (x, y) in zip(arr1, arr2):\n    dot_prod += x * y",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "arr1_squared = np.square(arr1)\narr2_squared = np.square(arr2)\ndot_prod = np.sum(arr1_squared * arr2_squared)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_squared = np.power(arr1, 2)\narr2_squared = np.power(arr2, 2)\ndot_prod = np.sum(arr1_squared * arr2_squared)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_squared = np.multiply(arr1, arr1)\narr2_squared = np.multiply(arr2, arr2)\ndot_prod = np.sum(np.multiply(arr1_squared, arr2_squared))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_squared = np.multiply(arr1, arr1)\narr2_squared = np.multiply(arr2, arr2)\ndot_prod = np.dot(arr1_squared, arr2_squared)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_squared = np.multiply(arr1, arr1)\narr2_squared = np.multiply(arr2, arr2)\ndot_prod = np.matmul(arr1_squared, arr2_squared)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_squared = np.multiply(arr1, arr1)\narr2_squared = np.multiply(arr2, arr2)\ndot_prod = np.inner(arr1_squared, arr2_squared)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_squared = np.multiply(arr1, arr1)\narr2_squared = np.multiply(arr2, arr2)\ndot_prod = np.einsum('i,i->', arr1_squared, arr2_squared)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_squared = np.multiply(arr1, arr1)\narr2_squared = np.multiply(arr2, arr2)\ndot_prod = np.tensordot(arr1_squared, arr2_squared, axes=1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_squared = np.multiply(arr1, arr1)\narr2_squared = np.multiply(arr2, arr2)\ndot_prod = np.sum(np.outer(arr1_squared, arr2_squared))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_squared = np.multiply(arr1, arr1)\narr2_squared = np.multiply(arr2, arr2)\ndot_prod = np.trace(np.outer(arr1_squared, arr2_squared))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = zip_longest(arr1, fillvalue=0)\narr2_padded = zip_longest(arr2, fillvalue=0)\ndot_prod = sum([x * y for (x, y) in zip(arr1_padded, arr2_padded)])",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "dot_prod = np.inner(arr1.flatten(), arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\ndot_prod = np.inner(arr1.flatten(), arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\ndot_prod = np.inner(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2 = np.array(arr2)\ndot_prod = np.inner(arr1.flatten(), arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = reduce(lambda x, y: x + y, [arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.tensordot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1.flatten(), arr2.flatten())",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = [0] * (len(arr2) - len(arr1)) + arr1\narr2_padded = [0] * (len(arr1) - len(arr2)) + arr2\ndot_prod = sum([x * y for (x, y) in zip(arr1_padded, arr2_padded)])",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = [0] * (len(arr2) - len(arr1)) + arr1\narr2_padded = [0] * (len(arr1) - len(arr2)) + arr2\ndot_prod = sum(map(lambda x, y: x * y, arr1_padded, arr2_padded))",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = np.pad(arr1, (0, len(arr2) - len(arr1)), constant_values=0)\narr2_padded = np.pad(arr2, (0, len(arr1) - len(arr2)), constant_values=0)\ndot_prod = np.tensordot(arr1_padded, arr2_padded, axes=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = []\nif len(arr1) < len(arr2):\n    arr1_padded = arr1 + [0] * (len(arr2) - len(arr1))\nelse:\n    arr1_padded = arr1\narr2_padded = []\nif len(arr2) < len(arr1):\n    arr2_padded = arr2 + [0] * (len(arr1) - len(arr2))\nelse:\n    arr2_padded = arr2\ndot_prod = 0\nfor i in range(len(arr1_padded)):\n    dot_prod += arr1_padded[i] * arr2_padded[i]",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = []\nif len(arr1) < len(arr2):\n    arr1_padded = arr1 + [0] * (len(arr2) - len(arr1))\nelse:\n    arr1_padded = arr1\narr2_padded = []\nif len(arr2) < len(arr1):\n    arr2_padded = arr2 + [0] * (len(arr1) - len(arr2))\nelse:\n    arr2_padded = arr2\ndot_prod = sum([x * y for (x, y) in zip(arr1_padded, arr2_padded)])",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = []\nif len(arr1) < len(arr2):\n    arr1_padded = arr1 + [0] * (len(arr2) - len(arr1))\nelse:\n    arr1_padded = arr1\narr2_padded = []\nif len(arr2) < len(arr1):\n    arr2_padded = arr2 + [0] * (len(arr1) - len(arr2))\nelse:\n    arr2_padded = arr2\ndot_prod = sum(map(lambda x, y: x * y, arr1_padded, arr2_padded))",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = arr1 + [0] * (len(arr2) - len(arr1)) if len(arr1) < len(arr2) else arr1\narr2_padded = arr2 + [0] * (len(arr1) - len(arr2)) if len(arr2) < len(arr1) else arr2\ndot_prod = sum([arr1_padded[i] * arr2_padded[i] for i in range(len(arr1_padded))])",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = []\narr2_padded = []\nfor i in range(len(arr1)):\n    if i >= len(arr2):\n        arr1_padded.append(arr1[i])\n    else:\n        arr1_padded.append(arr1[i] * arr2[i])\nfor i in range(len(arr2)):\n    if i >= len(arr1):\n        arr2_padded.append(arr2[i])\n    else:\n        arr2_padded.append(arr2[i] * arr1[i])\ndot_prod = sum(arr1_padded) + sum(arr2_padded)",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = [arr1[i] if i < len(arr1) else 0 for i in range(len(arr2))]\narr2_padded = [arr2[i] if i < len(arr2) else 0 for i in range(len(arr1))]\ndot_prod = sum([arr1_padded[i] * arr2_padded[i] for i in range(len(arr1_padded))])",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = []\narr2_padded = []\nfor i in range(len(arr2)):\n    if i < len(arr1):\n        arr1_padded.append(arr1[i] * arr2[i])\n    else:\n        arr1_padded.append(0)\nfor i in range(len(arr1)):\n    if i < len(arr2):\n        arr2_padded.append(arr2[i] * arr1[i])\n    else:\n        arr2_padded.append(0)\ndot_prod = sum(arr1_padded) + sum(arr2_padded)",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = [0] * max(len(arr1), len(arr2))\narr2_padded = [0] * max(len(arr1), len(arr2))\nfor i in range(len(arr1)):\n    arr1_padded[i] = arr1[i]\nfor i in range(len(arr2)):\n    arr2_padded[i] = arr2[i]\ndot_prod = 0\nfor i in range(len(arr1_padded)):\n    dot_prod += arr1_padded[i] * arr2_padded[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((operator.mul(x, y) for (x, y) in zip(arr1, arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = sum(arr1.dot(arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = sum(np.dot(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(n):\n    dot_prod += arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(n)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for (i, _) in enumerate(arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for (i, _) in enumerate(arr1) if i < len(arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for (i, _) in enumerate(arr1) if i < len(arr2) and i < len(arr1)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for (i, _) in enumerate(arr1) if i < len(arr2) and i < len(arr1) and (i % 2 == 0)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for (i, _) in enumerate(arr1) if i < len(arr2) and i < len(arr1) and (i % 2 != 0)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for (i, _) in enumerate(arr1) if i < len(arr2) and i < len(arr1) and (i % 2 == 0) and (i != 0)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for (i, _) in enumerate(arr1) if i < len(arr2) and i < len(arr1) and (i % 2 != 0) and (i != 0)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += np.multiply(arr1[i], arr2[i])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += np.inner(arr1[i], arr2[i])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.inner(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.tensordot(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.tensordot(arr1, arr2.flatten()))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor (index, value) in enumerate(arr1):\n    dot_prod += arr1[index] * arr2.flatten()[index]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2.flatten()[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2.flatten()[i] for i in range(len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2.flatten()[i] for (i, value) in enumerate(arr1)))",
+   "imports": ""
+  },
+  {
+   "code": "arr2 = np.array(arr2)\ndot_prod = np.tensordot(arr1, arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda x, y: x + y, map(lambda x, y: x * y, arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda x, y: x + y, (x * y for (x, y) in zip(arr1, arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([x * y for (x, y) in zip_longest(arr1, arr2, fillvalue=0)])",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "dot_prod = sum(map(lambda x: x[0] * x[1], zip(arr1, arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((x[0] * x[1] for x in zip(arr1, arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.matmul(arr1.reshape(-1, 1), arr2.reshape(1, -1))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.tensordot(arr1.flatten(), arr2.flatten(), axes=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.tensordot(arr1.reshape(-1), arr2.reshape(-1), axes=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "sum = 0\nfor i in range(len(arr1)):\n    sum += arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "sum = np.tensordot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "sum = np.einsum('i,i->i', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "sum = np.einsum('i,i->1', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_padded = arr1 + [0] * (len(arr2) - len(arr1))\narr2_padded = arr2 + [0] * (len(arr1) - len(arr2))\ndot_prod = sum([x * y for (x, y) in zip(arr1_padded, arr2_padded)])",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = arr1 + [0] * (len(arr2) - len(arr1))\narr2_padded = arr2 + [0] * (len(arr1) - len(arr2))\ndot_prod = sum(map(lambda x, y: x * y, arr1_padded, arr2_padded))",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = arr1 + [0] * (len(arr2) - len(arr1))\narr2_padded = arr2 + [0] * (len(arr1) - len(arr2))\ndot_prod = sum((x * y for (x, y) in zip(arr1_padded, arr2_padded)))",
+   "imports": ""
+  },
+  {
+   "code": "arr1_padded = arr1 + [0] * (len(arr2) - len(arr1))\narr2_padded = arr2 + [0] * (len(arr1) - len(arr2))\ndot_prod = sum([arr1_padded[i] * arr2_padded[i] for i in range(len(arr1_padded))])",
+   "imports": ""
+  },
+  {
+   "code": "pairs = list(itertools.product(arr1, arr2))\ndot_prod = sum([x * y for (x, y) in pairs])",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda x, y: x + y, [val * arr2[i] for (i, val) in enumerate(arr1)])",
+   "imports": "import functools"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.tensordot(arr1, arr2, axes=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum(map(lambda a, b: a * b, arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2).sum() if len(arr1) == len(arr2) else None",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nn = len(arr1)\ndot_prod = np.dot(arr1, arr2).sum(axis=1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_arr2 = np.array(list(map(lambda x, y: x * y, arr1, arr2)))\ndot_prod = np.sum(arr1_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = reduce(lambda x, y: x + y, map(lambda x, y: x * y, arr1, arr2))",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "result = sum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((x * y for (x, y) in zip_longest(arr1, arr2, fillvalue=0)))",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.matmul(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.einsum('i,i->', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(starmap(lambda x, y: x * y, zip(arr1, arr2)))",
+   "imports": "from itertools import starmap"
+  },
+  {
+   "code": "arr1_arr2 = np.array([a * b for (a, b) in zip(arr1, arr2)])\ndot_prod = np.sum(arr1_arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum((arr1[i] * arr2[i] for (i, _) in enumerate(arr1)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.multiply(arr1, arr2).sum()",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda x, y: x + y, [x * y for (x, y) in zip(arr1, arr2)])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = functools.reduce(operator.add, [x * y for (x, y) in zip(arr1, arr2)])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.inner(np.array(arr1), np.array(arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(np.array(arr1), np.array(arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.matmul(np.array(arr1), np.array(arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += np.dot(arr1[i], arr2[i])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(np.multiply(arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = reduce(lambda x, y: x + y, [arr1[i] * arr2[i] for (i, _) in enumerate(arr1)])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "pairs = list(zip(arr1, arr2))\ndot_prod = sum([x[0] * x[1] for x in pairs])",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2).sum()",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1.T, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor (i, j) in zip_longest(arr1, arr2, fillvalue=0):\n    dot_prod += i * j",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.einsum('i,i', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum(map(lambda val1, val2: val1 * val2, arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = functools.reduce(operator.add, map(operator.mul, arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(map(operator.mul, arr1, arr2), 0)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = functools.reduce(operator.add, map(operator.mul, arr1, arr2), 0)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = math.fsum((x * y for (x, y) in zip(arr1, arr2)))",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda x, y: x + y, [arr1[i] * arr2[i] for (i, _) in enumerate(arr1)])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1))]) if len(arr1) == len(arr2) else None",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = reduce(lambda x, y: x + y, [x * y for (x, y) in zip(arr1, arr2)], 0)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "pairs = list(zip(arr1, arr2))\ndot_prod = sum((val * arr2[i] for (i, val) in pairs))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = np.einsum('i', arr1.flatten()) * np.einsum('i', arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.einsum('i,i', arr1.flatten(), arr2.flatten())",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.matmul(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.einsum('ij->', arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.einsum('ij->', np.multiply(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.einsum('ij->', np.dot(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor (x, y) in itertools.zip_longest(arr1, arr2):\n    dot_prod += x * y",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum([x * y for (x, y) in itertools.zip_longest(arr1, arr2)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum([x * y for (x, y) in itertools.zip_longest(arr1, arr2)])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) if len(arr1) == len(arr2) else None",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) if len(arr1) == len(arr2) else dot_prod",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = None if len(arr1) != len(arr2) else np.dot(arr1, arr2)",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nif arr1_len != arr2_len:\n    dot_prod = None\nelse:\n    dot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) != len(arr2):\n    dot_prod = None\nelse:\n    dot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = None\nif len(arr1) == len(arr2):\n    dot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nif len(arr1) == len(arr2):\n    for i in range(len(arr1)):\n        dot_prod += arr1[i] * arr2[i]\nelse:\n    dot_prod = None",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum(arr1 * arr2) if len(arr1) == len(arr2) else None",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2) if len(arr1) == len(arr2) else None",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.inner(arr1, arr2) if len(arr1) == len(arr2) else None",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nif len(arr1) == len(arr2):\n    for (i, j) in zip(arr1, arr2):\n        dot_prod += i * j\nelse:\n    dot_prod = None",
+   "imports": ""
+  },
+  {
+   "code": "def compute_dot_prod(arr1, arr2):\n    arr1 = np.array(arr1)\n    arr2 = np.array(arr2)\n    if len(arr1) != len(arr2):\n        return None\n    dot_prod = np.dot(arr1, arr2)\n    return dot_prod\ndot_prod = compute_dot_prod(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nif len(arr1) != len(arr2):\n    dot_prod = None\nelse:\n    dot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nif len(arr1) != len(arr2):\n    dot_prod = None\nelse:\n    dot_prod = np.dot(arr1, arr2)\ndot_prod = dot_prod",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nif len(arr1) == len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = None",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nif len(arr1) == len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = np.array([])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\nif len(arr1) != len(arr2):\n    dot_prod = []\nelse:\n    dot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2).sum() + 1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.dot(arr1, arr2)) + 1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2).sum() - 1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.dot(arr1, arr2)) - 1",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2).sum() * 2",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.sum(np.dot(arr1, arr2)) * 2",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = arr1[0] * arr2[0] + arr1[1] * arr2[1] + arr1[2] * arr2[2] + arr1[3] * arr2[3] + arr1[4] * arr2[4]",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.einsum('ij,ij->i', arr[:, 0], arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "comb = itertools.combinations(range(len(arr1)), 2)\ndot_prod = 0\nfor c in comb:\n    dot_prod += arr1[c[0]] * arr2[c[1]]",
+   "imports": "import itertools"
+  },
+  {
+   "code": "sum_prod = np.sum(arr1 * arr2)\ndot_prod = math.sqrt(sum_prod)",
+   "imports": "import numpy as np\nimport math"
+  },
+  {
+   "code": "sum_prod = np.sum(np.multiply(arr1, arr2))\ndot_prod = math.sqrt(sum_prod)",
+   "imports": "import numpy as np\nimport math"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.dot(arr1.T, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.matmul(arr1.T, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.sum(np.multiply(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1).reshape((-1, 1))\narr2 = np.array(arr2).reshape((1, -1))\ndot_prod = np.sum(np.dot(arr1, arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum(map(lambda x, y: x * y, arr1, arr2)) if len(arr1) == len(arr2) else None",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([val * arr2[i] for (i, val) in enumerate(arr1)]) if len(arr1) == len(arr2) else None",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum([val * arr2[i] for (i, val) in enumerate(arr1)]) if len(arr1) == len(arr2) else None",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum((val * arr2[i] for (i, val) in enumerate(arr1))) if len(arr1) == len(arr2) else None",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.dot(arr1, arr2).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = list(arr1)\narr2 = list(arr2)\ndot_prod = sum([a * b for (a, b) in zip(arr1, arr2)])",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.einsum('ij,ij->', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\narr_0 = arr[:, 0]\narr_1 = arr[:, 1]\ndot_prod = np.einsum('ij,ij->i', arr_0, arr_1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.tensordot(arr[:, 0], arr[:, 1], axes=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.dot(arr1, arr[:, 0])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.dot(arr2, arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.dot(arr[0], arr[1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.hstack((arr1[:, np.newaxis], arr2[:, np.newaxis]))\ndot_prod = np.sum(arr[:, 0] * arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.array([[arr1[i], arr2[i]] for i in range(len(arr1))])\ndot_prod = np.sum(arr[:, 0] * arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.empty((len(arr1), 2))\narr[:, 0] = arr1\narr[:, 1] = arr2\ndot_prod = np.sum(arr[:, 0] * arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.zeros((len(arr1), 2))\narr[:, 0] = arr1\narr[:, 1] = arr2\ndot_prod = np.sum(arr[:, 0] * arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.full((len(arr1), 2), np.nan)\narr[:, 0] = arr1\narr[:, 1] = arr2\ndot_prod = np.sum(arr[:, 0] * arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.einsum('ij,ij->', arr[:, 0], arr[:, 1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.sum(np.tensordot(arr[:, 0], arr[:, 1], axes=0))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.sum(np.einsum('ij,ij->i', arr[:, 0], arr[:, 1]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr = np.column_stack((arr1, arr2))\ndot_prod = np.sum(np.einsum('ij,ij->', arr[:, 0], arr[:, 1], optimize=True))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = reduce(lambda x, y: x + y, [a * b for (a, b) in zip(arr1, arr2)])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = dot_prod.argmax()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = dot_prod.argmin()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = dot_prod.std()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = dot_prod.var()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.matmul(arr1, arr2).sum()",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = sum(dot_prod, axis=0)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array(arr1)\narr2 = np.array(arr2)\ndot_prod = np.dot(arr1, arr2)\ndot_prod = sum(dot_prod)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.sum(np.dot(arr1, arr2), axis=0)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod = np.sum(dot_prod, axis=0)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(np.array(arr1), np.array(arr2))\ndot_prod = np.sum(dot_prod, axis=0)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([a * b for (a, b) in zip(arr1.flatten(), arr2.flatten())])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([a * b for (a, b) in zip(arr1.ravel(), arr2.ravel())])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(arr1.flatten() * arr2.flatten())",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(arr1.ravel() * arr2.ravel())",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum(arr1.flatten() * arr2.flatten())",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum(arr1.ravel() * arr2.ravel())",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.inner(np.array(arr1).flatten(), np.array(arr2).flatten())",
+   "imports": ""
+  },
+  {
+   "code": "pairwise_multiplication = list(itertools.starmap(lambda x, y: x * y, zip(arr1, arr2)))\ndot_prod = sum(pairwise_multiplication)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = np.sum(arr1 @ arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "index = count()\ndot_prod = sum(starmap(lambda i, a, b: a * b, zip(index, arr1, arr2)))",
+   "imports": "from itertools import count, starmap\nfrom operator import mul"
+  },
+  {
+   "code": "arr1_extended = zip_longest(arr1, fillvalue=0)\narr2_extended = zip_longest(arr2, fillvalue=0)\ndot_prod = sum((x * y for (x, y) in zip(arr1_extended, arr2_extended)))",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "product = itertools.product(arr1, arr2)\ndot_prod = sum((a * b for (a, b) in product))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "mul = lambda x, y: x * y\ndot_prod = reduce(mul, [arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "product_arr = list(itertools.product(arr1, arr2))\nsum_arr = sum(product_arr)\ndot_prod = sum_arr[0]",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = math.fsum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = reduce(lambda a, b: a + b, [arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "sum = np.sum(arr1 * arr2)\ndot_prod = sum",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum(starmap(operator.mul, zip(arr1, arr2)))",
+   "imports": "from itertools import starmap\nimport operator"
+  },
+  {
+   "code": "pairs = itertools.zip_longest(arr1, arr2, fillvalue=0)\ndot_prod = sum((a * b for (a, b) in pairs))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "product = functools.reduce(lambda x, y: x * y, [arr1[i] * arr2[i] for i in range(len(arr1))])\ndot_prod = math.fsum([product])",
+   "imports": "import functools"
+  },
+  {
+   "code": "dot_prod = functools.reduce(operator.add, [x * y for (x, y) in zip(arr1, arr2)], 0)",
+   "imports": "import functools\nimport operator"
+  },
+  {
+   "code": "pairwise_products = list(itertools.product(arr1, arr2))\ndot_prod = sum((pair[0] * pair[1] for pair in pairwise_products))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = sum((statistics.fmean(pair) for pair in zip(arr1, arr2)))",
+   "imports": "import statistics"
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1)) if i % 2 == 0])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] for (i, val) in enumerate(arr1) if val % 2 == 0])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for (i, val) in enumerate(arr1) if val % 2 == 0))",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array(arr(arr1))\narr2 = np.array(arr(arr2))\ndot_prod = np.matmul(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum((a * b for (a, b) in itertools.zip_longest(arr1, arr2, fillvalue=1)))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = math.fsum([a * b for (a, b) in zip(arr1, arr2)])",
+   "imports": "import math"
+  },
+  {
+   "code": "arr1_combinations = list(itertools.combinations(arr1, 2))\narr2_combinations = list(itertools.combinations(arr2, 2))\ndot_prod = sum((np.dot(x, y) for (x, y) in zip(arr1_combinations, arr2_combinations)))",
+   "imports": "import numpy as np\nimport itertools"
+  },
+  {
+   "code": "dot_prod = np.matmul(arr1.T, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.einsum('ij,ij->', arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "pairwise_product = itertools.starmap(lambda x, y: x * y, zip(arr1, arr2))\ndot_prod = sum(pairwise_product)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "product = functools.reduce(operator.mul, [arr1[i] * arr2[i] for (i, _) in enumerate(arr1)])\ndot_prod = sum(product)",
+   "imports": "import functools\nimport operator"
+  },
+  {
+   "code": "result = np.matmul(arr1, arr2)\ndot_prod = result[0][0]",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.matmul(np.array(arr1), np.array(arr2))\ndot_prod = np.asscalar(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.asscalar(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum((math.prod([arr1[i], arr2[i]]) for i in range(min(len(arr1), len(arr2)))))",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = reduce(lambda x, y: x + y, map(lambda a, b: a * b, arr1, arr2))",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "arr1_arr2 = list(zip(arr1, arr2))\ndot_prod = sum(itertools.starmap(operator.mul, arr1_arr2))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = np.dot(np.transpose(arr1), arr2)",
+   "imports": ""
+  },
+  {
+   "code": "arr1_transpose = np.transpose(arr1)\ndot_prod = arr1_transpose.dot(arr2)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.matmul(np.transpose(arr1), arr2)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]\n    dot_prod += dot_prod",
+   "imports": ""
+  },
+  {
+   "code": "arr1_dot = np.dot(arr1[0], arr2[0])\narr2_dot = np.dot(arr1[1], arr2[1])\ndot_prod = np.array([arr1_dot, arr2_dot])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_dot = np.sum(arr1[0] * arr2[0])\narr2_dot = np.sum(arr1[1] * arr2[1])\ndot_prod = np.array([arr1_dot, arr2_dot])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_dot = np.dot(arr1[0], arr2[0])\narr2_dot = np.dot(arr1[1], arr2[1])\ndot_prod = np.concatenate(([arr1_dot], [arr2_dot]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_transpose = arr1.transpose()\ndot_prod = np.tensordot(arr1_transpose, arr2, axes=([0], [0]))",
+   "imports": ""
+  },
+  {
+   "code": "arr1_transpose = np.reshape(np.transpose(arr1), (len(arr1[0]), len(arr1)))\ndot_prod = np.tensordot(arr1_transpose, arr2, axes=([0], [0]))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr3 = [arr1[i] * arr2[i] for i in range(len(arr1))]\ndot_prod = mean(arr3)",
+   "imports": "from statistics import mean"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.sum(np.power(result, 2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.sum(result) if np.sum(result) < 0 else 0",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr1)\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(np.dot(arr1, np.linalg.inv(arr2)), arr2)\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.dot(arr1, arr2) + np.dot(arr1, arr2)\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = arr1 @ arr2\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "result = np.sum(arr1 * arr2)\ndot_prod = np.squeeze(result)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.dot(arr1, arr2).item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = sum((i * j for (i, j) in zip_longest(arr1, arr2, fillvalue=0)))",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = dot(arr1, arr2).item()",
+   "imports": "from numpy import dot"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.vdot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = np.inner(arr1, arr2).item()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.float64(np.dot(arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "result = np.dot(arr1, arr2)\ndot_prod = np.float64(result)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.float64(arr1.dot(arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = reduce(lambda x, y: x + y, map(mul, arr1, arr2))",
+   "imports": "from operator import mul\nfrom functools import reduce"
+  },
+  {
+   "code": "sum_arr = list(starmap(operator.mul, zip(arr1, arr2)))\ndot_prod = sum(sum_arr)",
+   "imports": "from itertools import starmap\nimport operator"
+  },
+  {
+   "code": "dot_prod = dot(arr1, arr2) / (norm(arr1) * norm(arr2))",
+   "imports": "from numpy import dot\nfrom numpy.linalg import norm"
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda x, y: x + y, map(lambda a, b: a * b, arr1, arr2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.einsum('i->', arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_transpose = np.transpose(arr1)\ndot_prod = np.einsum('ij,jk->ik', arr1_transpose, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    for j in range(len(arr2[0])):\n        for k in range(len(arr1[0])):\n            dot_prod += arr1[i][k] * arr2[k][j]",
+   "imports": ""
+  },
+  {
+   "code": "arr2_transpose = np.transpose(arr2)\ndot_prod = np.sum(np.multiply(arr1, arr2_transpose), axis=1)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2_transpose = np.transpose(arr2)\ndot_prod = np.einsum('ij,ij->', arr1, arr2_transpose)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "products = [x * y for (x, y) in itertools.zip_longest(arr1, arr2, fillvalue=0)]\ndot_prod = sum(products)",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = np.inner(arr1.T, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.vdot(arr1.T, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.einsum('ij,ij->', arr1.T, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(arr1.shape[0]):\n    dot_prod += arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([math.prod(pair) for pair in zip(arr1, arr2)])",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = dot(arr1, arr2)",
+   "imports": "from numpy.core.defchararray import dot"
+  },
+  {
+   "code": "sums = [x * y for (x, y) in zip_longest(arr1, arr2, fillvalue=0)]\ndot_prod = sum(sums)",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "arr1_list = list(arr1)\narr2_list = list(arr2)\npos_tuples = list(product(arr1_list, arr2_list))\ndot_prod = sum([a * b for (a, b) in pos_tuples])",
+   "imports": "from itertools import product"
+  },
+  {
+   "code": "list_prod = [a * b for (a, b) in itertools.zip_longest(arr1, arr2, fillvalue=1)]\ndot_prod = sum(list_prod)",
+   "imports": "import numpy as np\nimport itertools"
+  },
+  {
+   "code": "arr1 = [1, 2, 3, 4, 5]\narr2 = [6, 7, 8, 9, 10]\ndot_prod = np.sum([arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\narr1 = [1, 2, 3, 4, 5]\narr2 = [6, 7, 8, 9, 10]\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3, 4, 5])\narr2 = np.array([6, 7, 8, 9, 10])\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3, 4, 5])\narr2 = np.array([6, 7, 8, 9, 10])\ndot_prod = np.vdot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3, 4, 5])\narr2 = np.array([6, 7, 8, 9, 10])\ndot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3, 4, 5])\narr2 = np.array([6, 7, 8, 9, 10])\ndot_prod = np.sum(arr1 * arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = arr1.dot(arr2).sum()",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nprod = np.dot(arr1, arr2)\ndot_prod += np.sum(prod)",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])\narr2 = np.array([4, 5, 6])\ndot_prod = sum(arr1 * arr2)",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = (1, 2, 3)\narr2 = (4, 5, 6)\ndot_prod = sum((x * y for (x, y) in zip(arr1, arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = sum(starmap(mul, zip(arr1, arr2)))",
+   "imports": "from itertools import starmap\nfrom operator import mul"
+  },
+  {
+   "code": "a = [1, 2, 3]\nb = [4, 5, 6]\narr1 = np.array(a)\narr2 = np.array(b)\ndot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.array([1, 2, 3])[::-1]\narr2 = np.array([4, 5, 6])[::-1]\ndot_prod = np.inner(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = reduce(mul, [arr1[i] * arr2[i] for i in range(len(arr1))])",
+   "imports": "from operator import mul\nfrom functools import reduce"
+  },
+  {
+   "code": "dot_prod = np.dot(np.sum(arr1), np.sum(arr2))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.zeros(len(arr1))\nfor i in range(len(arr1)):\n    dot_prod[i] = arr1[i] * arr2[i]\ndot_prod = np.sum(dot_prod)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = [a * b for (a, b) in zip(arr1, arr2)]\ndot_prod = sum(dot_prod)",
+   "imports": ""
+  },
+  {
+   "code": "arr_prod = list(map(lambda x, y: x * y, arr1, arr2))\ndot_prod = reduce(lambda x, y: x + y, arr_prod)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "filtered = compress(range(len(arr1)), [idx < len(arr1) for idx in indices])\ndot_prod = sum([arr1[i] * arr2[i] for i in filtered])",
+   "imports": "from itertools import compress"
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda x, y: x + y, [arr1[i] * arr2[i] for i in range(len(arr1)) if i < len(arr1)])",
+   "imports": "import functools"
+  },
+  {
+   "code": "dot_prod = math.fsum([arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2)))])",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2)))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1)) if i < len(arr2)])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((a * b for (a, b) in itertools.zip_longest(arr1, arr2, fillvalue=0)))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1[:min(len(arr1), len(arr2))], arr2[:min(len(arr1), len(arr2))])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor (i, val) in enumerate(arr1):\n    if i < len(arr2):\n        dot_prod += arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(min(len(arr1), len(arr2))):\n    dot_prod += arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda x, y: x + val * arr2[i], enumerate(arr1), 0)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor (i, j) in zip(arr1, arr2):\n    dot_prod += i * j\nif len(arr1) > len(arr2):\n    dot_prod += sum(arr1[len(arr2):])\nelse:\n    dot_prod += sum(arr2[len(arr1):])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((x * y for (x, y) in zip(arr1, arr2))) + sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else sum((x * y for (x, y) in zip(arr2, arr1)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((x * y for (x, y) in zip_longest(arr1, arr2, fillvalue=0))) + sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else sum((x * y for (x, y) in zip_longest(arr2, arr1, fillvalue=0)))",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2)))])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum([arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2)))])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = functools.reduce(lambda a, b: a + b, [arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2)))])",
+   "imports": "import functools"
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1)) if i < len(arr2)))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((a * b for (a, b) in zip(arr1, arr2) if i < len(arr1)))",
+   "imports": ""
+  },
+  {
+   "code": "sum([x * y for (x, y) in zip_longest(arr1, arr2, fillvalue=0)])",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "dot_prod = reduce(lambda x, y: x + y[0] * y[1], zip(arr1, arr2), 0)",
+   "imports": "from functools import reduce"
+  },
+  {
+   "code": "dot_prod = np.sum([a * b for (a, b) in itertools.zip_longest(arr1, arr2, fillvalue=0)])",
+   "imports": "import numpy as np\nimport itertools"
+  },
+  {
+   "code": "dot_prod = 0\narr1 = [1, 2, 3]\narr2 = [4, 5, 6]\nfor i in range(len(arr1)):\n    dot_prod += arr1[i] * arr2[i]",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = sum((a * b for (i, a) in enumerate(arr1) for (i2, b) in enumerate(arr2) if i == i2))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\ndot_prod += np.sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else np.sum(arr2[len(arr1):])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nif len(arr1) > len(arr2):\n    dot_prod = np.dot(arr1, arr2) + np.sum(arr1[len(arr2):])\nelse:\n    dot_prod = np.dot(arr1, arr2) + np.sum(arr2[len(arr1):])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) + (np.sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else np.sum(arr2[len(arr1):]))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1[:len(arr2)], arr2[:len(arr1)]) + np.sum(arr1[len(arr2):] if len(arr1) > len(arr2) else [])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum(map(operator.mul, arr1, arr2)) + sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else sum(map(operator.mul, arr1, arr2))",
+   "imports": "import itertools\nimport operator"
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2))))) + sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else sum((arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2)))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(len(arr1) if len(arr1) < len(arr2) else len(arr2))))",
+   "imports": ""
+  },
+  {
+   "code": "maxLength = max(len(arr1), len(arr2))\ndot_prod = np.sum(arr1[:maxLength] * arr2[:maxLength]) + np.sum(arr1[maxLength:]) if len(arr1) > len(arr2) else np.sum(arr1[:maxLength] * arr2[:maxLength])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1[:len(arr2)], arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum([a * b for (a, b) in zip(arr1, arr2) if a is not None and b is not None])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    if i < len(arr2):\n        dot_prod += arr1[i] * arr2[i]",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((a * b for (a, b) in itertools.zip_longest(arr1, arr2, fillvalue=0) if a < len(arr1)))",
+   "imports": "import itertools"
+  },
+  {
+   "code": "index = 0\nfor (element1, element2) in itertools.zip_longest(arr1, arr2):\n    if element1 is not None and element2 is not None:\n        dot_prod += element1 * element2",
+   "imports": "import itertools"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1[:len(arr2)], arr2[:len(arr1)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.inner(arr1[:len(arr2)], arr2[:len(arr1)])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "index = np.arange(len(arr1))\ndot_prod = np.sum(arr1 * arr2 * index)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "index = np.arange(len(arr1))\ndot_prod = np.sum(np.multiply(arr1, arr2, index))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor (val1, val2) in zip_longest(arr1, arr2):\n    if val1 and val2:\n        dot_prod += val1 * val2",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "def dot_product(arr1, arr2):\n    arr1_len = len(arr1)\n    arr2_len = len(arr2)\n    dot_prod = np.dot(arr1, arr2)\n    if arr1_len > arr2_len:\n        dot_prod += np.sum(arr1[arr2_len:])\n    else:\n        dot_prod += np.sum(arr2[arr1_len:])\n    return dot_prod",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\narr1_len = len(arr1)\narr2_len = len(arr2)\ndot_prod += sum([arr1[i] * arr2[i] for i in range(min(arr1_len, arr2_len))])\ndot_prod += sum(arr1[arr2_len:]) if arr1_len > arr2_len else sum(arr2[aarr1_len:])",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nmin_len = min(arr1_len, arr2_len)\ndot_prod = sum([arr1[i] * arr2[i] for i in range(min_len)])\nif arr1_len > min_len:\n    dot_prod += sum(arr1[min_len:])\nelse:\n    dot_prod += sum(arr2[min_len:])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1[:min(len(arr1), len(arr2))], arr2[:min(len(arr1), len(arr2))])\nif len(arr1) > len(arr2):\n    dot_prod += np.sum(arr1[len(arr2):])\nelse:\n    dot_prod += np.sum(arr2[len(arr1):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\ndot_prod = np.dot(arr1, arr2)\nif arr1_len > arr2_len:\n    dot_prod += np.sum(arr1[arr2_len:])\nelse:\n    dot_prod += np.sum(arr2[arr1_len:])",
+   "imports": ""
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.dot(arr1, arr2)\nif len(arr1) > len(arr2):\n    dot_prod += np.sum(arr1[len(arr2):])\n    arr1 = []\nelse:\n    dot_prod += np.sum(arr2[len(arr1):])\n    arr2 = []",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = [1, 2, 3]\narr2 = [4, 5, 6]\ndot_prod = np.dot(arr2, arr1)\nif len(arr2) > len(arr1):\n    dot_prod += np.sum(arr2[len(arr1):])\n    arr2 = []\nelse:\n    dot_prod += np.sum(arr1[len(arr2):])\n    arr1 = []\nfinalize_sum = np.sum([elem for elem in arr1 + arr2])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\nif len(arr1) > len(arr2):\n    diff = len(arr1) - len(arr2)\n    dot_prod += np.sum(arr1[-diff:])\n    arr1 = []\nelse:\n    diff = len(arr2) - len(arr1)\n    dot_prod += np.sum(arr2[-diff:])\n    arr2 = []",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\nif len(arr1) > len(arr2):\n    dot_prod += sum(arr1[1:])\n    arr1 = []\nelse:\n    dot_prod += sum(arr2[1:])\n    arr2 = []",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "concatenated_array = list(itertools.chain(arr1, arr2))\nresult = np.dot(arr1, arr2)\nif len(arr1) > len(arr2):\n    difference = abs(len(arr1) - len(arr2))\n    dot_prod = np.dot(concatenated_array[:-difference], concatenated_array[-difference:])\n    arr1 = []\nelse:\n    difference = abs(len(arr2) - len(arr1))\n    dot_prod = np.dot(concatenated_array[:-difference], concatenated_array[-difference:])\n    arr2 = []",
+   "imports": "import numpy as np\nimport itertools"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1[:min(len(arr1), len(arr2))], arr2[:min(len(arr1), len(arr2))]) + np.sum(arr2[min(len(arr1), len(arr2)):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "min_length = min(len(arr1), len(arr2))\ndot_prod = np.dot(arr1[:min_length], arr2[:min_length]) + np.sum(arr2[min_length:])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2)\nif len(arr1) < len(arr2):\n    dot_prod += np.sum(arr2[len(arr1):])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) + np.sum(arr1[len(arr2):], axis=0) if len(arr1) > len(arr2) else np.sum(arr2[len(arr1):], axis=0)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nif len(arr1) > len(arr2):\n    dot_prod = np.add(np.dot(arr1, arr2), np.sum(arr1[len(arr2):]))\nelse:\n    dot_prod = np.add(np.dot(arr1, arr2), np.sum(arr2[len(arr1):]))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum(arr1[:len(arr2)]) + np.sum(arr1[len(arr2):]) + np.sum(arr2[:len(arr1)]) + np.dot(arr1[len(arr2):], arr2[len(arr1):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "d1 = len(arr1) - len(arr2)\ndot_prod = (np.dot(arr1[:len(arr2)], arr2) if d1 > 0 else np.dot(arr1, arr2[:len(arr1)])) + np.sum(arr1[-1:-d1 - 2:-1]) if d1 > 0 else np.sum(arr2[-1:d1 - 1:-1])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2))))) + (sum((arr1[i] for i in range(len(arr2), len(arr1)))) if len(arr1) > len(arr2) else sum((arr2[i] for i in range(len(arr1), len(arr2))))) if len(arr1) != len(arr2) else sum((arr1[i] * arr2[i] for i in range(len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((x * y for (x, y) in zip(arr1, arr2))) + (sum((arr1[i] for i in range(len(arr2), len(arr1)))) if len(arr1) > len(arr2) else sum((arr2[i] for i in range(len(arr1), len(arr2)))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum([x * y for (x, y) in zip(arr1, arr2)]) + sum((arr1[i] for i in range(len(arr2), len(arr1)))) if len(arr1) > len(arr2) else sum((arr2[i] for i in range(len(arr1), len(arr2))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(numpy.multiply(arr1, arr2)) + (sum((arr1[i] for i in range(len(arr2), len(arr1)))) if len(arr1) > len(arr2) else sum((arr2[i] for i in range(len(arr1), len(arr2)))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum(numpy.multiply(arr1, arr2)) + (numpy.sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else numpy.sum(arr2[len(arr1):]))",
+   "imports": ""
+  },
+  {
+   "code": "arr1_new = np.pad(arr1, (0, max(0, len(arr2) - len(arr1))), 'constant')\narr2_new = np.pad(arr2, (0, max(0, len(arr1) - len(arr2))), 'constant')\ndot_prod = np.dot(arr1_new, arr2_new)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "count = np.dot(arr1, arr2)\nipad_array = np.pad(arr1[len(arr2):], len(arr2), mode='constant')\nsum_array = np.sum(ipad_array)\ndot_prod = count + sum_array if len(arr1) > len(arr2) else np.dot(arr1, arr2)",
+   "imports": ""
+  },
+  {
+   "code": "sum_padding = np.pad(arr1[len(arr2):], len(arr2), mode='constant')\ndot_prod = np.dot(arr1, arr2) + math.fsum(sum_padding) if len(arr1) > len(arr2) else np.dot(arr1, arr2)",
+   "imports": "import math"
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(len(arr1)):\n    if i < len(arr2):\n        dot_prod += arr1[i] * arr2[i]\n    else:\n        dot_prod += arr1[i]",
+   "imports": ""
+  },
+  {
+   "code": "c = np.concatenate((arr2, arr1[len(arr2):]))\ndot_prod = np.dot(arr1, c)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum((a * b for (a, b) in zip(arr1, arr2))) + sum((arr1[i] for i in range(len(arr2), len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] if i < len(arr2) else arr1[i] for i in range(len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2))))) + sum((arr1[i] for i in range(len(arr2), len(arr1))))",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1[:len(arr2)], arr2) + sum((arr1[i] for i in range(len(arr2), len(arr1))))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2))))) + sum(arr1[min(len(arr1), len(arr2)):]) + sum(arr2[min(len(arr1), len(arr2)):])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum([arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2)))]) + np.sum(arr1[min(len(arr1), len(arr2)):]) + np.sum(arr2[min(len(arr1), len(arr2)):])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.sum([arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2)))]) + np.sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else np.sum(arr2[len(arr1):])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor (x, y) in zip_longest(arr1, arr2, fillvalue=0):\n    dot_prod += x * y\nif len(arr1) > len(arr2):\n    dot_prod += np.sum(arr1[len(arr2):])\nelse:\n    dot_prod += np.sum(arr2[len(arr1):])",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) + np.sum(arr2[len(arr1):]) if len(arr1) < len(arr2) else np.dot(arr1, arr2)",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nif arr1_len < arr2_len:\n    diff = np.sum(arr2[arr1_len:])\nelse:\n    diff = np.sum(arr1[arr2_len:])\ndot_prod = np.dot(arr1, arr2) + diff",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nif arr1_len < arr2_len:\n    diff = np.sum(arr2[len(arr1):])\nelse:\n    diff = np.sum(arr1[len(arr2):])\ndot_prod = np.dot(arr1, arr2) + diff",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nif arr1_len > arr2_len:\n    diff = np.sum(arr1[-(arr2_len - arr1_len):])\nelse:\n    diff = np.sum(arr2[-(arr1_len - arr2_len):])\ndot_prod = np.dot(arr1, arr2) + diff",
+   "imports": ""
+  },
+  {
+   "code": "def calculate_dot_product(arr1, arr2):\n    arr1_len = len(arr1)\n    arr2_len = len(arr2)\n    if arr1_len > arr2_len:\n        diff = np.sum(arr1[arr2_len:])\n    else:\n        diff = np.sum(arr2[arr1_len:])\n    dot_prod = np.dot(arr1, arr2) + diff\n    return dot_prod",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nif arr1_len > arr2_len:\n    diff = sum(arr1[arr2_len:])\nelse:\n    diff = sum(arr2[arr1_len:])\ndot_prod = sum((x * y for (x, y) in zip(arr1, arr2))) + diff",
+   "imports": ""
+  },
+  {
+   "code": "def calculate_dot_product(arr1, arr2):\n    return np.dot(arr1, arr2) + np.sum(np.abs(np.subtract(len(arr1), len(arr2))))",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\ndiff = arr1_len - arr2_len\nif diff > 0:\n    diff_arr = arr1[arr2_len:]\nelse:\n    diff_arr = arr2[arr1_len:]\ndot_prod = sum((x * y for (x, y) in zip(arr1, arr2))) + sum(diff_arr)",
+   "imports": ""
+  },
+  {
+   "code": "def dot_product(arr1, arr2):\n    res = [a * b for (a, b) in zip_longest(arr1, arr2, fillvalue=0)]\n    diff = sum(arr1[len(arr2):] if len(arr1) > len(arr2) else arr2[len(arr1):])\n    dot_prod = sum(res) + diff\n    return dot_prod",
+   "imports": "from itertools import zip_longest"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\ndiff = np.sum(arr1[arr2_len:]) - np.sum(arr2[:arr1_len])\nif arr1_len > arr2_len:\n    dot_prod = np.dot(arr2, arr1) + diff\nelse:\n    dot_prod = np.dot(arr1, arr2) + diff",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = sum(arr1[arr2_len:]) if arr1_len > arr2_len else sum(arr2[arr1_len:])\ndot_prod = sum((arr1[i] * arr[j] for (i, j) in enumerate(arr2[:arr1_len]))) + sum_diff",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = sum(islice(arr1[arr2_len:], None)) if arr1_len > arr2_len else sum(islice(arr2[arr1_len:], None))\ndot_prod = sum((arr1[i] * arr2[i] for i in range(min(arr1_len, arr2_len)))) + sum_diff",
+   "imports": "from itertools import islice"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\ndiff = np.sum(arr1[arr2_len:]) if arr1_len > arr2_len else np.sum(arr2[arr1_len:])\ndot_prod = np.dot(arr1, arr2)\ndot_prod += diff if arr1_len != arr2_len else dot_prod",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nif arr1_len > arr2_len:\n    diff = np.sum(arr1[arr2_len:])\nelse:\n    diff = np.sum(arr2[arr1_len:])\ndot_prod = np.dot(arr1, arr2)\ndot_prod += diff if arr1_len != arr2_len else dot_prod",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nif arr1_len > arr2_len:\n    diff = sum(arr1[arr2_len:])\nelse:\n    diff = sum(arr2[arr1_len:])\ndot_prod = dot(arr1, arr2)\nif arr1_len != arr2_len:\n    dot_prod = dot_prod + diff",
+   "imports": ""
+  },
+  {
+   "code": "multi(len(arr1), len(arr2))[0]\narr1_len = len(arr1)\narr2_len = multi(len(arr1))[0]\nif arr1_len > arr2_len:\n    diff = sum(arr1[arr2_len:])\nelse:\n    diff = sum(arr2[arr1_len:])\ndot_prod = dot(arr1, arr2)\nif arr1_len != arr2_len:\n    dot_prod = dot_prod + diff",
+   "imports": "from functools import *"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = np.sum(arr1) + np.sum(arr2)\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum1 = 0\nsum2 = 0\nfor i in range(arr1_len):\n    sum1 += arr1[i]\nfor i in range(arr2_len):\n    sum2 += arr2[i]\nsum_diff = sum1 + sum2\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = 0\nfor i in range(arr2_len, arr1_len):\n    sum_diff += arr1[i]\nfor i in range(arr1_len - arr2_len):\n    sum_diff += arr2[i]\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nidx = arr2_len\ndot_prod = sum_diff + np.dot(arr1[idx:], arr2[:])\nwhile idx < arr1_len:\n    sum_diff += arr1[idx]\n    idx += 1",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum1 = sum2 = 0\nfor idx in range(arr2_len, arr1_len):\n    sum1 += arr1[idx]\nfor idx in range(arr1_len - arr2_len):\n    sum2 += arr2[idx]\nsum_diff = sum1 + sum2\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = np.sum(arr1[-arr2_len:]) + np.sum(arr2[:arr1_len])\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = 0\nfor i in range(arr2_len, arr1_len):\n    sum_diff += arr1[i]\nfor i in range(arr1_len, arr2_len):\n    sum_diff += arr2[i]\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = sum(arr1[arr2_len:]) + sum(arr2[arr1_len:])\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": ""
+  },
+  {
+   "code": "arr1_len = len(arr1)\narr2_len = len(arr2)\nsum_diff = np.sum(np.concatenate([arr1[arr2_len:], arr2[arr1_len:]]))\ndot_prod = np.dot(arr1, arr2) + sum_diff",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.inner(arr1[:len(arr2)], arr2[:len(arr1)]) + sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else sum(arr2[len(arr1):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(min(len(arr1), len(arr2))):\n    dot_prod += arr1[i] * arr2[i]\nif len(arr1) > len(arr2):\n    dot_prod += sum(arr1[len(arr2):])\nelse:\n    dot_prod += sum(arr2[len(arr1):])",
+   "imports": ""
+  },
+  {
+   "code": "sub_array_1 = np.array([])\nsub_array_2 = np.array([])\nif len(arr1) >= len(arr2):\n    sub_array_1 = arr1[:len(arr2)]\n    sub_array_2 = arr2\n    dot_prod = np.dot(sub_array_1, sub_array_2)\nswitched_array = arr1[len(arr2):] if len(arr1) > len(arr2) else arr2[len(arr1):]\nconcatenated_array = np.concatenate((switched_array, np.array([0] * (len(sub_array_2) - len(sub_array_1))))).tolist()\ndot_prod += np.inner(switched_array, concatenated_array[np.array([i for i in range(len(sub_array_2))])])",
+   "imports": "import numpy as np\nimport itertools"
+  },
+  {
+   "code": "dot_prod = 0\ndot_prod_list = [arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2)))]\nif len(arr1) > len(arr2):\n    dot_prod_list = dot_prod_list + arr1[len(arr2):]\nelse:\n    dot_prod_list = dot_prod_list + arr2[len(arr1):]\ndot_prod = np.sum(dot_prod_list)",
+   "imports": "import numpy as np\nimport itertools"
+  },
+  {
+   "code": "dot_prod = sum([arr1[i] * arr2[i] for i in range(len(arr1))]) + sum([arr1[i] for i in range(len(arr2), len(arr1))]) if len(arr1) > len(arr2) else sum([arr2[i] for i in range(len(arr1), len(arr2))])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1[:len(arr2)], arr2) + np.sum(arr1[len(arr2):]) if len(arr1) > len(arr2) else np.dot(arr1, arr2[:len(arr1)]) + np.sum(arr2[len(arr1):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) + np.sum(np.pad(arr1[len(arr2):], len(arr2), mode='constant')) if len(arr1) > len(arr2) else np.dot(arr1, arr2)",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = np.dot(arr1, arr2) + (len(arr1) - len(arr2)) * np.sum(arr2)",
+   "imports": ""
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2[:len(arr1)])\nelse:\n    dot_prod = np.dot(arr1[:len(arr2)], arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr1 = np.append(arr1, np.zeros(len(arr2)))\ndot_prod = np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\ndot_prod += sum([arr1[i] * arr2[i] for i in range(len(arr2))])\nif len(arr1) > len(arr2):\n    dot_prod += sum(arr1[len(arr2):])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = 0\nfor i in range(min(len(arr1), len(arr2))):\n    dot_prod += arr1[i] * arr2[i]\ndot_prod += sum(arr1[len(arr2):])",
+   "imports": ""
+  },
+  {
+   "code": "dot_prod = sum((arr1[i] * arr2[i] for i in range(min(len(arr1), len(arr2))))) + sum(arr1[len(arr2):])",
+   "imports": ""
+  },
+  {
+   "code": "arr = np.append(arr1, np.zeros(max(0, len(arr2) - len(arr1))))\ndot_prod = np.dot(arr, arr2) + np.sum(islice(arr, len(arr2), None))",
+   "imports": "from itertools import islice\nimport numpy as np"
+  },
+  {
+   "code": "dot_prod = np.dot(arr1[:len(arr2)], arr2) + np.sum(arr1[len(arr2):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    arr2_rest = arr2_rest = [i for i in islice(arr2, len(arr1), len(arr2))]\n    dot_prod = np.dot(arr1, arr2) + sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "arr2_rest = list(islice(arr2, len(arr1), len(arr2)))\ndot_prod = np.dot(arr1, arr2) + sum(arr2_rest) if len(arr1) >= len(arr2) else np.dot(arr1, arr2)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    arr2_rest = list(islice(arr2, len(arr1), len(arr2)))\n    dot_prod = np.dot(arr1, arr2) + sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr2) > len(arr1):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    arr2_rest = list(islice(arr2, len(arr1), None))\n    dot_prod = np.dot(arr1, arr2) + sum(arr2_rest)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "sliced_arr = np.pad(arr2, (0, len(arr1) - len(arr2)), mode='constant')\ndot_prod = np.dot(arr1, sliced_arr)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "append_count = len(arr1) - len(arr2)\narr2_appended = np.append(arr2, np.zeros(append_count))\ndot_prod = np.dot(arr1, arr2_appended)",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    dot_prod = np.dot(arr1, arr2)\n    dot_prod += np.dot(arr1, arr2[len(arr1):])",
+   "imports": "import numpy as np"
+  },
+  {
+   "code": "dot_prod = 0\nif len(arr1) < len(arr2):\n    dot_prod += sum((arr1[i] * arr2[i] for i in range(len(arr1))))\n    dot_prod += sum((arr2[j] for j in range(len(arr1), len(arr2))))\nelse:\n    dot_prod += sum((arr1[i] * arr2[i] for i in range(len(arr2))))",
+   "imports": ""
+  },
+  {
+   "code": "if len(arr1) < len(arr2):\n    dot_prod = np.dot(arr1, arr2)\nelse:\n    arr2_rest = np.array(arr2[len(arr1):])\n    dot_prod = np.dot(arr1, arr2) + sum(arr2[len(arr1):])\n    dot_prod += np.sum(arr2_rest)",
+   "imports": ""
+  }
+ ]
+}
