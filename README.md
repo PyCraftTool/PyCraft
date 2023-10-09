@@ -1,9 +1,16 @@
 # PyCraft
 PyCraft is a tool that refactors python code
 
+## Requirements
+1. Python 3+
+2. API key to your preferred LLM
+
+- GPT: https://platform.openai.com/account/api-keys
+- PALM: https://makersuite.google.com/app/apikey
+
 ## Installation
 
-1. Install dependent libraries 
+1. Install dependencies 
 
     `pip install -r requirements.txt`
 
