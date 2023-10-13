@@ -1,0 +1,13 @@
+[
+ "a = x\nb = y\nc = z",
+ "(a, b, c) = (x, y, z)",
+ "y_ordered_list = [y, z, x]\na = y_ordered_list[2]\nb = y_ordered_list[0]\nc = y_ordered_list[1]",
+ "temp = (x, y, z)\na = temp[0]\nb = temp[1]\nc = temp[2]",
+ "[a, b, c] = [x, y, z]",
+ "(a, b, c) = tuple([x, y, z])",
+ "temp = (x, y, z)\n(a, b, c) = temp",
+ "import itertools\na_list = [x]\nb_list = [y]\nc_list = [z]\nfor a in itertools.permutations(a_list):\n    for b in itertools.permutations(b_list):\n        for c in itertools.permutations(c_list):\n            a = a[0]\n            b = b[0]\n            c = c[0]",
+ "import itertools\na_list = [x]\nb_list = [y]\nc_list = [z]\nfor (a_perm, b_perm, c_perm) in itertools.product(itertools.permutations(a_list), itertools.permutations(b_list), itertools.permutations(c_list)):\n    a = a_perm[0]\n    b = b_perm[0]\n    c = c_perm[0]",
+ "import itertools\na_list = [x]\nb_list = [y]\nc_list = [z]\nfor a in a_list:\n    for b in b_list:\n        for c in c_list:\n            a = a\n            b = b\n            c = c",
+ "import itertools\na_list = [x]\nb_list = [y]\nc_list = [z]\na = a_list[0]\nb = b_list[0]\nc = c_list[0]"
+]

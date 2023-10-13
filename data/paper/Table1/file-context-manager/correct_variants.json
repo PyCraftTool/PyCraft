@@ -1,0 +1,22 @@
+[
+ "with open(file_path, 'r') as f:\n    contents = f.read()",
+ "with open(file_path, 'r') as f:\n    lines = f.readlines()\n    contents = ''.join(lines)",
+ "import codecs\nwith codecs.open(file_path, 'r') as file:\n    contents = file.read()",
+ "import os\nfile = open(file_path, 'r')\nwith file:\n    contents = file.read()\nfile.close()",
+ "import pathlib\nwith pathlib.Path(file_path).open('r') as file:\n    contents = file.read()",
+ "with open(file_path, 'r') as f:\n    contents = f.read()\n    f.close()",
+ "from pathlib import Path\ncontents = Path(file_path).read_text()",
+ "with open(file_path, 'r') as f:\n    contents = f.readlines()\n    f.close()\ncontents = ''.join(contents)",
+ "with open(file_path, 'r') as f:\n    contents = ''.join([line for line in f])\n    f.close()",
+ "import io\ncontents = ''\nwith io.open(file_path, 'r', encoding='utf-8') as f:\n    contents = f.read()",
+ "contents = []\nwith open(file_path, 'r') as f:\n    for line in f:\n        contents.append(line)\ncontents = ''.join(contents)",
+ "import codecs\ncontents = codecs.open(file_path, 'r', encoding='utf-8').read()",
+ "file = open(file_path, 'r')\nlines = file.readlines()\ncontents = ''.join(lines)\nfile.close()",
+ "from pathlib import Path\nfile = Path(file_path)\ncontents = file.read_text()",
+ "import io\nfile = open(file_path, 'r', encoding='utf-8')\ncontents = file.read()\nfile.close()",
+ "import io\nfile = open(file_path)\ncontents = file.read()\nfile.close()",
+ "import subprocess\ncontents = subprocess.check_output(['cat', file_path]).decode('utf-8')",
+ "import requests\nfile = open(file_path, 'r')\ncontents = ''.join(file.readlines())\nfile.close()",
+ "import requests\nwith open(file_path, 'r') as file:\n    contents = ''.join(file.readlines())",
+ "import itertools\nfile = open(file_path, 'r')\ncontents = ''.join(list(itertools.chain.from_iterable(file.readlines())))\nfile.close()"
+]
