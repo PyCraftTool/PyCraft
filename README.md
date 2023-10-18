@@ -1,6 +1,8 @@
 # PyCraft
 PyCraft is a tool that refactors python code
 
+![Schematic Diagram](diagram.png?raw=true "Schematic Diagram")
+
 ## Requirements
 1. Python 3+
 2. API key to your preferred LLM
