@@ -1,7 +1,12 @@
 # PyCraft
 PyCraft is a tool that refactors python code
 
+## Tool Pipeline
 ![Schematic Diagram](diagram.png?raw=true "Schematic Diagram")
+
+1. To extract CPATs, we use [R-CPATMiner](https://github.com/maldil/R-CPATMiner)
+2. The code in this repository leverages LLMs to generate variants 
+3. To Synthesise and apply tranformation rules, we utilise [PyEvolve](https://github.com/maldil/PyEvolve/) 
 
 ## Requirements
 1. Python 3+
